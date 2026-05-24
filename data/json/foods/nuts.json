@@ -1,0 +1,2512 @@
+[
+    {
+        "id": 1,
+        "slug": "almonds",
+        "name": "Almonds",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.79,
+                    "fat": 0.497,
+                    "sat_fat": 0.038,
+                    "protein": 0.214,
+                    "fiber": 0.125,
+                    "sodium": 0.01,
+                    "carbs": 0.216,
+                    "sugar": 0.048,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 3000,
+                "confidence": 4,
+                "source": {
+                    "id": 8,
+                    "url": "https://ourworldindata.org/grapher/almond-yields",
+                    "title": "Our World in Data — Almond Yields",
+                    "note": "Almonds — yield_kg_ha: Verified ~3,000 kg/ha for California commercial orchards."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 10240,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            },
+            {
+                "value": 13080,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Almonds — water_per_kg: 13,080 L/kg; averaged with ScienceDirect California study (source 7, 10,240 L/kg) → final 11,660 L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3584,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            },
+            {
+                "value": 2321,
+                "confidence": 2,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — green_water_per_kg: 2,321 L/kg for California orchards (Marston et al. 2018, Ecological Indicators; derived from the study's blue+green component breakdown for the California production region average)."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 6349,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            },
+            {
+                "value": 4026,
+                "confidence": 2,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — blue_water_per_kg: 4,026 L/kg for California orchards (Marston et al. 2018). California almonds are predominantly irrigated; blue water represents ~39% of total footprint vs. ~23% green and ~38% grey. This is lower than the Mekonnen & Hoekstra global average (source 67: 6,349 L/kg blue) because M&H's global production-weighted figure includes Mediterranean and Middle Eastern rain-fed almond production which elevates the total differently, and M&H report a higher overall total of 13,080 L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 374,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 8.5,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Almonds — emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; farm-gate boundary; California/Mediterranean orchard production)."
+                }
+            },
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Almonds — emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; covers farm-gate GHG including irrigation energy, fertilizer N2O, and orchard management; land use change contribution is low for established California/Mediterranean orchards)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 5000,
+                "confidence": 4,
+                "source": {
+                    "id": 7,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+                    "title": "ScienceDirect — Almond Water Footprint Study",
+                    "note": "Almonds — water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004–2015 study period)."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Almonds — glyphosate: 1.5 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.8 kg/ha; captan: 0.5 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Almonds — glyphosate: 1.5 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.8 kg/ha; captan: 0.5 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.8,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Almonds — glyphosate: 1.5 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.8 kg/ha; captan: 0.5 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 9,
+                "name": "Captan",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Almonds — glyphosate: 1.5 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.8 kg/ha; captan: 0.5 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "slug": "walnuts",
+        "name": "Walnuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.54,
+                    "fat": 0.654,
+                    "sat_fat": 0.061,
+                    "protein": 0.151,
+                    "fiber": 0.067,
+                    "sodium": 0.02,
+                    "carbs": 0.138,
+                    "sugar": 0.027,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 3500,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Walnuts — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 7744,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            },
+            {
+                "value": 9279,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": "Walnuts — water_per_kg: 9,279 L/kg; averaged with Mekonnen & Hoekstra (source 30, 7,744 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3872,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 3329,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 209,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 3,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 150,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Walnuts — emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; temperate deciduous orchard)."
+                }
+            },
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Walnuts — emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; temperate deciduous orchard; farm-gate boundary including fertilizer N2O and orchard energy)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 5000,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Walnuts — water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) → final 8,512 L/kg."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.6,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Walnuts — carbaryl: 0.6 kg/ha; imidacloprid: 0.1 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.1,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Walnuts — carbaryl: 0.6 kg/ha; imidacloprid: 0.1 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Walnuts — carbaryl: 0.6 kg/ha; imidacloprid: 0.1 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "slug": "cashews",
+        "name": "Cashews",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.53,
+                    "fat": 0.439,
+                    "sat_fat": 0.078,
+                    "protein": 0.182,
+                    "fiber": 0.033,
+                    "sodium": 0.12,
+                    "carbs": 0.304,
+                    "sugar": 0.056,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 700,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Cashews — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 9280,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 8630,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 464,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 138,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Cashews — emissions_per_kg: ~3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; higher than most tree nuts due to multi-stage processing requirements and tropical production in West Africa, India, Vietnam)."
+                }
+            },
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Cashews — emissions_per_kg: 3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; energy-intensive processing — cashew shell contains caustic anacardic acid requiring roasting and shelling before kernel is edible; production concentrated in tropical regions with moderate land use change risk)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3000,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.2,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Cashews — mancozeb: 0.2 kg/ha; imidacloprid: 0.07 kg/ha. Limited NASS data; tropical extension sources used."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.07,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Cashews — mancozeb: 0.2 kg/ha; imidacloprid: 0.07 kg/ha. Limited NASS data; tropical extension sources used."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "slug": "pistachios",
+        "name": "Pistachios",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.62,
+                    "fat": 0.456,
+                    "sat_fat": 0.056,
+                    "protein": 0.202,
+                    "fiber": 0.103,
+                    "sodium": 0.01,
+                    "carbs": 0.278,
+                    "sugar": 0.078,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1200,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pistachios — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 10697,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            },
+            {
+                "value": 11356,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": "Pistachios — water_per_kg: 11,356 L/kg; averaged with Mekonnen & Hoekstra (source 30, 10,697 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3209,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 7274,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 346,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.5,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.8,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Pistachios — emissions_per_kg: ~2.8 kg CO2e/kg (P&N 2018 tree nuts; slightly above average for tree nuts due to arid-region irrigation energy; major production in Iran, US California, Turkey)."
+                }
+            },
+            {
+                "value": 2.8,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pistachios — emissions_per_kg: 2.8 kg CO2e/kg (P&N 2018 tree nuts; arid-region production with elevated irrigation energy; major production in Iran, US California, Turkey)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3500,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pistachios — water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) → final 11,027 L/kg."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pistachios — imidacloprid: 0.08 kg/ha; carbaryl: 0.3 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pistachios — imidacloprid: 0.08 kg/ha; carbaryl: 0.3 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pistachios — imidacloprid: 0.08 kg/ha; carbaryl: 0.3 kg/ha; glyphosate: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "slug": "pecans",
+        "name": "Pecans",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.91,
+                    "fat": 0.72,
+                    "sat_fat": 0.062,
+                    "protein": 0.092,
+                    "fiber": 0.096,
+                    "sodium": 0,
+                    "carbs": 0.139,
+                    "sugar": 0.04,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1500,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 10000,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 7500,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 2000,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 220,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.8,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 130,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Pecans — emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; temperate deciduous orchard similar to walnuts in GHG profile; US Southeast and Southwest primary production regions)."
+                }
+            },
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pecans — emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; temperate deciduous orchard similar to walnuts in GHG profile; US Southeast and Southwest primary production regions)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 5500,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Pecans — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.7,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pecans — carbaryl: 0.7 kg/ha; malathion: 0.3 kg/ha; imidacloprid: 0.08 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pecans — carbaryl: 0.7 kg/ha; malathion: 0.3 kg/ha; imidacloprid: 0.08 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pecans — carbaryl: 0.7 kg/ha; malathion: 0.3 kg/ha; imidacloprid: 0.08 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "slug": "hazelnuts",
+        "name": "Hazelnuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.28,
+                    "fat": 0.609,
+                    "sat_fat": 0.045,
+                    "protein": 0.15,
+                    "fiber": 0.099,
+                    "sodium": 0,
+                    "carbs": 0.168,
+                    "sugar": 0.044,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1700,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Hazelnuts — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 9807,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            },
+            {
+                "value": 10511,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": "Hazelnuts — water_per_kg: 10,511 L/kg; averaged with Mekonnen & Hoekstra (source 30, 9,807 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 6865,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 2452,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 161,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.8,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Hazelnuts — emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; Turkey dominates global production; largely rain-fed Mediterranean orchards with low irrigation energy component)."
+                }
+            },
+            {
+                "value": 2.3,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Hazelnuts — emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; Turkey dominates global production; largely rain-fed Mediterranean orchards with low irrigation energy component)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3000,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Hazelnuts — water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) → final 10,159 L/kg."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Hazelnuts — carbaryl: 0.3 kg/ha; imidacloprid: 0.06 kg/ha. Limited NASS data; values drawn from UC extension."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Hazelnuts — carbaryl: 0.3 kg/ha; imidacloprid: 0.06 kg/ha. Limited NASS data; values drawn from UC extension."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "slug": "macadamia-nuts",
+        "name": "Macadamia Nuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 7.18,
+                    "fat": 0.759,
+                    "sat_fat": 0.121,
+                    "protein": 0.079,
+                    "fiber": 0.086,
+                    "sodium": 0.05,
+                    "carbs": 0.138,
+                    "sugar": 0.047,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2500,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 8220,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 5754,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 1808,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 150,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 150,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Macadamia nuts — emissions_per_kg: ~3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; energy-intensive mechanical shelling process; production in Australia, South Africa, Hawaii; similar GHG profile to cashews due to processing complexity)."
+                }
+            },
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Macadamia nuts — emissions_per_kg: 3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; energy-intensive mechanical shelling process; production in Australia, South Africa, Hawaii)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 6000,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "slug": "brazil-nuts",
+        "name": "Brazil Nuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.59,
+                    "fat": 0.67,
+                    "sat_fat": 0.152,
+                    "protein": 0.143,
+                    "fiber": 0.075,
+                    "sodium": 0.03,
+                    "carbs": 0.121,
+                    "sugar": 0.023,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2357,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2310,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 24,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 10,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.2,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Brazil nuts — emissions_per_kg: ~0.1–0.3 kg CO2e/kg (P&N 2018 range for wild-harvested forest products; brazil nuts qualify as a zero-input forest harvest with no cultivation, irrigation, fertilizer, or tillage; the 0.2 value is consistent with the lower bound of the P&N dataset for tree-based foods requiring no land conversion or cultivation inputs)."
+                }
+            },
+            {
+                "value": 0.2,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Brazil nuts — emissions_per_kg: ~0.2 kg CO2e/kg (P&N 2018 via OWID GHG chart; wild-harvested from Amazon rainforest canopy trees with zero cultivation inputs; GHG footprint consists almost entirely of harvest transport; the lowest value of any nut in the P&N dataset)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 50000,
+                "confidence": 4,
+                "source": {
+                    "id": 34,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 31,
+        "slug": "peanuts",
+        "name": "Peanuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.67,
+                    "fat": 0.494,
+                    "sat_fat": 0.068,
+                    "protein": 0.258,
+                    "fiber": 0.085,
+                    "sodium": 0.18,
+                    "carbs": 0.161,
+                    "sugar": 0.04,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1600,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "Peanuts — yield_kg_ha: Industry yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3740,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2992,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 673,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 80,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.2,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Peanuts — emissions_per_kg: ~3.2 kg CO2e/kg (P&N 2018 groundnuts; distinct from tree nuts as a legume — nitrogen fixation offsets some fertilizer N2O but tillage, drying, and aflatoxin management add GHG; global production in India, China, US, Nigeria)."
+                }
+            },
+            {
+                "value": 3.2,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Peanuts — emissions_per_kg: 3.2 kg CO2e/kg (P&N 2018 groundnuts/peanuts; P&N reports ~3.2 kg CO2e/kg for groundnuts specifically, higher than generic tree nuts; tillage, drying, and crop processing contribute above the N-fixation offset)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1500,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.35,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "slug": "pine-nuts",
+        "name": "Pine Nuts",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.73,
+                    "fat": 0.682,
+                    "sat_fat": 0.048,
+                    "protein": 0.138,
+                    "fiber": 0.036,
+                    "sodium": 0.02,
+                    "carbs": 0.188,
+                    "sugar": 0.037,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 9000,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 7200,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 1530,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 100,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Pine nuts — emissions_per_kg: ~2.0 kg CO2e/kg (P&N 2018 tree nuts lower range; semi-wild and extensively managed stone pine and pinyon pine forests require minimal cultivation inputs; harvest is primarily mechanical collection from wild/semi-managed stands; lower GHG than fully cultivated tree nuts)."
+                }
+            },
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pine nuts — emissions_per_kg: 2.0 kg CO2e/kg (P&N 2018 tree nuts range lower bound; semi-wild and extensively managed forest production in Spain, Italy, China, Afghanistan; harvest energy and transport are the primary GHG contributors, not cultivation)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 10000,
+                "confidence": 3,
+                "source": {
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "slug": "sunflower-seeds",
+        "name": "Sunflower Seeds",
+        "type": "plant",
+        "category": "nuts",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.84,
+                    "fat": 0.515,
+                    "sat_fat": 0.054,
+                    "protein": 0.209,
+                    "fiber": 0.088,
+                    "sodium": 0.09,
+                    "carbs": 0.2,
+                    "sugar": 0.027,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3366,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3029,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 269,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 65,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 90,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.1,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Sunflower seeds — emissions_per_kg: ~1.1 kg CO2e/kg (P&N 2018 oilseeds; annual crop with fertilizer N2O as dominant GHG component; lower than tree nuts due to annual crop system and lower cultivation intensity)."
+                }
+            },
+            {
+                "value": 1.1,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Sunflower seeds — emissions_per_kg: 1.1 kg CO2e/kg (P&N 2018 oilseeds global weighted average; semi-arid production in EU, Russia, Argentina; fertilizer N2O is the dominant GHG component)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1200,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

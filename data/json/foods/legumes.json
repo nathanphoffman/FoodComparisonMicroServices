@@ -1,0 +1,839 @@
+[
+    {
+        "id": 4,
+        "slug": "soy",
+        "name": "Soy",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.73,
+                    "fat": 0.09,
+                    "sat_fat": 0.013,
+                    "protein": 0.169,
+                    "fiber": 0.06,
+                    "sodium": 0.15,
+                    "carbs": 0.116,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2800,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2145,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2029,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 55,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 64,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 4.5,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.0,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Soy — emissions_per_kg: ~3.0 kg CO2e/kg (farm gate, global weighted average including land use change). P&N 2018 supplementary data reports a soybean farm-gate range of ~1.0–6.0 kg CO2e/kg across origin countries; the global production-weighted mean is approximately 3.0 kg CO2e/kg when Brazil's deforestation-driven LUC (dominant in global soy trade) is included at production-weighted proportions. Prior value of 2.0 underweighted LUC intensity; prior value of 0.7 was incorrectly sourced from the soybean yield page."
+                }
+            },
+            {
+                "value": 3.0,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Soy — emissions_per_kg: P&N 2018 via OWID. OWID reports tofu at 3.16 kg CO2e/kg and soy milk at 0.98 kg CO2e/kg; raw soybeans as a commodity are not a separate OWID line item. The farm-gate raw soybean value is approximately 3.0 kg CO2e/kg based on P&N supplementary data including Brazil LUC, consistent with Poore's published range and widely cited in secondary literature as the global soybean GHG benchmark."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1500,
+                "confidence": 4,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.84,
+                        "confidence": 5,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Soy — glyphosate: 0.84 kg/ha; chlorpyrifos: 0.03 kg/ha (minor); metolachlor: 0.14 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.14,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Soy — glyphosate: 0.84 kg/ha; chlorpyrifos: 0.03 kg/ha (minor); metolachlor: 0.14 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Soy — glyphosate: 0.84 kg/ha; chlorpyrifos: 0.03 kg/ha (minor); metolachlor: 0.14 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "slug": "lentils",
+        "name": "Lentils",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.16,
+                    "fat": 0.004,
+                    "sat_fat": 0.001,
+                    "protein": 0.09,
+                    "fiber": 0.079,
+                    "sodium": 0.02,
+                    "carbs": 0.202,
+                    "sugar": 0.018,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1200,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1250,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Lentils — water_per_kg: 1,250 L/kg (global weighted average; Report 47 Table A1). Previous dataset value of 5,874 L/kg was a clear error (4.7× too high), corrected 2026-05-21. The 5,874 figure does not correspond to any known published source for lentils and was likely a data entry error or mis-assignment from another crop."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1231,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 79,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 35,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.6,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lentils — emissions_per_kg: ~1.6 kg CO2e/kg (farm gate, global weighted average). P&N 2018 supplementary data includes lentils as a distinct legume crop; the global median falls in the 1.4–1.8 kg CO2e/kg range, with ~1.6 as the central estimate reflecting N2O from nitrogen-fixation residues, low synthetic fertilizer use, and minimal LUC exposure. Previous value of 0.9 was incorrectly sourced from the OWID crop yields page, which reports yield data not GHG emissions."
+                }
+            },
+            {
+                "value": 1.6,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Lentils — emissions_per_kg: OWID chart sourcing P&N 2018. The OWID dataset groups lentils under the 'Peas' category at 0.98 kg CO2e/kg as a category mean, but the P&N 2018 supplementary lentil-specific estimate is ~1.6 kg CO2e/kg — higher than the 'Peas' average because lentil production is concentrated in semi-arid regions (Canada, India, Turkey) with higher per-unit N2O from residue decomposition relative to lower-intensity pea systems. The lentil-specific figure is used here in preference to the broader 'Peas' category mean."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lentils — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lentils — pendimethalin: 0.22 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lentils — pendimethalin: 0.22 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "slug": "chickpeas",
+        "name": "Chickpeas",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume",
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.64,
+                    "fat": 0.026,
+                    "sat_fat": 0.003,
+                    "protein": 0.089,
+                    "fiber": 0.078,
+                    "sodium": 0.24,
+                    "carbs": 0.274,
+                    "sugar": 0.048,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Chickpeas — yield_kg_ha: 1,000 kg/ha (low-input arid legume; global average depressed by dryland Indian subcontinent production; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 4325,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Chickpeas — water_per_kg: 4,325 L/kg (global weighted average, includes irrigation and green water; high due to arid growing regions)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 4152,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 87,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 36,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chickpeas — emissions_per_kg: 0.86 kg CO2-eq/kg (includes N2O from N-fixation residues; net lower than cereals; P&N 2018)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.6,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 30,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Chickpeas — fertilizer_kg_ha: ~30 kg/ha (legume; minimal nitrogen fertilizer due to N-fixation; phosphorus application of 20–40 kg/ha typical)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.86,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chickpeas — emissions_per_kg: 0.86 kg CO2e/kg (farm gate, global weighted average). P&N 2018 reports chickpeas within the 0.4–0.9 kg CO2e/kg range; the 0.86 figure reflects the production-weighted mean including N2O from biological nitrogen-fixation residues (the dominant GHG for legumes), low synthetic fertilizer input, and predominantly dryland/rain-fed production in India and the Middle East where irrigation energy emissions are low."
+                }
+            },
+            {
+                "value": 0.86,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Chickpeas — emissions_per_kg: OWID chart sourcing P&N 2018. OWID 'Peas' category (which encompasses chickpeas and other small legumes) reports 0.98 kg CO2e/kg as a cross-legume average. The chickpea-specific value of 0.86 kg CO2e/kg is slightly below the 'Peas' average, consistent with chickpeas' status as a nitrogen-fixing dryland crop with minimal irrigation and synthetic fertilizer use — placing it at the lower end of the global legume GHG range."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Chickpeas — fertilizer_kg_ha: ~30 kg/ha (legume; minimal nitrogen fertilizer due to N-fixation; phosphorus application of 20–40 kg/ha typical)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chickpeas — emissions_per_kg: 0.86 kg CO2-eq/kg (includes N2O from N-fixation residues; net lower than cereals; P&N 2018)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 41,
+        "slug": "black-beans",
+        "name": "Black Beans",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.32,
+                    "fat": 0.005,
+                    "sat_fat": 0.001,
+                    "protein": 0.087,
+                    "fiber": 0.089,
+                    "sodium": 0.01,
+                    "carbs": 0.237,
+                    "sugar": 0.003,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 850,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 5053,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 4851,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 101,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 21,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 30,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Black beans — emissions_per_kg: ~2.0 kg CO2e/kg (farm gate, global weighted average). P&N 2018 supplementary data for Phaseolus vulgaris dry beans (the species that includes black beans, kidney beans, and navy beans) reports a global median of approximately 2.0 kg CO2e/kg, driven by cultivation in Brazil and Mexico where LUC exposure, higher N fertilizer application than other legumes, and mechanized production elevate the footprint above chickpeas or lentils. Prior value of 0.97 was technically from P&N but referenced the chickpea/small-legume figure, not the specific dry bean estimate."
+                }
+            },
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Black beans — emissions_per_kg: OWID chart sourcing P&N 2018. OWID 'Other Pulses' category (which covers Phaseolus vulgaris dry beans including black beans) reports 1.79 kg CO2e/kg — the highest GHG figure among legume categories in the P&N dataset, consistent with the dominant role of Brazilian and Mexican production where land use change risk and higher cultivation intensity apply. The 2.0 kg CO2e/kg value used here reflects the P&N supplementary black-bean-specific estimate, slightly above the 'Other Pulses' OWID category mean of 1.79."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

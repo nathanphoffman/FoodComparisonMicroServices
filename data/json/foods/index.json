@@ -1,0 +1,81 @@
+{
+    "nuts": [
+        "almonds",
+        "walnuts",
+        "cashews",
+        "pistachios",
+        "pecans",
+        "hazelnuts",
+        "macadamia-nuts",
+        "brazil-nuts",
+        "peanuts",
+        "pine-nuts",
+        "sunflower-seeds"
+    ],
+    "meats": [
+        "beef",
+        "chicken",
+        "pork",
+        "turkey",
+        "lamb"
+    ],
+    "grains": [
+        "wheat",
+        "corn",
+        "sorghum",
+        "rice",
+        "oats",
+        "quinoa",
+        "barley"
+    ],
+    "legumes": [
+        "soy",
+        "lentils",
+        "chickpeas",
+        "black-beans"
+    ],
+    "feeds": [
+        "alfalfa",
+        "grass-hay"
+    ],
+    "vegetables": [
+        "tomato",
+        "cucumber",
+        "potato",
+        "broccoli",
+        "sweet-potato",
+        "garlic"
+    ],
+    "leafy": [
+        "lettuce",
+        "spinach",
+        "kale"
+    ],
+    "seafood": [
+        "salmon",
+        "tuna",
+        "shrimp",
+        "sardines"
+    ],
+    "eggs": [
+        "egg"
+    ],
+    "fruits": [
+        "apple",
+        "banana",
+        "avocado",
+        "coconut",
+        "mango",
+        "orange"
+    ],
+    "dairy": [
+        "milk",
+        "yogurt"
+    ],
+    "oils": [
+        "olive-oil"
+    ],
+    "seeds": [
+        "flaxseed"
+    ]
+}

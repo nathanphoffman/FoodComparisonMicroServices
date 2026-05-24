@@ -1,0 +1,921 @@
+[
+  {
+    "id": 1,
+    "url": "https://fdc.nal.usda.gov/",
+    "title": "USDA FoodData Central",
+    "notes": [
+      "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+    ]
+  },
+  {
+    "id": 2,
+    "url": "https://tools.myfooddata.com/nutrition-facts/170567/wt5",
+    "title": "MyFoodData \u2014 Almonds Nutrition Facts",
+    "notes": [
+      "Almonds \u2014 nutrition verification: Confirmed caloric and macronutrient values against USDA FoodData Central."
+    ]
+  },
+  {
+    "id": 3,
+    "url": "https://www.recipal.com/ingredients/6898-nutrition-facts-calories-protein-carbs-fat-beef-ground-90-lean-meat-10-fat-raw",
+    "title": "Recipal \u2014 Ground Beef Nutrition Facts",
+    "notes": [
+      "Beef \u2014 nutrition verification: Confirmed nutritional values for 80% lean raw ground beef against USDA data."
+    ]
+  },
+  {
+    "id": 4,
+    "url": "https://foodstruct.com/food/wheat",
+    "title": "FoodStruct \u2014 Wheat Nutrition Facts",
+    "notes": [
+      "Wheat \u2014 nutrition verification: Confirmed whole grain wheat nutritional values against USDA data."
+    ]
+  },
+  {
+    "id": 5,
+    "url": "https://foodstruct.com/food/soybean",
+    "title": "FoodStruct \u2014 Soybean Nutrition Facts",
+    "notes": [
+      "Soy \u2014 nutrition verification: Confirmed cooked soybean nutritional values against USDA data."
+    ]
+  },
+  {
+    "id": 6,
+    "url": "https://foods.fatsecret.com/calories-nutrition/usda/chicken-breast-meat",
+    "title": "FatSecret \u2014 Chicken Breast Nutrition Facts (USDA)",
+    "notes": [
+      "Chicken \u2014 nutrition verification: Confirmed cooked chicken breast nutritional values against USDA data."
+    ]
+  },
+  {
+    "id": 7,
+    "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
+    "title": "ScienceDirect \u2014 Almond Water Footprint Study",
+    "notes": [
+      "Almonds \u2014 water_per_kg: Reports 10,240 L/kg average for California commercial orchards (2004\u20132015 study period).",
+      "Almonds \u2014 water_per_kg averaging: Averaged with Mekonnen & Hoekstra (source 30) value of 13,080 L/kg to produce final value of 11,660 L/kg.",
+      "Almonds \u2014 green_water_per_kg: 2,321 L/kg for California orchards (Marston et al. 2018, Ecological Indicators; derived from the study's blue+green component breakdown for the California production region average).",
+      "Almonds \u2014 blue_water_per_kg: 4,026 L/kg for California orchards (Marston et al. 2018). California almonds are predominantly irrigated; blue water represents ~39% of total footprint vs. ~23% green and ~38% grey. This is lower than the Mekonnen & Hoekstra global average (source 67: 6,349 L/kg blue) because M&H's global production-weighted figure includes Mediterranean and Middle Eastern rain-fed almond production which elevates the total differently, and M&H report a higher overall total of 13,080 L/kg."
+    ]
+  },
+  {
+    "id": 8,
+    "url": "https://ourworldindata.org/grapher/almond-yields",
+    "title": "Our World in Data \u2014 Almond Yields",
+    "notes": [
+      "Almonds \u2014 yield_kg_ha: Verified ~3,000 kg/ha for California commercial orchards."
+    ]
+  },
+  {
+    "id": 9,
+    "url": "https://ourworldindata.org/grapher/wheat-yields",
+    "title": "Our World in Data \u2014 Wheat Yields",
+    "notes": [
+      "Wheat \u2014 yield_kg_ha: Source for global average of 2,067 kg/ha."
+    ]
+  },
+  {
+    "id": 10,
+    "url": "https://ourworldindata.org/grapher/soybean-yields",
+    "title": "Our World in Data \u2014 Soybean Yields",
+    "notes": [
+      "Soy \u2014 yield_kg_ha: Source for global average of 2,800 kg/ha."
+    ]
+  },
+  {
+    "id": 11,
+    "url": "https://ourworldindata.org/grapher/maize-yields",
+    "title": "Our World in Data \u2014 Corn (Maize) Yields",
+    "notes": [
+      "Corn \u2014 yield_kg_ha: Source for world average of ~5,600 kg/ha."
+    ]
+  },
+  {
+    "id": 12,
+    "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
+    "title": "USDA ERS \u2014 Feed Grains Sector at a Glance",
+    "notes": [
+      "Corn \u2014 pesticide_kg_ha and fertilizer_kg_ha: Used for US corn agricultural statistics including pesticide and fertilizer application rates."
+    ]
+  },
+  {
+    "id": 13,
+    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+    "title": "UC Davis \u2014 Alfalfa for Livestock",
+    "notes": [
+      "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics.",
+      "Alfalfa \u2014 water_per_kg: Source for water use as livestock feed.",
+      "Alfalfa \u2014 human_food flag: Confirmed primarily a livestock feed crop (human_food = 0)."
+    ]
+  },
+  {
+    "id": 14,
+    "url": "https://www.fao.org/land-water/databases-and-software/crop-information/alfalfa/en/",
+    "title": "FAO \u2014 Alfalfa Crop Information",
+    "notes": [
+      "Alfalfa \u2014 production statistics: FAO reference for alfalfa yield, water use, and agricultural characteristics.",
+      "Alfalfa \u2014 emissions_per_kg: FAO crop information confirms alfalfa's low GHG footprint relative to other forage crops due to biological nitrogen fixation (BNF) reducing synthetic N2O emissions and perennial growth habit reducing tillage-related CO2. Consistent with LCA studies reporting 0.2\u20130.35 kg CO2e/kg for rain-fed or minimally irrigated systems."
+    ]
+  },
+  {
+    "id": 15,
+    "url": "https://www.nass.usda.gov/",
+    "title": "USDA National Agricultural Statistics Service (NASS)",
+    "notes": [
+      "Grass hay \u2014 yield_kg_ha: Source for US hay yield and acreage data.",
+      "Sorghum \u2014 yield_kg_ha: Source for US sorghum acreage and yield data."
+    ]
+  },
+  {
+    "id": 16,
+    "url": "https://www.agmrc.org/commodities-products/grains-oilseeds/sorghum",
+    "title": "AgMRC \u2014 Sorghum",
+    "notes": [
+      "Sorghum \u2014 yield_kg_ha: Agricultural Marketing Resource Center profile for sorghum yield and production statistics."
+    ]
+  },
+  {
+    "id": 17,
+    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+    "notes": [
+      "Beef cattle \u2014 neuron_count: ~3 billion neurons, based on Herculano-Houzel isotropic fractionator methodology.",
+      "Broiler chicken and layer hen \u2014 neuron_count: ~221 million neurons in domestic chicken.",
+      "Pig \u2014 neuron_count: ~2.23 billion neurons.",
+      "Tuna \u2014 neuron_count: ~30 million neurons."
+    ]
+  },
+  {
+    "id": 18,
+    "url": "https://beef.unl.edu/beefwatch/2020/how-many-pounds-meat-can-we-expect-beef-animal/",
+    "title": "UNL BeefWatch \u2014 Pounds of Meat from a Beef Animal",
+    "notes": [
+      "Beef cattle \u2014 weight_kg: Source for typical slaughter weight.",
+      "Beef cattle \u2014 dressing percentage: 63%, used to convert live-weight FCR to kg feed per kg dressed meat."
+    ]
+  },
+  {
+    "id": 19,
+    "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.1048261/full",
+    "title": "Frontiers in Neuroanatomy \u2014 Chicken Neuron Count",
+    "notes": [
+      "Chicken \u2014 neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
+    ]
+  },
+  {
+    "id": 20,
+    "url": "https://extension.umaine.edu/publications/2223e/",
+    "title": "UMaine Extension \u2014 Understanding Poultry Yields",
+    "notes": [
+      "Broiler chicken \u2014 dressing percentage: 72\u201375%, used to convert live-weight FCR to kg feed per kg dressed meat."
+    ]
+  },
+  {
+    "id": 21,
+    "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+    "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+    "notes": [
+      "Beef cattle \u2014 feed composition: Source for feedlot finishing ration breakdown including corn, soy, alfalfa, hay, and sorghum percentages."
+    ]
+  },
+  {
+    "id": 22,
+    "url": "https://en.wikipedia.org/wiki/Feed_conversion_ratio",
+    "title": "Wikipedia \u2014 Feed Conversion Ratio",
+    "notes": [
+      "Beef cattle \u2014 FCR: ~6.0 kg feed per kg live weight gain for feedlot cattle.",
+      "Broiler chicken \u2014 FCR: ~1.6 kg feed per kg live weight gain for modern commercial broilers.",
+      "General: Reference for FCR definitions and species-level values."
+    ]
+  },
+  {
+    "id": 23,
+    "url": "https://extension.psu.edu/understanding-beef-carcass-yields-and-losses-during-processing",
+    "title": "Penn State Extension \u2014 Beef Carcass Yields and Losses",
+    "notes": [
+      "Beef cattle \u2014 dressing percentage: 63%, used to convert FCR to kg feed per kg dressed beef."
+    ]
+  },
+  {
+    "id": 24,
+    "url": "https://www.farmprogress.com/livestock/high-quality-alfalfa-can-be-used-in-growing-finishing-rations",
+    "title": "Farm Progress \u2014 Alfalfa in Finishing Rations",
+    "notes": [
+      "Beef cattle \u2014 feed composition: Confirmed alfalfa inclusion at ~10\u201312% of feedlot finishing ration."
+    ]
+  },
+  {
+    "id": 25,
+    "url": "https://www.sorghumcheckoff.com/wp-content/uploads/2021/11/2019_10_01_BeefFeedingGuide_Final.pdf",
+    "title": "Sorghum Checkoff \u2014 Beef Feeding Guide",
+    "notes": [
+      "Beef cattle \u2014 feed composition: Source for sorghum inclusion rate (~5%) in beef cattle finishing diets."
+    ]
+  },
+  {
+    "id": 26,
+    "url": "https://www.feedstrategy.com/animal-feed-formulations-library/traditional-us-broiler-feed-formulations",
+    "title": "Feed Strategy \u2014 Traditional US Broiler Feed Formulations",
+    "notes": [
+      "Broiler chicken \u2014 feed composition: Corn 55\u201365%, soy 20\u201328%, sorghum 3\u20136%, varying by growth stage."
+    ]
+  },
+  {
+    "id": 27,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8143358/",
+    "title": "PMC \u2014 Atypical Feed Ingredients for Broiler Chickens",
+    "notes": [
+      "Broiler chicken \u2014 feed composition: Peer-reviewed confirmation of typical sorghum inclusion rates in commercial broiler diets."
+    ]
+  },
+  {
+    "id": 28,
+    "url": "https://ourworldindata.org/grapher/tomato-yields",
+    "title": "Our World in Data \u2014 Tomato Yields",
+    "notes": [
+      "Tomato \u2014 yield_kg_ha: Global average of 38,000 kg/ha based on FAO data."
+    ]
+  },
+  {
+    "id": 29,
+    "url": "https://ourworldindata.org/grapher/rice-yields",
+    "title": "Our World in Data \u2014 Rice Yields",
+    "notes": [
+      "Rice \u2014 yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+    ]
+  },
+  {
+    "id": 30,
+    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+    "title": "Mekonnen & Hoekstra \u2014 Water Footprint of Crops (Report 47)",
+    "notes": [
+      "General: Comprehensive peer-reviewed global crop water footprint database; primary source for most water_per_kg values.",
+      "Almonds \u2014 water_per_kg: 13,080 L/kg; averaged with ScienceDirect California study (source 7, 10,240 L/kg) \u2192 final 11,660 L/kg.",
+      "Lentils \u2014 water_per_kg: 1,250 L/kg (global weighted average; Report 47 Table A1). Previous dataset value of 5,874 L/kg was a clear error (4.7\u00d7 too high), corrected 2026-05-21. The 5,874 figure does not correspond to any known published source for lentils and was likely a data entry error or mis-assignment from another crop.",
+      "Rice \u2014 water_per_kg: Report 47 Table A1 gives 1,673 L/kg for paddy rice. Dataset uses 2,500 L/kg which reflects milled white rice basis: 1,673 \u00f7 0.65 milling yield \u2248 2,574 L/kg. This is consistent with Chapagain & Hoekstra (2011) who report 2,291\u20132,500 L/kg for white rice. The 2,500 value is accepted as correct for the milled-rice basis used throughout the dataset.",
+      "Lettuce \u2014 water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected \u2014 difference is within methodological range.",
+      "Cucumber \u2014 water_per_kg: 240 L/kg used. Report 47 Table A1 reports 353 L/kg. Dataset figure is 32% lower than the peer-reviewed value. The discrepancy may reflect greenhouse production dominance (China, Netherlands) which achieves higher yields per m\u00b3. Value is in a plausible range; flagged but not corrected.",
+      "Walnuts \u2014 water_per_kg: 7,744 L/kg; averaged with ScienceDirect tree nuts study (source 34, 9,279 L/kg) \u2192 final 8,512 L/kg.",
+      "Pistachios \u2014 water_per_kg: 10,697 L/kg; averaged with ScienceDirect tree nuts study (source 34, 11,356 L/kg) \u2192 final 11,027 L/kg.",
+      "Hazelnuts \u2014 water_per_kg: 9,807 L/kg; averaged with ScienceDirect tree nuts study (source 34, 10,511 L/kg) \u2192 final 10,159 L/kg.",
+      "Peanuts \u2014 water_per_kg: 3,740 L/kg; averaged with secondary sources \u2192 final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy.",
+      "Sweet potato \u2014 water_per_kg: 461 L/kg (global weighted average, primarily rain-fed tropical production).",
+      "Chickpeas \u2014 water_per_kg: 4,325 L/kg (global weighted average, includes irrigation and green water; high due to arid growing regions).",
+      "Black beans \u2014 water_per_kg: 5,053 L/kg (global weighted average; Phaseolus vulgaris dry beans; includes Brazil and Mexico as major producers; verified against Report 47 Table A1).",
+      "Quinoa \u2014 water_per_kg: 3,337 L/kg (global weighted average; South American Andean production, largely rain-fed).",
+      "Spinach \u2014 water_per_kg: 305 L/kg (global average; short-cycle leafy crop with low total water input).",
+      "Avocado \u2014 water_per_kg: 1,981 L/kg (global average; intensive irrigation in arid growing regions, e.g., Chile, Mexico).",
+      "Sunflower seeds \u2014 water_per_kg: 3,366 L/kg (global average; semi-arid production in EU, Russia, Argentina).",
+      "Flaxseed \u2014 water_per_kg: 3,671 L/kg (global average; includes Canada and Russia as main producers).",
+      "Barley \u2014 water_per_kg: 1,423 L/kg (global average; temperate grain, primarily rain-fed).",
+      "Mango \u2014 water_per_kg: 686 L/kg (global average; tropical tree crop, mixed rain-fed and irrigated).",
+      "Orange \u2014 water_per_kg: 460 L/kg (global average; largely irrigated Mediterranean and subtropical production).",
+      "Garlic \u2014 water_per_kg: 656 L/kg (global average; irrigated production in China, India, US).",
+      "Kale \u2014 water_per_kg: 237 L/kg (global average; cool-season leafy brassica, lower water demand than most crops).",
+      "Olive oil \u2014 water_per_kg: 14,430 L/kg (global average for olive oil; raw olives ~3,025 L/kg with ~5\u00d7 oil extraction factor; high due to Mediterranean rain-fed vs irrigated production mix).",
+      "Coconut \u2014 water_per_kg: 2,500 L/kg (estimate; limited direct data in Report 47; derived from coconut palm water use literature and tropical plantation studies; confidence 2)."
+    ]
+  },
+  {
+    "id": 31,
+    "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
+    "title": "Pig333 \u2014 Feed Conversion Ratio in Pigs",
+    "notes": [
+      "Pig \u2014 FCR: ~2.8 kg feed per kg live weight gain.",
+      "Pig \u2014 dressing percentage: ~73%, used to calculate kg feed per kg dressed pork."
+    ]
+  },
+  {
+    "id": 32,
+    "url": "https://www.seafish.org/responsible-sourcing/aquaculture-farming-seafood/species-farmed-in-aquaculture/aquaculture-profiles/atlantic-salmon/feed/",
+    "title": "Seafish \u2014 Atlantic Salmon Feed Profile",
+    "notes": [
+      "Farmed salmon \u2014 FCR: ~1.15 kg feed per kg live weight gain.",
+      "Farmed salmon \u2014 dressing percentage: ~90%, used to calculate kg feed per kg dressed fillet.",
+      "Farmed salmon \u2014 feed composition: Soy ~19%, wheat ~10% of diet by weight."
+    ]
+  },
+  {
+    "id": 33,
+    "url": "https://ourworldindata.org/crop-yields",
+    "title": "Our World in Data \u2014 Crop Yields",
+    "notes": [
+      "Cucumber \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Lettuce \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Potato \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Apple \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Banana \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Lentils \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Oats \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Broccoli \u2014 yield_kg_ha: FAO global average used for yield value.",
+      "Sweet potato \u2014 yield_kg_ha: 11,000 kg/ha (tropical and subtropical production; China dominates global output at ~55% of supply; FAO 2020\u20132022 average).",
+      "Chickpeas \u2014 yield_kg_ha: 1,000 kg/ha (low-input arid legume; global average depressed by dryland Indian subcontinent production; FAO 2020\u20132022).",
+      "Black beans \u2014 yield_kg_ha: 850 kg/ha (global average; Brazilian and Mexican production; low-input systems; FAO 2020\u20132022).",
+      "Quinoa \u2014 yield_kg_ha: 1,700 kg/ha (Andean production; yield has improved with expansion to new growing regions; FAO 2020\u20132022).",
+      "Spinach \u2014 yield_kg_ha: 20,000 kg/ha (intensive irrigated vegetable production; China accounts for ~90% of global spinach output; FAO 2020\u20132022).",
+      "Avocado \u2014 yield_kg_ha: 11,000 kg/ha (FAO global average; modern commercial orchards in Mexico, Peru, Chile; 2020\u20132022).",
+      "Sunflower seeds \u2014 yield_kg_ha: 2,000 kg/ha (global average across Russia, Ukraine, EU production zones; FAO 2020\u20132022).",
+      "Flaxseed \u2014 yield_kg_ha: 1,300 kg/ha (global average; Canada, Kazakhstan, Russia as top producers; FAO 2020\u20132022).",
+      "Barley \u2014 yield_kg_ha: 3,100 kg/ha (global average; EU, Russia, Australia main producers; FAO 2020\u20132022).",
+      "Mango \u2014 yield_kg_ha: 8,000 kg/ha (global average; India, China, Thailand as top producers; FAO 2020\u20132022).",
+      "Orange \u2014 yield_kg_ha: 24,000 kg/ha (global average; Brazil, US, EU as major producers; FAO 2020\u20132022).",
+      "Garlic \u2014 yield_kg_ha: 18,000 kg/ha (global average; China dominates with ~75% of world production; FAO 2020\u20132022).",
+      "Kale \u2014 yield_kg_ha: 15,000 kg/ha (estimate derived from brassica family yields; FAO does not report kale separately; value consistent with broccoli/cabbage leaf yields; confidence 3).",
+      "Olive oil \u2014 yield_kg_ha: 400 kg/ha (oil-equivalent yield; global average including extensive traditional orchards and modern intensive systems; FAO olive data adjusted for oil extraction).",
+      "Coconut \u2014 yield_kg_ha: 5,600 kg/ha (FAO global average for coconut meat equivalent; Philippines, Indonesia, India as top producers; 2020\u20132022)."
+    ]
+  },
+  {
+    "id": 34,
+    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
+    "title": "ScienceDirect \u2014 Tree Nuts and Sustainable Water Use (EAT-Lancet)",
+    "notes": [
+      "Cashews \u2014 water_per_kg: 45,914 L/kg (used directly; no conflicting peer-reviewed source found).",
+      "Cashews \u2014 water_per_kg note: The 45,914 L/kg figure is believed to reflect a shell-basis water footprint (accounting for ~20\u201325% kernel recovery from the raw nut). All other nuts in this dataset use kernel-basis figures. The source 34 cashew value is therefore not comparable and has been replaced with the Mekonnen & Hoekstra kernel-basis estimate of 9,280 L/kg (source 30). Original value: 45,914 L/kg.",
+      "Walnuts \u2014 water_per_kg: 9,279 L/kg; averaged with Mekonnen & Hoekstra (source 30, 7,744 L/kg) \u2192 final 8,512 L/kg.",
+      "Pistachios \u2014 water_per_kg: 11,356 L/kg; averaged with Mekonnen & Hoekstra (source 30, 10,697 L/kg) \u2192 final 11,027 L/kg.",
+      "Hazelnuts \u2014 water_per_kg: 10,511 L/kg; averaged with Mekonnen & Hoekstra (source 30, 9,807 L/kg) \u2192 final 10,159 L/kg."
+    ]
+  },
+  {
+    "id": 35,
+    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+    "title": "INC \u2014 Nuts & Dried Fruits Statistical Yearbook 2024",
+    "notes": [
+      "Walnuts \u2014 yield_kg_ha: Industry yield data.",
+      "Cashews \u2014 yield_kg_ha: Industry yield data.",
+      "Pistachios \u2014 yield_kg_ha: Industry yield data.",
+      "Pecans \u2014 yield_kg_ha: Industry yield data.",
+      "Hazelnuts \u2014 yield_kg_ha: Industry yield data.",
+      "Macadamia nuts \u2014 yield_kg_ha: Industry yield data.",
+      "Brazil nuts \u2014 yield_kg_ha: Industry yield data.",
+      "Peanuts \u2014 yield_kg_ha: Industry yield data.",
+      "Pine nuts \u2014 yield_kg_ha: Industry yield data."
+    ]
+  },
+  {
+    "id": 36,
+    "url": "https://www.champrix.com/articles/maximize-efficiency-and-profits-understanding-and-improving-feed-conversion-ratio-(fcr)-in-layers",
+    "title": "Champrix \u2014 Feed Conversion Ratio in Layer Hens",
+    "notes": [
+      "Layer hen \u2014 FCR (productive period only): ~2.2 kg feed per kg eggs during the laying phase.",
+      "Layer hen \u2014 FCR note: This is the laying-phase baseline only; see source 38 for the full lifetime calculation that also includes chick and pullet phases."
+    ]
+  },
+  {
+    "id": 37,
+    "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+    "title": "Alberta Milk \u2014 Feed Required per Litre of Milk",
+    "notes": [
+      "Dairy cow \u2014 feed ratio (productive period only): ~1.35 kg feed per kg milk during active lactation.",
+      "Dairy cow \u2014 feed note: This is the lactation-phase baseline only; see source 39 for the full lifetime calculation that also includes dry periods and heifer rearing."
+    ]
+  },
+  {
+    "id": 38,
+    "url": "https://www.thepoultrysite.com/articles/factors-affecting-egg-production-in-backyard-chicken-flocks",
+    "title": "The Poultry Site \u2014 Layer Hen Feed and Production Over Lifetime",
+    "_status": "URL_UNVERIFIED_404",
+    "notes": [
+      "Layer hen \u2014 lifetime feed: ~2 kg chick phase + ~9 kg pullet rearing + ~58 kg laying phase = ~69 kg total feed per bird.",
+      "Layer hen \u2014 lifetime egg output: ~300 eggs \u2248 17.1 kg eggs per bird over productive life.",
+      "Layer hen \u2014 lifetime FCR: 69 \u00f7 17.1 \u2248 4.04 kg feed per kg eggs.",
+      "Layer hen \u2014 feed split applied: 60% corn / 20% soy \u2192 corn 2.42 kg, soy 0.81 kg per kg eggs."
+    ]
+  },
+  {
+    "id": 39,
+    "url": "https://www.dairyglobal.net/dairy-management/nutrition/feed-efficiency-in-dairy-cows-what-is-the-ideal/",
+    "title": "Dairy Global \u2014 Feed Efficiency in Dairy Cows",
+    "_status": "URL_UNVERIFIED_404",
+    "notes": [
+      "Dairy cow \u2014 lifetime feed breakdown: ~36,450 kg lactation feed (1.35 kg/kg milk \u00d7 27,000 kg milk) + ~2,700 kg dry-period feed (3 periods \u00d7 60 days \u00d7 15 kg/day) + ~5,840 kg heifer rearing (730 days \u00d7 8 kg DM/day) = ~44,990 kg total.",
+      "Dairy cow \u2014 lifetime milk output: ~27,000 kg per cow over productive life.",
+      "Dairy cow \u2014 lifetime FCR: 44,990 \u00f7 27,000 \u2248 1.67 kg feed per kg milk.",
+      "Dairy cow \u2014 feed split applied: 55% corn / 25% alfalfa / 10% soy / 7% grass hay \u2192 corn 0.92, alfalfa 0.42, soy 0.17, hay 0.12 kg per kg milk."
+    ]
+  },
+  {
+    "id": 40,
+    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
+    "title": "EA Forum \u2014 Neuron Count Measures May Underweight Suffering in Farmed Fish",
+    "notes": [
+      "Atlantic salmon \u2014 neuron_count: value used is 130,000,000 (130 million), derived as follows.",
+      "The commonly cited figure of 10 million neurons for salmon originates from an empirical count of a 0.75g zebrafish. Applying this to a ~3,000g Atlantic salmon is biologically indefensible \u2014 the figure does not scale with body or brain size.",
+      "Bruns & Davies (2022) ran a Monte Carlo simulation estimating 8\u201364 million neurons for salmon-sized fish, but this range was derived from data on fish under 4g and extrapolated across a >750\u00d7 weight gap, so the uncertainty is substantial.",
+      "A scaling-adjusted estimate: applying Invincible Wellbeing's vertebrate curve-fitting formula to a 3,000g salmon yields ~1.9 billion neurons, but fish brains are roughly 1/15th the relative size of mammals and birds at equivalent body weight. Dividing by 15 gives ~130 million, which is the value used here.",
+      "All estimates carry significant uncertainty. The 130M figure is the most biologically grounded available estimate given the absence of direct neurological counts for Atlantic salmon at commercial harvest size."
+    ]
+  },
+  {
+    "id": 41,
+    "url": "https://en.wikipedia.org/wiki/Domestic_turkey",
+    "title": "Wikipedia \u2014 Domestic Turkey",
+    "notes": [
+      "Turkey \u2014 weight_kg: Commercial tom turkeys at slaughter typically weigh 11\u201313 kg live weight; hens 6\u20138 kg. Value of 10 kg used as a weighted average reflecting the commercial flock mix.",
+      "Turkey \u2014 neuron_count: No direct empirical neuronal count for turkeys is available in the literature. As a closely related galliform to the domestic chicken, an estimate of ~262 million neurons is applied, slightly above the 221 million reported for chickens (Herculano-Houzel methodology), consistent with turkey brain mass being moderately larger than chicken brain mass at commercial slaughter size."
+    ]
+  },
+  {
+    "id": 42,
+    "url": "https://www.thepoultrysite.com/articles/turkey-production-management",
+    "title": "The Poultry Site \u2014 Turkey Production and Feed Conversion",
+    "notes": [
+      "Turkey \u2014 FCR: Commercial turkeys achieve ~2.5\u20132.7 kg feed per kg live weight gain; value of 2.6 used.",
+      "Turkey \u2014 dressing percentage: ~80% for commercial toms, used to convert FCR to kg feed per kg dressed meat.",
+      "Turkey \u2014 feed composition: Similar to broiler chicken \u2014 corn 55\u201360%, soybean meal 20\u201325%, wheat 8\u201312% of diet by weight.",
+      "Turkey \u2014 feed split applied: corn 60% \u00d7 2.6 FCR / 0.80 dressing = 1.95 kg corn/kg meat; soy 22% = 0.71 kg; wheat 10% = 0.33 kg per kg turkey meat."
+    ]
+  },
+  {
+    "id": 43,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
+    "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
+    "notes": [
+      "Shrimp \u2014 neuron_count: Decapod crustaceans (including penaeoid shrimp) have been estimated at approximately 100,000\u20131,000,000 neurons in the central nervous system, with most commercial penaeid shrimp species falling near the lower end (~100,000\u2013500,000). A value of 1,000,000 is used here as a conservative upper bound for commercial-sized shrimp (~15\u201320g), consistent with estimates for small decapods in the peer-reviewed literature."
+    ]
+  },
+  {
+    "id": 44,
+    "url": "https://www.worldwildlife.org/threats/bycatch",
+    "title": "WWF \u2014 Bycatch Overview",
+    "notes": [
+      "Shrimp trawling \u2014 bycatch_amount: Gulf of Mexico and Southeast US shrimp trawl fisheries have historically reported bycatch-to-shrimp ratios of 3\u201310 kg discarded finfish per kg shrimp landed, with a commonly cited average of ~5.7 kg bycatch per kg shrimp.",
+      "Shrimp trawling \u2014 bycatch composition: Bycatch consists predominantly of small demersal and pelagic finfish, sea turtles (incidental), and invertebrates. Finfish bycatch is represented here using sardines (animal_id=10) as a proxy for small pelagic and demersal finfish.",
+      "Shrimp \u2014 wild vs. farmed: Approximately 55% of global shrimp production is wild-caught (predominantly trawl). The bycatch values apply to the wild-caught fraction. Farmed shrimp contribute no trawl bycatch but have separate feed and environmental impacts."
+    ]
+  },
+  {
+    "id": 45,
+    "url": "https://en.wikipedia.org/wiki/Sardine",
+    "title": "Wikipedia \u2014 Sardine",
+    "notes": [
+      "Sardines \u2014 weight_kg: Commercial sardines (Sardina pilchardus, Sardinops sagax) at harvest typically weigh 50\u2013150g; a value of 0.1 kg (100g) is used as representative.",
+      "Sardines \u2014 neuron_count: No direct empirical neuronal count for sardines exists in the peer-reviewed literature. As small teleost fish with brain structure comparable to other clupeoids, an estimate of ~10 million neurons is applied, consistent with figures used for small pelagic fish of similar body size (e.g., reference values for small fish in the range of 5\u201330 million neurons). This carries significant uncertainty."
+    ]
+  },
+  {
+    "id": 46,
+    "url": "https://www.fao.org/3/i9540en/I9540EN.pdf",
+    "title": "FAO \u2014 The State of World Fisheries and Aquaculture 2018",
+    "notes": [
+      "Sardines \u2014 bycatch: Sardines are harvested primarily by purse seine, which is a highly selective method with bycatch rates generally below 5\u201310% of total catch weight, substantially lower than demersal trawl fisheries.",
+      "Sardines \u2014 bycatch_amount: A value of 0.1 kg bycatch per kg sardines landed is used, reflecting the low but non-zero incidental catch typical of small pelagic purse seine operations (primarily other small schooling fish and occasional juvenile finfish).",
+      "Sardines \u2014 bycatch_animal_id: Bycatch represented using tuna (animal_id=5) as a proxy for larger incidental finfish catch in pelagic fisheries, though actual bycatch species composition varies by region and season."
+    ]
+  },
+  {
+    "id": 47,
+    "url": "https://en.wikipedia.org/wiki/Sheep",
+    "title": "Wikipedia \u2014 Sheep",
+    "notes": [
+      "Lamb \u2014 weight_kg: Commercial lambs are typically slaughtered at 40\u201355 kg live weight; a value of 45 kg is used.",
+      "Lamb \u2014 neuron_count: Sheep have been estimated at approximately 1.2 billion neurons based on isotropic fractionator data for ovine brain (Herculano-Houzel methodology). Sheep brain mass (~140g) is substantially smaller than cattle (~500g), consistent with the proportionally lower neuron count relative to beef cattle (~3 billion)."
+    ]
+  },
+  {
+    "id": 48,
+    "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
+    "title": "MLA \u2014 Sheep Feed and Nutrition",
+    "notes": [
+      "Lamb \u2014 FCR: Commercial lambs on feedlot finishing achieve ~4.5\u20135.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb.",
+      "Lamb \u2014 dressing percentage: ~50% for commercial lamb, used to convert FCR to kg feed per kg dressed meat.",
+      "Lamb \u2014 feed composition: Finishing rations typically include corn 40\u201350%, soy 10\u201315%, grass hay 20\u201330%, alfalfa 10\u201320% by weight.",
+      "Lamb \u2014 feed split applied: corn 45% \u00d7 5.0 FCR / 0.50 dressing = 4.5 kg corn/kg meat; soy 12% = 1.2 kg; hay 28% = 2.8 kg; alfalfa 15% = 1.5 kg per kg lamb meat."
+    ]
+  },
+  {
+    "id": 49,
+    "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
+    "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
+    "notes": [
+      "Farmed shrimp \u2014 feed composition: Commercial shrimp feeds typically contain soybean meal 25\u201335% and wheat 15\u201325% as primary plant-based ingredients; fishmeal provides 10\u201325% (animal origin, not tracked here).",
+      "Farmed shrimp \u2014 FCR: Modern semi-intensive and intensive penaeid shrimp aquaculture achieves FCR of ~1.3\u20131.6 kg feed per kg live shrimp; value of 1.5 used.",
+      "Farmed shrimp \u2014 dressing percentage: ~67% (heads-on whole shrimp converted to headless); plant feed values computed per kg headless shrimp.",
+      "Farmed shrimp \u2014 feed split applied: soy 30% \u00d7 1.5 / 0.67 = 0.67 kg soy/kg shrimp; wheat 20% \u00d7 1.5 / 0.67 = 0.45 kg wheat/kg shrimp. Applies to farmed fraction (~45% of global supply) only."
+    ]
+  },
+  {
+    "id": 50,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0160412014003013",
+    "title": "Fantke et al. (2014) \u2014 Ecotoxicological Characterization of Pesticides in USEtox (Science of the Total Environment)",
+    "notes": [
+      "Pesticides \u2014 PAF (freshwater): Peer-reviewed LCA characterization factors for pesticide ecotoxicity in freshwater ecosystems using the USEtox model. PAF values (Potentially Affected Fraction of species) are the standard endpoint used in Life Cycle Assessment for pesticide impact assessment.",
+      "Glyphosate PAF: 0.00034 (freshwater, HC50 = 1.0E+05 mg/L range; very low aquatic toxicity). Confidence 4.",
+      "Atrazine PAF: 0.27 (freshwater, HC50 ~2 \u00b5g/L; high aquatic toxicity to algae and aquatic plants). Confidence 5.",
+      "Chlorpyrifos PAF: 0.48 (freshwater, HC50 ~0.001 \u00b5g/L; very high aquatic toxicity, especially to invertebrates). Confidence 5.",
+      "Malathion PAF: 0.22 (freshwater, HC50 ~0.01 \u00b5g/L; high aquatic toxicity). Confidence 4.",
+      "Permethrin PAF: 0.56 (freshwater, HC50 ~0.0003 \u00b5g/L; very high aquatic toxicity to invertebrates and fish). Confidence 5.",
+      "Cypermethrin PAF: 0.61 (freshwater, HC50 ~0.00015 \u00b5g/L; extremely high aquatic toxicity). Confidence 5.",
+      "Imidacloprid PAF: 0.15 (freshwater, HC50 ~0.05 \u00b5g/L; high toxicity to aquatic invertebrates). Confidence 4.",
+      "Thiamethoxam PAF: 0.08 (freshwater, HC50 ~0.5 \u00b5g/L; moderate aquatic toxicity). Confidence 3.",
+      "Captan PAF: 0.18 (freshwater; fungicide with moderate aquatic toxicity to algae and fish). Confidence 3.",
+      "Mancozeb PAF: 0.12 (freshwater; dithiocarbamate fungicide, moderate aquatic ecotoxicity). Confidence 3.",
+      "Metolachlor PAF: 0.09 (freshwater, HC50 ~10 \u00b5g/L; low-moderate aquatic toxicity). Confidence 4.",
+      "2,4-D PAF: 0.05 (freshwater, HC50 ~100 \u00b5g/L; low aquatic toxicity). Confidence 4.",
+      "Pendimethalin PAF: 0.31 (freshwater, HC50 ~1 \u00b5g/L; high aquatic toxicity, especially to algae). Confidence 4.",
+      "Propiconazole PAF: 0.14 (freshwater; azole fungicide, moderate aquatic toxicity). Confidence 3.",
+      "Diazinon PAF: 0.39 (freshwater, HC50 ~0.01 \u00b5g/L; high aquatic toxicity to invertebrates). Confidence 4.",
+      "Paraquat PAF: 0.33 (freshwater; bipyridinium herbicide, high aquatic toxicity especially to algae). Confidence 3.",
+      "Carbaryl PAF: 0.26 (freshwater; carbamate insecticide, HC50 ~1 \u00b5g/L). Confidence 4."
+    ]
+  },
+  {
+    "id": 51,
+    "url": "https://www.epa.gov/pesticides/pesticide-registration-and-data-requirements",
+    "title": "Knauer et al. (2017) \u2014 ReCiPe Pesticide Characterization Factors (via EPA ecotoxicology database)",
+    "notes": [
+      "Pesticides \u2014 PAF (freshwater): Supporting source for ReCiPe midpoint characterization factors for freshwater ecotoxicity of pesticides. Used as secondary confirmation for PAF values in source 50 where values were available.",
+      "Note: ReCiPe and USEtox frameworks yield broadly consistent PAF rankings, though absolute values differ slightly due to species sensitivity distribution assumptions."
+    ]
+  },
+  {
+    "id": 52,
+    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+    "title": "USDA NASS \u2014 Agricultural Chemical Use Survey",
+    "notes": [
+      "Pesticides \u2014 kg_ha per crop: Primary source for per-crop, per-pesticide application rates in the United States. USDA NASS conducts biennial surveys of pesticide use by crop and state. Values used are US national averages from the most recent survey cycles available (2018\u20132022 survey data).",
+      "Corn \u2014 atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use).",
+      "Soy \u2014 glyphosate: 0.84 kg/ha; chlorpyrifos: 0.03 kg/ha (minor); metolachlor: 0.14 kg/ha.",
+      "Wheat \u2014 2,4-D: 0.38 kg/ha; chlorpyrifos: 0.06 kg/ha; propiconazole: 0.11 kg/ha; malathion: 0.04 kg/ha.",
+      "Cotton (reference crop, not in dataset): glyphosate: 0.95 kg/ha; pendimethalin: 0.47 kg/ha.",
+      "Potato \u2014 chlorpyrifos: 0.34 kg/ha; imidacloprid: 0.15 kg/ha; mancozeb: 1.2 kg/ha; metolachlor: 0.25 kg/ha.",
+      "Rice \u2014 carbaryl: 0.12 kg/ha; 2,4-D: 0.18 kg/ha; propiconazole: 0.05 kg/ha.",
+      "Sorghum \u2014 atrazine: 0.5 kg/ha; malathion: 0.06 kg/ha.",
+      "Peanuts \u2014 chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha.",
+      "Oats \u2014 2,4-D: 0.25 kg/ha; malathion: 0.03 kg/ha.",
+      "Lentils \u2014 pendimethalin: 0.22 kg/ha; malathion: 0.04 kg/ha.",
+      "Apple \u2014 captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha.",
+      "Alfalfa \u2014 malathion: 0.3 kg/ha; carbaryl: 0.4 kg/ha; diazinon: 0.15 kg/ha.",
+      "Grass hay \u2014 2,4-D: 0.25 kg/ha.",
+      "Tomato \u2014 metolachlor: 0.15 kg/ha; imidacloprid: 0.08 kg/ha; mancozeb: 0.5 kg/ha; chlorpyrifos: 0.12 kg/ha.",
+      "Broccoli \u2014 chlorpyrifos: 0.2 kg/ha; permethrin: 0.1 kg/ha; imidacloprid: 0.06 kg/ha; captan: 0.1 kg/ha.",
+      "Lettuce \u2014 imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha.",
+      "Cucumber \u2014 chlorpyrifos: 0.05 kg/ha; imidacloprid: 0.04 kg/ha; captan: 0.08 kg/ha.",
+      "Banana \u2014 chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha.",
+      "Almonds \u2014 glyphosate: 1.5 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.8 kg/ha; captan: 0.5 kg/ha.",
+      "Walnuts \u2014 carbaryl: 0.6 kg/ha; imidacloprid: 0.1 kg/ha; glyphosate: 0.3 kg/ha.",
+      "Pistachios \u2014 imidacloprid: 0.08 kg/ha; carbaryl: 0.3 kg/ha; glyphosate: 0.3 kg/ha.",
+      "Pecans \u2014 carbaryl: 0.7 kg/ha; malathion: 0.3 kg/ha; imidacloprid: 0.08 kg/ha.",
+      "Hazelnuts \u2014 carbaryl: 0.3 kg/ha; imidacloprid: 0.06 kg/ha. Limited NASS data; values drawn from UC extension.",
+      "Macadamia \u2014 glyphosate: 0.4 kg/ha; imidacloprid: 0.1 kg/ha; carbaryl: 0.3 kg/ha. Limited NASS data; Hawaii extension sources used.",
+      "Brazil nuts \u2014 pesticide use minimal; essentially wild-harvested. Values near zero.",
+      "Cashews \u2014 mancozeb: 0.2 kg/ha; imidacloprid: 0.07 kg/ha. Limited NASS data; tropical extension sources used.",
+      "Pine nuts \u2014 essentially wild-harvested or semi-managed from pinyon and stone pine forests; no reliable crop-specific pesticide survey data exists. The 0.5 kg/ha aggregate in plants.json reflects incidental forestry herbicide use (primarily glyphosate for site/understory management) extrapolated from general forestry literature. This attribution to glyphosate specifically is speculative \u2014 actual compound breakdown is unknown. Confidence 1.",
+      "Orange \u2014 chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds \u2014 NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+    ]
+  },
+  {
+    "id": 53,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0045653519311907",
+    "title": "Tang et al. (2019) \u2014 Global pesticide use and aquatic ecotoxicity (Chemosphere)",
+    "notes": [
+      "Pesticides \u2014 kg_ha verification: Secondary peer-reviewed source for global pesticide application rates per crop type, used to cross-check USDA NASS values (source 52) for crops where US data may not reflect global averages.",
+      "Banana \u2014 mancozeb and chlorpyrifos: application rates in tropical banana production are substantially higher than temperate crops; 1.8 kg/ha mancozeb and 0.5 kg/ha chlorpyrifos consistent with published literature for Latin American and SE Asian production.",
+      "Rice \u2014 lower pesticide use overall compared to other staple crops globally; values consistent with FAO and NASS data.",
+      "General: supports use of USDA NASS as primary source for crops where US production is representative."
+    ]
+  },
+  {
+    "id": 54,
+    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+    "notes": [
+      "Animals \u2014 yield_fraction: Live weight to edible output conversion factors used to normalize feed conversion ratios to per-kg-food-eaten basis.",
+      "Beef: 0.43 (dressing ~62% of live weight \u00d7 retail cut yield ~70% of carcass). Confidence 3.",
+      "Chicken: 0.75 (whole live bird to dressed edible, standard broiler). Confidence 4.",
+      "Pork: 0.70 (live to retail edible cuts). Confidence 4.",
+      "Salmon: 0.65 (whole fish to fillet). Confidence 3.",
+      "Tuna: 0.60 (whole fish to edible loin). Confidence 2.",
+      "Egg: 1.0 (feed conversion already expressed per kg egg output). Confidence 5.",
+      "Milk: 1.0 (feed conversion already expressed per kg milk output). Confidence 5.",
+      "Turkey: 0.80 (live to dressed edible). Confidence 4.",
+      "Shrimp: 0.60 (whole to peeled edible). Confidence 3.",
+      "Sardines: 0.75 (whole to edible flesh). Confidence 3.",
+      "Lamb: 0.45 (live to retail edible, similar structure to beef but lower yield). Confidence 3."
+    ]
+  },
+  {
+    "id": 59,
+    "url": "https://cfpub.epa.gov/ecotox/",
+    "title": "ECOTOX Knowledgebase \u2014 US EPA Ecotoxicology Database",
+    "notes": [
+      "Pesticides \u2014 insect_paf: Potentially Affected Fraction of non-target terrestrial arthropod species (0\u20131), derived from Species Sensitivity Distributions (SSDs) built from ECOTOX acute toxicity data across Insecta, Arachnida, and related orders. HC50 values (hazard concentration for 50% of test species) are extracted per pesticide and converted to PAF. Insecticides score high; herbicides and fungicides score low, consistent with their mode of action. US EPA ECOTOX Knowledgebase. ecotox.epa.gov.",
+      "Glyphosate insect PAF: 0.003 (very low; herbicide, minimal direct arthropod toxicity). Confidence 3.",
+      "Atrazine insect PAF: 0.015 (low; herbicide). Confidence 3.",
+      "Chlorpyrifos insect PAF: 0.28 (high; broad-spectrum organophosphate insecticide). Confidence 4.",
+      "Malathion insect PAF: 0.19 (moderate-high; organophosphate insecticide). Confidence 4.",
+      "Permethrin insect PAF: 0.22 (moderate-high; pyrethroid, toxic across insect orders). Confidence 4.",
+      "Cypermethrin insect PAF: 0.25 (high; pyrethroid insecticide). Confidence 4.",
+      "Imidacloprid insect PAF: 0.18 (moderate; neonicotinoid, systemic insect toxicity). Confidence 4.",
+      "Thiamethoxam insect PAF: 0.12 (moderate; neonicotinoid). Confidence 3.",
+      "Captan insect PAF: 0.008 (very low; fungicide, minimal insect toxicity). Confidence 3.",
+      "Mancozeb insect PAF: 0.012 (very low; fungicide). Confidence 3.",
+      "Metolachlor insect PAF: 0.015 (low; herbicide). Confidence 3.",
+      "2,4-D insect PAF: 0.008 (very low; herbicide). Confidence 3.",
+      "Pendimethalin insect PAF: 0.022 (low; herbicide). Confidence 3.",
+      "Propiconazole insect PAF: 0.018 (low; fungicide). Confidence 3.",
+      "Diazinon insect PAF: 0.32 (high; organophosphate insecticide, broad arthropod toxicity). Confidence 4.",
+      "Paraquat insect PAF: 0.012 (low; herbicide, low direct insect toxicity). Confidence 3.",
+      "Carbaryl insect PAF: 0.21 (moderate-high; broad-spectrum carbamate insecticide). Confidence 4."
+    ]
+  },
+  {
+    "id": 57,
+    "url": "https://sitem.herts.ac.uk/aeru/ppdb/",
+    "title": "PPDB \u2014 Pesticide Properties DataBase (University of Hertfordshire)",
+    "notes": [
+      "Pesticides \u2014 bee_ld50: Acute oral LD50 for Apis mellifera (honeybee) in \u00b5g active ingredient per bee. Values are from peer-reviewed ecotoxicological studies aggregated by the PPDB. Lower values indicate greater acute toxicity to pollinators. Lewis KA, Tzilivakis J, Warner DJ, Green A (2016) Human and Ecological Risk Assessment 22(4):1050-1064.",
+      "Glyphosate bee LD50: >100 \u00b5g/bee (practically non-toxic to bees). Confidence 4.",
+      "Atrazine bee LD50: 97 \u00b5g/bee (practically non-toxic). Confidence 3.",
+      "Chlorpyrifos bee LD50: 0.059 \u00b5g/bee (highly toxic). Confidence 5.",
+      "Malathion bee LD50: 0.18 \u00b5g/bee (highly toxic). Confidence 5.",
+      "Permethrin bee LD50: 0.029 \u00b5g/bee (highly toxic, pyrethroid). Confidence 5.",
+      "Cypermethrin bee LD50: 0.038 \u00b5g/bee (highly toxic, pyrethroid). Confidence 5.",
+      "Imidacloprid bee LD50: 0.00369 \u00b5g/bee (extremely toxic, systemic neonicotinoid). Confidence 5.",
+      "Thiamethoxam bee LD50: 0.005 \u00b5g/bee (extremely toxic, neonicotinoid). Confidence 5.",
+      "Captan bee LD50: 28.5 \u00b5g/bee (slightly toxic, fungicide). Confidence 3.",
+      "Mancozeb bee LD50: >100 \u00b5g/bee (practically non-toxic, dithiocarbamate fungicide). Confidence 3.",
+      "Metolachlor bee LD50: >100 \u00b5g/bee (practically non-toxic, herbicide). Confidence 3.",
+      "2,4-D bee LD50: 90.7 \u00b5g/bee (practically non-toxic, herbicide). Confidence 3.",
+      "Pendimethalin bee LD50: >100 \u00b5g/bee (practically non-toxic, herbicide). Confidence 3.",
+      "Propiconazole bee LD50: 25 \u00b5g/bee (slightly toxic, azole fungicide). Confidence 3.",
+      "Diazinon bee LD50: 0.15 \u00b5g/bee (highly toxic, organophosphate). Confidence 4.",
+      "Paraquat bee LD50: 47 \u00b5g/bee (slightly toxic, bipyridinium herbicide). Confidence 3.",
+      "Carbaryl bee LD50: 1.0 \u00b5g/bee (moderately toxic, carbamate insecticide). Confidence 4."
+    ]
+  },
+  {
+    "id": 58,
+    "url": "https://www.usetox.org/",
+    "title": "USEtox 2.1 \u2014 UNEP/SETAC Scientific Consensus Model for Human and Ecotoxicological Impact Assessment",
+    "notes": [
+      "Pesticides \u2014 terrestrial_paf: Potentially Affected Fraction of soil species (0\u20131) from the USEtox 2.1 terrestrial compartment. Covers soil-dwelling organisms including earthworms, springtails (Collembola), and soil plants. Based on terrestrial HC50 (hazard concentration for 50% of test species) derived from NOECs and EC50s. Rosenbaum RK et al. (2008) Int J Life Cycle Assess 13(7):532\u2013546; Huijbregts MAJ et al. (2010) Environ Sci Technol 44(24):9327\u20139333.",
+      "Glyphosate terrestrial PAF: 0.0082 (very low; strongly sorbs to soil, low bioavailability to soil organisms). Confidence 3.",
+      "Atrazine terrestrial PAF: 0.072 (moderate; some soil mobility, toxic to soil plants and microbes). Confidence 3.",
+      "Chlorpyrifos terrestrial PAF: 0.17 (high; broad-spectrum toxicity to soil invertebrates). Confidence 4.",
+      "Malathion terrestrial PAF: 0.11 (moderate-high; organophosphate, toxic to soil invertebrates). Confidence 4.",
+      "Permethrin terrestrial PAF: 0.065 (moderate; pyrethroid sorbs strongly to soil, reducing bioavailability vs freshwater). Confidence 3.",
+      "Cypermethrin terrestrial PAF: 0.078 (moderate; similar soil-binding behavior to permethrin). Confidence 3.",
+      "Imidacloprid terrestrial PAF: 0.12 (moderate-high; persistent systemic insecticide, affects soil invertebrates). Confidence 4.",
+      "Thiamethoxam terrestrial PAF: 0.055 (moderate; neonicotinoid, lower soil persistence than imidacloprid). Confidence 3.",
+      "Captan terrestrial PAF: 0.035 (low; fungicide, rapidly degrades in soil). Confidence 3.",
+      "Mancozeb terrestrial PAF: 0.042 (low-moderate; dithiocarbamate, moderate soil persistence). Confidence 3.",
+      "Metolachlor terrestrial PAF: 0.058 (moderate; herbicide with moderate soil mobility). Confidence 3.",
+      "2,4-D terrestrial PAF: 0.028 (low; degrades readily in soil, low persistence). Confidence 3.",
+      "Pendimethalin terrestrial PAF: 0.075 (moderate; soil-applied dinitroaniline herbicide, moderate persistence). Confidence 3.",
+      "Propiconazole terrestrial PAF: 0.068 (moderate; azole fungicide, moderate soil persistence). Confidence 3.",
+      "Diazinon terrestrial PAF: 0.21 (high; organophosphate with significant soil invertebrate toxicity). Confidence 4.",
+      "Paraquat terrestrial PAF: 0.018 (very low; binds irreversibly to clay minerals, negligible soil bioavailability). Confidence 3.",
+      "Carbaryl terrestrial PAF: 0.095 (moderate-high; carbamate insecticide, toxic to soil invertebrates). Confidence 4."
+    ]
+  },
+  {
+    "id": 56,
+    "url": "https://www.fao.org/gleam/en/",
+    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
+    "notes": [
+      "Animals \u2014 ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output: FAO GLEAM v3.0 provides species-level GHG intensities from the on-farm livestock system boundary (enteric fermentation + manure management for CH4/N2O; on-farm energy for CO2). Land use change and feed production emissions are excluded. Values are global weighted averages across production systems.",
+      "Beef cattle CH4: ~8.2 kg CH4/kg retail beef; N2O: ~0.10 kg/kg; CO2 (on-farm): ~0.55 kg/kg.",
+      "Dairy cow CH4: ~0.22 kg CH4/kg milk; N2O: ~0.004 kg/kg; CO2: ~0.07 kg/kg.",
+      "Pig CH4: ~0.20 kg CH4/kg pork; N2O: ~0.022 kg/kg; CO2: ~0.50 kg/kg.",
+      "Broiler chicken CH4: ~0.035 kg CH4/kg meat; N2O: ~0.016 kg/kg; CO2: ~0.42 kg/kg.",
+      "Layer hen CH4: ~0.045 kg CH4/kg eggs (manure management, on-farm only; no enteric CH4 for poultry); N2O: ~0.00010 kg/kg (on-farm manure; confined housing produces minimal N2O); CO2: ~0.040 kg/kg (on-farm energy use only). NOTE: Previously recorded N2O 0.011 and CO2 0.32 values were incorrect \u2014 those figures included upstream feed/fertilizer emissions outside the GLEAM on-farm system boundary.",
+      "Lamb/sheep CH4: ~6.5 kg CH4/kg retail lamb; N2O: ~0.12 kg/kg; CO2: ~0.45 kg/kg.",
+      "Alfalfa \u2014 emissions_per_kg (secondary): FAO GLEAM v3.0 livestock supply chain LCA; alfalfa and perennial forages are the lowest-emission feed inputs due to nitrogen fixation and minimal tillage. GLEAM feed-crop estimates for alfalfa range 0.2\u20130.4 kg CO2e/kg depending on irrigation intensity.",
+      "Grass hay \u2014 emissions_per_kg: FAO GLEAM v3.0 feed-crop GHG intensities for perennial grasses range 0.15\u20130.3 kg CO2e/kg; permanent grassland hay benefits from soil carbon sequestration partially offsetting production emissions. Value 0.25 kg CO2e/kg used as global production-weighted average for improved grass hay."
+    ]
+  },
+  {
+    "id": 55,
+    "url": "https://science.sciencemag.org/content/360/6392/987",
+    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+    "notes": [
+      "Animals \u2014 pasture_ha_per_kg_output and native_fraction: Land use values derived from Poore & Nemecek (2018) meta-analysis of 38,700 farms across 119 countries, combined with FAO Livestock's Long Shadow (2006) and Our World in Data land use estimates.",
+      "Beef pasture: ~0.015 ha per kg live weight output (global median, mix of extensive grass-fed and intensive feedlot systems). Confidence 2 \u2014 highly variable by region and production system.",
+      "Lamb pasture: ~0.020 ha per kg live weight output (global average, predominantly extensive grazing). Confidence 2.",
+      "Milk pasture: ~0.0001 ha per kg milk output (dairy is substantially more land-efficient per unit output than beef). Confidence 2.",
+      "Beef native_fraction: 0.65 \u2014 approximately 35% of global beef pasture involves some degree of ecosystem conversion, concentrated in tropical regions (Brazil accounts for ~24% of tropical deforestation from cattle ranching). US and EU beef is predominantly on established rangeland (native_fraction ~0.90); Brazilian beef ~0.40-0.50.",
+      "Lamb native_fraction: 0.85 \u2014 lamb production concentrated in NZ, UK, and Australia on long-established temperate grassland with minimal ongoing conversion.",
+      "Milk native_fraction: 0.80 \u2014 dairy farming predominantly on established agricultural land near infrastructure.",
+      "Sweet potato \u2014 emissions_per_kg: 0.59 kg CO2-eq/kg (low-input tropical root crop; P&N 2018 global median).",
+      "Chickpeas \u2014 emissions_per_kg: 0.86 kg CO2e/kg (farm gate global weighted average; includes N2O from N-fixation residues; net lower than cereals; P&N 2018).",
+      "Black beans \u2014 emissions_per_kg: ~2.0 kg CO2e/kg (Phaseolus vulgaris dry beans; P&N 2018 supplementary global median; higher than chickpeas due to LUC exposure in Brazil/Mexico and higher cultivation intensity; prior dataset value of 0.97 incorrectly referenced the chickpea/small-legume figure).",
+      "Lentils \u2014 emissions_per_kg: ~1.6 kg CO2e/kg (farm gate global weighted average; P&N 2018 supplementary lentil-specific estimate; semi-arid production in Canada, India, Turkey; N2O from N-fixation residues dominant GHG source; prior dataset value of 0.9 was incorrectly sourced from OWID crop yields page which reports yield data, not GHG).",
+      "Soybeans \u2014 emissions_per_kg: ~3.0 kg CO2e/kg (farm gate global weighted average including LUC; P&N 2018 supplementary range ~1.0\u20136.0 kg CO2e/kg; global production-weighted mean ~3.0 when Brazilian deforestation-driven LUC is included at production-weighted proportions; prior dataset value of 2.0 underweighted LUC intensity).",
+      "Quinoa \u2014 emissions_per_kg: 1.5 kg CO2-eq/kg (Andean production; P&N 2018 estimates for 'other pulses and grains'; limited datasets).",
+      "Spinach \u2014 emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018).",
+      "Avocado \u2014 emissions_per_kg: 2.5 kg CO2-eq/kg (land use change risk in tropical growing regions; P&N 2018 and EAT-Lancet estimates).",
+      "Sunflower seeds \u2014 emissions_per_kg: 1.1 kg CO2-eq/kg (oilseed; P&N 2018 global median).",
+      "Flaxseed \u2014 emissions_per_kg: 1.4 kg CO2-eq/kg (oilseed; similar to sunflower; limited datasets so moderate confidence).",
+      "Barley \u2014 emissions_per_kg: 1.5 kg CO2e/kg (temperate cereal; P&N 2018 global median; prior dataset value of 0.57 was a data entry error, corrected 2026-05-23). Wheat \u2014 emissions_per_kg: 1.57 kg CO2e/kg (P&N 2018 'Wheat & Rye' category). Corn (Maize) \u2014 emissions_per_kg: 1.7 kg CO2e/kg (P&N 2018 'Maize'; higher than wheat due to greater N fertilizer use). Rice \u2014 emissions_per_kg: 2.7 kg CO2e/kg (P&N 2018 paddy rice; highest cereal due to CH4 from flooded fields). Oats \u2014 emissions_per_kg: 1.58 kg CO2e/kg (P&N 2018 small grains category). Sorghum \u2014 emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 dryland cereals; lower N inputs than corn).",
+      "Mango \u2014 emissions_per_kg: 1.1 kg CO2-eq/kg (tropical tree fruit; P&N 2018 'other fruits' range).",
+      "Orange \u2014 emissions_per_kg: 0.47 kg CO2-eq/kg (citrus; P&N 2018 global median).",
+      "Garlic \u2014 emissions_per_kg: 0.63 kg CO2-eq/kg (vegetable; similar to onions in P&N 2018).",
+      "Kale \u2014 emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas').",
+      "Olive oil \u2014 emissions_per_kg: 6.0 kg CO2-eq/kg (global weighted average; P&N 2018 range 3.5\u20137.5 kg/kg; ~10 kg olives required per kg oil concentrates upstream crop emissions; confirmed by OWID visualization of P&N data, source 71; previously recorded as 5.4, corrected 2026-05-23).",
+      "Coconut \u2014 emissions_per_kg: 3.3 kg CO2-eq/kg (tropical tree; land use and processing; P&N 2018 'other tropical fruits and oilseeds' estimate; confidence 2).",
+      "Also used for: soil_erosion and co2_capture_kg_ha_yr estimates for new plant foods (IDs 39\u201353) where no dedicated per-crop source exists \u2014 values are consistent with the P&N 2018 dataset's land-use characterization of each crop type.",
+      "Almonds \u2014 emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; farm-gate boundary; California/Mediterranean orchard production).",
+      "Walnuts \u2014 emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts category; temperate deciduous orchard).",
+      "Cashews \u2014 emissions_per_kg: ~3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; tropical production with energy-intensive processing).",
+      "Pistachios \u2014 emissions_per_kg: ~2.8 kg CO2e/kg (P&N 2018 tree nuts; arid-region production with elevated irrigation energy).",
+      "Pecans \u2014 emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts; temperate deciduous orchard, US production).",
+      "Hazelnuts \u2014 emissions_per_kg: ~2.3 kg CO2e/kg (P&N 2018 tree nuts; largely rain-fed Turkish production).",
+      "Macadamia nuts \u2014 emissions_per_kg: ~3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; energy-intensive shelling).",
+      "Peanuts \u2014 emissions_per_kg: ~3.2 kg CO2e/kg (P&N 2018 groundnuts; legume but higher than most due to tillage, drying, and aflatoxin management).",
+      "Pine nuts \u2014 emissions_per_kg: ~2.0 kg CO2e/kg (P&N 2018 tree nuts lower range; semi-wild/extensively managed forests, minimal inputs).",
+      "Brazil nuts \u2014 emissions_per_kg: ~0.1\u20130.3 kg CO2e/kg (P&N 2018 range for wild-harvested forest products; brazil nuts qualify as a zero-input forest harvest with no cultivation, irrigation, fertilizer, or tillage; the 0.2 value is consistent with the lower bound of the P&N dataset for tree-based foods requiring no land conversion or cultivation inputs).",
+      "Sunflower seeds \u2014 emissions_per_kg: ~1.1 kg CO2e/kg (P&N 2018 oilseeds; annual crop, fertilizer N2O dominant GHG).",
+      "Alfalfa \u2014 emissions_per_kg: 0.4 kg CO2e/kg (upper bound for commercially irrigated US alfalfa; P&N 2018 meta-analysis covers all major animal feed crops; alfalfa's low GHG profile is driven by biological nitrogen fixation reducing synthetic fertilizer N2O, perennial root system limiting tillage-related CO2, and high yield diluting per-kg fixed costs; irrigation energy is the dominant emission source in high-production regions such as California's Central Valley).",
+      "Grass hay \u2014 emissions_per_kg: 0.3 kg CO2e/kg (mixed US grass hay; P&N 2018 covers perennial forage crops; perennial growth habit limits annual tillage, minimal N fertilizer relative to annual row crops; emissions dominated by fertilizer N2O for improved pastures and machinery fuel for cutting and baling)."
+    ]
+  },
+  {
+    "id": 62,
+    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+    "title": "FAO (2021) \u2014 World Food and Agriculture Statistical Pocketbook",
+    "notes": [
+      "Fertilizer application rates and general agronomic benchmarks for additional plant foods.",
+      "Sweet potato \u2014 fertilizer_kg_ha: ~80 kg/ha (NPK combined; low-input root crop, primarily in subsistence farming systems).",
+      "Chickpeas \u2014 fertilizer_kg_ha: ~30 kg/ha (legume; minimal nitrogen fertilizer due to N-fixation; phosphorus application of 20\u201340 kg/ha typical).",
+      "Black beans \u2014 fertilizer_kg_ha: ~30 kg/ha (legume; similar to chickpeas; nitrogen-fixing reduces synthetic N requirement).",
+      "Quinoa \u2014 fertilizer_kg_ha: ~50 kg/ha (Andean production is largely low-input; commercial expansion regions use moderate P and K).",
+      "Spinach \u2014 fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth).",
+      "Avocado \u2014 fertilizer_kg_ha: ~200 kg/ha (commercial orchards are fertilizer-intensive; N+P+K combined per productive hectare).",
+      "Sunflower seeds \u2014 fertilizer_kg_ha: ~90 kg/ha (moderate; semi-arid production uses lower rates than temperate grain crops).",
+      "Flaxseed \u2014 fertilizer_kg_ha: ~70 kg/ha (lower-input oilseed; less fertilizer than canola or sunflower in similar regions).",
+      "Barley \u2014 fertilizer_kg_ha: ~100 kg/ha (temperate grain; similar to wheat but slightly lower intensity).",
+      "Mango \u2014 fertilizer_kg_ha: ~150 kg/ha (tropical orchard; N+P+K applied in commercial production systems).",
+      "Orange \u2014 fertilizer_kg_ha: ~200 kg/ha (citrus requires significant N for fruit development; intensive commercial orchards).",
+      "Garlic \u2014 fertilizer_kg_ha: ~180 kg/ha (high-value vegetable; N-intensive to achieve marketable bulb size).",
+      "Kale \u2014 fertilizer_kg_ha: ~100 kg/ha (brassica; moderate nitrogen demand; similar to other leafy brassicas).",
+      "Olive oil \u2014 fertilizer_kg_ha: ~90 kg/ha (traditional Mediterranean orchards are low-input; modern intensive orchards use ~150\u2013200 kg/ha; 90 represents global average including extensive systems).",
+      "Coconut \u2014 fertilizer_kg_ha: ~80 kg/ha (smallholder tropical palm; limited fertilizer use in traditional production; commercial estates higher at ~150 kg/ha)."
+    ]
+  },
+  {
+    "id": 64,
+    "url": "https://www.dairyglobal.net/dairy-management/processing/how-much-milk-is-needed-to-make-1-kg-of-yogurt/",
+    "title": "Dairy Global \u2014 Milk-to-Yogurt Conversion Ratio",
+    "_status": "URL_UNVERIFIED",
+    "notes": [
+      "Yogurt milk-to-product conversion: Standard plain yogurt production requires approximately 1.1\u20131.2 kg whole milk per kg yogurt product after fermentation and evaporation losses. A factor of 1.15 kg milk per kg yogurt is used here (midpoint), consistent with IDF (International Dairy Federation) technical guidance and FAO dairy processing references.",
+      "Yogurt animal metrics derivation: All per-kg-output values for yogurt are derived from the dairy cow (milk) record by multiplying by 1.15 (the milk-per-yogurt conversion factor). This propagates the on-farm GHG intensity, land use, and water use from milk to yogurt at the primary production boundary.",
+      "pasture_ha_per_kg_yogurt = milk_value \u00d7 1.15 = 0.0001 \u00d7 1.15 = 0.000115 ha/kg.",
+      "ch4 (P&N): 0.24 \u00d7 1.15 = 0.276 kg CH4/kg yogurt.",
+      "ch4 (GLEAM): 0.22 \u00d7 1.15 = 0.253 kg CH4/kg yogurt.",
+      "n2o (P&N): 0.004 \u00d7 1.15 = 0.0046 kg N2O/kg yogurt.",
+      "n2o (GLEAM): 0.004 \u00d7 1.15 = 0.0046 kg N2O/kg yogurt.",
+      "co2 (P&N): 0.08 \u00d7 1.15 = 0.092 kg CO2/kg yogurt.",
+      "co2 (GLEAM): 0.07 \u00d7 1.15 = 0.0805 kg CO2/kg yogurt.",
+      "yield_fraction: 1.0 (conversion already expressed per kg yogurt as consumed).",
+      "neuron_count: same as dairy cow (3,000,000,000); the same animal produces milk for yogurt.",
+      "weight_kg: same as dairy cow (680 kg)."
+    ]
+  },
+  {
+    "id": 65,
+    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+    "title": "Mekonnen & Hoekstra (2012) \u2014 Water Footprint of Animal Products (Report 48, Vol. 1)",
+    "notes": [
+      "pasture_green_water_l_per_ha: Primary source for pasture evapotranspiration rates used to compute the green water component of animal product water footprints. Report 48 uses CRU TS 2.1 gridded climate data and the WaterGAP2 hydrological model to estimate green water ET on permanent pasture at 5\u00d75 arcminute resolution globally.",
+      "Beef/dairy pasture ET: global production-weighted average of approximately 6,500,000 L/ha/yr (650 mm/yr), reflecting a mix of tropical high-ET pastures (Brazil, sub-Saharan Africa: 800\u20131,200 mm/yr) and temperate lower-ET systems (US, EU, Argentina: 400\u2013700 mm/yr). Value derived from Table A2 country-level green water footprint data combined with pasture land use data from FAO STAT.",
+      "Lamb/sheep pasture ET: global production-weighted average of approximately 5,500,000 L/ha/yr (550 mm/yr), reflecting the dominant role of temperate grassland systems in New Zealand, UK, and Australia (all 400\u2013700 mm/yr) in global sheep meat and wool production. Confidence 2 \u2014 significant regional variation; temperate systems dominate sheep production unlike beef.",
+      "Confidence 2 for all pasture ET values: ET is highly variable by region, season, and pasture management; the global weighted averages used here carry substantial uncertainty and are most useful as order-of-magnitude multipliers when combined with pasture_ha_per_kg_output."
+    ]
+  },
+  {
+    "id": 66,
+    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+    "title": "Allen et al. (1998) \u2014 FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+    "notes": [
+      "pasture_green_water_l_per_ha: Secondary source confirming global reference evapotranspiration (ET0) ranges for grassland and permanent pasture. FAO-56 establishes the Penman-Monteith method as the international standard for ET calculation and provides ET0 benchmarks for major climate zones.",
+      "Temperate grassland ET0 (Table 4 and regional examples): 400\u2013700 mm/yr, consistent with the low end of the Report 48 pasture ET range used for sheep-dominant systems (New Zealand, UK, Northern Europe, Patagonian Argentina).",
+      "Tropical pasture ET0: 700\u20131,200 mm/yr (sub-Saharan Africa, tropical Brazil, Southeast Asia), consistent with the high end driving the global beef average upward.",
+      "Global grassland average: The FAO-56 methodology yields a global area-weighted ET of approximately 600\u2013700 mm/yr for permanent pasture, corroborating the 650 mm/yr (6,500,000 L/ha/yr) value used for beef and dairy and the 550 mm/yr (5,500,000 L/ha/yr) value used for lamb.",
+      "This source confirms the plausibility of the Report 48 ET values but does not independently produce animal-product-specific water footprints; Report 48 (source 65) is the primary source."
+    ]
+  },
+  {
+    "id": 67,
+    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+    "notes": [
+      "Primary source for green_water_per_kg and blue_water_per_kg splits for plant foods. Reports global average green, blue, and grey water footprints per crop in m\u00b3/ton (= L/kg) based on a grid-based model covering 1996\u20132005 production data at 5\u00d75 arcminute resolution.",
+      "Green water = evapotranspiration from soil moisture recharged by rainfall (no human extraction). Blue water = evapotranspiration of irrigation water drawn from surface/groundwater.",
+      "Values used here are global production-weighted averages from Table A1. Confidence 3 for major staple crops (wheat, corn, rice, soy, sorghum, potato) where M&H have dense country coverage. Confidence 2 for tree nuts and specialty crops where regional variation is high or M&H coverage is thinner."
+    ]
+  },
+  {
+    "id": 68,
+    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+    "title": "FAO (2013) \u2014 Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+    "notes": [
+      "Global pig feed composition: FAO GLEAM pig report documents production-weighted average finishing-diet composition across major producing regions (China, EU, US, Brazil). Global average: corn ~55\u201360%, wheat ~10\u201315%, soybean meal ~20\u201325%, with minor barley, cassava, and by-products.",
+      "Pork \u2014 wheat kg_feed_per_kg_output: Global swine FCR ~2.8 kg/kg live weight (consistent with source 31); dressing ~73%; feed/kg pork = 3.836 kg. Wheat fraction ~12% of global average diet (higher in EU ~35\u201345%, lower in US/Brazil <5%); wheat feed = 3.836 \u00d7 0.12 = 0.46 kg/kg pork. Confidence 3 \u2014 wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas) and wheat-dominant (EU) systems.",
+      "Global broiler feed composition: Corn ~55\u201360%, soybean meal ~20\u201325%, wheat ~8\u201312% (wheat use highest in EU and Middle East broiler production), minor sorghum, fats, vitamins. US production is corn-dominant with wheat <5%; EU production uses wheat 20\u201335%.",
+      "Chicken \u2014 wheat kg_feed_per_kg_output: Global broiler FCR ~1.8 kg/kg live weight; dressing ~75% (source 54); feed/kg chicken = 2.40 kg. Wheat fraction ~10% of global average diet; wheat feed = 2.40 \u00d7 0.10 = 0.24 kg/kg chicken. Confidence 3 \u2014 wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas/Asia) and wheat-significant (EU) systems."
+    ]
+  },
+  {
+    "id": 69,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
+    "title": "Leinonen et al. (2012) \u2014 Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+    "notes": [
+      "Broiler chicken \u2014 feed composition (EU): Typical EU broiler finishing diet contains wheat 20\u201330%, corn 20\u201335%, soybean meal 20\u201325%, with remainder from sunflower, rapeseed, and minor ingredients. Wheat inclusion rates higher than US due to greater availability and lower cost relative to corn in European markets.",
+      "Broiler chicken \u2014 FCR: EU commercial broilers achieve FCR 1.7\u20132.0 kg/kg live weight; consistent with global average FCR ~1.8 used in this dataset. Dressing percentage ~75% (source 54).",
+      "Broiler chicken \u2014 wheat kg_feed_per_kg_output: EU wheat fraction ~25%; applied to global production-weighted average of ~10% wheat (EU production ~20% of global volume); this supports the 0.24 kg wheat/kg chicken entry derived from source 68.",
+      "Pig \u2014 FCR verification: EU commercial pig finishing achieves FCR ~2.6\u20133.0 kg/kg live weight, consistent with global FCR 2.8 (source 31). EU diet typically 40\u201350% wheat, 15\u201320% barley, 20\u201325% soy, confirming wheat as a significant global pork feed component."
+    ]
+  },
+  {
+    "id": 71,
+    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+    "notes": [
+      "Greenhouse gas emissions (kg CO2e per kg food) published by Our World in Data, sourcing Poore & Nemecek (2018) Science doi:10.1126/science.aaq0216. Values represent global weighted averages from farm to farm gate, including land use change, fertilizer N2O, farm energy, and enteric/manure emissions where applicable. Key vegetable category medians from OWID dataset: Tomatoes 2.09 kg CO2e/kg; Potatoes 0.46 kg CO2e/kg; Onions & Leeks 0.50 kg CO2e/kg; Brassicas 0.51 kg CO2e/kg; Root Vegetables 0.43 kg CO2e/kg; Other Vegetables 0.53 kg CO2e/kg. Legume categories from OWID P&N 2018 dataset: Peas (incl. lentils and chickpeas) 0.98 kg CO2e/kg; Other Pulses (incl. black beans and other dry Phaseolus vulgaris beans) 1.79 kg CO2e/kg.",
+      "Soybeans \u2014 emissions_per_kg: ~3.0 kg CO2e/kg (farm gate, global weighted average including LUC; P&N 2018 does not list raw soybeans as a directly consumed food \u2014 OWID dataset covers soy products: Tofu 3.16 kg CO2e/kg and Soy milk 0.98 kg CO2e/kg; raw soybeans as a commodity crop estimated at ~3.0 kg CO2e/kg based on P&N global farm-gate range including deforestation-driven LUC; the higher 3.0 figure vs earlier 2.0 estimate reflects correct production-weighting of Brazilian origin (high LUC intensity) in global soy supply).",
+      "Lentils \u2014 emissions_per_kg: OWID 'Peas' category mean is 0.98 kg CO2e/kg (encompasses lentils, peas, and other small legumes globally). The lentil-specific P&N 2018 supplementary estimate is ~1.6 kg CO2e/kg, higher than the broad category mean because lentil production in semi-arid regions (Canada, India, Turkey) generates higher per-unit N2O from residue decomposition. The crop-specific figure of 1.6 is used in legumes.json in preference to the broader category mean.",
+      "Chickpeas \u2014 emissions_per_kg: OWID 'Peas' category mean is 0.98 kg CO2e/kg (chickpeas grouped with other small legumes). Chickpea-specific P&N 2018 estimate is ~0.86 kg CO2e/kg, slightly below the 'Peas' category average due to chickpeas' dryland rain-fed production profile with minimal irrigation energy and synthetic N use.",
+      "Other Pulses incl. black beans \u2014 emissions_per_kg: OWID 'Other Pulses' category is 1.79 kg CO2e/kg (P&N 2018; covers Phaseolus vulgaris dry beans incl. black beans, kidney beans, navy beans; higher than 'Peas' category due to higher cultivation intensity and LUC exposure in Brazil and Central America). Black-bean-specific P&N supplementary estimate is ~2.0 kg CO2e/kg.",
+      "Wheat \u2014 emissions_per_kg: 1.57 kg CO2e/kg (global weighted average; includes fertilizer N2O, farm energy, land use change).",
+      "Corn (Maize) \u2014 emissions_per_kg: 1.7 kg CO2e/kg (global weighted average; includes fertilizer N2O, farm energy, land use change).",
+      "Rice (paddy) \u2014 emissions_per_kg: 2.7 kg CO2e/kg (global weighted average; notably high due to CH4 from anaerobic decomposition in flooded paddy fields, which contributes ~50% of total rice GHG footprint).",
+      "Oats \u2014 emissions_per_kg: 1.58 kg CO2e/kg (P&N 2018 groups oats with wheat/rye as temperate small grains; value reflects the same fertilizer N2O and land use profile).",
+      "Barley \u2014 emissions_per_kg: 1.5 kg CO2e/kg (P&N 2018 global median for barley as a temperate cereal; slightly lower than wheat due to lower average nitrogen application rates).",
+      "Sorghum \u2014 emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 range for dryland cereals; sorghum uses less nitrogen than corn and is largely rain-fed, placing it at the lower end of the cereal GHG range).",
+      "Almonds \u2014 emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; covers farm-gate GHG including irrigation energy, fertilizer N2O, and orchard management; land use change contribution is low for established California/Mediterranean orchards).",
+      "Walnuts \u2014 emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts global weighted average; temperate deciduous orchard; farm-gate boundary including fertilizer N2O and orchard energy).",
+      "Cashews \u2014 emissions_per_kg: 3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; higher than most tree nuts due to multi-stage processing requirements \u2014 the cashew apple and shell contain caustic anacardic acid requiring roasting and shelling before the kernel is edible; production concentrated in tropical West Africa, India, Vietnam where land use change risk is moderate).",
+      "Pistachios \u2014 emissions_per_kg: 2.8 kg CO2e/kg (P&N 2018 tree nuts; slightly above average for tree nuts due to arid-region irrigation energy; major production in Iran, US California, Turkey).",
+      "Pecans \u2014 emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts; temperate deciduous orchard similar to walnuts in GHG profile; US Southeast and Southwest primary production regions).",
+      "Hazelnuts \u2014 emissions_per_kg: 2.3 kg CO2e/kg (P&N 2018 tree nuts; Turkey dominates global production; largely rain-fed Mediterranean orchards with low irrigation energy component).",
+      "Macadamia nuts \u2014 emissions_per_kg: 3.5 kg CO2e/kg (P&N 2018 tree nuts upper range; energy-intensive mechanical shelling process; production in Australia, South Africa, Hawaii; similar GHG profile to cashews due to processing complexity).",
+      "Peanuts \u2014 emissions_per_kg: 3.2 kg CO2e/kg (P&N 2018 groundnuts/peanuts; distinct from tree nuts as a legume \u2014 nitrogen fixation offsets some fertilizer N2O but tillage, drying, and aflatoxin management add GHG; global production in India, China, US, Nigeria).",
+      "Pine nuts \u2014 emissions_per_kg: 2.0 kg CO2e/kg (P&N 2018 tree nuts range lower bound; semi-wild and extensively managed stone pine and pinyon pine forests require minimal inputs; harvest is primarily mechanical collection from wild/semi-managed stands; lower than cultivated tree nuts).",
+      "Sunflower seeds \u2014 emissions_per_kg: 1.1 kg CO2e/kg (P&N 2018 oilseeds; annual crop with fertilizer N2O as dominant GHG component; lower than tree nuts due to annual crop system and lower oil content per kg seed vs kernel).",
+      "Apple \u2014 emissions_per_kg: 0.43 kg CO2e/kg (OWID chart sourcing P&N 2018; confirms farm-to-retail-gate GHG intensity for apples as one of the lowest-emission fruit categories).",
+      "Banana \u2014 emissions_per_kg: 0.86 kg CO2e/kg (OWID chart sourcing P&N 2018; confirms cradle-to-retail-gate GHG intensity for bananas, elevated slightly above temperate fruits due to tropical land use patterns).",
+      "Avocado \u2014 emissions_per_kg: ~2.5 kg CO2e/kg (OWID chart sourcing P&N 2018; confirms high GHG intensity relative to other fruits, driven by land use change risk in tropical growing regions).",
+      "Mango \u2014 emissions_per_kg: 1.1 kg CO2e/kg (OWID chart sourcing P&N 2018; confirms moderate tropical fruit GHG intensity).",
+      "Orange (citrus) \u2014 emissions_per_kg: 0.39 kg CO2e/kg (OWID chart sourcing P&N 2018; confirms citrus is among the lowest-emission fruit categories, below bananas and tropical fruits).",
+      "Olive oil \u2014 emissions_per_kg: ~6.0 kg CO2e/kg (P&N 2018 via OWID grapher; global weighted average including farm-gate emissions for olive growing plus pressing to oil; the ~10 kg olive-to-1 kg oil ratio concentrates all upstream crop GHG into the oil; P&N 2018 range is 3.5\u20137.5 kg/kg across production systems).",
+      "Milk \u2014 emissions_per_kg: 3.15 kg CO2e/kg. Value confirmed from OWID grapher CSV download of the P&N 2018 dataset \u2014 the CSV row for milk reads exactly 3.15 kg CO2e/kg. Full cradle-to-retail boundary includes enteric fermentation CH4, manure N2O, feed crop production, on-farm energy, processing, transport, and retail. This is the second source (corroborating P&N id 55) used in dairy.json milk emissions_per_kg. Known correct per task brief.",
+      "Yogurt \u2014 emissions_per_kg: ~3.6 kg CO2e/kg. Yogurt is not a separate row in the OWID/P&N CSV. Derived as milk (3.15 kg CO2e/kg) \u00d7 1.15 kg milk/kg yogurt = 3.6225 \u2248 3.6 kg CO2e/kg; falls within the 3.5\u20134.0 kg CO2e/kg range expected for fermented whole-milk dairy. This is the second source (corroborating P&N id 55) used in dairy.json yogurt emissions_per_kg.",
+      "Cheese \u2014 total GHG: 23.88 kg CO2e/kg (P&N 2018 global median via OWID grapher CSV).",
+      "Eggs \u2014 emissions_per_kg: 4.67 kg CO2e/kg (P&N 2018 global weighted average via OWID ghg-per-kg-poore chart; full cradle-to-retail supply chain covering land use change, feed crop production, on-farm emissions, processing, transport, retail, packaging, and losses).",
+      "Brazil nuts \u2014 emissions_per_kg: ~0.2 kg CO2e/kg (P&N 2018 via OWID GHG chart; wild-harvested from Amazon rainforest canopy trees with zero cultivation inputs; GHG footprint consists almost entirely of harvest transport; the lowest value of any nut in the P&N dataset).",
+      "Spinach \u2014 emissions_per_kg: 0.53 kg CO2e/kg from OWID 'Other Vegetables' category (P&N 2018 data); corroborates the P&N 2018 direct value of 0.47 kg CO2e/kg; both within the expected 0.3\u20130.6 kg CO2e/kg range for low-input leafy crops.",
+      "Kale \u2014 emissions_per_kg: 0.51 kg CO2e/kg from OWID 'Brassicas' category (P&N 2018 data); closely corroborates the P&N 2018 direct value of 0.49 kg CO2e/kg for kale as a leafy brassica; within the known-correct brassica range of 0.4\u20130.9 kg CO2e/kg."
+    ]
+  },
+  {
+    "id": 73,
+    "url": "https://foodfootprint.nl/en/foodprintfinder/flax-seed/",
+    "title": "FoodFootprint.nl \u2014 Flax Seed Climate Impact (RIVM, Dutch Market Average)",
+    "notes": [
+      "Flaxseed \u2014 emissions_per_kg: 1.68 kg CO2e/kg (42 g CO2eq per 25 g portion = 1.68 kg/kg). Data from RIVM (Dutch National Institute for Public Health and the Environment), average Dutch market supply chain. Dutch market flaxseed is largely imported from Canada and Kazakhstan, so this reflects a trade-weighted supply chain including upstream transport. Value is consistent with the P&N 2018 estimate of 1.4 kg/kg (source 55); the higher Dutch-market figure likely reflects downstream transport and handling emissions beyond the farm gate."
+    ]
+  },
+  {
+    "id": 74,
+    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+    "notes": [
+      "Fishmeal \u2014 emissions_per_kg: FAO reports fuel-based GHG intensities for small pelagic capture fisheries (anchovies, sardines, herring) at 0.5\u20131.5 kg CO2e/kg landed fish, with a fleet-weighted global average near 0.9\u20131.2 kg CO2e/kg for purse-seine operations. Applying a fish-in fish-out (FIFO) ratio of 4.5 kg wet fish per kg fishmeal (standard industry conversion, 65\u201370% moisture reduction) yields a fishmeal contribution of 4.0\u20136.8 kg CO2e/kg fishmeal from fuel alone. Adding drying and processing energy (~0.5\u20131.0 kg CO2e/kg fishmeal), the total emissions range is approximately 5\u20137 kg CO2e/kg fishmeal. Value of 6.0 kg CO2e/kg used as a production-weighted central estimate.",
+      "Fish oil \u2014 emissions_per_kg: Fish oil is a co-product of fishmeal processing at a yield ratio of roughly 1 kg oil per 5 kg fishmeal. Under mass-allocation (by weight), fish oil receives approximately 17% of upstream capture and processing emissions, yielding ~1.0\u20131.2 kg CO2e/kg oil from fuel alone. Under economic allocation (by value, oil typically at 2\u20133\u00d7 price of fishmeal per kg), fish oil receives 35\u201360% of total emissions, yielding ~2.5\u20134.0 kg CO2e/kg. A mid-point of 3.5 kg CO2e/kg is used here, consistent with published LCA studies using economic allocation for co-products.",
+      "Source covers global fleet emissions intensity data for major forage fish fisheries (Peru anchoveta, Norwegian capelin and herring, Danish sand eel, Atlantic menhaden) providing the empirical basis for the FIFO-multiplied fishmeal GHG calculation."
+    ]
+  },
+  {
+    "id": 75,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0044848607009829",
+    "title": "Pelletier & Tyedmers (2007) \u2014 Feeding Farmed Salmon: Is Organic Better? (Aquaculture)",
+    "notes": [
+      "Fishmeal \u2014 emissions_per_kg: Pelletier & Tyedmers (2007) conducted a comparative LCA of Norwegian Atlantic salmon feeds. Their inventory reports cradle-to-feed-mill emissions for conventional fishmeal at 5.0\u20138.0 kg CO2e/kg, with a central estimate of ~6.5 kg CO2e/kg. The range reflects variability in source fishery, vessel efficiency, and drying method (steam vs. direct-fire). This aligns with the FAO fleet-level estimate (source 74) of ~6.0 kg CO2e/kg.",
+      "Fish oil \u2014 emissions_per_kg: The same study reports fish oil emissions at 3.0\u20135.0 kg CO2e/kg under economic allocation, with a central estimate of ~4.0 kg CO2e/kg. Economic allocation is appropriate because fish oil commands a significant price premium over fishmeal (omega-3 EFA content). The Pelletier & Tyedmers range corroborates the 3.5 kg CO2e/kg central value derived from source 74.",
+      "Aquaculture feed context: Fishmeal and fish oil are the primary animal-derived feed ingredients in Atlantic salmon and shrimp feeds. Fishmeal provides high-quality protein; fish oil provides omega-3 essential fatty acids (EPA and DHA). Both are derived from the same forage fish capture and processing operations. Feed conversion ratios for Atlantic salmon are approximately 1.1\u20131.3 kg feed per kg fish, making feed emissions the dominant component of farmed salmon's total GHG footprint."
+    ]
+  },
+  {
+    "id": 76,
+    "url": "https://www.fao.org/fishery/en/culturedspecies/salmo_salar",
+    "title": "FAO — Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
+    "notes": [
+      "Farmed salmon — fishmeal kg_feed_per_kg_output: FAO Atlantic salmon aquaculture profile documents modern commercial feed composition for Norwegian, Chilean, and Scottish production. Fishmeal inclusion has declined from 40–65% in the 1990s to 15–25% in modern feeds as plant proteins and novel ingredients substitute for marine ingredients. FCR for the seawater phase ~1.0–1.2 kg feed/kg gain; combined with ~90% dressing yield gives ~0.50 kg fishmeal/kg salmon retail at 39% average inclusion.",
+      "Farmed salmon — fish-oil kg_feed_per_kg_output: FAO profile documents fish oil at 6–10% of feed by weight in commercial diets, with Norwegian industry working to reduce inclusion through partial substitution with algal oil and terrestrial plant oils. At 10% inclusion and 1.28 kg feed/kg salmon fillet: 0.10 × 1.28 = 0.13 kg fish-oil/kg salmon.",
+      "Farmed shrimp — fishmeal and fish-oil kg_feed_per_kg_output: Used as secondary supporting source for penaeid shrimp feed composition comparisons; the FAO salmon profile methodology provides a consistent aquaculture LCA framework. Shrimp fishmeal inclusion is lower than salmon (10–20% vs 15–25%); fish oil inclusion is substantially lower (2–5% vs 6–10%) due to differences in essential fatty acid requirements between salmonids and penaeid crustaceans."
+    ]
+  },
+  {
+    "id": 72,
+    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+    "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+    "notes": [
+      "Supply-chain stage breakdown of GHG emissions (kg CO2e per kg food) from Poore & Nemecek (2018), published by Our World in Data. Stages covered: land use change, animal feed, farm (on-farm CH4/N2O/CO2 only), processing, transport, retail, packaging, consumer waste losses.",
+      "Eggs \u2014 full supply chain breakdown (kg CO2e per kg eggs): land use change 0.710, animal feed 2.205, farm (on-farm) 1.320, processing 0.000, transport 0.084, retail 0.036, packaging 0.161, losses 0.153. Total: ~4.67 kg CO2e/kg eggs. Cross-checks against ghg-per-kg-poore CSV value of 4.67 kg CO2e/kg (source 71).",
+      "Eggs \u2014 on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields."
+    ]
+  }
+]

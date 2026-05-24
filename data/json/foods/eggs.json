@@ -1,0 +1,200 @@
+[
+    {
+        "id": 17,
+        "slug": "egg",
+        "name": "Egg",
+        "type": "animal",
+        "category": "eggs",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.43,
+                    "fat": 0.095,
+                    "sat_fat": 0.031,
+                    "protein": 0.125,
+                    "fiber": 0,
+                    "sodium": 1.42,
+                    "carbs": 0.011,
+                    "sugar": 0.011,
+                    "cholesterol": 3.72,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 221000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Layer hen — neuron_count: ~221 million neurons in domestic chicken (same species as broiler), based on Herculano-Houzel isotropic fractionator methodology."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 1.8,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Layer hen — weight_kg: Commercial layer hens (Leghorn and ISA Brown strains) typically weigh 1.6–2.0 kg live weight at laying age; 1.8 kg used as midpoint."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Egg — yield_fraction: 1.0; feed conversion ratios for layer hens are already expressed per kg egg output, so no live-weight-to-edible-yield adjustment is needed."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "emissions_per_kg": [
+            {
+                "value": 4.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Egg — emissions_per_kg: ~4.5 kg CO2e/kg eggs (full supply-chain global weighted average; farm gate to retail). Includes land use change (0.71 kg CO2e/kg), animal feed crop production (2.21 kg CO2e/kg), on-farm CH4/N2O/CO2 (1.32 kg CO2e/kg), transport (0.084), retail (0.036), packaging (0.161), and losses (0.153). The separate ch4/n2o/co2 per-kg fields in this file represent the on-farm component only."
+                }
+            },
+            {
+                "value": 4.67,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Egg — emissions_per_kg: 4.67 kg CO2e/kg eggs per the OWID ghg-per-kg-poore dataset sourcing Poore & Nemecek (2018) Science doi:10.1126/science.aaq0216. Full cradle-to-retail supply-chain total. Corroborated by source 72 supply-chain stage breakdown (land use change 0.710 + feed 2.205 + farm 1.320 + processing 0.000 + transport 0.084 + retail 0.036 + packaging 0.161 + losses 0.153 = 4.67 kg CO2e/kg)."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.046,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Egg — ch4_kg_per_kg_output: On-farm CH4 only (manure management; layer hens produce negligible enteric CH4 as monogastrics). Derived from P&N 2018 Farm component of 1.32 kg CO2e/kg eggs: CH4 is the dominant on-farm gas for layers; 0.046 kg CH4/kg × GWP100 28 = 1.29 kg CO2e, consistent with P&N's Farm figure. Land use change (0.71) and feed crop emissions (2.21 kg CO2e/kg) are tracked separately in the feed and land-use fields, not here."
+                }
+            },
+            {
+                "value": 0.045,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Egg — ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for layer hens (manure management only; no enteric CH4 for poultry). System boundary covers on-farm emissions only; feed production and land use change are excluded. Global production-weighted average across confined and semi-confined systems."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00011,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Egg — n2o_kg_per_kg_output: On-farm N2O only (manure management in confined houses). Derived from P&N 2018 Farm component residual after CH4: (1.32 − 0.046×28) / 265 ≈ 0.00011 kg N2O/kg eggs. N2O from feed crop fertilizer is embedded in the feed and land-use CO2e components, not here. Previous value of 0.012 kg/kg was incorrect — that figure is ~100× too high for on-farm layer-hen N2O and likely included upstream feed-related N2O."
+                }
+            },
+            {
+                "value": 0.00010,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Egg — n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for layer hens (manure management in confined housing; low-moisture manure produces very little N2O). System boundary is on-farm only; feed and land use N2O are excluded. Value consistent with P&N residual estimate of ~0.00011 kg/kg."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 0.045,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Egg — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating in confinement houses). Residual from P&N Farm component after CH4 and N2O. Feed-related CO2 (land use change 0.710, feed crop 2.205 kg CO2e/kg) is tracked in the feed and land use fields. Previous value of 0.35 kg/kg was incorrect — it appears to have included feed-related CO2 rather than on-farm energy CO2 only."
+                }
+            },
+            {
+                "value": 0.040,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Egg — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for layer hens (fuel and electricity for housing, manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global average for confined systems."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.42,
+                        "confidence": 3,
+                        "source": {
+                            "id": 36,
+                            "url": "https://www.champrix.com/articles/maximize-efficiency-and-profits-understanding-and-improving-feed-conversion-ratio-(fcr)-in-layers",
+                            "title": "Champrix — Feed Conversion Ratio in Layer Hens",
+                            "note": "Egg — corn kg_feed_per_kg_output: Derived from lifetime FCR of ~4.03 kg feed/kg eggs (source 38) × 60% corn fraction = 2.42 kg corn/kg eggs. FCR includes chick, pullet, and laying phases over full productive life."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.81,
+                        "confidence": 3,
+                        "source": {
+                            "id": 36,
+                            "url": "https://www.champrix.com/articles/maximize-efficiency-and-profits-understanding-and-improving-feed-conversion-ratio-(fcr)-in-layers",
+                            "title": "Champrix — Feed Conversion Ratio in Layer Hens",
+                            "note": "Egg — soy kg_feed_per_kg_output: Derived from lifetime FCR of ~4.03 kg feed/kg eggs (source 38) × 20% soybean meal fraction = 0.81 kg soy/kg eggs. FCR includes chick, pullet, and laying phases over full productive life."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,616 @@
+[
+    {
+        "id": 12,
+        "slug": "lettuce",
+        "name": "Lettuce",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.17,
+                    "fat": 0.003,
+                    "sat_fat": 0,
+                    "protein": 0.013,
+                    "fiber": 0.021,
+                    "sodium": 0.28,
+                    "carbs": 0.029,
+                    "sugar": 0.013,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.96,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 25000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 130,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Lettuce — water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected — difference is within methodological range."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 118,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 7,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.5,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lettuce — emissions_per_kg: ~0.5 kg CO2e/kg (field-grown; P&N 2018 'other vegetables' global median covers leafy salad crops; value covers farm-gate GHG including fertilizer N2O, farm energy, and minor land use component)."
+                }
+            },
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Lettuce — emissions_per_kg: 0.53 kg CO2e/kg, from OWID chart 'Other Vegetables' category sourcing P&N 2018; consistent with multi-study LCA range of 0.4–0.6 kg CO2e/kg for field-grown lettuce."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 800,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.07,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "slug": "spinach",
+        "name": "Spinach",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.23,
+                    "fat": 0.004,
+                    "sat_fat": 0.001,
+                    "protein": 0.029,
+                    "fiber": 0.022,
+                    "sodium": 0.79,
+                    "carbs": 0.036,
+                    "sugar": 0.004,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 20000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Spinach — yield_kg_ha: 20,000 kg/ha (intensive irrigated vegetable production; China accounts for ~90% of global spinach output; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 305,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Spinach — water_per_kg: 305 L/kg (global average; short-cycle leafy crop with low total water input)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 275,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 15,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 30,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Spinach — emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.6,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Spinach — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.47,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Spinach — emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018)."
+                }
+            },
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Spinach — emissions_per_kg: 0.53 kg CO2e/kg from OWID 'Other Vegetables' category (P&N 2018 data); corroborates the P&N 2018 direct value of 0.47 kg CO2e/kg; both within the expected 0.3–0.6 kg CO2e/kg range for low-input leafy crops."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 3,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Spinach — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Spinach — emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 53,
+        "slug": "kale",
+        "name": "Kale",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.49,
+                    "fat": 0.009,
+                    "sat_fat": 0.001,
+                    "protein": 0.043,
+                    "fiber": 0.036,
+                    "sodium": 0.53,
+                    "carbs": 0.087,
+                    "sugar": 0.022,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15000,
+                "confidence": 3,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Kale — yield_kg_ha: 15,000 kg/ha (estimate derived from brassica family yields; FAO does not report kale separately; value consistent with broccoli/cabbage leaf yields; confidence 3)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 237,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Kale — water_per_kg: 237 L/kg (global average; cool-season leafy brassica, lower water demand than most crops)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 213,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 14,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 55,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Kale — emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas')."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Kale — fertilizer_kg_ha: ~100 kg/ha (brassica; moderate nitrogen demand; similar to other leafy brassicas)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.49,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Kale — emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas')."
+                }
+            },
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Kale — emissions_per_kg: 0.51 kg CO2e/kg from OWID 'Brassicas' category (P&N 2018 data); closely corroborates the P&N 2018 direct value of 0.49 kg CO2e/kg for kale as a leafy brassica; within the known-correct brassica range of 0.4–0.9 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 3,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Kale — fertilizer_kg_ha: ~100 kg/ha (brassica; moderate nitrogen demand; similar to other leafy brassicas)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1200,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Kale — emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas')."
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

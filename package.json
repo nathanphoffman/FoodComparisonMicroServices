@@ -1,0 +1,21 @@
+{
+    "name": "food-comparison-monorepo",
+    "private": true,
+    "version": "0.0.1",
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev":         "concurrently --names web,api --prefix-colors cyan,magenta \"npm run dev -w apps/web\" \"dotnet watch run --project apps/api\"",
+        "dev:web":     "npm run dev -w apps/web",
+        "dev:api":     "dotnet watch run --project apps/api",
+        "build":       "npm run build -w apps/web",
+        "build:wasm":  "wasm-pack build services/wasm-calculations --target bundler",
+        "build-db":    "python services/data-pipeline/src/build_db.py",
+        "download":    "python services/data-sourcing/src/download.py"
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2",
+        "typescript": "^5.8.3"
+    }
+}

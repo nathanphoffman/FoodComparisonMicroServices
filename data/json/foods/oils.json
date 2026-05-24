@@ -1,0 +1,191 @@
+[
+    {
+        "id": 45,
+        "slug": "olive-oil",
+        "name": "Olive Oil",
+        "type": "plant",
+        "category": "oils",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 8.84,
+                    "fat": 1,
+                    "sat_fat": 0.138,
+                    "protein": 0,
+                    "fiber": 0,
+                    "sodium": 0.02,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 400,
+                "confidence": 3,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 14430,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 11544,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 2165,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 294,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.2,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 90,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 6.0,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg (global weighted average from farm to farm gate; includes fertilizer N2O, farm energy, and land use; high value reflects ~10 kg olives needed per kg oil, concentrating upstream crop emissions; P&N 2018 range 3.5–7.5 kg/kg)."
+                }
+            },
+            {
+                "value": 6.0,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg per the OWID visualization of Poore & Nemecek (2018) data. Confirms the P&N 2018 global weighted average for olive oil production including upstream olive farming and pressing."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 7000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

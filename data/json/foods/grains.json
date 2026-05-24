@@ -1,0 +1,1554 @@
+[
+    {
+        "id": 3,
+        "slug": "wheat",
+        "name": "Wheat",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.39,
+                    "fat": 0.019,
+                    "sat_fat": 0.003,
+                    "protein": 0.133,
+                    "fiber": 0.107,
+                    "sodium": 0.02,
+                    "carbs": 0.713,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2067,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1827,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1334,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 342,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 151,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.2,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.57,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O, farm energy, and land use change; P&N 2018 Table S5 'Wheat & Rye' category)."
+                }
+            },
+            {
+                "value": 1.57,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2000,
+                "confidence": 4,
+                "source": {
+                    "id": 9,
+                    "url": "https://ourworldindata.org/grapher/wheat-yields",
+                    "title": "Our World in Data — Wheat Yields",
+                    "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.38,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Wheat — 2,4-D: 0.38 kg/ha; chlorpyrifos: 0.06 kg/ha; propiconazole: 0.11 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Wheat — 2,4-D: 0.38 kg/ha; chlorpyrifos: 0.06 kg/ha; propiconazole: 0.11 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.11,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Wheat — 2,4-D: 0.38 kg/ha; chlorpyrifos: 0.06 kg/ha; propiconazole: 0.11 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Wheat — 2,4-D: 0.38 kg/ha; chlorpyrifos: 0.06 kg/ha; propiconazole: 0.11 kg/ha; malathion: 0.04 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "slug": "corn",
+        "name": "Corn",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.65,
+                    "fat": 0.047,
+                    "sat_fat": 0.007,
+                    "protein": 0.091,
+                    "fiber": 0.071,
+                    "sodium": 0.35,
+                    "carbs": 0.741,
+                    "sugar": 0.006,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 5600,
+                "confidence": 4,
+                "source": {
+                    "id": 11,
+                    "url": "https://ourworldindata.org/grapher/maize-yields",
+                    "title": "Our World in Data — Corn (Maize) Yields",
+                    "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1222,
+                "confidence": 4,
+                "source": {
+                    "id": 11,
+                    "url": "https://ourworldindata.org/grapher/maize-yields",
+                    "title": "Our World in Data — Corn (Maize) Yields",
+                    "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1084,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 77,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 63,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 6.7,
+                "confidence": 4,
+                "source": {
+                    "id": 11,
+                    "url": "https://ourworldindata.org/grapher/maize-yields",
+                    "title": "Our World in Data — Corn (Maize) Yields",
+                    "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.3,
+                "confidence": 4,
+                "source": {
+                    "id": 12,
+                    "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
+                    "title": "USDA ERS — Feed Grains Sector at a Glance",
+                    "note": "Corn — pesticide_kg_ha and fertilizer_kg_ha: Used for US corn agricultural statistics including pesticide and fertilizer application rates."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 160,
+                "confidence": 4,
+                "source": {
+                    "id": 12,
+                    "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
+                    "title": "USDA ERS — Feed Grains Sector at a Glance",
+                    "note": "Corn — pesticide_kg_ha and fertilizer_kg_ha: Used for US corn agricultural statistics including pesticide and fertilizer application rates."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.7,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O from high-N corn production, farm energy, and land use change; P&N 2018 Table S5 'Maize' category)."
+                }
+            },
+            {
+                "value": 1.7,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 11,
+                    "url": "https://ourworldindata.org/grapher/maize-yields",
+                    "title": "Our World in Data — Corn (Maize) Yields",
+                    "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3000,
+                "confidence": 4,
+                "source": {
+                    "id": 11,
+                    "url": "https://ourworldindata.org/grapher/maize-yields",
+                    "title": "Our World in Data — Corn (Maize) Yields",
+                    "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 2,
+                "name": "Atrazine",
+                "kg_ha": [
+                    {
+                        "value": 1.12,
+                        "confidence": 5,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.91,
+                        "confidence": 5,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.68,
+                        "confidence": 5,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "slug": "sorghum",
+        "name": "Sorghum",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.39,
+                    "fat": 0.035,
+                    "sat_fat": 0.005,
+                    "protein": 0.111,
+                    "fiber": 0.066,
+                    "sodium": 0.06,
+                    "carbs": 0.745,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 4200,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2830,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2760,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 15,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 30,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.4,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Sorghum — emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 dryland cereal range; sorghum is largely rain-fed with lower nitrogen inputs than corn, placing it at the lower end of the cereal GHG range; farm gate including fertilizer N2O and land use change)."
+                }
+            },
+            {
+                "value": 1.4,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Sorghum — emissions_per_kg: ~1.4 kg CO2e/kg per OWID/P&N 2018 'other cereals' grouping for dryland grains."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2500,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": "Sorghum — yield_kg_ha: Source for US sorghum acreage and yield data."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 2,
+                "name": "Atrazine",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sorghum — atrazine: 0.5 kg/ha; malathion: 0.06 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sorghum — atrazine: 0.5 kg/ha; malathion: 0.06 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "slug": "rice",
+        "name": "Rice",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.3,
+                    "fat": 0.003,
+                    "sat_fat": 0.001,
+                    "protein": 0.027,
+                    "fiber": 0.004,
+                    "sodium": 0.01,
+                    "carbs": 0.285,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 4700,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2500,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Rice — water_per_kg: Report 47 Table A1 gives 1,673 L/kg for paddy rice. Dataset uses 2,500 L/kg which reflects milled white rice basis: 1,673 ÷ 0.65 milling yield ≈ 2,574 L/kg. This is consistent with Chapagain & Hoekstra (2011) who report 2,291–2,500 L/kg for white rice. The 2,500 value is accepted as correct for the milled-rice basis used throughout the dataset."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1671,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 545,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 284,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.8,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.7,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Rice — emissions_per_kg: 2.7 kg CO2e/kg global weighted average (farm gate; notably high due to CH4 from methanogenic bacteria in flooded paddy fields, which contributes ~50% of total rice GHG footprint; also includes fertilizer N2O and farm energy; P&N 2018 Table S5 'Rice' category)."
+                }
+            },
+            {
+                "value": 2.7,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Rice — emissions_per_kg: 2.7 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 500,
+                "confidence": 4,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice — carbaryl: 0.12 kg/ha; 2,4-D: 0.18 kg/ha; propiconazole: 0.05 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.18,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice — carbaryl: 0.12 kg/ha; 2,4-D: 0.18 kg/ha; propiconazole: 0.05 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice — carbaryl: 0.12 kg/ha; 2,4-D: 0.18 kg/ha; propiconazole: 0.05 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "slug": "oats",
+        "name": "Oats",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.89,
+                    "fat": 0.067,
+                    "sat_fat": 0.012,
+                    "protein": 0.167,
+                    "fiber": 0.105,
+                    "sodium": 0.02,
+                    "carbs": 0.663,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2500,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1788,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1576,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 46,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 33,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.58,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Oats — emissions_per_kg: 1.58 kg CO2e/kg (P&N 2018 groups oats with 'Wheat & Rye' as temperate small grains sharing a similar fertilizer N2O and land use profile; farm gate including land use change)."
+                }
+            },
+            {
+                "value": 1.58,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Oats — emissions_per_kg: ~1.58 kg CO2e/kg per OWID/P&N 2018 temperate small grains grouping."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1500,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Oats — 2,4-D: 0.25 kg/ha; malathion: 0.03 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Oats — 2,4-D: 0.25 kg/ha; malathion: 0.03 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "slug": "quinoa",
+        "name": "Quinoa",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "grain"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.2,
+                    "fat": 0.019,
+                    "sat_fat": 0.002,
+                    "protein": 0.044,
+                    "fiber": 0.028,
+                    "sodium": 0.07,
+                    "carbs": 0.215,
+                    "sugar": 0.009,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1700,
+                "confidence": 3,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Quinoa — yield_kg_ha: 1,700 kg/ha (Andean production; yield has improved with expansion to new growing regions; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3337,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Quinoa — water_per_kg: 3,337 L/kg (global weighted average; South American Andean production, largely rain-fed)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2903,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 334,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 32,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Quinoa — soil_erosion: ~1.5 t/ha/yr (Andean production; P&N 2018 land-use characterization; low-till traditional Andean systems reduce erosion relative to mechanized row crops)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.3,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 50,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Quinoa — fertilizer_kg_ha: ~50 kg/ha (Andean production is largely low-input; commercial expansion regions use moderate P and K)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Quinoa — emissions_per_kg: 1.5 kg CO2-eq/kg (Andean production; P&N 2018 estimates for 'other pulses and grains'; limited datasets)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Quinoa — fertilizer_kg_ha: ~50 kg/ha (Andean production is largely low-input; commercial expansion regions use moderate P and K)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1800,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Quinoa — co2_capture_kg_ha_yr: ~1,800 kg CO2/ha/yr (Andean production; P&N 2018 land-use characterization for annual grain crops at moderate productivity)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 49,
+        "slug": "barley",
+        "name": "Barley",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "grain"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.54,
+                    "fat": 0.024,
+                    "sat_fat": 0.005,
+                    "protein": 0.122,
+                    "fiber": 0.17,
+                    "sodium": 0.12,
+                    "carbs": 0.734,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 3100,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Barley — yield_kg_ha: 3,100 kg/ha (global average; EU, Russia, Australia main producers; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1423,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Barley — water_per_kg: 1,423 L/kg (global average; temperate grain, primarily rain-fed)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1252,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 128,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 81,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Barley — soil_erosion: ~2.5 t/ha/yr (temperate cereal; P&N 2018 land-use characterization; similar to wheat but lower with conservation tillage common in barley production)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Barley — fertilizer_kg_ha: ~100 kg/ha (temperate grain; similar to wheat but slightly lower intensity)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg global weighted average (farm gate; temperate cereal; slightly lower than wheat due to lower average nitrogen application rates; P&N 2018 Table S5 'Barley' category includes fertilizer N2O, farm energy, and land use change). Note: prior value of 0.57 in this dataset was a data entry error inconsistent with the P&N source."
+                }
+            },
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Barley — fertilizer_kg_ha: ~100 kg/ha (temperate grain; similar to wheat but slightly lower intensity)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1800,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Barley — co2_capture_kg_ha_yr: ~1,800 kg CO2/ha/yr (temperate cereal; consistent with P&N 2018 land-use characterization for short-season annual grain crops)."
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

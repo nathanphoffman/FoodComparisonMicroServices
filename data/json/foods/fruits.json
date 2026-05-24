@@ -1,0 +1,1347 @@
+[
+    {
+        "id": 18,
+        "slug": "apple",
+        "name": "Apple",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.52,
+                    "fat": 0.002,
+                    "sat_fat": 0,
+                    "protein": 0.003,
+                    "fiber": 0.024,
+                    "sodium": 0.01,
+                    "carbs": 0.138,
+                    "sugar": 0.104,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.9,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 18000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 820,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 694,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 100,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 5,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Apple — emissions_per_kg: 0.43 kg CO2e/kg (global median from meta-analysis of 38,700 farms; covers farm-gate GHGs including N2O from fertilizer, CO2 from machinery and land use; excludes post-farm transport)."
+                }
+            },
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Apple — emissions_per_kg: 0.43 kg CO2e/kg; OWID visualization of Poore & Nemecek 2018 data showing cradle-to-retail-gate GHG intensity for apples."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 4000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Apple — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 9,
+                "name": "Captan",
+                "kg_ha": [
+                    {
+                        "value": 1.2,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Apple — captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Apple — captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Apple — captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Apple — captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Apple — captan: 1.2 kg/ha; imidacloprid: 0.12 kg/ha; carbaryl: 0.5 kg/ha; malathion: 0.08 kg/ha; mancozeb: 0.3 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "slug": "banana",
+        "name": "Banana",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.89,
+                    "fat": 0.003,
+                    "sat_fat": 0.001,
+                    "protein": 0.011,
+                    "fiber": 0.026,
+                    "sodium": 0.01,
+                    "carbs": 0.229,
+                    "sugar": 0.122,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.65,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 32000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 860,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 657,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 103,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 59,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 7,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.86,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Banana — emissions_per_kg: 0.86 kg CO2e/kg (global median; covers farm-gate GHGs including N fertilizer N2O, land use change emissions in tropical growing regions, and on-farm energy; excludes refrigerated transport)."
+                }
+            },
+            {
+                "value": 0.86,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Banana — emissions_per_kg: 0.86 kg CO2e/kg; OWID visualization of Poore & Nemecek 2018 data showing cradle-to-retail-gate GHG intensity for bananas."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2500,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 1.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.8,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "slug": "avocado",
+        "name": "Avocado",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.6,
+                    "fat": 0.147,
+                    "sat_fat": 0.021,
+                    "protein": 0.02,
+                    "fiber": 0.067,
+                    "sodium": 0.07,
+                    "carbs": 0.085,
+                    "sugar": 0.007,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.75,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 11000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Avocado — yield_kg_ha: 11,000 kg/ha (FAO global average; modern commercial orchards in Mexico, Peru, Chile; 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1981,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Avocado — water_per_kg: 1,981 L/kg (global average; intensive irrigation in arid growing regions, e.g., Chile, Mexico)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 713,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 1189,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 133,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Avocado — emissions_per_kg: 2.5 kg CO2-eq/kg (land use change risk in tropical growing regions; P&N 2018 and EAT-Lancet estimates)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Avocado — fertilizer_kg_ha: ~200 kg/ha (commercial orchards are fertilizer-intensive; N+P+K combined per productive hectare)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Avocado — emissions_per_kg: ~2.5 kg CO2e/kg (P&N 2018; derived from 'other tropical fruits and oilseeds' category; elevated by land use change emissions in deforestation-risk regions of Mexico and Peru; covers farm-gate through retail-gate boundary; CO2, N2O, and CH4 included)."
+                }
+            },
+            {
+                "value": 2.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Avocado — emissions_per_kg: ~2.5 kg CO2e/kg; OWID visualization of Poore & Nemecek 2018 showing avocado GHG intensity is substantially higher than most temperate fruits due to land use change risk."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Avocado — fertilizer_kg_ha: ~200 kg/ha (commercial orchards are fertilizer-intensive; N+P+K combined per productive hectare)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 6000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Avocado — emissions_per_kg: 2.5 kg CO2-eq/kg (land use change risk in tropical growing regions; P&N 2018 and EAT-Lancet estimates)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 46,
+        "slug": "coconut",
+        "name": "Coconut",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.54,
+                    "fat": 0.333,
+                    "sat_fat": 0.296,
+                    "protein": 0.033,
+                    "fiber": 0.09,
+                    "sodium": 0.2,
+                    "carbs": 0.153,
+                    "sugar": 0.062,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 5600,
+                "confidence": 3,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Coconut — yield_kg_ha: 5,600 kg/ha (FAO global average for coconut meat equivalent; Philippines, Indonesia, India as top producers; 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2500,
+                "confidence": 2,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Coconut — water_per_kg: 2,500 L/kg (estimate; limited direct data in Report 47; derived from coconut palm water use literature and tropical plantation studies; confidence 2)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2400,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 75,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 200,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.3,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Coconut — emissions_per_kg: 3.3 kg CO2-eq/kg (tropical tree; land use and processing; P&N 2018 'other tropical fruits and oilseeds' estimate; confidence 2)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Coconut — fertilizer_kg_ha: ~80 kg/ha (smallholder tropical palm; limited fertilizer use in traditional production; commercial estates higher at ~150 kg/ha)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.3,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Coconut — emissions_per_kg: 3.3 kg CO2e/kg (P&N 2018 'other tropical fruits and oilseeds' category estimate; coconut is not individually reported in P&N; value reflects tropical tree-crop land use change risk, palm biomass carbon, and processing energy; covers farm-gate to retail-gate boundary; confidence 2 — no crop-specific LCA available in P&N dataset)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Coconut — fertilizer_kg_ha: ~80 kg/ha (smallholder tropical palm; limited fertilizer use in traditional production; commercial estates higher at ~150 kg/ha)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 8000,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Coconut — emissions_per_kg: 3.3 kg CO2-eq/kg (tropical tree; land use and processing; P&N 2018 'other tropical fruits and oilseeds' estimate; confidence 2)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 50,
+        "slug": "mango",
+        "name": "Mango",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.6,
+                    "fat": 0.004,
+                    "sat_fat": 0.001,
+                    "protein": 0.008,
+                    "fiber": 0.016,
+                    "sodium": 0.01,
+                    "carbs": 0.15,
+                    "sugar": 0.138,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.69,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 8000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Mango — yield_kg_ha: 8,000 kg/ha (global average; India, China, Thailand as top producers; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 686,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Mango — water_per_kg: 686 L/kg (global average; tropical tree crop, mixed rain-fed and irrigated)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 617,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 55,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Mango — emissions_per_kg: 1.1 kg CO2-eq/kg (tropical tree fruit; P&N 2018 'other fruits' range)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 150,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Mango — fertilizer_kg_ha: ~150 kg/ha (tropical orchard; N+P+K applied in commercial production systems)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.1,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Mango — emissions_per_kg: 1.1 kg CO2e/kg (P&N 2018 'other fruits' category; tropical tree crop; emissions driven by N2O from fertilizer application and land use change in India, Thailand, and Mexico growing regions; covers farm-gate to retail-gate boundary including post-harvest handling)."
+                }
+            },
+            {
+                "value": 1.1,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Mango — emissions_per_kg: 1.1 kg CO2e/kg; OWID visualization of Poore & Nemecek 2018 GHG intensity data; tropical fruit with moderate emissions relative to temperate equivalents due to land use change contributions."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Mango — fertilizer_kg_ha: ~150 kg/ha (tropical orchard; N+P+K applied in commercial production systems)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 5000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Mango — emissions_per_kg: 1.1 kg CO2-eq/kg (tropical tree fruit; P&N 2018 'other fruits' range)."
+                }
+            }
+        ],
+        "pesticides": []
+    },
+    {
+        "id": 51,
+        "slug": "orange",
+        "name": "Orange",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.47,
+                    "fat": 0.001,
+                    "sat_fat": 0,
+                    "protein": 0.009,
+                    "fiber": 0.024,
+                    "sodium": 0,
+                    "carbs": 0.118,
+                    "sugar": 0.094,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.73,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 24000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Orange — yield_kg_ha: 24,000 kg/ha (global average; Brazil, US, EU as major producers; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 460,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Orange — water_per_kg: 460 L/kg (global average; largely irrigated Mediterranean and subtropical production)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 345,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 92,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 24,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Orange — emissions_per_kg: 0.47 kg CO2-eq/kg (citrus; P&N 2018 global median)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.5,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Orange — fertilizer_kg_ha: ~200 kg/ha (citrus requires significant N for fruit development; intensive commercial orchards)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.39,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Orange — emissions_per_kg: 0.39 kg CO2e/kg (P&N 2018 citrus global median; covers farm-gate GHGs from fertilizer N2O, on-farm energy, and irrigation pumping; does not include refrigerated transport or retail energy; value applies to the citrus category including oranges, lemons, and grapefruit)."
+                }
+            },
+            {
+                "value": 0.39,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Orange (citrus) — emissions_per_kg: 0.39 kg CO2e/kg; OWID visualization of Poore & Nemecek 2018 showing citrus as a low-emission fruit category, below berries and tropical fruits."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Orange — fertilizer_kg_ha: ~200 kg/ha (citrus requires significant N for fruit development; intensive commercial orchards)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Orange — emissions_per_kg: 0.47 kg CO2-eq/kg (citrus; P&N 2018 global median)."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.45,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.35,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.85,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.6,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Orange — chlorpyrifos: 0.45 kg/ha; malathion: 0.35 kg/ha; imidacloprid: 0.25 kg/ha; mancozeb: 0.85 kg/ha; carbaryl: 0.60 kg/ha. Total 2.50 kg/ha, matching the aggregate in plants.json. Based on USDA NASS 2023 Fruits survey (covering Florida and California citrus production). Chlorpyrifos used for citrus psyllid and mite control; malathion for Mediterranean fruit fly management programs; imidacloprid for Asian citrus psyllid (HLB vector) suppression; mancozeb for citrus scab and brown rot fungal diseases; carbaryl for fruit thinning and secondary insect control. Confidence 2 for all compounds — NASS covers citrus in the Fruits survey but survey frequency is biennial and citrus coverage is less comprehensive than major field crops."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

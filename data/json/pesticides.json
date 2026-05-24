@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Glyphosate",
+    "freshwater_paf": [{"value": 0.00034, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.0082, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.003, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 100, "source_id": 57, "confidence": 4}]
+  },
+  {
+    "id": 2,
+    "name": "Atrazine",
+    "freshwater_paf": [{"value": 0.27, "source_id": 50, "confidence": 5}],
+    "terrestrial_paf": [{"value": 0.072, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.015, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 97, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 3,
+    "name": "Chlorpyrifos",
+    "freshwater_paf": [{"value": 0.48, "source_id": 50, "confidence": 5}],
+    "terrestrial_paf": [{"value": 0.17, "source_id": 58, "confidence": 4}],
+    "insect_paf": [{"value": 0.28, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.059, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 4,
+    "name": "Malathion",
+    "freshwater_paf": [{"value": 0.22, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.11, "source_id": 58, "confidence": 4}],
+    "insect_paf": [{"value": 0.19, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.18, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 5,
+    "name": "Permethrin",
+    "freshwater_paf": [{"value": 0.56, "source_id": 50, "confidence": 5}],
+    "terrestrial_paf": [{"value": 0.065, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.22, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.029, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 6,
+    "name": "Cypermethrin",
+    "freshwater_paf": [{"value": 0.61, "source_id": 50, "confidence": 5}],
+    "terrestrial_paf": [{"value": 0.078, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.25, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.038, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 7,
+    "name": "Imidacloprid",
+    "freshwater_paf": [{"value": 0.15, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.12, "source_id": 58, "confidence": 4}],
+    "insect_paf": [{"value": 0.18, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.00369, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 8,
+    "name": "Thiamethoxam",
+    "freshwater_paf": [{"value": 0.08, "source_id": 50, "confidence": 3}],
+    "terrestrial_paf": [{"value": 0.055, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.12, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 0.005, "source_id": 57, "confidence": 5}]
+  },
+  {
+    "id": 9,
+    "name": "Captan",
+    "freshwater_paf": [{"value": 0.18, "source_id": 50, "confidence": 3}],
+    "terrestrial_paf": [{"value": 0.035, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.008, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 28.5, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 10,
+    "name": "Mancozeb",
+    "freshwater_paf": [{"value": 0.12, "source_id": 50, "confidence": 3}],
+    "terrestrial_paf": [{"value": 0.042, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.012, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 100, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 11,
+    "name": "Metolachlor",
+    "freshwater_paf": [{"value": 0.09, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.058, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.015, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 100, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 12,
+    "name": "2,4-D",
+    "freshwater_paf": [{"value": 0.05, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.028, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.008, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 90.7, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 13,
+    "name": "Pendimethalin",
+    "freshwater_paf": [{"value": 0.31, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.075, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.022, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 100, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 14,
+    "name": "Propiconazole",
+    "freshwater_paf": [{"value": 0.14, "source_id": 50, "confidence": 3}],
+    "terrestrial_paf": [{"value": 0.068, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.018, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 25, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 15,
+    "name": "Diazinon",
+    "freshwater_paf": [{"value": 0.39, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.21, "source_id": 58, "confidence": 4}],
+    "insect_paf": [{"value": 0.32, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 0.15, "source_id": 57, "confidence": 4}]
+  },
+  {
+    "id": 16,
+    "name": "Paraquat",
+    "freshwater_paf": [{"value": 0.33, "source_id": 50, "confidence": 3}],
+    "terrestrial_paf": [{"value": 0.018, "source_id": 58, "confidence": 3}],
+    "insect_paf": [{"value": 0.012, "source_id": 59, "confidence": 3}],
+    "bee_ld50": [{"value": 47, "source_id": 57, "confidence": 3}]
+  },
+  {
+    "id": 17,
+    "name": "Carbaryl",
+    "freshwater_paf": [{"value": 0.26, "source_id": 50, "confidence": 4}],
+    "terrestrial_paf": [{"value": 0.095, "source_id": 58, "confidence": 4}],
+    "insect_paf": [{"value": 0.21, "source_id": 59, "confidence": 4}],
+    "bee_ld50": [{"value": 1.0, "source_id": 57, "confidence": 4}]
+  }
+]

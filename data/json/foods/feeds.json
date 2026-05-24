@@ -1,0 +1,596 @@
+[
+    {
+        "id": 7,
+        "slug": "alfalfa",
+        "name": "Alfalfa",
+        "type": "plant",
+        "category": "feeds",
+        "human_food": 0,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.16,
+                    "fat": 0.028,
+                    "sat_fat": 0.003,
+                    "protein": 0.177,
+                    "fiber": 0.247,
+                    "sodium": 0.07,
+                    "carbs": 0.213,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 8500,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 900,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 water_per_kg: Source for water use as livestock feed."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 495,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 360,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 3,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.3,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.4,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Alfalfa \u2014 emissions_per_kg: LCA literature places irrigated US alfalfa at 0.2\u20130.4 kg CO2e/kg. P&N 2018 meta-analysis of 38,700 farms covers all major animal feed crops; alfalfa's low-emission profile is driven by nitrogen-fixation (reducing synthetic N fertilizer demand), perennial root system (low tillage), and high yield diluting per-kg fixed costs. Value of 0.4 kg CO2e/kg represents the upper bound for commercially irrigated alfalfa (irrigation energy is the dominant emission source in water-intensive production regions such as California's Central Valley)."
+                }
+            },
+            {
+                "value": 0.35,
+                "confidence": 3,
+                "source": {
+                    "id": 14,
+                    "url": "https://www.fao.org/land-water/databases-and-software/crop-information/alfalfa/en/",
+                    "title": "FAO \u2014 Alfalfa Crop Information",
+                    "note": "Alfalfa \u2014 emissions_per_kg: FAO crop information confirms alfalfa's low GHG footprint relative to other forage crops due to biological nitrogen fixation (BNF) reducing synthetic N2O emissions and perennial growth habit reducing tillage-related CO2. Consistent with LCA studies reporting 0.2\u20130.35 kg CO2e/kg for rain-fed or minimally irrigated systems; 0.35 used as a conservative midpoint for globally mixed production."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 4000,
+                "confidence": 4,
+                "source": {
+                    "id": 13,
+                    "url": "https://alfalfa.ucdavis.edu/sites/g/files/dgvnsk12586/files/media/documents/UCAlfalfa8303Livestock-reg.pdf",
+                    "title": "UC Davis \u2014 Alfalfa for Livestock",
+                    "note": "Alfalfa \u2014 yield_kg_ha: Source for typical yield and agronomic characteristics."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS \u2014 Agricultural Chemical Use Survey",
+                            "note": "Alfalfa \u2014 malathion: 0.3 kg/ha; carbaryl: 0.4 kg/ha; diazinon: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS \u2014 Agricultural Chemical Use Survey",
+                            "note": "Alfalfa \u2014 malathion: 0.3 kg/ha; carbaryl: 0.4 kg/ha; diazinon: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS \u2014 Agricultural Chemical Use Survey",
+                            "note": "Alfalfa \u2014 malathion: 0.3 kg/ha; carbaryl: 0.4 kg/ha; diazinon: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "slug": "grass-hay",
+        "name": "Grass Hay",
+        "type": "plant",
+        "category": "feeds",
+        "human_food": 0,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.89,
+                    "fat": 0.031,
+                    "sat_fat": 0.005,
+                    "protein": 0.088,
+                    "fiber": 0.32,
+                    "sodium": 0.04,
+                    "carbs": 0.537,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 5500,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 550,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 506,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 28,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 3,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) \u2014 The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 0.5,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.3,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Grass hay \u2014 emissions_per_kg: LCA literature places perennial grass hay at 0.15\u20130.35 kg CO2e/kg. P&N 2018 covers all major livestock feed crops; grass hay's low emission profile reflects its perennial growth (low annual tillage), minimal nitrogen fertilizer need relative to annual crops, and moderate yield. Emissions are dominated by fertilizer N2O (for improved pastures) and machinery fuel. Value of 0.3 kg CO2e/kg is consistent with LCA estimates for mixed US grass hay production."
+                }
+            },
+            {
+                "value": 0.25,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
+                    "note": "Grass hay \u2014 emissions_per_kg: FAO GLEAM v3.0 provides feed-crop GHG intensities as part of livestock supply chain LCAs. Grass hay and pasture forages are consistently among the lowest-emission feed inputs due to perennial root systems, low synthetic fertilizer inputs, and high carbon sequestration in permanent grassland soils. GLEAM feed-crop estimates for perennial grasses range 0.15\u20130.3 kg CO2e/kg; 0.25 represents the global production-weighted average for improved permanent grassland hay."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 3500,
+                "confidence": 4,
+                "source": {
+                    "id": 15,
+                    "url": "https://www.nass.usda.gov/",
+                    "title": "USDA National Agricultural Statistics Service (NASS)",
+                    "note": null
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS \u2014 Agricultural Chemical Use Survey",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 54,
+        "slug": "fishmeal",
+        "name": "Fishmeal",
+        "type": "plant",
+        "category": "feeds",
+        "human_food": 0,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.0,
+                    "fat": 0.1,
+                    "sat_fat": 0.03,
+                    "protein": 0.65,
+                    "fiber": 0,
+                    "sodium": 0.015,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.003,
+                    "trans_fat": 0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fishmeal \u2014 nutrition: Feed-grade fishmeal (low-temperature/steam-dried) proximate composition per gram: protein 0.60\u20130.70, fat 0.08\u20130.12, ash 0.15\u20130.20, moisture ~0.10. Human nutritional database values are not applicable (feed ingredient); macros derived from standard fishmeal product specifications reported in the FAO aquaculture sector documentation."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fishmeal \u2014 yield_fraction: Set to 1.0 because fishmeal is used as-is in feed formulations with no further edible-fraction processing step; the entire product is the functional feed ingredient."
+                }
+            }
+        ],
+        "yield_kg_ha": null,
+        "water_per_kg": null,
+        "green_water_per_kg": null,
+        "blue_water_per_kg": null,
+        "grey_water_per_kg": null,
+        "soil_erosion": null,
+        "pesticide_kg_ha": null,
+        "fertilizer_kg_ha": null,
+        "emissions_per_kg": [
+            {
+                "value": 6.0,
+                "confidence": 3,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fishmeal \u2014 emissions_per_kg: FAO fleet-level emission intensities for small pelagic capture fisheries (anchovy, sardine, herring) average 0.9\u20131.2 kg CO2e/kg landed fish for purse-seine operations. At a FIFO conversion of ~4.5 kg wet fish per kg fishmeal, vessel fuel emissions alone reach 4.0\u20135.4 kg CO2e/kg fishmeal. Adding fishmeal plant drying and processing energy (~0.5\u20131.0 kg CO2e/kg) gives a total range of 5\u20137 kg CO2e/kg. Central estimate 6.0 kg CO2e/kg used as a production-weighted midpoint across major fishmeal-producing nations (Peru, Chile, Denmark, Norway)."
+                }
+            },
+            {
+                "value": 6.5,
+                "confidence": 3,
+                "source": {
+                    "id": 75,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0044848607009829",
+                    "title": "Pelletier & Tyedmers (2007) \u2014 Feeding Farmed Salmon: Is Organic Better? (Aquaculture)",
+                    "note": "Fishmeal \u2014 emissions_per_kg: Pelletier & Tyedmers (2007) LCA of Norwegian Atlantic salmon feeds reports cradle-to-feed-mill emissions for conventional fishmeal at 5.0\u20138.0 kg CO2e/kg, central estimate ~6.5 kg CO2e/kg. Variability driven by source fishery fuel efficiency, drying technology (steam vs. direct-fire), and geographic origin. Consistent with the FAO fleet-level estimate (source 74) of 6.0 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": null,
+        "co2_capture_kg_ha_yr": null,
+        "pesticides": []
+    },
+    {
+        "id": 55,
+        "slug": "fish-oil",
+        "name": "Fish Oil",
+        "type": "plant",
+        "category": "feeds",
+        "human_food": 0,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 9.0,
+                    "fat": 1.0,
+                    "sat_fat": 0.27,
+                    "protein": 0,
+                    "fiber": 0,
+                    "sodium": 0,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.001,
+                    "trans_fat": 0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fish oil \u2014 nutrition: Feed-grade fish oil is 100% lipid with no protein, fiber, or carbohydrate. Caloric density ~9.0 kcal/g (lipid energy standard). Saturated fat fraction approximately 27% of total fat for pelagic fish oil blends (anchovy/sardine/herring); EPA+DHA make up 25\u201335% of total fatty acids. Human nutritional database values are not applicable (feed ingredient); macros derived from standard fish oil product specifications in FAO aquaculture sector documentation."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fish oil \u2014 yield_fraction: Set to 1.0 because fish oil is used as-is in feed formulations; the entire product is the functional feed ingredient."
+                }
+            }
+        ],
+        "yield_kg_ha": null,
+        "water_per_kg": null,
+        "green_water_per_kg": null,
+        "blue_water_per_kg": null,
+        "grey_water_per_kg": null,
+        "soil_erosion": null,
+        "pesticide_kg_ha": null,
+        "fertilizer_kg_ha": null,
+        "emissions_per_kg": [
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 74,
+                    "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
+                    "title": "FAO (2014) \u2014 Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
+                    "note": "Fish oil \u2014 emissions_per_kg: Fish oil is a co-product of fishmeal production at a yield ratio of roughly 1 kg oil per 5 kg fishmeal (by weight). Under economic allocation (oil valued at 2\u20133\u00d7 fishmeal per kg due to omega-3 EFA content), fish oil receives approximately 35\u201355% of total upstream capture and processing emissions. Applying this allocation to the 5\u20137 kg CO2e/kg fishmeal footprint and scaling to oil yield gives ~2.5\u20134.0 kg CO2e/kg oil. Central estimate 3.5 kg CO2e/kg used, consistent with published aquaculture feed LCA studies using economic co-product allocation."
+                }
+            },
+            {
+                "value": 4.0,
+                "confidence": 3,
+                "source": {
+                    "id": 75,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0044848607009829",
+                    "title": "Pelletier & Tyedmers (2007) \u2014 Feeding Farmed Salmon: Is Organic Better? (Aquaculture)",
+                    "note": "Fish oil \u2014 emissions_per_kg: Pelletier & Tyedmers (2007) report fish oil at 3.0\u20135.0 kg CO2e/kg under economic allocation (central estimate ~4.0 kg CO2e/kg) from the same cradle-to-feed-mill boundary used for fishmeal. Economic allocation is applied because fish oil commands a significant price premium over fishmeal per kg, driven by its omega-3 EFA (EPA/DHA) content which is the primary limiting nutrient in high-performance salmonid feeds. Corroborates the 3.5 kg CO2e/kg central estimate from source 74."
+                }
+            }
+        ],
+        "tillage_events_per_year": null,
+        "co2_capture_kg_ha_yr": null,
+        "pesticides": []
+    }
+]

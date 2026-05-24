@@ -1,0 +1,189 @@
+[
+    {
+        "id": 48,
+        "slug": "flaxseed",
+        "name": "Flaxseed",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.34,
+                    "fat": 0.424,
+                    "sat_fat": 0.037,
+                    "protein": 0.184,
+                    "fiber": 0.274,
+                    "sodium": 0.3,
+                    "carbs": 0.289,
+                    "sugar": 0.016,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1300,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Flaxseed — yield_kg_ha: 1,300 kg/ha (global average; Canada, Kazakhstan, Russia as top producers; FAO 2020–2022)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3671,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Flaxseed — water_per_kg: 3,671 L/kg (global average; includes Canada and Russia as main producers)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3304,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 220,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 100,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Flaxseed — soil_erosion: ~1.5 t/ha/yr estimated from P&N 2018 land-use characterization for oilseeds; flaxseed is a low-erosion annual crop on temperate soils with moderate canopy cover, comparable to canola and sunflower in the P&N dataset."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": null
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 70,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Flaxseed — fertilizer_kg_ha: ~70 kg/ha (lower-input oilseed; less fertilizer than canola or sunflower in similar regions)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.4,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Flaxseed — emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 global median for oilseeds; annual crop with fertilizer N2O as dominant GHG driver; linseed/flaxseed grouped with other annual oilseeds in the dataset; consistent with sunflower seed value of 1.1 kg CO2e/kg at similar production scale)."
+                }
+            },
+            {
+                "value": 1.68,
+                "confidence": 3,
+                "source": {
+                    "id": 73,
+                    "url": "https://foodfootprint.nl/en/foodprintfinder/flax-seed/",
+                    "title": "FoodFootprint.nl — Flax Seed Climate Impact (RIVM, Dutch Market Average)",
+                    "note": "Flaxseed — emissions_per_kg: 1.68 kg CO2e/kg (42 g CO2eq per 25 g serving = 1.68 kg/kg; RIVM Dutch market supply chain; imports largely from Canada and Kazakhstan; slightly higher than P&N 2018 farm-gate estimate due to downstream transport and handling; both values fall within the expected 1.0–2.5 kg CO2e/kg range for annual oilseeds)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Flaxseed — fertilizer_kg_ha: ~70 kg/ha (lower-input oilseed; less fertilizer than canola or sunflower in similar regions)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Flaxseed — co2_capture_kg_ha_yr: ~1,000 kg CO2/ha/yr estimated from P&N 2018 land-use characterization for annual oilseeds; reflects above-ground and root biomass carbon fixation during the growing season for a temperate annual crop at ~1,300 kg/ha yield; annual crops return most fixed carbon to the atmosphere on decomposition, so net sequestration is near zero but gross photosynthetic capture is in this range."
+                }
+            }
+        ],
+        "pesticides": []
+    }
+]

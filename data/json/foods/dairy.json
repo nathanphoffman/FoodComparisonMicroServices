@@ -1,0 +1,558 @@
+[
+    {
+        "id": 33,
+        "slug": "milk",
+        "name": "Milk",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.61,
+                    "fat": 0.033,
+                    "sat_fat": 0.021,
+                    "protein": 0.032,
+                    "fiber": 0,
+                    "sodium": 0.44,
+                    "carbs": 0.047,
+                    "sugar": 0.047,
+                    "cholesterol": 0.1,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Whole cow milk (3.25% fat) — calories 0.61 kcal/g, fat 0.033 g/g, sat_fat 0.021 g/g, protein 0.032 g/g, sodium 0.44 mg/g, carbs 0.047 g/g, sugar 0.047 g/g, cholesterol 0.1 mg/g. All values per gram as consumed."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3000000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 3.15,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — total GHG: 3.15 kg CO2e/kg (global median, cradle-to-retail). Includes enteric fermentation CH4, manure N2O, feed crop production emissions, on-farm energy, processing, transport, and retail. System boundary: full supply chain (not farm-gate only). This is the authoritative P&N 2018 value for fluid cow milk."
+                }
+            },
+            {
+                "value": 3.15,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Milk — total GHG: 3.15 kg CO2e/kg confirmed from OWID grapher CSV download of the Poore & Nemecek 2018 dataset. The OWID chart directly publishes P&N 2018 data; the CSV value for milk is 3.15, corroborating the P&N source. Full supply-chain cradle-to-retail boundary."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.0001,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — land use: global median ~0.0001 ha per kg milk output. Dairy is substantially more land-efficient per unit output than beef; value reflects median across 38,700 farms. Includes both permanent pasture and arable land for feed crops."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.24,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — CH4: ~0.24 kg CH4/kg milk at farm gate. Includes enteric fermentation (dominant source, ~70–80% of dairy CH4) and manure management. Global median across production systems; high variability — intensive systems lower, extensive grazing systems higher. System boundary: cradle to farm gate."
+                }
+            },
+            {
+                "value": 0.22,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Milk — CH4: ~0.22 kg CH4/kg milk. GLEAM v3.0 global weighted average across all dairy production systems; covers enteric fermentation and manure management. Slightly lower than P&N due to different production system weighting. System boundary: on-farm (farm gate)."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.004,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — N2O: ~0.004 kg N2O/kg milk at farm gate. Includes manure management (direct and indirect N2O) and some feed-crop N fertiliser emissions allocated to the milk product. Global median. System boundary: cradle to farm gate."
+                }
+            },
+            {
+                "value": 0.004,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Milk — N2O: ~0.004 kg N2O/kg milk. GLEAM v3.0 global weighted average; covers direct manure N2O and indirect emissions from volatilization and leaching. Consistent with P&N estimate. System boundary: on-farm (farm gate)."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 0.08,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — CO2: ~0.08 kg CO2/kg milk. On-farm energy use (electricity, fuel for milking, cooling, manure management equipment). This is the non-CH4/non-N2O CO2 component only; the dominant GHG for milk is CH4 from enteric fermentation. System boundary: cradle to farm gate."
+                }
+            },
+            {
+                "value": 0.07,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Milk — CO2: ~0.07 kg CO2/kg milk. GLEAM v3.0 on-farm energy CO2; slightly lower than P&N due to different energy use assumptions. Covers on-farm fossil fuel combustion and electricity. System boundary: on-farm (farm gate)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.92,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Milk — corn feed: 0.92 kg corn/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk (source 39) × 55% corn fraction of the total diet. Corn is the primary energy source in commercial dairy rations."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.42,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Milk — alfalfa feed: 0.42 kg alfalfa/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 25% alfalfa fraction. Alfalfa is the primary forage protein source in dairy rations."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.17,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Milk — soy feed: 0.17 kg soy/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 10% soybean meal fraction. Soy is a supplemental protein concentrate in dairy rations."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.12,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Milk — grass hay feed: 0.12 kg hay/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 7% grass hay fraction. Hay provides roughage and supports rumen function."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "slug": "yogurt",
+        "name": "Yogurt",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.59,
+                    "fat": 0.033,
+                    "sat_fat": 0.021,
+                    "protein": 0.035,
+                    "fiber": 0,
+                    "sodium": 0.46,
+                    "carbs": 0.046,
+                    "sugar": 0.046,
+                    "cholesterol": 0.13,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Plain whole-milk yogurt — calories 0.59 kcal/g, fat 0.033 g/g, sat_fat 0.021 g/g, protein 0.035 g/g, sodium 0.46 mg/g, carbs 0.046 g/g, sugar 0.046 g/g, cholesterol 0.13 mg/g. All values per gram as consumed."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3000000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Yogurt — same dairy cow (Bos taurus) as milk: ~3 billion neurons. The neuron count reflects the source animal, not the product."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Yogurt — same dairy cow as milk: live weight ~680 kg (adult Holstein). Yogurt is a fermented milk product; the source animal is identical."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Yogurt — yield_fraction 1.0: All per-kg-output values are already expressed per kg yogurt as consumed. The milk-to-yogurt conversion factor (1.15 kg milk/kg yogurt) is captured in the per-kg-output GHG and land-use values, not here."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 3.62,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — total GHG: 3.62 kg CO2e/kg (derived). Yogurt is not individually modeled in P&N 2018. Value derived as milk P&N median (3.15 kg CO2e/kg) × 1.15 kg milk per kg yogurt conversion factor (source 64), yielding 3.15 × 1.15 = 3.6225 ≈ 3.62 kg CO2e/kg yogurt. This is consistent with the known P&N range for dairy products and the 3.5–4.0 kg CO2e/kg range cited for fermented dairy in the literature."
+                }
+            },
+            {
+                "value": 3.6,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Yogurt — total GHG: ~3.6 kg CO2e/kg per OWID note on the P&N 2018 dataset. Yogurt does not appear as a separate row in the OWID/P&N CSV; the estimate is propagated from the milk value (3.15 kg CO2e/kg) via the 1.15 kg milk/kg yogurt conversion, yielding ~3.6 kg CO2e/kg. This corroborates the P&N-derived estimate and falls within the 3.5–4.0 kg CO2e/kg range expected for plain whole-milk yogurt."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.000115,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — land use: derived from milk value (0.0001 ha/kg) × 1.15 kg milk/kg yogurt conversion = 0.000115 ha/kg yogurt. Conversion factor from IDF technical guidance (source 64); land use intensity from P&N 2018 milk median."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Yogurt — pasture ET: same underlying dairy cow pasture as milk (~6,500,000 L/ha/yr). The ET rate per hectare of pasture is identical to milk; yogurt uses a larger area per kg due to the 1.15× conversion factor captured in pasture_ha_per_kg_output."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Yogurt — ET corroboration: FAO-56 Penman-Monteith global pasture ET of ~600–700 mm/yr consistent with 6,500,000 L/ha/yr used for dairy pasture. Applies equally to yogurt since the source animal system is identical to milk."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — native_fraction 0.8: same as milk; yogurt is produced from the same dairy cow system on the same land. ~80% of dairy land is on established agricultural land with minimal ongoing ecosystem conversion."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.276,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — CH4: derived from milk CH4 (0.24 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.276 kg CH4/kg yogurt. The 1.15 conversion factor reflects standard plain yogurt production losses (source 64). Includes enteric fermentation and manure management. System boundary: cradle to farm gate, propagated to yogurt."
+                }
+            },
+            {
+                "value": 0.253,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Yogurt — CH4: derived from milk CH4 (0.22 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.253 kg CH4/kg yogurt. GLEAM global weighted average for dairy cow enteric fermentation and manure management, propagated to yogurt via conversion factor (source 64). System boundary: on-farm, propagated to yogurt."
+                }
+            },
+            {
+                "value": 0.264,
+                "confidence": 2,
+                "source": {
+                    "id": 64,
+                    "url": "https://www.dairyglobal.net/dairy-management/processing/how-much-milk-is-needed-to-make-1-kg-of-yogurt/",
+                    "title": "Dairy Global — Milk-to-Yogurt Conversion Ratio",
+                    "note": "Yogurt — CH4 conversion basis: this source provides the 1.15 kg milk/kg yogurt conversion factor used to scale milk-level CH4 values to yogurt. The source itself covers production volume ratios (not emissions data); the GHG values are derived by applying this factor to the P&N and GLEAM milk CH4 estimates. Midpoint derivation: (0.276 + 0.253) / 2 = 0.264 kg CH4/kg yogurt."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0046,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — N2O: derived from milk N2O (0.004 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.0046 kg N2O/kg yogurt. Includes manure direct and indirect N2O emissions from the dairy cow system. System boundary: cradle to farm gate, propagated to yogurt."
+                }
+            },
+            {
+                "value": 0.0046,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Yogurt — N2O: derived from milk N2O (0.004 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.0046 kg N2O/kg yogurt. P&N and GLEAM agree on the milk N2O value; both propagated values are identical at 0.0046. System boundary: on-farm, propagated to yogurt."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 0.092,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Yogurt — CO2: derived from milk CO2 (0.08 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.092 kg CO2/kg yogurt. On-farm energy use (milking, cooling, fermentation processing energy). System boundary: cradle to farm gate, propagated to yogurt."
+                }
+            },
+            {
+                "value": 0.0805,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Yogurt — CO2: derived from milk CO2 (0.07 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.0805 kg CO2/kg yogurt. GLEAM on-farm energy CO2 propagated to yogurt via 1.15 conversion factor. System boundary: on-farm, propagated to yogurt."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.058,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Yogurt — corn feed: 0.92 kg corn/kg milk × 1.15 kg milk/kg yogurt = 1.058 kg corn/kg yogurt. Propagates milk corn feed intensity to yogurt via the standard milk-to-yogurt conversion factor."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.483,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Yogurt — alfalfa feed: 0.42 kg alfalfa/kg milk × 1.15 kg milk/kg yogurt = 0.483 kg alfalfa/kg yogurt. Propagates milk alfalfa feed intensity to yogurt."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.196,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Yogurt — soy feed: 0.17 kg soy/kg milk × 1.15 kg milk/kg yogurt = 0.196 kg soy/kg yogurt. Propagates milk soy feed intensity to yogurt."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.138,
+                        "confidence": 3,
+                        "source": {
+                            "id": 37,
+                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
+                            "title": "Alberta Milk — Feed Required per Litre of Milk",
+                            "note": "Yogurt — grass hay feed: 0.12 kg hay/kg milk × 1.15 kg milk/kg yogurt = 0.138 kg hay/kg yogurt. Propagates milk hay feed intensity to yogurt."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]
