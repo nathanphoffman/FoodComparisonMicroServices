@@ -21,6 +21,10 @@ All files under `MicroserviceArchitecture/packages/data-pipeline/src/`:
 - TypeScript project references enforce this: only `shared-types` is listed in `tsconfig.json` references
 - Data lives at `data/` (MicroserviceArchitecture root, three levels up from `src/`) — access it via the `ROOT` path variable in `build_db.py`
 
+## Python style
+
+Use `#` for all comments. Reserve `"""` for true docstrings only — the first statement of a module, class, or function. A `"""` that is not the first statement in its scope is a bare string literal, not a comment; replace it with `#`.
+
 ## Future work: eco-destruction migration
 
 `src/calculations/eco-destruction.ts` is intentionally empty — it is the planned home for `computeEcoDestruction()` currently in `apps/web/apps/web/apps/web/app/components/FoodTable/FoodTableCalculations.ts`. When migrating:

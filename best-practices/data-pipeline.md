@@ -39,3 +39,7 @@ The pipeline writes deterministically from JSON source files. No insert function
 ## Schema alignment
 
 Field names in the pipeline's `TypedDict` types must stay in sync with the SQL schema in `data/sql/schema.sql` and `schema-normalized.sql`. The schema is owned by the `db-schema` agent — treat it as read-only and flag any mismatch rather than patching around it in Python.
+
+## Python style
+
+Use `#` for all comments. Reserve `"""` for true docstrings only — the first statement of a module, class, or function. A `"""` that is not the first statement in its scope is a bare string literal, not a comment; replace it with `#`.

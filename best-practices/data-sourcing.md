@@ -35,3 +35,7 @@ Avoid regex entirely when string methods or explicit character checks would be c
 ## Idempotency
 
 The downloader skips files that already exist on disk. New download logic must preserve this behaviour — re-downloading and overwriting an existing file is a violation unless the user explicitly requests a refresh mode.
+
+## Python style
+
+Use `#` for all comments. Reserve `"""` for true docstrings only — the first statement of a module, class, or function. A `"""` that is not the first statement in its scope is a bare string literal, not a comment; replace it with `#`.

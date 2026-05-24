@@ -22,3 +22,7 @@ npm run download --workspace=packages/data-sourcing
 ```
 
 Playwright must have Chromium installed (`npx playwright install chromium`). The script is rate-limited to 2 seconds between requests to the same domain and skips sources that already have a downloaded file.
+
+## Python style
+
+Use `#` for all comments. Reserve `"""` for true docstrings only — the first statement of a module, class, or function. A `"""` that is not the first statement in its scope is a bare string literal, not a comment; replace it with `#`.

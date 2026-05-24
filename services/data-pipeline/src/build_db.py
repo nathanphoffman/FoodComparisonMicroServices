@@ -71,6 +71,8 @@ def main() -> None:
     version = bump_version()
     print(f"Building version {version}…")
 
+    # Note: These are in memory connections, 
+    #  we do not actually write this to a file until the _write_databases step
     source_connection     = make_empty_database(SQL_DIR / "schema.sql")
     normalized_connection = make_empty_database(SQL_DIR / "schema-normalized.sql")
 
