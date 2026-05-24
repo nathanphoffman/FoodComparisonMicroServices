@@ -34,13 +34,14 @@ type ScoredRow = {
     final_score:     number | null;
 };
 
+// Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
 type SliderQuery = {
-    calorie_weight:  number;
-    protein_weight:  number;
-    mass_weight:     number;
-    green_water:     number;
-    grey_water:      number;
-    kill_multiplier: number;
+    calorieWeight:  number;
+    proteinWeight:  number;
+    massWeight:     number;
+    greenWater:     number;
+    greyWater:      number;
+    killMultiplier: number;
 };
 
 // ── Lazy WASM loader — dynamic import; webpack handles .wasm initialization ──
@@ -85,6 +86,8 @@ export function FoodTable() {
     const [scored, setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [loading, setLoading]     = useState(true);
     const [error, setError]         = useState<string | null>(null);
+    // Separate from fetch error — non-blocking, shown as a banner while old scores stay visible.
+    const [scoringError, setScoringError] = useState<string | null>(null);
 
     // Slider state
     const [weights, setWeights]             = useState<FoodWeights>({ calories: 34, protein: 33, mass: 33 });
@@ -129,15 +132,25 @@ export function FoodTable() {
     useEffect(() => {
         if (!wasmReady || rawFoods.length === 0) return;
         const query: SliderQuery = {
-            calorie_weight:  weights.calories,
-            protein_weight:  weights.protein,
-            mass_weight:     weights.mass,
-            green_water:     greenWaterWeight,
-            grey_water:      greyWaterWeight,
-            kill_multiplier: killMultiplier,
+            calorieWeight:  weights.calories,
+            proteinWeight:  weights.protein,
+            massWeight:     weights.mass,
+            greenWater:     greenWaterWeight,
+            greyWater:      greyWaterWeight,
+            killMultiplier: killMultiplier,
         };
-        const rows = wasmScore!(rawFoods, query);
-        setScored(new Map(rows.map(r => [r.slug, r])));
+        try {
+            // TEST ERROR — remove this line when done
+            //throw new Error('test: field name mismatch between TS and Rust SliderQuery');
+            const rows = wasmScore!(rawFoods, query);
+            setScored(new Map(rows.map(r => [r.slug, r])));
+            setScoringError(null);
+        } catch (e) {
+            // Keep the last good scores visible; just surface the error.
+            setScoringError(
+                e instanceof Error ? e.message : String(e)
+            );
+        }
     }, [rawFoods, weights, greenWaterWeight, greyWaterWeight, killMultiplier]);
 
     // ── Click-outside for column toggle ──────────────────────────────────────
@@ -241,6 +254,19 @@ export function FoodTable() {
                 onGreyWaterChange={setGreyWater}
                 onPhilosophicalKillChange={setKillMult}
             />
+            {scoringError && (
+                <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
+                    <div>
+                        <span className="font-medium">Scoring error — </span>
+                        scores may be stale. {scoringError}
+                    </div>
+                    <button
+                        onClick={() => setScoringError(null)}
+                        className="shrink-0 text-red-400 hover:text-red-600 leading-none text-base"
+                        aria-label="Dismiss"
+                    >✕</button>
+                </div>
+            )}
             <div className="flex justify-end mb-2" ref={toggleRef}>
                 <div className="relative">
                     <button

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { Slider } from "../Inputs/Slider";
 import type { FoodWeights } from "./FoodTableTypes";
 
@@ -19,12 +19,56 @@ const DEFAULT_GREEN_WATER = 25;
 const DEFAULT_GREY_WATER = 25;
 const DEFAULT_PHILOSOPHICAL_KILL = 1;
 
+const DEBOUNCE_MS = 150;
+
+// ── useDebouncedCallback ──────────────────────────────────────────────────────
+// Returns a stable debounced wrapper around `callback`. The latest `callback`
+// ref is always used so the wrapper never goes stale, and cancels on unmount.
+
+function useDebouncedCallback<T extends (...args: never[]) => void>(
+    callback: T | undefined,
+    delay: number,
+): (...args: Parameters<T>) => void {
+    const cbRef      = useRef(callback);
+    cbRef.current    = callback;
+    const timerRef   = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    // Cancel any pending timer when the component unmounts.
+    const cancelRef  = useRef(() => {
+        if (timerRef.current !== null) clearTimeout(timerRef.current);
+    });
+
+    // Stable identity across renders — deps array is intentionally [delay].
+    return useCallback((...args: Parameters<T>) => {
+        if (timerRef.current !== null) clearTimeout(timerRef.current);
+        timerRef.current = setTimeout(() => {
+            timerRef.current = null;
+            cbRef.current?.(...args);
+        }, delay);
+
+        // Register unmount cleanup once (no-op if already registered).
+        return cancelRef.current;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [delay]);
+}
+
+// ── Component ─────────────────────────────────────────────────────────────────
+
 export function FoodTableSliders({ onChange, onGreenWaterChange, onGreyWaterChange, onPhilosophicalKillChange }: { onChange?: (w: FoodWeights) => void; onGreenWaterChange?: (w: number) => void; onGreyWaterChange?: (w: number) => void; onPhilosophicalKillChange?: (v: number) => void }) {
 
     const [ weights, setWeights ]                     = useState<FoodWeights>(DEFAULT_FOOD_WEIGHTS);
     const [ greenWaterWeight, setGreenWater ]          = useState(DEFAULT_GREEN_WATER);
     const [ greyWaterWeight, setGreyWater ]            = useState(DEFAULT_GREY_WATER);
     const [ philosophicalKill, setPhilosophicalKill ]  = useState(DEFAULT_PHILOSOPHICAL_KILL);
+
+    // Debounced parent callbacks — local state updates immediately, WASM
+    // re-score only fires after the user pauses dragging.
+    const debouncedOnChange             = useDebouncedCallback(onChange,                  DEBOUNCE_MS);
+    const debouncedOnGreenWaterChange   = useDebouncedCallback(onGreenWaterChange,        DEBOUNCE_MS);
+    const debouncedOnGreyWaterChange    = useDebouncedCallback(onGreyWaterChange,         DEBOUNCE_MS);
+    const debouncedOnPhilosophicalKill  = useDebouncedCallback(onPhilosophicalKillChange, DEBOUNCE_MS);
+
+    // ── Weight redistribution helpers ─────────────────────────────────────────
 
     const splitEvenlyBetweenTwo = (
         updatedWeights: FoodWeights,
@@ -58,39 +102,42 @@ export function FoodTableSliders({ onChange, onGreenWaterChange, onGreyWaterChan
         }
     };
 
+    // ── Handlers ──────────────────────────────────────────────────────────────
+
     const handleWeightSliderChange = (movedKey: keyof FoodWeights, newValue: number) => {
-        setWeights(currentWeights => {
-            const otherKeys = KEYS.filter(weightKey => weightKey !== movedKey);
-            const otherKeysTotal = otherKeys.reduce((runningTotal, weightKey) => runningTotal + currentWeights[weightKey], 0);
-            const amountMoved = newValue - currentWeights[movedKey];
+        const otherKeys = KEYS.filter(weightKey => weightKey !== movedKey);
+        const otherKeysTotal = otherKeys.reduce((runningTotal, weightKey) => runningTotal + weights[weightKey], 0);
+        const amountMoved = newValue - weights[movedKey];
 
-            const updatedWeights = { ...currentWeights, [movedKey]: newValue } as FoodWeights;
+        const updatedWeights = { ...weights, [movedKey]: newValue } as FoodWeights;
 
-            if (otherKeysTotal === 0) {
-                splitEvenlyBetweenTwo(updatedWeights, otherKeys, newValue);
-            } else {
-                redistributeProportionally(updatedWeights, currentWeights, otherKeys, amountMoved, otherKeysTotal);
-            }
+        if (otherKeysTotal === 0) {
+            splitEvenlyBetweenTwo(updatedWeights, otherKeys, newValue);
+        } else {
+            redistributeProportionally(updatedWeights, weights, otherKeys, amountMoved, otherKeysTotal);
+        }
 
-            onChange?.(updatedWeights);
-            return updatedWeights;
-        });
+        // Local display updates instantly; parent (WASM re-score) is debounced.
+        setWeights(updatedWeights);
+        debouncedOnChange(updatedWeights);
     };
 
     const handleGreenWater = (val: number) => {
         setGreenWater(val);
-        onGreenWaterChange?.(val);
+        debouncedOnGreenWaterChange(val);
     };
 
     const handleGreyWater = (val: number) => {
         setGreyWater(val);
-        onGreyWaterChange?.(val);
+        debouncedOnGreyWaterChange(val);
     };
 
     const handlePhilosophicalKill = (val: number) => {
         setPhilosophicalKill(val);
-        onPhilosophicalKillChange?.(val);
+        debouncedOnPhilosophicalKill(val);
     };
+
+    // ── Render ────────────────────────────────────────────────────────────────
 
     return <div className="flex gap-6 mb-4">
         {KEYS.map(key => (
