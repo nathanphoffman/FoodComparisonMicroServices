@@ -1,4 +1,4 @@
-from ...types import Pesticide
+from ...food_types import Pesticide
 from .sourced_array import SourcedArray
 
 

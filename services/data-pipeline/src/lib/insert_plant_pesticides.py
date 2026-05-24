@@ -1,6 +1,6 @@
 import json
 import sqlite3
-from ..types import PlantPesticide
+from ..food_types import PlantPesticide
 
 
 def insert(conn: sqlite3.Connection, plant_pesticides: list[PlantPesticide]) -> None:

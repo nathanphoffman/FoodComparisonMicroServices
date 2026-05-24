@@ -6,6 +6,9 @@ import type { NextConfig } from 'next';
 // NEXT_PUBLIC_ prefix makes it available in browser bundles.
 
 const nextConfig: NextConfig = {
+  env: {
+    DB_VERSION: 'v86',
+  },
   webpack(config) {
     // Required for importing .wasm files from the wasm-calculations package.
     config.experiments = { ...config.experiments, asyncWebAssembly: true };

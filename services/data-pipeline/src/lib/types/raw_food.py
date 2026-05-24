@@ -1,5 +1,5 @@
 from typing import Optional, TYPE_CHECKING
-from ...types import Food
+from ...food_types import Food
 from .sourced_array import SourcedNutritionArray
 from .food_normalized import FoodNormalized
 
@@ -8,7 +8,10 @@ if TYPE_CHECKING:
     from .raw_animal import RawAnimal
 
 _NULL_PLANT = dict(
-    yield_kg_ha=None, yield_fraction=None, water_per_kg=None,
+    yield_kg_ha=None,
+    # yield_fraction omitted: animals supply it via _animal.normalized_fields()
+    # and FoodNormalized defaults it to None for plant-less rows
+    water_per_kg=None,
     green_water_per_kg=None, blue_water_per_kg=None, grey_water_per_kg=None,
     soil_erosion=None, pesticide_kg_ha=None, fertilizer_kg_ha=None,
     emissions_per_kg=None, tillage_events_per_year=None, co2_capture_kg_ha_yr=None,
@@ -17,7 +20,9 @@ _NULL_PLANT = dict(
     pesticide_kg_per_kg_food=None, land_m2_per_kg=None,
 )
 _NULL_ANIMAL = dict(
-    neuron_count=None, weight_kg=None, yield_fraction=None,
+    neuron_count=None, weight_kg=None,
+    # yield_fraction omitted: plants supply it via _plant.normalized_fields()
+    # and FoodNormalized defaults it to None for animal-less rows
     pasture_ha_per_kg_output=None, pasture_green_water_l_per_ha=None,
     native_fraction=None, bycatch_amount=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,

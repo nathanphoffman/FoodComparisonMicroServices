@@ -11,7 +11,7 @@
         "dev:api":     "dotnet watch run --project apps/api",
         "build":       "npm run build -w apps/web",
         "build:wasm":  "wasm-pack build services/wasm-calculations --target bundler",
-        "build-db":    "python services/data-pipeline/src/build_db.py",
+        "build-db":    "cd services/data-pipeline && python -m src.build_db",
         "download":    "python services/data-sourcing/src/download.py"
     },
     "devDependencies": {

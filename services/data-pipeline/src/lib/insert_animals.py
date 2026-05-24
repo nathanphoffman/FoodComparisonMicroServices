@@ -1,17 +1,16 @@
 import json
 import sqlite3
-from ..types import Animal
+from ..food_types import Animal
 from .validate import assert_sourced_array
 
 
 def insert(conn: sqlite3.Connection, animals: list[Animal]) -> None:
     for a in animals:
         lbl = f"animal {a['id']}"
-        assert_sourced_array(a.get("neuron_count"),             f"{lbl}.neuron_count")
-        assert_sourced_array(a.get("weight_kg"),                f"{lbl}.weight_kg")
-        assert_sourced_array(a.get("yield_fraction"),           f"{lbl}.yield_fraction")
-        assert_sourced_array(a.get("pasture_ha_per_kg_output"), f"{lbl}.pasture_ha_per_kg_output")
-        assert_sourced_array(a.get("native_fraction"),          f"{lbl}.native_fraction")
+        assert_sourced_array(a.get("neuron_count"),  f"{lbl}.neuron_count")
+        assert_sourced_array(a.get("weight_kg"),     f"{lbl}.weight_kg")
+        assert_sourced_array(a.get("yield_fraction"),f"{lbl}.yield_fraction")
+        # pasture_ha_per_kg_output and native_fraction are optional (grazing animals only)
         conn.execute(
             """INSERT INTO animals (
                 id, food_id, neuron_count, weight_kg, bycatch_animal_id, bycatch_amount,

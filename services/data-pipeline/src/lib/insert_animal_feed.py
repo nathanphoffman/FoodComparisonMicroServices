@@ -1,6 +1,6 @@
 import json
 import sqlite3
-from ..types import AnimalFeed
+from ..food_types import AnimalFeed
 
 
 def insert(conn: sqlite3.Connection, feed_entries: list[AnimalFeed]) -> None:

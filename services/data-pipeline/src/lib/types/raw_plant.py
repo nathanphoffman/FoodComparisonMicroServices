@@ -1,5 +1,5 @@
 from typing import Optional
-from ...types import Plant
+from ...food_types import Plant
 from .sourced_array import SourcedArray
 from .raw_pesticide import RawPesticide
 from .raw_plant_pesticide import RawPlantPesticide

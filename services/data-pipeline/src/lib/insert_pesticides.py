@@ -1,6 +1,6 @@
 import json
 import sqlite3
-from ..types import Pesticide
+from ..food_types import Pesticide
 
 
 def _j(v): return json.dumps(v) if v else None

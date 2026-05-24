@@ -4,7 +4,7 @@ Port of SourcedNumberArray.ts and SourcedNutritionalValueArray.ts.
 """
 
 from typing import Optional
-from ...types import SourcedNumber, NutritionValue, SourcedNutrition
+from ...food_types import SourcedNumber, NutritionValue, SourcedNutrition
 
 
 class SourcedArray:

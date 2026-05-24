@@ -1,5 +1,5 @@
 import sqlite3
-from ..types import Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed
+from ..food_types import Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed
 from .types.raw_food import RawFood
 from .types.raw_plant import RawPlant, PesticideAssociation
 from .types.raw_animal import RawAnimal, FeedEntry

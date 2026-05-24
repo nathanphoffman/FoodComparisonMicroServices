@@ -1,5 +1,5 @@
 from typing import Optional, TYPE_CHECKING
-from ...types import Animal
+from ...food_types import Animal
 from .sourced_array import SourcedArray
 
 if TYPE_CHECKING:

@@ -1,4 +1,4 @@
-from ...types import AnimalFeed
+from ...food_types import AnimalFeed
 from .sourced_array import SourcedArray
 
 
