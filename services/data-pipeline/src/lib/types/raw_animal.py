@@ -69,7 +69,7 @@ class RawAnimal:
 
         land_square_meters = _compute_land_use_square_meters_per_kg(self._feed_entries)
         emissions, green_water, blue_water, grey_water = _compute_water_and_emissions(
-            self._feed_entries, baseline_emissions=pasture_baseline_water
+            self._feed_entries, pasture_baseline=pasture_baseline_water
         )
         soil_erosion, fertilizer, tillage, carbon_capture = _compute_per_yield_impacts(
             self._feed_entries
@@ -119,11 +119,16 @@ def _compute_land_use_square_meters_per_kg(feed_entries: list[FeedEntry]) -> flo
 
 def _compute_water_and_emissions(
     feed_entries: list[FeedEntry],
-    baseline_emissions: float,
+    pasture_baseline: float,
 ) -> tuple[float, float, float, float]:
-    """Returns (total_emissions, green_water, blue_water, grey_water) summed across feed sources."""
-    total_emissions = baseline_emissions
-    total_green_water = 0.0
+    """Returns (total_emissions, green_water, blue_water, grey_water) summed across feed sources.
+
+    pasture_baseline is the pasture evapotranspiration in liters per kg of animal output
+    (pasture_ha_per_kg_output × pasture_green_water_l_per_ha). It is a water metric and
+    only seeds total_green_water. Emissions are in kg CO2-eq and must start at zero.
+    """
+    total_emissions = 0.0
+    total_green_water = pasture_baseline  # liters of green water from pasture grazing itself
     total_blue_water = 0.0
     total_grey_water = 0.0
     for entry in feed_entries:
