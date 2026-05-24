@@ -1,10 +1,11 @@
 """
-types.py — raw data interfaces for the pipeline.
+food_types.py — raw data interfaces for the pipeline.
+
 Port of packages/data-pipeline/src/types.ts (originally lib/types.ts).
 These are TypedDicts so they map cleanly to/from JSON without extra parsing.
 """
 
-from typing import TypedDict, Literal, Optional
+from typing import TypedDict, Literal
 
 
 class SourcedNumber(TypedDict):
@@ -19,11 +20,11 @@ class NutritionValue(TypedDict):
     sat_fat: float
     protein: float
     fiber: float
-    sodium: Optional[float]
-    carbs: Optional[float]
-    sugar: Optional[float]
-    cholesterol: Optional[float]
-    trans_fat: Optional[float]
+    sodium: float | None
+    carbs: float | None
+    sugar: float | None
+    cholesterol: float | None
+    trans_fat: float | None
 
 
 class SourcedNutrition(TypedDict):
@@ -45,41 +46,41 @@ class Food(TypedDict):
 class Animal(TypedDict):
     id: int
     food_id: int
-    neuron_count: Optional[list[SourcedNumber]]
-    weight_kg: Optional[list[SourcedNumber]]
-    bycatch_animal_id: Optional[int]
-    bycatch_amount: Optional[list[SourcedNumber]]
-    yield_fraction: Optional[list[SourcedNumber]]
-    pasture_ha_per_kg_output: Optional[list[SourcedNumber]]
-    pasture_green_water_l_per_ha: Optional[list[SourcedNumber]]
-    native_fraction: Optional[list[SourcedNumber]]
-    ch4_kg_per_kg_output: Optional[list[SourcedNumber]]
-    n2o_kg_per_kg_output: Optional[list[SourcedNumber]]
-    co2_kg_per_kg_output: Optional[list[SourcedNumber]]
+    neuron_count: list[SourcedNumber] | None
+    weight_kg: list[SourcedNumber] | None
+    bycatch_animal_id: int | None
+    bycatch_amount: list[SourcedNumber] | None
+    yield_fraction: list[SourcedNumber] | None
+    pasture_ha_per_kg_output: list[SourcedNumber] | None
+    pasture_green_water_l_per_ha: list[SourcedNumber] | None
+    native_fraction: list[SourcedNumber] | None
+    ch4_kg_per_kg_output: list[SourcedNumber] | None
+    n2o_kg_per_kg_output: list[SourcedNumber] | None
+    co2_kg_per_kg_output: list[SourcedNumber] | None
 
 
 class Plant(TypedDict):
     id: int
     food_id: int
-    yield_kg_ha: Optional[list[SourcedNumber]]
-    yield_fraction: Optional[list[SourcedNumber]]
-    water_per_kg: Optional[list[SourcedNumber]]
-    green_water_per_kg: Optional[list[SourcedNumber]]
-    blue_water_per_kg: Optional[list[SourcedNumber]]
-    grey_water_per_kg: Optional[list[SourcedNumber]]
-    soil_erosion: Optional[list[SourcedNumber]]
-    pesticide_kg_ha: Optional[list[SourcedNumber]]
-    fertilizer_kg_ha: Optional[list[SourcedNumber]]
-    emissions_per_kg: Optional[list[SourcedNumber]]
-    tillage_events_per_year: Optional[list[SourcedNumber]]
-    co2_capture_kg_ha_yr: Optional[list[SourcedNumber]]
+    yield_kg_ha: list[SourcedNumber] | None
+    yield_fraction: list[SourcedNumber] | None
+    water_per_kg: list[SourcedNumber] | None
+    green_water_per_kg: list[SourcedNumber] | None
+    blue_water_per_kg: list[SourcedNumber] | None
+    grey_water_per_kg: list[SourcedNumber] | None
+    soil_erosion: list[SourcedNumber] | None
+    pesticide_kg_ha: list[SourcedNumber] | None
+    fertilizer_kg_ha: list[SourcedNumber] | None
+    emissions_per_kg: list[SourcedNumber] | None
+    tillage_events_per_year: list[SourcedNumber] | None
+    co2_capture_kg_ha_yr: list[SourcedNumber] | None
 
 
 class Source(TypedDict):
     id: int
     url: str
     title: str
-    notes: Optional[list[str]]
+    notes: list[str] | None
 
 
 class AnimalFeed(TypedDict):
@@ -93,20 +94,20 @@ class PlantAnimalKill(TypedDict):
     id: int
     plant_id: int
     animal_id: int
-    kills_per_ha: Optional[list[SourcedNumber]]
+    kills_per_ha: list[SourcedNumber] | None
 
 
 class Pesticide(TypedDict):
     id: int
     name: str
     freshwater_paf: list[SourcedNumber]
-    terrestrial_paf: Optional[list[SourcedNumber]]
-    insect_paf: Optional[list[SourcedNumber]]
-    bee_ld50: Optional[list[SourcedNumber]]
+    terrestrial_paf: list[SourcedNumber] | None
+    insect_paf: list[SourcedNumber] | None
+    bee_ld50: list[SourcedNumber] | None
 
 
 class PlantPesticide(TypedDict):
     id: int
     plant_id: int
     pesticide_id: int
-    kg_ha: Optional[list[SourcedNumber]]
+    kg_ha: list[SourcedNumber] | None

@@ -1,4 +1,13 @@
-from typing import Optional, TYPE_CHECKING
+"""
+raw_food.py — top-level computation wrapper that combines food, plant, and animal data.
+
+Produces two FoodNormalized rows per animal food:
+  - to_normalized()      — the food itself (nutrition + plant or animal metrics)
+  - to_feed_normalized() — the environmental footprint of the feed crops (animals only)
+"""
+
+from typing import TYPE_CHECKING
+
 from ...food_types import Food
 from .sourced_array import SourcedNutritionArray
 from .food_normalized import FoodNormalized
@@ -7,10 +16,11 @@ if TYPE_CHECKING:
     from .raw_plant import RawPlant
     from .raw_animal import RawAnimal
 
-_NULL_PLANT = dict(
+# Null-out dicts for foods that have no plant or no animal record.
+# yield_fraction is intentionally absent from both: it is supplied by whichever
+# side is present (plant or animal), and FoodNormalized defaults it to None otherwise.
+_NULL_PLANT_FIELDS = dict(
     yield_kg_ha=None,
-    # yield_fraction omitted: animals supply it via _animal.normalized_fields()
-    # and FoodNormalized defaults it to None for plant-less rows
     water_per_kg=None,
     green_water_per_kg=None, blue_water_per_kg=None, grey_water_per_kg=None,
     soil_erosion=None, pesticide_kg_ha=None, fertilizer_kg_ha=None,
@@ -19,10 +29,8 @@ _NULL_PLANT = dict(
     pesticide_insect_paf=None, pesticide_bee_hazard=None,
     pesticide_kg_per_kg_food=None, land_m2_per_kg=None,
 )
-_NULL_ANIMAL = dict(
+_NULL_ANIMAL_FIELDS = dict(
     neuron_count=None, weight_kg=None,
-    # yield_fraction omitted: plants supply it via _plant.normalized_fields()
-    # and FoodNormalized defaults it to None for animal-less rows
     pasture_ha_per_kg_output=None, pasture_green_water_l_per_ha=None,
     native_fraction=None, bycatch_amount=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,
@@ -30,14 +38,22 @@ _NULL_ANIMAL = dict(
 
 
 class RawFood:
-    def __init__(self, data: Food, plant: Optional["RawPlant"], animal: Optional["RawAnimal"]) -> None:
+    """Combines a food record with its optional plant and animal data for normalization."""
+
+    def __init__(
+        self,
+        data: Food,
+        plant: "RawPlant | None",
+        animal: "RawAnimal | None",
+    ) -> None:
         self._data = data
         self._plant = plant
         self._animal = animal
         self.nutrition = SourcedNutritionArray(data["nutrition"])
 
     def to_normalized(self) -> FoodNormalized:
-        n = self.nutrition.weighted_average()
+        """Builds the primary normalized row for this food."""
+        nutrition_average = self.nutrition.weighted_average()
         return FoodNormalized(
             food_id=self._data["id"],
             is_feed=0,
@@ -46,21 +62,22 @@ class RawFood:
             type=self._data["type"],
             tags=self._data["tags"],
             human_food=self._data["human_food"],
-            calories=n["calories"] if n else None,
-            fat=n["fat"] if n else None,
-            sat_fat=n["sat_fat"] if n else None,
-            protein=n["protein"] if n else None,
-            fiber=n["fiber"] if n else None,
-            sodium=n.get("sodium") if n else None,
-            carbs=n.get("carbs") if n else None,
-            sugar=n.get("sugar") if n else None,
-            cholesterol=n.get("cholesterol") if n else None,
-            trans_fat=n.get("trans_fat") if n else None,
-            **(self._plant.normalized_fields() if self._plant else _NULL_PLANT),
-            **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL),
+            calories=nutrition_average["calories"] if nutrition_average else None,
+            fat=nutrition_average["fat"] if nutrition_average else None,
+            sat_fat=nutrition_average["sat_fat"] if nutrition_average else None,
+            protein=nutrition_average["protein"] if nutrition_average else None,
+            fiber=nutrition_average["fiber"] if nutrition_average else None,
+            sodium=nutrition_average.get("sodium") if nutrition_average else None,
+            carbs=nutrition_average.get("carbs") if nutrition_average else None,
+            sugar=nutrition_average.get("sugar") if nutrition_average else None,
+            cholesterol=nutrition_average.get("cholesterol") if nutrition_average else None,
+            trans_fat=nutrition_average.get("trans_fat") if nutrition_average else None,
+            **(self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS),
+            **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
         )
 
-    def to_feed_normalized(self) -> Optional[FoodNormalized]:
+    def to_feed_normalized(self) -> FoodNormalized | None:
+        """Builds the feed-impact normalized row for this food, or None if not an animal."""
         if not self._animal:
             return None
         feed_fields = self._animal.feed_normalized_fields()
@@ -77,5 +94,5 @@ class RawFood:
             calories=None, fat=None, sat_fat=None, protein=None, fiber=None,
             sodium=None, carbs=None, sugar=None, cholesterol=None, trans_fat=None,
             **feed_fields,
-            **_NULL_ANIMAL,
+            **_NULL_ANIMAL_FIELDS,
         )

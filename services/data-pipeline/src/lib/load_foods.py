@@ -8,7 +8,8 @@ This module normalises that into the separate lists the insert functions expect.
 
 import json
 from pathlib import Path
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+
 from ..food_types import Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide
 
 CATEGORY_FILES = [
@@ -44,69 +45,96 @@ class CategoryData:
 
 
 def load_category_foods(data_dir: Path) -> CategoryData:
-    foods: list[Food] = []
-    animals: list[Animal] = []
-    plants: list[Plant] = []
-    animal_feed: list[AnimalFeed] = []
-    plant_kills: list[PlantAnimalKill] = []
-    plant_pesticides: list[PlantPesticide] = []
+    """Loads all category JSON files and returns assembled in-memory data structures."""
+    all_foods: list[Food] = []
+    all_animals: list[Animal] = []
+    all_plants: list[Plant] = []
+    all_animal_feed: list[AnimalFeed] = []
+    all_plant_kills: list[PlantAnimalKill] = []
+    all_plant_pesticides: list[PlantPesticide] = []
+    next_feed_id = 1
+    next_plant_pesticide_id = 1
 
-    feed_id = 1
-    pp_id = 1
-
-    for category in CATEGORY_FILES:
-        path = data_dir / "foods" / f"{category}.json"
-        if not path.exists():
+    for category_name in CATEGORY_FILES:
+        category_path = data_dir / "foods" / f"{category_name}.json"
+        if not category_path.exists():
             continue
-        items: list[dict] = json.loads(path.read_text(encoding="utf-8"))
-
-        for item in items:
-            food_id = item["id"]
-
-            # --- Base food record ---
-            foods.append({k: item[k] for k in FOOD_KEYS if k in item})
-
+        category_items: list[dict] = json.loads(category_path.read_text(encoding="utf-8"))
+        for item in category_items:
+            all_foods.append(_extract_food_base(item))
             if item.get("type") == "animal":
-                # --- Animal record ---
-                animal: dict = {"id": food_id, "food_id": food_id}
-                for k in ANIMAL_KEYS:
-                    animal[k] = item.get(k)
-                # bycatch_food_id in JSON maps to bycatch_animal_id in DB
-                animal["bycatch_animal_id"] = item.get("bycatch_food_id")
-                animals.append(animal)  # type: ignore[arg-type]
-
-                # --- Animal feed records ---
-                for entry in item.get("feed") or []:
-                    animal_feed.append({
-                        "id": feed_id,
-                        "animal_id": food_id,
-                        "plant_id": entry["food_id"],
-                        "kg_feed_per_kg_output": entry["kg_feed_per_kg_output"],
-                    })
-                    feed_id += 1
-
+                all_animals.append(_extract_animal_record(item))
+                new_feed_entries, next_feed_id = _extract_animal_feed_entries(
+                    item, next_feed_id
+                )
+                all_animal_feed.extend(new_feed_entries)
             elif item.get("type") == "plant":
-                # --- Plant record ---
-                plant: dict = {"id": food_id, "food_id": food_id}
-                for k in PLANT_KEYS:
-                    plant[k] = item.get(k)
-                plants.append(plant)  # type: ignore[arg-type]
-
-                # --- Plant pesticide records ---
-                for entry in item.get("pesticides") or []:
-                    plant_pesticides.append({
-                        "id": pp_id,
-                        "plant_id": food_id,
-                        "pesticide_id": entry["pesticide_id"],
-                        "kg_ha": entry.get("kg_ha"),
-                    })
-                    pp_id += 1
+                all_plants.append(_extract_plant_record(item))
+                new_pesticide_entries, next_plant_pesticide_id = _extract_plant_pesticide_entries(
+                    item, next_plant_pesticide_id
+                )
+                all_plant_pesticides.extend(new_pesticide_entries)
 
     return CategoryData(
-        foods=foods,
-        animals=animals,
-        plants=plants,
-        animal_feed=animal_feed,
-        plant_kills=plant_kills,
-        plant_pesticides=plant_pesticides,
+        foods=all_foods,
+        animals=all_animals,
+        plants=all_plants,
+        animal_feed=all_animal_feed,
+        plant_kills=all_plant_kills,
+        plant_pesticides=all_plant_pesticides,
     )
+
+
+def _extract_food_base(item: dict) -> Food:
+    """Extracts only the base food fields from a flat JSON item."""
+    return {field_name: item[field_name] for field_name in FOOD_KEYS if field_name in item}  # type: ignore[return-value]
+
+
+def _extract_animal_record(item: dict) -> Animal:
+    """Extracts animal-specific fields from a flat JSON item."""
+    animal_record: dict = {"id": item["id"], "food_id": item["id"]}
+    for field_name in ANIMAL_KEYS:
+        animal_record[field_name] = item.get(field_name)
+    # The JSON uses bycatch_food_id; the database column is named bycatch_animal_id.
+    animal_record["bycatch_animal_id"] = item.get("bycatch_food_id")
+    return animal_record  # type: ignore[return-value]
+
+
+def _extract_plant_record(item: dict) -> Plant:
+    """Extracts plant-specific fields from a flat JSON item."""
+    plant_record: dict = {"id": item["id"], "food_id": item["id"]}
+    for field_name in PLANT_KEYS:
+        plant_record[field_name] = item.get(field_name)
+    return plant_record  # type: ignore[return-value]
+
+
+def _extract_animal_feed_entries(
+    item: dict, next_feed_id: int
+) -> tuple[list[AnimalFeed], int]:
+    """Extracts animal feed associations from a flat JSON item, returning updated next id."""
+    feed_entries: list[AnimalFeed] = []
+    for feed_entry in item.get("feed") or []:
+        feed_entries.append({
+            "id": next_feed_id,
+            "animal_id": item["id"],
+            "plant_id": feed_entry["food_id"],
+            "kg_feed_per_kg_output": feed_entry["kg_feed_per_kg_output"],
+        })
+        next_feed_id += 1
+    return feed_entries, next_feed_id
+
+
+def _extract_plant_pesticide_entries(
+    item: dict, next_plant_pesticide_id: int
+) -> tuple[list[PlantPesticide], int]:
+    """Extracts plant-pesticide associations from a flat JSON item, returning updated next id."""
+    pesticide_entries: list[PlantPesticide] = []
+    for pesticide_entry in item.get("pesticides") or []:
+        pesticide_entries.append({
+            "id": next_plant_pesticide_id,
+            "plant_id": item["id"],
+            "pesticide_id": pesticide_entry["pesticide_id"],
+            "kg_ha": pesticide_entry.get("kg_ha"),
+        })
+        next_plant_pesticide_id += 1
+    return pesticide_entries, next_plant_pesticide_id

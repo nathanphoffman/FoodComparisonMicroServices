@@ -7,7 +7,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   env: {
-    DB_VERSION: 'v86',
+    DB_VERSION: 'v88',
   },
   webpack(config) {
     // Required for importing .wasm files from the wasm-calculations package.
