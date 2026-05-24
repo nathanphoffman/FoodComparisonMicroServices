@@ -35,13 +35,31 @@ public class DbService
         WHERE  f.is_feed = 0
         """;
 
-    public DbService(IConfiguration config)
+    public DbService(IConfiguration config, IWebHostEnvironment env)
     {
+        // DATA_DIR: use config if set, otherwise derive from the project root
+        // (ContentRootPath = apps/api/, so ../../data/db = project root/data/db)
         var dataDir = config["DATA_DIR"]
-            ?? throw new InvalidOperationException("DATA_DIR is not configured.");
-        var version = config["DB_VERSION"]
-            ?? throw new InvalidOperationException("DB_VERSION is not configured.");
+            ?? Path.GetFullPath(Path.Combine(env.ContentRootPath, "..", "..", "data", "db"));
+
+        // DB_VERSION: use config if set, otherwise scan the directory for the latest version
+        var version = config["DB_VERSION"] ?? InferVersion(dataDir);
+
         _dbPath = Path.Combine(dataDir, $"foods-normalized.{version}.db");
+    }
+
+    // Scans dataDir for foods-normalized.vN.db files and returns the highest version.
+    private static string InferVersion(string dataDir)
+    {
+        var files = Directory.GetFiles(dataDir, "foods-normalized.*.db");
+        if (files.Length == 0)
+            throw new InvalidOperationException(
+                $"No foods-normalized.*.db found in {dataDir}. Run 'npm run build-db' first.");
+
+        return files
+            .Select(f => Path.GetFileNameWithoutExtension(f).Replace("foods-normalized.", ""))
+            .OrderByDescending(v => int.TryParse(v.TrimStart('v'), out int n) ? n : 0)
+            .First();
     }
 
     public IEnumerable<FoodRow> LoadFoods()

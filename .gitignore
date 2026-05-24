@@ -21,6 +21,7 @@ obj/
 .vs/
 *.suo
 *.DotSettings.user
+appsettings.Development.json
 
 # Compiled database output (rebuilt by data-pipeline)
 data/db/

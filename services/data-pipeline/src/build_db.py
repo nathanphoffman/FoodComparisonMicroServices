@@ -10,7 +10,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
-from .types import Source, Pesticide
+from .food_types import Source, Pesticide
 from .lib.load_foods import load_category_foods
 from .lib.insert_sources import insert as insert_sources
 from .lib.insert_foods import insert as insert_foods
