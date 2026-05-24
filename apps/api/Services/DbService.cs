@@ -57,8 +57,8 @@ public class DbService
                 $"No foods-normalized.*.db found in {dataDir}. Run 'npm run build-db' first.");
 
         return files
-            .Select(f => Path.GetFileNameWithoutExtension(f).Replace("foods-normalized.", ""))
-            .OrderByDescending(v => int.TryParse(v.TrimStart('v'), out int n) ? n : 0)
+            .Select(filePath => Path.GetFileNameWithoutExtension(filePath).Replace("foods-normalized.", ""))
+            .OrderByDescending(version => int.TryParse(version.TrimStart('v'), out int versionNumber) ? versionNumber : 0)
             .First();
     }
 

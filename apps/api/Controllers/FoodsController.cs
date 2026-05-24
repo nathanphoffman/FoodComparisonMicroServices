@@ -10,7 +10,7 @@ public class FoodsController : ControllerBase
 {
     private readonly DbService _db;
 
-    public FoodsController(DbService db) => _db = db;
+    public FoodsController(DbService dbService) => _db = dbService;
 
     /// <summary>
     /// Returns all raw food rows from the normalized DB.
