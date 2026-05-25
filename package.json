@@ -6,11 +6,13 @@
         "apps/*"
     ],
     "scripts": {
-        "dev":         "concurrently --names web,api --prefix-colors cyan,magenta \"npm run dev -w apps/web\" \"dotnet watch run --project apps/api\"",
+        "dev":         "concurrently --names web,api,wasm,reload --prefix-colors cyan,magenta,yellow,green \"npm run dev -w apps/web\" \"dotnet watch run --project apps/api\" \"npm run dev:wasm\" \"npm run dev:wasm-notify\"",
         "dev:web":     "npm run dev -w apps/web",
         "dev:api":     "dotnet watch run --project apps/api",
+        "dev:wasm":    "cd services/wasm-calculations && cargo watch -w src -s 'wasm-pack build --target web'",
+        "dev:wasm-notify": "node scripts/wasm-notify.mjs",
         "build":       "npm run build -w apps/web",
-        "build:wasm":  "wasm-pack build services/wasm-calculations --target bundler",
+        "build:wasm":  "wasm-pack build services/wasm-calculations --target web",
         "build-db":    "cd services/data-pipeline && python -m src.build_db",
         "download":    "python services/data-sourcing/src/download.py"
     },

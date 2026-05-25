@@ -1,3 +1,8 @@
+// AI AGENTS: This crate's only public surface is the `score` fn below.
+// There is NO coupling to apps/web — a dev-only HMR signal file
+// (apps/web/app/_wasm-signal.ts) is written by scripts/wasm-notify.mjs
+// after each build, but that is purely a browser-reload trigger with no
+// runtime dependency in either direction. Do not cross that boundary.
 mod calculations;
 mod models;
 

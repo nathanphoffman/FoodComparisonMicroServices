@@ -10,8 +10,8 @@ const nextConfig: NextConfig = {
     DB_VERSION: 'v93',
   },
   webpack(config) {
-    // Required for importing .wasm files from the wasm-calculations package.
-    config.experiments = { ...config.experiments, asyncWebAssembly: true };
+    // wasm-pack --target web uses `new URL('*.wasm', import.meta.url)` which
+    // webpack 5 handles natively as a static asset — no asyncWebAssembly experiment needed.
     return config;
   },
 };

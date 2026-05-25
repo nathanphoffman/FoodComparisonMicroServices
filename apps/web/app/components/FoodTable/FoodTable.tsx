@@ -45,16 +45,22 @@ type SliderQuery = {
 };
 
 // ── Lazy WASM loader — dynamic import; webpack handles .wasm initialization ──
+// AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
+// service dependency. See apps/web/app/_wasm-signal.ts for full explanation.
+import { WASM_BUILD_ID } from '../../_wasm-signal';
 
 let wasmReady = false;
 let wasmScore: ((foods: RawFood[], query: SliderQuery) => ScoredRow[]) | null = null;
 
 async function loadWasm() {
     if (wasmReady) return;
-    // --target bundler: webpack resolves the .wasm file; no explicit init() needed.
-    const mod = await import('wasm-calculations');
-    wasmScore = (foods, query) => (mod as unknown as { score: typeof wasmScore })
-        .score!(foods, query);
+    const { default: init, score } = await import('wasm-calculations');
+    // In dev, serve WASM from /public/ (copied by scripts/wasm-notify.mjs) so the
+    // fresh binary is always available without relying on webpack's content-hash
+    // URL update timing. In production, undefined → wasm-pack's new URL() default
+    // → webpack content-hashed asset URL.
+    await init(process.env.NODE_ENV === 'development' ? '/wasm_calculations_bg.wasm' : undefined);
+    wasmScore = (foods, query) => score(foods, query);
     wasmReady = true;
 }
 
@@ -103,6 +109,16 @@ export function FoodTable() {
     );
     const [showToggle, setShowToggle]  = useState(false);
     const toggleRef                    = useRef<HTMLDivElement>(null);
+    const isInitialWasmMount           = useRef(true);
+
+    // ── Hard-reload on WASM rebuild (dev only) ────────────────────────────────
+    // Fast Refresh re-renders this component when _wasm-signal.ts changes.
+    // wasmReady is module-level so it survives soft re-renders — a hard reload
+    // is the only way to reset it and pick up the fresh binary from /public/.
+    useEffect(() => {
+        if (isInitialWasmMount.current) { isInitialWasmMount.current = false; return; }
+        if (process.env.NODE_ENV === 'development') window.location.reload();
+    }, [WASM_BUILD_ID]);
 
     // ── Fetch raw foods from C# API on mount ─────────────────────────────────
 
@@ -186,7 +202,7 @@ export function FoodTable() {
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
-    const SCORED_SORT_KEYS = new Set<SortKey>(['emissions', 'landUse', 'directKill', 'water', 'finalScore']);
+    //const SCORED_SORT_KEYS = new Set<SortKey>(['emissions', 'landUse', 'directKill', 'water', 'finalScore']);
 
     const sorted = sortKey
         ? [...ethics].sort((a, b) => {
