@@ -19,6 +19,7 @@ use models::{FoodRow, SliderQuery};
 pub fn score(foods_js: JsValue, query_js: JsValue) -> Result<JsValue, JsValue> {
     let foods: Vec<FoodRow> = serde_wasm_bindgen::from_value(foods_js)
         .map_err(|e| JsValue::from_str(&format!("foods parse error: {e}")))?;
+    
     let query: SliderQuery = serde_wasm_bindgen::from_value(query_js)
         .map_err(|e| JsValue::from_str(&format!("query parse error: {e}")))?;
 

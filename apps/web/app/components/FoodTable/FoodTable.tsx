@@ -18,21 +18,8 @@ import type { FoodEthics, FoodWeights } from './FoodTableTypes';
 import { FoodTableSliders } from './FoodTableSliders';
 import { mapRawFoodToFoodEthics, getUnitLabel, computeEcoDivisor } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
-
-// ── WASM scoring types ────────────────────────────────────────────────────────
-
-type ScoredRow = {
-    slug:            string;
-    name:            string;
-    food_type:       string;
-    nutrition_score: number | null;
-    emissions:       number | null;
-    land_use:        number | null;
-    water:           number | null;
-    direct_kill:     number | null;
-    eco_destruction: number | null;
-    final_score:     number | null;
-};
+import { useFoodTableSort } from './FoodTableSort';
+import type { ScoredRow, SortKey } from './FoodTableSort';
 
 // Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
 type SliderQuery = {
@@ -66,7 +53,6 @@ async function loadWasm() {
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
-type SortKey = 'name' | 'nutritionScore' | 'emissions' | 'landUse' | 'directKill' | 'water' | 'ecoDestruction' | 'finalScore';
 type ColumnKey = SortKey | 'dummy';
 
 const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean }[] = [
@@ -104,9 +90,10 @@ export function FoodTable() {
     const [greyWaterWeight, setGreyWater]   = useState(25);
     const [killMultiplier, setKillMult]     = useState(1);
 
+    // Sort state
+    const { columnSortProps, sortRows } = useFoodTableSort();
+
     // UI state
-    const [sortKey, setSortKey]        = useState<SortKey | null>(null);
-    const [sortDir, setSortDir]        = useState<'asc' | 'desc'>('asc');
     const [visibleColumns, setVisible] = useState<Set<ColumnKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
@@ -185,17 +172,6 @@ export function FoodTable() {
         return () => document.removeEventListener('mousedown', onClickOutside);
     }, []);
 
-    // ── Sort helpers ──────────────────────────────────────────────────────────
-
-    function handleSort(key: SortKey) {
-        if (sortKey === key) setSortDir(d => d === 'asc' ? 'desc' : 'asc');
-        else { setSortKey(key); setSortDir('asc'); }
-    }
-
-    function columnSortProps(key: SortKey) {
-        return { sorted: sortKey === key ? sortDir : undefined, onSort: () => handleSort(key) };
-    }
-
     function toggleColumn(key: ColumnKey) {
         setVisible(prev => {
             const next = new Set(prev);
@@ -206,45 +182,7 @@ export function FoodTable() {
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
-    //const SCORED_SORT_KEYS = new Set<SortKey>(['emissions', 'landUse', 'directKill', 'water', 'finalScore']);
-
-    const sorted = sortKey
-        ? [...ethics].sort((a, b) => {
-            const sa = scored.get(a.slug);
-            const sb = scored.get(b.slug);
-
-            let va: number | string | null = null;
-            let vb: number | string | null = null;
-
-            if (sortKey === 'name') {
-                va = a.name; vb = b.name;
-            } else if (sortKey === 'nutritionScore') {
-                va = a.nutritionScore; vb = b.nutritionScore;
-            } else if (sa && sb) {
-                va = sortKey === 'emissions'      ? sa.emissions
-                   : sortKey === 'landUse'        ? sa.land_use
-                   : sortKey === 'directKill'     ? sa.direct_kill
-                   : sortKey === 'water'          ? sa.water
-                   : sortKey === 'ecoDestruction' ? sa.eco_destruction
-                   : sortKey === 'finalScore'     ? sa.final_score
-                   : null;
-                vb = sortKey === 'emissions'      ? sb.emissions
-                   : sortKey === 'landUse'        ? sb.land_use
-                   : sortKey === 'directKill'     ? sb.direct_kill
-                   : sortKey === 'water'          ? sb.water
-                   : sortKey === 'ecoDestruction' ? sb.eco_destruction
-                   : sortKey === 'finalScore'     ? sb.final_score
-                   : null;
-            }
-
-            if (va === null && vb === null) return 0;
-            if (va === null) return 1;
-            if (vb === null) return -1;
-            if (va === vb) return 0;
-            const cmp = va < vb ? -1 : 1;
-            return sortDir === 'asc' ? cmp : -cmp;
-        })
-        : ethics;
+    const sorted = sortRows(ethics, scored);
 
     // ── Render ────────────────────────────────────────────────────────────────
 
