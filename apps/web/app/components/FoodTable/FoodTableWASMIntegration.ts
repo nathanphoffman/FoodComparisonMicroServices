@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import { WASM_BUILD_ID } from '../../_wasm-signal';
 import { computeEcoDivisor } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
-import type { FoodWeights } from './FoodTableTypes';
 import type { ScoredRow } from './FoodTableSort';
+import type { SliderValues } from './FoodTableInputs';
 
 // ── WASM types ────────────────────────────────────────────────────────────────
 
@@ -54,13 +54,9 @@ export async function loadWasm() {
  *  - `scoringError`    — non-null when the last score call threw; old scores stay visible
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
-export function useWasmScoring(
-    rawFoods:         RawFood[],
-    weights:          FoodWeights,
-    greenWaterWeight: number,
-    greyWaterWeight:  number,
-    killMultiplier:   number,
-) {
+export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
+    const { weights, greenWaterWeight, greyWaterWeight, killMultiplier } = sliderValues;
+
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [ecoDivisors,  setEcoDivisors]  = useState<Map<string, number>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
@@ -97,7 +93,7 @@ export function useWasmScoring(
             // Keep the last good scores visible; just surface the error.
             setScoringError(e instanceof Error ? e.message : String(e));
         }
-    }, [rawFoods, weights, greenWaterWeight, greyWaterWeight, killMultiplier]);
+    }, [rawFoods, sliderValues]);
 
     return { scored, ecoDivisors, scoringError, setScoringError };
 }

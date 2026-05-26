@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Table } from '../Table/Table';
 import { Row } from '../Table/Row';
 import {
@@ -14,29 +14,13 @@ import {
     FinalScoreCell,
     DummyCell,
 } from './FoodTableFields';
-import type { FoodEthics, FoodWeights } from './FoodTableTypes';
-import { FoodTableSliders } from './FoodTableSliders';
+import type { FoodEthics } from './FoodTableTypes';
 import { mapRawFoodToFoodEthics, getUnitLabel } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
-import type { SortKey } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
-
-// ── Column config ─────────────────────────────────────────────────────────────
-
-type ColumnKey = SortKey | 'dummy';
-
-const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean }[] = [
-    { key: 'name',           label: 'Food',               sortKey: 'name',           defaultVisible: true  },
-    { key: 'nutritionScore', label: 'Nutrition Score',     sortKey: 'nutritionScore', defaultVisible: true  },
-    { key: 'emissions',      label: 'CO₂e (kg / kg)',      sortKey: 'emissions',      defaultVisible: true  },
-    { key: 'landUse',        label: 'Land Use (m² / kg)',  sortKey: 'landUse',        defaultVisible: true  },
-    { key: 'directKill',     label: 'Direct Kill',          sortKey: 'directKill',     defaultVisible: true  },
-    { key: 'water',          label: 'Water (L / kg)',       sortKey: 'water',          defaultVisible: true  },
-    { key: 'ecoDestruction', label: 'Eco Destruction',      sortKey: 'ecoDestruction', defaultVisible: true  },
-    { key: 'finalScore',     label: 'Final Score',           sortKey: 'finalScore',     defaultVisible: true  },
-    { key: 'dummy',          label: 'Test Column',          sortKey: undefined,        defaultVisible: false },
-];
+import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableInputs';
+import type { ColConfig, SliderValues } from './FoodTableInputs';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -49,26 +33,19 @@ export function FoodTable() {
     const [loading,  setLoading]  = useState(true);
     const [error,    setError]    = useState<string | null>(null);
 
-    // Slider state
-    const [weights,           setWeights]   = useState<FoodWeights>({ calories: 34, protein: 33, mass: 33 });
-    const [greenWaterWeight,  setGreenWater] = useState(25);
-    const [greyWaterWeight,   setGreyWater]  = useState(25);
-    const [killMultiplier,    setKillMult]   = useState(1);
+    // Slider state — owned by FoodTableInputs, received here as a single object
+    const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
 
     // WASM scoring (scored rows, eco-destruction divisors, scoring error)
-    const { scored, ecoDivisors, scoringError, setScoringError } = useWasmScoring(
-        rawFoods, weights, greenWaterWeight, greyWaterWeight, killMultiplier,
-    );
+    const { scored, ecoDivisors, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
 
     // Sort state
     const { columnSortProps, sortRows } = useFoodTableSort();
 
-    // UI state
-    const [visibleColumns, setVisible] = useState<Set<ColumnKey>>(
-        () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
+    // UI state — activeCols is updated synchronously by FoodTableInputs via onActiveColsChange
+    const [activeCols, setActiveCols] = useState<ColConfig[]>(
+        () => COLUMN_CONFIG.filter(c => c.defaultVisible)
     );
-    const [showToggle, setShowToggle] = useState(false);
-    const toggleRef                   = useRef<HTMLDivElement>(null);
 
     // ── Fetch raw foods from C# API on mount ─────────────────────────────────
 
@@ -93,35 +70,15 @@ export function FoodTable() {
         return () => { cancelled = true; };
     }, []);
 
-    // ── Click-outside for column toggle ──────────────────────────────────────
-
-    useEffect(() => {
-        function onClickOutside(e: MouseEvent) {
-            if (toggleRef.current && !toggleRef.current.contains(e.target as Node)) {
-                setShowToggle(false);
-            }
-        }
-        document.addEventListener('mousedown', onClickOutside);
-        return () => document.removeEventListener('mousedown', onClickOutside);
-    }, []);
-
-    function toggleColumn(key: ColumnKey) {
-        setVisible(prev => {
-            const next = new Set(prev);
-            next.has(key) ? next.delete(key) : next.add(key);
-            return next;
-        });
-    }
-
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
     const sorted = sortRows(ethics, scored);
 
     // ── Render ────────────────────────────────────────────────────────────────
 
-    const activeCols = COLUMN_CONFIG.filter(c => visibleColumns.has(c.key));
+    const { weights, greenWaterWeight, greyWaterWeight } = sliderValues;
     const unit = getUnitLabel(weights);
-    const DYNAMIC_LABELS: Partial<Record<ColumnKey, string>> = {
+    const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:      `CO₂e (kg / ${unit})`,
         landUse:        `Land Use (m² / ${unit})`,
         directKill:     `Direct Kill / ${unit}`,
@@ -139,50 +96,12 @@ export function FoodTable() {
 
     return (
         <div className="mt-6">
-            <FoodTableSliders
-                onChange={setWeights}
-                onGreenWaterChange={setGreenWater}
-                onGreyWaterChange={setGreyWater}
-                onPhilosophicalKillChange={setKillMult}
+            <FoodTableInputs
+                onSliderValuesChange={setSliderValues}
+                scoringError={scoringError}
+                onDismissScoringError={() => setScoringError(null)}
+                onActiveColsChange={setActiveCols}
             />
-            {scoringError && (
-                <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
-                    <div>
-                        <span className="font-medium">Scoring error — </span>
-                        scores may be stale. {scoringError}
-                    </div>
-                    <button
-                        onClick={() => setScoringError(null)}
-                        className="shrink-0 text-red-400 hover:text-red-600 leading-none text-base"
-                        aria-label="Dismiss"
-                    >✕</button>
-                </div>
-            )}
-            <div className="flex justify-end mb-2" ref={toggleRef}>
-                <div className="relative">
-                    <button
-                        onClick={() => setShowToggle(v => !v)}
-                        className="text-sm text-neutral-500 hover:text-neutral-700 border border-neutral-200 rounded px-3 py-1 flex items-center gap-1"
-                    >
-                        Columns <span className="text-xs">{showToggle ? '▴' : '▾'}</span>
-                    </button>
-                    {showToggle && (
-                        <div className="absolute right-0 top-full mt-1 bg-white border border-neutral-200 rounded shadow-md p-3 space-y-2 z-10 min-w-[160px]">
-                            {COLUMN_CONFIG.filter(c => c.key !== 'name').map(col => (
-                                <label key={col.key} className="flex items-center gap-2 text-sm cursor-pointer text-neutral-700">
-                                    <input
-                                        type="checkbox"
-                                        checked={visibleColumns.has(col.key)}
-                                        onChange={() => toggleColumn(col.key)}
-                                        className="accent-neutral-700"
-                                    />
-                                    {col.label}
-                                </label>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </div>
             <Table headers={headers}>
                 {sorted.map(food => {
                     const s = scored.get(food.slug);
