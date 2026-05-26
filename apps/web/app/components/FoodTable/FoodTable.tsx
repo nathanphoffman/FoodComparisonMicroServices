@@ -43,7 +43,7 @@ export function FoodTable() {
 
     // UI state — activeCols updated synchronously by FoodTableInputs
     const [activeCols, setActiveCols] = useState<ColConfig[]>(
-        () => COLUMN_CONFIG.filter(c => c.defaultVisible)
+        () => COLUMN_CONFIG.filter(column => column.defaultVisible)
     );
 
     // ── Fetch raw foods from C# API on mount ─────────────────────────────────
@@ -53,13 +53,13 @@ export function FoodTable() {
         async function fetchFoods() {
             try {
                 await loadWasm();
-                const res = await fetch(`${API_URL}/api/foods`);
-                if (!res.ok) throw new Error(`API error ${res.status}`);
-                const foods: RawFood[] = await res.json();
+                const response = await fetch(`${API_URL}/api/foods`);
+                if (!response.ok) throw new Error(`API error ${response.status}`);
+                const foods: RawFood[] = await response.json();
                 if (cancelled) return;
                 setRawFoods(foods);
-            } catch (e) {
-                if (!cancelled) setError(String(e));
+            } catch (fetchError) {
+                if (!cancelled) setError(String(fetchError));
             } finally {
                 if (!cancelled) setLoading(false);
             }
@@ -84,9 +84,9 @@ export function FoodTable() {
         ecoDestruction: `Eco Destruction / ${unit}`,
     };
 
-    const headers = activeCols.map(c => ({
-        label: DYNAMIC_LABELS[c.key] ?? c.label,
-        ...(c.sortKey ? columnSortProps(c.sortKey) : {}),
+    const headers = activeCols.map(column => ({
+        label: DYNAMIC_LABELS[column.key] ?? column.label,
+        ...(column.sortKey ? columnSortProps(column.sortKey) : {}),
     }));
 
     if (loading) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
@@ -102,20 +102,20 @@ export function FoodTable() {
             />
             <Table headers={headers}>
                 {sorted.map(food => {
-                    const s = scored.get(food.slug);
+                    const scoredRow = scored.get(food.slug);
                     const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
                     return (
                         <Row key={food.slug}>
-                            {activeCols.map(col => {
-                                switch (col.key) {
+                            {activeCols.map(column => {
+                                switch (column.key) {
                                     case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} />;
-                                    case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={s?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
-                                    case 'emissions':      return <EmissionsCell      key="emissions"      value={s?.emissions ?? null} breakdown={s?.emissions_breakdown} divisor={1} />;
-                                    case 'landUse':        return <LandUseCell        key="landUse"        value={s?.land_use ?? null} detail={s?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null }} divisor={1} unit={unit} />;
-                                    case 'directKill':     return <IntelligenceCell   key="directKill"     value={s?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
-                                    case 'water':          return <WaterCell          key="water"          value={s?.water ?? null} detail={s?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={s?.eco_destruction ?? null} detail={s?.eco_destruction_detail ?? EMPTY_ECO_DETAIL} divisor={s?.divisor ?? 1} />;
-                                    case 'finalScore':     return <FinalScoreCell     key="finalScore"     score={s?.final_score ?? null} />;
+                                    case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
+                                    case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={1} />;
+                                    case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null }} divisor={1} unit={unit} />;
+                                    case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
+                                    case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
+                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={scoredRow?.eco_destruction ?? null} detail={scoredRow?.eco_destruction_detail ?? EMPTY_ECO_DETAIL} divisor={scoredRow?.divisor ?? 1} />;
+                                    case 'finalScore':     return <FinalScoreCell     key="finalScore"     score={scoredRow?.final_score ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;
                                 }
                             })}
