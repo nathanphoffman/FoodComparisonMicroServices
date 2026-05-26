@@ -32,7 +32,7 @@ _NULL_PLANT_FIELDS = dict(
 _NULL_ANIMAL_FIELDS = dict(
     neuron_count=None, weight_kg=None,
     pasture_ha_per_kg_output=None, pasture_green_water_l_per_ha=None,
-    native_fraction=None, bycatch_amount=None,
+    native_fraction=None, bycatch_amount=None, bycatch_food_slug=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,
 )
 

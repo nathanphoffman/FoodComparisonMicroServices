@@ -97,6 +97,7 @@ def _extract_animal_record(item: dict) -> Animal:
         animal_record[field_name] = item.get(field_name)
     # The JSON uses bycatch_food_id; the database column is named bycatch_animal_id.
     animal_record["bycatch_animal_id"] = item.get("bycatch_food_id")
+    animal_record["bycatch_food_slug"] = item.get("bycatch_food_slug")
     return animal_record  # type: ignore[return-value]
 
 

@@ -56,6 +56,7 @@ class FoodNormalized:
     pasture_green_water_l_per_ha: float | None = None
     native_fraction: float | None = None
     bycatch_amount: float | None = None
+    bycatch_food_slug: str | None = None
     ch4_kg_per_kg_output: float | None = None
     n2o_kg_per_kg_output: float | None = None
     co2_kg_per_kg_output: float | None = None
@@ -78,6 +79,6 @@ class FoodNormalized:
             self.pesticide_kg_per_kg_food, self.land_m2_per_kg,
             self.neuron_count, self.weight_kg, self.yield_fraction,
             self.pasture_ha_per_kg_output, self.pasture_green_water_l_per_ha,
-            self.native_fraction, self.bycatch_amount,
+            self.native_fraction, self.bycatch_amount, self.bycatch_food_slug,
             self.ch4_kg_per_kg_output, self.n2o_kg_per_kg_output, self.co2_kg_per_kg_output,
         )

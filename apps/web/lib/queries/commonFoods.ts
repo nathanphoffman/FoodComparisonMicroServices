@@ -28,6 +28,11 @@ export type RawFood = {
   feed_pesticide_bee_hazard:      number | null;
   feed_pesticide_kg_per_kg_food:  number | null;
   feed_land_m2_per_kg:            number | null;
+  // bycatch — kg of bycatch animal killed per kg of this food; null if no bycatch
+  bycatch_amount:       number | null;
+  bycatch_food_slug:    string | null;
+  bycatch_neuron_count: number | null;
+  bycatch_weight_kg:    number | null;
 };
 
 const QUERY = `
@@ -39,7 +44,7 @@ const QUERY = `
          f.fertilizer_kg_ha, f.emissions_per_kg, f.tillage_events_per_year, f.co2_capture_kg_ha_yr,
          f.pesticide_freshwater_paf, f.pesticide_terrestrial_paf, f.pesticide_insect_paf, f.pesticide_bee_hazard, f.pesticide_kg_per_kg_food,
          f.neuron_count, f.weight_kg, f.yield_fraction, f.pasture_ha_per_kg_output,
-         f.native_fraction, f.bycatch_amount,
+         f.native_fraction, f.bycatch_amount, f.bycatch_food_slug,
          f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
          feed.water_per_kg             AS feed_water_per_kg,
          feed.emissions_per_kg         AS feed_emissions_per_kg,
@@ -50,9 +55,13 @@ const QUERY = `
          feed.pesticide_terrestrial_paf AS feed_pesticide_terrestrial_paf,
          feed.pesticide_bee_hazard     AS feed_pesticide_bee_hazard,
          feed.pesticide_kg_per_kg_food AS feed_pesticide_kg_per_kg_food,
-         feed.land_m2_per_kg           AS feed_land_m2_per_kg
+         feed.land_m2_per_kg           AS feed_land_m2_per_kg,
+         bycatch_animal.neuron_count   AS bycatch_neuron_count,
+         bycatch_animal.weight_kg      AS bycatch_weight_kg
   FROM   foods_normalized f
   LEFT JOIN foods_normalized feed ON feed.food_id = f.food_id AND feed.is_feed = 1
+  LEFT JOIN foods_normalized bycatch_animal ON bycatch_animal.slug = f.bycatch_food_slug
+                                           AND bycatch_animal.is_feed = 0
   WHERE  f.is_feed = 0
 `;
 

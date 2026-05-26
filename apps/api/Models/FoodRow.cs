@@ -46,6 +46,12 @@ public class FoodRow
     public double? N2oKgPerKgOutput          { get; set; }
     public double? Co2KgPerKgOutput          { get; set; }
 
+    // Bycatch — fishing collateral kill (NULL for non-seafood or no bycatch data)
+    public double? BycatchAmount      { get; set; }
+    public string? BycatchFoodSlug    { get; set; }
+    public double? BycatchNeuronCount { get; set; }
+    public double? BycatchWeightKg    { get; set; }
+
     // Feed aggregate columns (from the self-join)
     public double? FeedWaterPerKg                { get; set; }
     public double? FeedEmissionsPerKg            { get; set; }

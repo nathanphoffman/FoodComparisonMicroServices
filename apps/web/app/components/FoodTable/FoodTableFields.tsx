@@ -146,11 +146,11 @@ export function EcoDestructionValue({ value }: { value: number | null }) {
   return <span className={getEcoDestructionColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function EcoDestructionCell({ value, detail }: { value: number | null; detail: EcoDestructionDetail }) {
+export function EcoDestructionCell({ value, detail, divisor = 1 }: { value: number | null; detail: EcoDestructionDetail; divisor?: number }) {
   return (
     <Cell key="ecoDestruction" align="right">
       {value != null
-        ? <EcoDestructionTooltip detail={detail}><EcoDestructionValue value={value} /></EcoDestructionTooltip>
+        ? <EcoDestructionTooltip detail={detail} divisor={divisor}><EcoDestructionValue value={value} /></EcoDestructionTooltip>
         : <EcoDestructionValue value={null} />
       }
     </Cell>

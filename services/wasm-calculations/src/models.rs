@@ -46,6 +46,12 @@ pub struct FoodRow {
     pub n2o_kg_per_kg_output:      Option<f64>,
     pub co2_kg_per_kg_output:      Option<f64>,
 
+    // Bycatch — fishing collateral kill (NULL for non-seafood or no bycatch data)
+    pub bycatch_amount:       Option<f64>, // kg of bycatch animal per kg of this food
+    pub bycatch_food_slug:    Option<String>, // slug of the bycatch species (for lifespan lookup)
+    pub bycatch_neuron_count: Option<f64>,
+    pub bycatch_weight_kg:    Option<f64>,
+
     // Feed aggregate columns (self-join result in the DB query)
     pub feed_water_per_kg:              Option<f64>,
     pub feed_emissions_per_kg:          Option<f64>,

@@ -65,4 +65,5 @@ export type EcoDestructionDetail = {
     feedWormScore:             number;
     feedDeforestationScore:    number;
     pastureDeforestationScore: number;
+    bycatchScore:              number;
 };

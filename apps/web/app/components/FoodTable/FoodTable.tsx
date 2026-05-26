@@ -16,7 +16,7 @@ import {
 } from './FoodTableFields';
 import type { FoodEthics, FoodWeights } from './FoodTableTypes';
 import { FoodTableSliders } from './FoodTableSliders';
-import { mapRawFoodToFoodEthics, getUnitLabel } from './FoodTableCalculations';
+import { mapRawFoodToFoodEthics, getUnitLabel, computeEcoDivisor } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 
 // ── WASM scoring types ────────────────────────────────────────────────────────
@@ -95,6 +95,9 @@ export function FoodTable() {
     // Separate from fetch error — non-blocking, shown as a banner while old scores stay visible.
     const [scoringError, setScoringError] = useState<string | null>(null);
 
+    // Eco destruction tooltip divisors — keyed by slug, updated with sliders
+    const [ecoDivisors, setEcoDivisors]     = useState<Map<string, number>>(new Map());
+
     // Slider state
     const [weights, setWeights]             = useState<FoodWeights>({ calories: 34, protein: 33, mass: 33 });
     const [greenWaterWeight, setGreenWater] = useState(25);
@@ -160,6 +163,7 @@ export function FoodTable() {
             //throw new Error('test: field name mismatch between TS and Rust SliderQuery');
             const rows = wasmScore!(rawFoods, query);
             setScored(new Map(rows.map(r => [r.slug, r])));
+            setEcoDivisors(new Map(rawFoods.map(f => [f.slug, computeEcoDivisor(f, weights, killMultiplier)])));
             setScoringError(null);
         } catch (e) {
             // Keep the last good scores visible; just surface the error.
@@ -321,7 +325,7 @@ export function FoodTable() {
                                     case 'landUse':        return <LandUseCell        key="landUse"        value={s?.land_use ?? null} detail={food.landUseDetail} divisor={1} unit={unit} />;
                                     case 'directKill':     return <IntelligenceCell   key="directKill"     value={s?.direct_kill ?? null} detail={food.intelligenceDetail} />;
                                     case 'water':          return <WaterCell          key="water"          value={s?.water ?? null} detail={food.waterDetail} referenceTotal={food.water} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={s?.eco_destruction ?? null} detail={food.ecoDestructionDetail} />;
+                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={s?.eco_destruction ?? null} detail={food.ecoDestructionDetail} divisor={ecoDivisors.get(food.slug) ?? 1} />;
                                     case 'finalScore':     return <FinalScoreCell     key="finalScore"     score={s?.final_score ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;
                                 }

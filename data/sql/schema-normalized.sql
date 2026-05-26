@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
                                         --   NULL for animals without pasture
     native_fraction              REAL,
     bycatch_amount           REAL,
+    bycatch_food_slug        TEXT,   -- slug of the primary bycatch species (e.g. 'sardines', 'tuna'); NULL if no bycatch
     ch4_kg_per_kg_output     REAL,  -- enteric fermentation + manure; excludes land use + feed
     n2o_kg_per_kg_output     REAL,  -- manure management; excludes land use + feed crop fertilizer
     co2_kg_per_kg_output     REAL,  -- on-farm energy, processing, transport; excludes land use + feed

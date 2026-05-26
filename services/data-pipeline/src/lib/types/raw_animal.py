@@ -38,12 +38,13 @@ class RawAnimal:
         self.pasture_green_water_l_per_ha = SourcedArray(data.get("pasture_green_water_l_per_ha"))
         self.native_fraction              = SourcedArray(data.get("native_fraction"))
         self.bycatch_amount               = SourcedArray(data.get("bycatch_amount"))
+        self.bycatch_food_slug: str | None = data.get("bycatch_food_slug")
         self.ch4_kg_per_kg_output         = SourcedArray(data.get("ch4_kg_per_kg_output"))
         self.n2o_kg_per_kg_output         = SourcedArray(data.get("n2o_kg_per_kg_output"))
         self.co2_kg_per_kg_output         = SourcedArray(data.get("co2_kg_per_kg_output"))
         self._feed_entries                = feed_entries
 
-    def normalized_fields(self) -> dict[str, float | None]:
+    def normalized_fields(self) -> dict[str, float | str | None]:
         """Returns all animal metrics as a flat dict for FoodNormalized."""
         return {
             "neuron_count":                  self.neuron_count.weighted_average(),
@@ -53,6 +54,7 @@ class RawAnimal:
             "pasture_green_water_l_per_ha":  self.pasture_green_water_l_per_ha.weighted_average(),
             "native_fraction":               self.native_fraction.weighted_average(),
             "bycatch_amount":                self.bycatch_amount.weighted_average(),
+            "bycatch_food_slug":             self.bycatch_food_slug,
             "ch4_kg_per_kg_output":          self.ch4_kg_per_kg_output.weighted_average(),
             "n2o_kg_per_kg_output":          self.n2o_kg_per_kg_output.weighted_average(),
             "co2_kg_per_kg_output":          self.co2_kg_per_kg_output.weighted_average(),

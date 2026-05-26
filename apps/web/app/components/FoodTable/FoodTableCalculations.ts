@@ -117,6 +117,7 @@ const EMPTY_ECO_DETAIL: EcoDestructionDetail = {
   feedWormScore: 0,
   feedDeforestationScore: 0,
   pastureDeforestationScore: 0,
+  bycatchScore: 0,
 };
 
 export function computeEcoDestruction(food: RawFood): { score: number | null; detail: EcoDestructionDetail } {
@@ -159,6 +160,7 @@ export function computeEcoDestruction(food: RawFood): { score: number | null; de
         feedWormScore: 0,
         feedDeforestationScore: 0,
         pastureDeforestationScore: 0,
+        bycatchScore: 0,
       },
     };
   }
@@ -209,7 +211,23 @@ export function computeEcoDestruction(food: RawFood): { score: number | null; de
     );
   }
 
-  const total = combineContribs(...feedContribs, ...pastureContribs);
+  // Bycatch — fishing collateral kill: bycatch_amount kg of bycatch animal per kg food.
+  // Counted as whole-body kg (discarded, not consumed), so no yield_fraction divisor.
+  let bycatchScore = 0;
+  const bycatchContribs: number[] = [];
+  if (
+    food.bycatch_amount != null && food.bycatch_amount > 0 &&
+    food.bycatch_neuron_count != null && food.bycatch_neuron_count > 0 &&
+    food.bycatch_weight_kg != null && food.bycatch_weight_kg > 0
+  ) {
+    const bycatchLifespan = LIFESPAN_YEARS_BY_SLUG[food.bycatch_food_slug ?? ''] ?? DEFAULT_LIFESPAN_YEARS;
+    const bycatchIndividuals  = food.bycatch_amount / food.bycatch_weight_kg;
+    const bycatchNeuronScore  = Math.pow(food.bycatch_neuron_count, NEURAL_INTERCONNECTIVITY_EXPONENT);
+    bycatchScore = bycatchIndividuals * bycatchNeuronScore * bycatchLifespan;
+    bycatchContribs.push(bycatchScore);
+  }
+
+  const total = combineContribs(...feedContribs, ...pastureContribs, ...bycatchContribs);
 
   if (total === 0) return { score: null, detail: EMPTY_ECO_DETAIL };
 
@@ -225,8 +243,21 @@ export function computeEcoDestruction(food: RawFood): { score: number | null; de
       feedWormScore,
       feedDeforestationScore,
       pastureDeforestationScore,
+      bycatchScore,
     },
   };
+}
+
+// ── Divisor (mirrors Rust compute_divisor + kill_multiplier in calculations/mod.rs) ──────────────
+// food.calories and food.protein are per-gram values; ×1000 converts to per-kg,
+// then divided by CALORIE_NORM=1000 and PROTEIN_NORM=100 respectively.
+export function computeEcoDivisor(food: RawFood, weights: FoodWeights, killMultiplier: number): number {
+  const calFactor     = food.calories;      // (calories * 1000) / 1000 = calories
+  const proteinFactor = food.protein * 10;  // (protein  * 1000) / 100  = protein * 10
+  const d = (weights.mass     / 100) * 1
+          + (weights.calories / 100) * calFactor
+          + (weights.protein  / 100) * proteinFactor;
+  return (d > 0 ? d : 1) * (killMultiplier > 0 ? killMultiplier : 1);
 }
 
 export function getUnitLabel(weights: FoodWeights): string {

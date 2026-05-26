@@ -219,5 +219,37 @@ fn compute_animal_eco_destruction(
         contributions.push(pasture_reptile_deaths * reptile_intelligence);
     }
 
+    // Bycatch — fishing collateral kill: bycatch_amount kg of bycatch animal per kg food.
+    // Counted as whole-body kg (discarded, not consumed), so no yield_fraction divisor.
+    if let (Some(bycatch_amount), Some(bycatch_neuron_count), Some(bycatch_weight_kg)) = (
+        food.bycatch_amount.filter(|&a| a > 0.0),
+        food.bycatch_neuron_count.filter(|&n| n > 0.0),
+        food.bycatch_weight_kg.filter(|&w| w > 0.0),
+    ) {
+        let bycatch_lifespan     = bycatch_lifespan_years(food.bycatch_food_slug.as_deref());
+        let bycatch_individuals  = bycatch_amount / bycatch_weight_kg;
+        let bycatch_neuron_score = bycatch_neuron_count.powf(NEURAL_EXPONENT);
+        let bycatch_kill         = bycatch_individuals * bycatch_neuron_score * bycatch_lifespan;
+        contributions.push(bycatch_kill);
+    }
+
     combine_contributions(&contributions)
+}
+
+fn bycatch_lifespan_years(slug: Option<&str>) -> f64 {
+    match slug {
+        Some("beef")     => 20.0,
+        Some("chicken")  =>  8.0,
+        Some("pork")     => 12.0,
+        Some("turkey")   => 10.0,
+        Some("lamb")     => 12.0,
+        Some("milk")     => 20.0,
+        Some("yogurt")   => 20.0,
+        Some("egg")      =>  8.0,
+        Some("salmon")   =>  6.0,
+        Some("tuna")     => 20.0,
+        Some("shrimp")   =>  2.0,
+        Some("sardines") =>  4.0,
+        _                => 10.0, // DEFAULT_LIFESPAN_YEARS
+    }
 }
