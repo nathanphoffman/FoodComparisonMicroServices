@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See apps/web/app/_wasm-signal.ts for full explanation.
 import { WASM_BUILD_ID } from '../../_wasm-signal';
-import { computeEcoDivisor } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 import type { ScoredRow } from './FoodTableSort';
 import type { SliderValues } from './FoodTableInputs';
@@ -19,10 +18,17 @@ type SliderQuery = {
     killMultiplier: number;
 };
 
+// Single input object passed to WASM — keeps the boundary simple and
+// prevents the call site from growing as new inputs are added.
+type ScoreInput = {
+    foods: RawFood[];
+    query: SliderQuery;
+};
+
 // ── Lazy WASM loader — dynamic import; webpack handles .wasm initialization ──
 
 let wasmReady = false;
-let wasmScore: ((foods: RawFood[], query: SliderQuery) => ScoredRow[]) | null = null;
+let wasmScore: ((input: ScoreInput) => ScoredRow[]) | null = null;
 
 /**
  * Loads the WASM module once. Safe to call multiple times — no-ops if already loaded.
@@ -36,7 +42,7 @@ export async function loadWasm() {
     // URL update timing. In production, undefined → wasm-pack's new URL() default
     // → webpack content-hashed asset URL.
     await init(process.env.NODE_ENV === 'development' ? '/wasm_calculations_bg.wasm' : undefined);
-    wasmScore = (foods, query) => score(foods, query);
+    wasmScore = (input) => score(input);
     wasmReady = true;
 }
 
@@ -49,8 +55,8 @@ export async function loadWasm() {
  * - Re-scores whenever `rawFoods` or any slider input changes.
  *
  * Returns:
- *  - `scored`          — Map<slug, ScoredRow> from the last successful WASM run
- *  - `ecoDivisors`     — Map<slug, number> for eco-destruction tooltip scaling
+ *  - `scored`          — Map<slug, ScoredRow> from the last successful WASM run.
+ *                        Each ScoredRow contains aggregate scores + tooltip breakdowns + divisor.
  *  - `scoringError`    — non-null when the last score call threw; old scores stay visible
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
@@ -58,14 +64,10 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
     const { weights, greenWaterWeight, greyWaterWeight, killMultiplier } = sliderValues;
 
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
-    const [ecoDivisors,  setEcoDivisors]  = useState<Map<string, number>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
     const isInitialWasmMount             = useRef(true);
 
     // ── Hard-reload on WASM rebuild (dev only) ────────────────────────────────
-    // Fast Refresh re-renders the parent when _wasm-signal.ts changes.
-    // wasmReady is module-level so it survives soft re-renders — a hard reload
-    // is the only way to reset it and pick up the fresh binary from /public/.
     useEffect(() => {
         if (isInitialWasmMount.current) { isInitialWasmMount.current = false; return; }
         if (process.env.NODE_ENV === 'development') window.location.reload();
@@ -74,20 +76,22 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
     // ── Re-score whenever sliders or data change ──────────────────────────────
     useEffect(() => {
         if (!wasmReady || rawFoods.length === 0) return;
-        const query: SliderQuery = {
-            calorieWeight:  weights.calories,
-            proteinWeight:  weights.protein,
-            massWeight:     weights.mass,
-            greenWater:     greenWaterWeight,
-            greyWater:      greyWaterWeight,
-            killMultiplier: killMultiplier,
+
+        const input: ScoreInput = {
+            foods: rawFoods,
+            query: {
+                calorieWeight:  weights.calories,
+                proteinWeight:  weights.protein,
+                massWeight:     weights.mass,
+                greenWater:     greenWaterWeight,
+                greyWater:      greyWaterWeight,
+                killMultiplier: killMultiplier,
+            },
         };
+
         try {
-            // TEST ERROR — remove this line when done
-            //throw new Error('test: field name mismatch between TS and Rust SliderQuery');
-            const rows = wasmScore!(rawFoods, query);
+            const rows = wasmScore!(input);
             setScored(new Map(rows.map(r => [r.slug, r])));
-            setEcoDivisors(new Map(rawFoods.map(f => [f.slug, computeEcoDivisor(f, weights, killMultiplier)])));
             setScoringError(null);
         } catch (e) {
             // Keep the last good scores visible; just surface the error.
@@ -95,5 +99,5 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
         }
     }, [rawFoods, sliderValues]);
 
-    return { scored, ecoDivisors, scoringError, setScoringError };
+    return { scored, scoringError, setScoringError };
 }

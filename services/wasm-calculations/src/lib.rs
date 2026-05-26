@@ -7,23 +7,20 @@ mod calculations;
 mod models;
 
 use wasm_bindgen::prelude::*;
-use models::{FoodRow, SliderQuery};
+use models::ScoreInput;
 
 /// Score a slice of food rows using the current slider values.
 ///
-/// `foods_js`  – JSON array of FoodRow objects (from GET /api/foods)
-/// `query_js`  – JSON object of SliderQuery values (from the FoodTable sliders)
+/// `input_js` – `{ foods: FoodRow[], query: SliderQuery }` bundled as one object.
 ///
-/// Returns a JSON array of ScoredRow objects.
+/// Returns a JSON array of ScoredRow objects, each containing aggregate scores
+/// and tooltip breakdown details.
 #[wasm_bindgen]
-pub fn score(foods_js: JsValue, query_js: JsValue) -> Result<JsValue, JsValue> {
-    let foods: Vec<FoodRow> = serde_wasm_bindgen::from_value(foods_js)
-        .map_err(|e| JsValue::from_str(&format!("foods parse error: {e}")))?;
-    
-    let query: SliderQuery = serde_wasm_bindgen::from_value(query_js)
-        .map_err(|e| JsValue::from_str(&format!("query parse error: {e}")))?;
+pub fn score(input_js: JsValue) -> Result<JsValue, JsValue> {
+    let input: ScoreInput = serde_wasm_bindgen::from_value(input_js)
+        .map_err(|e| JsValue::from_str(&format!("input parse error: {e}")))?;
 
-    let scored = calculations::apply(foods, &query);
+    let scored = calculations::apply(input.foods, &input.query);
 
     serde_wasm_bindgen::to_value(&scored)
         .map_err(|e| JsValue::from_str(&format!("serialise error: {e}")))

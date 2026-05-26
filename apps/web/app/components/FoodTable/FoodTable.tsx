@@ -14,13 +14,13 @@ import {
     FinalScoreCell,
     DummyCell,
 } from './FoodTableFields';
-import type { FoodEthics } from './FoodTableTypes';
-import { mapRawFoodToFoodEthics, getUnitLabel } from './FoodTableCalculations';
+import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableInputs';
 import type { ColConfig, SliderValues } from './FoodTableInputs';
+import { EMPTY_ECO_DETAIL } from './FoodTableTypes';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -29,20 +29,19 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000';
 export function FoodTable() {
     // Data state
     const [rawFoods, setRawFoods] = useState<RawFood[]>([]);
-    const [ethics,   setEthics]   = useState<FoodEthics[]>([]);
     const [loading,  setLoading]  = useState(true);
     const [error,    setError]    = useState<string | null>(null);
 
     // Slider state — owned by FoodTableInputs, received here as a single object
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
 
-    // WASM scoring (scored rows, eco-destruction divisors, scoring error)
-    const { scored, ecoDivisors, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
+    // WASM scoring — scored rows contain all scores, breakdowns, and divisors
+    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
 
     // Sort state
     const { columnSortProps, sortRows } = useFoodTableSort();
 
-    // UI state — activeCols is updated synchronously by FoodTableInputs via onActiveColsChange
+    // UI state — activeCols updated synchronously by FoodTableInputs
     const [activeCols, setActiveCols] = useState<ColConfig[]>(
         () => COLUMN_CONFIG.filter(c => c.defaultVisible)
     );
@@ -59,7 +58,6 @@ export function FoodTable() {
                 const foods: RawFood[] = await res.json();
                 if (cancelled) return;
                 setRawFoods(foods);
-                setEthics(foods.map(mapRawFoodToFoodEthics));
             } catch (e) {
                 if (!cancelled) setError(String(e));
             } finally {
@@ -72,7 +70,7 @@ export function FoodTable() {
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
-    const sorted = sortRows(ethics, scored);
+    const sorted = sortRows(rawFoods, scored);
 
     // ── Render ────────────────────────────────────────────────────────────────
 
@@ -105,17 +103,18 @@ export function FoodTable() {
             <Table headers={headers}>
                 {sorted.map(food => {
                     const s = scored.get(food.slug);
+                    const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
                     return (
                         <Row key={food.slug}>
                             {activeCols.map(col => {
                                 switch (col.key) {
                                     case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} />;
-                                    case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={food.nutritionScore} detail={food.nutritionDetail} />;
-                                    case 'emissions':      return <EmissionsCell      key="emissions"      value={s?.emissions ?? null} breakdown={food.emissionsBreakdown} divisor={1} />;
-                                    case 'landUse':        return <LandUseCell        key="landUse"        value={s?.land_use ?? null} detail={food.landUseDetail} divisor={1} unit={unit} />;
-                                    case 'directKill':     return <IntelligenceCell   key="directKill"     value={s?.direct_kill ?? null} detail={food.intelligenceDetail} />;
-                                    case 'water':          return <WaterCell          key="water"          value={s?.water ?? null} detail={food.waterDetail} referenceTotal={food.water} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={s?.eco_destruction ?? null} detail={food.ecoDestructionDetail} divisor={ecoDivisors.get(food.slug) ?? 1} />;
+                                    case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={s?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
+                                    case 'emissions':      return <EmissionsCell      key="emissions"      value={s?.emissions ?? null} breakdown={s?.emissions_breakdown} divisor={1} />;
+                                    case 'landUse':        return <LandUseCell        key="landUse"        value={s?.land_use ?? null} detail={s?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null }} divisor={1} unit={unit} />;
+                                    case 'directKill':     return <IntelligenceCell   key="directKill"     value={s?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
+                                    case 'water':          return <WaterCell          key="water"          value={s?.water ?? null} detail={s?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
+                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={s?.eco_destruction ?? null} detail={s?.eco_destruction_detail ?? EMPTY_ECO_DETAIL} divisor={s?.divisor ?? 1} />;
                                     case 'finalScore':     return <FinalScoreCell     key="finalScore"     score={s?.final_score ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;
                                 }

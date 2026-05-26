@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import type { FoodEthics } from './FoodTableTypes';
+import type { RawFood } from '@/lib/queries/commonFoods';
+import type { EcoDestructionDetail, EmissionsBreakdown, LandUseDetail, WaterDetail } from './FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -15,9 +16,12 @@ export type SortKey =
 
 /** Shape returned by the WASM scorer. */
 export type ScoredRow = {
-    slug:            string;
-    name:            string;
-    food_type:       string;
+    slug:      string;
+    name:      string;
+    food_type: string;
+    divisor:   number;
+
+    // Aggregate scores
     nutrition_score: number | null;
     emissions:       number | null;
     land_use:        number | null;
@@ -25,6 +29,12 @@ export type ScoredRow = {
     direct_kill:     number | null;
     eco_destruction: number | null;
     final_score:     number | null;
+
+    // Tooltip breakdown details (camelCase, matching Rust serde rename_all)
+    emissions_breakdown?:    EmissionsBreakdown;
+    water_detail:            WaterDetail;
+    land_use_detail:         LandUseDetail;
+    eco_destruction_detail:  EcoDestructionDetail;
 };
 
 // ── Hook ──────────────────────────────────────────────────────────────────────
@@ -33,10 +43,8 @@ export type ScoredRow = {
  * Encapsulates all sort state and logic for the FoodTable.
  *
  * Returns:
- *  - `sortKey` / `sortDir` — current sort state (for header highlight)
- *  - `handleSort(key)`     — toggle / set sort column
- *  - `columnSortProps(key)`— convenience props to spread onto a column header
- *  - `sortRows(ethics, scored)` — returns the sorted row array
+ *  - `columnSortProps(key)` — convenience props to spread onto a column header
+ *  - `sortRows(foods, scored)` — returns the sorted RawFood array
  */
 export function useFoodTableSort() {
     const [sortKey, setSortKey] = useState<SortKey | null>(null);
@@ -51,10 +59,10 @@ export function useFoodTableSort() {
         return { sorted: sortKey === key ? sortDir : undefined, onSort: () => handleSort(key) };
     }
 
-    function sortRows(ethics: FoodEthics[], scored: Map<string, ScoredRow>): FoodEthics[] {
-        if (!sortKey) return ethics;
+    function sortRows(foods: RawFood[], scored: Map<string, ScoredRow>): RawFood[] {
+        if (!sortKey) return foods;
 
-        return [...ethics].sort((a, b) => {
+        return [...foods].sort((a, b) => {
             const sa = scored.get(a.slug);
             const sb = scored.get(b.slug);
 
@@ -64,7 +72,8 @@ export function useFoodTableSort() {
             if (sortKey === 'name') {
                 va = a.name; vb = b.name;
             } else if (sortKey === 'nutritionScore') {
-                va = a.nutritionScore; vb = b.nutritionScore;
+                va = sa?.nutrition_score ?? null;
+                vb = sb?.nutrition_score ?? null;
             } else if (sa && sb) {
                 va = sortKey === 'emissions'      ? sa.emissions
                    : sortKey === 'landUse'        ? sa.land_use
