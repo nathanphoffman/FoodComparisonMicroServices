@@ -29,7 +29,8 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000';
 export function FoodTable() {
     // Data state
     const [rawFoods, setRawFoods] = useState<RawFood[]>([]);
-    const [loading,  setLoading]  = useState(true);
+    const [loadingApi,  setLoadingApi]  = useState(true);
+    const [loadingScore,  setLoadingScore]  = useState(true);
     const [error,    setError]    = useState<string | null>(null);
 
     // Slider state — owned by FoodTableInputs, received here as a single object
@@ -48,6 +49,10 @@ export function FoodTable() {
 
     // ── Fetch raw foods from C# API on mount ─────────────────────────────────
 
+    useEffect(()=>{
+        if (scored && scored.size) setLoadingScore(false);
+    },[scored]);
+
     useEffect(() => {
         let cancelled = false;
         async function fetchFoods() {
@@ -61,7 +66,7 @@ export function FoodTable() {
             } catch (fetchError) {
                 if (!cancelled) setError(String(fetchError));
             } finally {
-                if (!cancelled) setLoading(false);
+                if (!cancelled) setLoadingApi(false);
             }
         }
         fetchFoods();
@@ -89,7 +94,7 @@ export function FoodTable() {
         ...(column.sortKey ? columnSortProps(column.sortKey) : {}),
     }));
 
-    if (loading) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
+    if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
     if (error)   return <p className="mt-6 text-red-600">Failed to load data: {error}</p>;
 
     return (
@@ -100,6 +105,7 @@ export function FoodTable() {
                 onDismissScoringError={() => setScoringError(null)}
                 onActiveColsChange={setActiveCols}
             />
+     
             <Table headers={headers}>
                 {sorted.map(food => {
                     const scoredRow = scored.get(food.slug);
