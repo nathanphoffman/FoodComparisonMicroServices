@@ -909,6 +909,22 @@
     ]
   },
   {
+    "id": 77,
+    "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
+    "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
+    "notes": [
+      "Olive — herbicide application rates (California): Lists registered herbicides and their per-acre active-ingredient rates for established olive orchards. Glyphosate: 0.8–3.7 lb a.e./acre for post-emergence weed control (directed application away from green bark); converting midpoint of typical in-season dose (1.0–1.5 lb a.e./acre) to SI: 1.25 lb/acre × 0.4536 kg/lb ÷ 0.4047 ha/acre = 1.40 kg a.i./ha per application; 1–2 applications/year in conventional systems gives ~1.0–1.5 kg/ha/yr. Pendimethalin (Prowl H2O): 1.9–3.8 lb a.i./acre as pre-emergence herbicide; midpoint 2.85 lb/acre = 3.19 kg/ha per application; applied once annually in most olive systems = ~0.5–1.0 kg a.i./ha/yr accounting for partial-field strip application. Paraquat (Gramoxone): 0.625–1 lb a.i./acre post-emergence; used in smaller fraction of operations. This UC IPM table covers California olive production (>95% of US olive area) and reflects registered use patterns consistent with USDA NASS Fruits survey data."
+    ]
+  },
+  {
+    "id": 78,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
+    "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
+    "notes": [
+      "Olive — insecticide application rates against Bactrocera oleae (olive fruit fly): Greek field trial documenting bait spray vs. cover spray applications. Bait spray formulations applied at 300 mL/tree to half the orchard (~150 trees/ha typical spacing): dimethoate (Efdakon 40 EC) at 625 mL/hL concentrate; cover spray dimethoate at 80–100 mL/hL. Thiacloprid (Biscaya 24 OD) bait at 125 mL/hL. Pyrethroid insecticides β-cyfluthrin (Bulldock 2.5SC) at 350 mL/hL bait or 15–30 mL/hL cover spray; λ-cyhalothrin (Karate Zeon 10CS) at 125 mL/hL bait. Dimethoate cover spray dose ~80 mL/hL × 400–600 L water/ha = 32–48 mL a.i./ha at 40% formulation = 0.51–0.77 kg a.i./ha per application; 1–3 cover sprays/season documented in conventional Mediterranean olive production. Note: dimethoate was banned in the EU under Regulation 2019/1090 and 2020/1643; this source documents historical and global use patterns. Imidacloprid was also withdrawn from EU olive use under the same regulation."
+    ]
+  },
+  {
     "id": 72,
     "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
     "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",

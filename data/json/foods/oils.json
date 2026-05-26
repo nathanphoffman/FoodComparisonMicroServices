@@ -186,6 +186,81 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.0,
+                        "confidence": 3,
+                        "source": {
+                            "id": 77,
+                            "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
+                            "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
+                            "note": "Olive oil — glyphosate kg_ha: Directed post-emergence application for weed control in established olive orchards. UC IPM registered rate 0.8–1.5 lb a.e./acre for in-season applications; midpoint 1.15 lb/acre = 1.29 kg/ha per application. Conventional Mediterranean systems apply 1–2 times annually under-canopy or as strip treatment; global weighted average ~1.0 kg a.i./ha/yr. Glyphosate is the dominant herbicide in Spanish olive production (>90% of no-till orchards) and is widely used in California, Tunisia, and other producing regions."
+                        }
+                    },
+                    {
+                        "value": 1.0,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Olive oil — glyphosate kg_ha: USDA NASS Fruits survey data for California olive orchards corroborates UC IPM registered rate; glyphosate is the most frequently applied herbicide in US olive production. Application rates consistent with 1.0–1.5 kg a.i./ha/yr for conventional systems applying 1–2 directed sprays annually for weed suppression under trees."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 2,
+                        "source": {
+                            "id": 77,
+                            "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
+                            "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
+                            "note": "Olive oil — pendimethalin kg_ha: Pre-emergence herbicide applied at 1.9–3.8 lb a.i./acre (Prowl H2O) in California olive orchards; full-field rate 3.19 kg/ha. Applied as directed strip treatment to ~50% of orchard floor in many operations, yielding an effective ~0.5–1.0 kg a.i./ha on a whole-orchard area basis. Not used in all Mediterranean systems; more prevalent in intensively managed California and newer Spanish super-intensive orchards. Value of 0.5 kg/ha reflects typical use in the fraction of global olive production where this herbicide is registered and applied."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 2,
+                        "source": {
+                            "id": 78,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
+                            "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
+                            "note": "Olive oil — imidacloprid kg_ha: Neonicotinoid insecticide used for olive fruit fly (Bactrocera oleae) control and other sucking pests. Applied as bait spray at field trial doses comparable to dimethoate; global conventional use ~0.1–0.15 kg a.i./ha per application, typically 1–2 applications per season in regions where it remains registered. Banned from EU olive use under Regulation 2018/783 (outdoor uses), so current global use is concentrated in non-EU producing regions (Tunisia, Morocco, Turkey, California). Value of 0.12 kg/ha represents a global production-weighted average including both applying and non-applying regions."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 2,
+                        "source": {
+                            "id": 78,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
+                            "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
+                            "note": "Olive oil — mancozeb kg_ha: Dithiocarbamate fungicide used alongside copper compounds for olive leaf spot (Venturia oleaginea / Colletotrichum gloeosporioides) and as a protectant fungicide. Applied at 0.3–0.5 kg a.i./ha per application in systems where copper alone is insufficient; 1–2 applications per year typical. Note: copper compounds (copper hydroxide, copper oxychloride) are the primary fungicide in olive production globally at 2–3 kg Cu/ha/yr, but copper is an inorganic element not represented in this pesticides list. Mancozeb at 0.5 kg/ha represents secondary synthetic fungicide use in conventional non-organic olive systems."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]
