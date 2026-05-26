@@ -16,40 +16,11 @@ import {
 } from './FoodTableFields';
 import type { FoodEthics, FoodWeights } from './FoodTableTypes';
 import { FoodTableSliders } from './FoodTableSliders';
-import { mapRawFoodToFoodEthics, getUnitLabel, computeEcoDivisor } from './FoodTableCalculations';
+import { mapRawFoodToFoodEthics, getUnitLabel } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
-import type { ScoredRow, SortKey } from './FoodTableSort';
-
-// Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
-type SliderQuery = {
-    calorieWeight:  number;
-    proteinWeight:  number;
-    massWeight:     number;
-    greenWater:     number;
-    greyWater:      number;
-    killMultiplier: number;
-};
-
-// ── Lazy WASM loader — dynamic import; webpack handles .wasm initialization ──
-// AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
-// service dependency. See apps/web/app/_wasm-signal.ts for full explanation.
-import { WASM_BUILD_ID } from '../../_wasm-signal';
-
-let wasmReady = false;
-let wasmScore: ((foods: RawFood[], query: SliderQuery) => ScoredRow[]) | null = null;
-
-async function loadWasm() {
-    if (wasmReady) return;
-    const { default: init, score } = await import('wasm-calculations');
-    // In dev, serve WASM from /public/ (copied by scripts/wasm-notify.mjs) so the
-    // fresh binary is always available without relying on webpack's content-hash
-    // URL update timing. In production, undefined → wasm-pack's new URL() default
-    // → webpack content-hashed asset URL.
-    await init(process.env.NODE_ENV === 'development' ? '/wasm_calculations_bg.wasm' : undefined);
-    wasmScore = (foods, query) => score(foods, query);
-    wasmReady = true;
-}
+import type { SortKey } from './FoodTableSort';
+import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
@@ -73,22 +44,21 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000';
 
 export function FoodTable() {
     // Data state
-    const [rawFoods, setRawFoods]   = useState<RawFood[]>([]);
-    const [ethics, setEthics]       = useState<FoodEthics[]>([]);
-    const [scored, setScored]       = useState<Map<string, ScoredRow>>(new Map());
-    const [loading, setLoading]     = useState(true);
-    const [error, setError]         = useState<string | null>(null);
-    // Separate from fetch error — non-blocking, shown as a banner while old scores stay visible.
-    const [scoringError, setScoringError] = useState<string | null>(null);
-
-    // Eco destruction tooltip divisors — keyed by slug, updated with sliders
-    const [ecoDivisors, setEcoDivisors]     = useState<Map<string, number>>(new Map());
+    const [rawFoods, setRawFoods] = useState<RawFood[]>([]);
+    const [ethics,   setEthics]   = useState<FoodEthics[]>([]);
+    const [loading,  setLoading]  = useState(true);
+    const [error,    setError]    = useState<string | null>(null);
 
     // Slider state
-    const [weights, setWeights]             = useState<FoodWeights>({ calories: 34, protein: 33, mass: 33 });
-    const [greenWaterWeight, setGreenWater] = useState(25);
-    const [greyWaterWeight, setGreyWater]   = useState(25);
-    const [killMultiplier, setKillMult]     = useState(1);
+    const [weights,           setWeights]   = useState<FoodWeights>({ calories: 34, protein: 33, mass: 33 });
+    const [greenWaterWeight,  setGreenWater] = useState(25);
+    const [greyWaterWeight,   setGreyWater]  = useState(25);
+    const [killMultiplier,    setKillMult]   = useState(1);
+
+    // WASM scoring (scored rows, eco-destruction divisors, scoring error)
+    const { scored, ecoDivisors, scoringError, setScoringError } = useWasmScoring(
+        rawFoods, weights, greenWaterWeight, greyWaterWeight, killMultiplier,
+    );
 
     // Sort state
     const { columnSortProps, sortRows } = useFoodTableSort();
@@ -97,18 +67,8 @@ export function FoodTable() {
     const [visibleColumns, setVisible] = useState<Set<ColumnKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
-    const [showToggle, setShowToggle]  = useState(false);
-    const toggleRef                    = useRef<HTMLDivElement>(null);
-    const isInitialWasmMount           = useRef(true);
-
-    // ── Hard-reload on WASM rebuild (dev only) ────────────────────────────────
-    // Fast Refresh re-renders this component when _wasm-signal.ts changes.
-    // wasmReady is module-level so it survives soft re-renders — a hard reload
-    // is the only way to reset it and pick up the fresh binary from /public/.
-    useEffect(() => {
-        if (isInitialWasmMount.current) { isInitialWasmMount.current = false; return; }
-        if (process.env.NODE_ENV === 'development') window.location.reload();
-    }, [WASM_BUILD_ID]);
+    const [showToggle, setShowToggle] = useState(false);
+    const toggleRef                   = useRef<HTMLDivElement>(null);
 
     // ── Fetch raw foods from C# API on mount ─────────────────────────────────
 
@@ -132,33 +92,6 @@ export function FoodTable() {
         fetchFoods();
         return () => { cancelled = true; };
     }, []);
-
-    // ── Re-score whenever sliders or data change ──────────────────────────────
-
-    useEffect(() => {
-        if (!wasmReady || rawFoods.length === 0) return;
-        const query: SliderQuery = {
-            calorieWeight:  weights.calories,
-            proteinWeight:  weights.protein,
-            massWeight:     weights.mass,
-            greenWater:     greenWaterWeight,
-            greyWater:      greyWaterWeight,
-            killMultiplier: killMultiplier,
-        };
-        try {
-            // TEST ERROR — remove this line when done
-            //throw new Error('test: field name mismatch between TS and Rust SliderQuery');
-            const rows = wasmScore!(rawFoods, query);
-            setScored(new Map(rows.map(r => [r.slug, r])));
-            setEcoDivisors(new Map(rawFoods.map(f => [f.slug, computeEcoDivisor(f, weights, killMultiplier)])));
-            setScoringError(null);
-        } catch (e) {
-            // Keep the last good scores visible; just surface the error.
-            setScoringError(
-                e instanceof Error ? e.message : String(e)
-            );
-        }
-    }, [rawFoods, weights, greenWaterWeight, greyWaterWeight, killMultiplier]);
 
     // ── Click-outside for column toggle ──────────────────────────────────────
 
