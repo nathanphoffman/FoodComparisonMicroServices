@@ -3,30 +3,5 @@ name: food-meats
 description: Manages data/json/foods/meats.json. Adds and updates entries for beef, chicken, pork, turkey, and lamb with properly sourced values.
 ---
 
-## What you own
-
-You read and write `data/json/foods/meats.json` and `data/json/sources.json`. Do not write any other file. When adding a new source, append it to sources.json with a url, descriptive title, and a note explaining what value it supports. `pesticides.json` is not relevant for this category. Schema questions go to `db-schema`; data auditing to `food-auditor`.
-
-Current foods: beef, chicken, pork, turkey, lamb.
-
-## Value format
-
-Every metric is an array of sourced entries:
-
-```json
-{"value": <number>, "confidence": <1-5>, "source": {"id": <int>, "url": "<url>", "title": "<title>", "note": "<what this source says for this specific food+field>"}}
-```
-
-Look up `id`, `url`, and `title` from `sources.json`. Write a specific note per food+field combination. Minimum source entries must meet confidence — confidence 3 needs 2+ entries, 4 needs 3+, 5 needs 4+.
-
-## Animal fields
-
-Each food object includes: `nutrition` (calories/fat/sat_fat/protein/fiber/sodium/carbs/sugar/cholesterol/trans_fat, all per gram), `neuron_count`, `weight_kg` (live weight), `yield_fraction` (edible fraction 0–1), `bycatch_food_id`, `bycatch_food_slug`, `bycatch_amount`, `pasture_ha_per_kg_output`, `pasture_green_water_l_per_ha`, `native_fraction`, `ch4_kg_per_kg_output`, `n2o_kg_per_kg_output`, `co2_kg_per_kg_output`, and `feed` (array of `{food_id, food_slug, kg_feed_per_kg_output: [...]}`). Feed slugs reference entries in grains.json, legumes.json, and feeds.json — do not duplicate or modify those files.
-
-## Confidence scale
-
-1 — single unverified source. 2 — one solid source. 3 — two agreeing sources. 4 — three+ sources, good agreement. 5 — four+ sources, strong cross-study agreement.
-
-## Audit log
-
-Append one line to `data/audit.log` after each run: `YYYY-MM-DD | <summary>`.
+You read and write `data/json/foods/meats.json` and `data/json/sources.json`. Read `data/json/SCHEMA.md` for the full field structure, SourcedValue format, confidence scale, and sourcing rules. Schema questions go to `db-schema`; auditing to `food-auditor`. `pesticides.json` is not relevant for this category.
+These are animal foods. Bycatch fields are not applicable — set them to null/empty. Feed slugs reference grains.json, legumes.json, and feeds.json — do not modify those files. Beef and lamb have the highest `ch4_kg_per_kg_output` of any category due to enteric fermentation; be especially careful to source those values from multi-study averages. Append one line to `data/audit.log` after each run: `YYYY-MM-DD | <summary>`.

@@ -55,7 +55,7 @@ pub(super) fn compute_final_score(row: &ScoredRow, averages: &Averages) -> Optio
 }
 
 fn dimension_score(value: f64, range: ColumnRange, lower_is_better: bool) -> f64 {
-    if value <= 0.0 { return 50.0; }
+    if value <= 0.0 { return if lower_is_better { 100.0 } else { 0.0 }; }
     let log_val = value.ln();
     if !log_val.is_finite() { return 50.0; }
     let span = range.log_max - range.log_min;

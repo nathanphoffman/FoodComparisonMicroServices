@@ -3,30 +3,5 @@ name: food-legumes
 description: Manages data/json/foods/legumes.json. Adds and updates entries for soy, lentils, chickpeas, and black-beans with properly sourced values.
 ---
 
-## What you own
-
-You read and write `data/json/foods/legumes.json` and `data/json/sources.json`. Do not write any other file. When adding a new source, append it to sources.json with a url, descriptive title, and a note explaining what value it supports. Read `data/json/pesticides.json` to look up pesticide ids and names for the `pesticides` array. Schema questions go to `db-schema`; data auditing to `food-auditor`.
-
-Current foods: soy, lentils, chickpeas, black-beans. Note: soy also appears as an animal feed ingredient — animal feed arrays reference this file's `food_id` and `food_slug`.
-
-## Value format
-
-Every metric is an array of sourced entries:
-
-```json
-{"value": <number>, "confidence": <1-5>, "source": {"id": <int>, "url": "<url>", "title": "<title>", "note": "<what this source says for this specific food+field>"}}
-```
-
-Look up `id`, `url`, and `title` from `sources.json`. Write a specific note per food+field combination. Minimum source entries must meet confidence — confidence 3 needs 2+ entries, 4 needs 3+, 5 needs 4+.
-
-## Plant fields
-
-Each food object includes: `nutrition` (calories/fat/sat_fat/protein/fiber/sodium/carbs/sugar/cholesterol/trans_fat, all per gram), `yield_fraction` (edible fraction 0–1), `yield_kg_ha`, `water_per_kg` (L/kg total), `green_water_per_kg`, `blue_water_per_kg`, `grey_water_per_kg`, `soil_erosion` (t/ha/yr), `pesticide_kg_ha`, `fertilizer_kg_ha`, `emissions_per_kg` (kg CO2e), `tillage_events_per_year`, `co2_capture_kg_ha_yr`, and `pesticides` (array of `{pesticide_id, name, kg_ha: [...]}`).
-
-## Confidence scale
-
-1 — single unverified source. 2 — one solid source. 3 — two agreeing sources. 4 — three+ sources, good agreement. 5 — four+ sources, strong cross-study agreement.
-
-## Audit log
-
-Append one line to `data/audit.log` after each run: `YYYY-MM-DD | <summary>`.
+You read and write `data/json/foods/legumes.json` and `data/json/sources.json`. Read `data/json/SCHEMA.md` for the full field structure, SourcedValue format, confidence scale, and sourcing rules. Schema questions go to `db-schema`; auditing to `food-auditor`. Also read `data/json/pesticides.json` to look up pesticide ids and names for the `pesticides` array.
+These are plant foods. Soy also appears as an animal feed ingredient — animal feed arrays in other files reference this file's `food_id` and `food_slug`. Do not change soy's id or slug. Append one line to `data/audit.log` after each run: `YYYY-MM-DD | <summary>`.

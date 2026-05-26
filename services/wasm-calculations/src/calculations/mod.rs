@@ -52,11 +52,11 @@ fn compute_row(food: &FoodRow, query: &SliderQuery) -> ScoredRow {
         slug:            food.slug.clone(),
         food_type:       food.food_type.clone(),
         nutrition_score,
-        emissions:       if emissions_raw       > 0.0 { Some(emissions_raw)       } else { None },
-        land_use:        if land_use_raw        > 0.0 { Some(land_use_raw)        } else { None },
-        water:           if water_raw           > 0.0 { Some(water_raw)           } else { None },
-        direct_kill:     if direct_kill_raw     > 0.0 { Some(direct_kill_raw)     } else { None },
-        eco_destruction: if eco_destruction_raw > 0.0 { Some(eco_destruction_raw) } else { None },
+        emissions:       Some(emissions_raw),
+        land_use:        Some(land_use_raw),
+        water:           Some(water_raw),
+        direct_kill:     Some(direct_kill_raw),
+        eco_destruction: Some(eco_destruction_raw),
         final_score:     None, // filled in by apply()
     }
 }
