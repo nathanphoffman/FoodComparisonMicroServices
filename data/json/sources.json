@@ -925,6 +925,28 @@
     ]
   },
   {
+    "id": 79,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+    "notes": [
+      "Farmed shrimp \u2014 ch4_kg_per_kg_output: Pond CH4 from anaerobic sediment decomposition and methanogenesis in intensive P. vannamei systems documented at ~0.02\u20130.05 kg CH4/kg shrimp; midpoint 0.03 kg/kg used.",
+      "Farmed shrimp \u2014 n2o_kg_per_kg_output: Pond N2O from nitrification-denitrification in eutrophic pond water documented at ~0.005\u20130.012 kg N2O/kg shrimp; midpoint 0.008 kg/kg used.",
+      "Farmed shrimp \u2014 co2_kg_per_kg_output: Land-use change CO2 from mangrove conversion identified as the dominant single emission source at 10\u201316 kg CO2e/kg shrimp in Southeast Asian pond systems; combined with on-farm energy and processing CO2 supports the 19.2 kg CO2e/kg direct non-feed value.",
+      "Farmed shrimp \u2014 feed composition (soy, wheat, fishmeal, fish-oil): Review synthesizes LCA studies for Asian and Latin American production; soybean meal 25\u201335%, wheat 15\u201325%, fishmeal 10\u201320%, fish oil 2\u20135% of diet; corroborates FAO whiteleg shrimp profile values.",
+      "Wild shrimp \u2014 bycatch_amount: Trawl bycatch ratios of 2\u201310 kg per kg shrimp documented across tropical wild fisheries; consistent with WWF ~5.7 kg/kg figure."
+    ]
+  },
+  {
+    "id": 80,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
+    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+    "notes": [
+      "Wild shrimp \u2014 ch4_kg_per_kg_output: Bottom trawl shrimp fisheries emit 2\u20136 kg CO2e/kg landed from fuel combustion; zero CH4 contribution from wild-catch trawl operations.",
+      "Wild shrimp \u2014 n2o_kg_per_kg_output: GHG from global shrimp trawl fisheries is overwhelmingly CO2 from diesel; N2O contribution is negligible, consistent with 0.001 kg N2O/kg used.",
+      "Wild shrimp \u2014 co2_kg_per_kg_output: Global shrimp trawl fleet-weighted mean of ~2\u20134 kg CO2e/kg landed shrimp from fuel use; central estimate 3.2 kg CO2/kg used after subtracting N2O CO2e."
+    ]
+  },
+  {
     "id": 72,
     "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
     "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",

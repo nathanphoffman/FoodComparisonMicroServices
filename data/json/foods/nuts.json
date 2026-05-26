@@ -1698,7 +1698,7 @@
     {
         "id": 30,
         "slug": "brazil-nuts",
-        "name": "Brazil Nuts",
+        "name": "Brazil Nuts (Wild)",
         "type": "plant",
         "category": "nuts",
         "human_food": 1,
@@ -1738,66 +1738,11 @@
                 }
             }
         ],
-        "yield_kg_ha": [
-            {
-                "value": 80,
-                "confidence": 3,
-                "source": {
-                    "id": 35,
-                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
-                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
-                    "note": null
-                }
-            }
-        ],
-        "water_per_kg": [
-            {
-                "value": 2357,
-                "confidence": 4,
-                "source": {
-                    "id": 34,
-                    "url": "https://www.sciencedirect.com/science/article/pii/S2211912420300109",
-                    "title": "ScienceDirect — Tree Nuts and Sustainable Water Use (EAT-Lancet)",
-                    "note": null
-                }
-            }
-        ],
-        "green_water_per_kg": [
-            {
-                "value": 2310,
-                "confidence": 2,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "blue_water_per_kg": [
-            {
-                "value": 24,
-                "confidence": 2,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "grey_water_per_kg": [
-            {
-                "value": 10,
-                "confidence": 1,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
+        "yield_kg_ha": [],
+        "water_per_kg": [],
+        "green_water_per_kg": [],
+        "blue_water_per_kg": [],
+        "grey_water_per_kg": [],
         "soil_erosion": [
             {
                 "value": 0,

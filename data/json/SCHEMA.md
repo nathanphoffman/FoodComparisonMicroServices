@@ -37,12 +37,7 @@ Almost every numeric field in the schema is stored as an **array of sourced valu
 [
   {
     "value": <number>,       // The measured quantity (units vary by field — see below)
-    "confidence": <1–5>,     // How reliable this data point is:
-                             //   5 = primary, high-quality source (e.g. USDA FDC)
-                             //   4 = good secondary source
-                             //   3 = reasonable estimate / modelled value
-                             //   2 = rough / indirect derivation
-                             //   1 = very uncertain / low-quality estimate
+    "confidence": <1–5>,     // 1 (very uncertain) – 5 (high-quality primary source); see "Confidence scale"
     "source": {
       "id":    <integer>,    // Foreign key into sources.json
       "url":   <string>,     // Canonical URL of the source document
@@ -54,9 +49,30 @@ Almost every numeric field in the schema is stored as an **array of sourced valu
 ]
 ```
 
-> **Why arrays?** When two credible sources give different values, both are stored.
-> The build pipeline computes a confidence-weighted geometric mean at build time.
-> A single-element array is the common case; `null` means "data not available".
+---
+
+## Conventions
+
+### Wild-harvested and farmed variants
+
+When a food has a clear wild-caught vs. farmed distinction, **two separate entries** are used rather than one blended entry.  The `name` field encodes the variant using a parenthetical suffix:
+
+| Situation | Name format | Example |
+|-----------|-------------|---------|
+| Exclusively or overwhelmingly wild-harvested | `"<Food> (Wild)"` | `"Brazil Nuts (Wild)"`, `"Tuna (Wild)"` |
+| Explicitly farmed / aquaculture | `"<Food> (Farmed)"` | `"Salmon (Farmed)"`, `"Shrimp (Farmed)"` |
+| No meaningful wild/farmed distinction (mixed or averaged) | bare name | `"Almonds"`, `"Wheat"` |
+
+The suffix is the only change needed — names flow through the pipeline and UI unchanged, so no schema, type, or query modifications are required when adding a new variant.
+
+### Suppressing inapplicable metrics for wild-harvested plant foods
+
+The plant environmental fields (`yield_kg_ha`, `water_per_kg`, and the green/blue/grey breakdown) are defined in terms of **managed cropland**.  For wild-harvested foods collected from native ecosystems that would exist regardless of harvest (e.g. Brazil nuts from Amazon rainforest), these metrics are both misleading and not applicable:
+
+- `yield_kg_ha` drives the **land-use** display and the **crop deforestation** score in the UI.  A wild-harvested food has no cleared cropland, so this field should be left as an **empty array `[]`**.
+- `water_per_kg`, `green_water_per_kg`, `blue_water_per_kg`, `grey_water_per_kg` represent agricultural water consumption models.  The native ecosystem consumes that water regardless of harvest.  Set all four to **`[]`** for wild-harvested plants.
+
+Other plant fields (`pesticide_kg_ha: [{value: 0}]`, `fertilizer_kg_ha: [{value: 0}]`, `soil_erosion: [{value: 0}]`, `co2_capture_kg_ha_yr`) should still be populated — zero-input values and carbon sequestration are meaningful and correct for wild foods.
 
 ---
 
@@ -177,21 +193,15 @@ Plants get environmental impact data for crop production.
 
   "yield_kg_ha": [...],      // SourcedValue  kg / ha
                              // Crop yield: kilograms of harvested product per hectare per year.
+                             // ⚠ Set to [] for wild-harvested foods — suppresses land-use and
+                             //   crop-deforestation displays, which assume cleared cropland.
 
   // --- Water footprint (Mekonnen & Hoekstra 2010 three-component breakdown) ---
-  "water_per_kg": [...],     // SourcedValue  L / kg
-                             // Total water footprint per kg of crop output
-                             // (green + blue + grey combined).
-
-  "green_water_per_kg": [...], // SourcedValue  L / kg
-                             // Green water = rain-fed evapotranspiration consumed during growth.
-
-  "blue_water_per_kg": [...],  // SourcedValue  L / kg
-                             // Blue water = irrigation water withdrawn from surface/groundwater.
-
-  "grey_water_per_kg": [...],  // SourcedValue  L / kg
-                             // Grey water = freshwater required to dilute pollutants
-                             //   (fertilizer runoff etc.) to safe levels.
+  // ⚠ Set all four water fields to [] for wild-harvested foods (see Conventions).
+  "water_per_kg": [...],     // SourcedValue  L / kg  (green + blue + grey combined)
+  "green_water_per_kg": [...], // SourcedValue  L / kg  rain-fed evapotranspiration
+  "blue_water_per_kg": [...],  // SourcedValue  L / kg  irrigation withdrawals
+  "grey_water_per_kg": [...],  // SourcedValue  L / kg  dilution water for pollutant runoff
 
   // --- Land & soil ---
   "soil_erosion": [...],     // SourcedValue  metric tons / ha / yr
@@ -213,9 +223,8 @@ Plants get environmental impact data for crop production.
                              // Total fertilizer applied per hectare (all nutrient forms combined).
 
   "emissions_per_kg": [...], // SourcedValue  kg CO₂e / kg crop output
-                             // Total greenhouse gas emissions from crop production
+                             // Total GHG emissions from crop production
                              //   (fertilizer N₂O, farm energy, land-use change).
-                             //   Source: Poore & Nemecek (2018) unless noted.
 
   // --- Per-pesticide breakdown ---
   "pesticides": [
@@ -250,7 +259,7 @@ bycatch references, and feed composition.
                              // Fraction of the live animal weight that becomes edible output.
                              // E.g. beef ~0.43 means 43% of the live-weight becomes retail cuts.
 
-  // --- Bycatch (seafood only; null for land animals) ---
+  // --- Bycatch (seafood only) ---
   "bycatch_food_id":   <integer|null>, // ID of the incidentally caught species
   "bycatch_food_slug": <string|null>,  // Slug of the bycatch species (denormalised)
   "bycatch_amount": [...],             // SourcedValue  kg bycatch / kg target output (nullable)
@@ -262,11 +271,8 @@ bycatch references, and feed composition.
                                            // Pasture area required to produce 1 kg of output.
 
   "pasture_green_water_l_per_ha": [...],   // SourcedValue  L / ha / yr
-                                           // Green water (precipitation evapotranspiration)
-                                           // consumed by the pasture type this animal grazes,
-                                           // per hectare per year.
-                                           // Combined with pasture_ha_per_kg_output at build
-                                           // time to derive pasture green-water per kg output.
+                                           // Green water on the pasture this animal
+                                           // grazes, per hectare per year.
 
   "native_fraction": [...],                // SourcedValue  0–1
                                            // Fraction of that pasture land that was originally
@@ -285,9 +291,7 @@ bycatch references, and feed composition.
 
   "co2_kg_per_kg_output": [...],   // SourcedValue  kg CO₂ / kg output
                                    // Direct CO₂ from on-farm energy, processing, transport.
-                                   // Excludes: land-use change, feed-crop production
-                                   //   (feed is tracked separately via the feed[] join below
-                                   //   to avoid double-counting).
+                                   // Excludes: land-use change, feed-crop production.
 
   // --- Feed composition ---
   "feed": [

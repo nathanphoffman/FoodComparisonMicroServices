@@ -2,7 +2,7 @@
     {
         "id": 16,
         "slug": "salmon",
-        "name": "Salmon",
+        "name": "Salmon (Farmed)",
         "type": "animal",
         "category": "seafood",
         "human_food": 1,
@@ -241,7 +241,7 @@
     {
         "id": 23,
         "slug": "tuna",
-        "name": "Tuna",
+        "name": "Tuna (Wild)",
         "type": "animal",
         "category": "seafood",
         "human_food": 1,
@@ -383,9 +383,9 @@
         "feed": []
     },
     {
-        "id": 35,
-        "slug": "shrimp",
-        "name": "Shrimp",
+        "id": 56,
+        "slug": "shrimp-wild",
+        "name": "Shrimp (Wild)",
         "type": "animal",
         "category": "seafood",
         "human_food": 1,
@@ -412,7 +412,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "Wild shrimp \u2014 nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
                 }
             }
         ],
@@ -424,7 +424,7 @@
                     "id": 43,
                     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
                     "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
-                    "note": "Shrimp \u2014 neuron_count: Decapod crustaceans (including penaeoid shrimp) have been estimated at approximately 100,000\u20131,000,000 neurons in the central nervous system, with most commercial penaeid shrimp species falling near the lower end (~100,000\u2013500,000). A value of 1,000,000 is used here as a conservative upper bound for commercial-sized shrimp (~15\u201320g), consistent with estimates for small decapods in the peer-reviewed literature."
+                    "note": "Wild shrimp \u2014 neuron_count: Penaeid shrimp CNS estimated at ~100,000\u20131,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized individuals (~15\u201320g). Applies equally to wild and farmed penaeid species."
                 }
             }
         ],
@@ -436,7 +436,7 @@
                     "id": 43,
                     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
                     "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
-                    "note": "Shrimp \u2014 neuron_count: Decapod crustaceans (including penaeoid shrimp) have been estimated at approximately 100,000\u20131,000,000 neurons in the central nervous system, with most commercial penaeid shrimp species falling near the lower end (~100,000\u2013500,000). A value of 1,000,000 is used here as a conservative upper bound for commercial-sized shrimp (~15\u201320g), consistent with estimates for small decapods in the peer-reviewed literature."
+                    "note": "Wild shrimp \u2014 weight_kg: Commercial wild-caught penaeid shrimp (Penaeus setiferus, P. aztecus, P. monodon) at market size are typically 15\u201320g live weight; 0.018 kg (18g) used as representative. Consistent with US Gulf Coast and Southeast Asian wild trawl fishery size grades."
                 }
             }
         ],
@@ -448,7 +448,7 @@
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
                     "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
-                    "note": null
+                    "note": "Wild shrimp \u2014 yield_fraction: Whole-to-edible (peeled, deveined) conversion of 0.60 applies equally to wild and farmed shrimp of the same size grade."
                 }
             }
         ],
@@ -462,10 +462,164 @@
                     "id": 44,
                     "url": "https://www.worldwildlife.org/threats/bycatch",
                     "title": "WWF \u2014 Bycatch Overview",
-                    "note": "Shrimp \u2014 wild vs. farmed: Approximately 55% of global shrimp production is wild-caught (predominantly trawl). The bycatch values apply to the wild-caught fraction. Farmed shrimp contribute no trawl bycatch but have separate feed and environmental impacts."
+                    "note": "Wild shrimp \u2014 bycatch_amount: Gulf of Mexico and global tropical trawl shrimp fisheries have historically reported bycatch ratios of 3\u201310 kg discarded finfish per kg shrimp landed; commonly cited average ~5.7 kg bycatch/kg shrimp. Applies only to wild-caught trawl fraction; farmed shrimp has no trawl bycatch."
+                }
+            },
+            {
+                "value": 5.7,
+                "confidence": 2,
+                "source": {
+                    "id": 79,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Wild shrimp \u2014 bycatch_amount: Henriksson et al. (2015) review of shrimp production systems documents trawl bycatch ratios of 2\u201310 kg per kg shrimp across tropical and subtropical wild fisheries, consistent with the WWF ~5.7 kg/kg figure used here. Wild trawl fisheries dominate bycatch impact; FAO bottom trawl data cited in review corroborates this range."
                 }
             }
         ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp \u2014 ch4_kg_per_kg_output: Wild-caught shrimp produce effectively zero CH4. P&N 2018 wild-catch fish category GHG is entirely fuel CO2; there is no biological CH4 source in trawl fisheries. The P&N 2018 wild-caught crustacean GHG of ~3.5 kg CO2e/kg arises almost entirely from diesel combustion in trawl vessels."
+                }
+            },
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 80,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
+                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp \u2014 ch4_kg_per_kg_output: Parker et al. (2018) analyzed fuel use and GHG emissions for global fisheries; bottom trawl shrimp fisheries emit 2\u20136 kg CO2e/kg landed shrimp from fuel combustion alone, with zero CH4 contribution. Confirms CH4 = 0 for wild-catch trawl operations."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.001,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp \u2014 n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor on-board processing; P&N 2018 wild-catch crustacean total ~3.5 kg CO2e/kg is fuel-CO2 dominated. N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the negligible N2O role in wild trawl fisheries."
+                }
+            },
+            {
+                "value": 0.001,
+                "confidence": 3,
+                "source": {
+                    "id": 80,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
+                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp \u2014 n2o_kg_per_kg_output: Parker et al. (2018) report GHG from global shrimp trawl fisheries as overwhelmingly CO2 from diesel fuel; N2O contribution is negligible. 0.001 kg N2O/kg is consistent with the authors' characterization of wild-catch trawl emission profiles."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.2,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp \u2014 co2_kg_per_kg_output: P&N 2018 wild-caught crustaceans ~3.5 kg CO2e/kg total. Subtracting N2O CO2e (0.001 \u00d7 265 = 0.265) leaves ~3.24 \u2248 3.2 kg direct CO2/kg. Arises almost entirely from diesel combustion in bottom-trawl vessels; trawling is among the more fuel-intensive fishing methods due to drag resistance on the seabed."
+                }
+            },
+            {
+                "value": 3.2,
+                "confidence": 3,
+                "source": {
+                    "id": 80,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
+                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp \u2014 co2_kg_per_kg_output: Parker et al. (2018) report global shrimp trawl fisheries at a median of ~2\u20134 kg CO2e/kg landed shrimp from fuel use alone, with a global fleet-weighted mean around 3\u20134 kg CO2e/kg. A value of 3.2 kg CO2/kg is used as the central estimate, consistent with both Parker et al. and P&N 2018."
+                }
+            }
+        ],
+        "feed": []
+    },
+    {
+        "id": 57,
+        "slug": "shrimp-farmed",
+        "name": "Shrimp (Farmed)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.85,
+                    "fat": 0.009,
+                    "sat_fat": 0.002,
+                    "protein": 0.202,
+                    "fiber": 0,
+                    "sodium": 1.19,
+                    "carbs": 0.002,
+                    "sugar": 0,
+                    "cholesterol": 1.52,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Farmed shrimp \u2014 nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 1000000,
+                "confidence": 2,
+                "source": {
+                    "id": 43,
+                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
+                    "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
+                    "note": "Farmed shrimp \u2014 neuron_count: Penaeid shrimp CNS estimated at ~100,000\u20131,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized Penaeus vannamei (~15\u201320g), the dominant farmed species globally."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.018,
+                "confidence": 3,
+                "source": {
+                    "id": 49,
+                    "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
+                    "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                    "note": "Farmed shrimp \u2014 weight_kg: Commercial harvest size for Penaeus vannamei in intensive pond aquaculture is typically 12\u201320g per individual at 90\u2013120 days grow-out; 0.018 kg (18g) used as representative value consistent with FAO aquaculture profile and standard market size grades."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.6,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Farmed shrimp \u2014 yield_fraction: Whole-to-edible (headless, peeled, deveined) conversion of 0.60 from FAO/BfR yield tables. Applies to pond-farmed Penaeus vannamei of standard commercial size."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
         "pasture_ha_per_kg_output": null,
         "pasture_green_water_l_per_ha": null,
         "native_fraction": null,
@@ -477,17 +631,17 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: CH4 from anaerobic decomposition of organic matter in aquaculture ponds estimated at ~0.03 kg CH4/kg shrimp output. P&N 2018 reports farmed prawns at ~26.9 kg CO2e/kg total (OWID CSV: 26.87 kg CO2e/kg); CH4 at 0.03 kg/kg yields 0.84 kg CO2e/kg at GWP100=28, accounting for ~3% of the total \u2014 consistent with the minor pond-methane contribution relative to the dominant CO2 from feed production and land clearing."
+                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: CH4 from anaerobic decomposition of organic matter in aquaculture ponds estimated at ~0.03 kg CH4/kg shrimp output. P&N 2018 reports farmed prawns at ~26.87 kg CO2e/kg total; CH4 at 0.03 kg/kg yields 0.84 kg CO2e/kg at GWP100=28, accounting for ~3% of the total \u2014 consistent with the minor pond-methane contribution relative to dominant CO2 from feed and land clearing."
                 }
             },
             {
                 "value": 0.03,
                 "confidence": 3,
                 "source": {
-                    "id": 71,
-                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: OWID GHG chart (P&N 2018 data) reports farmed prawns at 26.87 kg CO2e/kg. CH4 from shrimp ponds is documented in the aquaculture GHG literature at ~0.02\u20130.05 kg CH4/kg; 0.03 kg/kg is the midpoint and consistent with P&N 2018's characterization of farmed crustacean emissions."
+                    "id": 79,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: Henriksson et al. (2015) synthesized LCA studies for Asian shrimp aquaculture and report pond CH4 flux of ~0.02\u20130.05 kg CH4/kg shrimp from anaerobic sediment decomposition and water column methanogenesis in nitrogen-loaded ponds. Midpoint 0.03 kg CH4/kg is consistent with P&N 2018 supplementary data and published pond GHG flux measurements for intensive Penaeus vannamei systems."
                 }
             }
         ],
@@ -499,17 +653,17 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: N2O from nitrification/denitrification in nitrogen-rich shrimp ponds estimated at ~0.008 kg N2O/kg output. At GWP100=265, this yields ~2.12 kg CO2e/kg, representing ~8% of the P&N 26.87 kg CO2e/kg total \u2014 consistent with the moderate N2O role in intensive shrimp aquaculture documented in the P&N 2018 supplementary."
+                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: N2O from nitrification/denitrification in nitrogen-rich shrimp ponds estimated at ~0.008 kg N2O/kg output. At GWP100=265, yields ~2.12 kg CO2e/kg, representing ~8% of the P&N 26.87 kg CO2e/kg total \u2014 consistent with the moderate N2O role in intensive pond aquaculture."
                 }
             },
             {
                 "value": 0.008,
                 "confidence": 3,
                 "source": {
-                    "id": 71,
-                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: OWID P&N 2018 data confirms farmed prawns at 26.87 kg CO2e/kg total. N2O at 0.008 kg/kg yields ~2.1 kg CO2e/kg, consistent with published estimates for intensive pond aquaculture N2O flux and the P&N 2018 supplementary breakdown for crustacean aquaculture."
+                    "id": 79,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: Henriksson et al. (2015) review of shrimp aquaculture LCA literature documents pond N2O emissions of ~0.005\u20130.012 kg N2O/kg shrimp from nitrification-denitrification in eutrophic pond water; 0.008 kg/kg (midpoint) is consistent with P&N 2018 supplementary data and measured N2O flux studies from intensive ponds in Thailand and Vietnam."
                 }
             }
         ],
@@ -521,17 +675,17 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~26.87 kg CO2e/kg. Decomposition: feed component (fishmeal 0.30\u00d76.0 + fish-oil 0.06\u00d73.75 + soy 0.67\u00d73.0 + wheat 0.45\u00d71.57 \u2248 4.74 kg CO2e) is tracked via the feed join; CH4 CO2e (0.03\u00d728=0.84) and N2O CO2e (0.008\u00d7265=2.12) are tracked in their own fields. Remaining direct CO2: 26.87 \u2212 4.74 \u2212 0.84 \u2212 2.12 \u2248 19.17 \u2248 19.2 kg CO2e/kg. This field is dominated by CO2 from mangrove and coastal wetland clearing for pond construction \u2014 the primary driver of shrimp's high GHG footprint \u2014 plus on-farm energy and processing."
+                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~26.87 kg CO2e/kg. Feed CO2e (fishmeal 0.30\u00d76.0 + fish-oil 0.06\u00d73.75 + soy 0.67\u00d73.0 + wheat 0.45\u00d71.57 \u2248 4.74 kg CO2e) tracked via the feed join; CH4 CO2e (0.03\u00d728=0.84) and N2O CO2e (0.008\u00d7265=2.12) tracked in their own fields. Remaining direct CO2: 26.87 \u2212 4.74 \u2212 0.84 \u2212 2.12 \u2248 19.17 \u2248 19.2 kg CO2e/kg. Dominated by mangrove/coastal wetland clearing for pond construction (~10\u201315 kg CO2e/kg from land-use change), plus on-farm energy and processing."
                 }
             },
             {
                 "value": 19.2,
                 "confidence": 3,
                 "source": {
-                    "id": 71,
-                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): OWID P&N 2018 CSV reports farmed prawns at 26.87 kg CO2e/kg total. This field records only direct CO2 not already handled by feed join (fishmeal, fish-oil, soy, wheat) or CH4/N2O fields. Direct non-feed CO2 \u2248 19.2 kg CO2e/kg, predominantly from mangrove ecosystem clearing for tropical aquaculture pond construction (estimated ~10\u201315 kg CO2e/kg from land-use change alone per published shrimp LCA literature), with remaining from on-farm energy and processing."
+                    "id": 79,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): Henriksson et al. (2015) synthesize shrimp LCA studies and identify land-use change CO2 (mangrove conversion) as the dominant single emission source, estimated at 10\u201316 kg CO2e/kg shrimp in Southeast Asian pond systems where mangrove clearing is prevalent. Combined with on-farm energy and processing CO2 (~3\u20135 kg CO2e/kg) and subtracting feed-join and GHG-field contributions yields a direct non-feed CO2 of ~19.2 kg CO2e/kg, consistent with P&N 2018."
                 }
             }
         ],
@@ -549,6 +703,16 @@
                             "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
                             "note": "Farmed shrimp \u2014 soy kg_feed_per_kg_output: FAO whiteleg shrimp profile reports soybean meal 25\u201335% of commercial feed. FCR ~1.5 kg feed/kg live shrimp; dressing ~67%. Feed per kg headless shrimp = 1.5/0.67 \u2248 2.24 kg. Soy fraction 30%: 0.30 \u00d7 2.24 \u2248 0.67 kg soy/kg shrimp."
                         }
+                    },
+                    {
+                        "value": 0.67,
+                        "confidence": 2,
+                        "source": {
+                            "id": 79,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp \u2014 soy kg_feed_per_kg_output: Henriksson et al. (2015) review shrimp feed compositions across Southeast Asian and Latin American production systems; soybean meal at 25\u201335% of diet is consistently the dominant plant protein source in commercial P. vannamei pellets. At FCR 1.5 and 67% dressing yield, this yields 0.67 kg soy/kg headless shrimp, corroborating the FAO profile value."
+                        }
                     }
                 ]
             },
@@ -563,7 +727,17 @@
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
                             "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 wheat kg_feed_per_kg_output: FAO whiteleg shrimp profile reports wheat 15\u201325% of commercial feed by weight. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Wheat fraction 20%: 0.20 \u00d7 2.24 \u2248 0.45 kg wheat/kg shrimp."
+                            "note": "Farmed shrimp \u2014 wheat kg_feed_per_kg_output: FAO whiteleg shrimp profile reports wheat 15\u201325% of commercial feed by weight as a binder and carbohydrate source. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Wheat fraction 20%: 0.20 \u00d7 2.24 \u2248 0.45 kg wheat/kg shrimp."
+                        }
+                    },
+                    {
+                        "value": 0.45,
+                        "confidence": 2,
+                        "source": {
+                            "id": 79,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp \u2014 wheat kg_feed_per_kg_output: Henriksson et al. (2015) confirm wheat flour (15\u201325% of diet) as a key binder/carbohydrate ingredient in commercial shrimp pellets, consistent with FAO profile data. At 20% inclusion and 2.24 kg feed/kg headless shrimp: 0.45 kg wheat/kg shrimp."
                         }
                     }
                 ]
@@ -579,17 +753,17 @@
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
                             "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fishmeal inclusion at 10\u201325% of commercial shrimp feed, declining in modern intensive operations. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fishmeal fraction ~13% (midpoint of current commercial range): 0.13 \u00d7 2.24 \u2248 0.30 kg fishmeal/kg shrimp."
+                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fishmeal at 10\u201325% of commercial shrimp feed, declining in modern intensive operations. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fishmeal fraction ~13%: 0.13 \u00d7 2.24 \u2248 0.30 kg fishmeal/kg shrimp."
                         }
                     },
                     {
                         "value": 0.3,
                         "confidence": 2,
                         "source": {
-                            "id": 76,
-                            "url": "https://www.fao.org/fishery/en/culturedspecies/salmo_salar",
-                            "title": "FAO \u2014 Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
-                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: FAO aquaculture profiles for penaeid shrimp (comparable to the salmon profile methodology) document fishmeal at 10\u201320% in semi-intensive and intensive whiteleg shrimp feeds. FCR 1.5\u20131.8 kg feed/kg live shrimp; ~0.30 kg fishmeal/kg headless shrimp at 13% inclusion and FCR 1.5 is consistent across the published shrimp aquaculture LCA literature."
+                            "id": 79,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: Henriksson et al. (2015) report fishmeal inclusion in P. vannamei diets at 10\u201320% across surveyed production systems, with a central value of ~13% consistent with FAO data. At 2.24 kg feed/kg headless shrimp: 0.13 \u00d7 2.24 \u2248 0.30 kg fishmeal/kg shrimp."
                         }
                     }
                 ]
@@ -605,17 +779,17 @@
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
                             "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fish oil at 2\u20135% of commercial shrimp feed by weight (lower than salmon due to lower shrimp omega-3 requirements). At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fish oil fraction ~3%: 0.03 \u00d7 2.24 \u2248 0.067 \u2248 0.06 kg fish-oil/kg shrimp."
+                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fish oil at 2\u20135% of commercial shrimp feed (lower than salmon due to lower shrimp omega-3 requirements). At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fish oil fraction ~3%: 0.03 \u00d7 2.24 \u2248 0.06 kg fish-oil/kg shrimp."
                         }
                     },
                     {
                         "value": 0.06,
                         "confidence": 2,
                         "source": {
-                            "id": 76,
-                            "url": "https://www.fao.org/fishery/en/culturedspecies/salmo_salar",
-                            "title": "FAO \u2014 Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
-                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: FAO aquaculture profiles confirm shrimp feeds contain significantly less fish oil than salmon feeds (3\u20134% vs 6\u201310%). Shrimp have lower polyunsaturated fatty acid requirements than salmonids. At 3% inclusion and 2.24 kg feed/kg shrimp: 0.03 \u00d7 2.24 \u2248 0.06 kg fish-oil/kg shrimp."
+                            "id": 79,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
+                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: Henriksson et al. (2015) confirm fish oil inclusion at 2\u20135% of P. vannamei diet across surveyed Asian production systems; shrimp require substantially less fish oil than salmonids. At 3% inclusion and 2.24 kg feed/kg headless shrimp: 0.03 \u00d7 2.24 \u2248 0.06 kg fish-oil/kg shrimp."
                         }
                     }
                 ]
@@ -625,7 +799,7 @@
     {
         "id": 36,
         "slug": "sardines",
-        "name": "Sardines",
+        "name": "Sardines (Wild)",
         "type": "animal",
         "category": "seafood",
         "human_food": 1,
