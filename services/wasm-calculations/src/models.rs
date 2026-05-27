@@ -198,7 +198,7 @@ pub struct ColumnRange {
 
 /// Per-column log ranges used for relative scoring.
 #[derive(Debug)]
-pub struct Averages {
+pub struct ColumnRanges {
     pub emissions:       Option<ColumnRange>,
     pub land_use:        Option<ColumnRange>,
     pub water:           Option<ColumnRange>,

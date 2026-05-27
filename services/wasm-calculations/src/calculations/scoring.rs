@@ -1,7 +1,7 @@
-use crate::models::{Averages, ColumnRange, ScoredRow};
+use crate::models::{ColumnRanges, ColumnRange, ScoredRow};
 
-pub(super) fn compute_averages(rows: &[ScoredRow]) -> Averages {
-    Averages {
+pub(super) fn compute_column_ranges(rows: &[ScoredRow]) -> ColumnRanges {
+    ColumnRanges {
         emissions:       compute_column_log_range(rows, |r| r.emissions),
         land_use:        compute_column_log_range(rows, |r| r.land_use),
         water:           compute_column_log_range(rows, |r| r.water),
@@ -25,7 +25,7 @@ fn compute_column_log_range(
     Some(ColumnRange { log_min, log_max })
 }
 
-pub(super) fn compute_final_score(row: &ScoredRow, averages: &Averages) -> Option<f64> {
+pub(super) fn compute_final_score(row: &ScoredRow, averages: &ColumnRanges) -> Option<f64> {
     let mut scores = Vec::new();
 
     if let (Some(value), Some(range)) = (row.nutrition_score, averages.nutrition_score) {
