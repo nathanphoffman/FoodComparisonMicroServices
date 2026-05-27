@@ -3,6 +3,7 @@ use crate::models::{EcoDestructionDetail, FoodRow, LandUseDetail};
 // ── Eco destruction constants (matching FoodTableCalculations.ts exactly) ─────
 const SQUARE_METERS_PER_HA: f64   = 10_000.0;
 const NEURAL_EXPONENT: f64        = 1.5;
+const NEURAL_WEIGHT_EXPONENT: f64 = 0.75;
 
 const INSECT_DENSITY_PER_HA: f64  = 1e9;
 const INSECT_NEURONS: f64         = 1e6;
@@ -124,8 +125,7 @@ pub(super) fn compute_direct_kill(food: &FoodRow) -> f64 {
     };
 
     let neuron_score = neuron_count.powf(NEURAL_EXPONENT);
-    let edible_mass  = body_weight_kg * yield_fraction;
-    neuron_score * lifespan / edible_mass
+    neuron_score * lifespan / body_weight_kg.powf(NEURAL_WEIGHT_EXPONENT)
 }
 
 // ── Eco destruction ───────────────────────────────────────────────────────────

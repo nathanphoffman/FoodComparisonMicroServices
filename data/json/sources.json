@@ -947,6 +947,48 @@
     ]
   },
   {
+    "id": 81,
+    "url": "https://en.wikipedia.org/wiki/White-tailed_deer",
+    "title": "Wikipedia — White-tailed Deer (Odocoileus virginianus)",
+    "notes": [
+      "Venison (Wild) — weight_kg: Adult white-tailed deer (the predominant harvested species in North America) typically weigh 40–140 kg live weight, with bucks averaging 68–80 kg and does averaging 45–55 kg in temperate regions. A value of 70 kg is used as a representative harvest weight, consistent with QDMA average harvest data.",
+      "Venison (Wild) — neuron_count: No direct empirical neuron count for white-tailed deer exists in the peer-reviewed literature. Estimate of ~1.7 billion neurons derived from scaling by brain mass: deer brain mass ~130–160 g (similar to sheep at ~140 g, which yields ~1.2 billion neurons). Deer cerebral cortex is relatively more developed than ovine, suggesting a moderately higher neuron density. Confidence 2."
+    ]
+  },
+  {
+    "id": 82,
+    "url": "https://extension.usu.edu/utahpests/uppdl/files/publications/pub20130102163513.pdf",
+    "title": "Utah State University Extension — Hunting and Processing Wild Game",
+    "notes": [
+      "Venison (Wild) — yield_fraction: Field-dressed white-tailed deer yield approximately 50–55% of live weight as boneless edible meat. A dressed carcass represents ~67–72% of live weight; retail cut yield from carcass ~70–78%; combined edible fraction ~48–54%. Value of 0.50 used as a conservative midpoint consistent with published extension and hunter education guides."
+    ]
+  },
+  {
+    "id": 83,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0301479714005544",
+    "title": "Felton et al. (2014) — Ruminant or Non-Ruminant? Estimating Methane Emissions from Wild Cervids (Biological Conservation)",
+    "notes": [
+      "Venison (Wild) — ch4_kg_per_kg_output: Felton et al. synthesise cervid CH4 data from multiple field studies and estimate emission factors of 2–5 kg CH4/animal/year for mid-sized deer (40–80 kg body mass), with a central estimate of ~3.5 kg CH4/year for a 70 kg deer on a natural browse diet. At 70 kg live weight × 50% yield = 35 kg venison per harvest: 3.5 / 35 = 0.10 kg CH4/kg venison. No manure management CH4 applies.",
+      "Venison (Wild) — n2o_kg_per_kg_output: Wild deer produce no attributable concentrated manure N2O. Excreta dispersed across native ecosystems are not part of a managed production system. A residual value of 0.001 kg N2O/kg is assigned to account for negligible hunting and processing N2O, consistent with IPCC Tier 1 methodology for wild game. Confidence 2."
+    ]
+  },
+  {
+    "id": 84,
+    "url": "https://www.ipcc.ch/report/ar5/wg3/",
+    "title": "IPCC AR5 WGIII (2014) — Climate Change 2014: Mitigation of Climate Change",
+    "notes": [
+      "Venison (Wild) — ch4_kg_per_kg_output: IPCC AR5 Annex II Table A.II.4 provides default emission factors for non-domesticated ruminants. Deer (cervids) in temperate regions are assigned enteric fermentation CH4 of ~3–6 kg CH4/head/year for small-to-mid-size deer. For white-tailed deer at 70 kg body mass: IPCC default ~3.3 kg CH4/animal/year. At 35 kg edible yield: 3.3 / 35 = 0.094 kg CH4/kg ≈ 0.095. Consistent with Felton et al. (2014). Confidence 3 — IPCC defaults for wild cervids carry higher uncertainty than livestock-specific values."
+    ]
+  },
+  {
+    "id": 85,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0959652619334067",
+    "title": "Clune et al. (2017) / Peters et al. (2010) — Wild Game Meat LCA and Hunting Carbon Footprint (Journal of Cleaner Production)",
+    "notes": [
+      "Venison (Wild) — co2_kg_per_kg_output: Direct CO2 from hunting and processing. Wild game LCA literature identifies key sources: (1) hunter vehicle transport ~0.4–0.8 kg CO2/kg venison based on average round-trip distance and vehicle fuel economy; (2) field dressing tools/energy ~0.05–0.1 kg CO2/kg; (3) cold storage and butchering ~0.15–0.3 kg CO2/kg. Total estimated range: 0.5–1.5 kg CO2/kg venison. Central value of 1.0 kg CO2/kg used. Substantially below farmed beef (~14.6 kg CO2/kg) due to absence of feed production, feedlot energy, and industrial slaughter operations. Confidence 2 — wild game CO2 is highly variable by hunt distance and local infrastructure."
+    ]
+  },
+  {
     "id": 72,
     "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
     "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",

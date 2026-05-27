@@ -95,7 +95,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         water: Some(water_raw / divisor),
         direct_kill: Some(direct_kill_raw / divisor),
         // kill_multiplier is applied to eco_destruction as a divisor, matching TS
-        eco_destruction: Some(eco_raw / divisor / query.kill_multiplier),
+        eco_destruction: Some(direct_kill_raw/divisor + eco_raw / divisor / query.kill_multiplier),
         final_score: None, // filled in by apply()
 
         emissions_breakdown,

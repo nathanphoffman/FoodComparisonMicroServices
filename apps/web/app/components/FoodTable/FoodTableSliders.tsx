@@ -170,7 +170,7 @@ export function FoodTableSliders({ onChange, onGreenWaterChange, onGreyWaterChan
                 <span>Kill : Accident</span>
                 <span className="font-medium text-neutral-700">{philosophicalKill}×</span>
             </div>
-            <Slider min={1} max={10000} value={philosophicalKill} onChange={handlePhilosophicalKill} />
+            <Slider min={1} max={1000} value={philosophicalKill} onChange={handlePhilosophicalKill} />
             <div className="text-xs text-neutral-400 mt-0.5">how much worse intentional killing is vs. accidental</div>
         </div>
     </div>
