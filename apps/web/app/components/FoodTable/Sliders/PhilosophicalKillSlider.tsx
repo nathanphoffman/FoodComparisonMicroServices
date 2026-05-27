@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 
-const DEFAULT_PHILOSOPHICAL_KILL = 1;
+const DEFAULT_PHILOSOPHICAL_KILL = 50;
 
 export function PhilosophicalKillSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [philosophicalKill, setPhilosophicalKill] = useState(DEFAULT_PHILOSOPHICAL_KILL);
@@ -22,7 +22,7 @@ export function PhilosophicalKillSlider({ onChange }: { onChange?: (v: number) =
                 <span>Kill : Accident</span>
                 <span className="font-medium text-neutral-700">{philosophicalKill}×</span>
             </div>
-            <Slider min={1} max={1000} value={philosophicalKill} onChange={handleChange} />
+            <Slider min={1} max={100} value={philosophicalKill} onChange={handleChange} />
             <div className="text-xs text-neutral-400 mt-0.5">how much worse intentional killing is vs. accidental</div>
         </div>
     );
