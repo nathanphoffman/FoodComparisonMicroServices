@@ -13,7 +13,6 @@ const CALORIE_NORM_FALLBACK: f64 = 1_000.0;
 const PROTEIN_NORM_FALLBACK: f64 = 100.0;
 const FIBER_SCORE_WEIGHT: f64 = 2.0;
 const SAT_FAT_SCORE_PENALTY: f64 = 2.0;
-const NUTRITION_SCORE_SCALE: f64 = 100.0;
 
 // ── Batch-derived normalisation ───────────────────────────────────────────────
 
@@ -71,7 +70,9 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let nutrition_score = if food.calories > 0.0 {
         let raw =
             food.protein + FIBER_SCORE_WEIGHT * food.fiber - SAT_FAT_SCORE_PENALTY * food.sat_fat;
-        Some(raw * 100.0 / divisor)
+        
+        // nutrition score should be flat, not weighted by a divisor it is absolute
+        Some(raw * 100.0/food.calories)
     } else {
         None
     };
@@ -112,12 +113,10 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
     let calories_per_kg = food.calories * GRAMS_PER_KG;
     let protein_per_kg = food.protein * GRAMS_PER_KG;
 
-    // Divide by batch-derived means so the average food contributes ~1.0 on
-    // each dimension — the same unit as the mass term — making the slider
-    // weights directly comparable regardless of dataset scale.
+    // norms are also per gram, so we are effectively amount over norm times weight percentage
     let weighted = (query.mass_weight / 100.0) * 1.0
-        + (query.calorie_weight / 100.0) * (norms.calorie_norm / calories_per_kg)
-        + (query.protein_weight / 100.0) * (norms.protein_norm / protein_per_kg);
+        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm )
+        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
     if weighted > 0.0 {
         weighted
     } else {
