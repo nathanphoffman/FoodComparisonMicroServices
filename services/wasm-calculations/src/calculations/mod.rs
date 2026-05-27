@@ -8,16 +8,48 @@ mod water;
 use crate::models::{FoodRow, ScoredRow, SliderQuery};
 
 const GRAMS_PER_KG: f64 = 1_000.0;
-const CALORIE_NORM: f64 = 1_000.0;
-const PROTEIN_NORM: f64 = 100.0;
+const CALORIE_NORM_FALLBACK: f64 = 1_000.0;
+const PROTEIN_NORM_FALLBACK: f64 = 100.0;
 const FIBER_SCORE_WEIGHT: f64 = 2.0;
 const SAT_FAT_SCORE_PENALTY: f64 = 2.0;
 const NUTRITION_SCORE_SCALE: f64 = 100.0;
 
+// ── Batch-derived normalisation ───────────────────────────────────────────────
+
+/// Arithmetic mean of the positive, finite values in `iter`, or `None` if
+/// there are no such values.
+fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
+    let (sum, count) = iter
+        .filter(|&v| v > 0.0 && v.is_finite())
+        .fold((0.0_f64, 0_usize), |(s, n), v| (s + v, n + 1));
+    if count == 0 { None } else { Some(sum / count as f64) }
+}
+
+/// Per-batch normalization factors for the divisor.
+/// Each field is the arithmetic mean of the corresponding per-kg value across
+/// the batch, falling back to a legacy constant when all values are zero or the
+/// batch is empty.
+struct NormFactors {
+    calorie_norm: f64,
+    protein_norm: f64,
+}
+
+impl NormFactors {
+    fn from_foods(foods: &[FoodRow]) -> Self {
+        Self {
+            calorie_norm: mean_nonzero(foods.iter().map(|f| f.calories * GRAMS_PER_KG))
+                .unwrap_or(CALORIE_NORM_FALLBACK),
+            protein_norm: mean_nonzero(foods.iter().map(|f| f.protein * GRAMS_PER_KG))
+                .unwrap_or(PROTEIN_NORM_FALLBACK),
+        }
+    }
+}
+
 // ── Entry point ──────────────────────────────────────────────────────────────
 
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
-    let mut rows: Vec<ScoredRow> = foods.iter().map(|food| compute_row(food, query)).collect();
+    let norms = NormFactors::from_foods(&foods);
+    let mut rows: Vec<ScoredRow> = foods.iter().map(|food| compute_row(food, query, &norms)).collect();
     let column_ranges = scoring::compute_column_ranges(&rows);
     for row in &mut rows {
         row.final_score = scoring::compute_final_score(row, &column_ranges);
@@ -27,8 +59,8 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
 
 // ── Per-food computation ─────────────────────────────────────────────────────
 
-fn compute_row(food: &FoodRow, query: &SliderQuery) -> ScoredRow {
-    let divisor = compute_divisor(food, query);
+fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> ScoredRow {
+    let divisor = compute_divisor(food, query, norms);
 
     let nutrition_score = if food.calories > 0.0 {
         let raw =
@@ -69,16 +101,17 @@ fn compute_row(food: &FoodRow, query: &SliderQuery) -> ScoredRow {
 
 // ── Divisor (unit normalisation) ─────────────────────────────────────────────
 
-fn compute_divisor(food: &FoodRow, query: &SliderQuery) -> f64 {
-
+fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> f64 {
     // calories and protein are given to us in per gram
     let calories_per_kg = food.calories * GRAMS_PER_KG;
     let protein_per_kg = food.protein * GRAMS_PER_KG;
 
-    // these are the percentile sliders for weighting the divisor: X per (these 3 metrics)
+    // Divide by batch-derived means so the average food contributes ~1.0 on
+    // each dimension — the same unit as the mass term — making the slider
+    // weights directly comparable regardless of dataset scale.
     let weighted = (query.mass_weight / 100.0) * 1.0
-        + (query.calorie_weight / 100.0) * (calories_per_kg / CALORIE_NORM)
-        + (query.protein_weight / 100.0) * (protein_per_kg / PROTEIN_NORM);
+        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
+        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
     if weighted > 0.0 {
         weighted
     } else {
