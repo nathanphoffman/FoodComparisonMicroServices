@@ -71,7 +71,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let nutrition_score = if food.calories > 0.0 {
         let raw =
             food.protein + FIBER_SCORE_WEIGHT * food.fiber - SAT_FAT_SCORE_PENALTY * food.sat_fat;
-        Some(raw / food.calories * NUTRITION_SCORE_SCALE / divisor)
+        Some(raw * 100.0 / divisor)
     } else {
         None
     };
@@ -116,8 +116,8 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
     // each dimension — the same unit as the mass term — making the slider
     // weights directly comparable regardless of dataset scale.
     let weighted = (query.mass_weight / 100.0) * 1.0
-        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
-        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
+        + (query.calorie_weight / 100.0) * (norms.calorie_norm / calories_per_kg)
+        + (query.protein_weight / 100.0) * (norms.protein_norm / protein_per_kg);
     if weighted > 0.0 {
         weighted
     } else {
