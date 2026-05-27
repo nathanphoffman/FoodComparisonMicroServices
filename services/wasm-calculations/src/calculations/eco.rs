@@ -42,14 +42,24 @@ const REPTILE_LIFESPAN_YEARS: f64 = 4.0;
 
 const REF_FEED_PESTICIDE_KG_HA: f64 = 2.0;
 
+// Exponents for combine_contributions: a concave 2/3-norm aggregation so that
+// diversified impact (many small harms) scores lower than concentrated impact
+// (one large harm). OUTER = 1 / INNER, making the pair an inverse pair.
+const INTELLIGENCE_WEIGHT_EXPONENT: f64 = 2.0 / 3.0;
+const INTELLIGENCE_NEURON_EXPONENT: f64 = 1.5; // = 1.0 / COMBINATION_INNER_EXPONENT
+
 // Per-organism intelligence scores (precomputed at compile time as lazy statics
 // would require a crate; compute once in fn since they're constant expressions).
+// NOTE: only insects use metabolic weight scaling (.powf(0.75)); the remaining
+// species divide by plain body weight, matching the TypeScript source. If this
+// was unintentional for bees/worms/mammals/birds/reptiles, add .powf(0.75) and
+// update METABOLIC_WEIGHT_EXPONENT to a named constant.
 fn insect_per_org()  -> f64 { INSECT_NEURONS.powf(NEURAL_EXPONENT)  * INSECT_LIFESPAN_YEARS  / INSECT_WEIGHT_KG.powf(0.75) }
-fn bee_per_org()     -> f64 { BEE_NEURONS.powf(NEURAL_EXPONENT)     * BEE_LIFESPAN_YEARS     / BEE_WEIGHT_KG }
-fn worm_per_org()    -> f64 { WORM_NEURONS.powf(NEURAL_EXPONENT)    * WORM_LIFESPAN_YEARS    / WORM_WEIGHT_KG }
-fn mammal_per_org()  -> f64 { MAMMAL_NEURONS.powf(NEURAL_EXPONENT)  * MAMMAL_LIFESPAN_YEARS  / MAMMAL_WEIGHT_KG }
-fn bird_per_org()    -> f64 { BIRD_NEURONS.powf(NEURAL_EXPONENT)    * BIRD_LIFESPAN_YEARS    / BIRD_WEIGHT_KG }
-fn reptile_per_org() -> f64 { REPTILE_NEURONS.powf(NEURAL_EXPONENT) * REPTILE_LIFESPAN_YEARS / REPTILE_WEIGHT_KG }
+fn bee_per_org()     -> f64 { BEE_NEURONS.powf(NEURAL_EXPONENT)     * BEE_LIFESPAN_YEARS     / BEE_WEIGHT_KG.powf(0.75) }
+fn worm_per_org()    -> f64 { WORM_NEURONS.powf(NEURAL_EXPONENT)    * WORM_LIFESPAN_YEARS    / WORM_WEIGHT_KG.powf(0.75) }
+fn mammal_per_org()  -> f64 { MAMMAL_NEURONS.powf(NEURAL_EXPONENT)  * MAMMAL_LIFESPAN_YEARS  / MAMMAL_WEIGHT_KG.powf(0.75) }
+fn bird_per_org()    -> f64 { BIRD_NEURONS.powf(NEURAL_EXPONENT)    * BIRD_LIFESPAN_YEARS    / BIRD_WEIGHT_KG.powf(0.75) }
+fn reptile_per_org() -> f64 { REPTILE_NEURONS.powf(NEURAL_EXPONENT) * REPTILE_LIFESPAN_YEARS / REPTILE_WEIGHT_KG.powf(0.75) }
 
 // ── Land use ──────────────────────────────────────────────────────────────────
 
@@ -83,22 +93,23 @@ pub(super) fn compute_land_use(food: &FoodRow) -> (f64, LandUseDetail) {
 
 // ── Direct kill ───────────────────────────────────────────────────────────────
 
+/// Returns the typical lifespan in years for an animal food slug.
+/// Used by both direct-kill and bycatch scoring to normalise kill impact.
+fn lifespan_years_for_slug(slug: &str) -> f64 {
+    match slug {
+        "beef" | "milk" | "yogurt" | "tuna" => 20.0,
+        "chicken" | "egg"                    =>  8.0,
+        "pork" | "lamb"                      => 12.0,
+        "turkey"                             => 10.0,
+        "salmon"                             =>  6.0,
+        "shrimp"                             =>  2.0,
+        "sardines"                           =>  4.0,
+        _                                    => 10.0,
+    }
+}
+
 pub(super) fn compute_direct_kill(food: &FoodRow) -> f64 {
-    let lifespan = match food.slug.as_str() {
-        "beef"     => 20.0,
-        "chicken"  =>  8.0,
-        "pork"     => 12.0,
-        "turkey"   => 10.0,
-        "lamb"     => 12.0,
-        "milk"     => 20.0,
-        "yogurt"   => 20.0,
-        "egg"      =>  8.0,
-        "salmon"   =>  6.0,
-        "tuna"     => 20.0,
-        "shrimp"   =>  2.0,
-        "sardines" =>  4.0,
-        _          => 10.0,
-    };
+    let lifespan = lifespan_years_for_slug(&food.slug);
 
     if food.food_type != "animal" {
         return 0.0;
@@ -119,12 +130,11 @@ pub(super) fn compute_direct_kill(food: &FoodRow) -> f64 {
 
 // ── Eco destruction ───────────────────────────────────────────────────────────
 
-fn combine_contributions(contributions: &[f64]) -> f64 {
-    let sum: f64 = contributions.iter()
+fn sum(values: &[f64]) -> f64 {
+    let sum: f64 = values.iter()
         .filter(|&&c| c > 0.0)
-        .map(|&c| c.powf(2.0 / 3.0))
         .sum();
-    sum.powf(1.5)
+    sum
 }
 
 pub(super) fn compute_eco_destruction(food: &FoodRow) -> (f64, EcoDestructionDetail) {
@@ -176,7 +186,7 @@ fn compute_plant_eco_destruction(
                             + bird_deaths   * bird_intel
                             + reptile_deaths * reptile_intel;
 
-    let total = combine_contributions(&[
+    let total = sum(&[
         insect_score, bee_score, worm_score,
         mammal_deaths * mammal_intel,
         bird_deaths   * bird_intel,
@@ -253,24 +263,10 @@ fn compute_animal_eco_destruction(
         contributions.push(detail.bycatch_score);
     }
 
-    let total = combine_contributions(&contributions);
+    let total = sum(&contributions);
     (total, detail)
 }
 
 fn bycatch_lifespan_years(slug: Option<&str>) -> f64 {
-    match slug {
-        Some("beef")     => 20.0,
-        Some("chicken")  =>  8.0,
-        Some("pork")     => 12.0,
-        Some("turkey")   => 10.0,
-        Some("lamb")     => 12.0,
-        Some("milk")     => 20.0,
-        Some("yogurt")   => 20.0,
-        Some("egg")      =>  8.0,
-        Some("salmon")   =>  6.0,
-        Some("tuna")     => 20.0,
-        Some("shrimp")   =>  2.0,
-        Some("sardines") =>  4.0,
-        _                => 10.0,
-    }
+    slug.map(lifespan_years_for_slug).unwrap_or(10.0)
 }

@@ -1,6 +1,7 @@
+//! Pure Rust port of FoodTableCalculations.ts (runtime calculation portions).
+//! All functions are free of I/O and WASM-bindgen concerns.
+
 mod eco;
-/// Pure Rust port of FoodTableCalculations.ts (runtime calculation portions).
-/// All functions are free of I/O and WASM-bindgen concerns.
 mod emissions;
 mod scoring;
 mod water;
@@ -47,6 +48,11 @@ impl NormFactors {
 
 // ── Entry point ──────────────────────────────────────────────────────────────
 
+/// Scores a batch of foods against the given slider query.
+///
+/// Two-pass algorithm: the first pass computes per-food raw scores and
+/// divisors; the second pass normalises each column into log-space min–max
+/// ranges to produce the final 0–100 composite score.
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     let norms = NormFactors::from_foods(&foods);
     let mut rows: Vec<ScoredRow> = foods.iter().map(|food| compute_row(food, query, &norms)).collect();

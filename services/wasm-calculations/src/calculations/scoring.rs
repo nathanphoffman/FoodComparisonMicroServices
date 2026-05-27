@@ -1,5 +1,12 @@
 use crate::models::{ColumnRanges, ColumnRange, ScoredRow};
 
+/// Indicates whether a lower or higher raw value represents a better outcome
+/// for a scored dimension.
+enum ScoreDirection {
+    LowerIsBetter,
+    HigherIsBetter,
+}
+
 pub(super) fn compute_column_ranges(rows: &[ScoredRow]) -> ColumnRanges {
     ColumnRanges {
         emissions:       compute_column_log_range(rows, |r| r.emissions),
@@ -29,22 +36,22 @@ pub(super) fn compute_final_score(row: &ScoredRow, averages: &ColumnRanges) -> O
     let mut scores = Vec::new();
 
     if let (Some(value), Some(range)) = (row.nutrition_score, averages.nutrition_score) {
-        scores.push(dimension_score(value, range, false));
+        scores.push(dimension_score(value, range, ScoreDirection::HigherIsBetter));
     }
     if let (Some(value), Some(range)) = (row.emissions, averages.emissions) {
-        scores.push(dimension_score(value, range, true));
+        scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
     if let (Some(value), Some(range)) = (row.land_use, averages.land_use) {
-        scores.push(dimension_score(value, range, true));
+        scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
     if let (Some(value), Some(range)) = (row.water, averages.water) {
-        scores.push(dimension_score(value, range, true));
+        scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
     if let (Some(value), Some(range)) = (row.direct_kill, averages.direct_kill) {
-        scores.push(dimension_score(value, range, true));
+        scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
     if let (Some(value), Some(range)) = (row.eco_destruction, averages.eco_destruction) {
-        scores.push(dimension_score(value, range, true));
+        scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
 
     if scores.is_empty() {
@@ -54,16 +61,20 @@ pub(super) fn compute_final_score(row: &ScoredRow, averages: &ColumnRanges) -> O
     Some(mean.clamp(0.0, 100.0))
 }
 
-fn dimension_score(value: f64, range: ColumnRange, lower_is_better: bool) -> f64 {
-    if value <= 0.0 { return if lower_is_better { 100.0 } else { 0.0 }; }
+fn dimension_score(value: f64, range: ColumnRange, direction: ScoreDirection) -> f64 {
+    if value <= 0.0 {
+        return match direction {
+            ScoreDirection::LowerIsBetter  => 100.0,
+            ScoreDirection::HigherIsBetter =>   0.0,
+        };
+    }
     let log_val = value.ln();
     if !log_val.is_finite() { return 50.0; }
     let span = range.log_max - range.log_min;
     if span <= 0.0 { return 50.0; } // all foods identical on this dimension
-    let score = if lower_is_better {
-        100.0 * (range.log_max - log_val) / span
-    } else {
-        100.0 * (log_val - range.log_min) / span
+    let score = match direction {
+        ScoreDirection::LowerIsBetter  => 100.0 * (range.log_max - log_val) / span,
+        ScoreDirection::HigherIsBetter => 100.0 * (log_val - range.log_min) / span,
     };
     score.clamp(0.0, 100.0)
 }
