@@ -7,6 +7,7 @@ import { PhilosophicalKillSlider }          from "./Sliders/PhilosophicalKillSli
 import { NeuronExponentSlider }             from "./Sliders/NeuronExponentSlider";
 import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider";
 import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
+import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import type { FoodWeights }                 from "./FoodTableTypes";
 
 export type { FoodWeights };
@@ -29,19 +30,20 @@ export function FoodTableSliders({
     onFinalIntelligenceExponentChange?: (v: number) => void;
 }) {
     return (
-        <div className="flex flex-col gap-4 mb-4">
-            <div className="flex gap-6">
+        <div className="flex flex-col gap-3 mb-4">
+            <ExpandableSliderGroup label="Weight">
                 <WeightSliders onChange={onChange} />
-                <GreenWaterSlider onChange={onGreenWaterChange} />
-                <GreyWaterSlider onChange={onGreyWaterChange} />
-                <PhilosophicalKillSlider onChange={onPhilosophicalKillChange} />
-            </div>
-            <div className="flex gap-6 border-t border-neutral-100 pt-3">
-                <div className="text-xs text-neutral-400 self-center whitespace-nowrap pr-2">Intelligence math</div>
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Intelligence">
                 <NeuronExponentSlider onChange={onNeuronExponentChange} />
                 <WeightExponentSlider onChange={onWeightExponentChange} />
                 <FinalIntelligenceExponentSlider onChange={onFinalIntelligenceExponentChange} />
-            </div>
+                <PhilosophicalKillSlider onChange={onPhilosophicalKillChange} />
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Water">
+                <GreyWaterSlider onChange={onGreyWaterChange} />
+                <GreenWaterSlider onChange={onGreenWaterChange} />
+            </ExpandableSliderGroup>
         </div>
     );
 }
