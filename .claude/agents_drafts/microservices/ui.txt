@@ -23,5 +23,15 @@ Use Tailwind for all styling.
 Named exports only.
 Server components by default — add `"use client"` only when state or
 browser APIs are needed.
+
+The FoodTable is split across seven files by concern: `FoodTableTypes.ts`
+(types), `FoodTableCalculations.ts` (color and format logic),
+`FoodTableStyles.ts` (shared Tailwind strings), `FoodTableFields.tsx`
+(cell components), `FoodTableTooltips.tsx` (tooltip content),
+`FoodTableSliders.tsx` (user-adjustable sliders), and `FoodTable.tsx`
+(main table, fetches data, manages sort/visibility state).
+When adding a column, work through the files in that order.
 When adding a slider, wire it through FoodTableSliders, update the WASM
 score call, and add a tooltip entry.
+The `dummy` column in `FoodTable.tsx` is a dev fixture — leave it with
+`defaultVisible: false`.
