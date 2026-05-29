@@ -17,3 +17,8 @@ Leave out implementation details.
 You do not read code directly.
 Your only inputs are audit entries.
 Your only outputs are updates to `.claude/docs/`.
+
+Every sentence ends on its own line.
+Wrap lines at 80 characters — break before that limit if a natural word
+boundary is close.
+No sentence should require horizontal scrolling to read.

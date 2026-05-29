@@ -1,0 +1,32 @@
+The API service is the data layer that the web application talks to.
+It exposes a single endpoint that returns the full food catalog in one
+response, giving the front end everything it needs to display comparisons
+and run scoring without making additional requests.
+
+Every food comes back with a complete nutritional profile — calories,
+protein, fat, fiber, carbohydrates, sugar, sodium, cholesterol, and both
+saturated and trans fat — all expressed per 100g serving so foods are
+directly comparable.
+
+Plant-based foods carry a set of environmental metrics: land required to
+produce them, carbon emissions, and multiple water footprint dimensions
+(green, blue, and grey water).
+Pesticide impact is also captured, including effects on insects and
+terrestrial species, and a specific measure of hazard to bees.
+
+Animal-based foods carry a different set of metrics: greenhouse gas
+emissions broken down by type, pasture land use, and biological data like
+body weight and the fraction of the animal that becomes edible food.
+A neuron count is included to support the philosophical scoring dimension
+in the web app.
+
+For seafood, the response includes bycatch information — other animals
+caught incidentally during harvest — with their own biological data so
+that secondary harm can be factored into scores.
+
+Feed data is aggregated and rolled up into the animal food records,
+meaning the environmental cost of producing an animal's feed is already
+reflected in its metrics rather than being left to the front end to
+calculate.
+All foods are tagged as plant or animal so the web app can apply the
+right logic to each.

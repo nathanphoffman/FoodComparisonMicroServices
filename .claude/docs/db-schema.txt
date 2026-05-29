@@ -1,0 +1,34 @@
+The db-schema service defines the structure of the database that ties
+the whole application together.
+It owns every table definition — foods, plants, animals, feed
+compositions, pesticides, plant-pesticide associations, ecological kill
+estimates, source references, and the normalized view that combines
+these into a single unified surface for querying.
+
+Documentation is built into the schema itself.
+Every table and every non-obvious column carries an inline description
+explaining what it represents and, where relevant, what units are being
+used.
+Columns that bundle multiple related values together — such as a
+measurement paired with its source reference and a confidence rating —
+are explained inline so the meaning of each part is always visible
+alongside the data it describes.
+
+The schema is the authoritative record of what data the application
+stores and how that data is organized.
+Keeping documentation embedded in the schema rather than in a separate
+document means the two cannot drift apart — the description is always
+right next to the thing it describes.
+
+Like the data pipeline, the schema is rebuilt from scratch on every
+database build run.
+There are no migration scripts to maintain or version sequences to track.
+The tradeoff is simplicity and reliability: the database always matches
+the current schema definition exactly, and there is no accumulated
+history of past states to reason about.
+
+Any change to the schema automatically triggers a full database rebuild
+downstream, which ensures that the rest of the application is always
+working against a database that matches the current structure.
+This makes schema changes straightforward to reason about — there is no
+partially migrated state to worry about.

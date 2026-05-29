@@ -1,0 +1,32 @@
+The wasm service provides the scoring engine that runs inside the
+user's browser.
+It is compiled from a single source of truth and loaded by the web
+application, where it processes food data and slider settings to produce
+a ranked, scored list of foods in real time.
+
+Scoring covers four main dimensions.
+Greenhouse gas emissions capture the climate cost of producing each food.
+Water footprint is split into two separate dimensions — green water and
+grey water — reflecting the difference between rainfall-based
+agricultural water use and water that is polluted or consumed from
+freshwater sources.
+Ecological impact accounts for broader environmental harm.
+Finally, the philosophical kill dimension weights animal sentience, using
+neuron count as a proxy, so that users who care about this factor can
+reflect it in their rankings.
+
+Because all formulas and biological constants live in this module, there
+is a single authoritative place where the math is defined.
+The web application itself holds no duplicate scoring logic, which means
+any change to how scores are calculated only ever needs to happen in
+one place.
+
+The module exports a single function that accepts the full set of food
+rows alongside the user's current slider configuration and returns the
+results ready for display.
+This clean interface keeps the boundary between the scoring engine and
+the rest of the application simple and explicit.
+
+During development, the module signals the web application automatically
+after each rebuild, triggering a reload so developers can see the effect
+of changes immediately without any manual steps.
