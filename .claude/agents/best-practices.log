@@ -1,3 +1,0 @@
-2026-05-24 | Audit services/data-pipeline/src: naming, docstrings, type annotations, regex, file/function length, import style, magic numbers
-2026-05-24 | Audit services/data-pipeline/src Python files: 50+ violations across naming (single-letter vars, abbreviations), missing module docstrings, Optional vs X|None, untyped return annotations, inline regex without named constants, oversized functions, import-inside-function, and file-length splits
-2026-05-26 | Audit FoodTable.tsx: abbreviations (s, c, res, v), generic variable names, magic number 1, inline long JSX lines
