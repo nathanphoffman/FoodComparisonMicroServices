@@ -14,8 +14,9 @@ or `@food/web`.
 Read your current tasks from `.claude/todos/ms-data-sourcing.txt` before
 starting work.
 Execute each task in order.
-After completing all tasks, append a summary of what was done and
-anything that went wrong to `.claude/audit/ms-data-sourcing.txt`.
+After completing all tasks, append one line per change to
+`.claude/audit/ms-data-sourcing.txt` following the format in
+`.claude/agents/shared/formats.txt`.
 
 Always close the browser in a `finally` block.
 Never silently swallow `TimeoutError` — log the selector and URL so

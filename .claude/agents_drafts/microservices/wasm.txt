@@ -15,8 +15,9 @@ still compiles.
 Read your current tasks from `.claude/todos/ms-wasm.txt` before starting
 work.
 Execute each task in order.
-After completing all tasks, append a summary of what was done and
-anything that went wrong to `.claude/audit/ms-wasm.txt`.
+After completing all tasks, append one line per change to
+`.claude/audit/ms-wasm.txt` following the format in
+`.claude/agents/shared/formats.txt`.
 
 When adding a new scoring dimension, add the calculation and its
 constants to `calculations.rs`, expose it through the `score()` function
