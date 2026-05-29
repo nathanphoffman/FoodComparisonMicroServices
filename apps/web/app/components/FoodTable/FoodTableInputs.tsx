@@ -26,17 +26,23 @@ export type ColConfig = (typeof COLUMN_CONFIG)[number];
 // ── Slider values ─────────────────────────────────────────────────────────────
 
 export type SliderValues = {
-    weights:          FoodWeights;
-    greenWaterWeight: number;
-    greyWaterWeight:  number;
-    killMultiplier:   number;
+    weights:                    FoodWeights;
+    greenWaterWeight:           number;
+    greyWaterWeight:            number;
+    killMultiplier:             number;
+    neuronExponent:             number;
+    weightExponent:             number;
+    finalIntelligenceExponent:  number;
 };
 
 export const DEFAULT_SLIDER_VALUES: SliderValues = {
-    weights:          { calories: 34, protein: 33, mass: 33 },
-    greenWaterWeight: 25,
-    greyWaterWeight:  25,
-    killMultiplier:   1,
+    weights:                    { calories: 34, protein: 33, mass: 33 },
+    greenWaterWeight:           25,
+    greyWaterWeight:            25,
+    killMultiplier:             1,
+    neuronExponent:             1.5,
+    weightExponent:             0.75,
+    finalIntelligenceExponent:  1.0,
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -86,6 +92,21 @@ export function FoodTableInputs({
         setSliderValues(next);
         onSliderValuesChange(next);
     }
+    function handleNeuronExponent(neuronExponent: number) {
+        const next = { ...sliderValues, neuronExponent };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleWeightExponent(weightExponent: number) {
+        const next = { ...sliderValues, weightExponent };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleFinalIntelligenceExponent(finalIntelligenceExponent: number) {
+        const next = { ...sliderValues, finalIntelligenceExponent };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
 
     function handleToggle(key: ColumnKey) {
         const next = new Set(visibleColumns);
@@ -111,6 +132,9 @@ export function FoodTableInputs({
                 onGreenWaterChange={handleGreenWater}
                 onGreyWaterChange={handleGreyWater}
                 onPhilosophicalKillChange={handleKillMultiplier}
+                onNeuronExponentChange={handleNeuronExponent}
+                onWeightExponentChange={handleWeightExponent}
+                onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
             />
             {scoringError && (
                 <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">

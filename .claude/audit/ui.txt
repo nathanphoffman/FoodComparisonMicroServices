@@ -1,0 +1,9 @@
+2026-05-29 00:00:00 | Verified NeuronExponentSlider.tsx exists with range 0.5–3, default 1.5, debounced onChange
+2026-05-29 00:00:00 | Verified WeightExponentSlider.tsx exists with range 0.1–2, default 0.75, debounced onChange
+2026-05-29 00:00:00 | Verified FinalIntelligenceExponentSlider.tsx exists with range 1.0–1.5, default 1.0, debounced onChange
+2026-05-29 00:00:00 | Verified FoodTableSliders.tsx wires all three exponent sliders in an "Intelligence math" row with correct callbacks
+2026-05-29 00:00:00 | Verified FoodTableInputs.tsx declares neuronExponent, weightExponent, finalIntelligenceExponent in SliderValues and DEFAULT_SLIDER_VALUES and routes callbacks
+2026-05-29 00:00:00 | Verified FoodTableWASMIntegration.ts passes neuronExponent, weightExponent, finalIntelligenceExponent to WASM score call
+2026-05-29 00:00:00 | Rebuilt WASM binary (wasm-pack build --target web) — Rust SliderQuery already had all three fields with serde camelCase
+2026-05-29 00:00:00 | Copied fresh wasm_calculations_bg.wasm to apps/web/public/
+2026-05-29 00:00:00 | Confirmed TypeScript compiles without errors (npx tsc --noEmit)

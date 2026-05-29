@@ -1,9 +1,7 @@
-use crate::models::{EcoDestructionDetail, FoodRow, LandUseDetail};
+use crate::models::{EcoDestructionDetail, FoodRow, LandUseDetail, SliderQuery};
 
 // ── Eco destruction constants (matching FoodTableCalculations.ts exactly) ─────
 const SQUARE_METERS_PER_HA: f64 = 10_000.0;
-const NEURAL_EXPONENT: f64 = 1.5;
-const NEURAL_WEIGHT_EXPONENT: f64 = 0.75;
 
 const INSECT_DENSITY_PER_HA: f64 = 1e9;
 const INSECT_DEATH_FRACTION: f64 = 0.1;
@@ -49,10 +47,15 @@ const PROFILES: &[VictimProfile] = &[
     VictimProfile { victim: PesticideVictim::Reptile, neurons: 1e6,         weight_kg: 0.05,  lifespan_years: 4.0  },
 ];
 
-fn compute_pesticide_victim_intelligence(victim: PesticideVictim) -> f64 {
+fn compute_pesticide_victim_intelligence(
+    victim: PesticideVictim,
+    neuron_exp: f64,
+    weight_exp: f64,
+    final_exp: f64,
+) -> f64 {
     PROFILES.iter()
         .find(|p| p.victim == victim)
-        .map_or(0.0, |p| compute_intelligence(p.neurons, p.weight_kg, p.lifespan_years))
+        .map_or(0.0, |p| compute_intelligence(p.neurons, p.weight_kg, p.lifespan_years, neuron_exp, weight_exp, final_exp))
 }
 
 // ── Land use ──────────────────────────────────────────────────────────────────
@@ -87,9 +90,17 @@ pub(super) fn compute_land_use(food: &FoodRow) -> (f64, LandUseDetail) {
     (total, detail)
 }
 
-fn compute_intelligence(neuron_count: f64, body_weight_kg: f64, lifespan: f64) -> f64 {
-    let neuron_score = neuron_count.powf(NEURAL_EXPONENT);
-    neuron_score * lifespan / body_weight_kg.powf(NEURAL_WEIGHT_EXPONENT)
+fn compute_intelligence(
+    neuron_count: f64,
+    body_weight_kg: f64,
+    lifespan: f64,
+    neuron_exp: f64,
+    weight_exp: f64,
+    final_exp: f64,
+) -> f64 {
+    let neuron_score = neuron_count.powf(neuron_exp);
+    let raw = neuron_score * lifespan / body_weight_kg.powf(weight_exp);
+    raw.powf(final_exp)
 }
 
 // ── Direct kill ───────────────────────────────────────────────────────────────
@@ -109,7 +120,7 @@ fn lifespan_years_for_slug(slug: &str) -> f64 {
     }
 }
 
-pub(super) fn compute_direct_kill(food: &FoodRow) -> f64 {
+pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
     let lifespan = lifespan_years_for_slug(&food.slug);
 
     if food.food_type != "animal" {
@@ -122,7 +133,14 @@ pub(super) fn compute_direct_kill(food: &FoodRow) -> f64 {
             _ => return 0.0,
         };
 
-    compute_intelligence(neuron_count, body_weight_kg, lifespan)
+    compute_intelligence(
+        neuron_count,
+        body_weight_kg,
+        lifespan,
+        query.neuron_exponent,
+        query.weight_exponent,
+        query.final_intelligence_exponent,
+    )
 }
 
 // ── Eco destruction ───────────────────────────────────────────────────────────
@@ -132,13 +150,17 @@ fn sum(values: &[f64]) -> f64 {
     sum
 }
 
-pub(super) fn compute_eco_destruction(food: &FoodRow) -> (f64, EcoDestructionDetail) {
-    let insect_intel = compute_pesticide_victim_intelligence(PesticideVictim::Insect);
-    let bee_intel = compute_pesticide_victim_intelligence(PesticideVictim::Bee);
-    let worm_intel = compute_pesticide_victim_intelligence(PesticideVictim::Worm);
-    let mammal_intel = compute_pesticide_victim_intelligence(PesticideVictim::Mammal);
-    let bird_intel = compute_pesticide_victim_intelligence(PesticideVictim::Bird);
-    let reptile_intel = compute_pesticide_victim_intelligence(PesticideVictim::Reptile);
+pub(super) fn compute_eco_destruction(food: &FoodRow, query: &SliderQuery) -> (f64, EcoDestructionDetail) {
+    let ne = query.neuron_exponent;
+    let we = query.weight_exponent;
+    let fe = query.final_intelligence_exponent;
+
+    let insect_intel = compute_pesticide_victim_intelligence(PesticideVictim::Insect,  ne, we, fe);
+    let bee_intel    = compute_pesticide_victim_intelligence(PesticideVictim::Bee,     ne, we, fe);
+    let worm_intel   = compute_pesticide_victim_intelligence(PesticideVictim::Worm,    ne, we, fe);
+    let mammal_intel = compute_pesticide_victim_intelligence(PesticideVictim::Mammal,  ne, we, fe);
+    let bird_intel   = compute_pesticide_victim_intelligence(PesticideVictim::Bird,    ne, we, fe);
+    let reptile_intel = compute_pesticide_victim_intelligence(PesticideVictim::Reptile, ne, we, fe);
 
     if food.food_type == "plant" {
         return compute_plant_eco_destruction(
@@ -160,6 +182,7 @@ pub(super) fn compute_eco_destruction(food: &FoodRow) -> (f64, EcoDestructionDet
         mammal_intel,
         bird_intel,
         reptile_intel,
+        query,
     )
 }
 
@@ -233,6 +256,7 @@ fn compute_animal_eco_destruction(
     mammal_intel: f64,
     bird_intel: f64,
     reptile_intel: f64,
+    query: &SliderQuery,
 ) -> (f64, EcoDestructionDetail) {
     let mut contributions: Vec<f64> = Vec::new();
     let mut detail = EcoDestructionDetail::zero();
@@ -299,6 +323,9 @@ fn compute_animal_eco_destruction(
             bycatch_neuron_count,
             bycatch_individual_weight,
             bycatch_lifespan,
+            query.neuron_exponent,
+            query.weight_exponent,
+            query.final_intelligence_exponent,
         );
         contributions.push(detail.bycatch_score);
     }

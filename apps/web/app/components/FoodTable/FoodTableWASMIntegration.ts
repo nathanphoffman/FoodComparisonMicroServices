@@ -10,12 +10,15 @@ import type { SliderValues } from './FoodTableInputs';
 
 // Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
 type SliderQuery = {
-    calorieWeight:  number;
-    proteinWeight:  number;
-    massWeight:     number;
-    greenWater:     number;
-    greyWater:      number;
-    killMultiplier: number;
+    calorieWeight:              number;
+    proteinWeight:              number;
+    massWeight:                 number;
+    greenWater:                 number;
+    greyWater:                  number;
+    killMultiplier:             number;
+    neuronExponent:             number;
+    weightExponent:             number;
+    finalIntelligenceExponent:  number;
 };
 
 // Single input object passed to WASM — keeps the boundary simple and
@@ -61,7 +64,8 @@ export async function loadWasm() {
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
-    const { weights, greenWaterWeight, greyWaterWeight, killMultiplier } = sliderValues;
+    const { weights, greenWaterWeight, greyWaterWeight, killMultiplier,
+            neuronExponent, weightExponent, finalIntelligenceExponent } = sliderValues;
 
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
@@ -80,12 +84,15 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
         const input: ScoreInput = {
             foods: rawFoods,
             query: {
-                calorieWeight:  weights.calories,
-                proteinWeight:  weights.protein,
-                massWeight:     weights.mass,
-                greenWater:     greenWaterWeight,
-                greyWater:      greyWaterWeight,
-                killMultiplier: killMultiplier,
+                calorieWeight:             weights.calories,
+                proteinWeight:             weights.protein,
+                massWeight:                weights.mass,
+                greenWater:                greenWaterWeight,
+                greyWater:                 greyWaterWeight,
+                killMultiplier:            killMultiplier,
+                neuronExponent:            neuronExponent,
+                weightExponent:            weightExponent,
+                finalIntelligenceExponent: finalIntelligenceExponent,
             },
         };
 

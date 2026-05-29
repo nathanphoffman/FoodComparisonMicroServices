@@ -115,7 +115,7 @@ export function IntelligenceTooltip({ detail, children }: { detail: Intelligence
         <TooltipRow label="Neuron count" value={formatNeurons(detail.neuronCount)} />
         {detail.weightKg != null && <TooltipRow label="Animal weight" value={`${detail.weightKg} kg`} />}
         {detail.yieldFraction != null && <TooltipRow label="Yield fraction" value={`${(detail.yieldFraction * PERCENT_MULTIPLIER).toFixed(0)}%`} />}
-        <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">^1.5 scaling applied to reflect neural interconnectivity</div>
+        <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">neuron and weight exponents adjustable via Intelligence Math sliders</div>
       </TooltipSection>
     }>
       {children}

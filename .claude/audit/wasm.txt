@@ -1,0 +1,4 @@
+2026-05-29 00:00:00 | Added neuron_exponent, weight_exponent, and final_intelligence_exponent fields to SliderQuery in models.rs with defaults (1.5, 0.75, 1.0)
+2026-05-29 00:00:00 | Updated compute_intelligence in eco.rs to accept neuron_exp, weight_exp, and final_exp parameters; final_exp applied as a powf finishing step
+2026-05-29 00:00:00 | Updated compute_direct_kill, compute_eco_destruction, compute_pesticide_victim_intelligence, and bycatch scoring in eco.rs to thread exponent params from query
+2026-05-29 00:00:00 | Rebuilt WASM module with npm run build:wasm; build succeeded, UI TypeScript compiles cleanly

@@ -80,9 +80,9 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
     let (land_use_raw, land_use_detail) = eco::compute_land_use(food);
     let (water_raw, water_detail) = water::effective_water(food, query);
-    let (eco_raw, eco_detail) = eco::compute_eco_destruction(food);
+    let (eco_raw, eco_detail) = eco::compute_eco_destruction(food, query);
 
-    let direct_kill_raw = eco::compute_direct_kill(food);
+    let direct_kill_raw = eco::compute_direct_kill(food, query);
 
     ScoredRow {
         name: food.name.clone(),

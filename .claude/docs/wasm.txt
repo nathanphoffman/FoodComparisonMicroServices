@@ -8,5 +8,13 @@ footprint (green, blue, and grey water — with green and grey being
 slider-weighted), ecological impact, and a philosophical kill dimension
 that weights animal sentience using neuron count as a proxy.
 
+The intelligence scoring formula is now user-adjustable via three
+exponent controls.
+A neuron exponent shapes how raw neuron counts are scaled.
+A weight exponent controls how neuron-based weights influence the
+overall kill score.
+A final intelligence exponent applies a finishing curve to the
+combined intelligence score before it feeds into the total.
+
 The module accepts the full food dataset alongside the user's current
 slider settings and returns scored results ready for display.

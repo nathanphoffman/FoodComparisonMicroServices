@@ -14,7 +14,16 @@ Sliders control how calorie content, protein, and serving mass factor
 into scoring, alongside green water and grey water environmental impact.
 A philosophical kill slider adjusts how much weight is given to animal
 sentience — measured via neuron count — when scoring animal-based foods.
-Scores update in real time as sliders change.
+
+Users can now fine-tune exactly how the intelligence formula behaves
+through three new sliders grouped under an "Intelligence math" row.
+A neuron exponent slider shapes how raw neuron counts are scaled
+(range 0.5–3, default 1.5).
+A weight exponent slider controls how neuron-based weights feed into
+the kill score (range 0.1–2, default 0.75).
+A final intelligence exponent slider applies a finishing curve to the
+combined intelligence score (range 1.0–1.5, default 1.0).
+Scores update in real time as any slider changes.
 
 All data is fetched live from the API.
 Scoring runs entirely in the browser using a WebAssembly module.

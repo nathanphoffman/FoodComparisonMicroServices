@@ -81,14 +81,23 @@ pub struct SliderQuery {
     pub grey_water:     f64,  // 0–100 (default 25)
     #[serde(default = "default_kill_multiplier")]
     pub kill_multiplier: f64, // 1–10000 (default 1)
+    #[serde(default = "default_neuron_exponent")]
+    pub neuron_exponent: f64, // exponent applied to neuron count in intelligence calc (default 1.5)
+    #[serde(default = "default_weight_exponent")]
+    pub weight_exponent: f64, // exponent applied to body weight in intelligence calc (default 0.75)
+    #[serde(default = "default_final_intelligence_exponent")]
+    pub final_intelligence_exponent: f64, // final nonlinear curve applied to intelligence score (1.0–1.5, default 1.0)
 }
 
-fn default_calorie_weight()  -> f64 { 34.0 }
-fn default_protein_weight()  -> f64 { 33.0 }
-fn default_mass_weight()     -> f64 { 33.0 }
-fn default_green_water()     -> f64 { 25.0 }
-fn default_grey_water()      -> f64 { 25.0 }
-fn default_kill_multiplier() -> f64 { 1.0 }
+fn default_calorie_weight()               -> f64 { 34.0 }
+fn default_protein_weight()               -> f64 { 33.0 }
+fn default_mass_weight()                  -> f64 { 33.0 }
+fn default_green_water()                  -> f64 { 25.0 }
+fn default_grey_water()                   -> f64 { 25.0 }
+fn default_kill_multiplier()              -> f64 { 1.0 }
+fn default_neuron_exponent()              -> f64 { 1.5 }
+fn default_weight_exponent()              -> f64 { 0.75 }
+fn default_final_intelligence_exponent()  -> f64 { 1.0 }
 
 /// Single input object bundling all foods + slider state into one WASM call.
 /// Keeps the JS/Rust boundary simple — one object in, one array out.

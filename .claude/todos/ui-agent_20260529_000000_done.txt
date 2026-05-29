@@ -1,0 +1,28 @@
+requires_orchestration: true
+
+---
+
+TICKET: Add neuron-exponent, weight-exponent, and final intelligence exponent sliders to the kill dimension controls
+
+The philosophical kill slider section needs three new sliders added alongside the existing controls. These sliders allow users to fine-tune how the intelligence calculation is performed inside the scoring engine.
+
+New sliders to add:
+
+1. Neuron exponent slider — controls the exponent applied to the neuron count value in the intelligence calculation. Place it near the existing kill/sentience slider since it directly relates to neuron-based scoring.
+
+2. Weight exponent slider — controls the exponent applied to the weight (mass) value in the intelligence calculation. Place it near the neuron exponent slider as a companion control.
+
+3. Final intelligence exponent slider — placed at the end of the intelligence math controls. Ranges from 1.0 to 1.5. This applies a final nonlinear curve to the computed intelligence score. Label it clearly so users understand it affects the overall intelligence result rather than a single input.
+
+All three sliders must:
+- Update the food scores in real time as the user drags them, consistent with how existing sliders behave.
+- Pass their current values to the WASM scoring module along with the existing slider values.
+- Have sensible default values and visible labels.
+
+Note: this ticket depends on the WASM agent ticket that adds support for these three new parameters. The UI changes should be coordinated so the parameter names passed to the WASM module match what the module expects.
+
+Acceptance criteria:
+- Three new sliders are visible in the kill dimension / philosophical scoring section of the comparison table page.
+- Dragging any slider causes scores to recalculate and the table to update immediately.
+- The final intelligence exponent slider is visually positioned after the other two exponent sliders, at the end of the intelligence math group.
+- Slider ranges and default values are clearly communicated to the user via labels or tooltips.

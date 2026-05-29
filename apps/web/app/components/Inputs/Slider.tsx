@@ -1,4 +1,4 @@
-export function Slider({ min = 0, max = 100, value, onChange }: { min?: number; max?: number; value: number; onChange: (value: number) => void }) {
+export function Slider({ min = 0, max = 100, step, value, onChange }: { min?: number; max?: number; step?: number; value: number; onChange: (value: number) => void }) {
 
     const pct = ((value - min) / (max - min)) * 100;
 
@@ -10,5 +10,5 @@ export function Slider({ min = 0, max = 100, value, onChange }: { min?: number; 
           style={{
             background: `linear-gradient(to right, #3b82f6 ${pct}%, #e5e7eb ${pct}%)`
           }}
- type="range" min={min} max={max} value={value} onChange={setSlider}></input>
+ type="range" min={min} max={max} step={step} value={value} onChange={setSlider}></input>
 }

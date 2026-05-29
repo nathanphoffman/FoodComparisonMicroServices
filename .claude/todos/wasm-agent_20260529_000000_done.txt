@@ -1,0 +1,22 @@
+requires_orchestration: true
+
+---
+
+TICKET: Add neuron-exponent, weight-exponent, and final intelligence exponent to kill-dimension scoring
+
+The philosophical kill dimension currently scores animal sentience using neuron count as a proxy. The scoring math needs to be updated to accept three new parameters from the UI:
+
+1. Neuron exponent — a user-adjustable exponent applied specifically to the neuron count value before it enters the intelligence calculation. This lets users tune how aggressively neuron count scales.
+
+2. Weight exponent — a user-adjustable exponent applied specifically to the weight (body mass or serving mass) value before it enters the intelligence calculation.
+
+3. Final intelligence exponent — a user-adjustable exponent applied to the result of the full intelligence calculation as a finishing step. This ranges from 1.0 to 1.5 and allows users to apply a nonlinear curve to the final intelligence score before it factors into the kill dimension score.
+
+The WASM module's public interface must be updated to accept these three new exponent values alongside the existing slider settings. All scoring logic changes must remain internal to the WASM module — the UI and API are unchanged except that the UI passes the new slider values through.
+
+Acceptance criteria:
+- The module accepts three new numeric parameters: neuron_exponent, weight_exponent, and final_intelligence_exponent.
+- neuron_exponent and weight_exponent have no prescribed range restriction (reasonable defaults apply).
+- final_intelligence_exponent ranges from 1.0 to 1.5.
+- Scores continue to update in real time as these values change.
+- Existing slider behavior is unaffected.
