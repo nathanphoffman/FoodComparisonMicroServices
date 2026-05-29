@@ -31,4 +31,13 @@ You only decide when and in what order agents are called.
 All tasks route through you, even single-agent ones.
 
 Agents you can invoke: `ms-ui`, `ms-api`, `ms-data-pipeline`,
-`ms-data-sourcing`, `ms-wasm`, `doc-agent`.
+`ms-data-sourcing`, `ms-wasm`, `doc-agent`, and the food category agents
+`ms-food-meats`, `ms-food-dairy`, `ms-food-eggs`, `ms-food-seafood`,
+`ms-food-fruits`, `ms-food-grains`, `ms-food-leafy`, `ms-food-legumes`,
+`ms-food-nuts`, `ms-food-oils`, `ms-food-seeds`, `ms-food-vegetables`,
+`ms-food-feeds`.
+Food category tasks that modify JSON data should always be followed by
+`ms-data-pipeline` to rebuild the database.
+Before invoking any `ms-food-*` agent, pause and ask the user for
+explicit approval — these agents are costly to run.
+Do not proceed with food agents until confirmation is received.
