@@ -1,31 +1,20 @@
-The UI service is the web application that end users interact with.
+The UI is the web application that end users interact with.
 Its centerpiece is a Food Comparison Table that lets anyone explore and
-compare foods across both nutritional and environmental dimensions side
-by side.
+compare foods across nutritional and environmental dimensions side by
+side.
+A separate browse page lists all foods grouped by plant and animal.
+Each food has its own shareable detail page.
 
-The table is fully sortable, so a user can quickly rank foods by any
-column — whether that is protein content, carbon emissions, or water
-footprint.
-Columns can also be toggled on and off, letting users focus on the
-dimensions they care about most without the table becoming overwhelming.
+The table is sortable by any column and columns can be toggled on and
+off.
 
 The most distinctive feature is a set of weight sliders that let users
 personalize how foods are scored.
-Sliders exist for individual nutrients, for green water and grey water
-environmental impact, and for a philosophical dimension called the kill
-slider, which adjusts how much weight is given to animal sentience —
-measured via neuron count — when scoring animal-based foods.
-As a user moves the sliders, every food's score updates in real time,
-making it easy to see how different priorities change which foods come
-out ahead.
+Sliders control how calorie content, protein, and serving mass factor
+into scoring, alongside green water and grey water environmental impact.
+A philosophical kill slider adjusts how much weight is given to animal
+sentience — measured via neuron count — when scoring animal-based foods.
+Scores update in real time as sliders change.
 
-Each food also has its own detail page, reachable via a clean URL based
-on the food's name.
-This gives users a permanent link they can share for any food in the
-catalog.
-
-All data is fetched live from the API, so the table always reflects the
-current state of the database.
-The scoring itself runs entirely in the browser using a WebAssembly
-module, which keeps the experience fast and responsive even as the
-slider values change.
+All data is fetched live from the API.
+Scoring runs entirely in the browser using a WebAssembly module.

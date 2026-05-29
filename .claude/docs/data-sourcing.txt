@@ -1,32 +1,13 @@
-The data sourcing service handles the first step in the research
-pipeline: acquiring the raw source material that the food data is
-ultimately derived from.
-It downloads and locally caches scientific papers, datasets, and other
-reference documents so that the rest of the team has reliable, offline
-access to the evidence behind each data point.
+The data sourcing service downloads and locally caches the scientific
+papers, datasets, and reference documents that the food data is derived
+from.
 
 All sources are defined in a central registry file.
-The service reads that registry and works through each entry, downloading
-anything that has not already been saved locally.
+The service works through each entry, downloading anything not already
+saved locally.
 Re-running the service is safe — it skips sources that are already
-cached, so there is no risk of redundant downloads or overwriting
-existing files.
+cached.
 
-To be a responsible consumer of external servers, the service enforces a
-rate limit between requests to the same domain, pausing two seconds
-between downloads.
-This avoids placing excessive load on the academic and institutional
-sites that host the source material.
-
-Some sources are hosted on sites that require a browser to load — they
-may rely on JavaScript rendering or other dynamic page behavior that a
-simple download request cannot handle.
-The service uses a full browser engine to retrieve these, so the same
-workflow covers both conventional downloads and more complex web pages
-without needing separate tooling.
-
-The result is a local library of source documents that researchers can
-consult directly, and that the broader data pipeline can reference when
-tracing where a specific nutritional or environmental figure comes from.
-It keeps the project grounded in citable evidence without requiring a
-live internet connection for every lookup.
+The service enforces a rate limit between requests to the same domain
+and uses a full browser engine for all downloads, covering both
+conventional files and JavaScript-rendered pages.

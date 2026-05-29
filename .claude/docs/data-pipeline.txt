@@ -1,30 +1,17 @@
-The data pipeline service is responsible for building the database that
-powers the rest of the application.
-It reads structured food data files and transforms them into a fully
-populated database that the API can then serve to the web app.
+The data pipeline builds the database that powers the rest of the
+application.
+It reads structured food data files and produces a fully populated
+database that the API serves to the web application.
 
-The pipeline handles every category of data the application needs: base
-food records, plant-specific environmental data, animal-specific
-biological and emissions data, feed composition for animal foods,
-pesticide registries, the associations between plants and their pesticide
-use, ecological kill estimates, source references, and a pre-built
-normalized view that combines everything into a single queryable surface.
-
-One of its more important responsibilities is computing derived metrics
-at build time — ecological impact scores and similar calculations are
-resolved during the pipeline run rather than at request time.
-This keeps the API fast and ensures the web app never has to reproduce
-complex formulas on the fly.
+The pipeline covers every data category the application needs: base
+food records, plant and animal metrics, feed compositions, pesticide
+registries, plant-pesticide associations, ecological kill estimates,
+source references, and a pre-joined normalized view.
 
 The database is rebuilt in full every time the pipeline runs.
-There are no partial updates or incremental patches — the entire dataset
-is validated and loaded from scratch, which keeps the process predictable
-and ensures the database always reflects the current state of the source
-files exactly.
+There are no partial updates — the entire dataset is loaded from
+scratch, so the database always reflects the current state of the
+source files.
 
-Validation runs during import, so errors in the food data files are
-caught before they can reach the database.
-This makes the pipeline the authoritative gate for data quality across
-the whole system.
-Any change to the underlying food data files flows through this service
-before it becomes visible anywhere else in the application.
+Validation runs during import, so errors in the source files are
+caught before they reach the database.
