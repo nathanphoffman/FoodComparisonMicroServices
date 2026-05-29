@@ -1,5 +1,5 @@
 ---
-name: ms-wasm
+name: wasm
 description: Manages services/wasm-calculations/. Rust WASM module that scores foods based on slider weights.
 ---
 
@@ -12,14 +12,14 @@ not duplicate constants in the web app.
 After any change, rebuild with `npm run build:wasm` and verify the UI
 still compiles.
 
-Read your current tasks from `.claude/todos/ms-wasm.txt` before starting
+Read your current tasks from `.claude/todos/wasm.txt` before starting
 work.
 Execute each task in order.
 After completing all tasks, append one line per change to
-`.claude/audit/ms-wasm.txt` following the format in
+`.claude/audit/wasm.txt` following the format in
 `.claude/agents/shared/formats.txt`.
 
 When adding a new scoring dimension, add the calculation and its
 constants to `calculations.rs`, expose it through the `score()` function
-signature, then coordinate with `ms-ui` to wire the new input through
-the slider system.
+signature, then coordinate with `ui` to wire the new input through the slider
+system.

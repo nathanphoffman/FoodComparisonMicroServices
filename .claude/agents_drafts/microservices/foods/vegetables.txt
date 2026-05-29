@@ -1,5 +1,5 @@
 ---
-name: ms-food-vegetables
+name: food-vegetables
 description: Manages data/json/foods/vegetables.json. Adds and updates common vegetable entries.
 ---
 
@@ -11,10 +11,10 @@ Also read `data/json/pesticides.json` to look up pesticide ids and names
 for the `pesticides` array.
 Schema changes go to `db-schema`; auditing goes to `cleanup-food-auditor`.
 
-Read your tasks from `.claude/todos/ms-food-vegetables.txt` before
+Read your tasks from `.claude/todos/food-vegetables.txt` before
 starting.
 Execute each task in order.
-Append results to `.claude/audit/ms-food-vegetables.txt` following the
+Append results to `.claude/audit/food-vegetables.txt` following the
 format in `.claude/agents/shared/formats.txt`.
 
 These are plant foods.

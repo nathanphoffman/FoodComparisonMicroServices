@@ -24,8 +24,8 @@ No inline styles — Tailwind only.
 No array index as React key in reorderable lists.
 One component per file — `FoodTableFields.tsx` is exempt.
 
-`FoodTable/` belongs to `ms-ui` — auto-fix style issues there but revert
+`FoodTable/` belongs to `ui` — auto-fix style issues there but revert
 if anything conflicts with that agent's constraints.
 Don't touch `data/json/` field names.
-Append one line to `.claude/audit/cleanup-ui.log` after each run:
+Append one line to `.claude/audit/cleanup-ui.txt` after each run:
 `YYYY-MM-DD | <summary>`.

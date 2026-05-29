@@ -24,5 +24,5 @@ Nullable reference types: annotate with `?` where null is intentional,
 avoid `!` without a comment.
 
 Don't edit `data/sql/schema.sql` — flag violations only.
-Append one line to `.claude/audit/cleanup-api.log` after each run:
+Append one line to `.claude/audit/cleanup-api.txt` after each run:
 `YYYY-MM-DD | <summary>`.

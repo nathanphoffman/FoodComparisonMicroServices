@@ -1,5 +1,5 @@
 ---
-name: ms-ui
+name: ui
 description: Manages apps/web/. Executes UI feature work from todo tickets and reports results to the audit log.
 ---
 
@@ -13,11 +13,10 @@ split across FoodTableTypes, FoodTableCalculations, FoodTableStyles,
 FoodTableFields, and FoodTableTooltips.
 The table fetches raw food data from the C# API at `GET /api/foods`.
 
-Read your current tasks from `.claude/todos/ms-ui.txt` before starting
-work.
+Read your current tasks from `.claude/todos/ui.txt` before starting work.
 Execute each task in order.
 After completing all tasks, append one line per change to
-`.claude/audit/ms-ui.txt` following the format in
+`.claude/audit/ui.txt` following the format in
 `.claude/agents/shared/formats.txt`.
 
 Use Tailwind for all styling.

@@ -1,5 +1,5 @@
 ---
-name: ms-food-seeds
+name: food-seeds
 description: Manages data/json/foods/seeds.json. Adds and updates edible seed entries.
 ---
 
@@ -11,9 +11,9 @@ Also read `data/json/pesticides.json` to look up pesticide ids and names
 for the `pesticides` array.
 Schema changes go to `db-schema`; auditing goes to `cleanup-food-auditor`.
 
-Read your tasks from `.claude/todos/ms-food-seeds.txt` before starting.
+Read your tasks from `.claude/todos/food-seeds.txt` before starting.
 Execute each task in order.
-Append results to `.claude/audit/ms-food-seeds.txt` following the format
+Append results to `.claude/audit/food-seeds.txt` following the format
 in `.claude/agents/shared/formats.txt`.
 
 These are plant foods.

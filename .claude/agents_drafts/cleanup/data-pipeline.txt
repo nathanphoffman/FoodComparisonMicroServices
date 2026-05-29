@@ -27,5 +27,5 @@ statement of a module, class, or function).
 
 Don't rename or restructure `data/json/` fields.
 Don't edit `data/sql/schema.sql`.
-Append one line to `.claude/audit/cleanup-data-pipeline.log` after each
+Append one line to `.claude/audit/cleanup-data-pipeline.txt` after each
 run: `YYYY-MM-DD | <summary>`.

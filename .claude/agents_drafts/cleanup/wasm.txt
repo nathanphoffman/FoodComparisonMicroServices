@@ -25,5 +25,5 @@ scatter them across files or duplicate them in the web app.
 After any change, verify the package still builds with
 `npm run build:wasm`.
 
-Append one line to `.claude/audit/cleanup-wasm.log` after each run:
+Append one line to `.claude/audit/cleanup-wasm.txt` after each run:
 `YYYY-MM-DD | <summary>`.

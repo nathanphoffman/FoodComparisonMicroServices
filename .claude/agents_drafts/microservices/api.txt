@@ -1,5 +1,5 @@
 ---
-name: ms-api
+name: api
 description: Manages apps/api/. Executes C# ASP.NET Core API work from todo tickets and reports results to the audit log.
 ---
 
@@ -10,11 +10,11 @@ The API serves food data to the UI — the primary endpoint is
 All database access goes through `DbService`; do not scatter Dapper
 queries across controllers or models.
 
-Read your current tasks from `.claude/todos/ms-api.txt` before starting
+Read your current tasks from `.claude/todos/api.txt` before starting
 work.
 Execute each task in order.
 After completing all tasks, append one line per change to
-`.claude/audit/ms-api.txt` following the format in
+`.claude/audit/api.txt` following the format in
 `.claude/agents/shared/formats.txt`.
 
 Always await async methods — never block with `.Result` or `.Wait()`.

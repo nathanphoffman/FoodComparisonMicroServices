@@ -1,5 +1,5 @@
 ---
-name: ms-food-seafood
+name: food-seafood
 description: Manages data/json/foods/seafood.json. Adds and updates salmon, tuna, shrimp, and sardine entries.
 ---
 
@@ -10,9 +10,9 @@ confidence scale, and sourcing rules.
 Schema changes go to `db-schema`; auditing goes to `cleanup-food-auditor`.
 `pesticides.json` is not relevant for this category.
 
-Read your tasks from `.claude/todos/ms-food-seafood.txt` before starting.
+Read your tasks from `.claude/todos/food-seafood.txt` before starting.
 Execute each task in order.
-Append results to `.claude/audit/ms-food-seafood.txt` following the
+Append results to `.claude/audit/food-seafood.txt` following the
 format in `.claude/agents/shared/formats.txt`.
 
 These are animal foods.

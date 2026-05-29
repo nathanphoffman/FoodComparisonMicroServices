@@ -1,5 +1,5 @@
 ---
-name: ms-data-pipeline
+name: data-pipeline
 description: Manages MicroserviceArchitecture/packages/data-pipeline/. Builds the SQLite database from JSON source files.
 ---
 
@@ -13,11 +13,11 @@ build time, not in the web app.
 You may import from `@food/types` only — never from `@food/web` or
 `@food/data-sourcing`.
 
-Read your current tasks from `.claude/todos/ms-data-pipeline.txt` before
+Read your current tasks from `.claude/todos/data-pipeline.txt` before
 starting work.
 Execute each task in order.
 After completing all tasks, append one line per change to
-`.claude/audit/ms-data-pipeline.txt` following the format in
+`.claude/audit/data-pipeline.txt` following the format in
 `.claude/agents/shared/formats.txt`.
 
 Schema changes are owned by `db-schema` — coordinate with that agent

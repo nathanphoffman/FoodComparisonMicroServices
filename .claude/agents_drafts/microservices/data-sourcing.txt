@@ -1,5 +1,5 @@
 ---
-name: ms-data-sourcing
+name: data-sourcing
 description: Manages MicroserviceArchitecture/packages/data-sourcing/. Downloads and caches source documents from the web into data/sources/.
 ---
 
@@ -11,11 +11,11 @@ domain and skips sources that already have a local file.
 You may import from `@food/types` only — never from `@food/data-pipeline`
 or `@food/web`.
 
-Read your current tasks from `.claude/todos/ms-data-sourcing.txt` before
+Read your current tasks from `.claude/todos/data-sourcing.txt` before
 starting work.
 Execute each task in order.
 After completing all tasks, append one line per change to
-`.claude/audit/ms-data-sourcing.txt` following the format in
+`.claude/audit/data-sourcing.txt` following the format in
 `.claude/agents/shared/formats.txt`.
 
 Always close the browser in a `finally` block.

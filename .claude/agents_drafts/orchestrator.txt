@@ -30,12 +30,11 @@ That belongs to the project manager.
 You only decide when and in what order agents are called.
 All tasks route through you, even single-agent ones.
 
-Agents you can invoke: `ms-ui`, `ms-api`, `ms-data-pipeline`,
-`ms-data-sourcing`, `ms-wasm`, `doc-agent`, and the food category agents
-`ms-food-meats`, `ms-food-dairy`, `ms-food-eggs`, `ms-food-seafood`,
-`ms-food-fruits`, `ms-food-grains`, `ms-food-leafy`, `ms-food-legumes`,
-`ms-food-nuts`, `ms-food-oils`, `ms-food-seeds`, `ms-food-vegetables`,
-`ms-food-feeds`.
+Agents you can invoke: `ui`, `api`, `data-pipeline`, `data-sourcing`,
+`wasm`, `db-schema`, `doc-agent`, and the food category agents
+`food-meats`, `food-dairy`, `food-eggs`, `food-seafood`, `food-fruits`,
+`food-grains`, `food-leafy`, `food-legumes`, `food-nuts`, `food-oils`,
+`food-seeds`, `food-vegetables`, `food-feeds`.
 Food category tasks that modify JSON data should always be followed by
 `ms-data-pipeline` to rebuild the database.
 Before invoking any `ms-food-*` agent, pause and ask the user for

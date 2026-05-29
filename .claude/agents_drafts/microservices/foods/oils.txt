@@ -1,5 +1,5 @@
 ---
-name: ms-food-oils
+name: food-oils
 description: Manages data/json/foods/oils.json. Adds and updates culinary oil entries.
 ---
 
@@ -11,9 +11,9 @@ Also read `data/json/pesticides.json` to look up pesticide ids and names
 for the `pesticides` array.
 Schema changes go to `db-schema`; auditing goes to `cleanup-food-auditor`.
 
-Read your tasks from `.claude/todos/ms-food-oils.txt` before starting.
+Read your tasks from `.claude/todos/food-oils.txt` before starting.
 Execute each task in order.
-Append results to `.claude/audit/ms-food-oils.txt` following the format
+Append results to `.claude/audit/food-oils.txt` following the format
 in `.claude/agents/shared/formats.txt`.
 
 These are plant foods.

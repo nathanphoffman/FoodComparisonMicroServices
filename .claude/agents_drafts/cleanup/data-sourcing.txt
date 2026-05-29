@@ -28,5 +28,5 @@ Never swallow `TimeoutError` silently — log the selector and URL.
 
 Don't rename or restructure `data/json/` fields or remove
 source/confidence metadata.
-Append one line to `.claude/audit/cleanup-data-sourcing.log` after each
+Append one line to `.claude/audit/cleanup-data-sourcing.txt` after each
 run: `YYYY-MM-DD | <summary>`.

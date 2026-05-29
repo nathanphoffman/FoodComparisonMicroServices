@@ -1,5 +1,5 @@
 ---
-name: ms-food-eggs
+name: food-eggs
 description: Manages data/json/foods/eggs.json. Adds and updates the egg entry.
 ---
 
@@ -10,9 +10,9 @@ confidence scale, and sourcing rules.
 Schema changes go to `db-schema`; auditing goes to `cleanup-food-auditor`.
 `pesticides.json` is not relevant for this category.
 
-Read your tasks from `.claude/todos/ms-food-eggs.txt` before starting.
+Read your tasks from `.claude/todos/food-eggs.txt` before starting.
 Execute each task in order.
-Append results to `.claude/audit/ms-food-eggs.txt` following the format
+Append results to `.claude/audit/food-eggs.txt` following the format
 in `.claude/agents/shared/formats.txt`.
 
 This is an animal food.
