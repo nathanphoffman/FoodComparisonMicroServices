@@ -184,6 +184,39 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Flaxseed — glyphosate: 1.1 kg/ha (pre-harvest desiccant, widely used in North American flax production); 2,4-D: 0.4 kg/ha (broadleaf weed control). Values from USDA NASS Field Crops Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Flaxseed — glyphosate: 1.1 kg/ha (pre-harvest desiccant, widely used in North American flax production); 2,4-D: 0.4 kg/ha (broadleaf weed control). Values from USDA NASS Field Crops Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]

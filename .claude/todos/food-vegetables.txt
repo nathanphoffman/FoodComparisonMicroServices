@@ -1,0 +1,14 @@
+# Created: 2026-05-29 14:00:00
+
+Update the pesticides array for sweet potato (slug: "sweet-potato") in data/json/foods/vegetables.json.
+
+Verified data from official sources:
+- REMOVE chlorpyrifos (pesticide_id: 3) — banned from food crop use by EPA in August 2021; no longer registered for sweet potato
+- UPDATE metolachlor (pesticide_id: 11) kg_ha value from 0.12 to 1.1 — actual Dual Magnum label rate is 0.95–1.27 lb ai/acre (midpoint 1.11 lb ai/acre × 1.12085 = 1.24 kg/ha; use 1.1 as conservative midpoint); update note to reference Dual Magnum SLN labels (AR, TX, GA) and Cambridge/Weed Technology study
+- KEEP imidacloprid (pesticide_id: 7) at 0.05 kg/ha — verified correct (0.044 lb ai/acre from Pacific Northwest Pest Management Handbook for sweet potato aphid control)
+
+Source to use for the corrected entries (source id 52, USDA NASS, is not appropriate since NASS does not survey sweet potatoes — use a new or existing source for the Dual Magnum SLN label):
+- For metolachlor: source id 52 note should be updated to reference the Arkansas/Texas Dual Magnum SLN labels (EPA SLN AR11-0004, TX-070003) at 0.95–1.27 lb ai/acre
+- For imidacloprid: source note should reference Pacific Northwest Pest Management Handbook (pnwhandbooks.org) at 0.044 lb ai/acre
+
+Check data/json/sources.json to see if a suitable source already exists, or append a new one for the SLN label. Keep confidence at 4.

@@ -19,8 +19,6 @@ const MAMMAL_DENSITY_PER_HA: f64 = 50.0;
 const BIRD_DENSITY_PER_HA: f64 = 5.0;
 const REPTILE_DENSITY_PER_HA: f64 = 50.0;
 
-const REF_FEED_PESTICIDE_KG_HA: f64 = 2.0;
-
 #[derive(PartialEq)]
 enum PesticideVictim {
     Insect,
@@ -262,9 +260,11 @@ fn compute_animal_eco_destruction(
     let mut contributions: Vec<f64> = Vec::new();
     let mut detail = EcoDestructionDetail::zero();
 
-    // Feed cropland impact
-    if let Some(feed_pesticide_kg) = food.feed_pesticide_kg_per_kg_food.filter(|&v| v > 0.0) {
-        let feed_area = feed_pesticide_kg / REF_FEED_PESTICIDE_KG_HA;
+    // Feed cropland impact — use actual feed land area (m² → ha) rather than a
+    // pesticide-kg proxy, so insect/bee/deforestation deaths scale correctly with
+    // the true land required for each feed crop.
+    if let Some(feed_land_m2) = food.feed_land_m2_per_kg.filter(|&v| v > 0.0) {
+        let feed_area = feed_land_m2 / SQUARE_METERS_PER_HA;
 
         let feed_insect_deaths = food.feed_pesticide_insect_paf.unwrap_or(0.0)
             * INSECT_DENSITY_PER_HA
@@ -319,10 +319,10 @@ fn compute_animal_eco_destruction(
         food.bycatch_weight_kg.filter(|&w| w > 0.0),
     ) {
         let bycatch_lifespan = bycatch_lifespan_years(food.bycatch_food_slug.as_deref());
-        let bycatch_individual_weight = bycatch_amount / bycatch_weight_kg;
-        detail.bycatch_score = compute_intelligence(
+        let num_bycatch_individuals = bycatch_amount / bycatch_weight_kg;
+        detail.bycatch_score = num_bycatch_individuals * compute_intelligence(
             bycatch_neuron_count,
-            bycatch_individual_weight,
+            bycatch_weight_kg,
             bycatch_lifespan,
             query.neuron_exponent,
             query.weight_exponent,

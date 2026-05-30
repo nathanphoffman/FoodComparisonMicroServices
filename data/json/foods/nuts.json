@@ -2452,6 +2452,55 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.7,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.55,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]

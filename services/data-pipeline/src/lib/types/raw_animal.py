@@ -188,7 +188,16 @@ def _compute_per_yield_impacts(
 def _compute_pesticide_paf_impacts(
     feed_entries: list[FeedEntry],
 ) -> tuple[float, float | None, float | None, float | None, float | None]:
-    """Returns (pesticide_kg_per_kg, freshwater_paf, terrestrial_paf, insect_paf, bee_hazard)."""
+    """Returns (pesticide_kg_per_kg, freshwater_paf, terrestrial_paf, insect_paf, bee_hazard).
+
+    PAF values are weighted by cropland area (feed_ratio / yield_kg_ha) rather than by
+    pesticide_kg_per_kg_food.  Area-weighting ensures that each feed crop's toxicity
+    contribution scales with how much land it actually occupies, not how much pesticide
+    it uses per kg of food.  Weighting by pesticide_kg over-represents high-pesticide-
+    intensity crops and under-represents high-yield crops (e.g. corn dominates because
+    it uses the most pesticide per kg chicken, while wheat's high-paf compounds are
+    diluted by corn's large pesticide mass).
+    """
     total_pesticide_kg_per_kg = 0.0
     freshwater_numerator = freshwater_denominator = 0.0
     terrestrial_numerator = terrestrial_denominator = 0.0
@@ -202,23 +211,30 @@ def _compute_pesticide_paf_impacts(
         if not pesticide_kg_per_kg_food:
             continue
         total_pesticide_kg_per_kg += feed_ratio * pesticide_kg_per_kg_food
+
+        # Use hectares of cropland per kg of animal output as the aggregation weight so
+        # that the resulting average PAF matches what you'd get by summing per-crop impacts.
+        average_yield = entry.plant.yield_kg_ha.weighted_average()
+        if not average_yield or average_yield <= 0:
+            continue
+        area_ha = feed_ratio / average_yield
+
         freshwater_paf = entry.plant.avg_pesticide_weighted_freshwater_paf
         terrestrial_paf = entry.plant.avg_pesticide_weighted_terrestrial_paf
         insect_paf = entry.plant.avg_pesticide_weighted_insect_paf
         bee_hazard = entry.plant.avg_pesticide_weighted_bee_hazard
-        weighted_pesticide_kg = feed_ratio * pesticide_kg_per_kg_food
-        if freshwater_paf:
-            freshwater_numerator += weighted_pesticide_kg * freshwater_paf
-            freshwater_denominator += weighted_pesticide_kg
-        if terrestrial_paf:
-            terrestrial_numerator += weighted_pesticide_kg * terrestrial_paf
-            terrestrial_denominator += weighted_pesticide_kg
-        if insect_paf:
-            insect_numerator += weighted_pesticide_kg * insect_paf
-            insect_denominator += weighted_pesticide_kg
-        if bee_hazard:
-            bee_hazard_numerator += weighted_pesticide_kg * bee_hazard
-            bee_hazard_denominator += weighted_pesticide_kg
+        if freshwater_paf is not None:
+            freshwater_numerator += area_ha * freshwater_paf
+            freshwater_denominator += area_ha
+        if terrestrial_paf is not None:
+            terrestrial_numerator += area_ha * terrestrial_paf
+            terrestrial_denominator += area_ha
+        if insect_paf is not None:
+            insect_numerator += area_ha * insect_paf
+            insect_denominator += area_ha
+        if bee_hazard is not None:
+            bee_hazard_numerator += area_ha * bee_hazard
+            bee_hazard_denominator += area_ha
     return (
         total_pesticide_kg_per_kg,
         freshwater_numerator / freshwater_denominator if freshwater_denominator else None,

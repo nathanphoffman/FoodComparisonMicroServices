@@ -1360,7 +1360,40 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Quinoa — malathion: 0.05 kg/ha; pendimethalin: 0.10 kg/ha. Low-input Andean production; quinoa is not directly surveyed by NASS (minor US crop). Values derived from FAO small-grain pulse crop profiles and regional Andean agronomic literature. Malathion used for quinoa moth (Eurysacca melanocampta) and aphid control. Confidence 2 — limited survey coverage."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.10,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Quinoa — malathion: 0.05 kg/ha; pendimethalin: 0.10 kg/ha. Low-input Andean production; quinoa is not directly surveyed by NASS (minor US crop). Values derived from FAO small-grain pulse crop profiles and regional Andean agronomic literature. Pendimethalin used as a pre-emergent herbicide for broadleaf weed control. Confidence 2 — limited survey coverage."
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 49,
@@ -1549,6 +1582,55 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Barley — 2,4-D: 0.22 kg/ha; malathion: 0.03 kg/ha; propiconazole: 0.08 kg/ha. USDA NASS Small Grains Chemical Use survey. 2,4-D is the primary post-emergent herbicide for broadleaf weed control in barley, used similarly to wheat at slightly lower rates due to barley's shorter growing season."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Barley — 2,4-D: 0.22 kg/ha; malathion: 0.03 kg/ha; propiconazole: 0.08 kg/ha. USDA NASS Small Grains Chemical Use survey. Malathion applied for cereal aphid and stored-grain pest control in barley."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Barley — 2,4-D: 0.22 kg/ha; malathion: 0.03 kg/ha; propiconazole: 0.08 kg/ha. USDA NASS Small Grains Chemical Use survey. Propiconazole is a triazole fungicide applied for scald (Rhynchosporium commune), net blotch, and powdery mildew control in barley."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]

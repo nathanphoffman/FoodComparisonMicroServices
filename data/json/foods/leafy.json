@@ -422,7 +422,56 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.09,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.07,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 53,
@@ -611,6 +660,55 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]

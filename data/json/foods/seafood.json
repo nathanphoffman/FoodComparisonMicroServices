@@ -29,7 +29,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -40,7 +40,7 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": null
                 }
             },
@@ -50,7 +50,7 @@
                 "source": {
                     "id": 40,
                     "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum \u2014 Neuron Count Measures May Underweight Suffering in Farmed Fish",
+                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
                     "note": null
                 }
             }
@@ -62,7 +62,7 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": null
                 }
             }
@@ -74,7 +74,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -92,8 +92,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed salmon \u2014 ch4_kg_per_kg_output: CH4 emissions from farmed salmon are very small; feed-lot anaerobic pond and waste emissions estimated at ~0.01 kg CH4/kg salmon output. P&N 2018 supplementary data reports total farmed salmon GHG at ~11.9 kg CO2e/kg; CH4 and N2O together account for under 2% of that total, with CO2 from feed production and energy dominating."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed salmon — ch4_kg_per_kg_output: CH4 emissions from farmed salmon are very small; feed-lot anaerobic pond and waste emissions estimated at ~0.01 kg CH4/kg salmon output. P&N 2018 supplementary data reports total farmed salmon GHG at ~11.9 kg CO2e/kg; CH4 and N2O together account for under 2% of that total, with CO2 from feed production and energy dominating."
                 }
             },
             {
@@ -102,8 +102,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed salmon \u2014 ch4_kg_per_kg_output: OWID visualization of P&N 2018 shows farmed fish total at 13.63 kg CO2e/kg; salmon specifically ~11.9 kg CO2e/kg per P&N supplementary. CH4 fraction is negligible (<0.1% of total CO2e) for aquaculture systems dominated by feed-crop and energy CO2; the 0.01 kg CH4/kg value is consistent with aquaculture pond emission literature."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Farmed salmon — ch4_kg_per_kg_output: OWID visualization of P&N 2018 shows farmed fish total at 13.63 kg CO2e/kg; salmon specifically ~11.9 kg CO2e/kg per P&N supplementary. CH4 fraction is negligible (<0.1% of total CO2e) for aquaculture systems dominated by feed-crop and energy CO2; the 0.01 kg CH4/kg value is consistent with aquaculture pond emission literature."
                 }
             }
         ],
@@ -114,8 +114,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed salmon \u2014 n2o_kg_per_kg_output: N2O from nitrogenous waste in salmon aquaculture ponds and feed production residues estimated at ~0.005 kg N2O/kg output. P&N 2018 supplementary data for farmed salmon total ~11.9 kg CO2e/kg; N2O contribution at GWP100=265 yields ~1.3 kg CO2e/kg from this field, consistent with the minor role of N2O in salmon aquaculture relative to CO2 from feed and energy."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed salmon — n2o_kg_per_kg_output: N2O from nitrogenous waste in salmon aquaculture ponds and feed production residues estimated at ~0.005 kg N2O/kg output. P&N 2018 supplementary data for farmed salmon total ~11.9 kg CO2e/kg; N2O contribution at GWP100=265 yields ~1.3 kg CO2e/kg from this field, consistent with the minor role of N2O in salmon aquaculture relative to CO2 from feed and energy."
                 }
             },
             {
@@ -124,30 +124,30 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed salmon \u2014 n2o_kg_per_kg_output: OWID P&N 2018 data confirms farmed fish (13.63 kg CO2e/kg) and salmon specifically (~11.9 kg CO2e/kg) are dominated by CO2 from feed and energy; N2O at 0.005 kg/kg yields ~1.3 kg CO2e/kg, representing ~11% of total, consistent with the P&N supplementary breakdown for aquaculture systems."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Farmed salmon — n2o_kg_per_kg_output: OWID P&N 2018 data confirms farmed fish (13.63 kg CO2e/kg) and salmon specifically (~11.9 kg CO2e/kg) are dominated by CO2 from feed and energy; N2O at 0.005 kg/kg yields ~1.3 kg CO2e/kg, representing ~11% of total, consistent with the P&N supplementary breakdown for aquaculture systems."
                 }
             }
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 5.9,
+                "value": 4.2,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed salmon \u2014 co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~11.9 kg CO2e/kg. Decomposition: feed component (fishmeal 0.50\u00d76.0 + fish-oil 0.13\u00d73.75 + soy 0.24\u00d73.0 + wheat 0.13\u00d71.57 \u2248 4.41 kg CO2e) is tracked via the feed join; CH4 CO2e (0.01\u00d728=0.28) and N2O CO2e (0.005\u00d7265=1.33) are tracked in their own fields. Remaining direct CO2: 11.9 \u2212 4.41 \u2212 0.28 \u2212 1.33 \u2248 5.88 \u2248 5.9 kg CO2e/kg. Sources: on-farm energy (pumps, aeration, lighting), processing, refrigeration, and transport. No significant land-clearing CO2 for cage/pen aquaculture."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed salmon — co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~11.9 kg CO2e/kg. Decomposition: feed component (fishmeal 0.69×6.0 + fish-oil 0.18×3.75 + soy 0.33×3.0 + wheat 0.18×1.57 ≈ 6.09 kg CO2e) is tracked via the feed join; CH4 CO2e (0.01×28=0.28) and N2O CO2e (0.005×265=1.33) are tracked in their own fields. Remaining direct CO2: 11.9 − 6.09 − 0.28 − 1.33 ≈ 4.20 kg CO2e/kg. Sources: on-farm energy (pumps, aeration, lighting), processing, refrigeration, and transport. No significant land-clearing CO2 for cage/pen aquaculture. Feed values updated to use fillet yield_fraction 0.65 instead of prior 90% gutted-fish dressing."
                 }
             },
             {
-                "value": 5.9,
+                "value": 4.2,
                 "confidence": 3,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Farmed salmon \u2014 co2_kg_per_kg_output (direct non-feed only): OWID P&N 2018 confirms salmon-specific total ~11.9 kg CO2e/kg. This field records only direct CO2 not already accounted for by feed join (fishmeal, fish-oil, soy, wheat feed entries) or CH4/N2O fields. Direct non-feed CO2 \u2248 5.9 kg CO2e/kg, representing on-farm energy and post-harvest logistics. Feed emissions are handled separately to avoid double-counting with the feed join."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Farmed salmon — co2_kg_per_kg_output (direct non-feed only): OWID P&N 2018 confirms salmon-specific total ~11.9 kg CO2e/kg. This field records only direct CO2 not already accounted for by feed join (fishmeal, fish-oil, soy, wheat feed entries) or CH4/N2O fields. Direct non-feed CO2 ≈ 4.2 kg CO2e/kg, representing on-farm energy and post-harvest logistics. Feed emissions are handled separately to avoid double-counting with the feed join. Value updated when feed entries were corrected from 90% gutted-fish dressing to 65% fillet yield."
                 }
             }
         ],
@@ -157,13 +157,13 @@
                 "food_slug": "soy",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.24,
+                        "value": 0.33,
                         "confidence": 4,
                         "source": {
                             "id": 32,
                             "url": "https://www.seafish.org/responsible-sourcing/aquaculture-farming-seafood/species-farmed-in-aquaculture/aquaculture-profiles/atlantic-salmon/feed/",
-                            "title": "Seafish \u2014 Atlantic Salmon Feed Profile",
-                            "note": "Farmed salmon \u2014 soy kg_feed_per_kg_output: Seafish profile reports soy ~19% of diet by weight. Total FCR ~1.15 kg feed/kg live weight; dressing ~90%; feed per kg fillet = 1.15/0.90 \u2248 1.28 kg. Soy fraction: 0.19 \u00d7 1.28 \u2248 0.24 kg soy/kg salmon."
+                            "title": "Seafish — Atlantic Salmon Feed Profile",
+                            "note": "Farmed salmon — soy kg_feed_per_kg_output: Seafish profile reports soy ~19% of diet by weight. Total FCR ~1.15 kg feed/kg live weight; fillet yield_fraction = 0.65 (FAO/BfR); feed per kg fillet = 1.15/0.65 ≈ 1.77 kg. Soy fraction: 0.19 × 1.77 ≈ 0.33 kg soy/kg salmon. Prior value (0.24) used a 90% gutted-fish dressing yield instead of the 65% fillet yield, underestimating by 1.38×."
                         }
                     }
                 ]
@@ -173,13 +173,13 @@
                 "food_slug": "wheat",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.13,
+                        "value": 0.18,
                         "confidence": 4,
                         "source": {
                             "id": 32,
                             "url": "https://www.seafish.org/responsible-sourcing/aquaculture-farming-seafood/species-farmed-in-aquaculture/aquaculture-profiles/atlantic-salmon/feed/",
-                            "title": "Seafish \u2014 Atlantic Salmon Feed Profile",
-                            "note": "Farmed salmon \u2014 wheat kg_feed_per_kg_output: Seafish profile reports wheat ~10% of diet by weight. Feed per kg fillet \u2248 1.28 kg (FCR 1.15, dressing 90%). Wheat fraction: 0.10 \u00d7 1.28 \u2248 0.13 kg wheat/kg salmon."
+                            "title": "Seafish — Atlantic Salmon Feed Profile",
+                            "note": "Farmed salmon — wheat kg_feed_per_kg_output: Seafish profile reports wheat ~10% of diet by weight. Feed per kg fillet ≈ 1.77 kg (FCR 1.15, fillet yield 0.65). Wheat fraction: 0.10 × 1.77 ≈ 0.18 kg wheat/kg salmon. Prior value (0.13) used 90% gutted-fish dressing yield instead of 65% fillet yield."
                         }
                     }
                 ]
@@ -189,23 +189,23 @@
                 "food_slug": "fishmeal",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.5,
+                        "value": 0.69,
                         "confidence": 3,
                         "source": {
                             "id": 32,
                             "url": "https://www.seafish.org/responsible-sourcing/aquaculture-farming-seafood/species-farmed-in-aquaculture/aquaculture-profiles/atlantic-salmon/feed/",
-                            "title": "Seafish \u2014 Atlantic Salmon Feed Profile",
-                            "note": "Farmed salmon \u2014 fishmeal kg_feed_per_kg_output: Seafish Atlantic Salmon Feed Profile documents fishmeal at ~15\u201320% of modern low-FCR diet composition. At FCR ~1.15 kg feed/kg live weight and dressing ~90%, feed per kg fillet \u2248 1.28 kg. At 39% inclusion (midpoint of reduced-fishmeal Norwegian industry average), fishmeal \u2248 0.50 kg/kg salmon. Value is a conservative modern estimate reflecting the industry trend toward reduced marine ingredient inclusion vs. older high-fishmeal diets."
+                            "title": "Seafish — Atlantic Salmon Feed Profile",
+                            "note": "Farmed salmon — fishmeal kg_feed_per_kg_output: Seafish Atlantic Salmon Feed Profile documents fishmeal at ~15–20% of modern low-FCR diet composition. FCR ~1.15 kg feed/kg live weight; fillet yield_fraction = 0.65; feed per kg fillet ≈ 1.77 kg. At 39% inclusion (midpoint of reduced-fishmeal Norwegian industry average), fishmeal ≈ 0.69 kg/kg salmon fillet. Prior value (0.50) used 90% gutted-fish dressing yield instead of 65% fillet yield, underestimating by 1.38×."
                         }
                     },
                     {
-                        "value": 0.5,
+                        "value": 0.69,
                         "confidence": 3,
                         "source": {
                             "id": 76,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/salmo_salar",
-                            "title": "FAO \u2014 Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
-                            "note": "Farmed salmon \u2014 fishmeal kg_feed_per_kg_output: FAO Atlantic salmon aquaculture profile documents feed composition trends for commercial Norwegian and Chilean production. Modern feeds contain 15\u201325% fishmeal by weight (down from 40\u201365% in 1990s) as plant proteins and single-cell proteins substitute for marine ingredients. FCR for seawater phase ~1.0\u20131.2 kg feed/kg gain; combined with 90% dressing yield this gives ~0.50 kg fishmeal/kg salmon retail output at 39% average inclusion \u2014 consistent with Seafish data and the Pelletier & Tyedmers (2007) feed inventory."
+                            "title": "FAO — Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
+                            "note": "Farmed salmon — fishmeal kg_feed_per_kg_output: FAO Atlantic salmon aquaculture profile documents modern feeds at 15–25% fishmeal by weight. FCR ~1.15 kg feed/kg live weight; fillet yield_fraction = 0.65 gives 1.77 kg feed/kg fillet. At 39% average inclusion: 0.39 × 1.77 ≈ 0.69 kg fishmeal/kg salmon fillet. Prior value used 90% gutted-fish dressing instead of 65% fillet yield."
                         }
                     }
                 ]
@@ -215,23 +215,23 @@
                 "food_slug": "fish-oil",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.13,
+                        "value": 0.18,
                         "confidence": 3,
                         "source": {
                             "id": 32,
                             "url": "https://www.seafish.org/responsible-sourcing/aquaculture-farming-seafood/species-farmed-in-aquaculture/aquaculture-profiles/atlantic-salmon/feed/",
-                            "title": "Seafish \u2014 Atlantic Salmon Feed Profile",
-                            "note": "Farmed salmon \u2014 fish-oil kg_feed_per_kg_output: Seafish profile reports fish oil at ~6\u20137% of diet by weight in modern salmon feeds. Feed per kg fillet \u2248 1.28 kg (FCR 1.15, dressing 90%). Fish oil fraction: 0.10 \u00d7 1.28 \u2248 0.13 kg/kg salmon (using 10% as conservative estimate accounting for partial substitution with vegetable oils). Fish oil provides essential omega-3 EPA/DHA that cannot be fully replaced by plant oils."
+                            "title": "Seafish — Atlantic Salmon Feed Profile",
+                            "note": "Farmed salmon — fish-oil kg_feed_per_kg_output: Seafish profile reports fish oil at ~6–7% of diet by weight in modern salmon feeds. Feed per kg fillet ≈ 1.77 kg (FCR 1.15, fillet yield 0.65). Fish oil at 10% inclusion: 0.10 × 1.77 ≈ 0.18 kg/kg salmon. Prior value (0.13) used 90% gutted-fish dressing yield instead of 65% fillet yield."
                         }
                     },
                     {
-                        "value": 0.13,
+                        "value": 0.18,
                         "confidence": 3,
                         "source": {
                             "id": 76,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/salmo_salar",
-                            "title": "FAO \u2014 Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
-                            "note": "Farmed salmon \u2014 fish-oil kg_feed_per_kg_output: FAO Atlantic salmon profile documents fish oil at 6\u201310% of feed by weight in commercial diets, with Norwegian industry working to reduce inclusion through partial substitution with algal oil and terrestrial plant oils (camelina, rapeseed). At 10% inclusion and 1.28 kg feed/kg salmon fillet: 0.10 \u00d7 1.28 = 0.13 kg fish-oil/kg salmon. Consistent with Pelletier & Tyedmers (2007) Norwegian salmon feed inventory."
+                            "title": "FAO — Farmed Atlantic Salmon (Salmo salar) Aquaculture Profile",
+                            "note": "Farmed salmon — fish-oil kg_feed_per_kg_output: FAO profile documents fish oil at 6–10% of feed in commercial diets. Feed per kg fillet ≈ 1.77 kg (FCR 1.15, fillet yield 0.65); at 10% inclusion: 0.10 × 1.77 = 0.18 kg fish-oil/kg salmon. Prior value used 90% gutted-fish dressing instead of 65% fillet yield."
                         }
                     }
                 ]
@@ -268,7 +268,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -279,8 +279,8 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
-                    "note": "Tuna \u2014 neuron_count: ~30 million neurons."
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Tuna — neuron_count: ~30 million neurons."
                 }
             }
         ],
@@ -291,8 +291,8 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
-                    "note": "Tuna \u2014 neuron_count: ~30 million neurons."
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Tuna — neuron_count: ~30 million neurons."
                 }
             }
         ],
@@ -303,7 +303,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -321,8 +321,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild tuna \u2014 ch4_kg_per_kg_output: Wild-caught tuna produces effectively zero CH4 emissions. P&N 2018 reports wild-caught fish GHG at ~3.0\u20135.4 kg CO2e/kg, nearly entirely from diesel fuel combustion in fishing vessels; there is no biological CH4 source in wild pelagic fisheries."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild tuna — ch4_kg_per_kg_output: Wild-caught tuna produces effectively zero CH4 emissions. P&N 2018 reports wild-caught fish GHG at ~3.0–5.4 kg CO2e/kg, nearly entirely from diesel fuel combustion in fishing vessels; there is no biological CH4 source in wild pelagic fisheries."
                 }
             },
             {
@@ -331,8 +331,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild tuna \u2014 ch4_kg_per_kg_output: OWID P&N 2018 dataset does not list wild-caught tuna separately; wild-caught fish GHG is dominated by vessel fuel CO2 with zero CH4. Corroborates P&N 2018 wild fish characterization."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild tuna — ch4_kg_per_kg_output: OWID P&N 2018 dataset does not list wild-caught tuna separately; wild-caught fish GHG is dominated by vessel fuel CO2 with zero CH4. Corroborates P&N 2018 wild fish characterization."
                 }
             }
         ],
@@ -343,8 +343,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild tuna \u2014 n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor processing on fishing vessels; P&N 2018 wild-caught fish total ~3.0\u20135.4 kg CO2e/kg is fuel-CO2 dominated; N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the minor role of N2O in wild-catch fisheries."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild tuna — n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor processing on fishing vessels; P&N 2018 wild-caught fish total ~3.0–5.4 kg CO2e/kg is fuel-CO2 dominated; N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the minor role of N2O in wild-catch fisheries."
                 }
             },
             {
@@ -353,8 +353,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild tuna \u2014 n2o_kg_per_kg_output: OWID P&N 2018 confirms wild-caught fish GHG is overwhelmingly CO2 from vessel fuel; N2O contribution is negligible. 0.001 kg N2O/kg is consistent with the P&N characterization of pelagic longline and purse-seine fisheries."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild tuna — n2o_kg_per_kg_output: OWID P&N 2018 confirms wild-caught fish GHG is overwhelmingly CO2 from vessel fuel; N2O contribution is negligible. 0.001 kg N2O/kg is consistent with the P&N characterization of pelagic longline and purse-seine fisheries."
                 }
             }
         ],
@@ -365,8 +365,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild tuna \u2014 co2_kg_per_kg_output: P&N 2018 reports wild-caught fish at ~3.0\u20135.4 kg CO2e/kg across fisheries; the midpoint of ~4.2 kg CO2e/kg for large pelagic longline tuna fisheries is used as the basis. Subtracting N2O CO2e (0.001 \u00d7 265 = 0.265 kg CO2e) leaves ~3.9 kg direct CO2 per kg output, arising almost entirely from fuel combustion in distant-water tuna fleets. Previous dataset value of 0.8 was incorrect \u2014 it was approximately 5\u00d7 too low and did not correspond to any P&N-reported metric for wild-caught tuna."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild tuna — co2_kg_per_kg_output: P&N 2018 reports wild-caught fish at ~3.0–5.4 kg CO2e/kg across fisheries; the midpoint of ~4.2 kg CO2e/kg for large pelagic longline tuna fisheries is used as the basis. Subtracting N2O CO2e (0.001 × 265 = 0.265 kg CO2e) leaves ~3.9 kg direct CO2 per kg output, arising almost entirely from fuel combustion in distant-water tuna fleets. Previous dataset value of 0.8 was incorrect — it was approximately 5× too low and did not correspond to any P&N-reported metric for wild-caught tuna."
                 }
             },
             {
@@ -375,8 +375,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild tuna \u2014 co2_kg_per_kg_output: OWID GHG chart sourcing P&N 2018; wild-caught fish category spans 3.0\u20135.4 kg CO2e/kg depending on fishery type and target species. Tuna longline fisheries are among the more fuel-intensive, placing tuna toward the higher end (~4.2 kg CO2e/kg total); CO2 from fuel combustion accounts for ~93% of that total. 3.9 kg CO2/kg is consistent with published wild-catch LCA literature for large pelagic tuna."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild tuna — co2_kg_per_kg_output: OWID GHG chart sourcing P&N 2018; wild-caught fish category spans 3.0–5.4 kg CO2e/kg depending on fishery type and target species. Tuna longline fisheries are among the more fuel-intensive, placing tuna toward the higher end (~4.2 kg CO2e/kg total); CO2 from fuel combustion accounts for ~93% of that total. 3.9 kg CO2/kg is consistent with published wild-catch LCA literature for large pelagic tuna."
                 }
             }
         ],
@@ -412,7 +412,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Wild shrimp \u2014 nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
+                    "note": "Wild shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
                 }
             }
         ],
@@ -423,8 +423,8 @@
                 "source": {
                     "id": 43,
                     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
-                    "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
-                    "note": "Wild shrimp \u2014 neuron_count: Penaeid shrimp CNS estimated at ~100,000\u20131,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized individuals (~15\u201320g). Applies equally to wild and farmed penaeid species."
+                    "title": "PMC — Nervous Systems of Decapod Crustaceans",
+                    "note": "Wild shrimp — neuron_count: Penaeid shrimp CNS estimated at ~100,000–1,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized individuals (~15–20g). Applies equally to wild and farmed penaeid species."
                 }
             }
         ],
@@ -435,8 +435,8 @@
                 "source": {
                     "id": 43,
                     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
-                    "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
-                    "note": "Wild shrimp \u2014 weight_kg: Commercial wild-caught penaeid shrimp (Penaeus setiferus, P. aztecus, P. monodon) at market size are typically 15\u201320g live weight; 0.018 kg (18g) used as representative. Consistent with US Gulf Coast and Southeast Asian wild trawl fishery size grades."
+                    "title": "PMC — Nervous Systems of Decapod Crustaceans",
+                    "note": "Wild shrimp — weight_kg: Commercial wild-caught penaeid shrimp (Penaeus setiferus, P. aztecus, P. monodon) at market size are typically 15–20g live weight; 0.018 kg (18g) used as representative. Consistent with US Gulf Coast and Southeast Asian wild trawl fishery size grades."
                 }
             }
         ],
@@ -447,8 +447,8 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
-                    "note": "Wild shrimp \u2014 yield_fraction: Whole-to-edible (peeled, deveined) conversion of 0.60 applies equally to wild and farmed shrimp of the same size grade."
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Wild shrimp — yield_fraction: Whole-to-edible (peeled, deveined) conversion of 0.60 applies equally to wild and farmed shrimp of the same size grade."
                 }
             }
         ],
@@ -461,8 +461,8 @@
                 "source": {
                     "id": 44,
                     "url": "https://www.worldwildlife.org/threats/bycatch",
-                    "title": "WWF \u2014 Bycatch Overview",
-                    "note": "Wild shrimp \u2014 bycatch_amount: Gulf of Mexico and global tropical trawl shrimp fisheries have historically reported bycatch ratios of 3\u201310 kg discarded finfish per kg shrimp landed; commonly cited average ~5.7 kg bycatch/kg shrimp. Applies only to wild-caught trawl fraction; farmed shrimp has no trawl bycatch."
+                    "title": "WWF — Bycatch Overview",
+                    "note": "Wild shrimp — bycatch_amount: Gulf of Mexico and global tropical trawl shrimp fisheries have historically reported bycatch ratios of 3–10 kg discarded finfish per kg shrimp landed; commonly cited average ~5.7 kg bycatch/kg shrimp. Applies only to wild-caught trawl fraction; farmed shrimp has no trawl bycatch."
                 }
             },
             {
@@ -471,8 +471,8 @@
                 "source": {
                     "id": 79,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                    "note": "Wild shrimp \u2014 bycatch_amount: Henriksson et al. (2015) review of shrimp production systems documents trawl bycatch ratios of 2\u201310 kg per kg shrimp across tropical and subtropical wild fisheries, consistent with the WWF ~5.7 kg/kg figure used here. Wild trawl fisheries dominate bycatch impact; FAO bottom trawl data cited in review corroborates this range."
+                    "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Wild shrimp — bycatch_amount: Henriksson et al. (2015) review of shrimp production systems documents trawl bycatch ratios of 2–10 kg per kg shrimp across tropical and subtropical wild fisheries, consistent with the WWF ~5.7 kg/kg figure used here. Wild trawl fisheries dominate bycatch impact; FAO bottom trawl data cited in review corroborates this range."
                 }
             }
         ],
@@ -486,8 +486,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild shrimp \u2014 ch4_kg_per_kg_output: Wild-caught shrimp produce effectively zero CH4. P&N 2018 wild-catch fish category GHG is entirely fuel CO2; there is no biological CH4 source in trawl fisheries. The P&N 2018 wild-caught crustacean GHG of ~3.5 kg CO2e/kg arises almost entirely from diesel combustion in trawl vessels."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp — ch4_kg_per_kg_output: Wild-caught shrimp produce effectively zero CH4. P&N 2018 wild-catch fish category GHG is entirely fuel CO2; there is no biological CH4 source in trawl fisheries. The P&N 2018 wild-caught crustacean GHG of ~3.5 kg CO2e/kg arises almost entirely from diesel combustion in trawl vessels."
                 }
             },
             {
@@ -496,8 +496,8 @@
                 "source": {
                     "id": 80,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
-                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
-                    "note": "Wild shrimp \u2014 ch4_kg_per_kg_output: Parker et al. (2018) analyzed fuel use and GHG emissions for global fisheries; bottom trawl shrimp fisheries emit 2\u20136 kg CO2e/kg landed shrimp from fuel combustion alone, with zero CH4 contribution. Confirms CH4 = 0 for wild-catch trawl operations."
+                    "title": "Parker et al. (2018) — Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp — ch4_kg_per_kg_output: Parker et al. (2018) analyzed fuel use and GHG emissions for global fisheries; bottom trawl shrimp fisheries emit 2–6 kg CO2e/kg landed shrimp from fuel combustion alone, with zero CH4 contribution. Confirms CH4 = 0 for wild-catch trawl operations."
                 }
             }
         ],
@@ -508,8 +508,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild shrimp \u2014 n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor on-board processing; P&N 2018 wild-catch crustacean total ~3.5 kg CO2e/kg is fuel-CO2 dominated. N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the negligible N2O role in wild trawl fisheries."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp — n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor on-board processing; P&N 2018 wild-catch crustacean total ~3.5 kg CO2e/kg is fuel-CO2 dominated. N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the negligible N2O role in wild trawl fisheries."
                 }
             },
             {
@@ -518,8 +518,8 @@
                 "source": {
                     "id": 80,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
-                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
-                    "note": "Wild shrimp \u2014 n2o_kg_per_kg_output: Parker et al. (2018) report GHG from global shrimp trawl fisheries as overwhelmingly CO2 from diesel fuel; N2O contribution is negligible. 0.001 kg N2O/kg is consistent with the authors' characterization of wild-catch trawl emission profiles."
+                    "title": "Parker et al. (2018) — Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp — n2o_kg_per_kg_output: Parker et al. (2018) report GHG from global shrimp trawl fisheries as overwhelmingly CO2 from diesel fuel; N2O contribution is negligible. 0.001 kg N2O/kg is consistent with the authors' characterization of wild-catch trawl emission profiles."
                 }
             }
         ],
@@ -530,8 +530,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild shrimp \u2014 co2_kg_per_kg_output: P&N 2018 wild-caught crustaceans ~3.5 kg CO2e/kg total. Subtracting N2O CO2e (0.001 \u00d7 265 = 0.265) leaves ~3.24 \u2248 3.2 kg direct CO2/kg. Arises almost entirely from diesel combustion in bottom-trawl vessels; trawling is among the more fuel-intensive fishing methods due to drag resistance on the seabed."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild shrimp — co2_kg_per_kg_output: P&N 2018 wild-caught crustaceans ~3.5 kg CO2e/kg total. Subtracting N2O CO2e (0.001 × 265 = 0.265) leaves ~3.24 ≈ 3.2 kg direct CO2/kg. Arises almost entirely from diesel combustion in bottom-trawl vessels; trawling is among the more fuel-intensive fishing methods due to drag resistance on the seabed."
                 }
             },
             {
@@ -540,8 +540,8 @@
                 "source": {
                     "id": 80,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X17305372",
-                    "title": "Parker et al. (2018) \u2014 Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
-                    "note": "Wild shrimp \u2014 co2_kg_per_kg_output: Parker et al. (2018) report global shrimp trawl fisheries at a median of ~2\u20134 kg CO2e/kg landed shrimp from fuel use alone, with a global fleet-weighted mean around 3\u20134 kg CO2e/kg. A value of 3.2 kg CO2/kg is used as the central estimate, consistent with both Parker et al. and P&N 2018."
+                    "title": "Parker et al. (2018) — Fuel Use and Greenhouse Gas Emissions of World Fisheries (Nature Climate Change)",
+                    "note": "Wild shrimp — co2_kg_per_kg_output: Parker et al. (2018) report global shrimp trawl fisheries at a median of ~2–4 kg CO2e/kg landed shrimp from fuel use alone, with a global fleet-weighted mean around 3–4 kg CO2e/kg. A value of 3.2 kg CO2/kg is used as the central estimate, consistent with both Parker et al. and P&N 2018."
                 }
             }
         ],
@@ -577,7 +577,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Farmed shrimp \u2014 nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
+                    "note": "Farmed shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
                 }
             }
         ],
@@ -588,8 +588,8 @@
                 "source": {
                     "id": 43,
                     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4685590/",
-                    "title": "PMC \u2014 Nervous Systems of Decapod Crustaceans",
-                    "note": "Farmed shrimp \u2014 neuron_count: Penaeid shrimp CNS estimated at ~100,000\u20131,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized Penaeus vannamei (~15\u201320g), the dominant farmed species globally."
+                    "title": "PMC — Nervous Systems of Decapod Crustaceans",
+                    "note": "Farmed shrimp — neuron_count: Penaeid shrimp CNS estimated at ~100,000–1,000,000 neurons; 1,000,000 used as conservative upper bound for commercial-sized Penaeus vannamei (~15–20g), the dominant farmed species globally."
                 }
             }
         ],
@@ -600,8 +600,8 @@
                 "source": {
                     "id": 49,
                     "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
-                    "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                    "note": "Farmed shrimp \u2014 weight_kg: Commercial harvest size for Penaeus vannamei in intensive pond aquaculture is typically 12\u201320g per individual at 90\u2013120 days grow-out; 0.018 kg (18g) used as representative value consistent with FAO aquaculture profile and standard market size grades."
+                    "title": "FAO — Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                    "note": "Farmed shrimp — weight_kg: Commercial harvest size for Penaeus vannamei in intensive pond aquaculture is typically 12–20g per individual at 90–120 days grow-out; 0.018 kg (18g) used as representative value consistent with FAO aquaculture profile and standard market size grades."
                 }
             }
         ],
@@ -612,8 +612,8 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
-                    "note": "Farmed shrimp \u2014 yield_fraction: Whole-to-edible (headless, peeled, deveined) conversion of 0.60 from FAO/BfR yield tables. Applies to pond-farmed Penaeus vannamei of standard commercial size."
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Farmed shrimp — yield_fraction: Whole-to-edible (headless, peeled, deveined) conversion of 0.60 from FAO/BfR yield tables. Applies to pond-farmed Penaeus vannamei of standard commercial size."
                 }
             }
         ],
@@ -630,8 +630,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: CH4 from anaerobic decomposition of organic matter in aquaculture ponds estimated at ~0.03 kg CH4/kg shrimp output. P&N 2018 reports farmed prawns at ~26.87 kg CO2e/kg total; CH4 at 0.03 kg/kg yields 0.84 kg CO2e/kg at GWP100=28, accounting for ~3% of the total \u2014 consistent with the minor pond-methane contribution relative to dominant CO2 from feed and land clearing."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed shrimp — ch4_kg_per_kg_output: CH4 from anaerobic decomposition of organic matter in aquaculture ponds estimated at ~0.03 kg CH4/kg shrimp output. P&N 2018 reports farmed prawns at ~26.87 kg CO2e/kg total; CH4 at 0.03 kg/kg yields 0.84 kg CO2e/kg at GWP100=28, accounting for ~3% of the total — consistent with the minor pond-methane contribution relative to dominant CO2 from feed and land clearing."
                 }
             },
             {
@@ -640,8 +640,8 @@
                 "source": {
                     "id": 79,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                    "note": "Farmed shrimp \u2014 ch4_kg_per_kg_output: Henriksson et al. (2015) synthesized LCA studies for Asian shrimp aquaculture and report pond CH4 flux of ~0.02\u20130.05 kg CH4/kg shrimp from anaerobic sediment decomposition and water column methanogenesis in nitrogen-loaded ponds. Midpoint 0.03 kg CH4/kg is consistent with P&N 2018 supplementary data and published pond GHG flux measurements for intensive Penaeus vannamei systems."
+                    "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp — ch4_kg_per_kg_output: Henriksson et al. (2015) synthesized LCA studies for Asian shrimp aquaculture and report pond CH4 flux of ~0.02–0.05 kg CH4/kg shrimp from anaerobic sediment decomposition and water column methanogenesis in nitrogen-loaded ponds. Midpoint 0.03 kg CH4/kg is consistent with P&N 2018 supplementary data and published pond GHG flux measurements for intensive Penaeus vannamei systems."
                 }
             }
         ],
@@ -652,8 +652,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: N2O from nitrification/denitrification in nitrogen-rich shrimp ponds estimated at ~0.008 kg N2O/kg output. At GWP100=265, yields ~2.12 kg CO2e/kg, representing ~8% of the P&N 26.87 kg CO2e/kg total \u2014 consistent with the moderate N2O role in intensive pond aquaculture."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed shrimp — n2o_kg_per_kg_output: N2O from nitrification/denitrification in nitrogen-rich shrimp ponds estimated at ~0.008 kg N2O/kg output. At GWP100=265, yields ~2.12 kg CO2e/kg, representing ~8% of the P&N 26.87 kg CO2e/kg total — consistent with the moderate N2O role in intensive pond aquaculture."
                 }
             },
             {
@@ -662,30 +662,30 @@
                 "source": {
                     "id": 79,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                    "note": "Farmed shrimp \u2014 n2o_kg_per_kg_output: Henriksson et al. (2015) review of shrimp aquaculture LCA literature documents pond N2O emissions of ~0.005\u20130.012 kg N2O/kg shrimp from nitrification-denitrification in eutrophic pond water; 0.008 kg/kg (midpoint) is consistent with P&N 2018 supplementary data and measured N2O flux studies from intensive ponds in Thailand and Vietnam."
+                    "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp — n2o_kg_per_kg_output: Henriksson et al. (2015) review of shrimp aquaculture LCA literature documents pond N2O emissions of ~0.005–0.012 kg N2O/kg shrimp from nitrification-denitrification in eutrophic pond water; 0.008 kg/kg (midpoint) is consistent with P&N 2018 supplementary data and measured N2O flux studies from intensive ponds in Thailand and Vietnam."
                 }
             }
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 19.2,
+                "value": 18.6,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~26.87 kg CO2e/kg. Feed CO2e (fishmeal 0.30\u00d76.0 + fish-oil 0.06\u00d73.75 + soy 0.67\u00d73.0 + wheat 0.45\u00d71.57 \u2248 4.74 kg CO2e) tracked via the feed join; CH4 CO2e (0.03\u00d728=0.84) and N2O CO2e (0.008\u00d7265=2.12) tracked in their own fields. Remaining direct CO2: 26.87 \u2212 4.74 \u2212 0.84 \u2212 2.12 \u2248 19.17 \u2248 19.2 kg CO2e/kg. Dominated by mangrove/coastal wetland clearing for pond construction (~10\u201315 kg CO2e/kg from land-use change), plus on-farm energy and processing."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Farmed shrimp — co2_kg_per_kg_output (direct non-feed only): P&N 2018 total ~26.87 kg CO2e/kg. Feed CO2e (fishmeal 0.34×6.0 + fish-oil 0.07×3.75 + soy 0.75×3.0 + wheat 0.50×1.57 ≈ 5.34 kg CO2e) tracked via the feed join; CH4 CO2e (0.03×28=0.84) and N2O CO2e (0.008×265=2.12) tracked in their own fields. Remaining direct CO2: 26.87 − 5.34 − 0.84 − 2.12 ≈ 18.57 ≈ 18.6 kg CO2e/kg. Dominated by mangrove/coastal wetland clearing for pond construction (~10–15 kg CO2e/kg from land-use change), plus on-farm energy and processing. Feed values updated to use peeled yield_fraction 0.60 instead of prior 67% headless dressing."
                 }
             },
             {
-                "value": 19.2,
+                "value": 18.6,
                 "confidence": 3,
                 "source": {
                     "id": 79,
                     "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                    "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                    "note": "Farmed shrimp \u2014 co2_kg_per_kg_output (direct non-feed only): Henriksson et al. (2015) synthesize shrimp LCA studies and identify land-use change CO2 (mangrove conversion) as the dominant single emission source, estimated at 10\u201316 kg CO2e/kg shrimp in Southeast Asian pond systems where mangrove clearing is prevalent. Combined with on-farm energy and processing CO2 (~3\u20135 kg CO2e/kg) and subtracting feed-join and GHG-field contributions yields a direct non-feed CO2 of ~19.2 kg CO2e/kg, consistent with P&N 2018."
+                    "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                    "note": "Farmed shrimp — co2_kg_per_kg_output (direct non-feed only): Henriksson et al. (2015) synthesize shrimp LCA studies and identify land-use change CO2 (mangrove conversion) as the dominant single emission source, estimated at 10–16 kg CO2e/kg shrimp in Southeast Asian pond systems where mangrove clearing is prevalent. Combined with on-farm energy and processing CO2 (~3–5 kg CO2e/kg) and subtracting feed-join and GHG-field contributions yields a direct non-feed CO2 of ~18.6 kg CO2e/kg, consistent with P&N 2018. Value updated when feed entries were corrected from 67% headless to 60% peeled yield."
                 }
             }
         ],
@@ -695,23 +695,23 @@
                 "food_slug": "soy",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.67,
+                        "value": 0.75,
                         "confidence": 2,
                         "source": {
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
-                            "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 soy kg_feed_per_kg_output: FAO whiteleg shrimp profile reports soybean meal 25\u201335% of commercial feed. FCR ~1.5 kg feed/kg live shrimp; dressing ~67%. Feed per kg headless shrimp = 1.5/0.67 \u2248 2.24 kg. Soy fraction 30%: 0.30 \u00d7 2.24 \u2248 0.67 kg soy/kg shrimp."
+                            "title": "FAO — Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                            "note": "Farmed shrimp — soy kg_feed_per_kg_output: FAO whiteleg shrimp profile reports soybean meal 25–35% of commercial feed. FCR ~1.5 kg feed/kg live shrimp; peeled yield_fraction = 0.60 (FAO/BfR); feed per kg peeled shrimp = 1.5/0.60 = 2.50 kg. Soy fraction 30%: 0.30 × 2.50 = 0.75 kg soy/kg shrimp. Prior value (0.67) used 67% headless dressing instead of 60% peeled yield, underestimating by 1.12×."
                         }
                     },
                     {
-                        "value": 0.67,
+                        "value": 0.75,
                         "confidence": 2,
                         "source": {
                             "id": 79,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                            "note": "Farmed shrimp \u2014 soy kg_feed_per_kg_output: Henriksson et al. (2015) review shrimp feed compositions across Southeast Asian and Latin American production systems; soybean meal at 25\u201335% of diet is consistently the dominant plant protein source in commercial P. vannamei pellets. At FCR 1.5 and 67% dressing yield, this yields 0.67 kg soy/kg headless shrimp, corroborating the FAO profile value."
+                            "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp — soy kg_feed_per_kg_output: Henriksson et al. (2015) review shrimp feed compositions across Southeast Asian and Latin American production systems; soybean meal at 25–35% of diet is consistently the dominant plant protein source. At FCR 1.5 and peeled yield_fraction 0.60, feed per kg peeled shrimp = 2.50 kg; soy at 30%: 0.75 kg soy/kg shrimp. Corroborates FAO profile value (corrected from 67% headless to 60% peeled yield)."
                         }
                     }
                 ]
@@ -721,23 +721,23 @@
                 "food_slug": "wheat",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.45,
+                        "value": 0.5,
                         "confidence": 2,
                         "source": {
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
-                            "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 wheat kg_feed_per_kg_output: FAO whiteleg shrimp profile reports wheat 15\u201325% of commercial feed by weight as a binder and carbohydrate source. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Wheat fraction 20%: 0.20 \u00d7 2.24 \u2248 0.45 kg wheat/kg shrimp."
+                            "title": "FAO — Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                            "note": "Farmed shrimp — wheat kg_feed_per_kg_output: FAO whiteleg shrimp profile reports wheat 15–25% of commercial feed by weight. Feed per kg peeled shrimp = 1.5/0.60 = 2.50 kg (FCR 1.5, yield_fraction 0.60). Wheat fraction 20%: 0.20 × 2.50 = 0.50 kg wheat/kg shrimp. Prior value (0.45) used 67% headless dressing instead of 60% peeled yield."
                         }
                     },
                     {
-                        "value": 0.45,
+                        "value": 0.5,
                         "confidence": 2,
                         "source": {
                             "id": 79,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                            "note": "Farmed shrimp \u2014 wheat kg_feed_per_kg_output: Henriksson et al. (2015) confirm wheat flour (15\u201325% of diet) as a key binder/carbohydrate ingredient in commercial shrimp pellets, consistent with FAO profile data. At 20% inclusion and 2.24 kg feed/kg headless shrimp: 0.45 kg wheat/kg shrimp."
+                            "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp — wheat kg_feed_per_kg_output: Henriksson et al. (2015) confirm wheat flour (15–25% of diet) as a key binder/carbohydrate ingredient in commercial shrimp pellets. At 20% inclusion and 2.50 kg feed/kg peeled shrimp (FCR 1.5, yield_fraction 0.60): 0.50 kg wheat/kg shrimp. Corrected from 67% headless to 60% peeled yield."
                         }
                     }
                 ]
@@ -747,23 +747,23 @@
                 "food_slug": "fishmeal",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.3,
+                        "value": 0.34,
                         "confidence": 2,
                         "source": {
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
-                            "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fishmeal at 10\u201325% of commercial shrimp feed, declining in modern intensive operations. At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fishmeal fraction ~13%: 0.13 \u00d7 2.24 \u2248 0.30 kg fishmeal/kg shrimp."
+                            "title": "FAO — Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                            "note": "Farmed shrimp — fishmeal kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fishmeal at 10–25% of commercial shrimp feed. Feed per kg peeled shrimp = 2.50 kg (FCR 1.5, yield_fraction 0.60). Fishmeal fraction ~13%: 0.13 × 2.50 ≈ 0.34 kg fishmeal/kg shrimp. Prior value (0.30) used 67% headless dressing instead of 60% peeled yield."
                         }
                     },
                     {
-                        "value": 0.3,
+                        "value": 0.34,
                         "confidence": 2,
                         "source": {
                             "id": 79,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                            "note": "Farmed shrimp \u2014 fishmeal kg_feed_per_kg_output: Henriksson et al. (2015) report fishmeal inclusion in P. vannamei diets at 10\u201320% across surveyed production systems, with a central value of ~13% consistent with FAO data. At 2.24 kg feed/kg headless shrimp: 0.13 \u00d7 2.24 \u2248 0.30 kg fishmeal/kg shrimp."
+                            "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp — fishmeal kg_feed_per_kg_output: Henriksson et al. (2015) report fishmeal inclusion in P. vannamei diets at 10–20%, central value ~13%. At 2.50 kg feed/kg peeled shrimp (FCR 1.5, yield_fraction 0.60): 0.13 × 2.50 ≈ 0.34 kg fishmeal/kg shrimp. Corrected from 67% headless to 60% peeled yield."
                         }
                     }
                 ]
@@ -773,23 +773,23 @@
                 "food_slug": "fish-oil",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.06,
+                        "value": 0.07,
                         "confidence": 2,
                         "source": {
                             "id": 49,
                             "url": "https://www.fao.org/fishery/en/culturedspecies/penaeus_vannamei",
-                            "title": "FAO \u2014 Farmed Whiteleg Shrimp (Penaeus vannamei)",
-                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fish oil at 2\u20135% of commercial shrimp feed (lower than salmon due to lower shrimp omega-3 requirements). At FCR 1.5 and dressing 67%, feed per kg headless shrimp \u2248 2.24 kg. Fish oil fraction ~3%: 0.03 \u00d7 2.24 \u2248 0.06 kg fish-oil/kg shrimp."
+                            "title": "FAO — Farmed Whiteleg Shrimp (Penaeus vannamei)",
+                            "note": "Farmed shrimp — fish-oil kg_feed_per_kg_output: FAO whiteleg shrimp profile documents fish oil at 2–5% of commercial shrimp feed. Feed per kg peeled shrimp = 2.50 kg (FCR 1.5, yield_fraction 0.60). Fish oil fraction ~3%: 0.03 × 2.50 ≈ 0.07 kg fish-oil/kg shrimp. Prior value (0.06) used 67% headless dressing instead of 60% peeled yield."
                         }
                     },
                     {
-                        "value": 0.06,
+                        "value": 0.07,
                         "confidence": 2,
                         "source": {
                             "id": 79,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0308597X14003327",
-                            "title": "Henriksson et al. (2015) \u2014 Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
-                            "note": "Farmed shrimp \u2014 fish-oil kg_feed_per_kg_output: Henriksson et al. (2015) confirm fish oil inclusion at 2\u20135% of P. vannamei diet across surveyed Asian production systems; shrimp require substantially less fish oil than salmonids. At 3% inclusion and 2.24 kg feed/kg headless shrimp: 0.03 \u00d7 2.24 \u2248 0.06 kg fish-oil/kg shrimp."
+                            "title": "Henriksson et al. (2015) — Recirculating Aquaculture Systems and the Environment (Reviews in Aquaculture)",
+                            "note": "Farmed shrimp — fish-oil kg_feed_per_kg_output: Henriksson et al. (2015) confirm fish oil inclusion at 2–5% of P. vannamei diet. At 3% inclusion and 2.50 kg feed/kg peeled shrimp (FCR 1.5, yield_fraction 0.60): 0.03 × 2.50 ≈ 0.07 kg fish-oil/kg shrimp. Corrected from 67% headless to 60% peeled yield."
                         }
                     }
                 ]
@@ -826,7 +826,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -837,8 +837,8 @@
                 "source": {
                     "id": 45,
                     "url": "https://en.wikipedia.org/wiki/Sardine",
-                    "title": "Wikipedia \u2014 Sardine",
-                    "note": "Sardines \u2014 neuron_count: No direct empirical neuronal count for sardines exists in the peer-reviewed literature. As small teleost fish with brain structure comparable to other clupeoids, an estimate of ~10 million neurons is applied, consistent with figures used for small pelagic fish of similar body size (e.g., reference values for small fish in the range of 5\u201330 million neurons). This carries significant uncertainty."
+                    "title": "Wikipedia — Sardine",
+                    "note": "Sardines — neuron_count: No direct empirical neuronal count for sardines exists in the peer-reviewed literature. As small teleost fish with brain structure comparable to other clupeoids, an estimate of ~10 million neurons is applied, consistent with figures used for small pelagic fish of similar body size (e.g., reference values for small fish in the range of 5–30 million neurons). This carries significant uncertainty."
                 }
             }
         ],
@@ -849,8 +849,8 @@
                 "source": {
                     "id": 45,
                     "url": "https://en.wikipedia.org/wiki/Sardine",
-                    "title": "Wikipedia \u2014 Sardine",
-                    "note": "Sardines \u2014 weight_kg: Commercial sardines (Sardina pilchardus, Sardinops sagax) at harvest typically weigh 50\u2013150g; a value of 0.1 kg (100g) is used as representative."
+                    "title": "Wikipedia — Sardine",
+                    "note": "Sardines — weight_kg: Commercial sardines (Sardina pilchardus, Sardinops sagax) at harvest typically weigh 50–150g; a value of 0.1 kg (100g) is used as representative."
                 }
             }
         ],
@@ -861,7 +861,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -875,7 +875,7 @@
                 "source": {
                     "id": 44,
                     "url": "https://www.worldwildlife.org/threats/bycatch",
-                    "title": "WWF \u2014 Bycatch Overview",
+                    "title": "WWF — Bycatch Overview",
                     "note": null
                 }
             }
@@ -890,8 +890,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild sardines \u2014 ch4_kg_per_kg_output: Wild-caught small pelagics (sardines, anchovies) produce effectively zero CH4. P&N 2018 characterizes wild-caught small pelagics at ~1.0\u20132.5 kg CO2e/kg, arising entirely from vessel fuel combustion and processing energy; there is no biological CH4 source in pelagic purse-seine fisheries."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild sardines — ch4_kg_per_kg_output: Wild-caught small pelagics (sardines, anchovies) produce effectively zero CH4. P&N 2018 characterizes wild-caught small pelagics at ~1.0–2.5 kg CO2e/kg, arising entirely from vessel fuel combustion and processing energy; there is no biological CH4 source in pelagic purse-seine fisheries."
                 }
             },
             {
@@ -900,8 +900,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild sardines \u2014 ch4_kg_per_kg_output: OWID P&N 2018 dataset confirms wild-caught fish GHG is entirely CO2 from vessel fuel; zero CH4 for purse-seine small pelagic fisheries. Sardines are among the lowest-emission animal proteins in the P&N 2018 dataset."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild sardines — ch4_kg_per_kg_output: OWID P&N 2018 dataset confirms wild-caught fish GHG is entirely CO2 from vessel fuel; zero CH4 for purse-seine small pelagic fisheries. Sardines are among the lowest-emission animal proteins in the P&N 2018 dataset."
                 }
             }
         ],
@@ -912,8 +912,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild sardines \u2014 n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor on-board processing; P&N 2018 wild small pelagics total ~1.0\u20132.5 kg CO2e/kg is fuel-CO2 dominated. N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the negligible N2O role in purse-seine sardine fisheries."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild sardines — n2o_kg_per_kg_output: Trace N2O from refrigerant leakage and minor on-board processing; P&N 2018 wild small pelagics total ~1.0–2.5 kg CO2e/kg is fuel-CO2 dominated. N2O at 0.001 kg/kg yields ~0.265 kg CO2e/kg, consistent with the negligible N2O role in purse-seine sardine fisheries."
                 }
             },
             {
@@ -922,8 +922,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild sardines \u2014 n2o_kg_per_kg_output: OWID P&N 2018 confirms small pelagic fisheries are dominated by CO2 from vessel fuel; N2O is negligible. 0.001 kg N2O/kg is consistent with the P&N characterization of low-emission wild-catch fisheries."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild sardines — n2o_kg_per_kg_output: OWID P&N 2018 confirms small pelagic fisheries are dominated by CO2 from vessel fuel; N2O is negligible. 0.001 kg N2O/kg is consistent with the P&N characterization of low-emission wild-catch fisheries."
                 }
             }
         ],
@@ -934,8 +934,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wild sardines \u2014 co2_kg_per_kg_output: P&N 2018 reports wild-caught small pelagics (sardines, anchovies, herring) at ~1.0\u20132.5 kg CO2e/kg; the midpoint of ~1.75 kg CO2e/kg is used as the basis. Subtracting N2O CO2e (0.001 \u00d7 265 = 0.265 kg CO2e) leaves ~1.5 kg direct CO2 per kg sardines output, arising from vessel fuel combustion in purse-seine operations. Sardines are among the most fuel-efficient fisheries due to large school sizes and shallow water proximity to ports. Previous dataset value of 0.35 was incorrect \u2014 it was approximately 4\u00d7 too low and did not correspond to any P&N-reported metric for wild-caught small pelagics."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Wild sardines — co2_kg_per_kg_output: P&N 2018 reports wild-caught small pelagics (sardines, anchovies, herring) at ~1.0–2.5 kg CO2e/kg; the midpoint of ~1.75 kg CO2e/kg is used as the basis. Subtracting N2O CO2e (0.001 × 265 = 0.265 kg CO2e) leaves ~1.5 kg direct CO2 per kg sardines output, arising from vessel fuel combustion in purse-seine operations. Sardines are among the most fuel-efficient fisheries due to large school sizes and shallow water proximity to ports. Previous dataset value of 0.35 was incorrect — it was approximately 4× too low and did not correspond to any P&N-reported metric for wild-caught small pelagics."
                 }
             },
             {
@@ -944,8 +944,8 @@
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data \u2014 GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wild sardines \u2014 co2_kg_per_kg_output: OWID GHG chart (P&N 2018) covers wild-caught fish at ~3.0\u20135.4 kg CO2e/kg for large pelagic species; small pelagics have notably lower fuel intensity, placing sardines in the 1.0\u20132.5 kg CO2e/kg range per P&N 2018 supplementary. 1.5 kg CO2/kg is the midpoint of that range, consistent with the efficient purse-seine harvest of densely schooling coastal fish."
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Wild sardines — co2_kg_per_kg_output: OWID GHG chart (P&N 2018) covers wild-caught fish at ~3.0–5.4 kg CO2e/kg for large pelagic species; small pelagics have notably lower fuel intensity, placing sardines in the 1.0–2.5 kg CO2e/kg range per P&N 2018 supplementary. 1.5 kg CO2/kg is the midpoint of that range, consistent with the efficient purse-seine harvest of densely schooling coastal fish."
                 }
             }
         ],

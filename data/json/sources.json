@@ -989,6 +989,15 @@
     ]
   },
   {
+    "id": 86,
+    "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000352-00518-20110601.pdf",
+    "title": "EPA SLN Labels \u2014 Dual Magnum (S-metolachlor) Sweet Potato Use (AR-110004, TX-070003, GA-060006)",
+    "notes": [
+      "Sweet potato \u2014 metolachlor (S-metolachlor / Dual Magnum) kg_ha: Arkansas SLN AR-110004, Texas SLN TX-070003, and Georgia SLN GA-060006 are state-specific labels authorizing Dual Magnum use on sweet potato. Registered application rate: 0.95\u20131.27 lb active ingredient per acre (pre-plant incorporated or pre-emergence). Midpoint 1.11 lb ai/acre \u00d7 1.12085 kg\u00b7lb\u207b\u00b9\u00b7acre/ha = 1.24 kg ai/ha; conservative midpoint 1.1 kg ai/ha used. Confirmed by Cambridge et al. (Weed Technology) sweet potato weed management study reporting S-metolachlor at 1.06\u20131.27 kg ai/ha.",
+      "Sweet potato \u2014 imidacloprid kg_ha: Pacific Northwest Pest Management Handbook (pnwhandbooks.org) lists imidacloprid for sweet potato whitefly and aphid control at 0.044 lb ai/acre = 0.044 \u00d7 1.12085 = 0.049 \u2248 0.05 kg ai/ha; confirms the existing 0.05 kg/ha value."
+    ]
+  },
+  {
     "id": 72,
     "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
     "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",

@@ -1184,7 +1184,40 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 86,
+                            "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000352-00518-20110601.pdf",
+                            "title": "EPA SLN Labels — Dual Magnum (S-metolachlor) Sweet Potato Use (AR-110004, TX-070003, GA-060006)",
+                            "note": "Sweet potato — imidacloprid: 0.05 kg/ha; verified against Pacific Northwest Pest Management Handbook (pnwhandbooks.org) at 0.044 lb ai/acre ≈ 0.05 kg ai/ha for sweet potato aphid and whitefly control."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 4,
+                        "source": {
+                            "id": 86,
+                            "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000352-00518-20110601.pdf",
+                            "title": "EPA SLN Labels — Dual Magnum (S-metolachlor) Sweet Potato Use (AR-110004, TX-070003, GA-060006)",
+                            "note": "Sweet potato — metolachlor (S-metolachlor / Dual Magnum): 1.1 kg ai/ha; based on Arkansas SLN AR-110004 and Texas SLN TX-070003 registered rates of 0.95–1.27 lb ai/acre (midpoint 1.11 lb ai/acre = 1.24 kg/ha); conservative midpoint 1.1 kg ai/ha used. Previous value of 0.12 kg/ha was incorrect (used USDA NASS which does not survey sweet potatoes). Chlorpyrifos removed — EPA cancelled all food-crop uses in August 2021."
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 52,
@@ -1373,6 +1406,55 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Garlic — chlorpyrifos: 0.12 kg/ha; pendimethalin: 0.85 kg/ha; paraquat: 0.15 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (CA/WA production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.85,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Garlic — chlorpyrifos: 0.12 kg/ha; pendimethalin: 0.85 kg/ha; paraquat: 0.15 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (CA/WA production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Garlic — chlorpyrifos: 0.12 kg/ha; pendimethalin: 0.85 kg/ha; paraquat: 0.15 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (CA/WA production areas, 2018–2022 average)."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]

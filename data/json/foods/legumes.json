@@ -645,7 +645,56 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.3,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chickpeas — pendimethalin: 0.3 kg/ha; malathion: 0.05 kg/ha; chlorpyrifos: 0.10 kg/ha. USDA NASS 2019 Pulses Chemical Use survey (chickpeas included in western US pulse crop coverage). Pendimethalin is the dominant pre-emergent herbicide for broadleaf and grass weed control in chickpea production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chickpeas — pendimethalin: 0.3 kg/ha; malathion: 0.05 kg/ha; chlorpyrifos: 0.10 kg/ha. USDA NASS 2019 Pulses Chemical Use survey. Malathion used for aphid and stored-product pest control in chickpea production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.10,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chickpeas — pendimethalin: 0.3 kg/ha; malathion: 0.05 kg/ha; chlorpyrifos: 0.10 kg/ha. USDA NASS 2019 Pulses Chemical Use survey. Chlorpyrifos applied for pod borer (Helicoverpa armigera) and lygus bug control in chickpea."
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 41,
@@ -834,6 +883,55 @@
                 }
             }
         ],
-        "pesticides": []
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey (Michigan, Nebraska, and North Dakota production). Pendimethalin is the primary pre-emergent herbicide for grass and broadleaf weed management in dry bean production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey. Malathion used for bean leaf beetle (Cerotoma trifurcata), aphid, and leafhoppper control in dry bean production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey. Chlorpyrifos used for bean stem maggot (beanfly) and soil insect control; confidence 2 as US chlorpyrifos registrations have been progressively restricted."
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]
