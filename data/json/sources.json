@@ -310,7 +310,7 @@
       "Broccoli \u2014 yield_kg_ha: FAO global average used for yield value.",
       "Sweet potato \u2014 yield_kg_ha: 11,000 kg/ha (tropical and subtropical production; China dominates global output at ~55% of supply; FAO 2020\u20132022 average).",
       "Chickpeas \u2014 yield_kg_ha: 1,000 kg/ha (low-input arid legume; global average depressed by dryland Indian subcontinent production; FAO 2020\u20132022).",
-      "Black beans \u2014 yield_kg_ha: 850 kg/ha (global average; Brazilian and Mexican production; low-input systems; FAO 2020\u20132022).",
+      "Black beans \u2014 yield_kg_ha: 790 kg/ha (global FAO average for dry beans, Phaseolus vulgaris; 2020 FAO data: 27.5M t \u00f7 34.8M ha \u2248 790 kg/ha; consistent with 2018 global average ~788 kg/ha; prior value of 850 was modestly above the FAO-derived figure; updated 2026-05-29).",
       "Quinoa \u2014 yield_kg_ha: 1,700 kg/ha (Andean production; yield has improved with expansion to new growing regions; FAO 2020\u20132022).",
       "Spinach \u2014 yield_kg_ha: 20,000 kg/ha (intensive irrigated vegetable production; China accounts for ~90% of global spinach output; FAO 2020\u20132022).",
       "Avocado \u2014 yield_kg_ha: 11,000 kg/ha (FAO global average; modern commercial orchards in Mexico, Peru, Chile; 2020\u20132022).",

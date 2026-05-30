@@ -191,6 +191,13 @@ Plants get environmental impact data for crop production.
                              // Accounts for peel, shell, pit, hull removal.
                              // 1.0 for foods already measured in edible-weight form (e.g. grain flour).
 
+  "cooked_weight_ratio": [...], // SourcedValue  g cooked / g dry
+                             // How much the food expands when cooked by weight.
+                             // E.g. 2.5 means 1 kg dry → 2.5 kg cooked.
+                             // Null / [] for foods consumed ready-to-eat (fruits, nuts, most veg).
+                             // Used to reconcile dry-weight environmental data with cooked-weight
+                             // nutritional data when comparing on a per-kg-as-eaten basis.
+
   "yield_kg_ha": [...],      // SourcedValue  kg / ha
                              // Crop yield: kilograms of harvested product per hectare per year.
                              // ⚠ Set to [] for wild-harvested foods — suppresses land-use and
@@ -330,6 +337,7 @@ The build pipeline uses confidence scores as exponents in a weighted geometric m
 | `nutrition.fat`, `sat_fat`, `protein`, `fiber`, `carbs`, `sugar`, `trans_fat` | g / g food |
 | `nutrition.sodium`, `nutrition.cholesterol` | mg / g food |
 | `yield_fraction` | fraction 0–1 |
+| `cooked_weight_ratio` | g cooked / g dry |
 | `yield_kg_ha` | kg / ha |
 | `water_per_kg`, `green_water_per_kg`, `blue_water_per_kg`, `grey_water_per_kg` | L / kg |
 | `pasture_green_water_l_per_ha` | L / ha / yr |

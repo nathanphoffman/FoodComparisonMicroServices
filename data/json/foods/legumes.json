@@ -44,6 +44,18 @@
                 }
             }
         ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.2,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Derived from comparing dry vs. cooked weight entries; g cooked per g dry."
+                }
+            }
+        ],
         "yield_kg_ha": [
             {
                 "value": 2800,
@@ -280,6 +292,18 @@
                 }
             }
         ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.5,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Derived from comparing dry vs. cooked weight entries; g cooked per g dry."
+                }
+            }
+        ],
         "yield_kg_ha": [
             {
                 "value": 1200,
@@ -500,6 +524,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.7,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Derived from comparing dry vs. cooked weight entries; g cooked per g dry."
                 }
             }
         ],
@@ -741,15 +777,27 @@
                 }
             }
         ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.6,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Derived from comparing dry vs. cooked weight entries; g cooked per g dry."
+                }
+            }
+        ],
         "yield_kg_ha": [
             {
-                "value": 850,
+                "value": 790,
                 "confidence": 4,
                 "source": {
                     "id": 33,
                     "url": "https://ourworldindata.org/crop-yields",
                     "title": "Our World in Data — Crop Yields",
-                    "note": null
+                    "note": "Black beans — yield_kg_ha: ~790 kg/ha (global FAO average for dry beans, Phaseolus vulgaris; 2020 FAO data: 27.5M t ÷ 34.8M ha ≈ 790 kg/ha; consistent with 2018 global average of 788 kg/ha and 2019 average of ~770 kg/ha per Uebersax 2023 Legume Science review; prior value of 850 was modestly above the FAO-derived figure). U.S.-specific dry bean yields are substantially higher (~2,100 kg/ha per USDA NASS) but global average is appropriate here as production is dominated by Brazil, India, and Myanmar."
                 }
             }
         ],

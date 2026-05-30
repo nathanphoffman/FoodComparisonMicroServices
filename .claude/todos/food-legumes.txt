@@ -1,0 +1,7 @@
+# Created: 2026-05-29 00:00:00
+
+Add cooked_weight_ratio to every entry in data/json/foods/legumes.json.
+Use USDA FoodData Central (source id 1) to compare dry vs cooked weight entries
+for each legume and derive the ratio (g cooked / g dry). Typical values:
+soy ~2.2, lentils ~2.5, chickpeas ~2.7, black beans ~2.6.
+Store as a SourcedValue array with confidence 4 and source id 1.

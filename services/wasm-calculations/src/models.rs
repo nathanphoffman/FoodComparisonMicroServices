@@ -27,6 +27,7 @@ pub struct FoodRow {
 
     // Plant metrics
     pub yield_kg_ha:               Option<f64>,
+    pub cooked_weight_ratio:       Option<f64>,
     pub emissions_per_kg:          Option<f64>,
     pub water_per_kg:              Option<f64>,
     pub green_water_per_kg:        Option<f64>,

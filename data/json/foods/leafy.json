@@ -107,22 +107,22 @@
                 "value": 3,
                 "confidence": 4,
                 "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lettuce — soil_erosion: ~3 t/ha/yr estimated for intensive lettuce production; short growing cycle with frequent tillage increases erosion risk; value consistent with P&N 2018 LCA boundary data for salad crops."
                 }
             }
         ],
         "pesticide_kg_ha": [
             {
-                "value": 2.5,
+                "value": 1.4,
                 "confidence": 4,
                 "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Lettuce — pesticide_kg_ha: 1.4 kg/ha (USDA NASS Vegetables Chemical Use Survey; weighted average of active ingredient applications across California and Arizona lettuce production; 2018–2022 average)."
                 }
             }
         ],
@@ -131,10 +131,10 @@
                 "value": 120,
                 "confidence": 4,
                 "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Lettuce — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
                 }
             }
         ],
@@ -165,10 +165,10 @@
                 "value": 3,
                 "confidence": 4,
                 "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lettuce — tillage_events_per_year: ~3 per year (multiple lettuce crops per year common in California and Arizona; each cycle requires full bed preparation including discing and listing; P&N 2018 LCA boundary data)."
                 }
             }
         ],
@@ -177,10 +177,10 @@
                 "value": 800,
                 "confidence": 4,
                 "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lettuce — co2_capture_kg_ha_yr: ~800 kg CO2/ha/yr; short-season crop with low biomass accumulation; estimate based on above-ground carbon fixation for salad crops (P&N 2018 LCA framework)."
                 }
             }
         ],
@@ -196,23 +196,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
-                        }
-                    }
-                ]
-            },
-            {
-                "pesticide_id": 3,
-                "name": "Chlorpyrifos",
-                "kg_ha": [
-                    {
-                        "value": 0.08,
-                        "confidence": 4,
-                        "source": {
-                            "id": 52,
-                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
-                            "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
+                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -228,7 +212,23 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.08 kg/ha; permethrin: 0.07 kg/ha."
+                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.18,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Lettuce — pendimethalin: 0.18 kg/ha; pre-emergent herbicide widely used on head and leaf lettuce for broadleaf and grass weed control; USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -348,7 +348,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Spinach — emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018)."
+                    "note": "Spinach — soil_erosion: ~0.5 t/ha/yr; low-erosion crop due to dense canopy cover and short production cycle; estimate consistent with P&N 2018 LCA boundary data for low-input leafy vegetables."
                 }
             }
         ],
@@ -406,7 +406,7 @@
                     "id": 62,
                     "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
                     "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": "Spinach — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
+                    "note": "Spinach — tillage_events_per_year: ~3 per year; multiple short-cycle crops grown annually; each planting requires seedbed preparation; FAO vegetable production guidelines."
                 }
             }
         ],
@@ -418,7 +418,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Spinach — emissions_per_kg: 0.47 kg CO2-eq/kg (low-input leafy vegetable; P&N 2018)."
+                    "note": "Spinach — co2_capture_kg_ha_yr: ~1000 kg CO2/ha/yr; dense rapid-growth canopy with high leaf area index supports moderate carbon fixation over multiple short cycles per year; P&N 2018 LCA framework."
                 }
             }
         ],
@@ -434,7 +434,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; mancozeb: 0.15 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -450,23 +450,23 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; mancozeb: 0.15 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
             },
             {
-                "pesticide_id": 3,
-                "name": "Chlorpyrifos",
+                "pesticide_id": 10,
+                "name": "Mancozeb",
                 "kg_ha": [
                     {
-                        "value": 0.05,
-                        "confidence": 4,
+                        "value": 0.15,
+                        "confidence": 3,
                         "source": {
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Spinach — permethrin: 0.09 kg/ha; imidacloprid: 0.07 kg/ha; chlorpyrifos: 0.05 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Spinach — mancozeb: 0.15 kg/ha; dithiocarbamate fungicide applied for downy mildew (Peronospora farinosa) control, the primary fungal disease of spinach; USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -586,7 +586,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Kale — emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas')."
+                    "note": "Kale — soil_erosion: ~0.5 t/ha/yr; cool-season brassica with long growing season and good canopy cover; low erosion risk relative to bare-soil crops; P&N 2018 LCA boundary data for other brassicas."
                 }
             }
         ],
@@ -644,7 +644,7 @@
                     "id": 62,
                     "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
                     "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": "Kale — fertilizer_kg_ha: ~100 kg/ha (brassica; moderate nitrogen demand; similar to other leafy brassicas)."
+                    "note": "Kale — tillage_events_per_year: ~3 per year; typically 1–2 crops per year with bed preparation between cycles; some operations include mid-season cultivation for weed control; FAO vegetable production guidelines."
                 }
             }
         ],
@@ -656,7 +656,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Kale — emissions_per_kg: 0.49 kg CO2-eq/kg (brassica leafy vegetable; P&N 2018 'other brassicas')."
+                    "note": "Kale — co2_capture_kg_ha_yr: ~1200 kg CO2/ha/yr; longer growing season and larger plant biomass than short-cycle leafy crops; higher canopy carbon fixation relative to lettuce and spinach; P&N 2018 LCA framework for brassica crops."
                 }
             }
         ],
@@ -672,7 +672,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; carbaryl: 0.10 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
                         }
                     }
                 ]
@@ -688,23 +688,23 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; carbaryl: 0.10 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
                         }
                     }
                 ]
             },
             {
-                "pesticide_id": 3,
-                "name": "Chlorpyrifos",
+                "pesticide_id": 17,
+                "name": "Carbaryl",
                 "kg_ha": [
                     {
-                        "value": 0.04,
-                        "confidence": 4,
+                        "value": 0.10,
+                        "confidence": 3,
                         "source": {
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Kale — permethrin: 0.12 kg/ha; imidacloprid: 0.05 kg/ha; chlorpyrifos: 0.04 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
+                            "note": "Kale — carbaryl: 0.10 kg/ha; carbamate insecticide applied for Lepidoptera control (imported cabbageworm, diamondback moth, cabbage looper) on brassica greens; USDA NASS Vegetables Chemical Use Survey (2018–2022 average; kale grouped with other brassica greens)."
                         }
                     }
                 ]

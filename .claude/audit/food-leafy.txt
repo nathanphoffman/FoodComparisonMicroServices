@@ -1,0 +1,16 @@
+2026-05-29 00:00:00 | Removed chlorpyrifos (pesticide_id=3) from lettuce, spinach, and kale pesticides arrays (EPA revoked all food-crop tolerances August 2021)
+2026-05-29 00:00:00 | Fixed lettuce pesticide_kg_ha: changed value from 2.5 to 1.4 kg/ha (USDA NASS range 1.0–1.8); updated source from id=33 (crop-yield) to id=52 (USDA NASS Chemical Use Survey)
+2026-05-29 00:00:00 | Fixed lettuce soil_erosion source: changed from id=33 (crop-yield, wrong note) to id=55 (P&N 2018) with correct soil erosion note
+2026-05-29 00:00:00 | Fixed lettuce fertilizer_kg_ha source: changed from id=33 (crop-yield, wrong note) to id=62 (FAO 2021) with correct fertilizer note
+2026-05-29 00:00:00 | Fixed lettuce tillage_events_per_year source: changed from id=33 (crop-yield, wrong note) to id=55 (P&N 2018) with correct tillage note
+2026-05-29 00:00:00 | Fixed lettuce co2_capture_kg_ha_yr source: changed from id=33 (crop-yield, wrong note) to id=55 (P&N 2018) with correct CO2 capture note
+2026-05-29 00:00:00 | Fixed spinach soil_erosion note: removed copy-pasted emissions note; replaced with correct soil erosion description
+2026-05-29 00:00:00 | Fixed spinach tillage_events_per_year note: removed copy-pasted fertilizer note; replaced with correct tillage description
+2026-05-29 00:00:00 | Fixed spinach co2_capture_kg_ha_yr note: removed copy-pasted emissions note; replaced with correct CO2 capture description
+2026-05-29 00:00:00 | Fixed kale soil_erosion note: removed copy-pasted emissions note; replaced with correct soil erosion description
+2026-05-29 00:00:00 | Fixed kale tillage_events_per_year note: removed copy-pasted fertilizer note; replaced with correct tillage description
+2026-05-29 00:00:00 | Fixed kale co2_capture_kg_ha_yr note: removed copy-pasted emissions note; replaced with correct CO2 capture description
+2026-05-29 00:00:00 | Added mancozeb (pesticide_id=10, 0.15 kg/ha) to spinach pesticides for downy mildew (Peronospora farinosa) control
+2026-05-29 00:00:00 | Added carbaryl (pesticide_id=17, 0.10 kg/ha) to kale pesticides for Lepidoptera control (cabbageworm, diamondback moth, cabbage looper); spinosad not in pesticides.json
+2026-05-29 00:00:00 | Added pendimethalin (pesticide_id=13, 0.18 kg/ha) to lettuce pesticides as pre-emergent herbicide
+2026-05-29 00:00:00 | Updated per-pesticide notes for all three crops to reflect new breakdown (removed chlorpyrifos references, added new pesticides)

@@ -4,6 +4,7 @@ import { FoodQueryAnimalKill } from './FoodQueryAnimalKill';
 
 export interface IFoodQueryPlant {
     yield_kg_ha: SourcedNumberArray | null;
+    cooked_weight_ratio: SourcedNumberArray | null;
     water_per_kg: SourcedNumberArray | null;
     soil_erosion: SourcedNumberArray | null;
     pesticide_kg_ha: SourcedNumberArray | null;
@@ -17,6 +18,7 @@ export interface IFoodQueryPlant {
 
 export class FoodQueryPlant implements IFoodQueryPlant {
     yield_kg_ha!: SourcedNumberArray | null;
+    cooked_weight_ratio!: SourcedNumberArray | null;
     water_per_kg!: SourcedNumberArray | null;
     soil_erosion!: SourcedNumberArray | null;
     pesticide_kg_ha!: SourcedNumberArray | null;
@@ -30,6 +32,7 @@ export class FoodQueryPlant implements IFoodQueryPlant {
     constructor(data: IFoodQueryPlant) {
         Object.assign(this, data);
         this.yield_kg_ha = data.yield_kg_ha === null ? null : new SourcedNumberArray(data.yield_kg_ha);
+        this.cooked_weight_ratio = data.cooked_weight_ratio === null ? null : new SourcedNumberArray(data.cooked_weight_ratio);
         this.water_per_kg = data.water_per_kg === null ? null : new SourcedNumberArray(data.water_per_kg);
         this.soil_erosion = data.soil_erosion === null ? null : new SourcedNumberArray(data.soil_erosion);
         this.pesticide_kg_ha = data.pesticide_kg_ha === null ? null : new SourcedNumberArray(data.pesticide_kg_ha);

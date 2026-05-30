@@ -27,6 +27,7 @@ public class FoodRow
 
     // Plant metrics
     public double? YieldKgHa                 { get; set; }
+    public double? CookedWeightRatio         { get; set; }
     public double? EmissionsPerKg            { get; set; }
     public double? WaterPerKg                { get; set; }
     public double? GreenWaterPerKg           { get; set; }
