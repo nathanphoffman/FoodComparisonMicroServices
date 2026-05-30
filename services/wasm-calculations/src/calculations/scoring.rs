@@ -1,5 +1,8 @@
 use crate::models::{ColumnRanges, ColumnRange, ScoredRow};
 
+const SCORE_MAX: f64 = 100.0;
+const SCORE_NEUTRAL: f64 = 50.0;
+
 /// Indicates whether a lower or higher raw value represents a better outcome
 /// for a scored dimension.
 enum ScoreDirection {
@@ -27,8 +30,8 @@ fn compute_column_log_range(
         .filter(|&x| x > 0.0)
         .collect();
     if values.is_empty() { return None; }
-    let log_min = values.iter().cloned().fold(f64::INFINITY,     f64::min).ln();
-    let log_max = values.iter().cloned().fold(f64::NEG_INFINITY, f64::max).ln();
+    let log_min = values.iter().copied().fold(f64::INFINITY,     f64::min).ln();
+    let log_max = values.iter().copied().fold(f64::NEG_INFINITY, f64::max).ln();
     Some(ColumnRange { log_min, log_max })
 }
 
@@ -58,23 +61,23 @@ pub(super) fn compute_final_score(row: &ScoredRow, averages: &ColumnRanges) -> O
         return None;
     }
     let mean = scores.iter().sum::<f64>() / scores.len() as f64;
-    Some(mean.clamp(0.0, 100.0))
+    Some(mean.clamp(0.0, SCORE_MAX))
 }
 
 fn dimension_score(value: f64, range: ColumnRange, direction: ScoreDirection) -> f64 {
     if value <= 0.0 {
         return match direction {
-            ScoreDirection::LowerIsBetter  => 100.0,
-            ScoreDirection::HigherIsBetter =>   0.0,
+            ScoreDirection::LowerIsBetter  => SCORE_MAX,
+            ScoreDirection::HigherIsBetter => 0.0,
         };
     }
     let log_val = value.ln();
-    if !log_val.is_finite() { return 50.0; }
+    if !log_val.is_finite() { return SCORE_NEUTRAL; }
     let span = range.log_max - range.log_min;
-    if span <= 0.0 { return 50.0; } // all foods identical on this dimension
+    if span <= 0.0 { return SCORE_NEUTRAL; } // all foods identical on this dimension
     let score = match direction {
-        ScoreDirection::LowerIsBetter  => 100.0 * (range.log_max - log_val) / span,
-        ScoreDirection::HigherIsBetter => 100.0 * (log_val - range.log_min) / span,
+        ScoreDirection::LowerIsBetter  => SCORE_MAX * (range.log_max - log_val) / span,
+        ScoreDirection::HigherIsBetter => SCORE_MAX * (log_val - range.log_min) / span,
     };
-    score.clamp(0.0, 100.0)
+    score.clamp(0.0, SCORE_MAX)
 }

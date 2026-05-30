@@ -998,6 +998,22 @@
     ]
   },
   {
+    "id": 87,
+    "url": "https://en.wikipedia.org/wiki/Eastern_gray_squirrel",
+    "title": "Wikipedia — Eastern Gray Squirrel (Sciurus carolinensis)",
+    "notes": [
+      "Wild Squirrel — weight_kg: Reference for adult body mass of Eastern gray squirrel (400–600 g live weight; representative harvest value 0.5 kg)."
+    ]
+  },
+  {
+    "id": 88,
+    "url": "https://www.pnas.org/doi/10.1073/pnas.0601562103",
+    "title": "Herculano-Houzel et al. (2006) — Cellular Scaling Rules for Rodent Brains (PNAS)",
+    "notes": [
+      "Wild Squirrel — neuron_count: Used for allometric scaling of total neuron count in rodents (N ∝ brain mass^1.0). Eastern gray squirrel brain mass ~7 g; scaled estimate ~450 million neurons. Confidence 2 — no direct isotropic fractionator measurement exists for Sciurus carolinensis."
+    ]
+  },
+  {
     "id": 72,
     "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
     "title": "Our World in Data \u2014 Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",

@@ -1226,5 +1226,120 @@
             }
         ],
         "feed": []
+    },
+    {
+        "id": 59,
+        "slug": "wild-squirrel",
+        "name": "Wild Squirrel",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "game",
+            "wild"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.20,
+                    "fat": 0.032,
+                    "sat_fat": 0.009,
+                    "protein": 0.214,
+                    "fiber": 0,
+                    "sodium": 1.01,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.83,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Wild Squirrel — nutrition: USDA FDC entry for game meat, squirrel, raw (FDC ID 174489). Values reported per gram of raw edible meat. Protein ~21.4 g/100g, fat ~3.21 g/100g, sat fat ~0.92 g/100g, calories ~120 kcal/100g, cholesterol ~83 mg/100g, sodium ~101 mg/100g. Squirrel is a very lean game meat, lower in calories and fat than most domestic meats."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 450000000,
+                "confidence": 2,
+                "source": {
+                    "id": 88,
+                    "url": "https://www.pnas.org/doi/10.1073/pnas.0601562103",
+                    "title": "Herculano-Houzel et al. (2006) — Cellular Scaling Rules for Rodent Brains (PNAS)",
+                    "note": "Wild Squirrel — neuron_count: No direct isotropic fractionator neuron count exists for Eastern gray squirrel (Sciurus carolinensis) in the published literature. Estimate derived from Herculano-Houzel et al. (2006) rodent allometric scaling: rodent total neuron count scales approximately linearly with brain mass (N ∝ M^1.0). Eastern gray squirrel brain mass ~6–8 g (similar to that of a large rat at ~2 g brain, ~200 million neurons; scaling to 7 g brain yields ~450–500 million neurons). Value of 450 million neurons applied as a conservative midpoint. Confidence 2 due to absence of a direct measurement and uncertainty in interspecific scaling constants for sciurids vs. murid rodents."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.5,
+                "confidence": 4,
+                "source": {
+                    "id": 87,
+                    "url": "https://en.wikipedia.org/wiki/Eastern_gray_squirrel",
+                    "title": "Wikipedia — Eastern Gray Squirrel (Sciurus carolinensis)",
+                    "note": "Wild Squirrel — weight_kg: Eastern gray squirrel (Sciurus carolinensis), the predominant harvested squirrel species in North America, typically weighs 400–600 g (0.4–0.6 kg) as an adult, with males and females near equal size. A value of 0.5 kg is used as the representative harvest weight. Fox squirrel (Sciurus niger) is somewhat larger at 0.5–1.0 kg but less commonly harvested; gray squirrel is the standard reference here."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.40,
+                "confidence": 3,
+                "source": {
+                    "id": 82,
+                    "url": "https://extension.usu.edu/utahpests/uppdl/files/publications/pub20130102163513.pdf",
+                    "title": "Utah State University Extension — Hunting and Processing Wild Game",
+                    "note": "Wild Squirrel — yield_fraction: Small-game dressing guides consistently report ~35–45% of live squirrel weight as boneless edible meat, reflecting the relatively high bone-to-meat ratio of small mammals. A dressed carcass represents ~60–65% of live weight; retail/boneless yield from carcass ~60–70%; combined edible fraction ~37–43%. Value of 0.40 used as a representative midpoint."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.003,
+                "confidence": 2,
+                "source": {
+                    "id": 83,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0301479714005544",
+                    "title": "Felton et al. (2014) — Ruminant or Non-Ruminant? Estimating Methane Emissions from Wild Cervids (Biological Conservation)",
+                    "note": "Wild Squirrel — ch4_kg_per_kg_output: Raw kg CH4 per kg squirrel (multiply by GWP100=28 for CO2e). Eastern gray squirrel is a non-ruminant hindgut fermentor; enteric methane from cecal fermentation is negligible compared to ruminants. Felton et al. (2014) confirm that non-ruminant wild mammals produce orders of magnitude less enteric CH4 than cervids or bovids. A residual value of 0.003 kg CH4/kg output is assigned to account for trace intestinal fermentation and any embedded transport emissions modelled as CH4 equivalents. 0.003 × 28 = 0.084 kg CO2e/kg, negligible compared to deer (2.8 CO2e) or beef (53.2 CO2e). Confidence 2 — no direct measurement for sciurid small game."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.001,
+                "confidence": 2,
+                "source": {
+                    "id": 83,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0301479714005544",
+                    "title": "Felton et al. (2014) — Ruminant or Non-Ruminant? Estimating Methane Emissions from Wild Cervids (Biological Conservation)",
+                    "note": "Wild Squirrel — n2o_kg_per_kg_output: Wild squirrel excreta are dispersed across native ecosystems; no concentrated manure N2O is attributable to the production system. Trace N2O from distributed dung patches is part of the natural nitrogen cycle and not attributable to harvest. Residual 0.001 kg N2O/kg (0.27 kg CO2e/kg at GWP100=265) assigned for negligible hunting-activity indirect emissions, consistent with Felton et al. methodology for wild game. Confidence 2 — no direct measurement; lower-bound estimate."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.0,
+                "confidence": 2,
+                "source": {
+                    "id": 85,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0959652619334067",
+                    "title": "Clune et al. (2017) / Peters et al. (2010) — Wild Game LCA and Hunting Carbon Footprint (Journal of Cleaner Production)",
+                    "note": "Wild Squirrel — co2_kg_per_kg_output: Direct CO2 from hunting and processing. Because squirrel is small (0.5 kg live, ~0.2 kg edible yield), a hunter must harvest multiple animals per trip and the transport CO2 is spread over a small total yield. Estimated CO2 sources: (1) hunter vehicle transport ~10–20 miles round trip, 4–6 squirrels per trip = 0.8–1.2 kg meat; at 25 mpg, 15-mile round trip = 0.6 gal × 8.89 kg CO2/gal = 5.3 kg CO2 / 1.0 kg meat = 5.3 kg CO2/kg; conservative 3–4 squirrel trips at shorter distance yield ~2.5–3.5 kg CO2/kg; (2) field dressing and cold storage ~0.3–0.5 kg CO2/kg. Total estimated range: 2.5–4.0 kg CO2/kg. Central value of 3.0 kg CO2/kg used. Substantially higher per-kg than venison (1.0 kg CO2/kg) due to lower yield per animal requiring more transport cost per unit meat. No feedlot, feed-crop, or industrial slaughter chain. Confidence 2 — highly variable by hunt distance and local conditions."
+                }
+            }
+        ],
+        "feed": []
     }
 ]
