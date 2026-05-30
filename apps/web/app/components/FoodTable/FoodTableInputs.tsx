@@ -16,7 +16,7 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
     { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true  },
     { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true  },
     { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
-    { key: 'ecoDestruction', label: 'Eco Destruction',    sortKey: 'ecoDestruction', defaultVisible: true  },
+    { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
     { key: 'finalScore',     label: 'Final Score',        sortKey: 'finalScore',     defaultVisible: true  },
     { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false },
 ];

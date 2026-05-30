@@ -1,4 +1,4 @@
-import type { EcoDestructionDetail, EmissionsBreakdown, IntelligenceDetail, LandUseDetail, NutritionDetail, WaterDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, IntelligenceDetail, LandUseDetail, NutritionDetail, WaterDetail } from './FoodTableTypes';
 import { formatIntelligenceValue, formatNeurons, nutritionScale } from './FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../Table/Tooltip';
 
@@ -123,7 +123,7 @@ export function IntelligenceTooltip({ detail, children }: { detail: Intelligence
   );
 }
 
-export function EcoDestructionTooltip({ detail, divisor = 1, children }: { detail: EcoDestructionDetail; divisor?: number; children: React.ReactNode }) {
+export function SentientHarmTooltip({ detail, divisor = 1, children }: { detail: SentientHarmDetail; divisor?: number; children: React.ReactNode }) {
   const fmt = (v: number) => formatIntelligenceValue(v / divisor);
   const hasDirectKill = detail.directKillScore > 0;
   const hasPlant   = detail.insectScore > 0 || detail.beeScore > 0 || detail.wormScore > 0 || detail.deforestationScore > 0;

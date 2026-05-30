@@ -10,7 +10,7 @@ import {
     LandUseCell,
     IntelligenceCell,
     WaterCell,
-    EcoDestructionCell,
+    SentientHarmCell,
     FinalScoreCell,
     DummyCell,
 } from './FoodTableFields';
@@ -20,7 +20,7 @@ import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableInputs';
 import type { ColConfig, SliderValues } from './FoodTableInputs';
-import { EMPTY_ECO_DETAIL } from './FoodTableTypes';
+import { EMPTY_SENTIENT_HARM_DETAIL } from './FoodTableTypes';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -86,7 +86,7 @@ export function FoodTable() {
         landUse:        `Land Use (m² / ${unit})`,
         directKill:     `Direct Kill / ${unit}`,
         water:          `Water (L / ${unit})`,
-        ecoDestruction: `Eco Destruction / ${unit}`,
+        sentientHarm: `Sentient Harm / ${unit}`,
     };
 
     const headers = activeCols.map(column => ({
@@ -120,7 +120,7 @@ export function FoodTable() {
                                     case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null }} divisor={1} unit={unit} />;
                                     case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
                                     case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'ecoDestruction': return <EcoDestructionCell key="ecoDestruction" value={scoredRow?.eco_destruction ?? null} detail={scoredRow?.eco_destruction_detail ?? EMPTY_ECO_DETAIL} divisor={scoredRow?.divisor ?? 1} />;
+                                    case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} />;
                                     case 'finalScore':     return <FinalScoreCell     key="finalScore"     score={scoredRow?.final_score ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;
                                 }

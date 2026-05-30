@@ -4,11 +4,11 @@
 
 import Link from 'next/link';
 import { Cell } from '../Table/Cell';
-import type { EcoDestructionDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, WaterDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, WaterDetail } from './FoodTableTypes';
 import { formatNeurons, formatIntelligenceValue } from './FoodTableCalculations';
-import { getEcoDestructionColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getFinalScoreColor } from './FoodTableStyles';
+import { getSentientHarmColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getFinalScoreColor } from './FoodTableStyles';
 import {
-  EcoDestructionTooltip,
+  SentientHarmTooltip,
   EmissionsTooltip,
   NutritionTooltip,
   LandUseTooltip,
@@ -139,19 +139,19 @@ export function IntelligenceCell({ value, detail }: { value: number | null; deta
   );
 }
 
-// ─── Eco Destruction ─────────────────────────────────────────────────────────
+// ─── Sentient Harm ───────────────────────────────────────────────────────────
 
-export function EcoDestructionValue({ value }: { value: number | null }) {
+export function SentientHarmValue({ value }: { value: number | null }) {
   if (value === null || value === 0) return <span className="text-neutral-400">—</span>;
-  return <span className={getEcoDestructionColor(value)}>{formatIntelligenceValue(value)}</span>;
+  return <span className={getSentientHarmColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function EcoDestructionCell({ value, detail, divisor = 1 }: { value: number | null; detail: EcoDestructionDetail; divisor?: number }) {
+export function SentientHarmCell({ value, detail, divisor = 1 }: { value: number | null; detail: SentientHarmDetail; divisor?: number }) {
   return (
-    <Cell key="ecoDestruction" align="right">
+    <Cell key="sentientHarm" align="right">
       {value != null
-        ? <EcoDestructionTooltip detail={detail} divisor={divisor}><EcoDestructionValue value={value} /></EcoDestructionTooltip>
-        : <EcoDestructionValue value={null} />
+        ? <SentientHarmTooltip detail={detail} divisor={divisor}><SentientHarmValue value={value} /></SentientHarmTooltip>
+        : <SentientHarmValue value={null} />
       }
     </Cell>
   );

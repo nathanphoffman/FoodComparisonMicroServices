@@ -43,7 +43,7 @@ export type IntelligenceDetail = {
     yieldFraction: number | null;
 };
 
-export type EcoDestructionDetail = {
+export type SentientHarmDetail = {
     directKillScore:           number;
     insectScore:               number;
     beeScore:                  number;
@@ -57,7 +57,7 @@ export type EcoDestructionDetail = {
     bycatchScore:              number;
 };
 
-export const EMPTY_ECO_DETAIL: EcoDestructionDetail = {
+export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {
     directKillScore: 0,
     insectScore: 0, beeScore: 0, wormScore: 0, deforestationScore: 0,
     feedInsectScore: 0, feedBeeScore: 0, feedWormScore: 0,

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { RawFood } from '@/lib/queries/commonFoods';
-import type { EcoDestructionDetail, EmissionsBreakdown, LandUseDetail, WaterDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail } from './FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -11,7 +11,7 @@ export type SortKey =
     | 'landUse'
     | 'directKill'
     | 'water'
-    | 'ecoDestruction'
+    | 'sentientHarm'
     | 'finalScore';
 
 /** Shape returned by the WASM scorer. */
@@ -27,14 +27,14 @@ export type ScoredRow = {
     land_use:        number | null;
     water:           number | null;
     direct_kill:     number | null;
-    eco_destruction: number | null;
+    sentient_harm:   number | null;
     final_score:     number | null;
 
     // Tooltip breakdown details (camelCase, matching Rust serde rename_all)
-    emissions_breakdown?:    EmissionsBreakdown;
-    water_detail:            WaterDetail;
-    land_use_detail:         LandUseDetail;
-    eco_destruction_detail:  EcoDestructionDetail;
+    emissions_breakdown?:  EmissionsBreakdown;
+    water_detail:          WaterDetail;
+    land_use_detail:       LandUseDetail;
+    sentient_harm_detail:  SentientHarmDetail;
 };
 
 // ── Hook ──────────────────────────────────────────────────────────────────────
@@ -79,14 +79,14 @@ export function useFoodTableSort() {
                    : sortKey === 'landUse'        ? sa.land_use
                    : sortKey === 'directKill'     ? sa.direct_kill
                    : sortKey === 'water'          ? sa.water
-                   : sortKey === 'ecoDestruction' ? sa.eco_destruction
+                   : sortKey === 'sentientHarm' ? sa.sentient_harm
                    : sortKey === 'finalScore'     ? sa.final_score
                    : null;
                 vb = sortKey === 'emissions'      ? sb.emissions
                    : sortKey === 'landUse'        ? sb.land_use
                    : sortKey === 'directKill'     ? sb.direct_kill
                    : sortKey === 'water'          ? sb.water
-                   : sortKey === 'ecoDestruction' ? sb.eco_destruction
+                   : sortKey === 'sentientHarm' ? sb.sentient_harm
                    : sortKey === 'finalScore'     ? sb.final_score
                    : null;
             }

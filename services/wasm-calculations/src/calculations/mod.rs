@@ -80,10 +80,10 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
     let (land_use_raw, land_use_detail) = eco::compute_land_use(food);
     let (water_raw, water_detail) = water::effective_water(food, query);
-    let (eco_raw, mut eco_detail) = eco::compute_eco_destruction(food, query);
+    let (sentient_harm_raw, mut sentient_harm_detail) = eco::compute_sentient_harm(food, query);
 
     let direct_kill_raw = eco::compute_direct_kill(food, query);
-    eco_detail.direct_kill_score = direct_kill_raw / divisor;
+    sentient_harm_detail.direct_kill_score = direct_kill_raw / divisor;
 
     ScoredRow {
         name: food.name.clone(),
@@ -96,14 +96,14 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         land_use: Some(land_use_raw / divisor),
         water: Some(water_raw / divisor),
         direct_kill: Some(direct_kill_raw / divisor),
-        // kill_multiplier is applied to eco_destruction as a divisor, matching TS
-        eco_destruction: Some(direct_kill_raw/divisor + eco_raw / divisor / query.kill_multiplier),
+        // kill_multiplier is applied to sentient_harm as a divisor, matching TS
+        sentient_harm: Some(direct_kill_raw/divisor + sentient_harm_raw / divisor / query.kill_multiplier),
         final_score: None, // filled in by apply()
 
         emissions_breakdown,
         water_detail,
         land_use_detail,
-        eco_destruction_detail: eco_detail,
+        sentient_harm_detail,
     }
 }
 

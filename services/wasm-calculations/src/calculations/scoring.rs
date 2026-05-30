@@ -17,7 +17,7 @@ pub(super) fn compute_column_ranges(rows: &[ScoredRow]) -> ColumnRanges {
         water:           compute_column_log_range(rows, |r| r.water),
         direct_kill:     compute_column_log_range(rows, |r| r.direct_kill),
         nutrition_score: compute_column_log_range(rows, |r| r.nutrition_score),
-        eco_destruction: compute_column_log_range(rows, |r| r.eco_destruction),
+        sentient_harm:   compute_column_log_range(rows, |r| r.sentient_harm),
     }
 }
 
@@ -53,7 +53,7 @@ pub(super) fn compute_final_score(row: &ScoredRow, averages: &ColumnRanges) -> O
     if let (Some(value), Some(range)) = (row.direct_kill, averages.direct_kill) {
         scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
-    if let (Some(value), Some(range)) = (row.eco_destruction, averages.eco_destruction) {
+    if let (Some(value), Some(range)) = (row.sentient_harm, averages.sentient_harm) {
         scores.push(dimension_score(value, range, ScoreDirection::LowerIsBetter));
     }
 

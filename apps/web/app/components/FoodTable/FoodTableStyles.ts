@@ -60,7 +60,7 @@ export function getFinalScoreColor(score: number): string {
     return 'bg-red-100 text-red-700';
 }
 
-export function getEcoDestructionColor(value: number): string {
+export function getSentientHarmColor(value: number): string {
   if (value >= ONE_HUNDRED_TRILLION) return 'text-red-700 font-medium';
   if (value >= TEN_TRILLION)         return 'text-red-600 font-medium';
   if (value >= ONE_TRILLION)         return 'text-orange-600 font-medium';
