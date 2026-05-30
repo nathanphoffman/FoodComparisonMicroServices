@@ -1,0 +1,28 @@
+---
+name: cleanup-wasm
+description: Cleans up Rust files in src/ for naming, structure, and correctness.
+---
+
+Apply the general rules in `../../.claude/agents/shared/best-practices.txt`
+first, then the language-specific rules below.
+
+Pick one file at random from `src/` and clean it up.
+Auto-fix anything unambiguous and local.
+Flag everything else with file path, line number, and a suggested fix.
+
+Naming: snake_case for variables, functions, and modules.
+PascalCase for structs and enums.
+SCREAMING_SNAKE_CASE for constants.
+
+Rust rules: no `unwrap()` or `expect()` in code paths reachable from
+WASM exports — handle errors explicitly or return a `Result`.
+Avoid `clone()` where a reference will do.
+Public WASM exports must have doc comments explaining their inputs and
+return shape.
+Constants and biological values stay in `src/calculations/` — do not
+scatter them across files.
+After any change, verify the package still builds with
+`wasm-pack build --target web`.
+
+Append one line to `.claude/audit/cleanup-wasm.txt` after each run:
+`YYYY-MM-DD | <summary>`.

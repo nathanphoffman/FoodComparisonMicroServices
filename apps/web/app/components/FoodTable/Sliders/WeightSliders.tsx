@@ -4,6 +4,9 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import type { FoodWeights } from "../FoodTableTypes";
+import { CalorieWeightModal } from "../../Modals/CalorieWeightModal";
+import { ProteinWeightModal } from "../../Modals/ProteinWeightModal";
+import { MassWeightModal } from "../../Modals/MassWeightModal";
 
 const KEYS: (keyof FoodWeights)[] = ['calories', 'protein', 'mass'];
 
@@ -11,6 +14,18 @@ const LABELS: Record<keyof FoodWeights, string> = {
     calories: 'Calorie Weight',
     protein:  'Protein Weight',
     mass:     'Mass Weight',
+};
+
+const DESCRIPTIONS: Record<keyof FoodWeights, string> = {
+    calories: 'how much caloric density contributes to the score',
+    protein:  'how much protein density contributes to the score',
+    mass:     'how much raw mass contributes to the score',
+};
+
+const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => void }>> = {
+    calories: CalorieWeightModal,
+    protein:  ProteinWeightModal,
+    mass:     MassWeightModal,
 };
 
 const DEFAULT_FOOD_WEIGHTS: FoodWeights = { calories: 34, protein: 33, mass: 33 };
@@ -53,6 +68,7 @@ function redistributeProportionally(
 
 export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => void }) {
     const [weights, setWeights] = useState<FoodWeights>(DEFAULT_FOOD_WEIGHTS);
+    const [openModal, setOpenModal] = useState<keyof FoodWeights | null>(null);
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
 
@@ -74,6 +90,8 @@ export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => voi
         debouncedOnChange(updatedWeights);
     };
 
+    const ActiveModal = openModal ? MODALS[openModal] : null;
+
     return <>
         {KEYS.map(key => (
             <div key={key} className="flex flex-col gap-1 flex-1">
@@ -82,7 +100,12 @@ export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => voi
                     <span className="font-medium text-neutral-700">{weights[key]}%</span>
                 </div>
                 <Slider min={0} max={100} value={weights[key]} onChange={v => handleWeightSliderChange(key, v)} />
+                <div className="text-xs text-neutral-400 mt-0.5">
+                    {DESCRIPTIONS[key]}
+                    <button onClick={() => setOpenModal(key)} className="ml-1.5 text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">more info</button>
+                </div>
             </div>
         ))}
+        {ActiveModal && <ActiveModal onClose={() => setOpenModal(null)} />}
     </>;
 }
