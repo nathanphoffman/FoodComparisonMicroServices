@@ -2,8 +2,7 @@ mod intelligence;
 
 use crate::models::{FoodRow, LandUseDetail, SentientHarmDetail, SliderQuery};
 use intelligence::{
-    compute_intelligence, compute_pesticide_victim_intelligence, lifespan_years_for_slug,
-    PesticideVictim,
+    compute_intelligence, get_pesticide_victim_function, lifespan_years_for_slug, PesticideVictim,
 };
 
 // ── Eco constants (matching FoodTableCalculations.ts exactly) ─────────────────
@@ -92,47 +91,13 @@ pub(super) fn compute_sentient_harm(
     let weight_exp = query.weight_exponent;
     let final_exp = query.final_intelligence_exponent;
 
-    let insect_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Insect,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
-    
-    let bee_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Bee,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
-
-    let worm_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Worm,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
-
-    let mammal_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Mammal,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
-
-    let bird_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Bird,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
-    
-    let reptile_intel = compute_pesticide_victim_intelligence(
-        PesticideVictim::Reptile,
-        neuron_exp,
-        weight_exp,
-        final_exp,
-    );
+    let intel = get_pesticide_victim_function(neuron_exp, weight_exp, final_exp);
+    let insect_intel  = intel(PesticideVictim::Insect);
+    let bee_intel     = intel(PesticideVictim::Bee);
+    let worm_intel    = intel(PesticideVictim::Worm);
+    let mammal_intel  = intel(PesticideVictim::Mammal);
+    let bird_intel    = intel(PesticideVictim::Bird);
+    let reptile_intel = intel(PesticideVictim::Reptile);
 
     if food.food_type == "plant" {
         return compute_plant_sentient_harm(

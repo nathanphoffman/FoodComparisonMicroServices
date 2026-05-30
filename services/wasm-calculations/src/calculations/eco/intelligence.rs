@@ -37,6 +37,14 @@ pub(super) fn compute_intelligence(
     raw.powf(final_exp)
 }
 
+pub(super) fn get_pesticide_victim_function(
+    neuron_exp: f64,
+    weight_exp: f64,
+    final_exp: f64,
+) -> impl Fn(PesticideVictim) -> f64 {
+    move |victim| compute_pesticide_victim_intelligence(victim, neuron_exp, weight_exp, final_exp)
+}
+
 pub(super) fn compute_pesticide_victim_intelligence(
     victim: PesticideVictim,
     neuron_exp: f64,
