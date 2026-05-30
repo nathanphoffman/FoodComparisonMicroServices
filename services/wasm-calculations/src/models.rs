@@ -146,6 +146,7 @@ pub struct LandUseDetail {
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct EcoDestructionDetail {
+    pub direct_kill_score:           f64,
     pub insect_score:                f64,
     pub bee_score:                   f64,
     pub worm_score:                  f64,
@@ -161,6 +162,7 @@ pub struct EcoDestructionDetail {
 impl EcoDestructionDetail {
     pub fn zero() -> Self {
         EcoDestructionDetail {
+            direct_kill_score: 0.0,
             insect_score: 0.0, bee_score: 0.0, worm_score: 0.0, deforestation_score: 0.0,
             feed_insect_score: 0.0, feed_bee_score: 0.0, feed_worm_score: 0.0,
             feed_deforestation_score: 0.0, pasture_deforestation_score: 0.0, bycatch_score: 0.0,

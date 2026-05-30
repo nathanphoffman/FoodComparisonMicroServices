@@ -234,6 +234,7 @@ fn compute_plant_eco_destruction(
     ]);
 
     let detail = EcoDestructionDetail {
+        direct_kill_score: 0.0, // populated by mod.rs after compute_direct_kill
         insect_score,
         bee_score,
         worm_score,

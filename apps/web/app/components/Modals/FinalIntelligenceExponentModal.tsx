@@ -4,15 +4,15 @@ import { Modal } from "./Modal";
 
 export function FinalIntelligenceExponentModal({ onClose }: { onClose: () => void }) {
     return (
-        <Modal title="Final Intelligence Curve" onClose={onClose}>
+        <Modal title="Emergent Intelligence" onClose={onClose}>
             <p>
-                After neuron count and body mass are combined into a raw intelligence score, this exponent applies a final non-linear curve to the result before it feeds into the harm calculation.
+                Higher intelligence doesn't just mean "more" of the same — it unlocks qualitatively new cognitive abilities. Complex brain regions responsible for language, self-awareness, planning, and social bonds tend to emerge only once a threshold of neural complexity is reached.
             </p>
             <p>
-                Values near 1.0 keep the score roughly proportional to the raw computation. Higher values amplify differences at the top of the intelligence range — making the gap between a highly intelligent animal (dolphin, pig) and an average one (fish, crab) larger in the final harm score.
+                This exponent models that non-linearity. Values near 1.0 treat intelligence as roughly proportional to raw neuron score. Higher values amplify differences at the top of the range — widening the gap between animals with rich inner lives (dolphins, pigs) and simpler ones (fish, crabs), reflecting the belief that emergent cognitive complexity carries greater moral weight.
             </p>
             <p>
-                This is a tuning knob: increase it if you believe intelligence has sharply diminishing moral relevance at the low end, or decrease it toward 1.0 for a more linear relationship.
+                Increase this value if you think the capacity for language, emotion, or self-awareness matters morally. Lower it toward 1.0 for a more uniform treatment across intelligence levels.
             </p>
         </Modal>
     );

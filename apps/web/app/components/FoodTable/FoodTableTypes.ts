@@ -44,6 +44,7 @@ export type IntelligenceDetail = {
 };
 
 export type EcoDestructionDetail = {
+    directKillScore:           number;
     insectScore:               number;
     beeScore:                  number;
     wormScore:                 number;
@@ -57,6 +58,7 @@ export type EcoDestructionDetail = {
 };
 
 export const EMPTY_ECO_DETAIL: EcoDestructionDetail = {
+    directKillScore: 0,
     insectScore: 0, beeScore: 0, wormScore: 0, deforestationScore: 0,
     feedInsectScore: 0, feedBeeScore: 0, feedWormScore: 0,
     feedDeforestationScore: 0, pastureDeforestationScore: 0, bycatchScore: 0,

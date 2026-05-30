@@ -125,6 +125,7 @@ export function IntelligenceTooltip({ detail, children }: { detail: Intelligence
 
 export function EcoDestructionTooltip({ detail, divisor = 1, children }: { detail: EcoDestructionDetail; divisor?: number; children: React.ReactNode }) {
   const fmt = (v: number) => formatIntelligenceValue(v / divisor);
+  const hasDirectKill = detail.directKillScore > 0;
   const hasPlant   = detail.insectScore > 0 || detail.beeScore > 0 || detail.wormScore > 0 || detail.deforestationScore > 0;
   const hasFeed    = detail.feedInsectScore > 0 || detail.feedBeeScore > 0 || detail.feedWormScore > 0 || detail.feedDeforestationScore > 0;
   const hasPasture = detail.pastureDeforestationScore > 0;
@@ -132,6 +133,11 @@ export function EcoDestructionTooltip({ detail, divisor = 1, children }: { detai
   return (
     <Tooltip content={
       <>
+        {hasDirectKill && (
+          <TooltipSection title="Direct kill">
+            <TooltipRow label="Primary animal" value={fmt(detail.directKillScore)} />
+          </TooltipSection>
+        )}
         {hasPlant && (
           <TooltipSection title="Pesticide &amp; crop impact">
             {detail.insectScore        > 0 && <TooltipRow label="Insects"            value={fmt(detail.insectScore)} />}
