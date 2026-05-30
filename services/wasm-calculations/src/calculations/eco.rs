@@ -143,22 +143,21 @@ pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
 
 // ── Eco destruction ───────────────────────────────────────────────────────────
 
-fn sum(values: &[f64]) -> f64 {
-    let sum: f64 = values.iter().filter(|&&c| c > 0.0).sum();
-    sum
+fn sum_positive(values: &[f64]) -> f64 {
+    values.iter().filter(|&&c| c > 0.0).sum()
 }
 
 pub(super) fn compute_eco_destruction(food: &FoodRow, query: &SliderQuery) -> (f64, EcoDestructionDetail) {
-    let ne = query.neuron_exponent;
-    let we = query.weight_exponent;
-    let fe = query.final_intelligence_exponent;
+    let neuron_exp = query.neuron_exponent;
+    let weight_exp = query.weight_exponent;
+    let final_exp  = query.final_intelligence_exponent;
 
-    let insect_intel = compute_pesticide_victim_intelligence(PesticideVictim::Insect,  ne, we, fe);
-    let bee_intel    = compute_pesticide_victim_intelligence(PesticideVictim::Bee,     ne, we, fe);
-    let worm_intel   = compute_pesticide_victim_intelligence(PesticideVictim::Worm,    ne, we, fe);
-    let mammal_intel = compute_pesticide_victim_intelligence(PesticideVictim::Mammal,  ne, we, fe);
-    let bird_intel   = compute_pesticide_victim_intelligence(PesticideVictim::Bird,    ne, we, fe);
-    let reptile_intel = compute_pesticide_victim_intelligence(PesticideVictim::Reptile, ne, we, fe);
+    let insect_intel  = compute_pesticide_victim_intelligence(PesticideVictim::Insect,  neuron_exp, weight_exp, final_exp);
+    let bee_intel     = compute_pesticide_victim_intelligence(PesticideVictim::Bee,     neuron_exp, weight_exp, final_exp);
+    let worm_intel    = compute_pesticide_victim_intelligence(PesticideVictim::Worm,    neuron_exp, weight_exp, final_exp);
+    let mammal_intel  = compute_pesticide_victim_intelligence(PesticideVictim::Mammal,  neuron_exp, weight_exp, final_exp);
+    let bird_intel    = compute_pesticide_victim_intelligence(PesticideVictim::Bird,    neuron_exp, weight_exp, final_exp);
+    let reptile_intel = compute_pesticide_victim_intelligence(PesticideVictim::Reptile, neuron_exp, weight_exp, final_exp);
 
     if food.food_type == "plant" {
         return compute_plant_eco_destruction(
@@ -222,7 +221,7 @@ fn compute_plant_eco_destruction(
     let deforestation_score =
         mammal_deaths * mammal_intel + bird_deaths * bird_intel + reptile_deaths * reptile_intel;
 
-    let total = sum(&[
+    let total = sum_positive(&[
         insect_score,
         bee_score,
         worm_score,
@@ -331,7 +330,7 @@ fn compute_animal_eco_destruction(
         contributions.push(detail.bycatch_score);
     }
 
-    let total = sum(&contributions);
+    let total = sum_positive(&contributions);
     (total, detail)
 }
 

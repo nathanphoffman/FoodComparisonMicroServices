@@ -1,1 +1,2 @@
 2026-05-30 | scoring.rs: replaced .cloned() with .copied() on f64 iterators; extracted magic 100.0/50.0 into SCORE_MAX/SCORE_NEUTRAL constants
+2026-05-30 | eco.rs: renamed abbreviated locals ne/we/fe → neuron_exp/weight_exp/final_exp; renamed fn sum → sum_positive (it filters to positive values only)
