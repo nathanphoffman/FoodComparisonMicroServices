@@ -17,7 +17,7 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
     { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true  },
     { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
     { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
-    { key: 'finalScore',     label: 'Final Score',        sortKey: 'finalScore',     defaultVisible: true  },
+    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
     { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false },
 ];
 
@@ -48,15 +48,12 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 type Props = {
-    // All slider values flow up as a single combined object
     onSliderValuesChange: (v: SliderValues) => void;
-
-    // Scoring error banner (non-blocking, dismissable)
     scoringError:          string | null;
     onDismissScoringError: () => void;
-
-    // Column visibility — state lives here; parent notified synchronously on change
     onActiveColsChange: (cols: ColConfig[]) => void;
+    foods: { slug: string; name: string }[];
+    onReferenceChange: (slug: string) => void;
 };
 
 export function FoodTableInputs({
@@ -64,8 +61,11 @@ export function FoodTableInputs({
     scoringError,
     onDismissScoringError,
     onActiveColsChange,
+    foods,
+    onReferenceChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
+    const [referenceSlug, setReferenceSlug] = useState<string>('rice');
     const [visibleColumns, setVisible]    = useState<Set<ColumnKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
@@ -149,7 +149,22 @@ export function FoodTableInputs({
                     >✕</button>
                 </div>
             )}
-            <div className="flex justify-end mb-2" ref={toggleRef}>
+            <div className="flex justify-end items-center gap-3 mb-2" ref={toggleRef}>
+                <div className="flex items-center gap-2 text-sm text-neutral-500">
+                    <span>Compare vs.</span>
+                    <select
+                        value={referenceSlug}
+                        onChange={e => {
+                            setReferenceSlug(e.target.value);
+                            onReferenceChange(e.target.value);
+                        }}
+                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                    >
+                        {[...foods].sort((a, b) => a.name.localeCompare(b.name)).map(f => (
+                            <option key={f.slug} value={f.slug}>{f.name}</option>
+                        ))}
+                    </select>
+                </div>
                 <div className="relative">
                     <button
                         onClick={() => setShowToggle(v => !v)}

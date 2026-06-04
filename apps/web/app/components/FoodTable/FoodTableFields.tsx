@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Cell } from '../Table/Cell';
 import type { SentientHarmDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, WaterDetail } from './FoodTableTypes';
 import { formatNeurons, formatIntelligenceValue } from './FoodTableCalculations';
-import { getSentientHarmColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getFinalScoreColor } from './FoodTableStyles';
+import { getSentientHarmColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getImprovementColor } from './FoodTableStyles';
 import {
   SentientHarmTooltip,
   EmissionsTooltip,
@@ -157,14 +157,14 @@ export function SentientHarmCell({ value, detail, divisor = 1 }: { value: number
   );
 }
 
-// ─── Final Score ──────────────────────────────────────────────────────────────
+// ─── Improvement ─────────────────────────────────────────────────────────────
 
-export function FinalScoreCell({ score }: { score: number | null }) {
-    if (score == null) return <Cell key="finalScore" align="right"><span className="text-neutral-400">—</span></Cell>;
+export function FinalScoreCell({ ratio }: { ratio: number | null }) {
+    if (ratio == null) return <Cell key="finalScore" align="right"><span className="text-neutral-400">—</span></Cell>;
     return (
         <Cell key="finalScore" align="right">
-            <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${getFinalScoreColor(score)}`}>
-                {Math.round(score)}%
+            <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${getImprovementColor(ratio)}`}>
+                {ratio.toFixed(1)}x
             </span>
         </Cell>
     );

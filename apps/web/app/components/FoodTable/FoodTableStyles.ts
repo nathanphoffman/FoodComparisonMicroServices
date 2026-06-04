@@ -51,12 +51,9 @@ export function getNeuronColor(value: number): string {
   return 'text-yellow-600';
 }
 
-const FINAL_SCORE_GOOD_THRESHOLD = 65;
-const FINAL_SCORE_FAIR_THRESHOLD = 40;
-
-export function getFinalScoreColor(score: number): string {
-    if (score >= FINAL_SCORE_GOOD_THRESHOLD) return 'bg-green-100 text-green-700';
-    if (score >= FINAL_SCORE_FAIR_THRESHOLD) return 'bg-yellow-100 text-yellow-700';
+export function getImprovementColor(ratio: number): string {
+    if (ratio >= 1.5) return 'bg-green-100 text-green-700';
+    if (ratio >= 0.7) return 'bg-yellow-100 text-yellow-700';
     return 'bg-red-100 text-red-700';
 }
 
