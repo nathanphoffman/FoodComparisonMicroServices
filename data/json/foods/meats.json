@@ -351,7 +351,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "Chicken \u2014 ch4_kg_per_kg_output: On-farm CH4 only (manure management; broiler chickens produce negligible enteric CH4 as monogastrics). System boundary is on-farm only; feed production and land use change are excluded. 0.04 kg CH4/kg \u00d7 GWP100=28 = 1.12 kg CO2e/kg. P&N 2018 global median for poultry meat; consistent with GLEAM v3 broiler estimate."
                 }
             },
             {
@@ -361,29 +361,29 @@
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "note": "Chicken \u2014 ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for broiler chickens (manure management only; no enteric CH4 for poultry). System boundary is on-farm only; feed production and land use change are excluded. 0.035 kg CH4/kg \u00d7 GWP100=28 = 0.98 kg CO2e/kg. Global production-weighted average across confined broiler systems."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.018,
+                "value": 0.000068,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "Chicken \u2014 n2o_kg_per_kg_output: On-farm N2O only (manure management in confined broiler houses). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000068 \u00d7 265 = 0.018 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.018 was stored in kg CO2e rather than raw kg N2O \u2014 same error pattern as eggs.json (corrected 0.012 \u2192 0.00011). Derived as 0.018 CO2e / 265 = 0.000068 kg raw N2O/kg chicken. N2O from feed crop fertilizer is tracked in the feed fields, not here."
                 }
             },
             {
-                "value": 0.016,
+                "value": 0.000060,
                 "confidence": 3,
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "note": "Chicken \u2014 n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for broiler chickens (manure management in confined housing; low-moisture litter produces relatively little N2O). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000060 \u00d7 265 = 0.016 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.016 was stored in kg CO2e rather than raw kg N2O. Derived as 0.016 CO2e / 265 = 0.000060 kg raw N2O/kg chicken. System boundary is on-farm only; feed and land use N2O are excluded. Consistent with P&N 2018 corrected estimate."
                 }
             }
         ],
@@ -395,7 +395,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "Chicken \u2014 co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
                 }
             },
             {
@@ -405,7 +405,7 @@
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "note": "Chicken \u2014 co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
                 }
             }
         ],

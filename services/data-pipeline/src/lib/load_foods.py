@@ -21,7 +21,7 @@ CATEGORY_FILES = [
 FOOD_KEYS = {"id", "slug", "name", "type", "human_food", "tags", "nutrition"}
 
 ANIMAL_KEYS = {
-    "neuron_count", "weight_kg", "bycatch_amount",
+    "neuron_count", "weight_kg", "lifetime_output_kg", "bycatch_amount",
     "yield_fraction", "pasture_ha_per_kg_output", "pasture_green_water_l_per_ha",
     "native_fraction", "ch4_kg_per_kg_output", "n2o_kg_per_kg_output", "co2_kg_per_kg_output",
 }

@@ -41,6 +41,7 @@ public class FoodRow
     // Animal metrics
     public double? NeuronCount               { get; set; }
     public double? WeightKg                  { get; set; }
+    public double? LifetimeOutputKg          { get; set; }
     public double? YieldFraction             { get; set; }
     public double? PastureHaPerKgOutput      { get; set; }
     public double? Ch4KgPerKgOutput          { get; set; }

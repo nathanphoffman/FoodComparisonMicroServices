@@ -48,6 +48,7 @@ class Animal(TypedDict):
     food_id: int
     neuron_count: list[SourcedNumber] | None
     weight_kg: list[SourcedNumber] | None
+    lifetime_output_kg: list[SourcedNumber] | None
     bycatch_animal_id: int | None
     bycatch_food_slug: str | None
     bycatch_amount: list[SourcedNumber] | None

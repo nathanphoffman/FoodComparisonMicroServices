@@ -33,6 +33,7 @@ class RawAnimal:
     def __init__(self, data: Animal, feed_entries: list[FeedEntry]) -> None:
         self.neuron_count                 = SourcedArray(data.get("neuron_count"))
         self.weight_kg                    = SourcedArray(data.get("weight_kg"))
+        self.lifetime_output_kg           = SourcedArray(data.get("lifetime_output_kg"))
         self.yield_fraction               = SourcedArray(data.get("yield_fraction"))
         self.pasture_ha_per_kg_output     = SourcedArray(data.get("pasture_ha_per_kg_output"))
         self.pasture_green_water_l_per_ha = SourcedArray(data.get("pasture_green_water_l_per_ha"))
@@ -49,6 +50,7 @@ class RawAnimal:
         return {
             "neuron_count":                  self.neuron_count.weighted_average(),
             "weight_kg":                     self.weight_kg.weighted_average(),
+            "lifetime_output_kg":            self.lifetime_output_kg.weighted_average(),
             "yield_fraction":                self.yield_fraction.weighted_average(),
             "pasture_ha_per_kg_output":      self.pasture_ha_per_kg_output.weighted_average(),
             "pasture_green_water_l_per_ha":  self.pasture_green_water_l_per_ha.weighted_average(),

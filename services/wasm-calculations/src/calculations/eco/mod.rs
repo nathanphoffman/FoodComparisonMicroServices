@@ -65,11 +65,16 @@ pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
         return 0.0;
     }
 
-    let (neuron_count, body_weight_kg, _yield_fraction) =
+    let (neuron_count, body_weight_kg, yield_fraction) =
         match (food.neuron_count, food.weight_kg, food.yield_fraction) {
             (Some(n), Some(w), Some(y)) if n > 0.0 && w > 0.0 && y > 0.0 => (n, w, y),
             _ => return 0.0,
         };
+
+    // kg of food output per animal death: explicit for continuous-production animals
+    // (layer hens, dairy), derived from body mass × yield for single-slaughter animals.
+    let output_kg_per_death = food.lifetime_output_kg
+        .unwrap_or(body_weight_kg * yield_fraction);
 
     compute_intelligence(
         neuron_count,
@@ -78,7 +83,7 @@ pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
         query.neuron_exponent,
         query.weight_exponent,
         query.final_intelligence_exponent,
-    )
+    ) / output_kg_per_death
 }
 
 // ── Sentient harm ─────────────────────────────────────────────────────────────

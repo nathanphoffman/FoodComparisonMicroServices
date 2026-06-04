@@ -1022,5 +1022,46 @@
       "Eggs \u2014 full supply chain breakdown (kg CO2e per kg eggs): land use change 0.710, animal feed 2.205, farm (on-farm) 1.320, processing 0.000, transport 0.084, retail 0.036, packaging 0.161, losses 0.153. Total: ~4.67 kg CO2e/kg eggs. Cross-checks against ghg-per-kg-poore CSV value of 4.67 kg CO2e/kg (source 71).",
       "Eggs \u2014 on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields."
     ]
+  },
+  {
+    "id": 89,
+    "url": "https://lohmann-breeders.com/strains/lohmann-brown-classic-cage-housing/",
+    "title": "Lohmann Breeders \u2014 LOHMANN BROWN-CLASSIC Cage Housing Performance Data",
+    "notes": [
+      "Layer hen \u2014 lifetime_output_kg: LOHMANN BROWN-CLASSIC cage performance data. Total egg mass per hen housed to 72 weeks: 20.63 kg (324 eggs at average 63.7 g/egg). This is the standard commercial end-of-lay benchmark for cage systems. Data from Lohmann Tierzucht GmbH, the primary genetics company for commercial brown-egg layers globally.",
+      "Layer hen \u2014 rearing feed: 7.4\u20137.8 kg per pullet from day-old to 20 weeks (midpoint 7.6 kg).",
+      "Layer hen \u2014 laying-phase FCR: 2.0\u20132.2 kg feed per kg egg mass during laying (midpoint 2.1). Laying feed for 20.63 kg egg output \u2248 43.3 kg.",
+      "Layer hen \u2014 lifetime FCR calculation: (7.6 kg rearing + 43.3 kg laying) / 20.63 kg eggs \u2248 2.47 kg feed per kg eggs. This is the full-lifecycle FCR including chick and pullet rearing phases, for modern commercial cage production.",
+      "Layer hen \u2014 FCR note: The previously used lifetime FCR of ~4.03 (source 38) appears to reflect non-commercial or outdated data: (a) its egg output assumption of 17.1 kg is below modern commercial performance of 20.63 kg, and (b) its total feed assumption of 69 kg substantially exceeds the Lohmann-documented 50.9 kg. The system boundary (chick + pullet + laying) is the same; the difference is in actual production parameters."
+    ]
+  },
+  {
+    "id": 91,
+    "url": "https://www.fao.org/fishery/en/culturedspecies/mytilus_edulis",
+    "title": "FAO — Farmed Blue Mussel (Mytilus edulis) Aquaculture Profile",
+    "notes": [
+      "Mussels (Farmed) — weight_kg: Commercial blue mussels at harvest in rope and longline aquaculture typically weigh 10–15 g live weight (shell included); 0.012 kg used as representative for standard market-size mussels at 24–36 months grow-out.",
+      "Mussels (Farmed) — production method: Mytilus edulis and M. galloprovincialis are farmed almost exclusively by rope culture and longline suspension methods. No feed inputs required — mussels are filter feeders that obtain all nutrition from phytoplankton and suspended organic particles in the water column. No freshwater use, no land use, no bycatch.",
+      "Mussels (Farmed) — yield_fraction: Shell-to-meat conversion ~25–30% of total live weight. FAO profile documents typical shucked meat yield of ~25–32% for commercial-sized mussels; 0.27 used as central estimate."
+    ]
+  },
+  {
+    "id": 92,
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545011/",
+    "title": "Gillette & Bhatt (2013) — Invertebrate Nervous Systems and Bivalve Neurobiology (PMC / Scholarpedia)",
+    "notes": [
+      "Mussels (Farmed) — neuron_count: Bivalve mollusks lack a centralized brain; the nervous system consists of three pairs of ganglia (cerebral, pedal, visceral) connected by commissures. Total neuron count for blue mussel (Mytilus edulis) estimated at approximately 15,000–20,000 neurons based on bivalve neuroanatomy literature; 17,000 used as central estimate. Carries moderate uncertainty — direct isotropic fractionator counts are not available for M. edulis; value is consistent with estimates for comparable bivalves (Pecten, Crassostrea). Orders of magnitude fewer than decapod crustaceans (~1,000,000) and fish (~10,000,000+)."
+    ]
+  },
+  {
+    "id": 90,
+    "url": "https://www.fao.org/fishery/en/culturedspecies/oreochromis_niloticus",
+    "title": "FAO — Farmed Nile Tilapia (Oreochromis niloticus) Aquaculture Profile",
+    "notes": [
+      "Farmed tilapia — FCR: Modern intensive and semi-intensive tilapia pond and cage culture achieves FCR of ~1.6–2.0 kg feed per kg live weight gain; value of 1.8 used as global production-weighted average.",
+      "Farmed tilapia — yield_fraction: FAO profile documents whole-fish-to-fillet yield of approximately 30–35% for tilapia. Whole gutted fish yield ~87–90%; fillet from gutted ~35–40%. Combined fillet yield from live fish ~0.32–0.36; value of 0.33 used.",
+      "Farmed tilapia — weight_kg: Commercial Nile tilapia (O. niloticus) at harvest in intensive/semi-intensive systems typically weigh 400–900 g live weight; a value of 0.7 kg is used as a representative harvest size for commercial pond aquaculture.",
+      "Farmed tilapia — feed composition: Commercial tilapia feeds are primarily plant-based, reflecting the species' omnivorous biology. Typical diet: soybean meal 30–40%, corn/maize 20–30%, wheat 10–15%, with minor fishmeal (5–10%) for juvenile phases in intensive systems. Adult tilapia can be raised on fully plant-based diets. FAO profile documents FCR 1.6–2.0 across production systems in Asia, Africa, and Latin America."
+    ]
   }
 ]

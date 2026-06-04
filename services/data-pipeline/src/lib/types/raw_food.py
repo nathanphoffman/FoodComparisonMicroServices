@@ -30,7 +30,7 @@ _NULL_PLANT_FIELDS = dict(
     pesticide_kg_per_kg_food=None, land_m2_per_kg=None,
 )
 _NULL_ANIMAL_FIELDS = dict(
-    neuron_count=None, weight_kg=None,
+    neuron_count=None, weight_kg=None, lifetime_output_kg=None,
     pasture_ha_per_kg_output=None, pasture_green_water_l_per_ha=None,
     native_fraction=None, bycatch_amount=None, bycatch_food_slug=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,

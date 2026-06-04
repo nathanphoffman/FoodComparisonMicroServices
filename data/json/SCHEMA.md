@@ -261,6 +261,16 @@ bycatch references, and feed composition.
   "weight_kg": [...],        // SourcedValue  kg
                              // Typical live body weight of the animal at slaughter.
 
+  "lifetime_output_kg": [...], // SourcedValue  kg
+                             // Total food output produced per animal death.
+                             // For single-slaughter animals (broilers, beef, pork):
+                             //   leave as [] — the pipeline derives this as weight_kg × yield_fraction.
+                             // For continuous-production animals (layer hens, dairy cows):
+                             //   set explicitly to the total kg of food the animal produces
+                             //   over its productive life before slaughter.
+                             // Used by the direct-kill calculation to convert the per-animal
+                             // intelligence score into a per-kg-output harm score.
+
   // --- Yield ---
   "yield_fraction": [...],   // SourcedValue  0–1
                              // Fraction of the live animal weight that becomes edible output.

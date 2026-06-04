@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     -- animal metrics (NULL for plant foods and feed rows)
     neuron_count             REAL,
     weight_kg                REAL,
+    lifetime_output_kg       REAL,  -- total food output per animal death; set for continuous-production animals (layers, dairy); NULL for single-slaughter animals (pipeline derives weight_kg × yield_fraction)
     pasture_ha_per_kg_output     REAL,
     pasture_green_water_l_per_ha REAL,  -- green water (precipitation-fed evapotranspiration) consumed by the
                                         --   pasture type this animal grazes, in litres per hectare per year;

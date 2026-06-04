@@ -41,6 +41,7 @@ pub struct FoodRow {
     // Animal metrics (neuron_count is 0 for non-animal rows in the TS type)
     pub neuron_count:              Option<f64>,
     pub weight_kg:                 Option<f64>,
+    pub lifetime_output_kg:        Option<f64>,
     pub yield_fraction:            Option<f64>,
     pub pasture_ha_per_kg_output:  Option<f64>,
     pub ch4_kg_per_kg_output:      Option<f64>,

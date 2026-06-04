@@ -16,7 +16,7 @@ public class DbService
                f.green_water_per_kg, f.blue_water_per_kg, f.grey_water_per_kg,
                f.pesticide_insect_paf, f.pesticide_terrestrial_paf,
                f.pesticide_bee_hazard, f.pesticide_kg_per_kg_food,
-               f.neuron_count, f.weight_kg, f.yield_fraction,
+               f.neuron_count, f.weight_kg, f.lifetime_output_kg, f.yield_fraction,
                f.pasture_ha_per_kg_output,
                f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
                f.bycatch_amount, f.bycatch_food_slug,
