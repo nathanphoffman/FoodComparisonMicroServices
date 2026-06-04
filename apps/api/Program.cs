@@ -35,6 +35,7 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()));
 
 var app = builder.Build();
+app.UseRouting();
 app.UseCors();
 app.MapControllers();
 app.Run();

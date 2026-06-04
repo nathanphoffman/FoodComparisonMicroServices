@@ -24,7 +24,7 @@ import { EMPTY_SENTIENT_HARM_DETAIL } from './FoodTableTypes';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5050';
 
 export function FoodTable() {
     // Data state

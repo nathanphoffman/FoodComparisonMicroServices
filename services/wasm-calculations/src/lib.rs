@@ -20,7 +20,21 @@ pub fn score(input_js: JsValue) -> Result<JsValue, JsValue> {
     let input: ScoreInput = serde_wasm_bindgen::from_value(input_js)
         .map_err(|e| JsValue::from_str(&format!("input parse error: {e}")))?;
 
+    let perf = web_sys::window().and_then(|w| w.performance());
+    let t0 = perf.as_ref().map(|p| p.now());
+
+    // temporary: busy-wait 50ms to verify the timer reads correctly — remove after confirming
+    if let Some(ref p) = perf {
+        let deadline = p.now() + 50.0;
+        while p.now() < deadline {}
+    }
+
     let scored = calculations::apply(input.foods, &input.query);
+
+    if let (Some(p), Some(start)) = (perf, t0) {
+        let ms = p.now() - start;
+        web_sys::console::log_1(&format!("[wasm] score() took {ms:.3} ms").into());
+    }
 
     serde_wasm_bindgen::to_value(&scored)
         .map_err(|e| JsValue::from_str(&format!("serialise error: {e}")))
