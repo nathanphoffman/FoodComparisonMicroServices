@@ -23,7 +23,11 @@ fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
     let (sum, count) = iter
         .filter(|&v| v > 0.0 && v.is_finite())
         .fold((0.0_f64, 0_usize), |(s, n), v| (s + v, n + 1));
-    if count == 0 { None } else { Some(sum / count as f64) }
+    if count == 0 {
+        None
+    } else {
+        Some(sum / count as f64)
+    }
 }
 
 /// Per-batch normalization factors for the divisor.
@@ -50,9 +54,14 @@ impl NormFactors {
 
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     let norms = NormFactors::from_foods(&foods);
-    let mut rows: Vec<ScoredRow> = foods.iter().map(|food| compute_row(food, query, &norms)).collect();
+    let mut rows: Vec<ScoredRow> = foods
+        .iter()
+        .map(|food| compute_row(food, query, &norms))
+        .collect();
 
-    let scoring_context = query.reference_slug.as_deref()
+    let scoring_context = query
+        .reference_slug
+        .as_deref()
         .and_then(|slug| rows.iter().find(|r| r.slug == slug).cloned())
         .map(|reference| {
             let caps = scoring::DimensionCaps::from_rows(&rows, &reference);
@@ -61,13 +70,15 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
 
     if let Some((ref reference, ref caps)) = scoring_context {
         for row in &mut rows {
-            row.final_score = scoring::compute_improvement(row, reference, caps, query.zero_better_multiplier);
+            row.final_score =
+                scoring::compute_improvement(row, reference, caps, query.zero_better_multiplier);
         }
     }
 
     if let Some(mut meal) = meal::synthesize_meal(&rows, &query.meal_ingredients) {
         if let Some((ref reference, ref caps)) = scoring_context {
-            meal.final_score = scoring::compute_improvement(&meal, reference, caps, query.zero_better_multiplier);
+            meal.final_score =
+                scoring::compute_improvement(&meal, reference, caps, query.zero_better_multiplier);
         }
         rows.push(meal);
     }
@@ -83,9 +94,9 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let nutrition_score = if food.calories > 0.0 {
         let raw =
             food.protein + FIBER_SCORE_WEIGHT * food.fiber - SAT_FAT_SCORE_PENALTY * food.sat_fat;
-        
+
         // nutrition score should be flat, not weighted by a divisor it is absolute
-        Some(raw * 100.0/food.calories)
+        Some(raw * 100.0 / food.calories)
     } else {
         None
     };
@@ -97,6 +108,14 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
 
     let direct_kill_raw = eco::compute_direct_kill(food, query);
     sentient_harm_detail.direct_kill_score = direct_kill_raw / divisor;
+
+    let availability = if land_use_raw == 0.0 {
+        food.availability_gg.unwrap_or(1.0)
+    } else {
+        food.availability_gg
+            .map(|a| (a / land_use_raw).max(1.0) / divisor)
+            .unwrap_or(1.0)
+    };
 
     ScoredRow {
         name: food.name.clone(),
@@ -110,9 +129,11 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         water: Some(water_raw / divisor),
         direct_kill: Some(direct_kill_raw / divisor),
         // kill_multiplier is applied to sentient_harm as a divisor, matching TS
-        sentient_harm: Some(direct_kill_raw/divisor + sentient_harm_raw / divisor / query.kill_multiplier),
+        sentient_harm: Some(
+            direct_kill_raw / divisor + sentient_harm_raw / divisor / query.kill_multiplier,
+        ),
         final_score: None, // filled in by apply()
-        availability: food.availability_gg,
+        availability: Some(availability),
 
         emissions_breakdown,
         water_detail,
@@ -130,7 +151,7 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
 
     // norms are also per gram, so we are effectively amount over norm times weight percentage
     let weighted = (query.mass_weight / 100.0) * 1.0
-        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm )
+        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
         + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
     if weighted > 0.0 {
         weighted

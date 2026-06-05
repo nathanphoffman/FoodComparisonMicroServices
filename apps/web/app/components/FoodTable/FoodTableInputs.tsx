@@ -50,7 +50,7 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     weightExponent:             0.75,
     finalIntelligenceExponent:  1.0,
     zeroBetterMultiplier:       2,
-    referenceSlug:              'rice',
+    referenceSlug:              'peanuts',
     mealIngredients:            [],
 };
 
