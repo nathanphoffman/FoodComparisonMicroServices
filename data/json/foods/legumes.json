@@ -247,6 +247,18 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 370000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
         ]
     },
     {
@@ -478,6 +490,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 6500,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -719,7 +743,7 @@
                 "name": "Chlorpyrifos",
                 "kg_ha": [
                     {
-                        "value": 0.10,
+                        "value": 0.1,
                         "confidence": 3,
                         "source": {
                             "id": 52,
@@ -729,6 +753,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 15000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -979,6 +1015,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 7000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     }

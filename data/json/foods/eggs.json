@@ -142,7 +142,7 @@
                 }
             },
             {
-                "value": 0.00010,
+                "value": 0.0001,
                 "confidence": 3,
                 "source": {
                     "id": 56,
@@ -164,7 +164,7 @@
                 }
             },
             {
-                "value": 0.040,
+                "value": 0.04,
                 "confidence": 3,
                 "source": {
                     "id": 56,
@@ -206,6 +206,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 93000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     }

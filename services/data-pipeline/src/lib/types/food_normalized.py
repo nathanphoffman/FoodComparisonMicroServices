@@ -61,6 +61,7 @@ class FoodNormalized:
     ch4_kg_per_kg_output: float | None = None
     n2o_kg_per_kg_output: float | None = None
     co2_kg_per_kg_output: float | None = None
+    availability_gg: float | None = None
 
     def to_db_params(self) -> tuple[int | float | str | None, ...]:
         """Returns all fields as a flat tuple matching the INSERT SQL column order."""
@@ -82,4 +83,5 @@ class FoodNormalized:
             self.pasture_ha_per_kg_output, self.pasture_green_water_l_per_ha,
             self.native_fraction, self.bycatch_amount, self.bycatch_food_slug,
             self.ch4_kg_per_kg_output, self.n2o_kg_per_kg_output, self.co2_kg_per_kg_output,
+            self.availability_gg,
         )

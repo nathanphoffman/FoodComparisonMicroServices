@@ -18,7 +18,7 @@ CATEGORY_FILES = [
     "seafood", "seeds", "vegetables",
 ]
 
-FOOD_KEYS = {"id", "slug", "name", "type", "human_food", "tags", "nutrition"}
+FOOD_KEYS = {"id", "slug", "name", "type", "human_food", "tags", "nutrition", "availability_gg"}
 
 ANIMAL_KEYS = {
     "neuron_count", "weight_kg", "lifetime_output_kg", "bycatch_amount",

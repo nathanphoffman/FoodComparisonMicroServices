@@ -49,8 +49,8 @@ export type ScoredRow = {
  *  - `sortRows(foods, scored)` — returns the sorted RawFood array
  */
 export function useFoodTableSort() {
-    const [sortKey, setSortKey] = useState<SortKey | null>(null);
-    const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
+    const [sortKey, setSortKey] = useState<SortKey | null>('finalScore');
+    const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
     const HIGHER_IS_BETTER: SortKey[] = ['finalScore', 'nutritionScore', 'availability'];
 

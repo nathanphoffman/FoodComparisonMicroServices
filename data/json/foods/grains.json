@@ -251,6 +251,18 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 780000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
         ]
     },
     {
@@ -503,6 +515,18 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 1200000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
         ]
     },
     {
@@ -722,6 +746,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 62000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -961,6 +997,18 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 520000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
         ]
     },
     {
@@ -1181,6 +1229,18 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 23000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
         ]
     },
     {
@@ -1382,7 +1442,7 @@
                 "name": "Pendimethalin",
                 "kg_ha": [
                     {
-                        "value": 0.10,
+                        "value": 0.1,
                         "confidence": 2,
                         "source": {
                             "id": 52,
@@ -1392,6 +1452,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 190,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -1630,6 +1702,18 @@
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 155000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     }

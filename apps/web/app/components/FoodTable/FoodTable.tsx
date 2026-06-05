@@ -75,9 +75,8 @@ export function FoodTable() {
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
-    const sorted = sortRows(rawFoods, scored);
-
-    const displayRows = scored.has('your-meal') ? [...sorted, MEAL_STUB] : sorted;
+    const foodsToSort = scored.has('your-meal') ? [...rawFoods, MEAL_STUB] : rawFoods;
+    const displayRows = sortRows(foodsToSort, scored);
 
     // ── Render ────────────────────────────────────────────────────────────────
 
@@ -116,7 +115,7 @@ export function FoodTable() {
                     const scoredRow = scored.get(food.slug);
                     const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
                     return (
-                        <Row key={food.slug}>
+                        <Row key={food.slug} className={food.slug === 'your-meal' ? 'bg-yellow-50' : undefined}>
                             {activeCols.map(column => {
                                 switch (column.key) {
                                     case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} />;

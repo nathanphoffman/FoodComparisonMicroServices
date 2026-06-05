@@ -41,6 +41,7 @@ class Food(TypedDict):
     nutrition: list[SourcedNutrition]
     human_food: Literal[0, 1]
     tags: list[str]
+    availability_gg: list[SourcedNumber] | None
 
 
 class Animal(TypedDict):

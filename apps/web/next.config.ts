@@ -7,7 +7,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   env: {
-    DB_VERSION: 'v129',
+    DB_VERSION: 'v131',
   },
   webpack(config) {
     // wasm-pack --target web uses `new URL('*.wasm', import.meta.url)` which

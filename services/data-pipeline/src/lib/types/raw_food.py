@@ -9,7 +9,7 @@ Produces two FoodNormalized rows per animal food:
 from typing import TYPE_CHECKING
 
 from ...food_types import Food
-from .sourced_array import SourcedNutritionArray
+from .sourced_array import SourcedArray, SourcedNutritionArray
 from .food_normalized import FoodNormalized
 
 if TYPE_CHECKING:
@@ -74,6 +74,7 @@ class RawFood:
             trans_fat=nutrition_average.get("trans_fat") if nutrition_average else None,
             **(self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS),
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
+            availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
         )
 
     def to_feed_normalized(self) -> FoodNormalized | None:
@@ -95,4 +96,5 @@ class RawFood:
             sodium=None, carbs=None, sugar=None, cholesterol=None, trans_fat=None,
             **feed_fields,
             **_NULL_ANIMAL_FIELDS,
+            availability_gg=None,
         )

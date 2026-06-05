@@ -29,7 +29,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -40,7 +40,7 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": null
                 }
             }
@@ -52,7 +52,7 @@
                 "source": {
                     "id": 18,
                     "url": "https://beef.unl.edu/beefwatch/2020/how-many-pounds-meat-can-we-expect-beef-animal/",
-                    "title": "UNL BeefWatch \u2014 Pounds of Meat from a Beef Animal",
+                    "title": "UNL BeefWatch — Pounds of Meat from a Beef Animal",
                     "note": null
                 }
             }
@@ -64,7 +64,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -79,7 +79,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -91,7 +91,7 @@
                 "source": {
                     "id": 65,
                     "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
-                    "title": "Mekonnen & Hoekstra (2012) \u2014 Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
                     "note": null
                 }
             },
@@ -101,7 +101,7 @@
                 "source": {
                     "id": 66,
                     "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
-                    "title": "Allen et al. (1998) \u2014 FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
                     "note": null
                 }
             }
@@ -113,7 +113,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -125,8 +125,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Beef \u2014 ch4_kg_per_kg_output: Raw kg CH4 per kg beef (multiply by GWP100=28 for CO2e). P&N 2018 global median ~99 CO2e/kg; enteric fermentation (~51%) + manure CH4 (~8%) = ~59% of total = ~50.6 CO2e after subtracting feed (13.17). 50.6 / 28 \u2248 1.81 kg CH4/kg raw; rounded to 1.90 as the upper half of the global mixed (feedlot+pasture) range. Previous value of 8.7 was incorrectly stored as CO2e not raw kg CH4."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef (multiply by GWP100=28 for CO2e). P&N 2018 global median ~99 CO2e/kg; enteric fermentation (~51%) + manure CH4 (~8%) = ~59% of total = ~50.6 CO2e after subtracting feed (13.17). 50.6 / 28 ≈ 1.81 kg CH4/kg raw; rounded to 1.90 as the upper half of the global mixed (feedlot+pasture) range. Previous value of 8.7 was incorrectly stored as CO2e not raw kg CH4."
                 }
             },
             {
@@ -135,8 +135,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Beef \u2014 ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg \u00d7 GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg × GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
                 }
             }
         ],
@@ -147,8 +147,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Beef \u2014 n2o_kg_per_kg_output: Raw kg N2O per kg beef (multiply by GWP100=265 for CO2e). P&N 2018 global median; manure management N2O (~14%) + field N2O from manure application (~4%) = ~18% of total 99 CO2e = ~17.8 CO2e. 17.8 / 265 \u2248 0.067 kg N2O/kg beef raw, rounded to 0.068. Previous value of 0.11 was incorrectly stored as CO2e not raw kg N2O."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef (multiply by GWP100=265 for CO2e). P&N 2018 global median; manure management N2O (~14%) + field N2O from manure application (~4%) = ~18% of total 99 CO2e = ~17.8 CO2e. 17.8 / 265 ≈ 0.067 kg N2O/kg beef raw, rounded to 0.068. Previous value of 0.11 was incorrectly stored as CO2e not raw kg N2O."
                 }
             },
             {
@@ -157,8 +157,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Beef \u2014 n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 \u00d7 265 = 17.2 kg CO2e, representing the manure-system N2O component."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 × 265 = 17.2 kg CO2e, representing the manure-system N2O component."
                 }
             }
         ],
@@ -169,8 +169,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Beef \u2014 co2_kg_per_kg_output: P&N 2018 global median ~99 kg CO2e/kg beef. Field stores direct CO2 only (energy, processing, transport, LUC not captured by the feed/pasture join). Derived as: 99 total \u2212 13.17 feed \u2212 53.2 CH4 CO2e (1.90\u00d728) \u2212 18.0 N2O CO2e (0.068\u00d7265) \u2248 14.6 kg CO2/kg. Represents machinery fuel, slaughter, cold-chain, and net LUC excluding manure-field N2O."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — co2_kg_per_kg_output: P&N 2018 global median ~99 kg CO2e/kg beef. Field stores direct CO2 only (energy, processing, transport, LUC not captured by the feed/pasture join). Derived as: 99 total − 13.17 feed − 53.2 CH4 CO2e (1.90×28) − 18.0 N2O CO2e (0.068×265) ≈ 14.6 kg CO2/kg. Represents machinery fuel, slaughter, cold-chain, and net LUC excluding manure-field N2O."
                 }
             },
             {
@@ -179,8 +179,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Beef \u2014 co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14\u201318 kg CO2e/kg for global-average beef."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14–18 kg CO2e/kg for global-average beef."
                 }
             }
         ],
@@ -195,7 +195,7 @@
                         "source": {
                             "id": 21,
                             "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
-                            "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
                             "note": null
                         }
                     }
@@ -211,7 +211,7 @@
                         "source": {
                             "id": 21,
                             "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
-                            "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
                             "note": null
                         }
                     }
@@ -227,7 +227,7 @@
                         "source": {
                             "id": 21,
                             "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
-                            "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
                             "note": null
                         }
                     }
@@ -243,7 +243,7 @@
                         "source": {
                             "id": 21,
                             "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
-                            "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
                             "note": null
                         }
                     }
@@ -259,11 +259,23 @@
                         "source": {
                             "id": 21,
                             "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
-                            "title": "Feedlot Magazine \u2014 What's In A Feedlot Diet",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
                             "note": null
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 72000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -297,7 +309,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -308,8 +320,8 @@
                 "source": {
                     "id": 19,
                     "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.1048261/full",
-                    "title": "Frontiers in Neuroanatomy \u2014 Chicken Neuron Count",
-                    "note": "Chicken \u2014 neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
+                    "title": "Frontiers in Neuroanatomy — Chicken Neuron Count",
+                    "note": "Chicken — neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
                 }
             }
         ],
@@ -320,8 +332,8 @@
                 "source": {
                     "id": 19,
                     "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.1048261/full",
-                    "title": "Frontiers in Neuroanatomy \u2014 Chicken Neuron Count",
-                    "note": "Chicken \u2014 neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
+                    "title": "Frontiers in Neuroanatomy — Chicken Neuron Count",
+                    "note": "Chicken — neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
                 }
             }
         ],
@@ -332,7 +344,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -350,8 +362,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Chicken \u2014 ch4_kg_per_kg_output: On-farm CH4 only (manure management; broiler chickens produce negligible enteric CH4 as monogastrics). System boundary is on-farm only; feed production and land use change are excluded. 0.04 kg CH4/kg \u00d7 GWP100=28 = 1.12 kg CO2e/kg. P&N 2018 global median for poultry meat; consistent with GLEAM v3 broiler estimate."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chicken — ch4_kg_per_kg_output: On-farm CH4 only (manure management; broiler chickens produce negligible enteric CH4 as monogastrics). System boundary is on-farm only; feed production and land use change are excluded. 0.04 kg CH4/kg × GWP100=28 = 1.12 kg CO2e/kg. P&N 2018 global median for poultry meat; consistent with GLEAM v3 broiler estimate."
                 }
             },
             {
@@ -360,30 +372,30 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Chicken \u2014 ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for broiler chickens (manure management only; no enteric CH4 for poultry). System boundary is on-farm only; feed production and land use change are excluded. 0.035 kg CH4/kg \u00d7 GWP100=28 = 0.98 kg CO2e/kg. Global production-weighted average across confined broiler systems."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Chicken — ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for broiler chickens (manure management only; no enteric CH4 for poultry). System boundary is on-farm only; feed production and land use change are excluded. 0.035 kg CH4/kg × GWP100=28 = 0.98 kg CO2e/kg. Global production-weighted average across confined broiler systems."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.000068,
+                "value": 6.8e-05,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Chicken \u2014 n2o_kg_per_kg_output: On-farm N2O only (manure management in confined broiler houses). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000068 \u00d7 265 = 0.018 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.018 was stored in kg CO2e rather than raw kg N2O \u2014 same error pattern as eggs.json (corrected 0.012 \u2192 0.00011). Derived as 0.018 CO2e / 265 = 0.000068 kg raw N2O/kg chicken. N2O from feed crop fertilizer is tracked in the feed fields, not here."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chicken — n2o_kg_per_kg_output: On-farm N2O only (manure management in confined broiler houses). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000068 × 265 = 0.018 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.018 was stored in kg CO2e rather than raw kg N2O — same error pattern as eggs.json (corrected 0.012 → 0.00011). Derived as 0.018 CO2e / 265 = 0.000068 kg raw N2O/kg chicken. N2O from feed crop fertilizer is tracked in the feed fields, not here."
                 }
             },
             {
-                "value": 0.000060,
+                "value": 6e-05,
                 "confidence": 3,
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Chicken \u2014 n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for broiler chickens (manure management in confined housing; low-moisture litter produces relatively little N2O). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000060 \u00d7 265 = 0.016 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.016 was stored in kg CO2e rather than raw kg N2O. Derived as 0.016 CO2e / 265 = 0.000060 kg raw N2O/kg chicken. System boundary is on-farm only; feed and land use N2O are excluded. Consistent with P&N 2018 corrected estimate."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Chicken — n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for broiler chickens (manure management in confined housing; low-moisture litter produces relatively little N2O). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000060 × 265 = 0.016 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.016 was stored in kg CO2e rather than raw kg N2O. Derived as 0.016 CO2e / 265 = 0.000060 kg raw N2O/kg chicken. System boundary is on-farm only; feed and land use N2O are excluded. Consistent with P&N 2018 corrected estimate."
                 }
             }
         ],
@@ -394,8 +406,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Chicken \u2014 co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chicken — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
                 }
             },
             {
@@ -404,8 +416,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Chicken \u2014 co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Chicken — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
                 }
             }
         ],
@@ -420,7 +432,7 @@
                         "source": {
                             "id": 22,
                             "url": "https://en.wikipedia.org/wiki/Feed_conversion_ratio",
-                            "title": "Wikipedia \u2014 Feed Conversion Ratio",
+                            "title": "Wikipedia — Feed Conversion Ratio",
                             "note": null
                         }
                     }
@@ -436,7 +448,7 @@
                         "source": {
                             "id": 22,
                             "url": "https://en.wikipedia.org/wiki/Feed_conversion_ratio",
-                            "title": "Wikipedia \u2014 Feed Conversion Ratio",
+                            "title": "Wikipedia — Feed Conversion Ratio",
                             "note": null
                         }
                     }
@@ -452,7 +464,7 @@
                         "source": {
                             "id": 26,
                             "url": "https://www.feedstrategy.com/animal-feed-formulations-library/traditional-us-broiler-feed-formulations",
-                            "title": "Feed Strategy \u2014 Traditional US Broiler Feed Formulations",
+                            "title": "Feed Strategy — Traditional US Broiler Feed Formulations",
                             "note": null
                         }
                     }
@@ -468,8 +480,8 @@
                         "source": {
                             "id": 68,
                             "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
-                            "title": "FAO (2013) \u2014 Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
-                            "note": "Chicken \u2014 wheat kg_feed_per_kg_output: Global broiler FCR ~1.8 kg/kg live weight; dressing ~75% (source 54); feed/kg chicken = 2.40 kg. Wheat fraction ~10% of global average diet; wheat feed = 2.40 \u00d7 0.10 = 0.24 kg/kg chicken. Confidence 3 \u2014 wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas/Asia) and wheat-significant (EU) systems."
+                            "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                            "note": "Chicken — wheat kg_feed_per_kg_output: Global broiler FCR ~1.8 kg/kg live weight; dressing ~75% (source 54); feed/kg chicken = 2.40 kg. Wheat fraction ~10% of global average diet; wheat feed = 2.40 × 0.10 = 0.24 kg/kg chicken. Confidence 3 — wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas/Asia) and wheat-significant (EU) systems."
                         }
                     },
                     {
@@ -478,11 +490,23 @@
                         "source": {
                             "id": 69,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
-                            "title": "Leinonen et al. (2012) \u2014 Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+                            "title": "Leinonen et al. (2012) — Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
                             "note": null
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 130000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -515,7 +539,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -526,7 +550,7 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": null
                 }
             }
@@ -538,7 +562,7 @@
                 "source": {
                     "id": 17,
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia \u2014 List of Animals by Number of Neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": null
                 }
             }
@@ -550,7 +574,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -568,7 +592,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             },
@@ -578,7 +602,7 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": null
                 }
             }
@@ -590,7 +614,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             },
@@ -600,7 +624,7 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": null
                 }
             }
@@ -612,7 +636,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             },
@@ -622,7 +646,7 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": null
                 }
             }
@@ -638,7 +662,7 @@
                         "source": {
                             "id": 31,
                             "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
-                            "title": "Pig333 \u2014 Feed Conversion Ratio in Pigs",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
                             "note": null
                         }
                     }
@@ -654,7 +678,7 @@
                         "source": {
                             "id": 31,
                             "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
-                            "title": "Pig333 \u2014 Feed Conversion Ratio in Pigs",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
                             "note": null
                         }
                     }
@@ -670,8 +694,8 @@
                         "source": {
                             "id": 68,
                             "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
-                            "title": "FAO (2013) \u2014 Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
-                            "note": "Pork \u2014 wheat kg_feed_per_kg_output: Global swine FCR ~2.8 kg/kg live weight (consistent with source 31); dressing ~73%; feed/kg pork = 3.836 kg. Wheat fraction ~12% of global average diet (higher in EU ~35\u201345%, lower in US/Brazil <5%); wheat feed = 3.836 \u00d7 0.12 = 0.46 kg/kg pork. Confidence 3 \u2014 wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas) and wheat-dominant (EU) systems."
+                            "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                            "note": "Pork — wheat kg_feed_per_kg_output: Global swine FCR ~2.8 kg/kg live weight (consistent with source 31); dressing ~73%; feed/kg pork = 3.836 kg. Wheat fraction ~12% of global average diet (higher in EU ~35–45%, lower in US/Brazil <5%); wheat feed = 3.836 × 0.12 = 0.46 kg/kg pork. Confidence 3 — wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas) and wheat-dominant (EU) systems."
                         }
                     },
                     {
@@ -680,11 +704,23 @@
                         "source": {
                             "id": 69,
                             "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
-                            "title": "Leinonen et al. (2012) \u2014 Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+                            "title": "Leinonen et al. (2012) — Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
                             "note": null
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 120000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -718,7 +754,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -729,8 +765,8 @@
                 "source": {
                     "id": 41,
                     "url": "https://en.wikipedia.org/wiki/Domestic_turkey",
-                    "title": "Wikipedia \u2014 Domestic Turkey",
-                    "note": "Turkey \u2014 neuron_count: No direct empirical neuronal count for turkeys is available in the literature. As a closely related galliform to the domestic chicken, an estimate of ~262 million neurons is applied, slightly above the 221 million reported for chickens (Herculano-Houzel methodology), consistent with turkey brain mass being moderately larger than chicken brain mass at commercial slaughter size."
+                    "title": "Wikipedia — Domestic Turkey",
+                    "note": "Turkey — neuron_count: No direct empirical neuronal count for turkeys is available in the literature. As a closely related galliform to the domestic chicken, an estimate of ~262 million neurons is applied, slightly above the 221 million reported for chickens (Herculano-Houzel methodology), consistent with turkey brain mass being moderately larger than chicken brain mass at commercial slaughter size."
                 }
             }
         ],
@@ -741,8 +777,8 @@
                 "source": {
                     "id": 41,
                     "url": "https://en.wikipedia.org/wiki/Domestic_turkey",
-                    "title": "Wikipedia \u2014 Domestic Turkey",
-                    "note": "Turkey \u2014 weight_kg: Commercial tom turkeys at slaughter typically weigh 11\u201313 kg live weight; hens 6\u20138 kg. Value of 10 kg used as a weighted average reflecting the commercial flock mix."
+                    "title": "Wikipedia — Domestic Turkey",
+                    "note": "Turkey — weight_kg: Commercial tom turkeys at slaughter typically weigh 11–13 kg live weight; hens 6–8 kg. Value of 10 kg used as a weighted average reflecting the commercial flock mix."
                 }
             }
         ],
@@ -753,7 +789,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -771,7 +807,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -783,7 +819,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -795,7 +831,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -811,8 +847,8 @@
                         "source": {
                             "id": 42,
                             "url": "https://www.thepoultrysite.com/articles/turkey-production-management",
-                            "title": "The Poultry Site \u2014 Turkey Production and Feed Conversion",
-                            "note": "Turkey \u2014 FCR: Commercial turkeys achieve ~2.5\u20132.7 kg feed per kg live weight gain; value of 2.6 used."
+                            "title": "The Poultry Site — Turkey Production and Feed Conversion",
+                            "note": "Turkey — FCR: Commercial turkeys achieve ~2.5–2.7 kg feed per kg live weight gain; value of 2.6 used."
                         }
                     }
                 ]
@@ -827,8 +863,8 @@
                         "source": {
                             "id": 42,
                             "url": "https://www.thepoultrysite.com/articles/turkey-production-management",
-                            "title": "The Poultry Site \u2014 Turkey Production and Feed Conversion",
-                            "note": "Turkey \u2014 FCR: Commercial turkeys achieve ~2.5\u20132.7 kg feed per kg live weight gain; value of 2.6 used."
+                            "title": "The Poultry Site — Turkey Production and Feed Conversion",
+                            "note": "Turkey — FCR: Commercial turkeys achieve ~2.5–2.7 kg feed per kg live weight gain; value of 2.6 used."
                         }
                     }
                 ]
@@ -843,11 +879,23 @@
                         "source": {
                             "id": 42,
                             "url": "https://www.thepoultrysite.com/articles/turkey-production-management",
-                            "title": "The Poultry Site \u2014 Turkey Production and Feed Conversion",
-                            "note": "Turkey \u2014 FCR: Commercial turkeys achieve ~2.5\u20132.7 kg feed per kg live weight gain; value of 2.6 used."
+                            "title": "The Poultry Site — Turkey Production and Feed Conversion",
+                            "note": "Turkey — FCR: Commercial turkeys achieve ~2.5–2.7 kg feed per kg live weight gain; value of 2.6 used."
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 6000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -880,7 +928,7 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods \u2014 calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
                 }
             }
         ],
@@ -891,8 +939,8 @@
                 "source": {
                     "id": 47,
                     "url": "https://en.wikipedia.org/wiki/Sheep",
-                    "title": "Wikipedia \u2014 Sheep",
-                    "note": "Lamb \u2014 neuron_count: Sheep have been estimated at approximately 1.2 billion neurons based on isotropic fractionator data for ovine brain (Herculano-Houzel methodology). Sheep brain mass (~140g) is substantially smaller than cattle (~500g), consistent with the proportionally lower neuron count relative to beef cattle (~3 billion)."
+                    "title": "Wikipedia — Sheep",
+                    "note": "Lamb — neuron_count: Sheep have been estimated at approximately 1.2 billion neurons based on isotropic fractionator data for ovine brain (Herculano-Houzel methodology). Sheep brain mass (~140g) is substantially smaller than cattle (~500g), consistent with the proportionally lower neuron count relative to beef cattle (~3 billion)."
                 }
             }
         ],
@@ -903,8 +951,8 @@
                 "source": {
                     "id": 47,
                     "url": "https://en.wikipedia.org/wiki/Sheep",
-                    "title": "Wikipedia \u2014 Sheep",
-                    "note": "Lamb \u2014 weight_kg: Commercial lambs are typically slaughtered at 40\u201355 kg live weight; a value of 45 kg is used."
+                    "title": "Wikipedia — Sheep",
+                    "note": "Lamb — weight_kg: Commercial lambs are typically slaughtered at 40–55 kg live weight; a value of 45 kg is used."
                 }
             }
         ],
@@ -915,7 +963,7 @@
                 "source": {
                     "id": 54,
                     "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
-                    "title": "FAO/BfR \u2014 Tables on Weight Yield of Food and Retention Factors",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
                     "note": null
                 }
             }
@@ -930,7 +978,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -942,7 +990,7 @@
                 "source": {
                     "id": 65,
                     "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
-                    "title": "Mekonnen & Hoekstra (2012) \u2014 Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
                     "note": null
                 }
             },
@@ -952,7 +1000,7 @@
                 "source": {
                     "id": 66,
                     "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
-                    "title": "Allen et al. (1998) \u2014 FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
                     "note": null
                 }
             }
@@ -964,7 +1012,7 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
             }
@@ -976,8 +1024,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lamb \u2014 ch4_kg_per_kg_output: Raw kg CH4 per kg lamb (multiply by GWP100=28 for CO2e). P&N 2018 global median ~39.7 CO2e/kg; enteric fermentation + manure CH4 \u2248 40% of (39.7 \u2212 12.58 feed) = 10.85, plus additional to reach ~15.74 CO2e allocation = 0.562 kg CH4/kg raw. Previous value of 7.0 was incorrectly stored as CO2e not raw kg CH4."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — ch4_kg_per_kg_output: Raw kg CH4 per kg lamb (multiply by GWP100=28 for CO2e). P&N 2018 global median ~39.7 CO2e/kg; enteric fermentation + manure CH4 ≈ 40% of (39.7 − 12.58 feed) = 10.85, plus additional to reach ~15.74 CO2e allocation = 0.562 kg CH4/kg raw. Previous value of 7.0 was incorrectly stored as CO2e not raw kg CH4."
                 }
             },
             {
@@ -986,8 +1034,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Lamb \u2014 ch4_kg_per_kg_output: Raw kg CH4 per kg lamb. FAO GLEAM v3 for sheep (mutton and lamb) confirms enteric fermentation as the dominant GHG source. 0.540 \u00d7 28 = 15.1 kg CO2e. Consistent with P&N 2018 ruminant CH4 fraction."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — ch4_kg_per_kg_output: Raw kg CH4 per kg lamb. FAO GLEAM v3 for sheep (mutton and lamb) confirms enteric fermentation as the dominant GHG source. 0.540 × 28 = 15.1 kg CO2e. Consistent with P&N 2018 ruminant CH4 fraction."
                 }
             }
         ],
@@ -998,8 +1046,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lamb \u2014 n2o_kg_per_kg_output: Raw kg N2O per kg lamb (multiply by GWP100=265 for CO2e). P&N 2018 global median; N2O from manure management \u2248 15% of (39.7 \u2212 12.58) = 4.07 CO2e + field N2O \u2248 5.96 total CO2e \u2192 5.96 / 265 = 0.0225 kg N2O/kg raw. Previous value of 0.13 was incorrectly stored as CO2e not raw kg N2O."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — n2o_kg_per_kg_output: Raw kg N2O per kg lamb (multiply by GWP100=265 for CO2e). P&N 2018 global median; N2O from manure management ≈ 15% of (39.7 − 12.58) = 4.07 CO2e + field N2O ≈ 5.96 total CO2e → 5.96 / 265 = 0.0225 kg N2O/kg raw. Previous value of 0.13 was incorrectly stored as CO2e not raw kg N2O."
                 }
             },
             {
@@ -1008,8 +1056,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Lamb \u2014 n2o_kg_per_kg_output: Raw kg N2O per kg lamb. FAO GLEAM v3 small ruminant N2O from manure and field applications. 0.0215 \u00d7 265 = 5.7 kg CO2e. Consistent with P&N 2018 decomposition."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — n2o_kg_per_kg_output: Raw kg N2O per kg lamb. FAO GLEAM v3 small ruminant N2O from manure and field applications. 0.0215 × 265 = 5.7 kg CO2e. Consistent with P&N 2018 decomposition."
                 }
             }
         ],
@@ -1020,8 +1068,8 @@
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "P&N 2018 \u2014 Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lamb \u2014 co2_kg_per_kg_output: P&N 2018 global median ~39.7 kg CO2e/kg lamb. Direct CO2 = 39.7 total \u2212 12.58 feed \u2212 15.74 CH4 CO2e (0.562\u00d728) \u2212 5.96 N2O CO2e (0.0225\u00d7265) \u2248 5.42 kg CO2/kg. Represents energy, slaughter, cold-chain, and LUC not captured by pasture/feed join."
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — co2_kg_per_kg_output: P&N 2018 global median ~39.7 kg CO2e/kg lamb. Direct CO2 = 39.7 total − 12.58 feed − 15.74 CH4 CO2e (0.562×28) − 5.96 N2O CO2e (0.0225×265) ≈ 5.42 kg CO2/kg. Represents energy, slaughter, cold-chain, and LUC not captured by pasture/feed join."
                 }
             },
             {
@@ -1030,8 +1078,8 @@
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM \u2014 Global Livestock Environmental Assessment Model",
-                    "note": "Lamb \u2014 co2_kg_per_kg_output: FAO GLEAM v3 global average for small ruminants (sheep). Direct CO2 consistent with P&N 2018 decomposition; ~5.2 kg CO2/kg for energy, processing, and LUC residual."
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — co2_kg_per_kg_output: FAO GLEAM v3 global average for small ruminants (sheep). Direct CO2 consistent with P&N 2018 decomposition; ~5.2 kg CO2/kg for energy, processing, and LUC residual."
                 }
             }
         ],
@@ -1046,8 +1094,8 @@
                         "source": {
                             "id": 48,
                             "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
-                            "title": "MLA \u2014 Sheep Feed and Nutrition",
-                            "note": "Lamb \u2014 FCR: Commercial lambs on feedlot finishing achieve ~4.5\u20135.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
                         }
                     }
                 ]
@@ -1062,8 +1110,8 @@
                         "source": {
                             "id": 48,
                             "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
-                            "title": "MLA \u2014 Sheep Feed and Nutrition",
-                            "note": "Lamb \u2014 FCR: Commercial lambs on feedlot finishing achieve ~4.5\u20135.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
                         }
                     }
                 ]
@@ -1078,8 +1126,8 @@
                         "source": {
                             "id": 48,
                             "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
-                            "title": "MLA \u2014 Sheep Feed and Nutrition",
-                            "note": "Lamb \u2014 FCR: Commercial lambs on feedlot finishing achieve ~4.5\u20135.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
                         }
                     }
                 ]
@@ -1094,11 +1142,23 @@
                         "source": {
                             "id": 48,
                             "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
-                            "title": "MLA \u2014 Sheep Feed and Nutrition",
-                            "note": "Lamb \u2014 FCR: Commercial lambs on feedlot finishing achieve ~4.5\u20135.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
                         }
                     }
                 ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 10000,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
             }
         ]
     },
@@ -1225,7 +1285,19 @@
                 }
             }
         ],
-        "feed": []
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 300,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
+        ]
     },
     {
         "id": 59,
@@ -1242,7 +1314,7 @@
         "nutrition": [
             {
                 "value": {
-                    "calories": 1.20,
+                    "calories": 1.2,
                     "fat": 0.032,
                     "sat_fat": 0.009,
                     "protein": 0.214,
@@ -1288,7 +1360,7 @@
         ],
         "yield_fraction": [
             {
-                "value": 0.40,
+                "value": 0.4,
                 "confidence": 3,
                 "source": {
                     "id": 82,
@@ -1340,6 +1412,18 @@
                 }
             }
         ],
-        "feed": []
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 5,
+                "confidence": 1,
+                "source": {
+                    "id": 99,
+                    "url": "",
+                    "title": "Model estimate — needs proper sourcing",
+                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
+        ]
     }
 ]
