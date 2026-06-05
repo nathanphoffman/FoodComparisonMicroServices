@@ -65,6 +65,9 @@ pub struct FoodRow {
     pub feed_pesticide_bee_hazard:      Option<f64>,
     pub feed_pesticide_kg_per_kg_food:  Option<f64>,
     pub feed_land_m2_per_kg:            Option<f64>,
+
+    // Global supply availability
+    pub availability_gg: Option<f64>,
 }
 
 /// Slider state sent from the Next.js FoodTable component.
@@ -89,7 +92,21 @@ pub struct SliderQuery {
     pub weight_exponent: f64, // exponent applied to body weight in intelligence calc (default 0.75)
     #[serde(default = "default_final_intelligence_exponent")]
     pub final_intelligence_exponent: f64, // final nonlinear curve applied to intelligence score (1.0–1.5, default 1.0)
+    #[serde(default)]
+    pub reference_slug: Option<String>,
+    #[serde(default = "default_zero_better_multiplier")]
+    pub zero_better_multiplier: f64, // how many times better a zero score is vs the next best (default 2.0)
+    #[serde(default)]
+    pub meal_ingredients: Vec<MealIngredient>,
 }
+
+#[derive(Debug, Clone, Deserialize)]
+pub struct MealIngredient {
+    pub slug:     String,
+    pub fraction: f64,
+}
+
+fn default_zero_better_multiplier() -> f64 { 2.0 }
 
 fn default_calorie_weight()               -> f64 { 34.0 }
 fn default_protein_weight()               -> f64 { 33.0 }

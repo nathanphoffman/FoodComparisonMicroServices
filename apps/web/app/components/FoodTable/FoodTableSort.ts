@@ -12,7 +12,8 @@ export type SortKey =
     | 'directKill'
     | 'water'
     | 'sentientHarm'
-    | 'finalScore';
+    | 'finalScore'
+    | 'availability';
 
 /** Shape returned by the WASM scorer. */
 export type ScoredRow = {
@@ -29,6 +30,7 @@ export type ScoredRow = {
     direct_kill:     number | null;
     sentient_harm:   number | null;
     final_score:     number | null;
+    availability:    number | null;
 
     // Tooltip breakdown details (camelCase, matching Rust serde rename_all)
     emissions_breakdown?:  EmissionsBreakdown;
@@ -50,9 +52,11 @@ export function useFoodTableSort() {
     const [sortKey, setSortKey] = useState<SortKey | null>(null);
     const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
 
+    const HIGHER_IS_BETTER: SortKey[] = ['finalScore', 'nutritionScore', 'availability'];
+
     function handleSort(key: SortKey) {
         if (sortKey === key) setSortDir(d => (d === 'asc' ? 'desc' : 'asc'));
-        else { setSortKey(key); setSortDir('asc'); }
+        else { setSortKey(key); setSortDir(HIGHER_IS_BETTER.includes(key) ? 'desc' : 'asc'); }
     }
 
     function columnSortProps(key: SortKey) {
@@ -79,15 +83,17 @@ export function useFoodTableSort() {
                    : sortKey === 'landUse'        ? sa.land_use
                    : sortKey === 'directKill'     ? sa.direct_kill
                    : sortKey === 'water'          ? sa.water
-                   : sortKey === 'sentientHarm' ? sa.sentient_harm
+                   : sortKey === 'sentientHarm'   ? sa.sentient_harm
                    : sortKey === 'finalScore'     ? sa.final_score
+                   : sortKey === 'availability'   ? sa.availability
                    : null;
                 vb = sortKey === 'emissions'      ? sb.emissions
                    : sortKey === 'landUse'        ? sb.land_use
                    : sortKey === 'directKill'     ? sb.direct_kill
                    : sortKey === 'water'          ? sb.water
-                   : sortKey === 'sentientHarm' ? sb.sentient_harm
+                   : sortKey === 'sentientHarm'   ? sb.sentient_harm
                    : sortKey === 'finalScore'     ? sb.final_score
+                   : sortKey === 'availability'   ? sb.availability
                    : null;
             }
 

@@ -19,6 +19,9 @@ type SliderQuery = {
     neuronExponent:             number;
     weightExponent:             number;
     finalIntelligenceExponent:  number;
+    zeroBetterMultiplier:       number;
+    referenceSlug:              string | null;
+    mealIngredients:            { slug: string; fraction: number }[];
 };
 
 // Single input object passed to WASM — keeps the boundary simple and
@@ -65,7 +68,8 @@ export async function loadWasm() {
  */
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
     const { weights, greenWaterWeight, greyWaterWeight, killMultiplier,
-            neuronExponent, weightExponent, finalIntelligenceExponent } = sliderValues;
+            neuronExponent, weightExponent, finalIntelligenceExponent,
+            zeroBetterMultiplier, referenceSlug, mealIngredients } = sliderValues;
 
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
@@ -93,6 +97,9 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 neuronExponent:            neuronExponent,
                 weightExponent:            weightExponent,
                 finalIntelligenceExponent: finalIntelligenceExponent,
+                zeroBetterMultiplier:      zeroBetterMultiplier,
+                referenceSlug:             referenceSlug,
+                mealIngredients:           mealIngredients,
             },
         };
 

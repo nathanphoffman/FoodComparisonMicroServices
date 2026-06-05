@@ -81,6 +81,7 @@ pub struct ScoredRow {
     pub direct_kill:     Option<f64>,
     pub sentient_harm:   Option<f64>,
     pub final_score:     Option<f64>,
+    pub availability:    Option<f64>,
 
     // Tooltip breakdown details
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -31,7 +31,8 @@ public class DbService
                feed.pesticide_kg_per_kg_food  AS feed_pesticide_kg_per_kg_food,
                feed.land_m2_per_kg            AS feed_land_m2_per_kg,
                bycatch_animal.neuron_count    AS bycatch_neuron_count,
-               bycatch_animal.weight_kg       AS bycatch_weight_kg
+               bycatch_animal.weight_kg       AS bycatch_weight_kg,
+               f.availability_gg
         FROM   foods_normalized f
         LEFT JOIN foods_normalized feed
                ON feed.food_id = f.food_id AND feed.is_feed = 1

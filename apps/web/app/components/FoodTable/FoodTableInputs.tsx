@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
+import { MealBuilder } from './MealBuilder';
+import type { MealIngredient } from './MealBuilder';
 import type { FoodWeights } from './FoodTableTypes';
 import type { SortKey } from './FoodTableSort';
 
@@ -18,6 +20,7 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
     { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
     { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
     { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
+    { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true  },
     { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false },
 ];
 
@@ -33,6 +36,9 @@ export type SliderValues = {
     neuronExponent:             number;
     weightExponent:             number;
     finalIntelligenceExponent:  number;
+    zeroBetterMultiplier:       number;
+    referenceSlug:              string;
+    mealIngredients:            MealIngredient[];
 };
 
 export const DEFAULT_SLIDER_VALUES: SliderValues = {
@@ -43,6 +49,9 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     neuronExponent:             1.5,
     weightExponent:             0.75,
     finalIntelligenceExponent:  1.0,
+    zeroBetterMultiplier:       2,
+    referenceSlug:              'rice',
+    mealIngredients:            [],
 };
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -53,7 +62,6 @@ type Props = {
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
     foods: { slug: string; name: string }[];
-    onReferenceChange: (slug: string) => void;
 };
 
 export function FoodTableInputs({
@@ -62,10 +70,8 @@ export function FoodTableInputs({
     onDismissScoringError,
     onActiveColsChange,
     foods,
-    onReferenceChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
-    const [referenceSlug, setReferenceSlug] = useState<string>('rice');
     const [visibleColumns, setVisible]    = useState<Set<ColumnKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
@@ -107,6 +113,16 @@ export function FoodTableInputs({
         setSliderValues(next);
         onSliderValuesChange(next);
     }
+    function handleZeroBetterMultiplier(zeroBetterMultiplier: number) {
+        const next = { ...sliderValues, zeroBetterMultiplier };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleMealChange(mealIngredients: MealIngredient[]) {
+        const next = { ...sliderValues, mealIngredients };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
 
     function handleToggle(key: ColumnKey) {
         const next = new Set(visibleColumns);
@@ -135,7 +151,12 @@ export function FoodTableInputs({
                 onNeuronExponentChange={handleNeuronExponent}
                 onWeightExponentChange={handleWeightExponent}
                 onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
+                onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
             />
+            <div className="mb-4 px-1">
+                <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
+                <MealBuilder foods={foods} onChange={handleMealChange} />
+            </div>
             {scoringError && (
                 <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
                     <div>
@@ -153,10 +174,11 @@ export function FoodTableInputs({
                 <div className="flex items-center gap-2 text-sm text-neutral-500">
                     <span>Compare vs.</span>
                     <select
-                        value={referenceSlug}
+                        value={sliderValues.referenceSlug}
                         onChange={e => {
-                            setReferenceSlug(e.target.value);
-                            onReferenceChange(e.target.value);
+                            const next = { ...sliderValues, referenceSlug: e.target.value };
+                            setSliderValues(next);
+                            onSliderValuesChange(next);
                         }}
                         className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
                     >

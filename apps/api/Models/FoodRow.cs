@@ -65,4 +65,7 @@ public class FoodRow
     public double? FeedPesticideBeeHazard        { get; set; }
     public double? FeedPesticideKgPerKgFood      { get; set; }
     public double? FeedLandM2PerKg               { get; set; }
+
+    // Global supply
+    public double? AvailabilityGg { get; set; }
 }

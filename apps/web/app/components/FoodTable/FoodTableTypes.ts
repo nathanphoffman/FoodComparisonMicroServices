@@ -57,6 +57,27 @@ export type SentientHarmDetail = {
     bycatchScore:              number;
 };
 
+import type { RawFood } from '@/lib/queries/commonFoods';
+
+// Minimal RawFood stub for the synthetic "your-meal" row, which is produced by
+// WASM but never exists in rawFoods from the API.
+export const MEAL_STUB: RawFood = {
+    name: 'Your Meal', slug: 'your-meal', type: 'plant',
+    calories: 0, fat: 0, protein: 0, fiber: 0, sat_fat: 0, neuron_count: 0,
+    sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null,
+    yield_kg_ha: null, pasture_ha_per_kg_output: null, emissions_per_kg: null,
+    water_per_kg: null, weight_kg: null, yield_fraction: null,
+    ch4_kg_per_kg_output: null, n2o_kg_per_kg_output: null, co2_kg_per_kg_output: null,
+    green_water_per_kg: null, blue_water_per_kg: null, grey_water_per_kg: null,
+    pesticide_insect_paf: null, pesticide_terrestrial_paf: null, pesticide_bee_hazard: null,
+    pesticide_kg_per_kg_food: null, feed_water_per_kg: null, feed_emissions_per_kg: null,
+    feed_green_water_per_kg: null, feed_blue_water_per_kg: null, feed_grey_water_per_kg: null,
+    feed_pesticide_insect_paf: null, feed_pesticide_terrestrial_paf: null, feed_pesticide_bee_hazard: null,
+    feed_pesticide_kg_per_kg_food: null, feed_land_m2_per_kg: null,
+    bycatch_amount: null, bycatch_food_slug: null, bycatch_neuron_count: null, bycatch_weight_kg: null,
+    availability_gg: null,
+};
+
 export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {
     directKillScore: 0,
     insectScore: 0, beeScore: 0, wormScore: 0, deforestationScore: 0,

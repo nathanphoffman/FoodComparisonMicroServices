@@ -21,6 +21,13 @@ export type { EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDe
 // ─── Name ─────────────────────────────────────────────────────────────────────
 
 export function NameCell({ name, slug }: { name: string; slug: string }) {
+  if (slug === 'your-meal') {
+    return (
+      <Cell key="name">
+        <span className="font-semibold italic text-blue-700">{name}</span>
+      </Cell>
+    );
+  }
   return (
     <Cell key="name">
       <Link href={`/foods/${slug}`} className="font-medium text-neutral-900 hover:text-blue-600 transition-colors">
@@ -168,6 +175,17 @@ export function FinalScoreCell({ ratio }: { ratio: number | null }) {
             </span>
         </Cell>
     );
+}
+
+// ─── Availability ─────────────────────────────────────────────────────────────
+
+export function AvailabilityCell({ value }: { value: number | null }) {
+  if (value == null) return <Cell key="availability" align="right"><span className="text-neutral-400">—</span></Cell>;
+  return (
+    <Cell key="availability" align="right">
+      <span className="text-neutral-700">{value.toLocaleString(undefined, { maximumFractionDigits: 1 })}</span>
+    </Cell>
+  );
 }
 
 // ─── Dummy ────────────────────────────────────────────────────────────────────

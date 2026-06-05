@@ -7,6 +7,7 @@ import { PhilosophicalKillSlider }          from "./Sliders/PhilosophicalKillSli
 import { NeuronExponentSlider }             from "./Sliders/NeuronExponentSlider";
 import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider";
 import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
+import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplierSlider";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import type { FoodWeights }                 from "./FoodTableTypes";
 
@@ -20,6 +21,7 @@ export function FoodTableSliders({
     onNeuronExponentChange,
     onWeightExponentChange,
     onFinalIntelligenceExponentChange,
+    onZeroBetterMultiplierChange,
 }: {
     onChange?: (w: FoodWeights) => void;
     onGreenWaterChange?: (v: number) => void;
@@ -28,6 +30,7 @@ export function FoodTableSliders({
     onNeuronExponentChange?: (v: number) => void;
     onWeightExponentChange?: (v: number) => void;
     onFinalIntelligenceExponentChange?: (v: number) => void;
+    onZeroBetterMultiplierChange?: (v: number) => void;
 }) {
     return (
         <div className="flex flex-col gap-3 mb-4">
@@ -39,6 +42,7 @@ export function FoodTableSliders({
                 <WeightExponentSlider onChange={onWeightExponentChange} />
                 <FinalIntelligenceExponentSlider onChange={onFinalIntelligenceExponentChange} />
                 <PhilosophicalKillSlider onChange={onPhilosophicalKillChange} />
+                <ZeroBetterMultiplierSlider onChange={onZeroBetterMultiplierChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Water">
                 <GreyWaterSlider onChange={onGreyWaterChange} />

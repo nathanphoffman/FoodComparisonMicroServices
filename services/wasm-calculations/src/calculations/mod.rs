@@ -3,6 +3,7 @@
 
 mod eco;
 mod emissions;
+mod meal;
 mod scoring;
 mod water;
 
@@ -47,18 +48,30 @@ impl NormFactors {
 
 // ── Entry point ──────────────────────────────────────────────────────────────
 
-/// Scores a batch of foods against the given slider query.
-///
-/// Two-pass algorithm: the first pass computes per-food raw scores and
-/// divisors; the second pass normalises each column into log-space min–max
-/// ranges to produce the final 0–100 composite score.
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     let norms = NormFactors::from_foods(&foods);
     let mut rows: Vec<ScoredRow> = foods.iter().map(|food| compute_row(food, query, &norms)).collect();
-    let column_ranges = scoring::compute_column_ranges(&rows);
-    for row in &mut rows {
-        row.final_score = scoring::compute_final_score(row, &column_ranges);
+
+    let scoring_context = query.reference_slug.as_deref()
+        .and_then(|slug| rows.iter().find(|r| r.slug == slug).cloned())
+        .map(|reference| {
+            let caps = scoring::DimensionCaps::from_rows(&rows, &reference);
+            (reference, caps)
+        });
+
+    if let Some((ref reference, ref caps)) = scoring_context {
+        for row in &mut rows {
+            row.final_score = scoring::compute_improvement(row, reference, caps, query.zero_better_multiplier);
+        }
     }
+
+    if let Some(mut meal) = meal::synthesize_meal(&rows, &query.meal_ingredients) {
+        if let Some((ref reference, ref caps)) = scoring_context {
+            meal.final_score = scoring::compute_improvement(&meal, reference, caps, query.zero_better_multiplier);
+        }
+        rows.push(meal);
+    }
+
     rows
 }
 
@@ -99,6 +112,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         // kill_multiplier is applied to sentient_harm as a divisor, matching TS
         sentient_harm: Some(direct_kill_raw/divisor + sentient_harm_raw / divisor / query.kill_multiplier),
         final_score: None, // filled in by apply()
+        availability: food.availability_gg,
 
         emissions_breakdown,
         water_detail,

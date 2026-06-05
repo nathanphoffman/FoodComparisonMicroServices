@@ -12,6 +12,7 @@ import {
     WaterCell,
     SentientHarmCell,
     FinalScoreCell,
+    AvailabilityCell,
     DummyCell,
 } from './FoodTableFields';
 import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
@@ -20,32 +21,7 @@ import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableInputs';
 import type { ColConfig, SliderValues } from './FoodTableInputs';
-import { EMPTY_SENTIENT_HARM_DETAIL } from './FoodTableTypes';
-import type { ScoredRow } from './FoodTableSort';
-
-// ── Improvement ratio ─────────────────────────────────────────────────────────
-
-function computeImprovement(food: ScoredRow, ref: ScoredRow): number | null {
-    const ratios: number[] = [];
-
-    function addLower(a: number | null, b: number | null) {
-        if (a != null && b != null && a > 0 && b > 0) ratios.push(b / a);
-    }
-    function addHigher(a: number | null, b: number | null) {
-        if (a != null && b != null && a > 0 && b > 0) ratios.push(a / b);
-    }
-
-    addLower(food.emissions,     ref.emissions);
-    addLower(food.land_use,      ref.land_use);
-    addLower(food.water,         ref.water);
-    addLower(food.direct_kill,   ref.direct_kill);
-    addLower(food.sentient_harm, ref.sentient_harm);
-    addHigher(food.nutrition_score, ref.nutrition_score);
-
-    if (ratios.length === 0) return null;
-    const logSum = ratios.reduce((s, r) => s + Math.log(r), 0);
-    return Math.exp(logSum / ratios.length);
-}
+import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -59,7 +35,6 @@ export function FoodTable() {
     const [error,    setError]    = useState<string | null>(null);
 
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
-    const [referenceSlug, setReferenceSlug] = useState<string>('rice');
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
@@ -102,12 +77,13 @@ export function FoodTable() {
 
     const sorted = sortRows(rawFoods, scored);
 
+    const displayRows = scored.has('your-meal') ? [...sorted, MEAL_STUB] : sorted;
+
     // ── Render ────────────────────────────────────────────────────────────────
 
     const { weights, greenWaterWeight, greyWaterWeight } = sliderValues;
     const unit = getUnitLabel(weights);
-    const referenceName = rawFoods.find(f => f.slug === referenceSlug)?.name ?? referenceSlug;
-    const referenceRow  = scored.get(referenceSlug) ?? null;
+    const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:    `CO₂e (kg / ${unit})`,
         landUse:      `Land Use (m² / ${unit})`,
@@ -133,11 +109,10 @@ export function FoodTable() {
                 onDismissScoringError={() => setScoringError(null)}
                 onActiveColsChange={setActiveCols}
                 foods={rawFoods}
-                onReferenceChange={setReferenceSlug}
             />
      
             <Table headers={headers}>
-                {sorted.map(food => {
+                {displayRows.map(food => {
                     const scoredRow = scored.get(food.slug);
                     const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
                     return (
@@ -151,7 +126,8 @@ export function FoodTable() {
                                     case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
                                     case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
                                     case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} />;
-                                    case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow && referenceRow ? computeImprovement(scoredRow, referenceRow) : null} />;
+                                    case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
+                                    case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;
                                 }
                             })}
