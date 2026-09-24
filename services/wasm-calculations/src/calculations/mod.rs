@@ -158,9 +158,9 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
     let calories_per_kg = food.calories * GRAMS_PER_KG;
     let protein_per_kg = food.protein * GRAMS_PER_KG;
 
-    // norms are also per gram, so we are effectively amount over norm times weight percentage
-    let weighted = (query.mass_weight / 100.0) * 1.0
-        + (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
+    // norms are also per gram, so we are effectively amount over norm times weight percentage.
+    // No mass term: comparing per kg mostly measures water content (and dry vs cooked).
+    let weighted = (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
         + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
     if weighted > 0.0 {
         weighted

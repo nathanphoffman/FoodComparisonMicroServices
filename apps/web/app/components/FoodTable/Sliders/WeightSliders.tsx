@@ -3,27 +3,23 @@
 import type { FoodWeights } from "../FoodTableTypes";
 import { CalorieWeightModal } from "../../Modals/CalorieWeightModal";
 import { ProteinWeightModal } from "../../Modals/ProteinWeightModal";
-import { MassWeightModal } from "../../Modals/MassWeightModal";
 import { PercentSliders, equalLevels, toShares } from "./PercentSliders";
 
-const KEYS: (keyof FoodWeights)[] = ['calories', 'protein', 'mass'];
+const KEYS: (keyof FoodWeights)[] = ['calories', 'protein'];
 
 const LABELS: Record<keyof FoodWeights, string> = {
     calories: 'Calorie Weight',
     protein:  'Protein Weight',
-    mass:     'Mass Weight',
 };
 
 const DESCRIPTIONS: Record<keyof FoodWeights, string> = {
     calories: 'how much caloric density contributes to the score',
     protein:  'how much protein density contributes to the score',
-    mass:     'how much raw mass contributes to the score',
 };
 
 const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => void }>> = {
     calories: CalorieWeightModal,
     protein:  ProteinWeightModal,
-    mass:     MassWeightModal,
 };
 
 export const DEFAULT_FOOD_WEIGHTS: FoodWeights = toShares(equalLevels(KEYS));

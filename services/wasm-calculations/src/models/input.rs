@@ -79,11 +79,9 @@ pub struct FoodRow {
 #[serde(rename_all = "camelCase")]
 pub struct SliderQuery {
     #[serde(default = "default_calorie_weight")]
-    pub calorie_weight: f64,  // 0–100 (default 34)
+    pub calorie_weight: f64,  // 0–100 (default 50)
     #[serde(default = "default_protein_weight")]
-    pub protein_weight: f64,  // 0–100 (default 33)
-    #[serde(default = "default_mass_weight")]
-    pub mass_weight:    f64,  // 0–100 (default 33)
+    pub protein_weight: f64,  // 0–100 (default 50)
     #[serde(default = "default_green_water")]
     pub green_water:    f64,  // 0–100 (default 25)
     #[serde(default = "default_grey_water")]
@@ -130,9 +128,8 @@ pub struct MealIngredient {
 fn default_zero_better_multiplier() -> f64 { 2.0 }
 fn default_priority()               -> f64 { 1.0 }
 
-fn default_calorie_weight()               -> f64 { 34.0 }
-fn default_protein_weight()               -> f64 { 33.0 }
-fn default_mass_weight()                  -> f64 { 33.0 }
+fn default_calorie_weight()               -> f64 { 50.0 }
+fn default_protein_weight()               -> f64 { 50.0 }
 fn default_green_water()                  -> f64 { 25.0 }
 fn default_grey_water()                   -> f64 { 25.0 }
 fn default_kill_multiplier()              -> f64 { 1.0 }

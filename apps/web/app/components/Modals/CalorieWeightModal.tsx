@@ -12,7 +12,7 @@ export function CalorieWeightModal({ onClose }: { onClose: () => void }) {
                 A higher calorie weight means foods that deliver more energy per unit are scored more favorably relative to their environmental or ethical cost. This is useful when comparing foods primarily as energy sources.
             </p>
             <p>
-                Calorie, protein, and mass sliders move independently — the percentage shown is each one's share of the total, so only how they compare to each other matters.
+                Calorie and protein sliders move independently — the percentage shown is each one's share of the total, so only how they compare to each other matters.
             </p>
         </Modal>
     );
