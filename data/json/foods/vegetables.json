@@ -54,6 +54,17 @@
                     "title": "Our World in Data — Tomato Yields",
                     "note": "Tomato — yield_kg_ha: Global average of 38,000 kg/ha based on FAO data."
                 }
+            },
+            {
+                "value": 96900,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Tomato — yield_kg_ha (US national average, all tomatoes = fresh market + processing combined, to match the world FAO all-tomato basis; NASS total production ÷ total harvested area, so production-weighted; greenhouse excluded): 2019–2023 yields 874.7, 883.7 cwt/acre (2019–2020, from NASS Vegetables 2021 Summary (vegean22, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/zs25zc490/9593vz15q/vegean22.pdf)) and 830.8, 829.5, 903.6 cwt/acre (2021–2023, this report). Mean 864.46 cwt/acre × 112.085 (1 cwt/acre = 45.359 kg ÷ 0.40469 ha = 112.085 kg/ha) = 96,893 kg/ha, rounded to 96,900. Processing (~95% of tonnage, mostly California) dominates; from 2021 NASS covers only CA + FL, hence confidence 4."
+                }
             }
         ],
         "water_per_kg": [
@@ -65,6 +76,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 127,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Tomato — water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070200: green 31 + blue 74 + grey 22 = 127 L/kg (total incl. grey, same basis as the world entry)."
                 }
             }
         ],
@@ -78,6 +100,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 31,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Tomato — green_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070200: 31 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -90,6 +123,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 74,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Tomato — blue_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070200: 74 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -101,6 +145,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 22,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Tomato — grey_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070200: 22 L/kg."
                 }
             }
         ],
@@ -568,6 +623,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Potato — yield_kg_ha: FAO global average used for yield value."
                 }
+            },
+            {
+                "value": 50500,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 160,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/fx719m44h/6q184c88z/v118t7605/pots0924.pdf",
+                    "title": "USDA NASS — Potatoes 2023 Summary (September 2024)",
+                    "note": "Potato — yield_kg_ha (US national average, all potatoes, fresh weight): NASS 2019–2023 yields 453, 461, 444, 438, 458 cwt/acre (2021–2023 from the 2023 Summary; 2019 from the 2019 Summary pots0920, https://esmis.nal.usda.gov/sites/default/release-files/fx719m44h/ks65j252d/wm118c91g/pots0920.pdf; 2020 from the 2022 Summary pots0923). Mean 450.8 cwt/acre × 112.085 (1 cwt/acre = 45.359 kg ÷ 0.40469 ha = 112.085 kg/ha) = 50,528 kg/ha, rounded to 50,500."
+                }
             }
         ],
         "water_per_kg": [
@@ -579,6 +645,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 398,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato — water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070190: green 49 + blue 89 + grey 260 = 398 L/kg (total incl. grey, same basis as the world entry)."
                 }
             }
         ],
@@ -592,6 +669,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 49,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato — green_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070190: 49 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -604,6 +692,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 89,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato — blue_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070190: 89 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -615,6 +714,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 260,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato — grey_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070190: 260 L/kg."
                 }
             }
         ],
@@ -834,6 +944,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Broccoli — yield_kg_ha: FAO global average used for yield value."
                 }
+            },
+            {
+                "value": 16000,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Broccoli — yield_kg_ha (US national average, fresh market + processing): NASS 2019–2023 yields 158.0, 157.8 cwt/acre (2019–2020, from NASS Vegetables 2021 Summary (vegean22, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/zs25zc490/9593vz15q/vegean22.pdf)) and 129.5, 132.9, 137.7 cwt/acre (2021–2023, this report). Mean 143.18 cwt/acre × 112.085 (1 cwt/acre = 45.359 kg ÷ 0.40469 ha = 112.085 kg/ha) = 16,048 kg/ha, rounded to 16,000."
+                }
             }
         ],
         "water_per_kg": [
@@ -845,6 +966,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 326,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Broccoli — water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070410 (cauliflowers and broccoli, same product group as the world entry): green 161 + blue 82 + grey 83 = 326 L/kg (total incl. grey, same basis as the world entry)."
                 }
             }
         ],
@@ -858,6 +990,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 161,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Broccoli — green_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070410 (cauliflowers and broccoli, same product group as the world entry): 161 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -870,6 +1013,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 82,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Broccoli — blue_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070410 (cauliflowers and broccoli, same product group as the world entry): 82 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -881,6 +1035,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 83,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Broccoli — grey_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070410 (cauliflowers and broccoli, same product group as the world entry): 83 L/kg."
                 }
             }
         ],
@@ -1100,6 +1265,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": null
                 }
+            },
+            {
+                "value": 22400,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Sweet potato — yield_kg_ha (US national average, fresh market + processing): NASS 2019–2023 yields 217.9, 194.0 cwt/acre (2019–2020, from NASS Vegetables 2021 Summary (vegean22, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/zs25zc490/9593vz15q/vegean22.pdf)) and 191.8, 198.1, 198.6 cwt/acre (2021–2023, this report). Mean 200.08 cwt/acre × 112.085 (1 cwt/acre = 45.359 kg ÷ 0.40469 ha = 112.085 kg/ha) = 22,426 kg/ha, rounded to 22,400."
+                }
             }
         ],
         "water_per_kg": [
@@ -1111,6 +1287,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 890,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Sweet potato — water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 071420: green 210 + blue 57 + grey 623 = 890 L/kg (total incl. grey, same basis as the world entry). US grey water is far above the world value (39) because of modelled N-fertilizer leaching, strongly skewed by some states (e.g. Virginia column 10,217); treat grey with caution."
                 }
             }
         ],
@@ -1124,6 +1311,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 210,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Sweet potato — green_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 071420: 210 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -1136,6 +1334,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 57,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Sweet potato — blue_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 071420: 57 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -1147,6 +1356,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 623,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Sweet potato — grey_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 071420: 623 L/kg. US grey water is far above the world value (39) because of modelled N-fertilizer leaching, strongly skewed by some states (e.g. Virginia column 10,217); treat grey with caution."
                 }
             }
         ],
@@ -1334,6 +1554,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Garlic — yield_kg_ha: 18,000 kg/ha (global average; China dominates with ~75% of world production; FAO 2020–2022)."
                 }
+            },
+            {
+                "value": 17100,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Garlic — yield_kg_ha (US, NASS estimates California only, the dominant US producing state): 2019–2023 yields 155.0, 150.0 cwt/acre (2019–2020, from NASS Vegetables 2021 Summary (vegean22, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/zs25zc490/9593vz15q/vegean22.pdf)) and 145.0, 165.0, 150.0 cwt/acre (2021–2023, this report). Mean 153.0 cwt/acre × 112.085 (1 cwt/acre = 45.359 kg ÷ 0.40469 ha = 112.085 kg/ha) = 17,149 kg/ha, rounded to 17,100. Confidence 4 because only California is surveyed."
+                }
             }
         ],
         "water_per_kg": [
@@ -1345,6 +1576,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Garlic — water_per_kg: 656 L/kg (global average; irrigated production in China, India, US)."
+                }
+            },
+            {
+                "value": 379,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Garlic — water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070320: green 116 + blue 186 + grey 77 = 379 L/kg (total incl. grey, same basis as the world entry)."
                 }
             }
         ],
@@ -1358,6 +1600,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 116,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Garlic — green_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070320: 116 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -1370,6 +1623,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 186,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Garlic — blue_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070320: 186 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -1381,6 +1645,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 77,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Garlic — grey_water_per_kg (US national average): Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States CNTRY-average (US999 column), 1996–2005, m³/t = L/kg, HS 070320: 77 L/kg."
                 }
             }
         ],

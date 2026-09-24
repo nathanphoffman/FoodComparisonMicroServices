@@ -1,0 +1,12 @@
+# Created: 2026-09-24 00:00:00
+
+apple yield_kg_ha: add ONE US entry (existing world value(s): 18000). Do not change existing entries.
+apple water_per_kg: add ONE US entry (existing world value(s): 820). Do not change existing entries.
+apple green_water_per_kg: add ONE US entry (existing world value(s): 694). Do not change existing entries.
+apple blue_water_per_kg: add ONE US entry (existing world value(s): 100). Do not change existing entries.
+apple grey_water_per_kg: add ONE US entry (existing world value(s): 26). Do not change existing entries.
+orange yield_kg_ha: add ONE US entry (existing world value(s): 24000). Do not change existing entries.
+orange water_per_kg: add ONE US entry (existing world value(s): 460). Do not change existing entries.
+orange green_water_per_kg: add ONE US entry (existing world value(s): 345). Do not change existing entries.
+orange blue_water_per_kg: add ONE US entry (existing world value(s): 92). Do not change existing entries.
+orange grey_water_per_kg: add ONE US entry (existing world value(s): 24). Do not change existing entries.

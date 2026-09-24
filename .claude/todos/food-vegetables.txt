@@ -1,0 +1,27 @@
+# Created: 2026-09-24 00:00:00
+
+potato yield_kg_ha: add ONE US entry (existing world value(s): 22000). Do not change existing entries.
+potato water_per_kg: add ONE US entry (existing world value(s): 250). Do not change existing entries.
+potato green_water_per_kg: add ONE US entry (existing world value(s): 188). Do not change existing entries.
+potato blue_water_per_kg: add ONE US entry (existing world value(s): 49). Do not change existing entries.
+potato grey_water_per_kg: add ONE US entry (existing world value(s): 63). Do not change existing entries.
+sweet-potato yield_kg_ha: add ONE US entry (existing world value(s): 11000). Do not change existing entries.
+sweet-potato water_per_kg: add ONE US entry (existing world value(s): 461). Do not change existing entries.
+sweet-potato green_water_per_kg: add ONE US entry (existing world value(s): 419). Do not change existing entries.
+sweet-potato blue_water_per_kg: add ONE US entry (existing world value(s): 23). Do not change existing entries.
+sweet-potato grey_water_per_kg: add ONE US entry (existing world value(s): 39). Do not change existing entries.
+tomato yield_kg_ha: add ONE US entry (existing world value(s): 38000). Do not change existing entries.
+tomato water_per_kg: add ONE US entry (existing world value(s): 180). Do not change existing entries.
+tomato green_water_per_kg: add ONE US entry (existing world value(s): 137). Do not change existing entries.
+tomato blue_water_per_kg: add ONE US entry (existing world value(s): 23). Do not change existing entries.
+tomato grey_water_per_kg: add ONE US entry (existing world value(s): 27). Do not change existing entries.
+broccoli yield_kg_ha: add ONE US entry (existing world value(s): 15000). Do not change existing entries.
+broccoli water_per_kg: add ONE US entry (existing world value(s): 285). Do not change existing entries.
+broccoli green_water_per_kg: add ONE US entry (existing world value(s): 257). Do not change existing entries.
+broccoli blue_water_per_kg: add ONE US entry (existing world value(s): 14). Do not change existing entries.
+broccoli grey_water_per_kg: add ONE US entry (existing world value(s): 55). Do not change existing entries.
+garlic yield_kg_ha: add ONE US entry (existing world value(s): 18000). Do not change existing entries.
+garlic water_per_kg: add ONE US entry (existing world value(s): 656). Do not change existing entries.
+garlic green_water_per_kg: add ONE US entry (existing world value(s): 276). Do not change existing entries.
+garlic blue_water_per_kg: add ONE US entry (existing world value(s): 341). Do not change existing entries.
+garlic grey_water_per_kg: add ONE US entry (existing world value(s): 84). Do not change existing entries.

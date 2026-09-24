@@ -1,0 +1,11 @@
+2026-09-24 13:15:47 | corn: added US yield_kg_ha 10875 (NASS 2019–2023 mean 173.26 bu/ac ×56 lb; src 120, conf 5)
+2026-09-24 13:15:47 | corn: added US water_per_kg 761, green 522, blue 63, grey 176 L/kg (M&H 2010 Report 47 Vol 2, US CNTRY-average HS 1005; src 121, conf 3)
+2026-09-24 13:15:47 | rice: added US yield_kg_ha 8482 paddy basis (NASS 2019–2023 mean 7,567.2 lb/ac rough rice; src 120, conf 5)
+2026-09-24 13:15:47 | rice: added US water_per_kg 2100, green 610, blue 1222, grey 268 L/kg milled basis (M&H US HS 100630; src 121, conf 3)
+2026-09-24 13:15:47 | wheat: added US yield_kg_ha 3239 (NASS 2019–2023 mean 48.16 bu/ac ×60 lb; src 120, conf 5)
+2026-09-24 13:15:47 | wheat: added US water_per_kg 2190, green 1869, blue 92, grey 229 L/kg (M&H US HS 1001; src 121, conf 3)
+2026-09-24 13:15:47 | barley: added US yield_kg_ha 3868 (NASS 2019–2023 mean 71.90 bu/ac ×48 lb; src 120, conf 5)
+2026-09-24 13:15:47 | barley: added US water_per_kg 1301, green 926, blue 221, grey 154 L/kg (M&H US HS 100300; src 121, conf 3)
+2026-09-24 13:15:47 | Reused sources 120 (NASS cropan24) and 121 (M&H Report 47 Vol 2) added by another agent; appended grain notes to both. No new ids from 140–159 used.
+2026-09-24 13:15:47 | ERROR: wheat world yield_kg_ha 2067 (src 9) looks wrong — FAO/OWID world wheat yield is ~3,500 kg/ha in 2020–2022; 2067 matches mid-1980s levels. Left unchanged per instructions; flagged for follow-up.
+2026-09-24 13:15:47 | NOTE: rice world water_per_kg 2500 was derived as paddy ÷ 0.65; the US value uses M&H's published milled-rice figure (2100). Same method on US paddy would give ~2237.

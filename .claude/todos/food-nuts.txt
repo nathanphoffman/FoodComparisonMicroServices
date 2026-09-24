@@ -1,0 +1,7 @@
+# Created: 2026-09-24 00:00:00
+
+peanuts yield_kg_ha: add ONE US entry (existing world value(s): 1600). Do not change existing entries.
+peanuts water_per_kg: add ONE US entry (existing world value(s): 3740). Do not change existing entries.
+peanuts green_water_per_kg: add ONE US entry (existing world value(s): 2992). Do not change existing entries.
+peanuts blue_water_per_kg: add ONE US entry (existing world value(s): 673). Do not change existing entries.
+peanuts grey_water_per_kg: add ONE US entry (existing world value(s): 80). Do not change existing entries.

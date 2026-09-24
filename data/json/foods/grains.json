@@ -54,6 +54,17 @@
                     "title": "Our World in Data — Wheat Yields",
                     "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
                 }
+            },
+            {
+                "value": 3239,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "All wheat — US national average 2019–2023: 51.7, 49.7, 44.3, 46.5, 48.6 bu/acre, mean 48.16 bu/acre × 60 lb/bu × 0.45359 kg/lb ÷ 0.40469 ha/acre (×67.25) = 3,239 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                }
             }
         ],
         "water_per_kg": [
@@ -65,6 +76,17 @@
                     "url": "https://ourworldindata.org/grapher/wheat-yields",
                     "title": "Our World in Data — Wheat Yields",
                     "note": "Wheat — yield_kg_ha: Source for global average of 2,067 kg/ha."
+                }
+            },
+            {
+                "value": 2190,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Wheat grain — US national average (Appendix II, United States CNTRY-average column, HS 1001), 1996–2005: green 1869 + blue 92 + grey 229 = 2190 m³/t (= L/kg). water_per_kg = green+blue+grey, matching the world entry. US wheat is mostly rain-fed Great Plains production, hence high green / low blue vs. the world average."
                 }
             }
         ],
@@ -78,6 +100,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1869,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Wheat grain — US national average (Appendix II, United States CNTRY-average column, HS 1001), 1996–2005: green 1869 + blue 92 + grey 229 = 2190 m³/t (= L/kg). Green component. US wheat is mostly rain-fed Great Plains production, hence high green / low blue vs. the world average."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -90,6 +123,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 92,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Wheat grain — US national average (Appendix II, United States CNTRY-average column, HS 1001), 1996–2005: green 1869 + blue 92 + grey 229 = 2190 m³/t (= L/kg). Blue component. US wheat is mostly rain-fed Great Plains production, hence high green / low blue vs. the world average."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -101,6 +145,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 229,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Wheat grain — US national average (Appendix II, United States CNTRY-average column, HS 1001), 1996–2005: green 1869 + blue 92 + grey 229 = 2190 m³/t (= L/kg). Grey component. US wheat is mostly rain-fed Great Plains production, hence high green / low blue vs. the world average."
                 }
             }
         ],
@@ -318,6 +373,17 @@
                     "title": "Our World in Data — Corn (Maize) Yields",
                     "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
                 }
+            },
+            {
+                "value": 10875,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Corn for grain — US national average 2019–2023: 167.5, 171.4, 176.7, 173.4, 177.3 bu/acre, mean 173.26 bu/acre × 56 lb/bu × 0.45359 kg/lb ÷ 0.40469 ha/acre (×62.77) = 10,875 kg/ha (NASS standard 15.5% moisture). 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                }
             }
         ],
         "water_per_kg": [
@@ -329,6 +395,17 @@
                     "url": "https://ourworldindata.org/grapher/maize-yields",
                     "title": "Our World in Data — Corn (Maize) Yields",
                     "note": "Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+                }
+            },
+            {
+                "value": 761,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Corn (maize grain) — US national average (Appendix II, United States CNTRY-average column, HS 1005), 1996–2005: green 522 + blue 63 + grey 176 = 761 m³/t (= L/kg). water_per_kg = green+blue+grey, matching the world entry."
                 }
             }
         ],
@@ -342,6 +419,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 522,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Corn (maize grain) — US national average (Appendix II, United States CNTRY-average column, HS 1005), 1996–2005: green 522 + blue 63 + grey 176 = 761 m³/t (= L/kg). Green component."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -354,6 +442,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 63,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Corn (maize grain) — US national average (Appendix II, United States CNTRY-average column, HS 1005), 1996–2005: green 522 + blue 63 + grey 176 = 761 m³/t (= L/kg). Blue component."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -365,6 +464,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 176,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Corn (maize grain) — US national average (Appendix II, United States CNTRY-average column, HS 1005), 1996–2005: green 522 + blue 63 + grey 176 = 761 m³/t (= L/kg). Grey component."
                 }
             }
         ],
@@ -819,6 +929,17 @@
                     "title": "Our World in Data — Rice Yields",
                     "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
                 }
+            },
+            {
+                "value": 8482,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "All rice — US national average 2019–2023, rough (paddy) basis to match the world paddy entry: 7,473, 7,619, 7,710, 7,385, 7,649 lb/acre, mean 7,567.2 lb/acre (= 75.67 cwt/acre) × 0.45359 kg/lb ÷ 0.40469 ha/acre (×1.12085) = 8,482 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                }
             }
         ],
         "water_per_kg": [
@@ -830,6 +951,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Rice — water_per_kg: Report 47 Table A1 gives 1,673 L/kg for paddy rice. Dataset uses 2,500 L/kg which reflects milled white rice basis: 1,673 ÷ 0.65 milling yield ≈ 2,574 L/kg. This is consistent with Chapagain & Hoekstra (2011) who report 2,291–2,500 L/kg for white rice. The 2,500 value is accepted as correct for the milled-rice basis used throughout the dataset."
+                }
+            },
+            {
+                "value": 2100,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice, milled (white) — US national average (Appendix II, United States CNTRY-average column, HS 100630), 1996–2005: green 610 + blue 1222 + grey 268 = 2100 m³/t (= L/kg). water_per_kg = green+blue+grey, matching the world entry. Milled-rice basis to match the world entry (which is milled). M&H milled value used directly; the world entry's method (paddy ÷ 0.65) applied to the US paddy value (HS 100610: 422+847+185 = 1,454) would give ~2,237 L/kg instead. US rice is fully irrigated, hence high blue share."
                 }
             }
         ],
@@ -843,6 +975,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 610,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice, milled (white) — US national average (Appendix II, United States CNTRY-average column, HS 100630), 1996–2005: green 610 + blue 1222 + grey 268 = 2100 m³/t (= L/kg). Green component. Milled-rice basis to match the world entry (which is milled). M&H milled value used directly; the world entry's method (paddy ÷ 0.65) applied to the US paddy value (HS 100610: 422+847+185 = 1,454) would give ~2,237 L/kg instead. US rice is fully irrigated, hence high blue share."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -855,6 +998,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1222,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice, milled (white) — US national average (Appendix II, United States CNTRY-average column, HS 100630), 1996–2005: green 610 + blue 1222 + grey 268 = 2100 m³/t (= L/kg). Blue component. Milled-rice basis to match the world entry (which is milled). M&H milled value used directly; the world entry's method (paddy ÷ 0.65) applied to the US paddy value (HS 100610: 422+847+185 = 1,454) would give ~2,237 L/kg instead. US rice is fully irrigated, hence high blue share."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -866,6 +1020,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 268,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice, milled (white) — US national average (Appendix II, United States CNTRY-average column, HS 100630), 1996–2005: green 610 + blue 1222 + grey 268 = 2100 m³/t (= L/kg). Grey component. Milled-rice basis to match the world entry (which is milled). M&H milled value used directly; the world entry's method (paddy ÷ 0.65) applied to the US paddy value (HS 100610: 422+847+185 = 1,454) would give ~2,237 L/kg instead. US rice is fully irrigated, hence high blue share."
                 }
             }
         ],
@@ -1525,6 +1690,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Barley — yield_kg_ha: 3,100 kg/ha (global average; EU, Russia, Australia main producers; FAO 2020–2022)."
                 }
+            },
+            {
+                "value": 3868,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Barley — US national average 2019–2023: 77.7, 77.2, 60.5, 71.7, 72.4 bu/acre, mean 71.90 bu/acre × 48 lb/bu × 0.45359 kg/lb ÷ 0.40469 ha/acre (×53.80) = 3,868 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                }
             }
         ],
         "water_per_kg": [
@@ -1536,6 +1712,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Barley — water_per_kg: 1,423 L/kg (global average; temperate grain, primarily rain-fed)."
+                }
+            },
+            {
+                "value": 1301,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Barley grain — US national average (Appendix II, United States CNTRY-average column, HS 100300), 1996–2005: green 926 + blue 221 + grey 154 = 1301 m³/t (= L/kg). water_per_kg = green+blue+grey, matching the world entry."
                 }
             }
         ],
@@ -1549,6 +1736,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 926,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Barley grain — US national average (Appendix II, United States CNTRY-average column, HS 100300), 1996–2005: green 926 + blue 221 + grey 154 = 1301 m³/t (= L/kg). Green component."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -1561,6 +1759,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 221,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Barley grain — US national average (Appendix II, United States CNTRY-average column, HS 100300), 1996–2005: green 926 + blue 221 + grey 154 = 1301 m³/t (= L/kg). Blue component."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -1572,6 +1781,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 154,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Barley grain — US national average (Appendix II, United States CNTRY-average column, HS 100300), 1996–2005: green 926 + blue 221 + grey 154 = 1301 m³/t (= L/kg). Grey component."
                 }
             }
         ],

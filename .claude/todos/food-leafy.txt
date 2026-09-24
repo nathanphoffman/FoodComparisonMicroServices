@@ -1,0 +1,7 @@
+# Created: 2026-09-24 00:00:00
+
+lettuce yield_kg_ha: add ONE US entry (existing world value(s): 25000). Do not change existing entries.
+lettuce water_per_kg: add ONE US entry (existing world value(s): 130). Do not change existing entries.
+lettuce green_water_per_kg: add ONE US entry (existing world value(s): 118). Do not change existing entries.
+lettuce blue_water_per_kg: add ONE US entry (existing world value(s): 7). Do not change existing entries.
+lettuce grey_water_per_kg: add ONE US entry (existing world value(s): 37). Do not change existing entries.

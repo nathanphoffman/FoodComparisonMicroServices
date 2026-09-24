@@ -66,6 +66,17 @@
                     "title": "Our World in Data — Soybean Yields",
                     "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
                 }
+            },
+            {
+                "value": 3367,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Soy — yield_kg_ha (US): USDA NASS soybeans for beans, US national average yield 2019–2023 = 47.4, 51.0, 51.7, 49.6, 50.6 bu/acre (2019–2020 from Crop Production 2021 Summary, cropan22; 2021–2023 from this report); mean 50.06 bu/acre × 60 lb/bu × 0.4536 kg/lb ÷ 0.4047 ha/acre (×67.25) = 3,367 kg/ha. Dry bean basis, same as world entry."
+                }
             }
         ],
         "water_per_kg": [
@@ -77,6 +88,17 @@
                     "url": "https://ourworldindata.org/grapher/soybean-yields",
                     "title": "Our World in Data — Soybean Yields",
                     "note": "Soy — yield_kg_ha: Source for global average of 2,800 kg/ha."
+                }
+            },
+            {
+                "value": 1662,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Soy — water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, soybeans HS 120100: green 1,560 + blue 92 + grey 10 = 1,662 m³/t = 1,662 L/kg (dry beans; total includes grey, matching world entry)."
                 }
             }
         ],
@@ -90,6 +112,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1560,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Soy — green_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, soybeans HS 120100: 1,560 m³/t = 1,560 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -102,6 +135,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 92,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Soy — blue_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, soybeans HS 120100: 92 m³/t = 92 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -113,6 +157,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 10,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Soy — grey_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, soybeans HS 120100: 10 m³/t = 10 L/kg."
                 }
             }
         ],
@@ -573,6 +628,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Chickpeas — yield_kg_ha: 1,000 kg/ha (low-input arid legume; global average depressed by dryland Indian subcontinent production; FAO 2020–2022)."
                 }
+            },
+            {
+                "value": 1432,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Chickpeas — yield_kg_ha (US): USDA NASS all chickpeas (small + large, clean basis), US national average yield 2019–2023 = 1,547, 1,630, 816, 1,079, 1,315 lb/acre (2019–2020 from Crop Production 2021 Summary, cropan22; 2021–2023 from this report); mean 1,277.4 lb/acre × 1.12085 = 1,432 kg/ha. Dry seed basis, same as world entry."
+                }
             }
         ],
         "water_per_kg": [
@@ -584,6 +650,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Chickpeas — water_per_kg: 4,325 L/kg (global weighted average, includes irrigation and green water; high due to arid growing regions)."
+                }
+            },
+            {
+                "value": 10157,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Chickpeas — water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, chick peas HS 071320: green 1,818 + blue 0 (blank) + grey 8,339 = 10,157 m³/t = 10,157 L/kg (dry; includes grey, matching world entry). High total is driven by M&H's modelled nitrogen-leaching grey water for US pulses."
                 }
             }
         ],
@@ -597,6 +674,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1818,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Chickpeas — green_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, chick peas HS 071320: 1,818 m³/t = 1,818 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -609,6 +697,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 0,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Chickpeas — blue_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, chick peas HS 071320: blue cell blank (no irrigation modelled) = 0 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -620,6 +719,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 8339,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Chickpeas — grey_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, chick peas HS 071320: 8,339 m³/t = 8,339 L/kg. Much higher than world (36) because M&H applied US nitrogen fertilizer rates to pulses; treat as model-dependent."
                 }
             }
         ],
@@ -835,6 +945,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Black beans — yield_kg_ha: ~790 kg/ha (global FAO average for dry beans, Phaseolus vulgaris; 2020 FAO data: 27.5M t ÷ 34.8M ha ≈ 790 kg/ha; consistent with 2018 global average of 788 kg/ha and 2019 average of ~770 kg/ha per Uebersax 2023 Legume Science review; prior value of 850 was modestly above the FAO-derived figure). U.S.-specific dry bean yields are substantially higher (~2,100 kg/ha per USDA NASS) but global average is appropriate here as production is dominated by Brazil, India, and Myanmar."
                 }
+            },
+            {
+                "value": 2286,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Black beans — yield_kg_ha (US): USDA NASS dry edible beans, Black commercial class, US national average yield 2019–2023 = 1,796, 2,013, 1,840, 2,220, 2,327 lb/acre clean basis (2019–2020 from Crop Production 2021 Summary, cropan22; 2021–2023 from this report); mean 2,039.2 lb/acre × 1.12085 = 2,286 kg/ha. Dry bean basis, same as world entry (all-class US dry edible beans 2022–2023 were 2,111 / 2,067 lb/acre, similar)."
+                }
             }
         ],
         "water_per_kg": [
@@ -846,6 +967,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 7785,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Black beans — water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, beans, dry (FAO 176; HS 071333 kidney beans incl. black/white pea beans, same values for all 176 sub-codes): green 1,216 + blue 428 + grey 6,141 = 7,785 m³/t = 7,785 L/kg (dry; includes grey, matching world entry)."
                 }
             }
         ],
@@ -859,6 +991,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1216,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Black beans — green_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, beans, dry HS 071333: 1,216 m³/t = 1,216 L/kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -871,6 +1014,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 428,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Black beans — blue_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, beans, dry HS 071333: 428 m³/t = 428 L/kg."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -882,6 +1036,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 6141,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Black beans — grey_water_per_kg (US): Appendix II, United States CNTRY-average column, 1996–2005, US national average, beans, dry HS 071333: 6,141 m³/t = 6,141 L/kg. Much higher than world (21) because M&H applied US nitrogen fertilizer rates; treat as model-dependent."
                 }
             }
         ],

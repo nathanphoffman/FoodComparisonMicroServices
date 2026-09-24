@@ -1,0 +1,17 @@
+# Created: 2026-09-24 00:00:00
+
+black-beans yield_kg_ha: add ONE US entry (existing world value(s): 790). Do not change existing entries.
+black-beans water_per_kg: add ONE US entry (existing world value(s): 5053). Do not change existing entries.
+black-beans green_water_per_kg: add ONE US entry (existing world value(s): 4851). Do not change existing entries.
+black-beans blue_water_per_kg: add ONE US entry (existing world value(s): 101). Do not change existing entries.
+black-beans grey_water_per_kg: add ONE US entry (existing world value(s): 21). Do not change existing entries.
+chickpeas yield_kg_ha: add ONE US entry (existing world value(s): 1000). Do not change existing entries.
+chickpeas water_per_kg: add ONE US entry (existing world value(s): 4325). Do not change existing entries.
+chickpeas green_water_per_kg: add ONE US entry (existing world value(s): 4152). Do not change existing entries.
+chickpeas blue_water_per_kg: add ONE US entry (existing world value(s): 87). Do not change existing entries.
+chickpeas grey_water_per_kg: add ONE US entry (existing world value(s): 36). Do not change existing entries.
+soy yield_kg_ha: add ONE US entry (existing world value(s): 2800). Do not change existing entries.
+soy water_per_kg: add ONE US entry (existing world value(s): 2145). Do not change existing entries.
+soy green_water_per_kg: add ONE US entry (existing world value(s): 2029). Do not change existing entries.
+soy blue_water_per_kg: add ONE US entry (existing world value(s): 55). Do not change existing entries.
+soy grey_water_per_kg: add ONE US entry (existing world value(s): 64). Do not change existing entries.

@@ -1,0 +1,22 @@
+# Created: 2026-09-24 00:00:00
+
+corn yield_kg_ha: add ONE US entry (existing world value(s): 5600). Do not change existing entries.
+corn water_per_kg: add ONE US entry (existing world value(s): 1222). Do not change existing entries.
+corn green_water_per_kg: add ONE US entry (existing world value(s): 1084). Do not change existing entries.
+corn blue_water_per_kg: add ONE US entry (existing world value(s): 77). Do not change existing entries.
+corn grey_water_per_kg: add ONE US entry (existing world value(s): 63). Do not change existing entries.
+rice yield_kg_ha: add ONE US entry (existing world value(s): 4700). Do not change existing entries.
+rice water_per_kg: add ONE US entry (existing world value(s): 2500). Do not change existing entries.
+rice green_water_per_kg: add ONE US entry (existing world value(s): 1671). Do not change existing entries.
+rice blue_water_per_kg: add ONE US entry (existing world value(s): 545). Do not change existing entries.
+rice grey_water_per_kg: add ONE US entry (existing world value(s): 284). Do not change existing entries.
+wheat yield_kg_ha: add ONE US entry (existing world value(s): 2067). Do not change existing entries.
+wheat water_per_kg: add ONE US entry (existing world value(s): 1827). Do not change existing entries.
+wheat green_water_per_kg: add ONE US entry (existing world value(s): 1334). Do not change existing entries.
+wheat blue_water_per_kg: add ONE US entry (existing world value(s): 342). Do not change existing entries.
+wheat grey_water_per_kg: add ONE US entry (existing world value(s): 151). Do not change existing entries.
+barley yield_kg_ha: add ONE US entry (existing world value(s): 3100). Do not change existing entries.
+barley water_per_kg: add ONE US entry (existing world value(s): 1423). Do not change existing entries.
+barley green_water_per_kg: add ONE US entry (existing world value(s): 1252). Do not change existing entries.
+barley blue_water_per_kg: add ONE US entry (existing world value(s): 128). Do not change existing entries.
+barley grey_water_per_kg: add ONE US entry (existing world value(s): 81). Do not change existing entries.

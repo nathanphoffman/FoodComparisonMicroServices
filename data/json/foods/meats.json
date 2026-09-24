@@ -82,6 +82,17 @@
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
                     "note": null
                 }
+            },
+            {
+                "value": 0.037,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 202,
+                    "url": "https://www.pnas.org/doi/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, GHG, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS)",
+                    "note": "Beef — pasture_ha_per_kg_output (US): Eshel et al. 2014 (USDA data 2000–2010) put total US land for animal-based food at ~3.7 million km2, with beef pasture ~79% of that (~2.92 million km2 = ~292 Mha). Divided by US beef production ~26 billion lb carcass weight/yr (~11.8 Mt CW, USDA 2000–2010 average) = ~0.0247 ha/kg CW. Converted to boneless retail basis (same as existing world entry; yield_fraction 0.43 of live weight) with CW-to-retail factor 0.67 (Rotz et al. 2019: ~33% fat, bone and shrink loss): 0.0247 / 0.67 ≈ 0.037 ha/kg. Cross-check: USDA ERS Major Land Uses 2017 grassland pasture+range (~265 Mha) plus grazed forest (~53 Mha) ≈ 318 Mha, ~90% beef-grazed, over ~11.9 Mt CW gives ~0.024 ha/kg CW, consistent. US value exceeds the world entry because much US beef grazing is on low-productivity arid western rangeland. US."
+                }
             }
         ],
         "pasture_green_water_l_per_ha": [
@@ -138,6 +149,17 @@
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg × GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
                 }
+            },
+            {
+                "value": 0.72,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — ch4_kg_per_kg_output (US): Rotz et al. 2019 Table 2, US beef-breed production systems (2013–2017, ~150 simulated operations, cow-calf + stocker + feedlot): 482 g CH4/kg carcass weight (enteric + manure; feed-crop production and land use not included in this gas total). Converted to boneless retail basis (same as world entries) with CW-to-retail factor 0.67 (~33% fat/bone/shrink loss, per Rotz et al.): 0.482 / 0.67 ≈ 0.72 kg CH4/kg. Cross-check with US EPA GHG Inventory 2024 (year 2022): beef cattle enteric 4,891 kt + manure 154 kt = 5,045 kt CH4 over ~11.96 Mt CW (28.3 billion lb commercial beef minus ~0.9 Mt from 3.05 M dairy cull cows, whose emissions EPA books under dairy) = 0.42 kg/kg CW = 0.63 kg/kg retail; agrees within ~15%. US."
+                }
             }
         ],
         "n2o_kg_per_kg_output": [
@@ -160,6 +182,17 @@
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 × 265 = 17.2 kg CO2e, representing the manure-system N2O component."
                 }
+            },
+            {
+                "value": 0.0085,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 201,
+                    "url": "https://www.epa.gov/system/files/documents/2024-04/us-ghg-inventory-2024-chapter-5-agriculture.pdf",
+                    "title": "US EPA (2024) — Inventory of U.S. Greenhouse Gas Emissions and Sinks 1990–2022, Ch. 5 Agriculture",
+                    "note": "Beef — n2o_kg_per_kg_output (US): US EPA GHG Inventory 2024, year 2022. Manure management N2O for beef cattle (direct + indirect, Table 5-7) = 24 kt. Plus direct N2O from manure/urine deposited on pasture, range and paddock (PRP, Table 5-17): 13.8 MMT CO2e / 265 = 52.1 kt N2O for all grazing species; beef share assumed ~85% (beef cattle not on feed are by far the dominant PRP animals; dairy mostly confined; sheep/horses/goats/bison minor) = 44.3 kt. Total ≈ 68.3 kt N2O. Excludes feed-crop fertilizer N2O and managed manure applied to cropland. Divided by ~11.96 Mt CW from beef-category cattle (28.3 billion lb commercial beef 2022 minus ~0.9 Mt dairy cull cows) = 5.7 g N2O/kg CW; converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al. 2019) = 8.5 g ≈ 0.0085 kg N2O/kg. Sanity check: Rotz et al. 2019 total beef N2O is 19.9 g/kg CW but that includes feed-crop fertilizer N2O. Confidence 2 because the PRP beef share is an assumption. US."
+                }
             }
         ],
         "co2_kg_per_kg_output": [
@@ -181,6 +214,17 @@
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
                     "note": "Beef — co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14–18 kg CO2e/kg for global-average beef."
+                }
+            },
+            {
+                "value": 1.36,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — co2_kg_per_kg_output (US): Rotz et al. 2019 Table 2 US beef-breed farm-gate energy use per kg carcass weight: fuel 0.25 L × ~2.7 kg CO2/L (EPA diesel factor) = 0.675; natural gas 0.03 m3 × ~1.94 kg CO2/m3 = 0.058; electricity 0.41 kWh × ~0.43 kg CO2/kWh (EPA eGRID US average, ~2018) = 0.176; total ≈ 0.91 kg CO2/kg CW. Converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al.): 0.91 / 0.67 ≈ 1.36 kg CO2/kg. Cross-check: Rotz Fig. 3a puts fuel-combustion + lime CO2 at ~4% of 21.3 kg CO2e/kg CW ≈ 0.85 kg/kg CW, consistent. Scope caveats: farm-gate only (excludes packing, cold chain and retail transport, which would add a little), and on-farm fuel includes some machinery for home-grown feed that Rotz does not separate. Excludes land-use change (the world entries include an LUC residual, so the large gap is partly a scope difference). US."
                 }
             }
         ],

@@ -1980,6 +1980,17 @@
                     "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
                     "note": "Peanuts — yield_kg_ha: Industry yield data."
                 }
+            },
+            {
+                "value": 4402,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Peanuts — yield_kg_ha (US national average): USDA NASS US peanut yield per harvested acre, in-shell (farmer-stock) basis, same in-shell basis as the world entry. 2019 3,934; 2020 3,813; 2021 4,135 lb/acre (Crop Production 2021 Summary, https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/sn00c1252/n009x4592/cropan22.txt); 2022 4,012; 2023 3,742 lb/acre (Crop Production 2023 Summary). 2019–2023 mean = 3,927.2 lb/acre × 1.12085 (kg/ha per lb/acre) = 4,402 kg/ha."
+                }
             }
         ],
         "water_per_kg": [
@@ -1991,6 +2002,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+                }
+            },
+            {
+                "value": 2276,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Peanuts — water_per_kg (US national average): Report 47 Vol. 2 Appendix II, United States CNTRY-average, groundnuts with shell (FAO 242 / HS 120210), 1996–2005: green 1,257 + blue 253 + grey 183 = 1,693 m³/t in-shell. Converted to shelled kernel basis with the same ~74.4% kernel recovery used for the world entry (2,782 → 3,740): 1,693 / 0.744 = 2,276 L/kg. Total includes grey, matching the world entry. (For reference, the report's own shelled-groundnut row, HS 120220 at 0.70 product fraction, gives 1,796 + 362 + 261 = 2,419 m³/t for the US.)"
                 }
             }
         ],
@@ -2004,6 +2026,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 1690,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Peanuts — green_water_per_kg (US national average): Report 47 Vol. 2 Appendix II, United States CNTRY-average, groundnuts with shell (HS 120210), 1996–2005: 1,257 m³/t in-shell ÷ 0.744 kernel recovery (same factor as world water_per_kg) = 1,690 L/kg shelled kernel. Green + blue + grey (1,690 + 340 + 246) = 2,276 = US water_per_kg."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -2016,6 +2049,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 340,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Peanuts — blue_water_per_kg (US national average): Report 47 Vol. 2 Appendix II, United States CNTRY-average, groundnuts with shell (HS 120210), 1996–2005: 253 m³/t in-shell ÷ 0.744 kernel recovery (same factor as world water_per_kg) = 340 L/kg shelled kernel."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -2027,6 +2071,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 246,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Peanuts — grey_water_per_kg (US national average): Report 47 Vol. 2 Appendix II, United States CNTRY-average, groundnuts with shell (HS 120210), 1996–2005: 183 m³/t in-shell ÷ 0.744 kernel recovery (same factor as world water_per_kg) = 246 L/kg shelled kernel."
                 }
             }
         ],

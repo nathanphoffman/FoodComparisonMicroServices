@@ -1,0 +1,11 @@
+2026-09-24 13:17:08 | Apple yield_kg_ha: added US entry 39700 kg/ha (NASS 2019–2023 mean 35,440 lb/acre), source 181, confidence 4
+2026-09-24 13:17:08 | Apple water_per_kg: added US entry 446 L/kg (M&H Report 47 Vol.2 US country average, green+blue+grey), source 180, confidence 4
+2026-09-24 13:17:08 | Apple green_water_per_kg: added US entry 148 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Apple blue_water_per_kg: added US entry 244 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Apple grey_water_per_kg: added US entry 54 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Orange yield_kg_ha: added US entry 18000 kg/ha (NASS all oranges, 2019-20 to 2023-24 mean of utilized tons/bearing acre), source 182, confidence 4
+2026-09-24 13:17:08 | Orange water_per_kg: added US entry 331 L/kg (M&H Report 47 Vol.2 US country average, green+blue+grey), source 180, confidence 4
+2026-09-24 13:17:08 | Orange green_water_per_kg: added US entry 231 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Orange blue_water_per_kg: added US entry 57 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Orange grey_water_per_kg: added US entry 43 L/kg, source 180, confidence 3
+2026-09-24 13:17:08 | Added sources 180 (M&H Report 47 Vol.2), 181 (NASS Noncitrus 2023 Summary), 182 (NASS Citrus 2024 Summary) to sources.json

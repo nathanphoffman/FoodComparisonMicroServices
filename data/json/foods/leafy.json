@@ -52,6 +52,17 @@
                     "title": "Our World in Data — Crop Yields",
                     "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
                 }
+            },
+            {
+                "value": 33900,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 220,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/vegean25.pdf",
+                    "title": "USDA NASS — Vegetables 2024 Summary (February 2025)",
+                    "note": "Lettuce — yield_kg_ha: 33,900 kg/ha US national average, 2021–2024. All fresh-market lettuce (head + leaf + romaine) combined by production weight: total production 396.54 million cwt / 1,309,300 harvested acres = 302.9 cwt/acre; × 45.359 kg/cwt ÷ 0.40469 ha/acre (= ×112.085) = 33,946 kg/ha, rounded to 33,900. Yearly: 2021 286.5 cwt/ac, 2022 289.2, 2023 316.9, 2024 321.8. 2022–2024 from Vegetables 2024 Summary (Feb 2025); 2021 revised figures from Vegetables 2023 Summary (Feb 2024, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf). 2019–2020 not used because NASS revised the lettuce series upward from 2021 and older years are on the unrevised basis. Fresh harvested weight, same basis as the FAO world value."
+                }
             }
         ],
         "water_per_kg": [
@@ -63,6 +74,17 @@
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
                     "note": "Lettuce — water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected — difference is within methodological range."
+                }
+            },
+            {
+                "value": 113,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Lettuce — water_per_kg: 113 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Total includes grey water (green+blue+grey), per SCHEMA definition and Report 47 totals. Note: the existing world entry (130) is described as green+blue only, so it is not on the same basis; if matched to green+blue, the US value would be 72 L/kg. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],
@@ -76,6 +98,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 30,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Lettuce — green_water_per_kg: 30 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
             }
         ],
         "blue_water_per_kg": [
@@ -88,6 +121,17 @@
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
                 }
+            },
+            {
+                "value": 42,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Lettuce — blue_water_per_kg: 42 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. US lettuce is mostly irrigated (California/Arizona), so blue is far above the global share. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
             }
         ],
         "grey_water_per_kg": [
@@ -99,6 +143,17 @@
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
                     "note": null
+                }
+            },
+            {
+                "value": 41,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Lettuce — grey_water_per_kg: 41 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],

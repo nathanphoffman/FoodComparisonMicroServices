@@ -4,3 +4,11 @@
 - Previous value: 850 kg/ha (confidence 4, source 33)
 - Finding: FAO global average for dry beans (Phaseolus vulgaris, the species that includes black beans) is approximately 790 kg/ha based on 2020 production data (27.5M tonnes ÷ 34.8M ha = 790 kg/ha). The 2018 global average was ~788 kg/ha and 2019 was ~770 kg/ha (Uebersax 2023, Legume Science review citing FAOSTAT). The global OWID bean-yields chart, which sources FAO data, is consistent with this 770–800 kg/ha range. The prior value of 850 was ~7–10% above the FAO-derived figure. U.S. dry bean yields are substantially higher (~2,100 kg/ha per USDA NASS 2013 national average) but a global average is appropriate given that black bean production is dominated by Brazil, India, and Myanmar where yields are lower than U.S. commercial production.
 - Action taken: updated — value corrected from 850 to 790 kg/ha; source note updated in legumes.json and sources.json to document the FAO 2020 calculation and cross-references. No new source added; existing source 33 (Our World in Data — Crop Yields, FAO data) is the appropriate reference. Confidence kept at 4.
+2026-09-24 13:16:36 | soy: added US yield_kg_ha 3367 (NASS 2019-2023 mean 50.06 bu/acre; source 120)
+2026-09-24 13:16:36 | soy: added US water_per_kg 1662, green 1560, blue 92, grey 10 (M&H Report 47 Vol 2 App II US CNTRY-average; source 121)
+2026-09-24 13:16:36 | chickpeas: added US yield_kg_ha 1432 (NASS all chickpeas 2019-2023 mean 1,277.4 lb/acre; source 120)
+2026-09-24 13:16:36 | chickpeas: added US water_per_kg 10157, green 1818, blue 0, grey 8339 (M&H App II US CNTRY-average; source 121)
+2026-09-24 13:16:36 | black-beans: added US yield_kg_ha 2286 (NASS black-class dry beans 2019-2023 mean 2,039.2 lb/acre; source 120)
+2026-09-24 13:16:36 | black-beans: added US water_per_kg 7785, green 1216, blue 428, grey 6141 (M&H App II US CNTRY-average, HS 071333; source 121)
+2026-09-24 13:16:36 | NOTE: US grey water for chickpeas (8339) and black beans (6141) is far above world (36 / 21) per M&H model; grey entries given confidence 2 for review
+2026-09-24 13:16:36 | Appended legume notes to existing sources 120 and 121; no new source ids used

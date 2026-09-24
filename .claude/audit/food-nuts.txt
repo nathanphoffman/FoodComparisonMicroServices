@@ -1,0 +1,6 @@
+2026-09-24 13:30:00 | peanuts yield_kg_ha: added US entry 4402 kg/ha (USDA NASS 2019-2023 mean 3,927.2 lb/acre in-shell), source 120, confidence 5
+2026-09-24 13:30:00 | peanuts water_per_kg: added US entry 2276 L/kg (M&H Report 47 Vol 2 US avg 1,693 m3/t in-shell / 0.744 kernel basis), source 121, confidence 4
+2026-09-24 13:30:00 | peanuts green_water_per_kg: added US entry 1690 L/kg (1,257 / 0.744), source 121, confidence 4
+2026-09-24 13:30:00 | peanuts blue_water_per_kg: added US entry 340 L/kg (253 / 0.744), source 121, confidence 4
+2026-09-24 13:30:00 | peanuts grey_water_per_kg: added US entry 246 L/kg (183 / 0.744), source 121, confidence 4
+2026-09-24 13:30:00 | Added sources 120 (NASS Crop Production 2023 Summary) and 121 (Report 47 Vol 2) to sources.json
