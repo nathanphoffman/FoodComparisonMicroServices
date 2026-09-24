@@ -222,6 +222,9 @@ Plants get environmental impact data for crop production.
                              // Null / [] for foods consumed ready-to-eat (fruits, nuts, most veg).
                              // Used to reconcile dry-weight environmental data with cooked-weight
                              // nutritional data when comparing on a per-kg-as-eaten basis.
+                             // The pipeline applies it to the food's own row: yield × ratio,
+                             // water / emissions / pesticide-per-kg ÷ ratio. Feed calculations
+                             // stay on the dry basis. If set, nutrition MUST be the cooked values.
 
   "yield_kg_ha": [...],      // SourcedValue  kg / ha
                              // Crop yield: kilograms of harvested product per hectare per year.

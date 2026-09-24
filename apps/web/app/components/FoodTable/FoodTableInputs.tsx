@@ -33,7 +33,7 @@ export type ColConfig = (typeof COLUMN_CONFIG)[number];
 
 export type DataRegion = 'world' | 'us' | 'avg';
 
-export const DEFAULT_DATA_REGION: DataRegion = 'world';
+export const DEFAULT_DATA_REGION: DataRegion = 'avg';
 
 const DATA_REGION_OPTIONS: { value: DataRegion; label: string }[] = [
     { value: 'world', label: 'World' },
@@ -69,7 +69,7 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     weightExponent:             0.70,
     finalIntelligenceExponent:  1.15,
     zeroBetterMultiplier:       1.5,
-    referenceSlug:              'peanuts',
+    referenceSlug:              'avocado',
     mealIngredients:            [],
 };
 
