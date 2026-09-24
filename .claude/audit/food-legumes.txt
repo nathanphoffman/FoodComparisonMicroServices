@@ -12,3 +12,8 @@
 2026-09-24 13:16:36 | black-beans: added US water_per_kg 7785, green 1216, blue 428, grey 6141 (M&H App II US CNTRY-average, HS 071333; source 121)
 2026-09-24 13:16:36 | NOTE: US grey water for chickpeas (8339) and black beans (6141) is far above world (36 / 21) per M&H model; grey entries given confidence 2 for review
 2026-09-24 13:16:36 | Appended legume notes to existing sources 120 and 121; no new source ids used
+2026-09-24 13:57:10 | tofu: added new food id 62 / slug tofu (plant, legumes); cooked_weight_ratio [] (ready-to-eat processed soy; env values stored per kg tofu); nutrition from USDA FDC 172475 firm tofu (source 224)
+2026-09-24 13:57:10 | tofu: yield_kg_ha world 5040 / US 6061 and water world 1192 (green 1127, blue 31, grey 36) / US 923 (867, 51, 6) derived from soy using 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221); confidence lowered by 1 vs soy
+2026-09-24 13:57:10 | tofu: emissions_per_kg world 3.16 (OWID/P&N tofu, source 71) and US 0.98 (Mejia et al. 2018, source 222) directly sourced; per-ha fields and pesticides copied from soy with confidence lowered by 1
+2026-09-24 13:57:10 | tofu: availability_gg 44100 is an upper-bound derivation (OWID 7% of ~350 Mt soy to direct food x 1.8, source 223), confidence 1, flagged for review
+2026-09-24 13:57:10 | Added sources 221-224 to sources.json, appended tofu note to source 71; added tofu to foods/index.json legumes list; in-memory pipeline dry run OK (DB not rebuilt)

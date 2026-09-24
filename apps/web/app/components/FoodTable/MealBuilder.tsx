@@ -3,10 +3,18 @@
 import { useState } from 'react';
 import { Slider } from '../Inputs/Slider';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
+import { DEFAULT_LEVEL, MAX_LEVEL, toShares } from './Sliders/PercentSliders';
 
 export type MealIngredient = { slug: string; fraction: number };
 
-type Ingredient = { slug: string; name: string; fraction: number };
+// Each ingredient has an independent "least to most" level; the meal fraction
+// is its share of the total level (same math as Compare By / Score Priorities).
+type Ingredient = { slug: string; name: string; level: number };
+
+function toFractions(ingredients: Ingredient[]): Record<string, number> {
+    const shares = toShares(Object.fromEntries(ingredients.map(i => [i.slug, i.level])));
+    return Object.fromEntries(Object.entries(shares).map(([slug, pct]) => [slug, pct / 100]));
+}
 
 type Props = {
     foods: { slug: string; name: string }[];
@@ -20,46 +28,32 @@ export function MealBuilder({ foods, onChange }: Props) {
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
 
     function emit(next: Ingredient[]) {
-        debouncedOnChange(next.map(({ slug, fraction }) => ({ slug, fraction })));
+        const fractions = toFractions(next);
+        debouncedOnChange(next.map(({ slug }) => ({ slug, fraction: fractions[slug] })));
     }
 
     function add() {
         const food = foods.find(f => f.slug === selectedSlug);
         if (!food || ingredients.some(i => i.slug === selectedSlug)) return;
-        const count = ingredients.length + 1;
-        const fraction = 1 / count;
-        const next: Ingredient[] = [
-            ...ingredients.map(i => ({ ...i, fraction })),
-            { slug: food.slug, name: food.name, fraction },
-        ];
+        const next: Ingredient[] = [...ingredients, { slug: food.slug, name: food.name, level: DEFAULT_LEVEL }];
         setIngredients(next);
         emit(next);
         setSelectedSlug('');
     }
 
     function remove(slug: string) {
-        const remaining = ingredients.filter(i => i.slug !== slug);
-        const next = remaining.length === 0
-            ? []
-            : remaining.map(i => ({ ...i, fraction: 1 / remaining.length }));
+        const next = ingredients.filter(i => i.slug !== slug);
         setIngredients(next);
         emit(next);
     }
 
-    function handleSliderChange(index: number, newPct: number) {
-        const newFraction = Math.min(newPct / 100, 1.0);
-        const others = ingredients.filter((_, j) => j !== index);
-        const othersTotal = others.reduce((s, i) => s + i.fraction, 0);
-        const remaining = 1.0 - newFraction;
-
-        const next = ingredients.map((ing, j) => {
-            if (j === index) return { ...ing, fraction: newFraction };
-            const scale = othersTotal > 0 ? ing.fraction / othersTotal : 1 / others.length;
-            return { ...ing, fraction: remaining * scale };
-        });
+    function handleSliderChange(index: number, level: number) {
+        const next = ingredients.map((ing, j) => j === index ? { ...ing, level } : ing);
         setIngredients(next);
         emit(next);
     }
+
+    const fractions = toFractions(ingredients);
 
     const available = [...foods]
         .sort((a, b) => a.name.localeCompare(b.name))
@@ -90,18 +84,23 @@ export function MealBuilder({ foods, onChange }: Props) {
             {ingredients.length > 0 && (
                 <div className="flex flex-col gap-1.5 pt-1">
                     {ingredients.map((ing, idx) => (
-                        <div key={ing.slug} className="flex items-center gap-2">
+                        <div key={ing.slug} className="flex items-start gap-2">
                             <span className="text-xs text-neutral-600 w-28 truncate shrink-0">{ing.name}</span>
                             <span className="text-xs text-neutral-500 w-8 text-right shrink-0">
-                                {Math.round(ing.fraction * 100)}%
+                                {Math.round(fractions[ing.slug] * 100)}%
                             </span>
                             <div className="flex-1 min-w-0">
                                 <Slider
                                     min={0}
-                                    max={100}
-                                    value={Math.round(ing.fraction * 100)}
+                                    max={MAX_LEVEL}
+                                    step={1}
+                                    value={ing.level}
                                     onChange={v => handleSliderChange(idx, v)}
                                 />
+                                <div className="flex justify-between text-[10px] text-neutral-400">
+                                    <span>Least</span>
+                                    <span>Most</span>
+                                </div>
                             </div>
                             <button
                                 onClick={() => remove(ing.slug)}

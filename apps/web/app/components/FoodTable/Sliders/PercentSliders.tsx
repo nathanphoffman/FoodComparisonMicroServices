@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 
-const MAX_LEVEL = 10;
+export const MAX_LEVEL = 10;
 export const DEFAULT_LEVEL = MAX_LEVEL / 2;
 
 type Levels<K extends string> = Record<K, number>;

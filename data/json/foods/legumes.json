@@ -1194,5 +1194,314 @@
                 }
             }
         ]
+    },
+    {
+        "id": 62,
+        "slug": "tofu",
+        "name": "Tofu",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume",
+            "soy",
+            "processed"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.44,
+                    "fat": 0.0872,
+                    "sat_fat": 0.0126,
+                    "protein": 0.1727,
+                    "fiber": 0.023,
+                    "sodium": 0.14,
+                    "carbs": 0.0278,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 224,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172475/nutrients",
+                    "title": "USDA FoodData Central — Tofu, raw, firm, prepared with calcium sulfate (FDC 172475, SR Legacy NDB 16426)",
+                    "note": "Tofu — nutrition: FDC 172475 (SR Legacy 16426) per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g, cholesterol 0, trans fat 0; converted to per gram. Sugars not reported in this record; set to 0 (carbs minus fiber = 0.48 g/100 g upper bound)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 224,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172475/nutrients",
+                    "title": "USDA FoodData Central — Tofu, raw, firm, prepared with calcium sulfate (FDC 172475, SR Legacy NDB 16426)",
+                    "note": "Tofu — yield_fraction: 1.0, tofu is eaten as purchased with no inedible portion; yield_kg_ha is already expressed in kg tofu."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 5040,
+                "confidence": 3,
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — yield_kg_ha (world): derived from the soy entry's value 2800 (source 10) x 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            },
+            {
+                "value": 6061,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — yield_kg_ha (US): derived from the soy entry's value 3367 (source 120) x 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1192,
+                "confidence": 3,
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — water_per_kg (world): derived from the soy entry's value 2145 (source 10) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            },
+            {
+                "value": 923,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — water_per_kg (US): derived from the soy entry's value 1662 (source 121) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1127,
+                "confidence": 2,
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — green_water_per_kg (world): derived from the soy entry's value 2029 (source 67) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            },
+            {
+                "value": 867,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — green_water_per_kg (US): derived from the soy entry's value 1560 (source 121) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 31,
+                "confidence": 2,
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — blue_water_per_kg (world): derived from the soy entry's value 55 (source 67) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            },
+            {
+                "value": 51,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — blue_water_per_kg (US): derived from the soy entry's value 92 (source 121) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 36,
+                "confidence": 2,
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — grey_water_per_kg (world): derived from the soy entry's value 64 (source 67) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            },
+            {
+                "value": 6,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 221,
+                    "url": "https://www.gjesm.net/article_709083.html",
+                    "title": "Hartini et al. (2024) — Life cycle assessment and life cycle cost of tofu production (Global J. Environ. Sci. Manage. 10(2):487–502)",
+                    "note": "Tofu — grey_water_per_kg (US): derived from the soy entry's value 10 (source 121) ÷ 1.8 kg tofu per kg dry soybean (Hartini et al. 2024, source 221: LCI Table 1, 5 kg soybean -> 9 kg raw tofu). Confidence lowered by 1 vs soy for the conversion step."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 4.5,
+                "confidence": 3,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Tofu — soil_erosion: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (4.5, source 10); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Tofu — pesticide_kg_ha: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (1.5, source 10); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 3,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Tofu — fertilizer_kg_ha: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (80, source 10); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.16,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Tofu — emissions_per_kg (world): OWID / Poore & Nemecek (2018) tofu line item, 3.16 kg CO2e per kg tofu (global mean, full supply chain incl. land-use change and processing). Directly sourced, not derived from soy."
+                }
+            },
+            {
+                "value": 0.98,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 222,
+                    "url": "https://www.tandfonline.com/doi/abs/10.1080/19320248.2017.1315323",
+                    "title": "Mejia et al. (2018) — Greenhouse Gas Emissions Generated by Tofu Production: A Case Study (J. Hunger & Environ. Nutr. 13(1))",
+                    "note": "Tofu — emissions_per_kg (US): partial LCA of a US tofu manufacturer, farm to factory gate incl. packaging and transport: 982 g CO2e per kg packaged tofu (16% soybean production, 52% manufacturing, 23% packaging, 9% transport). Single-manufacturer case study, so confidence 3. US soy has no Brazil land-use-change share, hence much lower than the world value."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Tofu — tillage_events_per_year: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (2, source 10); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1500,
+                "confidence": 3,
+                "source": {
+                    "id": 10,
+                    "url": "https://ourworldindata.org/grapher/soybean-yields",
+                    "title": "Our World in Data — Soybean Yields",
+                    "note": "Tofu — co2_capture_kg_ha_yr: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (1500, source 10); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.84,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Tofu — pesticides.Glyphosate.kg_ha: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (0.84, source 52); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.14,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Tofu — pesticides.Metolachlor.kg_ha: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (0.14, source 52); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Tofu — pesticides.Chlorpyrifos.kg_ha: per-hectare value of the soybean crop that tofu is made from, copied from the soy entry (0.03, source 52); per-ha values do not change with processing, per-kg effects follow from tofu yield_kg_ha (soy yield x 1.8). Confidence lowered by 1 vs soy because it is a derived entry."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 44100,
+                "confidence": 1,
+                "source": {
+                    "id": 223,
+                    "url": "https://ourworldindata.org/soy",
+                    "title": "Our World in Data — Soy (Drivers of Deforestation)",
+                    "note": "Tofu — availability_gg: UPPER-BOUND derivation. OWID: ~350 Mt soybeans/yr, 'just 7% of soy is used directly for human food products such as tofu, soy milk, edamame beans, and tempeh' -> 24.5 Mt = 24,500 Gg soybeans x 1.8 kg tofu/kg soy (source 221) = 44,100 Gg. Includes non-tofu soyfoods, so it overstates tofu; no tofu-specific global tonnage found. Confidence 1."
+                }
+            }
+        ]
     }
 ]
