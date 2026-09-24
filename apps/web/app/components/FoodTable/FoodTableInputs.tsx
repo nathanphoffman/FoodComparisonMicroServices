@@ -162,6 +162,9 @@ export function FoodTableInputs({
                 onWeightExponentChange={handleWeightExponent}
                 onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
                 onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
+                neuronExponent={sliderValues.neuronExponent}
+                weightExponent={sliderValues.weightExponent}
+                finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
             />
             <div className="mb-4 px-1">
                 <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
