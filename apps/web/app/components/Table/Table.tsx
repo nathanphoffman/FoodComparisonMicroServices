@@ -17,7 +17,7 @@ export function Table({ headers = [], children }: { headers?: Header[], children
                 key={header.label}
                 onClick={header.onSort}
                 className={[
-                  'bg-neutral-50 border-b border-neutral-200 first:rounded-tl-xl last:rounded-tr-xl px-4 py-3 text-xs font-semibold uppercase tracking-wider transition-colors text-left',
+                  'bg-neutral-50 border-b border-neutral-200 first:rounded-tl-xl last:rounded-tr-xl px-3 py-3 text-xs font-semibold uppercase tracking-wider transition-colors text-left',
                   header.sorted ? 'text-neutral-800' : 'text-neutral-500',
                   header.onSort ? 'cursor-pointer select-none hover:bg-neutral-100' : '',
                 ].join(' ')}

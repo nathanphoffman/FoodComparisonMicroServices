@@ -19,8 +19,8 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
     { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true  },
     { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
     { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
-    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
     { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true  },
+    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
     { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false },
 ];
 

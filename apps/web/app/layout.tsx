@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="/" className="no-underline text-neutral-700 font-medium hover:text-black">Home</a>
           <a href="/foods" className="no-underline text-neutral-700 font-medium hover:text-black">Foods</a>
         </nav>
-        <main className="max-w-[1060px] mx-auto p-8">{children}</main>
+        <main className="max-w-[1400px] mx-auto p-8">{children}</main>
       </body>
     </html>
   );
