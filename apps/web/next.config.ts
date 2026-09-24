@@ -6,6 +6,9 @@ import type { NextConfig } from 'next';
 // NEXT_PUBLIC_ prefix makes it available in browser bundles.
 
 const nextConfig: NextConfig = {
+  // sql.js resolves its .wasm file at runtime via require.resolve, which
+  // webpack can't bundle — load it straight from node_modules instead.
+  serverExternalPackages: ['sql.js'],
   env: {
     DB_VERSION: 'v131',
   },

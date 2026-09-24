@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/nate/Code/FoodComparisonMicroServices status)",
+      "Bash(npm audit *)",
+      "Bash(xargs ls -la)",
+      "Bash(python services/data-pipeline/src/build_db.py)",
+      "Bash(npm run *)",
+      "Bash(xargs ls -t)",
+      "Bash(awk '{print $2}')",
+      "Read(//tmp/**)",
+      "Bash(rust-analyzer --version)",
+      "Bash(rustup component *)",
+      "WebSearch",
+      "WebFetch(domain:ipm.ucanr.edu)",
+      "WebFetch(domain:ipmdata.ipmcenters.org)",
+      "WebFetch(domain:pmc.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:iqvagro.com)",
+      "Bash(sqlite3 /home/nate/Code/FoodComparisonMicroServices/data/db/foods-normalized.v99.db ' *)",
+      "Bash(sqlite3 /home/nate/Code/FoodComparisonMicroServices/data/db/foods-normalized.v99.db \".tables\")",
+      "Bash(python -m src.build_db)",
+      "Bash(wasm-pack build *)",
+      "Bash(lsof -ti:5000)",
+      "Read(//proc/sys/fs/inotify/**)",
+      "Bash(ps *)",
+      "Bash(sqlite3 /home/nate/Code/FoodComparisonMicroServices/data/db/foods-normalized.v123.db \"SELECT slug, is_feed, ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output, emissions_per_kg, feed_land_m2_per_kg AS land_m2, water_per_kg, neuron_count, weight_kg, yield_fraction FROM foods_normalized WHERE slug IN \\('egg','chicken'\\) ORDER BY slug, is_feed;\")",
+      "Bash(sqlite3 /home/nate/Code/FoodComparisonMicroServices/data/db/foods-normalized.v123.db \".tables\")",
+      "Bash(python3 *)",
+      "Bash(sort -t: -k3 -n)"
+    ],
+    "deny": [
+      "Edit(.claude/agents/**)",
+      "Write(.claude/agents/**)"
+    ]
+  }
+}

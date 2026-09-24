@@ -7,13 +7,13 @@ type SqlDatabase = Awaited<ReturnType<typeof initSqlJs>>['Database']['prototype'
 let db: SqlDatabase | null = null;
 let normalizedDb: SqlDatabase | null = null;
 
-// DATA_DIR is set by next.config.ts to point at FoodComparisonNext/lib/data
-const dataDir = process.env.DATA_DIR!;
+// DATA_DIR comes from the environment; defaults to <repo>/data/db when run from apps/web.
+const dataDir = process.env.DATA_DIR ?? resolve(process.cwd(), '..', '..', 'data', 'db');
 
 async function initSql(): Promise<Awaited<ReturnType<typeof initSqlJs>>> {
-  return initSqlJs({
-    locateFile: (file: string) => require.resolve(`sql.js/dist/${file}`),
-  });
+  // sql.js is a server external (see next.config.ts), so in Node it finds its
+  // own .wasm file next to itself — no locateFile needed.
+  return initSqlJs();
 }
 
 export async function getDb(): Promise<SqlDatabase> {

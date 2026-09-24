@@ -4,13 +4,9 @@ using FoodApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// DATA_DIR and DB_VERSION can come from env vars or appsettings.json.
-// In development, set them in appsettings.Development.json or as env vars.
-// Example: DATA_DIR=/path/to/FoodComparisonNext/lib/data  DB_VERSION=v70
-builder.Configuration
-    .AddEnvironmentVariables()
-    .AddJsonFile("appsettings.json", optional: false)
-    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true);
+// DATA_DIR, DB_VERSION and AllowedOrigins can come from appsettings.json or env vars.
+// CreateBuilder already loads appsettings.json, appsettings.{Environment}.json, then
+// env vars — so env vars win. Example: DATA_DIR=/path/to/data/db  AllowedOrigins__0=https://my-site.com
 
 // Dapper: treat sat_fat (SQLite) as equivalent to SatFat (C#) when mapping rows.
 // Without this, Dapper's default case-insensitive match still requires the same
