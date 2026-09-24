@@ -128,10 +128,13 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         land_use: Some(land_use_raw / divisor),
         water: Some(water_raw / divisor),
         direct_kill: Some(direct_kill_raw / divisor),
-        // kill_multiplier is applied to sentient_harm as a divisor, matching TS
-        sentient_harm: Some(
-            direct_kill_raw / divisor + sentient_harm_raw / divisor / query.kill_multiplier,
-        ),
+        // kill_multiplier is applied to sentient_harm as a divisor, matching TS.
+        // At 0× intentional kills carry no weight, so only accidental harm counts.
+        sentient_harm: Some(if query.kill_multiplier > 0.0 {
+            direct_kill_raw / divisor + sentient_harm_raw / divisor / query.kill_multiplier
+        } else {
+            sentient_harm_raw / divisor
+        }),
         final_score: None, // filled in by apply()
         availability: Some(availability),
 
