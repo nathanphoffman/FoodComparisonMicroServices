@@ -6,7 +6,8 @@ namespace FoodApi.Services;
 
 public class DbService
 {
-    private readonly string _dbPath;
+    private readonly string _dataDir;
+    private readonly string? _pinnedVersion;
 
     private const string Query = """
         SELECT f.slug, f.name, f.type,
