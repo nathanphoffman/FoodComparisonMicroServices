@@ -1,7 +1,7 @@
 'use client';
 
 import type { ScorePriorities } from "../FoodTableTypes";
-import { PercentSliders } from "./PercentSliders";
+import { PercentSliders, equalLevels, toShares } from "./PercentSliders";
 
 const KEYS: (keyof ScorePriorities)[] = ['nutrition', 'emissions', 'intelligence', 'water', 'landUse', 'availability'];
 
@@ -23,15 +23,8 @@ const DESCRIPTIONS: Record<keyof ScorePriorities, string> = {
     availability: 'how much global supply counts',
 };
 
-// Equal weight for all six (rounded so they sum to 100).
-export const DEFAULT_SCORE_PRIORITIES: ScorePriorities = {
-    nutrition:    17,
-    emissions:    17,
-    intelligence: 17,
-    water:        17,
-    landUse:      16,
-    availability: 16,
-};
+// Equal weight for all six.
+export const DEFAULT_SCORE_PRIORITIES: ScorePriorities = toShares(equalLevels(KEYS));
 
 export function ScorePrioritySliders({ onChange }: { onChange?: (p: ScorePriorities) => void }) {
     return (
@@ -39,7 +32,6 @@ export function ScorePrioritySliders({ onChange }: { onChange?: (p: ScorePriorit
             keys={KEYS}
             labels={LABELS}
             descriptions={DESCRIPTIONS}
-            defaults={DEFAULT_SCORE_PRIORITIES}
             onChange={onChange}
         />
     );

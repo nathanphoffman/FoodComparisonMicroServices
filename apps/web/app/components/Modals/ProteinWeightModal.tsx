@@ -12,7 +12,7 @@ export function ProteinWeightModal({ onClose }: { onClose: () => void }) {
                 A higher protein weight scores foods more favorably when they deliver more protein relative to their environmental or ethical cost — useful when comparing foods as protein sources.
             </p>
             <p>
-                Calorie, protein, and mass weights always sum to 100% — adjusting one redistributes proportionally among the others.
+                Calorie, protein, and mass sliders move independently — the percentage shown is each one's share of the total, so only how they compare to each other matters.
             </p>
         </Modal>
     );

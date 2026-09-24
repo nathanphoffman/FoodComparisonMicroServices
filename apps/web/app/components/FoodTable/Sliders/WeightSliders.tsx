@@ -4,7 +4,7 @@ import type { FoodWeights } from "../FoodTableTypes";
 import { CalorieWeightModal } from "../../Modals/CalorieWeightModal";
 import { ProteinWeightModal } from "../../Modals/ProteinWeightModal";
 import { MassWeightModal } from "../../Modals/MassWeightModal";
-import { PercentSliders } from "./PercentSliders";
+import { PercentSliders, equalLevels, toShares } from "./PercentSliders";
 
 const KEYS: (keyof FoodWeights)[] = ['calories', 'protein', 'mass'];
 
@@ -26,7 +26,7 @@ const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => voi
     mass:     MassWeightModal,
 };
 
-export const DEFAULT_FOOD_WEIGHTS: FoodWeights = { calories: 34, protein: 33, mass: 33 };
+export const DEFAULT_FOOD_WEIGHTS: FoodWeights = toShares(equalLevels(KEYS));
 
 export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => void }) {
     return (
@@ -35,7 +35,6 @@ export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => voi
             labels={LABELS}
             descriptions={DESCRIPTIONS}
             modals={MODALS}
-            defaults={DEFAULT_FOOD_WEIGHTS}
             onChange={onChange}
         />
     );

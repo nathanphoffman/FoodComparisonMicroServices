@@ -12,7 +12,7 @@ export function MassWeightModal({ onClose }: { onClose: () => void }) {
                 A higher mass weight favors foods that provide more physical bulk relative to their cost — useful when satiety or portion size matters more than caloric or protein efficiency.
             </p>
             <p>
-                Calorie, protein, and mass weights always sum to 100% — adjusting one redistributes proportionally among the others.
+                Calorie, protein, and mass sliders move independently — the percentage shown is each one's share of the total, so only how they compare to each other matters.
             </p>
         </Modal>
     );
