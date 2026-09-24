@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { WeightExponentModal } from "../../Modals/WeightExponentModal";
 
-const DEFAULT_WEIGHT_EXPONENT = 0.75;
+const DEFAULT_WEIGHT_EXPONENT = 0.70;
 
 export function WeightExponentSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [weightExponent, setWeightExponent] = useState(DEFAULT_WEIGHT_EXPONENT);

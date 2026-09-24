@@ -54,9 +54,9 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     killMultiplier:             500,
     captivityMultiplier:        1,
     neuronExponent:             1.5,
-    weightExponent:             0.75,
+    weightExponent:             0.70,
     finalIntelligenceExponent:  1.15,
-    zeroBetterMultiplier:       4,
+    zeroBetterMultiplier:       1.5,
     referenceSlug:              'peanuts',
     mealIngredients:            [],
 };
