@@ -4,6 +4,16 @@ export type FoodWeights = {
     mass:     number;
 };
 
+// How much each measure counts toward the Improvement score (sums to 100).
+export type ScorePriorities = {
+    nutrition:    number;
+    emissions:    number;
+    intelligence: number;
+    water:        number;
+    landUse:      number;
+    availability: number;
+};
+
 export type EmissionsBreakdown = {
     co2:           number;
     ch4:           number;

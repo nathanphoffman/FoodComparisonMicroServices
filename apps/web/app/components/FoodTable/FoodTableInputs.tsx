@@ -4,7 +4,9 @@ import { useState, useRef, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { MealBuilder } from './MealBuilder';
 import type { MealIngredient } from './MealBuilder';
-import type { FoodWeights } from './FoodTableTypes';
+import type { FoodWeights, ScorePriorities } from './FoodTableTypes';
+import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
+import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
 import type { SortKey } from './FoodTableSort';
 
 // ── Column config ─────────────────────────────────────────────────────────────
@@ -30,6 +32,7 @@ export type ColConfig = (typeof COLUMN_CONFIG)[number];
 
 export type SliderValues = {
     weights:                    FoodWeights;
+    scorePriorities:            ScorePriorities;
     greenWaterWeight:           number;
     greyWaterWeight:            number;
     killMultiplier:             number;
@@ -42,7 +45,8 @@ export type SliderValues = {
 };
 
 export const DEFAULT_SLIDER_VALUES: SliderValues = {
-    weights:                    { calories: 34, protein: 33, mass: 33 },
+    weights:                    DEFAULT_FOOD_WEIGHTS,
+    scorePriorities:            DEFAULT_SCORE_PRIORITIES,
     greenWaterWeight:           25,
     greyWaterWeight:            25,
     killMultiplier:             1,
@@ -80,6 +84,11 @@ export function FoodTableInputs({
 
     function handleWeights(weights: FoodWeights) {
         const next = { ...sliderValues, weights };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleScorePriorities(scorePriorities: ScorePriorities) {
+        const next = { ...sliderValues, scorePriorities };
         setSliderValues(next);
         onSliderValuesChange(next);
     }
@@ -145,6 +154,7 @@ export function FoodTableInputs({
         <>
             <FoodTableSliders
                 onChange={handleWeights}
+                onScorePrioritiesChange={handleScorePriorities}
                 onGreenWaterChange={handleGreenWater}
                 onGreyWaterChange={handleGreyWater}
                 onPhilosophicalKillChange={handleKillMultiplier}

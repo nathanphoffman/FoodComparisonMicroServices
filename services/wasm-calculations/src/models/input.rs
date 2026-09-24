@@ -98,6 +98,21 @@ pub struct SliderQuery {
     pub zero_better_multiplier: f64, // how many times better a zero score is vs the next best (default 2.0)
     #[serde(default)]
     pub meal_ingredients: Vec<MealIngredient>,
+
+    // Score priorities: how much each measure counts toward the Improvement score.
+    // 0–100, sum to 100 in the UI; only their relative size matters here.
+    #[serde(default = "default_priority")]
+    pub nutrition_priority:    f64,
+    #[serde(default = "default_priority")]
+    pub emissions_priority:    f64,
+    #[serde(default = "default_priority")]
+    pub intelligence_priority: f64,
+    #[serde(default = "default_priority")]
+    pub water_priority:        f64,
+    #[serde(default = "default_priority")]
+    pub land_use_priority:     f64,
+    #[serde(default = "default_priority")]
+    pub availability_priority: f64,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -107,6 +122,7 @@ pub struct MealIngredient {
 }
 
 fn default_zero_better_multiplier() -> f64 { 2.0 }
+fn default_priority()               -> f64 { 1.0 }
 
 fn default_calorie_weight()               -> f64 { 34.0 }
 fn default_protein_weight()               -> f64 { 33.0 }

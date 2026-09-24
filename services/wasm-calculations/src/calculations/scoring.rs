@@ -1,10 +1,9 @@
-use crate::models::ScoredRow;
+use crate::models::{ScoredRow, SliderQuery};
 
 pub struct DimensionCaps {
     pub emissions:     f64,
     pub land_use:      f64,
     pub water:         f64,
-    pub direct_kill:   f64,
     pub sentient_harm: f64,
 }
 
@@ -14,7 +13,6 @@ impl DimensionCaps {
             emissions:     highest_ratio_in_batch(rows, reference.emissions,     |r| r.emissions),
             land_use:      highest_ratio_in_batch(rows, reference.land_use,      |r| r.land_use),
             water:         highest_ratio_in_batch(rows, reference.water,         |r| r.water),
-            direct_kill:   highest_ratio_in_batch(rows, reference.direct_kill,   |r| r.direct_kill),
             sentient_harm: highest_ratio_in_batch(rows, reference.sentient_harm, |r| r.sentient_harm),
         }
     }
@@ -43,43 +41,45 @@ pub fn compute_improvement(
     food: &ScoredRow,
     reference: &ScoredRow,
     caps: &DimensionCaps,
-    zero_score_multiplier: f64,
+    query: &SliderQuery,
 ) -> Option<f64> {
-    let mut dimension_ratios: Vec<f64> = Vec::new();
+    // (ratio, priority) pairs — ratio > 1 means the food beats the reference.
+    let mut weighted_ratios: Vec<(f64, f64)> = Vec::new();
 
     // Lower-is-better: ratio = reference / food.
     // Zero food score means the food is perfect for this dimension — use the batch
     // cap so it still registers as meaningfully better than the reference.
-    for (food_score, reference_score, zero_cap) in [
-        (food.emissions,     reference.emissions,     caps.emissions),
-        (food.land_use,      reference.land_use,      caps.land_use),
-        (food.water,         reference.water,         caps.water),
-        (food.direct_kill,   reference.direct_kill,   caps.direct_kill),
-        (food.sentient_harm, reference.sentient_harm, caps.sentient_harm),
+    // Intelligence uses sentient_harm only; it already includes direct_kill.
+    for (food_score, reference_score, zero_cap, priority) in [
+        (food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
+        (food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
+        (food.water,         reference.water,         caps.water,         query.water_priority),
+        (food.sentient_harm, reference.sentient_harm, caps.sentient_harm, query.intelligence_priority),
     ] {
         if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
             if reference_score > 0.0 {
-                let ratio = if food_score <= 0.0 { zero_cap * zero_score_multiplier } else { reference_score / food_score };
-                dimension_ratios.push(ratio);
+                let ratio = if food_score <= 0.0 { zero_cap * query.zero_better_multiplier } else { reference_score / food_score };
+                weighted_ratios.push((ratio, priority));
             }
         }
     }
 
     // Higher-is-better: ratio = food / reference.
-    for (food_score, reference_score) in [
-        (food.nutrition_score, reference.nutrition_score),
-        (food.availability,    reference.availability),
+    for (food_score, reference_score, priority) in [
+        (food.nutrition_score, reference.nutrition_score, query.nutrition_priority),
+        (food.availability,    reference.availability,    query.availability_priority),
     ] {
         if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
             if food_score > 0.0 && reference_score > 0.0 {
-                dimension_ratios.push(food_score / reference_score);
+                weighted_ratios.push((food_score / reference_score, priority));
             }
         }
     }
 
-    if dimension_ratios.is_empty() { return None; }
+    // Weighted geometric mean — a 0% priority drops that measure out entirely.
+    let total_priority: f64 = weighted_ratios.iter().map(|(_, priority)| priority).sum();
+    if total_priority <= 0.0 { return None; }
 
-    let log_sum: f64 = dimension_ratios.iter().map(|ratio| ratio.ln()).sum();
-    let geometric_mean = (log_sum / dimension_ratios.len() as f64).exp();
-    Some(geometric_mean)
+    let weighted_log_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.ln() * priority).sum();
+    Some((weighted_log_sum / total_priority).exp())
 }

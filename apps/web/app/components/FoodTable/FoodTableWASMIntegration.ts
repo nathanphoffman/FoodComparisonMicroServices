@@ -22,6 +22,12 @@ type SliderQuery = {
     zeroBetterMultiplier:       number;
     referenceSlug:              string | null;
     mealIngredients:            { slug: string; fraction: number }[];
+    nutritionPriority:          number;
+    emissionsPriority:          number;
+    intelligencePriority:       number;
+    waterPriority:              number;
+    landUsePriority:            number;
+    availabilityPriority:       number;
 };
 
 // Single input object passed to WASM — keeps the boundary simple and
@@ -67,7 +73,7 @@ export async function loadWasm() {
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
-    const { weights, greenWaterWeight, greyWaterWeight, killMultiplier,
+    const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier,
             neuronExponent, weightExponent, finalIntelligenceExponent,
             zeroBetterMultiplier, referenceSlug, mealIngredients } = sliderValues;
 
@@ -100,6 +106,12 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 zeroBetterMultiplier:      zeroBetterMultiplier,
                 referenceSlug:             referenceSlug,
                 mealIngredients:           mealIngredients,
+                nutritionPriority:         scorePriorities.nutrition,
+                emissionsPriority:         scorePriorities.emissions,
+                intelligencePriority:      scorePriorities.intelligence,
+                waterPriority:             scorePriorities.water,
+                landUsePriority:           scorePriorities.landUse,
+                availabilityPriority:      scorePriorities.availability,
             },
         };
 

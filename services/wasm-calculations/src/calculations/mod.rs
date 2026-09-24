@@ -71,14 +71,14 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     if let Some((ref reference, ref caps)) = scoring_context {
         for row in &mut rows {
             row.final_score =
-                scoring::compute_improvement(row, reference, caps, query.zero_better_multiplier);
+                scoring::compute_improvement(row, reference, caps, query);
         }
     }
 
     if let Some(mut meal) = meal::synthesize_meal(&rows, &query.meal_ingredients) {
         if let Some((ref reference, ref caps)) = scoring_context {
             meal.final_score =
-                scoring::compute_improvement(&meal, reference, caps, query.zero_better_multiplier);
+                scoring::compute_improvement(&meal, reference, caps, query);
         }
         rows.push(meal);
     }

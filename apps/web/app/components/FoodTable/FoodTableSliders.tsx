@@ -1,6 +1,7 @@
 'use client';
 
 import { WeightSliders }                    from "./Sliders/WeightSliders";
+import { ScorePrioritySliders }             from "./Sliders/ScorePrioritySliders";
 import { GreenWaterSlider }                 from "./Sliders/GreenWaterSlider";
 import { GreyWaterSlider }                  from "./Sliders/GreyWaterSlider";
 import { PhilosophicalKillSlider }          from "./Sliders/PhilosophicalKillSlider";
@@ -9,12 +10,13 @@ import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider
 import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
 import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplierSlider";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
-import type { FoodWeights }                 from "./FoodTableTypes";
+import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
 
 export type { FoodWeights };
 
 export function FoodTableSliders({
     onChange,
+    onScorePrioritiesChange,
     onGreenWaterChange,
     onGreyWaterChange,
     onPhilosophicalKillChange,
@@ -24,6 +26,7 @@ export function FoodTableSliders({
     onZeroBetterMultiplierChange,
 }: {
     onChange?: (w: FoodWeights) => void;
+    onScorePrioritiesChange?: (p: ScorePriorities) => void;
     onGreenWaterChange?: (v: number) => void;
     onGreyWaterChange?: (v: number) => void;
     onPhilosophicalKillChange?: (v: number) => void;
@@ -34,8 +37,11 @@ export function FoodTableSliders({
 }) {
     return (
         <div className="flex flex-col gap-3 mb-4">
-            <ExpandableSliderGroup label="Weight">
+            <ExpandableSliderGroup label="Compare By">
                 <WeightSliders onChange={onChange} />
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Score Priorities">
+                <ScorePrioritySliders onChange={onScorePrioritiesChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <NeuronExponentSlider onChange={onNeuronExponentChange} />
