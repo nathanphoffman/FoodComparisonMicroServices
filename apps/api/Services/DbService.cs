@@ -49,13 +49,18 @@ public class DbService
     {
         // DATA_DIR: use config if set, otherwise derive from the project root
         // (ContentRootPath = apps/api/, so ../../data/db = project root/data/db)
-        var dataDir = config["DATA_DIR"]
+        _dataDir = config["DATA_DIR"]
             ?? Path.GetFullPath(Path.Combine(env.ContentRootPath, "..", "..", "data", "db"));
 
-        // DB_VERSION: use config if set, otherwise scan the directory for the latest version
-        var version = config["DB_VERSION"] ?? InferVersion(dataDir);
+        // DB_VERSION: pinned if set in config; otherwise the latest version is
+        // re-resolved on every request so a rebuilt DB is picked up without a restart.
+        _pinnedVersion = config["DB_VERSION"];
+    }
 
-        _dbPath = Path.Combine(dataDir, $"foods-normalized.{version}.db");
+    private string CurrentDbPath()
+    {
+        var version = _pinnedVersion ?? InferVersion(_dataDir);
+        return Path.Combine(_dataDir, $"foods-normalized.{version}.db");
     }
 
     // Scans dataDir for foods-normalized.vN.db files and returns the highest version.
@@ -74,7 +79,7 @@ public class DbService
 
     public IEnumerable<FoodRow> LoadFoods(string region)
     {
-        using var conn = new SqliteConnection($"Data Source={_dbPath};Mode=ReadOnly");
+        using var conn = new SqliteConnection($"Data Source={CurrentDbPath()};Mode=ReadOnly");
         return conn.Query<FoodRow>(Query, new { Region = region });
     }
 }

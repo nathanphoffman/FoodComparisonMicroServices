@@ -58,7 +58,7 @@ class RawFood:
             food_id=self._data["id"],
             is_feed=0,
             slug=self._data["slug"],
-            name=self._data["name"],
+            name=self._display_name(),
             type=self._data["type"],
             tags=self._data["tags"],
             human_food=self._data["human_food"],
@@ -76,6 +76,13 @@ class RawFood:
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
             availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
         )
+
+    def _display_name(self) -> str:
+        """Food name, suffixed with "(Cooked)" when metrics are converted to a cooked-weight basis."""
+        name = self._data["name"]
+        if self._plant and self._plant.cooked_weight_ratio.weighted_average():
+            return f"{name} (Cooked)"
+        return name
 
     def to_feed_normalized(self) -> FoodNormalized | None:
         """Builds the feed-impact normalized row for this food, or None if not an animal."""
