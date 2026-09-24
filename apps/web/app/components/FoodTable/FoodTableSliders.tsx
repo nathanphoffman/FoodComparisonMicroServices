@@ -5,6 +5,7 @@ import { ScorePrioritySliders }             from "./Sliders/ScorePrioritySliders
 import { GreenWaterSlider }                 from "./Sliders/GreenWaterSlider";
 import { GreyWaterSlider }                  from "./Sliders/GreyWaterSlider";
 import { PhilosophicalKillSlider }          from "./Sliders/PhilosophicalKillSlider";
+import { CaptivitySlider }                  from "./Sliders/CaptivitySlider";
 import { NeuronExponentSlider }             from "./Sliders/NeuronExponentSlider";
 import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider";
 import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
@@ -21,6 +22,7 @@ export function FoodTableSliders({
     onGreenWaterChange,
     onGreyWaterChange,
     onPhilosophicalKillChange,
+    onCaptivityChange,
     onNeuronExponentChange,
     onWeightExponentChange,
     onFinalIntelligenceExponentChange,
@@ -34,6 +36,7 @@ export function FoodTableSliders({
     onGreenWaterChange?: (v: number) => void;
     onGreyWaterChange?: (v: number) => void;
     onPhilosophicalKillChange?: (v: number) => void;
+    onCaptivityChange?: (v: number) => void;
     onNeuronExponentChange?: (v: number) => void;
     onWeightExponentChange?: (v: number) => void;
     onFinalIntelligenceExponentChange?: (v: number) => void;
@@ -62,6 +65,7 @@ export function FoodTableSliders({
                         <WeightExponentSlider onChange={onWeightExponentChange} />
                         <FinalIntelligenceExponentSlider onChange={onFinalIntelligenceExponentChange} />
                         <PhilosophicalKillSlider onChange={onPhilosophicalKillChange} />
+                        <CaptivitySlider onChange={onCaptivityChange} />
                         <ZeroBetterMultiplierSlider onChange={onZeroBetterMultiplierChange} />
                     </div>
                 </div>

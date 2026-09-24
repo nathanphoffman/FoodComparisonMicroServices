@@ -56,6 +56,25 @@ pub(super) fn compute_pesticide_victim_intelligence(
         .map_or(0.0, |p| compute_intelligence(p.neurons, p.weight_kg, p.lifespan_years, neuron_exp, weight_exp, final_exp))
 }
 
+/// Returns typical years an animal spends in captivity before slaughter
+/// (productive life for dairy and layers). Wild-caught and hunted foods are 0.
+pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
+    match slug {
+        "milk" | "yogurt" => 5.0,
+        "egg" => 1.5,
+        "beef" => 1.5,
+        "chicken" => 0.12,
+        "pork" => 0.5,
+        "turkey" => 0.35,
+        "lamb" => 0.5,
+        "salmon" => 2.5,
+        "tilapia-farmed" => 0.6,
+        "shrimp-farmed" => 0.4,
+        "mussels-farmed" => 1.5,
+        _ => 0.0,
+    }
+}
+
 /// Returns the typical lifespan in years for an animal food slug.
 /// Used by both direct-kill and bycatch scoring to normalise kill impact.
 pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {

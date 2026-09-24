@@ -65,6 +65,7 @@ export type SentientHarmDetail = {
     feedDeforestationScore:    number;
     pastureDeforestationScore: number;
     bycatchScore:              number;
+    captiveSentienceScore:     number;
 };
 
 import type { RawFood } from '@/lib/queries/commonFoods';
@@ -93,4 +94,5 @@ export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {
     insectScore: 0, beeScore: 0, wormScore: 0, deforestationScore: 0,
     feedInsectScore: 0, feedBeeScore: 0, feedWormScore: 0,
     feedDeforestationScore: 0, pastureDeforestationScore: 0, bycatchScore: 0,
+    captiveSentienceScore: 0,
 };

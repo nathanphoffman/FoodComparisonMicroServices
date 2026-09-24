@@ -10,6 +10,7 @@ export type SortKey =
     | 'emissions'
     | 'landUse'
     | 'directKill'
+    | 'captiveSentience'
     | 'water'
     | 'sentientHarm'
     | 'finalScore'
@@ -28,6 +29,7 @@ export type ScoredRow = {
     land_use:        number | null;
     water:           number | null;
     direct_kill:     number | null;
+    captive_sentience: number | null;
     sentient_harm:   number | null;
     final_score:     number | null;
     availability:    number | null;
@@ -82,6 +84,7 @@ export function useFoodTableSort() {
                 va = sortKey === 'emissions'      ? sa.emissions
                    : sortKey === 'landUse'        ? sa.land_use
                    : sortKey === 'directKill'     ? sa.direct_kill
+                   : sortKey === 'captiveSentience' ? sa.captive_sentience
                    : sortKey === 'water'          ? sa.water
                    : sortKey === 'sentientHarm'   ? sa.sentient_harm
                    : sortKey === 'finalScore'     ? sa.final_score
@@ -90,6 +93,7 @@ export function useFoodTableSort() {
                 vb = sortKey === 'emissions'      ? sb.emissions
                    : sortKey === 'landUse'        ? sb.land_use
                    : sortKey === 'directKill'     ? sb.direct_kill
+                   : sortKey === 'captiveSentience' ? sb.captive_sentience
                    : sortKey === 'water'          ? sb.water
                    : sortKey === 'sentientHarm'   ? sb.sentient_harm
                    : sortKey === 'finalScore'     ? sb.final_score

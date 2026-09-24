@@ -153,13 +153,23 @@ export function SentientHarmValue({ value }: { value: number | null }) {
   return <span className={getSentientHarmColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function SentientHarmCell({ value, detail, divisor = 1 }: { value: number | null; detail: SentientHarmDetail; divisor?: number }) {
+export function SentientHarmCell({ value, detail, divisor = 1, killMultiplier }: { value: number | null; detail: SentientHarmDetail; divisor?: number; killMultiplier: number }) {
   return (
     <Cell key="sentientHarm" align="right">
       {value != null
-        ? <SentientHarmTooltip detail={detail} divisor={divisor}><SentientHarmValue value={value} /></SentientHarmTooltip>
+        ? <SentientHarmTooltip detail={detail} divisor={divisor} killMultiplier={killMultiplier} total={value}><SentientHarmValue value={value} /></SentientHarmTooltip>
         : <SentientHarmValue value={null} />
       }
+    </Cell>
+  );
+}
+
+// ─── Captive Sentience ───────────────────────────────────────────────────────
+
+export function CaptiveSentienceCell({ value }: { value: number | null }) {
+  return (
+    <Cell key="captiveSentience" align="right">
+      <SentientHarmValue value={value} />
     </Cell>
   );
 }

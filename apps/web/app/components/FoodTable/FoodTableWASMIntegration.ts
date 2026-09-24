@@ -16,6 +16,7 @@ type SliderQuery = {
     greenWater:                 number;
     greyWater:                  number;
     killMultiplier:             number;
+    captivityMultiplier:        number;
     neuronExponent:             number;
     weightExponent:             number;
     finalIntelligenceExponent:  number;
@@ -73,7 +74,7 @@ export async function loadWasm() {
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
-    const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier,
+    const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
             neuronExponent, weightExponent, finalIntelligenceExponent,
             zeroBetterMultiplier, referenceSlug, mealIngredients } = sliderValues;
 
@@ -100,6 +101,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 greenWater:                greenWaterWeight,
                 greyWater:                 greyWaterWeight,
                 killMultiplier:            killMultiplier,
+                captivityMultiplier:       captivityMultiplier,
                 neuronExponent:            neuronExponent,
                 weightExponent:            weightExponent,
                 finalIntelligenceExponent: finalIntelligenceExponent,

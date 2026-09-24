@@ -11,6 +11,7 @@ import {
     IntelligenceCell,
     WaterCell,
     SentientHarmCell,
+    CaptiveSentienceCell,
     FinalScoreCell,
     AvailabilityCell,
     DummyCell,
@@ -88,6 +89,7 @@ export function FoodTable() {
         landUse:      `Land Use (m² / ${unit})`,
         directKill:   `Direct Kill / ${unit}`,
         water:        `Water (L / ${unit})`,
+        captiveSentience: `Captive Sentience Cost / ${unit}`,
         sentientHarm: `Sentient Harm / ${unit}`,
         finalScore:   `Improvement over ${referenceName}`,
     };
@@ -124,7 +126,8 @@ export function FoodTable() {
                                     case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null }} divisor={1} unit={unit} />;
                                     case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} />;
                                     case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} />;
+                                    case 'captiveSentience': return <CaptiveSentienceCell key="captiveSentience" value={scoredRow?.captive_sentience ?? null} />;
+                                    case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} killMultiplier={sliderValues.killMultiplier} />;
                                     case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
                                     case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
                                     case 'dummy':          return <DummyCell          key="dummy" />;

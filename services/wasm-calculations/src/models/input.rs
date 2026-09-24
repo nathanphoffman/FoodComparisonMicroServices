@@ -85,7 +85,9 @@ pub struct SliderQuery {
     #[serde(default = "default_grey_water")]
     pub grey_water:     f64,  // 0–100 (default 25)
     #[serde(default = "default_kill_multiplier")]
-    pub kill_multiplier: f64, // 1–10000 (default 1)
+    pub kill_multiplier: f64, // 0–1000 (default 1)
+    #[serde(default = "default_captivity_multiplier")]
+    pub captivity_multiplier: f64, // deaths-equivalent per year in captivity (0.01–10, default 1)
     #[serde(default = "default_neuron_exponent")]
     pub neuron_exponent: f64, // exponent applied to neuron count in intelligence calc (default 1.5)
     #[serde(default = "default_weight_exponent")]
@@ -130,6 +132,7 @@ fn default_mass_weight()                  -> f64 { 33.0 }
 fn default_green_water()                  -> f64 { 25.0 }
 fn default_grey_water()                   -> f64 { 25.0 }
 fn default_kill_multiplier()              -> f64 { 1.0 }
+fn default_captivity_multiplier()         -> f64 { 1.0 }
 fn default_neuron_exponent()              -> f64 { 1.5 }
 fn default_weight_exponent()              -> f64 { 0.75 }
 fn default_final_intelligence_exponent()  -> f64 { 1.0 }

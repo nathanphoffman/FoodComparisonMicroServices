@@ -20,6 +20,7 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
     { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true  },
     { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true  },
     { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
+    { key: 'captiveSentience', label: 'Captive Sentience Cost', sortKey: 'captiveSentience', defaultVisible: true },
     { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
     { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true  },
     { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
@@ -36,6 +37,7 @@ export type SliderValues = {
     greenWaterWeight:           number;
     greyWaterWeight:            number;
     killMultiplier:             number;
+    captivityMultiplier:        number;
     neuronExponent:             number;
     weightExponent:             number;
     finalIntelligenceExponent:  number;
@@ -49,11 +51,12 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     scorePriorities:            DEFAULT_SCORE_PRIORITIES,
     greenWaterWeight:           25,
     greyWaterWeight:            25,
-    killMultiplier:             250,
+    killMultiplier:             500,
+    captivityMultiplier:        1,
     neuronExponent:             1.5,
     weightExponent:             0.75,
     finalIntelligenceExponent:  1.15,
-    zeroBetterMultiplier:       2,
+    zeroBetterMultiplier:       4,
     referenceSlug:              'peanuts',
     mealIngredients:            [],
 };
@@ -104,6 +107,11 @@ export function FoodTableInputs({
     }
     function handleKillMultiplier(killMultiplier: number) {
         const next = { ...sliderValues, killMultiplier };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleCaptivityMultiplier(captivityMultiplier: number) {
+        const next = { ...sliderValues, captivityMultiplier };
         setSliderValues(next);
         onSliderValuesChange(next);
     }
@@ -158,6 +166,7 @@ export function FoodTableInputs({
                 onGreenWaterChange={handleGreenWater}
                 onGreyWaterChange={handleGreyWater}
                 onPhilosophicalKillChange={handleKillMultiplier}
+                onCaptivityChange={handleCaptivityMultiplier}
                 onNeuronExponentChange={handleNeuronExponent}
                 onWeightExponentChange={handleWeightExponent}
                 onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}

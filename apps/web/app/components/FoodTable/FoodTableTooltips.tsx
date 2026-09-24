@@ -123,46 +123,67 @@ export function IntelligenceTooltip({ detail, children }: { detail: Intelligence
   );
 }
 
-export function SentientHarmTooltip({ detail, divisor = 1, children }: { detail: SentientHarmDetail; divisor?: number; children: React.ReactNode }) {
+export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total, children }: { detail: SentientHarmDetail; divisor?: number; killMultiplier: number; total: number; children: React.ReactNode }) {
   const fmt = (v: number) => formatIntelligenceValue(v / divisor);
+  // Mirrors the sentient_harm formula in wasm-calculations/src/calculations/mod.rs:
+  // intentional + accidental ÷ killMultiplier (at 0×, intentional harm is dropped).
+  const intentional = (v: number) => killMultiplier > 0 ? fmt(v) : 'not counted at 0×';
+  const accidental  = (v: number) => killMultiplier > 0
+    ? <>{fmt(v)} ÷ {killMultiplier} = <span className="text-neutral-100">{formatIntelligenceValue(v / divisor / killMultiplier)}</span></>
+    : fmt(v);
   const hasDirectKill = detail.directKillScore > 0;
+  const hasCaptivity = detail.captiveSentienceScore > 0;
   const hasPlant   = detail.insectScore > 0 || detail.beeScore > 0 || detail.wormScore > 0 || detail.deforestationScore > 0;
   const hasFeed    = detail.feedInsectScore > 0 || detail.feedBeeScore > 0 || detail.feedWormScore > 0 || detail.feedDeforestationScore > 0;
   const hasPasture = detail.pastureDeforestationScore > 0;
   const hasBycatch = detail.bycatchScore > 0;
+  const hasAccidental = hasPlant || hasFeed || hasPasture || hasBycatch;
   return (
     <Tooltip content={
       <>
         {hasDirectKill && (
           <TooltipSection title="Direct kill">
-            <TooltipRow label="Primary animal" value={fmt(detail.directKillScore)} />
+            <TooltipRow label="Primary animal" value={intentional(detail.directKillScore)} />
+          </TooltipSection>
+        )}
+        {hasCaptivity && (
+          <TooltipSection title="Captivity">
+            <TooltipRow label="Captive sentience cost" value={intentional(detail.captiveSentienceScore)} />
           </TooltipSection>
         )}
         {hasPlant && (
           <TooltipSection title="Pesticide &amp; crop impact">
-            {detail.insectScore        > 0 && <TooltipRow label="Insects"            value={fmt(detail.insectScore)} />}
-            {detail.beeScore           > 0 && <TooltipRow label="Bees"               value={fmt(detail.beeScore)} />}
-            {detail.wormScore          > 0 && <TooltipRow label="Soil organisms"     value={fmt(detail.wormScore)} />}
-            {detail.deforestationScore > 0 && <TooltipRow label="Crop deforestation" value={fmt(detail.deforestationScore)} />}
+            {detail.insectScore        > 0 && <TooltipRow label="Insects*"            value={accidental(detail.insectScore)} />}
+            {detail.beeScore           > 0 && <TooltipRow label="Bees*"               value={accidental(detail.beeScore)} />}
+            {detail.wormScore          > 0 && <TooltipRow label="Soil organisms*"     value={accidental(detail.wormScore)} />}
+            {detail.deforestationScore > 0 && <TooltipRow label="Crop deforestation*" value={accidental(detail.deforestationScore)} />}
           </TooltipSection>
         )}
         {hasFeed && (
           <TooltipSection title="Feed crop impact">
-            {detail.feedInsectScore        > 0 && <TooltipRow label="Feed insects"            value={fmt(detail.feedInsectScore)} />}
-            {detail.feedBeeScore           > 0 && <TooltipRow label="Feed bees"               value={fmt(detail.feedBeeScore)} />}
-            {detail.feedWormScore          > 0 && <TooltipRow label="Feed soil organisms"     value={fmt(detail.feedWormScore)} />}
-            {detail.feedDeforestationScore > 0 && <TooltipRow label="Feed crop deforestation" value={fmt(detail.feedDeforestationScore)} />}
+            {detail.feedInsectScore        > 0 && <TooltipRow label="Feed insects*"            value={accidental(detail.feedInsectScore)} />}
+            {detail.feedBeeScore           > 0 && <TooltipRow label="Feed bees*"               value={accidental(detail.feedBeeScore)} />}
+            {detail.feedWormScore          > 0 && <TooltipRow label="Feed soil organisms*"     value={accidental(detail.feedWormScore)} />}
+            {detail.feedDeforestationScore > 0 && <TooltipRow label="Feed crop deforestation*" value={accidental(detail.feedDeforestationScore)} />}
           </TooltipSection>
         )}
         {hasPasture && (
           <TooltipSection title="Pasture impact">
-            <TooltipRow label="Pasture deforestation" value={fmt(detail.pastureDeforestationScore)} />
+            <TooltipRow label="Pasture deforestation*" value={accidental(detail.pastureDeforestationScore)} />
           </TooltipSection>
         )}
         {hasBycatch && (
           <TooltipSection title="Bycatch">
-            <TooltipRow label="Discarded bycatch kill" value={fmt(detail.bycatchScore)} />
+            <TooltipRow label="Discarded bycatch kill*" value={accidental(detail.bycatchScore)} />
           </TooltipSection>
+        )}
+        <div className="mt-2 pt-2 border-t border-neutral-700">
+          <TooltipRow label="Total" value={formatIntelligenceValue(total)} />
+        </div>
+        {hasAccidental && (
+          <div className="mt-2 text-neutral-500 text-xs max-w-xs">
+            * Accidental deaths (crops, pesticides, habitat loss, bycatch) are divided by the Kill : Accident slider ({killMultiplier}×), because intentionally killing an animal is weighted as worse than killing one by accident.
+          </div>
         )}
         <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">deaths × neuron_count^1.5 × lifespan, amortized over land lifetime</div>
       </>

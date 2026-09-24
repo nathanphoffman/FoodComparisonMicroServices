@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { ZeroBetterMultiplierModal } from "../../Modals/ZeroBetterMultiplierModal";
 
-const DEFAULT_ZERO_BETTER_MULTIPLIER = 2;
+const DEFAULT_ZERO_BETTER_MULTIPLIER = 4;
 
 export function ZeroBetterMultiplierSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [value, setValue] = useState(DEFAULT_ZERO_BETTER_MULTIPLIER);

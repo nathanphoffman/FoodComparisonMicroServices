@@ -2,7 +2,8 @@ mod intelligence;
 
 use crate::models::{FoodRow, LandUseDetail, SentientHarmDetail, SliderQuery};
 use intelligence::{
-    compute_intelligence, get_pesticide_victim_function, lifespan_years_for_slug, PesticideVictim,
+    captivity_years_for_slug, compute_intelligence, get_pesticide_victim_function,
+    lifespan_years_for_slug, PesticideVictim,
 };
 
 // ── Eco constants (matching FoodTableCalculations.ts exactly) ─────────────────
@@ -84,6 +85,14 @@ pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
         query.weight_exponent,
         query.final_intelligence_exponent,
     ) / output_kg_per_death
+}
+
+// ── Captive sentience ─────────────────────────────────────────────────────────
+
+/// Suffering from time spent in captivity, expressed as extra deaths:
+/// each year in captivity counts as `captivity_multiplier` additional kills.
+pub(super) fn compute_captive_sentience(food: &FoodRow, direct_kill: f64, query: &SliderQuery) -> f64 {
+    direct_kill * captivity_years_for_slug(&food.slug) * query.captivity_multiplier
 }
 
 // ── Sentient harm ─────────────────────────────────────────────────────────────
@@ -187,6 +196,7 @@ fn compute_plant_sentient_harm(
         feed_deforestation_score: 0.0,
         pasture_deforestation_score: 0.0,
         bycatch_score: 0.0,
+        captive_sentience_score: 0.0,
     };
     (total, detail)
 }

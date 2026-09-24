@@ -49,6 +49,7 @@ pub struct SentientHarmDetail {
     pub feed_deforestation_score:    f64,
     pub pasture_deforestation_score: f64,
     pub bycatch_score:               f64,
+    pub captive_sentience_score:     f64,
 }
 
 impl SentientHarmDetail {
@@ -58,6 +59,7 @@ impl SentientHarmDetail {
             insect_score: 0.0, bee_score: 0.0, worm_score: 0.0, deforestation_score: 0.0,
             feed_insect_score: 0.0, feed_bee_score: 0.0, feed_worm_score: 0.0,
             feed_deforestation_score: 0.0, pasture_deforestation_score: 0.0, bycatch_score: 0.0,
+            captive_sentience_score: 0.0,
         }
     }
 }
@@ -79,6 +81,7 @@ pub struct ScoredRow {
     pub land_use:        Option<f64>,
     pub water:           Option<f64>,
     pub direct_kill:     Option<f64>,
+    pub captive_sentience: Option<f64>,
     pub sentient_harm:   Option<f64>,
     pub final_score:     Option<f64>,
     pub availability:    Option<f64>,

@@ -107,7 +107,10 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let (sentient_harm_raw, mut sentient_harm_detail) = eco::compute_sentient_harm(food, query);
 
     let direct_kill_raw = eco::compute_direct_kill(food, query);
-    sentient_harm_detail.direct_kill_score = direct_kill_raw / divisor;
+    let captive_raw = eco::compute_captive_sentience(food, direct_kill_raw, query);
+    // Detail scores are raw — the tooltip divides by the divisor.
+    sentient_harm_detail.direct_kill_score = direct_kill_raw;
+    sentient_harm_detail.captive_sentience_score = captive_raw;
 
     let availability = if land_use_raw == 0.0 {
         food.availability_gg.unwrap_or(1.0)
@@ -128,10 +131,12 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         land_use: Some(land_use_raw / divisor),
         water: Some(water_raw / divisor),
         direct_kill: Some(direct_kill_raw / divisor),
+        captive_sentience: Some(captive_raw / divisor),
         // kill_multiplier is applied to sentient_harm as a divisor, matching TS.
-        // At 0× intentional kills carry no weight, so only accidental harm counts.
+        // Captivity is intentional harm, so it sits alongside direct kill.
+        // At 0× intentional harm carries no weight, so only accidental harm counts.
         sentient_harm: Some(if query.kill_multiplier > 0.0 {
-            direct_kill_raw / divisor + sentient_harm_raw / divisor / query.kill_multiplier
+            (direct_kill_raw + captive_raw) / divisor + sentient_harm_raw / divisor / query.kill_multiplier
         } else {
             sentient_harm_raw / divisor
         }),

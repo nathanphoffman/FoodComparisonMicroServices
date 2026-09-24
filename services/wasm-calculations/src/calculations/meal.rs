@@ -11,6 +11,7 @@ pub fn synthesize_meal(rows: &[ScoredRow], ingredients: &[MealIngredient]) -> Op
     let mut land_use      = 0.0_f64;
     let mut water         = 0.0_f64;
     let mut direct_kill   = 0.0_f64;
+    let mut captive       = 0.0_f64;
     let mut sentient_harm = 0.0_f64;
 
     for ing in ingredients {
@@ -23,6 +24,7 @@ pub fn synthesize_meal(rows: &[ScoredRow], ingredients: &[MealIngredient]) -> Op
             land_use      += weight * row.land_use.unwrap_or(0.0);
             water         += weight * row.water.unwrap_or(0.0);
             direct_kill   += weight * row.direct_kill.unwrap_or(0.0);
+            captive       += weight * row.captive_sentience.unwrap_or(0.0);
             sentient_harm += weight * row.sentient_harm.unwrap_or(0.0);
         }
     }
@@ -39,6 +41,7 @@ pub fn synthesize_meal(rows: &[ScoredRow], ingredients: &[MealIngredient]) -> Op
         land_use:        Some(land_use),
         water:           Some(water),
         direct_kill:     Some(direct_kill),
+        captive_sentience: Some(captive),
         sentient_harm:   Some(sentient_harm),
         final_score:     None,
         availability:    None,
