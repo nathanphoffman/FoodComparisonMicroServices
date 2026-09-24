@@ -1,0 +1,4 @@
+2026-09-24 14:11:38 | milk: added lifetime_output_kg (world 13,300 / US 31,300 kg), offspring_deaths_per_animal (world 3.54 / US 2.13), offspring_captivity_years (world 1.62 / US 1.46), sentient_harm_explanation
+2026-09-24 14:11:38 | yogurt: added lifetime_output_kg (world 11,600 / US 27,200 kg via 1.15 kg milk/kg yogurt), same offspring fields as milk, sentient_harm_explanation
+2026-09-24 14:11:38 | sources.json: added ids 225 (FAO GLEAM 1.0 dairy herd parameters), 226 (FAOSTAT QCL raw cattle milk 2023), 227 (USDA NASS Milk Production Feb 2025)
+2026-09-24 14:11:38 | ERROR: offspring_captivity_years (~1.5 yr) is well above the ~0.5 yr ballpark because GLEAM models surplus dairy calves as fattened for beef; flagged for review. Yogurt conversion source 64 remains URL_UNVERIFIED.

@@ -107,7 +107,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let (sentient_harm_raw, mut sentient_harm_detail) = eco::compute_sentient_harm(food, query);
 
     let direct_kill_raw = eco::compute_direct_kill(food, query);
-    let captive_raw = eco::compute_captive_sentience(food, direct_kill_raw, query);
+    let captive_raw = eco::compute_captive_sentience(food, query);
     // Detail scores are raw — the tooltip divides by the divisor.
     sentient_harm_detail.direct_kill_score = direct_kill_raw;
     sentient_harm_detail.captive_sentience_score = captive_raw;
@@ -147,6 +147,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         water_detail,
         land_use_detail,
         sentient_harm_detail,
+        kill_detail: eco::compute_kill_detail(food, query),
     }
 }
 

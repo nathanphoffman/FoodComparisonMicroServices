@@ -1185,5 +1185,56 @@
         "notes": [
             "Tofu — nutrition: firm tofu prepared with calcium sulfate, per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g; sugars not reported."
         ]
+    },
+    {
+        "id": 225,
+        "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+        "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+        "notes": [
+            "Dairy herd parameters by region (NA, RUSS, WE, EE, NENA, ESEA, OC, SA, LAC, SSA): annual replacement rate of adult cows (NA 35%, RUSS 31, WE 31, EE 27, NENA 15, ESEA 28, OC 22, SA 21, LAC 21, SSA 10), fertility rate (72–84%), calf death rates (8–50%), adult death rate (3–9%), age at first calving (2.1–4.0 yr), adult/calf/slaughter live weights. Same values appear in FAO (2013) Greenhouse gas emissions from ruminant supply chains, Table B2.",
+            "Milk / yogurt — lifetime_output_kg: productive life = 1 / replacement rate (e.g. NA 1/0.35 = 2.86 yr; FAOSTAT-cow-weighted world 4.97 yr).",
+            "Milk / yogurt — offspring_deaths_per_animal: GLEAM herd model calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; one calf per cow becomes her replacement, the rest die (die young on-farm or are fattened and slaughtered). Per cow: (calves born − 1) = fertility × (1 − adult death) / replacement. NA 2.13; world (cow-weighted) 3.54.",
+            "Milk / yogurt — offspring_captivity_years: GLEAM age at slaughter of surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight). NA males 1.68 yr, females 1.56 yr; calves dying young assumed ~0.08 yr (~1 month). Weighted over dead offspring: NA 1.46 yr, world 1.62 yr."
+        ]
+    },
+    {
+        "id": 226,
+        "url": "https://www.fao.org/faostat/en/#data/QCL",
+        "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+        "notes": [
+            "Raw milk of cattle, 2023: World yield 2,685 kg per milk animal per year; 292.7 million milk animals; 785.8 Mt milk. US yield 10,923 kg/animal. Regional milk-animal counts used to weight GLEAM regional herd parameters: Northern America 10.36 M, Russia 6.41 M, rest of Eastern Europe 7.07 M, Northern+Southern+Western Europe 19.11 M, Northern Africa+Western Asia+Central Asia 33.17 M, Eastern+South-eastern Asia 21.53 M, Oceania 5.98 M, Southern Asia 95.63 M, Latin America & Caribbean 33.72 M, Sub-Saharan Africa 59.74 M. Retrieved from FAOSTAT bulk download (Production_Crops_Livestock_E_All_Data), Dec 2025 release."
+        ]
+    },
+    {
+        "id": 227,
+        "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+        "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+        "notes": [
+            "Milk (US) — lifetime_output_kg: 2024 US production per cow averaged 24,178 lb (= 10,967 kg) per year. × productive life 2.86 yr (GLEAM NA replacement rate 35%) = 31,300 kg milk per cow. Cross-check: FAOSTAT 2023 US yield 10,923 kg → 31,200 kg."
+        ]
+    },
+    {
+        "id": 245,
+        "url": "https://faunalytics.org/global-chick-culling-2019-2024/",
+        "title": "Faunalytics — Nearly Eight Billion Per Year And Counting: Global Chick Culling, 2019–2024",
+        "notes": [
+            "Egg — offspring_deaths_per_animal: model assumes a 1:1 sex ratio at hatch (one male hatched per female pullet reared) and 3.5% pre-lay (rearing) mortality, 8% in-lay mortality, 62-week laying period. Estimates 7.83 billion male chicks culled globally in 2024 against ~8.65 billion FAOSTAT laying hens, and ~340 million males culled per year in the US (cross-checked against USDA NASS: 638 million egg-type chicks hatched in 2023 → ~320 million males). Notes that in parts of Asia (Thailand, Indonesia) some layer-strain males are raised for meat instead of culled at hatch."
+        ]
+    },
+    {
+        "id": 246,
+        "url": "https://innovateanimalag.org/market-penetration-forecast",
+        "title": "Innovate Animal Ag — In-Ovo Sexing: Market Penetration and Forecast",
+        "notes": [
+            "Egg — offspring_deaths_per_animal: as of mid-2026, ~40% of the EU commercial layer flock (~130 million of ~340 million hens) was hatched using in-ovo sexing (male embryos removed before hatch, so no male chick is hatched and culled); US penetration is below 1% of the ~310 million-hen commercial flock (announced transitions cover >4%). Earlier datapoints from the same organisation: 20% of EU hens in April 2024, 28% in Q1 2025."
+        ]
+    },
+    {
+        "id": 247,
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7008794/",
+        "title": "EFSA AHAW Panel (2019) — Killing for purposes other than slaughter: poultry (EFSA Journal 17(11):5850)",
+        "notes": [
+            "Egg — offspring_captivity_years: describes the killing of surplus male day-old layer chicks in the hatchery (maceration or gas) immediately after hatching and sexing. Chicks are killed on the day of hatch, so time alive outside the egg is ~1 day (1/365 ≈ 0.003 years)."
+        ]
     }
 ]

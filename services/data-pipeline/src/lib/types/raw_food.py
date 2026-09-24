@@ -31,6 +31,7 @@ _NULL_PLANT_FIELDS = dict(
 )
 _NULL_ANIMAL_FIELDS = dict(
     neuron_count=None, weight_kg=None, lifetime_output_kg=None,
+    offspring_deaths_per_animal=None, offspring_captivity_years=None,
     pasture_ha_per_kg_output=None, pasture_green_water_l_per_ha=None,
     native_fraction=None, bycatch_amount=None, bycatch_food_slug=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,
@@ -75,6 +76,7 @@ class RawFood:
             **(self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS),
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
             availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
+            sentient_harm_explanation=self._data.get("sentient_harm_explanation"),
         )
 
     def _display_name(self) -> str:

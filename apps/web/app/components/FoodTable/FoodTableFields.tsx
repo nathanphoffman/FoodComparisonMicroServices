@@ -4,11 +4,12 @@
 
 import Link from 'next/link';
 import { Cell } from '../Table/Cell';
-import type { SentientHarmDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, WaterDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, KillDetail, WaterDetail } from './FoodTableTypes';
 import { formatNeurons, formatIntelligenceValue } from './FoodTableCalculations';
 import { getSentientHarmColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getImprovementColor } from './FoodTableStyles';
 import {
   SentientHarmTooltip,
+  CaptiveSentienceTooltip,
   EmissionsTooltip,
   NutritionTooltip,
   LandUseTooltip,
@@ -135,11 +136,11 @@ export function IntelligenceValue({ value }: { value: number | null }) {
   return <span className={getIntelligenceColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function IntelligenceCell({ value, detail }: { value: number | null; detail: IntelligenceDetail }) {
+export function IntelligenceCell({ value, detail, killDetail, explanation }: { value: number | null; detail: IntelligenceDetail; killDetail?: KillDetail | null; explanation?: string | null }) {
   return (
     <Cell key="intelligence" align="right">
       {value != null
-        ? <IntelligenceTooltip detail={detail}><IntelligenceValue value={value} /></IntelligenceTooltip>
+        ? <IntelligenceTooltip detail={detail} killDetail={killDetail} explanation={explanation}><IntelligenceValue value={value} /></IntelligenceTooltip>
         : <IntelligenceValue value={null} />
       }
     </Cell>
@@ -153,11 +154,11 @@ export function SentientHarmValue({ value }: { value: number | null }) {
   return <span className={getSentientHarmColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function SentientHarmCell({ value, detail, divisor = 1, killMultiplier }: { value: number | null; detail: SentientHarmDetail; divisor?: number; killMultiplier: number }) {
+export function SentientHarmCell({ value, detail, divisor = 1, killMultiplier, explanation }: { value: number | null; detail: SentientHarmDetail; divisor?: number; killMultiplier: number; explanation?: string | null }) {
   return (
     <Cell key="sentientHarm" align="right">
       {value != null
-        ? <SentientHarmTooltip detail={detail} divisor={divisor} killMultiplier={killMultiplier} total={value}><SentientHarmValue value={value} /></SentientHarmTooltip>
+        ? <SentientHarmTooltip detail={detail} divisor={divisor} killMultiplier={killMultiplier} total={value} explanation={explanation}><SentientHarmValue value={value} /></SentientHarmTooltip>
         : <SentientHarmValue value={null} />
       }
     </Cell>
@@ -166,10 +167,13 @@ export function SentientHarmCell({ value, detail, divisor = 1, killMultiplier }:
 
 // ─── Captive Sentience ───────────────────────────────────────────────────────
 
-export function CaptiveSentienceCell({ value }: { value: number | null }) {
+export function CaptiveSentienceCell({ value, killDetail, captivityMultiplier, explanation }: { value: number | null; killDetail?: KillDetail | null; captivityMultiplier: number; explanation?: string | null }) {
   return (
     <Cell key="captiveSentience" align="right">
-      <SentientHarmValue value={value} />
+      {value && killDetail
+        ? <CaptiveSentienceTooltip killDetail={killDetail} captivityMultiplier={captivityMultiplier} explanation={explanation}><SentientHarmValue value={value} /></CaptiveSentienceTooltip>
+        : <SentientHarmValue value={value} />
+      }
     </Cell>
   );
 }

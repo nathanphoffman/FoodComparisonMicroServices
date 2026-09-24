@@ -1,6 +1,6 @@
 mod intelligence;
 
-use crate::models::{FoodRow, LandUseDetail, SentientHarmDetail, SliderQuery};
+use crate::models::{FoodRow, KillDetail, LandUseDetail, SentientHarmDetail, SliderQuery};
 use intelligence::{
     captivity_years_for_slug, compute_intelligence, get_pesticide_victim_function,
     lifespan_years_for_slug, PesticideVictim,
@@ -59,17 +59,17 @@ pub(super) fn compute_land_use(food: &FoodRow) -> (f64, LandUseDetail) {
 
 // ── Direct kill ───────────────────────────────────────────────────────────────
 
-pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
-    let lifespan = lifespan_years_for_slug(&food.slug);
-
+/// Intelligence score of one death of this animal, and the kg of food produced
+/// per producing animal. None for plants and animals missing kill data.
+fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, f64)> {
     if food.food_type != "animal" {
-        return 0.0;
+        return None;
     }
 
     let (neuron_count, body_weight_kg, yield_fraction) =
         match (food.neuron_count, food.weight_kg, food.yield_fraction) {
             (Some(n), Some(w), Some(y)) if n > 0.0 && w > 0.0 && y > 0.0 => (n, w, y),
-            _ => return 0.0,
+            _ => return None,
         };
 
     // kg of food output per animal death: explicit for continuous-production animals
@@ -77,22 +77,55 @@ pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
     let output_kg_per_death = food.lifetime_output_kg
         .unwrap_or(body_weight_kg * yield_fraction);
 
-    compute_intelligence(
+    let intelligence = compute_intelligence(
         neuron_count,
         body_weight_kg,
-        lifespan,
+        lifespan_years_for_slug(&food.slug),
         query.neuron_exponent,
         query.weight_exponent,
         query.final_intelligence_exponent,
-    ) / output_kg_per_death
+    );
+    Some((intelligence, output_kg_per_death))
+}
+
+fn offspring_deaths(food: &FoodRow) -> f64 {
+    food.offspring_deaths_per_animal.unwrap_or(0.0).max(0.0)
+}
+
+fn offspring_captivity_years(food: &FoodRow) -> f64 {
+    food.offspring_captivity_years.unwrap_or(0.0).max(0.0)
+}
+
+/// Deaths per kg of food: the producing animal plus any offspring killed to keep
+/// it in production (dairy calves, culled male chicks). Offspring are scored as
+/// the same species as the parent.
+pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
+    intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
+        intelligence * (1.0 + offspring_deaths(food)) / output_kg
+    })
 }
 
 // ── Captive sentience ─────────────────────────────────────────────────────────
 
 /// Suffering from time spent in captivity, expressed as extra deaths:
 /// each year in captivity counts as `captivity_multiplier` additional kills.
-pub(super) fn compute_captive_sentience(food: &FoodRow, direct_kill: f64, query: &SliderQuery) -> f64 {
-    direct_kill * captivity_years_for_slug(&food.slug) * query.captivity_multiplier
+/// Includes the captivity time of offspring killed for this food.
+pub(super) fn compute_captive_sentience(food: &FoodRow, query: &SliderQuery) -> f64 {
+    intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
+        let animal_years = captivity_years_for_slug(&food.slug)
+            + offspring_deaths(food) * offspring_captivity_years(food);
+        intelligence * animal_years * query.captivity_multiplier / output_kg
+    })
+}
+
+/// Per-animal numbers behind direct kill and captivity, for the tooltips.
+pub(super) fn compute_kill_detail(food: &FoodRow, query: &SliderQuery) -> Option<KillDetail> {
+    intelligence_and_output(food, query).map(|(_, output_kg)| KillDetail {
+        output_kg_per_death:       output_kg,
+        offspring_deaths:          offspring_deaths(food),
+        captivity_years:           captivity_years_for_slug(&food.slug),
+        offspring_captivity_years: offspring_captivity_years(food),
+    })
 }
 
 // ── Sentient harm ─────────────────────────────────────────────────────────────

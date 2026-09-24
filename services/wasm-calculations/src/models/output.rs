@@ -64,6 +64,17 @@ impl SentientHarmDetail {
     }
 }
 
+/// Per-animal facts behind the direct kill and captivity scores, for the
+/// tooltips. None for plants, meals, and animals missing kill data.
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct KillDetail {
+    pub output_kg_per_death:        f64, // kg of food produced per producing animal
+    pub offspring_deaths:           f64, // offspring killed per producing animal
+    pub captivity_years:            f64, // producing animal's years in captivity
+    pub offspring_captivity_years:  f64, // each offspring's years in captivity
+}
+
 /// Scored row returned to the browser after WASM calculation.
 /// Contains both the aggregate scores used for sorting/display and the
 /// breakdown details used for tooltips. Divisor is included so the TypeScript
@@ -92,4 +103,5 @@ pub struct ScoredRow {
     pub water_detail:         WaterDetail,
     pub land_use_detail:      LandUseDetail,
     pub sentient_harm_detail: SentientHarmDetail,
+    pub kill_detail:          Option<KillDetail>,
 }

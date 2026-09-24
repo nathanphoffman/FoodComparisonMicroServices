@@ -18,6 +18,7 @@ public class DbService
                f.pesticide_insect_paf, f.pesticide_terrestrial_paf,
                f.pesticide_bee_hazard, f.pesticide_kg_per_kg_food,
                f.neuron_count, f.weight_kg, f.lifetime_output_kg, f.yield_fraction,
+               f.offspring_deaths_per_animal, f.offspring_captivity_years,
                f.pasture_ha_per_kg_output,
                f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
                f.bycatch_amount, f.bycatch_food_slug,
@@ -33,7 +34,7 @@ public class DbService
                feed.land_m2_per_kg            AS feed_land_m2_per_kg,
                bycatch_animal.neuron_count    AS bycatch_neuron_count,
                bycatch_animal.weight_kg       AS bycatch_weight_kg,
-               f.availability_gg
+               f.availability_gg, f.sentient_harm_explanation
         FROM   foods_normalized f
         LEFT JOIN foods_normalized feed
                ON feed.food_id = f.food_id AND feed.is_feed = 1 AND feed.region = f.region

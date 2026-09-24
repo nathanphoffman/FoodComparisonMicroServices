@@ -8,6 +8,10 @@ export type RawFood = {
   yield_kg_ha: number | null; pasture_ha_per_kg_output: number | null;
   emissions_per_kg: number | null; water_per_kg: number | null;
   neuron_count: number; weight_kg: number | null; yield_fraction: number | null;
+  lifetime_output_kg: number | null;
+  // offspring killed per producing animal (dairy calves, culled male chicks)
+  offspring_deaths_per_animal: number | null;
+  offspring_captivity_years:   number | null;
   ch4_kg_per_kg_output: number | null;
   n2o_kg_per_kg_output: number | null;
   co2_kg_per_kg_output: number | null;
@@ -35,6 +39,8 @@ export type RawFood = {
   bycatch_weight_kg:    number | null;
   // global supply availability
   availability_gg: number | null;
+  // plain-English tooltip text for the sentient harm columns
+  sentient_harm_explanation: string | null;
 };
 
 const QUERY = `
@@ -45,7 +51,8 @@ const QUERY = `
          f.soil_erosion, f.pesticide_kg_ha,
          f.fertilizer_kg_ha, f.emissions_per_kg, f.tillage_events_per_year, f.co2_capture_kg_ha_yr,
          f.pesticide_freshwater_paf, f.pesticide_terrestrial_paf, f.pesticide_insect_paf, f.pesticide_bee_hazard, f.pesticide_kg_per_kg_food,
-         f.neuron_count, f.weight_kg, f.yield_fraction, f.pasture_ha_per_kg_output,
+         f.neuron_count, f.weight_kg, f.lifetime_output_kg, f.yield_fraction, f.pasture_ha_per_kg_output,
+         f.offspring_deaths_per_animal, f.offspring_captivity_years,
          f.native_fraction, f.bycatch_amount, f.bycatch_food_slug,
          f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
          feed.water_per_kg             AS feed_water_per_kg,
@@ -60,7 +67,7 @@ const QUERY = `
          feed.land_m2_per_kg           AS feed_land_m2_per_kg,
          bycatch_animal.neuron_count   AS bycatch_neuron_count,
          bycatch_animal.weight_kg      AS bycatch_weight_kg,
-         f.availability_gg
+         f.availability_gg, f.sentient_harm_explanation
   FROM   foods_normalized f
   LEFT JOIN foods_normalized feed ON feed.food_id = f.food_id AND feed.is_feed = 1
   LEFT JOIN foods_normalized bycatch_animal ON bycatch_animal.slug = f.bycatch_food_slug

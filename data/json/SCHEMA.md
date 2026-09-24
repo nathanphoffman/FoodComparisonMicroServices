@@ -180,6 +180,13 @@ plant-specific or animal-specific fields depending on `type`.
   "human_food": 0|1,         // 1 = edible by humans; 0 = feed/forage crop only (e.g. alfalfa)
   "tags":       [<string>],  // Descriptive tags, e.g. ["meat","common"], ["fish"], ["nut"]
 
+  // Optional plain-English explanation shown in the Direct Kill, Captive
+  // Sentience and Sentient Harm tooltips. Explain the reasoning (which animals
+  // die, why, and where the per-animal numbers come from) for a reader with no
+  // background. Do NOT include computed per-kg scores — the tooltip shows those
+  // live, and they change with the sliders. Omit or null when not needed.
+  "sentient_harm_explanation": <string|null>,
+
   // --- Nutrition (per gram of edible food as purchased) ---
   "nutrition": [
     {
@@ -298,6 +305,21 @@ bycatch references, and feed composition.
                              //   over its productive life before slaughter.
                              // Used by the direct-kill calculation to convert the per-animal
                              // intelligence score into a per-kg-output harm score.
+
+  "offspring_deaths_per_animal": [...], // SourcedValue  count
+                             // Offspring killed because this animal was kept in production,
+                             // counted over its whole productive life. Leave as [] when none.
+                             // Dairy: calves born to keep the cow lactating that are not
+                             //   kept as herd replacements (sold for veal / beef).
+                             // Layer hens: male chicks culled at the hatchery per hen raised.
+                             // Offspring are scored as the same species as the parent
+                             // (same neuron_count / weight_kg / lifespan), so no separate
+                             // offspring neuron or weight fields exist.
+
+  "offspring_captivity_years": [...], // SourcedValue  years
+                             // Typical years each of those offspring spends in captivity
+                             // before slaughter (veal calf ~0.5; culled chick ~0).
+                             // Leave as [] when offspring_deaths_per_animal is [].
 
   // --- Yield ---
   "yield_fraction": [...],   // SourcedValue  0–1

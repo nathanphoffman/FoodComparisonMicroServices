@@ -42,6 +42,8 @@ public class FoodRow
     public double? NeuronCount               { get; set; }
     public double? WeightKg                  { get; set; }
     public double? LifetimeOutputKg          { get; set; }
+    public double? OffspringDeathsPerAnimal  { get; set; }
+    public double? OffspringCaptivityYears   { get; set; }
     public double? YieldFraction             { get; set; }
     public double? PastureHaPerKgOutput      { get; set; }
     public double? Ch4KgPerKgOutput          { get; set; }
@@ -68,4 +70,7 @@ public class FoodRow
 
     // Global supply
     public double? AvailabilityGg { get; set; }
+
+    // Plain-English tooltip text for the sentient harm columns (NULL if none)
+    public string? SentientHarmExplanation { get; set; }
 }

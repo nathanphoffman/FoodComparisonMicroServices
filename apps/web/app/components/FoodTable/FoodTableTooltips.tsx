@@ -1,5 +1,5 @@
-import type { SentientHarmDetail, EmissionsBreakdown, IntelligenceDetail, LandUseDetail, NutritionDetail, WaterDetail } from './FoodTableTypes';
-import { formatIntelligenceValue, formatNeurons, nutritionScale } from './FoodTableCalculations';
+import type { SentientHarmDetail, EmissionsBreakdown, IntelligenceDetail, KillDetail, LandUseDetail, NutritionDetail, WaterDetail } from './FoodTableTypes';
+import { formatCount, formatIntelligenceValue, formatNeurons, formatYears, nutritionScale } from './FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../Table/Tooltip';
 
 const MILLIGRAMS_PER_GRAM = 1000;
@@ -108,14 +108,35 @@ export function WaterTooltip({ detail, referenceTotal, divisor, unit, greenWater
   );
 }
 
-export function IntelligenceTooltip({ detail, children }: { detail: IntelligenceDetail; children: React.ReactNode }) {
+/** Food-specific plain-English explanation from the data (sentient_harm_explanation). */
+function ExplanationNote({ text }: { text?: string | null }) {
+  if (!text) return null;
+  return <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-300 text-xs whitespace-normal w-80">{text}</div>;
+}
+
+/** "1 cow + 2 offspring" style rows — who dies per producing animal, and how much food it yields. */
+function KillRows({ killDetail }: { killDetail: KillDetail }) {
+  return (
+    <>
+      <TooltipRow label="Food per animal" value={`${formatCount(killDetail.outputKgPerDeath)} kg`} />
+      <TooltipRow
+        label="Deaths per animal"
+        value={killDetail.offspringDeaths > 0 ? `1 + ${formatCount(killDetail.offspringDeaths)} offspring` : '1'}
+      />
+    </>
+  );
+}
+
+export function IntelligenceTooltip({ detail, killDetail, explanation, children }: { detail: IntelligenceDetail; killDetail?: KillDetail | null; explanation?: string | null; children: React.ReactNode }) {
   return (
     <Tooltip content={
       <TooltipSection title="Intelligence score">
         <TooltipRow label="Neuron count" value={formatNeurons(detail.neuronCount)} />
         {detail.weightKg != null && <TooltipRow label="Animal weight" value={`${detail.weightKg} kg`} />}
         {detail.yieldFraction != null && <TooltipRow label="Yield fraction" value={`${(detail.yieldFraction * PERCENT_MULTIPLIER).toFixed(0)}%`} />}
+        {killDetail && <KillRows killDetail={killDetail} />}
         <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">neuron and weight exponents adjustable via Intelligence Math sliders</div>
+        <ExplanationNote text={explanation} />
       </TooltipSection>
     }>
       {children}
@@ -123,7 +144,29 @@ export function IntelligenceTooltip({ detail, children }: { detail: Intelligence
   );
 }
 
-export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total, children }: { detail: SentientHarmDetail; divisor?: number; killMultiplier: number; total: number; children: React.ReactNode }) {
+export function CaptiveSentienceTooltip({ killDetail, captivityMultiplier, explanation, children }: { killDetail: KillDetail; captivityMultiplier: number; explanation?: string | null; children: React.ReactNode }) {
+  const hasOffspring = killDetail.offspringDeaths > 0;
+  return (
+    <Tooltip content={
+      <TooltipSection title="Captivity">
+        <TooltipRow label="Animal in captivity" value={formatYears(killDetail.captivityYears)} />
+        {hasOffspring && (
+          <TooltipRow
+            label="Offspring in captivity"
+            value={`${formatCount(killDetail.offspringDeaths)} × ${formatYears(killDetail.offspringCaptivityYears)}`}
+          />
+        )}
+        <TooltipRow label="Food per animal" value={`${formatCount(killDetail.outputKgPerDeath)} kg`} />
+        <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">each year in captivity counts as {captivityMultiplier}× a death</div>
+        <ExplanationNote text={explanation} />
+      </TooltipSection>
+    }>
+      {children}
+    </Tooltip>
+  );
+}
+
+export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total, explanation, children }: { detail: SentientHarmDetail; divisor?: number; killMultiplier: number; total: number; explanation?: string | null; children: React.ReactNode }) {
   const fmt = (v: number) => formatIntelligenceValue(v / divisor);
   // Mirrors the sentient_harm formula in wasm-calculations/src/calculations/mod.rs:
   // intentional + accidental ÷ killMultiplier (at 0×, intentional harm is dropped).
@@ -186,6 +229,7 @@ export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total
           </div>
         )}
         <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">deaths × neuron_count^1.5 × lifespan, amortized over land lifetime</div>
+        <ExplanationNote text={explanation} />
       </>
     }>
       {children}

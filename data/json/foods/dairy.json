@@ -9,6 +9,7 @@
         "tags": [
             "dairy"
         ],
+        "sentient_harm_explanation": "Each dairy cow is eventually killed (or, in some countries, dies) once her milk yield drops, and to keep producing milk she must give birth to a calf roughly every year. Only about one of her calves is kept to replace her; the others die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US: ~2 years growing up plus ~3 years milking; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 31,000 kg of milk in the US or 13,000 kg worldwide (lower-yield cows in South Asia and Africa pull the world figure down).",
         "nutrition": [
             {
                 "value": {
@@ -53,6 +54,75 @@
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
                     "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 13300,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Milk (world) — lifetime milk per cow: FAOSTAT 2023 world cattle milk yield 2,685 kg per milk animal per year × productive life 4.97 yr = 13,340 kg ≈ 13,300 kg. World productive life 4.97 yr = 1 / cow-weighted average annual replacement rate (20.1%), using GLEAM 1.0 Table 2.3 regional replacement rates (NA 35%, W. Europe 31%, S. Asia 21%, Sub-Saharan Africa 10%, etc.) weighted by FAOSTAT 2023 milk-animal counts per region (source 226). Derived; low-yield, long-lived cows in South Asia and Africa dominate the world average. In India cow slaughter is restricted in many states, so 'per death' there is partly death from old age/abandonment rather than slaughter."
+                }
+            },
+            {
+                "value": 31300,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Milk (US) — lifetime milk per cow: USDA NASS 2024 average 24,178 lb (10,967 kg) milk per cow per year × productive life 2.86 yr (1 / 35% annual replacement rate for North American dairy herds, GLEAM 1.0 Table 2.3, source 225) = 31,330 kg ≈ 31,300 kg. Cross-check: FAOSTAT 2023 US yield 10,923 kg → 31,200 kg. USDA NAHMS Dairy 2014 reports ~34% of cows removed per year plus on-farm deaths, consistent with a ~35% replacement rate."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
                 }
             }
         ],
@@ -294,6 +364,7 @@
         "tags": [
             "dairy"
         ],
+        "sentient_harm_explanation": "Yogurt is made from cow's milk (about 1.15 kg of milk per kg of yogurt), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 27,000 kg of yogurt in the US or 11,600 kg worldwide.",
         "nutrition": [
             {
                 "value": {
@@ -338,6 +409,75 @@
                     "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
                     "title": "Wikipedia — List of Animals by Number of Neurons",
                     "note": "Yogurt — same dairy cow as milk: live weight ~680 kg (adult Holstein). Yogurt is a fermented milk product; the source animal is identical."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 11600,
+                "confidence": 2,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Yogurt — converted from lifetime milk per cow ÷ 1.15 kg milk per kg yogurt (the same conversion factor used for every other yogurt per-kg value in this entry, source 64). 13,300 kg milk / 1.15 = 11,565 ≈ 11,600 kg yogurt per cow. Underlying milk: Milk (world) — lifetime milk per cow: FAOSTAT 2023 world cattle milk yield 2,685 kg per milk animal per year × productive life 4.97 yr = 13,340 kg ≈ 13,300 kg. World productive life 4.97 yr = 1 / cow-weighted average annual replacement rate (20.1%), using GLEAM 1.0 Table 2.3 regional replacement rates (NA 35%, W. Europe 31%, S. Asia 21%, Sub-Saharan Africa 10%, etc.) weighted by FAOSTAT 2023 milk-animal counts per region (source 226). Derived; low-yield, long-lived cows in South Asia and Africa dominate the world average. In India cow slaughter is restricted in many states, so 'per death' there is partly death from old age/abandonment rather than slaughter."
+                }
+            },
+            {
+                "value": 27200,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Yogurt — converted from lifetime milk per cow ÷ 1.15 kg milk per kg yogurt (the same conversion factor used for every other yogurt per-kg value in this entry, source 64). 31,300 kg milk / 1.15 = 27,217 ≈ 27,200 kg yogurt per cow. Underlying milk: Milk (US) — lifetime milk per cow: USDA NASS 2024 average 24,178 lb (10,967 kg) milk per cow per year × productive life 2.86 yr (1 / 35% annual replacement rate for North American dairy herds, GLEAM 1.0 Table 2.3, source 225) = 31,330 kg ≈ 31,300 kg. Cross-check: FAOSTAT 2023 US yield 10,923 kg → 31,200 kg. USDA NAHMS Dairy 2014 reports ~34% of cows removed per year plus on-farm deaths, consistent with a ~35% replacement rate."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Yogurt — same dairy cow as milk. Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Yogurt — same dairy cow as milk. Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Yogurt — same dairy cow as milk. Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Yogurt — same dairy cow as milk. Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
                 }
             }
         ],

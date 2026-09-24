@@ -43,6 +43,7 @@ class Food(TypedDict):
     human_food: Literal[0, 1]
     tags: list[str]
     availability_gg: list[SourcedNumber] | None
+    sentient_harm_explanation: NotRequired[str | None]
 
 
 class Animal(TypedDict):
@@ -51,6 +52,8 @@ class Animal(TypedDict):
     neuron_count: list[SourcedNumber] | None
     weight_kg: list[SourcedNumber] | None
     lifetime_output_kg: list[SourcedNumber] | None
+    offspring_deaths_per_animal: list[SourcedNumber] | None
+    offspring_captivity_years: list[SourcedNumber] | None
     bycatch_animal_id: int | None
     bycatch_food_slug: str | None
     bycatch_amount: list[SourcedNumber] | None

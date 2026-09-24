@@ -54,5 +54,6 @@ pub fn synthesize_meal(rows: &[ScoredRow], ingredients: &[MealIngredient]) -> Op
             feed_land_m2_per_kg: None,
         },
         sentient_harm_detail: crate::models::SentientHarmDetail::zero(),
+        kill_detail:          None,
     })
 }

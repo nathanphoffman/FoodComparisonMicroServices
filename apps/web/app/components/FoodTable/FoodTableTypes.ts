@@ -53,6 +53,14 @@ export type IntelligenceDetail = {
     yieldFraction: number | null;
 };
 
+// Per-animal facts behind direct kill and captivity (matches Rust KillDetail).
+export type KillDetail = {
+    outputKgPerDeath:        number;
+    offspringDeaths:         number;
+    captivityYears:          number;
+    offspringCaptivityYears: number;
+};
+
 export type SentientHarmDetail = {
     directKillScore:           number;
     insectScore:               number;
@@ -78,6 +86,7 @@ export const MEAL_STUB: RawFood = {
     sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null,
     yield_kg_ha: null, pasture_ha_per_kg_output: null, emissions_per_kg: null,
     water_per_kg: null, weight_kg: null, yield_fraction: null,
+    lifetime_output_kg: null, offspring_deaths_per_animal: null, offspring_captivity_years: null,
     ch4_kg_per_kg_output: null, n2o_kg_per_kg_output: null, co2_kg_per_kg_output: null,
     green_water_per_kg: null, blue_water_per_kg: null, grey_water_per_kg: null,
     pesticide_insect_paf: null, pesticide_terrestrial_paf: null, pesticide_bee_hazard: null,
@@ -86,7 +95,7 @@ export const MEAL_STUB: RawFood = {
     feed_pesticide_insect_paf: null, feed_pesticide_terrestrial_paf: null, feed_pesticide_bee_hazard: null,
     feed_pesticide_kg_per_kg_food: null, feed_land_m2_per_kg: null,
     bycatch_amount: null, bycatch_food_slug: null, bycatch_neuron_count: null, bycatch_weight_kg: null,
-    availability_gg: null,
+    availability_gg: null, sentient_harm_explanation: null,
 };
 
 export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {

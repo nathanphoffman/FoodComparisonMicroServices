@@ -26,6 +26,26 @@ export function formatIntelligenceValue(value: number): string {
     return value.toFixed(0);
 }
 
+const DAYS_PER_YEAR   = 365;
+const MONTHS_PER_YEAR = 12;
+
+export function formatYears(years: number): string {
+    if (years <= 0) return 'none';
+    if (years < 1 / MONTHS_PER_YEAR) {
+        const days = Math.max(1, Math.round(years * DAYS_PER_YEAR));
+        return `${days} day${days === 1 ? '' : 's'}`;
+    }
+    if (years < 1) {
+        const months = Math.round(years * MONTHS_PER_YEAR);
+        return `${months} month${months === 1 ? '' : 's'}`;
+    }
+    return `${Number(years.toFixed(1))} year${years === 1 ? '' : 's'}`;
+}
+
+export function formatCount(count: number): string {
+    return Number(count.toFixed(1)).toLocaleString();
+}
+
 export function nutritionScale(calories: number): number {
     return calories > 0 ? 100 / calories : 0;
 }

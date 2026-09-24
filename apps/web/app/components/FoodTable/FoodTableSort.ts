@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { RawFood } from '@/lib/queries/commonFoods';
-import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail } from './FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -39,6 +39,7 @@ export type ScoredRow = {
     water_detail:          WaterDetail;
     land_use_detail:       LandUseDetail;
     sentient_harm_detail:  SentientHarmDetail;
+    kill_detail:           KillDetail | null;
 };
 
 // ── Hook ──────────────────────────────────────────────────────────────────────

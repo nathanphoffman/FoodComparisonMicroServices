@@ -1,2 +1,2 @@
 // Auto-updated by scripts/wasm-notify.mjs — do not edit.
-export const WASM_BUILD_ID = 1790272739963;
+export const WASM_BUILD_ID = 1790273635748;

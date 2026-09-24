@@ -48,6 +48,8 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     neuron_count             REAL,
     weight_kg                REAL,
     lifetime_output_kg       REAL,  -- total food output per animal death; set for continuous-production animals (layers, dairy); NULL for single-slaughter animals (pipeline derives weight_kg × yield_fraction)
+    offspring_deaths_per_animal  REAL,  -- offspring killed per producing animal over its productive life (dairy calves not kept, culled male chicks); NULL if none
+    offspring_captivity_years    REAL,  -- years each of those offspring spends in captivity before slaughter; NULL if none
     pasture_ha_per_kg_output     REAL,
     pasture_green_water_l_per_ha REAL,  -- green water (precipitation-fed evapotranspiration) consumed by the
                                         --   pasture type this animal grazes, in litres per hectare per year;
@@ -61,6 +63,9 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
 
     -- Global supply availability
     availability_gg REAL,   -- total world supply available, in gigagrams (Gg); NULL if not yet sourced
+
+    -- Plain-English tooltip text explaining how sentient harm is derived for this food; NULL if none
+    sentient_harm_explanation TEXT,
 
     PRIMARY KEY (food_id, is_feed, region)
 );

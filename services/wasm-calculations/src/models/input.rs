@@ -42,6 +42,10 @@ pub struct FoodRow {
     pub neuron_count:              Option<f64>,
     pub weight_kg:                 Option<f64>,
     pub lifetime_output_kg:        Option<f64>,
+    // Offspring killed per producing animal (dairy calves, culled male chicks),
+    // scored as the same species as the parent.
+    pub offspring_deaths_per_animal: Option<f64>,
+    pub offspring_captivity_years:   Option<f64>,
     pub yield_fraction:            Option<f64>,
     pub pasture_ha_per_kg_output:  Option<f64>,
     pub ch4_kg_per_kg_output:      Option<f64>,

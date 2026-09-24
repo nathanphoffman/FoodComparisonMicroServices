@@ -53,6 +53,8 @@ class FoodNormalized:
     neuron_count: float | None = None
     weight_kg: float | None = None
     lifetime_output_kg: float | None = None
+    offspring_deaths_per_animal: float | None = None
+    offspring_captivity_years: float | None = None
     yield_fraction: float | None = None
     pasture_ha_per_kg_output: float | None = None
     pasture_green_water_l_per_ha: float | None = None
@@ -63,6 +65,7 @@ class FoodNormalized:
     n2o_kg_per_kg_output: float | None = None
     co2_kg_per_kg_output: float | None = None
     availability_gg: float | None = None
+    sentient_harm_explanation: str | None = None
 
     def to_db_params(self) -> tuple[int | float | str | None, ...]:
         """Returns all fields as a flat tuple matching the INSERT SQL column order."""
@@ -80,9 +83,10 @@ class FoodNormalized:
             self.pesticide_freshwater_paf, self.pesticide_terrestrial_paf,
             self.pesticide_insect_paf, self.pesticide_bee_hazard,
             self.pesticide_kg_per_kg_food, self.land_m2_per_kg,
-            self.neuron_count, self.weight_kg, self.lifetime_output_kg, self.yield_fraction,
+            self.neuron_count, self.weight_kg, self.lifetime_output_kg,
+            self.offspring_deaths_per_animal, self.offspring_captivity_years, self.yield_fraction,
             self.pasture_ha_per_kg_output, self.pasture_green_water_l_per_ha,
             self.native_fraction, self.bycatch_amount, self.bycatch_food_slug,
             self.ch4_kg_per_kg_output, self.n2o_kg_per_kg_output, self.co2_kg_per_kg_output,
-            self.availability_gg,
+            self.availability_gg, self.sentient_harm_explanation,
         )

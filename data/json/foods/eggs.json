@@ -9,6 +9,7 @@
         "tags": [
             "common"
         ],
+        "sentient_harm_explanation": "For every laying hen, two animals die: the hen herself, killed at the end of lay, and about one male chick. Male chicks of egg-laying breeds don't lay eggs and grow too slowly to be worth raising for meat, so they are killed at the hatchery on the day they hatch. Numbers used per hen: about 20.6 kg of eggs over her life, about 1 male chick culled (slightly less in the EU, where some eggs are sexed before hatching), and roughly 1.5 years in captivity for the hen versus about 1 day for the chick.",
         "nutrition": [
             {
                 "value": {
@@ -77,6 +78,41 @@
                     "url": "https://lohmann-breeders.com/strains/lohmann-brown-classic-cage-housing/",
                     "title": "Lohmann Breeders — LOHMANN BROWN-CLASSIC Cage Housing Performance Data",
                     "note": "Egg — lifetime_output_kg: 20.63 kg total egg mass per hen housed to 72 weeks of age (324 eggs), per official LOHMANN BROWN-CLASSIC cage management data. Lohmann Brown and ISA Brown are the dominant commercial brown-egg layer strains globally; this figure represents the standard commercial 72-week cage production cycle end-of-lay benchmark. Confidence 4 — official breed performance standard from primary genetics company."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 1.02,
+                "confidence": 3,
+                "source": {
+                    "id": 245,
+                    "url": "https://faunalytics.org/global-chick-culling-2019-2024/",
+                    "title": "Faunalytics — Nearly Eight Billion Per Year And Counting: Global Chick Culling, 2019–2024",
+                    "note": "Egg — offspring_deaths_per_animal (world): male chicks culled per hen housed. Sex ratio at hatch is ~1:1, so one male is hatched per female chick; Faunalytics assumes 3.5% of pullets die before lay, so per hen housed (the basis of lifetime_output_kg) that is 1/(1−0.035) = 1.036 males. In-ovo sexing (source 246) removes male embryos before hatch for ~130 million EU hens (~40% of the EU flock, mid-2026), which is only ~1.5% of ~8.65 billion laying hens worldwide: 1.036 × (1 − 0.015) ≈ 1.02. Embryos removed by in-ovo sexing (typically day 9–13 of incubation) are not counted as deaths. Some layer-strain males in parts of Asia are reared for meat rather than culled at hatch; they still die, so the count is unchanged, only their time alive is longer. Confidence 3 — model derivation from published assumptions."
+                }
+            },
+            {
+                "value": 1.03,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 245,
+                    "url": "https://faunalytics.org/global-chick-culling-2019-2024/",
+                    "title": "Faunalytics — Nearly Eight Billion Per Year And Counting: Global Chick Culling, 2019–2024",
+                    "note": "Egg — offspring_deaths_per_animal (US): same derivation as the world value, 1/(1−0.035) = 1.036 males per hen housed, reduced by US in-ovo sexing adoption, which is below 1% of the ~310 million-hen commercial flock (source 246): 1.036 × 0.99 ≈ 1.03. Cross-check: USDA NASS reports 638 million egg-type chicks hatched in 2023 (~320 million males) for a ~310 million-hen flock. US is slightly higher than world because in-ovo sexing adoption is concentrated in the EU (Germany and France ban chick culling). Confidence 3."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 0.003,
+                "confidence": 3,
+                "source": {
+                    "id": 247,
+                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7008794/",
+                    "title": "EFSA AHAW Panel (2019) — Killing for purposes other than slaughter: poultry (EFSA Journal 17(11):5850)",
+                    "note": "Egg — offspring_captivity_years: male layer chicks are sexed and killed (maceration or CO2 gas) in the hatchery on the day they hatch, so time alive is ~1 day = 1/365 ≈ 0.003 years. Incubation time inside the egg (~21 days) is not counted. Single figure applies to both world and US; no separate US value because hatchery practice is the same."
                 }
             }
         ],
