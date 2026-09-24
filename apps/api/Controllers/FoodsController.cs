@@ -15,10 +15,14 @@ public class FoodsController : ControllerBase
     /// <summary>
     /// Returns all raw food rows from the normalized DB.
     /// Scoring and slider math run client-side in the Rust WASM module.
+    /// region selects which sourced values were used: world (default), us, or avg.
     /// </summary>
     [HttpGet]
-    public ActionResult<IEnumerable<FoodRow>> Get()
+    public ActionResult<IEnumerable<FoodRow>> Get([FromQuery] string region = "world")
     {
-        return Ok(_db.LoadFoods());
+        region = region.ToLowerInvariant();
+        if (!DbService.Regions.Contains(region))
+            return BadRequest($"Unknown region '{region}'. Use one of: {string.Join(", ", DbService.Regions)}");
+        return Ok(_db.LoadFoods(region));
     }
 }

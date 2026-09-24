@@ -5,13 +5,14 @@ Port of packages/data-pipeline/src/types.ts (originally lib/types.ts).
 These are TypedDicts so they map cleanly to/from JSON without extra parsing.
 """
 
-from typing import TypedDict, Literal
+from typing import TypedDict, Literal, NotRequired
 
 
 class SourcedNumber(TypedDict):
     value: float
     source_id: int
     confidence: int
+    region: NotRequired[Literal["US", "world"]]  # optional; untagged values count as world
 
 
 class NutritionValue(TypedDict):

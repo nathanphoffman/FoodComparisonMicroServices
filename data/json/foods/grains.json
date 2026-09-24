@@ -384,6 +384,7 @@
             {
                 "value": 2.3,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 12,
                     "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
@@ -396,6 +397,7 @@
             {
                 "value": 160,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 12,
                     "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
@@ -576,6 +578,7 @@
             {
                 "value": 4200,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 15,
                     "url": "https://www.nass.usda.gov/",

@@ -49,6 +49,31 @@ Almost every numeric field in the schema is stored as an **array of sourced valu
 ]
 ```
 
+### Optional `region` tag
+
+A SourcedValue may carry `"region": "US"` or `"region": "world"`.  Untagged values count as **world**.
+
+```jsonc
+"yield_kg_ha": [
+  { "value": 790,  "confidence": 4, "source": { … FAO global … } },                 // world
+  { "value": 2200, "confidence": 4, "region": "US", "source": { … USDA NASS … } }  // US
+]
+```
+
+The pipeline builds `foods_normalized` once per region, and the UI has a dropdown to pick one:
+
+| Region  | Values used |
+|---------|-------------|
+| `world` | Untagged / `"world"` values only |
+| `us`    | `"US"` values; falls back to world values when the field has no US value |
+| `avg`   | 50/50 mean of the world average and the US average |
+
+Rules:
+- Only add a US value where it **actually differs** from the world value (typically `yield_kg_ha`, the water fields, and animal emissions / pasture).  Nutrition, neuron counts, body weights etc. stay untagged.
+- Never overwrite an existing world value with a US number — add a separate US-tagged entry next to it.
+- Keep units and basis identical between the world and US entries (e.g. both dry weight, both shelled).
+- For foods the US mostly imports (banana, mango, coconut, …), leave them world-only.
+
 ---
 
 ## Conventions

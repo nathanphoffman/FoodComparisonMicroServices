@@ -118,6 +118,7 @@
             {
                 "value": 1.4,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 52,
                     "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",

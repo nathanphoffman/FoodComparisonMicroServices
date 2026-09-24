@@ -19,6 +19,7 @@ class FoodNormalized:
     type: Literal["plant", "animal"]
     tags: list[str]
     human_food: Literal[0, 1]
+    region: str = "world"
     # nutrition
     calories: float | None = None
     fat: float | None = None
@@ -66,7 +67,7 @@ class FoodNormalized:
     def to_db_params(self) -> tuple[int | float | str | None, ...]:
         """Returns all fields as a flat tuple matching the INSERT SQL column order."""
         return (
-            self.food_id, self.is_feed,
+            self.food_id, self.is_feed, self.region,
             self.slug, self.name, self.type,
             json.dumps(self.tags), self.human_food,
             self.calories, self.fat, self.sat_fat, self.protein, self.fiber,

@@ -17,7 +17,7 @@ from .types.raw_pesticide import RawPesticide
 from .types.raw_plant_pesticide import RawPlantPesticide
 
 INSERT_SQL = """INSERT INTO foods_normalized (
-  food_id, is_feed, slug, name, type, tags, human_food,
+  food_id, is_feed, region, slug, name, type, tags, human_food,
   calories, fat, sat_fat, protein, fiber,
   sodium, carbs, sugar, cholesterol, trans_fat,
   yield_kg_ha, water_per_kg, green_water_per_kg, blue_water_per_kg, grey_water_per_kg,
@@ -30,7 +30,7 @@ INSERT_SQL = """INSERT INTO foods_normalized (
   pasture_green_water_l_per_ha, native_fraction, bycatch_amount, bycatch_food_slug,
   ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output,
   availability_gg
-) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
+) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
 
 
 def insert(
@@ -41,8 +41,9 @@ def insert(
     plant_pesticides: list[PlantPesticide],
     pesticides: list[Pesticide],
     animal_feed: list[AnimalFeed],
+    region: str,
 ) -> None:
-    """Builds and inserts all normalized rows into the foods_normalized table."""
+    """Builds and inserts all normalized rows for one region into the foods_normalized table."""
     plant_by_food_id, plant_by_plant_id = _index_plants(plants)
     animal_by_food_id = _index_animals(animals)
     pesticide_by_id = _index_pesticides(pesticides)
@@ -58,9 +59,12 @@ def insert(
             plant_by_plant_id, plant_pesticides_by_plant_id, pesticide_by_id
         )
         raw_food = RawFood(food, raw_plant, raw_animal)
-        connection.execute(INSERT_SQL, raw_food.to_normalized().to_db_params())
+        food_row = raw_food.to_normalized()
+        food_row.region = region
+        connection.execute(INSERT_SQL, food_row.to_db_params())
         feed_row = raw_food.to_feed_normalized()
         if feed_row:
+            feed_row.region = region
             connection.execute(INSERT_SQL, feed_row.to_db_params())
 
 

@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS foods_normalized (
     food_id   INTEGER NOT NULL,
     is_feed   INTEGER NOT NULL DEFAULT 0,  -- 0 = food itself, 1 = feed crop aggregate
+    region    TEXT    NOT NULL DEFAULT 'world',  -- 'world' | 'us' | 'avg' — which region's sourced values were used
 
     slug       TEXT    NOT NULL,
     name       TEXT    NOT NULL,
@@ -61,5 +62,5 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     -- Global supply availability
     availability_gg REAL,   -- total world supply available, in gigagrams (Gg); NULL if not yet sourced
 
-    PRIMARY KEY (food_id, is_feed)
+    PRIMARY KEY (food_id, is_feed, region)
 );

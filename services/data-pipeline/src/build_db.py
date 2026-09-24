@@ -22,6 +22,7 @@ from .lib.insert_plant_kills import insert as insert_plant_kills
 from .lib.insert_plant_pesticides import insert as insert_plant_pesticides
 from .lib.insert_animal_feed import insert as insert_animal_feed
 from .lib.insert_foods_normalized import insert as insert_foods_normalized
+from .lib.regions import REGIONS, resolve_regions
 
 # Paths are derived from this file's location:
 # build_db.py → src/ → data-pipeline/ → services/ → project root
@@ -116,16 +117,20 @@ def _populate_normalized_database(
     pesticides: list[Pesticide],
     category_food_data: CategoryData,
 ) -> None:
-    """Inserts all pre-computed normalized rows into the normalized database."""
-    insert_foods_normalized(
-        connection,
-        foods=category_food_data.foods,
-        plants=category_food_data.plants,
-        animals=category_food_data.animals,
-        plant_pesticides=category_food_data.plant_pesticides,
-        pesticides=pesticides,
-        animal_feed=category_food_data.animal_feed,
-    )
+    """Inserts all pre-computed normalized rows into the normalized database, once per region."""
+    for region in REGIONS:
+        region_food_data: CategoryData = resolve_regions(category_food_data, region)
+        region_pesticides: list[Pesticide] = resolve_regions(pesticides, region)
+        insert_foods_normalized(
+            connection,
+            foods=region_food_data.foods,
+            plants=region_food_data.plants,
+            animals=region_food_data.animals,
+            plant_pesticides=region_food_data.plant_pesticides,
+            pesticides=region_pesticides,
+            animal_feed=region_food_data.animal_feed,
+            region=region,
+        )
 
 
 def _write_databases(

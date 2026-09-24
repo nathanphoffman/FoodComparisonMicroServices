@@ -35,11 +35,15 @@ public class DbService
                f.availability_gg
         FROM   foods_normalized f
         LEFT JOIN foods_normalized feed
-               ON feed.food_id = f.food_id AND feed.is_feed = 1
+               ON feed.food_id = f.food_id AND feed.is_feed = 1 AND feed.region = f.region
         LEFT JOIN foods_normalized bycatch_animal
                ON bycatch_animal.slug = f.bycatch_food_slug AND bycatch_animal.is_feed = 0
-        WHERE  f.is_feed = 0
+              AND bycatch_animal.region = f.region
+        WHERE  f.is_feed = 0 AND f.region = @Region
         """;
+
+    // Regions built by the data pipeline (see services/data-pipeline/src/lib/regions.py)
+    public static readonly string[] Regions = ["world", "us", "avg"];
 
     public DbService(IConfiguration config, IWebHostEnvironment env)
     {
@@ -68,9 +72,9 @@ public class DbService
             .First();
     }
 
-    public IEnumerable<FoodRow> LoadFoods()
+    public IEnumerable<FoodRow> LoadFoods(string region)
     {
         using var conn = new SqliteConnection($"Data Source={_dbPath};Mode=ReadOnly");
-        return conn.Query<FoodRow>(Query);
+        return conn.Query<FoodRow>(Query, new { Region = region });
     }
 }

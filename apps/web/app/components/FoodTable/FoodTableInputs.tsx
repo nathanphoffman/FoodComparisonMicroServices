@@ -29,6 +29,18 @@ export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; 
 
 export type ColConfig = (typeof COLUMN_CONFIG)[number];
 
+// ── Data region ───────────────────────────────────────────────────────────────
+
+export type DataRegion = 'world' | 'us' | 'avg';
+
+export const DEFAULT_DATA_REGION: DataRegion = 'world';
+
+const DATA_REGION_OPTIONS: { value: DataRegion; label: string }[] = [
+    { value: 'world', label: 'World' },
+    { value: 'us',    label: 'US' },
+    { value: 'avg',   label: 'Average of World + US' },
+];
+
 // ── Slider values ─────────────────────────────────────────────────────────────
 
 export type SliderValues = {
@@ -69,6 +81,8 @@ type Props = {
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
     foods: { slug: string; name: string }[];
+    dataRegion: DataRegion;
+    onDataRegionChange: (region: DataRegion) => void;
 };
 
 export function FoodTableInputs({
@@ -77,6 +91,8 @@ export function FoodTableInputs({
     onDismissScoringError,
     onActiveColsChange,
     foods,
+    dataRegion,
+    onDataRegionChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const [visibleColumns, setVisible]    = useState<Set<ColumnKey>>(
@@ -193,6 +209,18 @@ export function FoodTableInputs({
                 </div>
             )}
             <div className="flex justify-end items-center gap-3 mb-2" ref={toggleRef}>
+                <div className="flex items-center gap-2 text-sm text-neutral-500">
+                    <span>Data region</span>
+                    <select
+                        value={dataRegion}
+                        onChange={e => onDataRegionChange(e.target.value as DataRegion)}
+                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                    >
+                        {DATA_REGION_OPTIONS.map(option => (
+                            <option key={option.value} value={option.value}>{option.label}</option>
+                        ))}
+                    </select>
+                </div>
                 <div className="flex items-center gap-2 text-sm text-neutral-500">
                     <span>Compare vs.</span>
                     <select

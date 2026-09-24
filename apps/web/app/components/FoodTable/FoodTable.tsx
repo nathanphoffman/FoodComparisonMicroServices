@@ -20,8 +20,8 @@ import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTab
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
-import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableInputs';
-import type { ColConfig, SliderValues } from './FoodTableInputs';
+import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableInputs';
+import type { ColConfig, SliderValues, DataRegion } from './FoodTableInputs';
 import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -36,6 +36,7 @@ export function FoodTable() {
     const [error,    setError]    = useState<string | null>(null);
 
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
+    const [dataRegion, setDataRegion] = useState<DataRegion>(DEFAULT_DATA_REGION);
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
@@ -48,7 +49,7 @@ export function FoodTable() {
         () => COLUMN_CONFIG.filter(column => column.defaultVisible)
     );
 
-    // ── Fetch raw foods from C# API on mount ─────────────────────────────────
+    // ── Fetch raw foods from C# API on mount and whenever the data region changes ──
 
     useEffect(()=>{
         if (scored && scored.size) setLoadingScore(false);
@@ -59,7 +60,7 @@ export function FoodTable() {
         async function fetchFoods() {
             try {
                 await loadWasm();
-                const response = await fetch(`${API_URL}/api/foods`);
+                const response = await fetch(`${API_URL}/api/foods?region=${dataRegion}`);
                 if (!response.ok) throw new Error(`API error ${response.status}`);
                 const foods: RawFood[] = await response.json();
                 if (cancelled) return;
@@ -72,7 +73,7 @@ export function FoodTable() {
         }
         fetchFoods();
         return () => { cancelled = true; };
-    }, []);
+    }, [dataRegion]);
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
@@ -110,6 +111,8 @@ export function FoodTable() {
                 onDismissScoringError={() => setScoringError(null)}
                 onActiveColsChange={setActiveCols}
                 foods={rawFoods}
+                dataRegion={dataRegion}
+                onDataRegionChange={setDataRegion}
             />
      
             <Table headers={headers}>

@@ -46,6 +46,7 @@
             {
                 "value": 3000,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 8,
                     "url": "https://ourworldindata.org/grapher/almond-yields",
@@ -58,6 +59,7 @@
             {
                 "value": 10240,
                 "confidence": 4,
+                "region": "US",
                 "source": {
                     "id": 7,
                     "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
@@ -90,6 +92,7 @@
             {
                 "value": 2321,
                 "confidence": 2,
+                "region": "US",
                 "source": {
                     "id": 7,
                     "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
@@ -112,6 +115,7 @@
             {
                 "value": 4026,
                 "confidence": 2,
+                "region": "US",
                 "source": {
                     "id": 7,
                     "url": "https://www.sciencedirect.com/science/article/pii/S1470160X17308592",
