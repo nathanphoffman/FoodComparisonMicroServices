@@ -17,3 +17,5 @@
 2026-09-24 13:57:10 | tofu: emissions_per_kg world 3.16 (OWID/P&N tofu, source 71) and US 0.98 (Mejia et al. 2018, source 222) directly sourced; per-ha fields and pesticides copied from soy with confidence lowered by 1
 2026-09-24 13:57:10 | tofu: availability_gg 44100 is an upper-bound derivation (OWID 7% of ~350 Mt soy to direct food x 1.8, source 223), confidence 1, flagged for review
 2026-09-24 13:57:10 | Added sources 221-224 to sources.json, appended tofu note to source 71; added tofu to foods/index.json legumes list; in-memory pipeline dry run OK (DB not rebuilt)
+2026-09-24 17:33:01 | soy: added farm_gate_emissions_per_kg as SOYBEAN MEAL (economic allocation meal/oil): world 1.8 (derived from P&N soybean-oil row, LUC+farm+crushing; src 270, conf 2) and 1.66 (Springer 2026 global composite; src 275, conf 3); US 0.36 (Adom 2012; src 273, conf 3) and 0.33 (Blonk/USSEC whole beans incl LUC -> meal; src 276, conf 2)
+2026-09-24 17:33:01 | soy: appended CORRECTION to emissions_per_kg notes (srcs 55, 71) — 3.0 not verifiable, P&N has no raw-soybean row (implied ~2.25; Springer 2026 composite 1.10); confidence 3 -> 2

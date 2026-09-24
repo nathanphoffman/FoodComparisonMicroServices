@@ -267,6 +267,18 @@ Plants get environmental impact data for crop production.
   "emissions_per_kg": [...], // SourcedValue  kg CO₂e / kg crop output
                              // Total GHG emissions from crop production
                              //   (fertilizer N₂O, farm energy, land-use change).
+                             // Poore & Nemecek values are cradle-to-RETAIL (they also include
+                             //   processing, transport, packaging, retail and losses).
+
+  "farm_gate_emissions_per_kg": [...], // SourcedValue  kg CO₂e / kg crop as fed to animals
+                             // Crop emissions up to the farm gate, INCLUDING land-use change,
+                             //   EXCLUDING processing, packaging, transport-to-retail, retail.
+                             // Only needed for crops used as animal feed. The pipeline uses it
+                             //   (instead of emissions_per_kg) when summing an animal's feed
+                             //   emissions, so animals are not charged for retail stages their
+                             //   feed never goes through. Falls back to emissions_per_kg if [].
+                             // For processed feeds (soybean meal, fishmeal) include the milling /
+                             //   reduction step, since the animal eats the processed product.
 
   // --- Per-pesticide breakdown ---
   "pesticides": [
@@ -359,6 +371,11 @@ bycatch references, and feed composition.
   "co2_kg_per_kg_output": [...],   // SourcedValue  kg CO₂ / kg output
                                    // Direct CO₂ from on-farm energy, processing, transport.
                                    // Excludes: land-use change, feed-crop production.
+                                   // Emissions are computed as CO₂ + CH₄×28 + N₂O×265 + feed
+                                   //   emissions, and the animal's emissions_per_kg is NOT used —
+                                   //   so the three gas fields must not include feed-crop
+                                   //   emissions (e.g. fertiliser N₂O), or they get counted twice.
+                                   // The pipeline warns when that sum is far from emissions_per_kg.
 
   // --- Feed composition ---
   "feed": [

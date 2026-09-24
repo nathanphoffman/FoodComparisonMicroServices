@@ -1,10 +1,19 @@
 use crate::models::{ScoredRow, SliderQuery};
 
+/// Nutrition score the worst food in the batch is shifted up to, so every
+/// nutrition score is positive and can be compared as a ratio.
+const NUTRITION_FLOOR: f64 = 1.0;
+
 pub struct DimensionCaps {
     pub emissions:     f64,
     pub land_use:      f64,
     pub water:         f64,
     pub sentient_harm: f64,
+    /// Added to every nutrition score before taking the food / reference ratio.
+    /// Nutrition scores can be negative (saturated fat outweighs protein + fiber),
+    /// and a plain ratio can't handle that — negative foods used to be skipped,
+    /// which hid their bad nutrition. 0 when every score is already ≥ the floor.
+    pub nutrition_offset: f64,
 }
 
 impl DimensionCaps {
@@ -14,8 +23,18 @@ impl DimensionCaps {
             land_use:      highest_ratio_in_batch(rows, reference.land_use,      |r| r.land_use),
             water:         highest_ratio_in_batch(rows, reference.water,         |r| r.water),
             sentient_harm: highest_ratio_in_batch(rows, reference.sentient_harm, |r| r.sentient_harm),
+            nutrition_offset: nutrition_offset(rows),
         }
     }
+}
+
+// Shift that lifts the lowest nutrition score in the batch to NUTRITION_FLOOR.
+fn nutrition_offset(rows: &[ScoredRow]) -> f64 {
+    let lowest = rows.iter()
+        .filter_map(|r| r.nutrition_score)
+        .filter(|score| score.is_finite())
+        .fold(f64::INFINITY, f64::min);
+    if lowest.is_finite() { (NUTRITION_FLOOR - lowest).max(0.0) } else { 0.0 }
 }
 
 // Returns the highest reference/food ratio across all rows for one dimension.
@@ -65,14 +84,16 @@ pub fn compute_improvement(
     }
 
     // Higher-is-better: ratio = food / reference.
-    for (food_score, reference_score, priority) in [
-        (food.nutrition_score, reference.nutrition_score, query.nutrition_priority),
-        (food.availability,    reference.availability,    query.availability_priority),
-    ] {
-        if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
-            if food_score > 0.0 && reference_score > 0.0 {
-                weighted_ratios.push((food_score / reference_score, priority));
-            }
+    // Nutrition is shifted by the batch offset so negative scores count as bad
+    // rather than being dropped. The floor guards the meal row and rounding.
+    if let (Some(food_score), Some(reference_score)) = (food.nutrition_score, reference.nutrition_score) {
+        let shifted_food      = (food_score      + caps.nutrition_offset).max(NUTRITION_FLOOR);
+        let shifted_reference = (reference_score + caps.nutrition_offset).max(NUTRITION_FLOOR);
+        weighted_ratios.push((shifted_food / shifted_reference, query.nutrition_priority));
+    }
+    if let (Some(food_score), Some(reference_score)) = (food.availability, reference.availability) {
+        if food_score > 0.0 && reference_score > 0.0 {
+            weighted_ratios.push((food_score / reference_score, query.availability_priority));
         }
     }
 

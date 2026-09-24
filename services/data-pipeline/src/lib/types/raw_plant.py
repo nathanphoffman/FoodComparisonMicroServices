@@ -40,10 +40,17 @@ class RawPlant:
         self.pesticide_kg_ha         = SourcedArray(data.get("pesticide_kg_ha"))
         self.fertilizer_kg_ha        = SourcedArray(data.get("fertilizer_kg_ha"))
         self.emissions_per_kg        = SourcedArray(data.get("emissions_per_kg"))
+        self.farm_gate_emissions_per_kg = SourcedArray(data.get("farm_gate_emissions_per_kg"))
         self.tillage_events_per_year = SourcedArray(data.get("tillage_events_per_year"))
         self.co2_capture_kg_ha_yr    = SourcedArray(data.get("co2_capture_kg_ha_yr"))
         self.cooked_weight_ratio     = SourcedArray(data.get("cooked_weight_ratio"))
         self._pesticide_associations = pesticide_associations
+
+    @property
+    def feed_emissions_per_kg(self) -> float | None:
+        """Emissions charged when this crop is fed to animals: farm-gate if sourced,
+        otherwise the (cradle-to-retail) food value."""
+        return self.farm_gate_emissions_per_kg.weighted_average() or self.emissions_per_kg.weighted_average()
 
     @property
     def avg_pesticide_kg_per_kg_food(self) -> float | None:

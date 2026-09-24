@@ -23,6 +23,7 @@ from .lib.insert_plant_pesticides import insert as insert_plant_pesticides
 from .lib.insert_animal_feed import insert as insert_animal_feed
 from .lib.insert_foods_normalized import insert as insert_foods_normalized
 from .lib.regions import REGIONS, resolve_regions
+from .lib.check_animal_emissions import check_animal_emissions
 
 # Paths are derived from this file's location:
 # build_db.py → src/ → data-pipeline/ → services/ → project root
@@ -80,6 +81,7 @@ def main() -> None:
     sources, pesticides, category_food_data = _load_json_data()
     _populate_source_database(source_connection, sources, pesticides, category_food_data)
     _populate_normalized_database(normalized_connection, pesticides, category_food_data)
+    check_animal_emissions(normalized_connection, JSON_DIR, REGIONS)
     _write_databases(source_connection, normalized_connection, version)
 
 

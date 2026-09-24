@@ -149,7 +149,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Milk — total GHG: 3.15 kg CO2e/kg (global median, cradle-to-retail). Includes enteric fermentation CH4, manure N2O, feed crop production emissions, on-farm energy, processing, transport, and retail. System boundary: full supply chain (not farm-gate only). This is the authoritative P&N 2018 value for fluid cow milk."
+                    "note": "Milk — total GHG: 3.15 kg CO2e/kg (global mean — OWID labels the P&N series 'global average'; not a median — cradle-to-retail). Includes enteric fermentation CH4, manure N2O, feed crop production emissions, on-farm energy, processing, transport, and retail. System boundary: full supply chain (not farm-gate only). This is the authoritative P&N 2018 value for fluid cow milk. P&N stage split (OWID supply-chain chart, source 72): land-use change 0.51, farm 1.51, animal feed 0.24, processing 0.15, transport 0.09, retail 0.27, packaging 0.10, losses 0.27. CORRECTION 2026-09-24: note previously called 3.15 a 'global median'; OWID publishes it as the global average (mean)."
                 }
             },
             {
@@ -159,19 +159,52 @@
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Milk — total GHG: 3.15 kg CO2e/kg confirmed from OWID grapher CSV download of the Poore & Nemecek 2018 dataset. The OWID chart directly publishes P&N 2018 data; the CSV value for milk is 3.15, corroborating the P&N source. Full supply-chain cradle-to-retail boundary."
+                    "note": "Milk — total GHG: 3.15 kg CO2e/kg confirmed from OWID grapher CSV download of the Poore & Nemecek 2018 dataset. The OWID chart directly publishes P&N 2018 data; the CSV value for milk is 3.15, corroborating the P&N source. Full supply-chain cradle-to-retail boundary. This is the global average (mean), not a median."
+                }
+            },
+            {
+                "value": 1.8,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: derived cradle-to-retail. Pelton et al. 2025 farm gate 1.38 kg CO2e/kg FPCM (milk-allocated, incl. feed LUC, AR6) + raw-milk transport, processing & packaging 0.16 (Pelton 2026, source 293) + retail losses ~0.21 and distribution/retail ~0.08 (Thoma 2013 12% retail loss, source 294) = ~1.8."
+                }
+            },
+            {
+                "value": 1.64,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 294,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0958694612001975",
+                    "title": "Thoma et al. (2013) — Greenhouse gas emissions from milk production and consumption in the United States: a cradle-to-grave LCA circa 2008 (Int. Dairy J. 31:S3)",
+                    "note": "US: Thoma et al. 2013 cradle-to-grave 2.05 kg CO2e per kg milk CONSUMED (circa 2008), which includes a 20% consumer loss; per kg purchased 2.05 x 0.8 = 1.64 (still includes consumer refrigeration and packaging disposal). Farm gate 1.23 kg CO2e/kg FPCM; 72% of emissions before the farm gate."
                 }
             }
         ],
         "pasture_ha_per_kg_output": [
             {
-                "value": 0.0001,
-                "confidence": 2,
+                "value": 0.00066,
+                "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Milk — land use: global median ~0.0001 ha per kg milk output. Dairy is substantially more land-efficient per unit output than beef; value reflects median across 38,700 farms. Includes both permanent pasture and arable land for feed crops."
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "CORRECTION 2026-09-24: replaced 0.0001 ha/kg (source 55) — it was ~1 m2 per kg milk, close to P&N's 10th-percentile farm (1.11 m2/kg) rather than a typical value (P&N milk mean 8.95, median 2.1 m2/kg), and its note said it included arable feed land, which the feed rows already count (double count). It also left out fresh grass grazing (~29% of the world dairy diet). This field is now GRAZING LAND ONLY (permanent pasture/meadow); feed-crop land comes from the feed rows. New value from Poore & Nemecek 2018 Data S2, sheet 'Results - Global Totals', row Milk: land use per kg (Food Balance Sheet unit, 2009-11) = arable 1.327 + fallow 0.402 + permanent pasture 6.275 m2/kg. Grazing = permanent pasture 6.275 m2/kg. Allocation: P&N uses economic allocation between milk and dairy-herd beef; from the same sheet, milk 6.275 x 470,267 kt = 295 Mha and dairy-herd beef 13.667 x 31,425 kt = 43 Mha, so milk carries ~87.3% of dairy-herd pasture. Rescaled to the GLEAM ~0.92 milk share used for the gas and feed fields (source 290): 6.275 x 0.92 / 0.873 = 6.61 m2/kg = 0.00066 ha/kg. Check: 6.6 grazing + ~2.35 feed-crop land (feed rows) = ~8.95 m2/kg, equal to P&N's resampled mean (8.95). Caveats: P&N say their pasture is biased LOW (no LCAs from much of Africa and Central Asia); 'permanent pasture' includes hay meadows, so it may partly overlap the grass-hay feed row (up to ~1 m2/kg)."
+                }
+            },
+            {
+                "value": 0.0002,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "CORRECTION 2026-09-24: milk had no US grazing value (the US view fell back to the wrong world 0.0001). US value from Eshel et al. 2014 SI workbook (sheets 'PartitioningResources' and 'PartitioningPerCal'): US dairy uses 49.2 million acres of pasture/range per year (2000-2010 mean, ~20.0 Mha incl. the 100.5% domestic-disappearance adjustment; uncertainty +-57%), i.e. 6.9% of US grazing feed. US milk output over the same period (same workbook, USDA 2001-2010 mean) = 179,308 million lb = 81.3 Mt -> 2.46 m2 grazing land per kg milk. Eshel charge all dairy-herd feed to dairy products (the workbook computes an 8.3% culled-dairy share but does not use it), so Pelton 2025's 81% milk allocation (source 292, used for the US gas and feed fields) is applied: 2.46 x 0.81 = 1.99 m2/kg = 0.0002 ha/kg. Lower than world because most US milk comes from confined herds (GLEAM N. America ration: fresh grass 14.4% of DM). Eshel's pasture counts all US grassland pasture, range and grazed forest by feed share, similar to P&N's FAOSTAT-type area. 2000-2010 data; US milk output is ~26% higher now (2023), so today's value may be somewhat lower."
                 }
             }
         ],
@@ -211,67 +244,100 @@
         ],
         "ch4_kg_per_kg_output": [
             {
-                "value": 0.24,
+                "value": 0.056,
                 "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Milk — CH4: ~0.24 kg CH4/kg milk at farm gate. Includes enteric fermentation (dominant source, ~70–80% of dairy CH4) and manure management. Global median across production systems; high variability — intensive systems lower, extensive grazing systems higher. System boundary: cradle to farm gate."
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.24 (attributed to Poore & Nemecek 2018) and 0.22 (attributed to FAO GLEAM v3) kg CH4/kg milk — neither source supports them: at GWP 28, 0.24 kg CH4 alone is 6.7 kg CO2e, twice P&N's entire 3.15 kg CO2e/kg milk cradle-to-retail total (0.24 may be FAO 2010's 2.4 kg CO2e/kg with a slipped decimal — unconfirmed). New value from FAO 2013 GLEAM ruminant report: global cow milk 2.8 kg CO2e/kg FPCM (cradle to farm gate, protein allocation between milk and dairy-herd meat, GWP CH4=25); CH4 = 50% of total (enteric 46.5%, manure ~3.8%). 0.50 x 2.8 / 25 = 0.056 kg CH4/kg FPCM (~ per kg raw milk; FPCM is standardised to 4.0% fat / 3.3% protein). Converted to gas mass with the source's own GWP100; the app re-weights with CH4=28, N2O=265."
                 }
             },
             {
-                "value": 0.22,
+                "value": 0.05,
                 "confidence": 3,
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Milk — CH4: ~0.22 kg CH4/kg milk. GLEAM v3.0 global weighted average across all dairy production systems; covers enteric fermentation and manure management. Slightly lower than P&N due to different production system weighting. System boundary: on-farm (farm gate)."
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "CORRECTION 2026-09-24: replaces the 0.24/0.22 entries (see first entry). FAO 2010 dairy-sector LCA: 2.4 kg CO2e/kg FPCM global average (milk-allocated, GWP CH4=25), methane ~52% of total. 0.52 x 2.4 / 25 = 0.050 kg CH4/kg FPCM. Converted to gas mass with the source's own GWP100; the app re-weights with CH4=28, N2O=265."
+                }
+            },
+            {
+                "value": 0.038,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "CORRECTION 2026-09-24: replaces the 0.24/0.22 entries (see first entry). Consistency check against Poore & Nemecek's own stage split (OWID): milk 'Farm' stage = 1.51 kg CO2e/kg (enteric + manure + on-farm energy; P&N GWP CH4=34). Even if the whole farm stage were CH4 that is only 1.51/34 = 0.044 kg CH4/kg; assuming ~85% of it is CH4 (rest manure N2O and energy) gives ~0.038. Derived bound, hence confidence 2."
+                }
+            },
+            {
+                "value": 0.021,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: Pelton et al. 2025 (US milk 2020, 1.38 kg CO2e/kg FPCM farm gate, biophysical allocation 81% milk / 19% meat, AR6 GWP biogenic CH4=27). Enteric 27% of total = 0.373 kg CO2e -> 0.0138 kg CH4; manure 19% of total, of which 73% CH4 = 0.191 kg CO2e -> 0.0071 kg CH4. Sum 0.0209 kg CH4/kg FPCM (US raw milk ~3.95% fat, so FPCM ~ per kg milk). Converted to gas mass with the source's own GWP100; the app re-weights with CH4=28, N2O=265."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.004,
-                "confidence": 3,
+                "value": 0.0019,
+                "confidence": 2,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Milk — N2O: ~0.004 kg N2O/kg milk at farm gate. Includes manure management (direct and indirect N2O) and some feed-crop N fertiliser emissions allocated to the milk product. Global median. System boundary: cradle to farm gate."
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.004 (attributed to Poore & Nemecek 2018 and to FAO GLEAM v3) — about 3x too high, and its note said it included feed-crop fertiliser N2O, which the feed rows already count (double counting). New value from FAO 2013 GLEAM, manure N2O only: GLEAM's global dairy split (Figure 5) gives N2O ~29% of 2.8 kg CO2e/kg FPCM; excluding 'fertiliser & crop residues' N2O (counted in feed rows) leaves applied & deposited manure (~17%) + manure-storage N2O (~5%) ~ 18-22% -> 0.20 x 2.8 / 298 = 0.0019 kg N2O/kg FPCM. The pie-chart labels are hard to match exactly, hence confidence 2. Converted to gas mass with the source's own GWP100; the app re-weights with CH4=28, N2O=265."
                 }
             },
             {
-                "value": 0.004,
-                "confidence": 3,
+                "value": 0.0006,
+                "confidence": 2,
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Milk — N2O: ~0.004 kg N2O/kg milk. GLEAM v3.0 global weighted average; covers direct manure N2O and indirect emissions from volatilization and leaching. Consistent with P&N estimate. System boundary: on-farm (farm gate)."
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "CORRECTION 2026-09-24: replaces the 0.004 entries (see first entry). Consistency check against Poore & Nemecek's stage split (OWID): Farm stage 1.51 kg CO2e/kg minus CH4 (~0.038 x 34 = 1.29) minus on-farm energy (~0.05) leaves ~0.17 kg CO2e for manure N2O -> 0.17 / 298 = 0.0006 kg N2O/kg milk. Derived bound, confidence 2."
+                }
+            },
+            {
+                "value": 0.00026,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: Pelton et al. 2025 — manure = 19% of 1.38 kg CO2e/kg FPCM, 27% of that N2O = 0.071 kg CO2e -> / 273 (AR6) = 0.00026 kg N2O/kg FPCM. Manure/pasture N2O only; feed-crop fertiliser N2O sits in Pelton's feed categories and in our feed rows. Converted to gas mass with the source's own GWP100; the app re-weights with CH4=28, N2O=265."
                 }
             }
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.08,
+                "value": 0.94,
                 "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Milk — CO2: ~0.08 kg CO2/kg milk. On-farm energy use (electricity, fuel for milking, cooling, manure management equipment). This is the non-CH4/non-N2O CO2 component only; the dominant GHG for milk is CH4 from enteric fermentation. System boundary: cradle to farm gate."
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.08 (attributed to Poore & Nemecek 2018) and 0.07 (attributed to GLEAM v3) — both covered only on-farm energy, so every stage after the farm gate was missing and milk was not comparable to other foods' cradle-to-retail totals. New value = on-farm energy ~0.05 kg CO2/kg (GLEAM 2013 Table E9 direct on-farm energy factors: 0.02-0.03 developing, 0.05-0.07 OECD; source 290) + Poore & Nemecek post-farm stages for milk (OWID): processing 0.154 + transport 0.093 + retail 0.265 + packaging 0.100 + supply-chain losses 0.274 = 0.886 kg CO2e/kg. 0.05 + 0.886 = 0.94. Post-farm stages are stored here as CO2e (they include small refrigerant and non-CO2 amounts). Excludes feed-crop production and land-use change (feed rows)."
                 }
             },
             {
-                "value": 0.07,
-                "confidence": 3,
+                "value": 0.54,
+                "confidence": 2,
+                "region": "US",
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Milk — CO2: ~0.07 kg CO2/kg milk. GLEAM v3.0 on-farm energy CO2; slightly lower than P&N due to different energy use assumptions. Covers on-farm fossil fuel combustion and electricity. System boundary: on-farm (farm gate)."
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "US: on-farm energy 5% + feed milling/transport ~1.7% of 1.38 kg CO2e/kg FPCM (Pelton 2025, source 292) = 0.092; post-farm ~0.45 = raw-milk transport, processing and packaging 0.16 (Pelton 2026: farm = 88% of 1.34 kg CO2e/kg packaged fluid milk at the processing gate) + retail-stage losses ~0.21 (Thoma et al. 2013, source 294: 12% of milk lost at retail -> 1/0.88 x ~1.54) + distribution and retail refrigeration ~0.08 (estimate; P&N world transport 0.093 + retail 0.265 is higher, so this may be low). 0.092 + 0.45 = 0.54. Derived, confidence 2."
                 }
             }
         ],
@@ -281,13 +347,24 @@
                 "food_slug": "corn",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.92,
-                        "confidence": 3,
+                        "value": 0.34,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Milk — corn feed: 0.92 kg corn/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk (source 39) × 55% corn fraction of the total diet. Corn is the primary energy source in commercial dairy rations."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.92 kg/kg milk (Alberta Milk source 37 + Dairy Global source 39: one Alberta high-yield 'lifetime' ration of 1.67 kg feed/kg milk split 55/25/10/7%, applied worldwide, summing to 97%, no silage/pasture/residues, 100% charged to milk). World corn: grains 8.6% x 2.43 = 0.209 kg DM / 0.845 (15.5% moisture) = 0.247 kg as-fed (all grains counted as corn; Europe also feeds wheat/barley) + corn silage (assumed 40% of 'legumes & silage' = 0.131 kg DM x 0.70) = 0.092 -> 0.34 kg corn/kg milk. World intake: GLEAM 2013 milk-allocated enteric CH4 = 46.5% x 2.8 / 25 = 0.052 kg CH4/kg FPCM; IPCC 2019 Refinement Table 10.12 methane yield for low/medium-producing cows ~21.4 g CH4/kg DM -> 2.43 kg DM feed per kg milk. Ration from GLEAM 2013 Table B7 (dairy cattle ration by region), weighted by approximate 2023 regional cow-milk shares (FAOSTAT, rounded): fresh grass 29% and crop residues/leaves/tops 21% (pasture or free by-products -> no feed row), hay 16.6%, legumes & silage 13.5%, grains 8.6%, oilseed meals 5.9%, bran/distillers grains 2.4% (by-products -> omitted, small allocated burden). Corn silage has no feed entry, so it is represented as corn-grain equivalent by land (and hence roughly by emissions, since fertiliser per ha is similar): US 2023 corn grain 177.3 bu/ac = 11.1 t/ha as-fed vs corn silage 20.1 short tons/ac as harvested x 35% DM = 15.8 t DM/ha (USDA NASS Crop Production 2023 Summary, source 120) -> 1 kg silage DM ~ 0.70 kg corn grain. Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
+                        }
+                    },
+                    {
+                        "value": 0.29,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US corn: grains 22.8% x 0.71 = 0.162 kg DM / 0.845 = 0.192 kg as-fed + corn silage (assumed 2/3 of 'legumes & silage' = 0.145 kg DM x 0.70) = 0.101 -> 0.29 kg corn/kg milk. US intake: Pelton 2025 milk-allocated enteric CH4 0.0138 kg/kg FPCM / IPCC 2019 methane yield for high-producing cows ~19.5 g CH4/kg DM (19.0 lactating, 21.0 heifers/dry) = 0.71 kg DM per kg milk (whole-herd intake ~0.87 before the 81% allocation). Ration = GLEAM 2013 Table B7 North America (source 290): fresh grass 14.4% (pasture, no feed row), hay 17.0%, legumes & silage 30.6%, grains 22.8%, oilseed meals 6.4%, bran + wet distillers grains 8.7% (by-products, omitted). Corn silage has no feed entry, so it is represented as corn-grain equivalent by land (and hence roughly by emissions, since fertiliser per ha is similar): US 2023 corn grain 177.3 bu/ac = 11.1 t/ha as-fed vs corn silage 20.1 short tons/ac as harvested x 35% DM = 15.8 t DM/ha (USDA NASS Crop Production 2023 Summary, source 120) -> 1 kg silage DM ~ 0.70 kg corn grain. Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
                         }
                     }
                 ]
@@ -297,13 +374,24 @@
                 "food_slug": "alfalfa",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.42,
-                        "confidence": 3,
+                        "value": 0.11,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Milk — alfalfa feed: 0.42 kg alfalfa/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 25% alfalfa fraction. Alfalfa is the primary forage protein source in dairy rations."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.42 kg/kg milk (Alberta Milk source 37 + Dairy Global source 39: one Alberta high-yield 'lifetime' ration of 1.67 kg feed/kg milk split 55/25/10/7%, applied worldwide, summing to 97%, no silage/pasture/residues, 100% charged to milk). World alfalfa: assumed 30% of 'legumes & silage' = 0.098 kg DM / 0.88 = 0.11 kg alfalfa/kg milk. World intake: GLEAM 2013 milk-allocated enteric CH4 = 46.5% x 2.8 / 25 = 0.052 kg CH4/kg FPCM; IPCC 2019 Refinement Table 10.12 methane yield for low/medium-producing cows ~21.4 g CH4/kg DM -> 2.43 kg DM feed per kg milk. Ration from GLEAM 2013 Table B7 (dairy cattle ration by region), weighted by approximate 2023 regional cow-milk shares (FAOSTAT, rounded): fresh grass 29% and crop residues/leaves/tops 21% (pasture or free by-products -> no feed row), hay 16.6%, legumes & silage 13.5%, grains 8.6%, oilseed meals 5.9%, bran/distillers grains 2.4% (by-products -> omitted, small allocated burden). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
+                        }
+                    },
+                    {
+                        "value": 0.17,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US alfalfa: haylage (assumed 1/3 of 'legumes & silage', 0.072 kg DM) + alfalfa share of hay (assumed 2/3 of 17%, 0.080 kg DM) = 0.153 kg DM / 0.88 = 0.17 kg/kg milk. US intake: Pelton 2025 milk-allocated enteric CH4 0.0138 kg/kg FPCM / IPCC 2019 methane yield for high-producing cows ~19.5 g CH4/kg DM (19.0 lactating, 21.0 heifers/dry) = 0.71 kg DM per kg milk (whole-herd intake ~0.87 before the 81% allocation). Ration = GLEAM 2013 Table B7 North America (source 290): fresh grass 14.4% (pasture, no feed row), hay 17.0%, legumes & silage 30.6%, grains 22.8%, oilseed meals 6.4%, bran + wet distillers grains 8.7% (by-products, omitted). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
                         }
                     }
                 ]
@@ -313,13 +401,24 @@
                 "food_slug": "soy",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.17,
-                        "confidence": 3,
+                        "value": 0.16,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Milk — soy feed: 0.17 kg soy/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 10% soybean meal fraction. Soy is a supplemental protein concentrate in dairy rations."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.17 kg/kg milk (Alberta Milk source 37 + Dairy Global source 39: one Alberta high-yield 'lifetime' ration of 1.67 kg feed/kg milk split 55/25/10/7%, applied worldwide, summing to 97%, no silage/pasture/residues, 100% charged to milk). World soy: oilseed meals 5.9% x 2.43 = 0.143 kg DM / 0.89 = 0.16 kg as-fed (soybean meal is represented by the soy entry). World intake: GLEAM 2013 milk-allocated enteric CH4 = 46.5% x 2.8 / 25 = 0.052 kg CH4/kg FPCM; IPCC 2019 Refinement Table 10.12 methane yield for low/medium-producing cows ~21.4 g CH4/kg DM -> 2.43 kg DM feed per kg milk. Ration from GLEAM 2013 Table B7 (dairy cattle ration by region), weighted by approximate 2023 regional cow-milk shares (FAOSTAT, rounded): fresh grass 29% and crop residues/leaves/tops 21% (pasture or free by-products -> no feed row), hay 16.6%, legumes & silage 13.5%, grains 8.6%, oilseed meals 5.9%, bran/distillers grains 2.4% (by-products -> omitted, small allocated burden). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
+                        }
+                    },
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US soy: oilseed meals 6.4% x 0.71 = 0.045 kg DM / 0.89 = 0.05 kg as-fed. US intake: Pelton 2025 milk-allocated enteric CH4 0.0138 kg/kg FPCM / IPCC 2019 methane yield for high-producing cows ~19.5 g CH4/kg DM (19.0 lactating, 21.0 heifers/dry) = 0.71 kg DM per kg milk (whole-herd intake ~0.87 before the 81% allocation). Ration = GLEAM 2013 Table B7 North America (source 290): fresh grass 14.4% (pasture, no feed row), hay 17.0%, legumes & silage 30.6%, grains 22.8%, oilseed meals 6.4%, bran + wet distillers grains 8.7% (by-products, omitted). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
                         }
                     }
                 ]
@@ -329,13 +428,24 @@
                 "food_slug": "grass-hay",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.12,
-                        "confidence": 3,
+                        "value": 0.57,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Milk — grass hay feed: 0.12 kg hay/kg milk. Derived from lifetime FCR of ~1.67 kg total feed/kg milk × 7% grass hay fraction. Hay provides roughage and supports rumen function."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.12 kg/kg milk (Alberta Milk source 37 + Dairy Global source 39: one Alberta high-yield 'lifetime' ration of 1.67 kg feed/kg milk split 55/25/10/7%, applied worldwide, summing to 97%, no silage/pasture/residues, 100% charged to milk). World grass hay: hay 16.6% (0.403 kg DM) + grass silage (assumed 30% of 'legumes & silage', 0.098 kg DM) = 0.50 kg DM / 0.88 = 0.57 kg hay-equivalent/kg milk. World intake: GLEAM 2013 milk-allocated enteric CH4 = 46.5% x 2.8 / 25 = 0.052 kg CH4/kg FPCM; IPCC 2019 Refinement Table 10.12 methane yield for low/medium-producing cows ~21.4 g CH4/kg DM -> 2.43 kg DM feed per kg milk. Ration from GLEAM 2013 Table B7 (dairy cattle ration by region), weighted by approximate 2023 regional cow-milk shares (FAOSTAT, rounded): fresh grass 29% and crop residues/leaves/tops 21% (pasture or free by-products -> no feed row), hay 16.6%, legumes & silage 13.5%, grains 8.6%, oilseed meals 5.9%, bran/distillers grains 2.4% (by-products -> omitted, small allocated burden). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
+                        }
+                    },
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US grass hay: remaining 1/3 of hay = 0.040 kg DM / 0.88 = 0.05 kg/kg milk. US intake: Pelton 2025 milk-allocated enteric CH4 0.0138 kg/kg FPCM / IPCC 2019 methane yield for high-producing cows ~19.5 g CH4/kg DM (19.0 lactating, 21.0 heifers/dry) = 0.71 kg DM per kg milk (whole-herd intake ~0.87 before the 81% allocation). Ration = GLEAM 2013 Table B7 North America (source 290): fresh grass 14.4% (pasture, no feed row), hay 17.0%, legumes & silage 30.6%, grains 22.8%, oilseed meals 6.4%, bran + wet distillers grains 8.7% (by-products, omitted). Allocation: the per-kg values use milk-allocated intake, consistent with the gas fields (world: GLEAM protein allocation ~0.90-0.96 to milk, Table B22; US: Pelton 81% milk / 19% dairy-herd meat) — derived by dividing the SOURCE'S milk-allocated enteric CH4 by the IPCC 2019 methane yield per kg DM, so the same allocation carries into feed."
                         }
                     }
                 ]
@@ -504,7 +614,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Yogurt — total GHG: 3.62 kg CO2e/kg (derived). Yogurt is not individually modeled in P&N 2018. Value derived as milk P&N median (3.15 kg CO2e/kg) × 1.15 kg milk per kg yogurt conversion factor (source 64), yielding 3.15 × 1.15 = 3.6225 ≈ 3.62 kg CO2e/kg yogurt. This is consistent with the known P&N range for dairy products and the 3.5–4.0 kg CO2e/kg range cited for fermented dairy in the literature."
+                    "note": "Yogurt — total GHG: 3.62 kg CO2e/kg (derived). Yogurt is not individually modeled in P&N 2018. Value derived as milk P&N global mean (3.15 kg CO2e/kg, global mean) × 1.15 kg milk per kg yogurt conversion factor (source 64), yielding 3.15 × 1.15 = 3.6225 ≈ 3.62 kg CO2e/kg yogurt. This is consistent with the known P&N range for dairy products and the 3.5–4.0 kg CO2e/kg range cited for fermented dairy in the literature."
                 }
             },
             {
@@ -514,19 +624,41 @@
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Yogurt — total GHG: ~3.6 kg CO2e/kg per OWID note on the P&N 2018 dataset. Yogurt does not appear as a separate row in the OWID/P&N CSV; the estimate is propagated from the milk value (3.15 kg CO2e/kg) via the 1.15 kg milk/kg yogurt conversion, yielding ~3.6 kg CO2e/kg. This corroborates the P&N-derived estimate and falls within the 3.5–4.0 kg CO2e/kg range expected for plain whole-milk yogurt."
+                    "note": "Yogurt — total GHG: ~3.6 kg CO2e/kg per OWID note on the P&N 2018 dataset. Yogurt does not appear as a separate row in the OWID/P&N CSV; the estimate is propagated from the milk value (3.15 kg CO2e/kg, global mean) via the 1.15 kg milk/kg yogurt conversion, yielding ~3.6 kg CO2e/kg. This corroborates the P&N-derived estimate and falls within the 3.5–4.0 kg CO2e/kg range expected for plain whole-milk yogurt."
+                }
+            },
+            {
+                "value": 2.38,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "US: Pelton, Bernal & Kurt 2026 — US yogurt 2.38 kg CO2e/kg at the processing gate with milk-solids allocation (acid whey to food/industrial uses); 4.35 with economic allocation when acid whey goes to animal feed. Covers ~90% of cradle-to-grave. Includes Greek (strained) yogurt, so higher per kg than plain yogurt."
                 }
             }
         ],
         "pasture_ha_per_kg_output": [
             {
-                "value": 0.000115,
-                "confidence": 2,
+                "value": 0.00076,
+                "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Yogurt — land use: derived from milk value (0.0001 ha/kg) × 1.15 kg milk/kg yogurt conversion = 0.000115 ha/kg yogurt. Conversion factor from IDF technical guidance (source 64); land use intensity from P&N 2018 milk median."
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "CORRECTION 2026-09-24: replaced 0.000115 ha/kg (source 55) — it was ~1 m2 per kg milk, close to P&N's 10th-percentile farm (1.11 m2/kg) rather than a typical value (P&N milk mean 8.95, median 2.1 m2/kg), and its note said it included arable feed land, which the feed rows already count (double count). It also left out fresh grass grazing (~29% of the world dairy diet). This field is now GRAZING LAND ONLY (permanent pasture/meadow); feed-crop land comes from the feed rows. Yogurt = milk grazing land x 1.15 kg milk per kg yogurt (source 64), same as every other yogurt per-kg field. World: 0.00066 ha/kg milk (grazing only, P&N 2018 Data S2 permanent pasture 6.275 m2/kg milk, rescaled from P&N's ~87% economic milk share to the GLEAM ~0.92 share; see milk) x 1.15 = 0.000759 -> 0.00076 ha/kg yogurt."
+                }
+            },
+            {
+                "value": 0.00023,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "CORRECTION 2026-09-24: added US value. Yogurt = milk grazing land x 1.15 kg milk per kg yogurt (source 64), same as every other yogurt per-kg field. US: 0.0002 ha/kg milk (Eshel et al. 2014: US dairy pasture ~20 Mha / 81.3 Mt milk = 2.46 m2/kg, x Pelton 2025 81% milk allocation = 1.99 m2/kg; see milk) x 1.15 = 0.00023 ha/kg yogurt."
                 }
             }
         ],
@@ -566,77 +698,70 @@
         ],
         "ch4_kg_per_kg_output": [
             {
-                "value": 0.276,
-                "confidence": 3,
-                "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Yogurt — CH4: derived from milk CH4 (0.24 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.276 kg CH4/kg yogurt. The 1.15 conversion factor reflects standard plain yogurt production losses (source 64). Includes enteric fermentation and manure management. System boundary: cradle to farm gate, propagated to yogurt."
-                }
-            },
-            {
-                "value": 0.253,
-                "confidence": 3,
-                "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Yogurt — CH4: derived from milk CH4 (0.22 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.253 kg CH4/kg yogurt. GLEAM global weighted average for dairy cow enteric fermentation and manure management, propagated to yogurt via conversion factor (source 64). System boundary: on-farm, propagated to yogurt."
-                }
-            },
-            {
-                "value": 0.264,
+                "value": 0.0567,
                 "confidence": 2,
                 "source": {
-                    "id": 64,
-                    "url": "https://www.dairyglobal.net/dairy-management/processing/how-much-milk-is-needed-to-make-1-kg-of-yogurt/",
-                    "title": "Dairy Global — Milk-to-Yogurt Conversion Ratio",
-                    "note": "Yogurt — CH4 conversion basis: this source provides the 1.15 kg milk/kg yogurt conversion factor used to scale milk-level CH4 values to yogurt. The source itself covers production volume ratios (not emissions data); the GHG values are derived by applying this factor to the P&N and GLEAM milk CH4 estimates. Midpoint derivation: (0.276 + 0.253) / 2 = 0.264 kg CH4/kg yogurt."
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.276 (P&N), 0.253 (GLEAM) and a third 'midpoint' entry 0.264 (source 64) — the midpoint re-averaged the other two and so double-weighted them; removed — derived from the old milk value(s) 0.24/0.22 kg CH4/kg milk, which were wrong (see milk entry notes). New value = corrected world milk CH4 (confidence-weighted mean of GLEAM 2013 0.056, FAO 2010 0.050, P&N-consistent 0.038 = 0.0493 kg CH4/kg milk) x 1.15 kg milk/kg yogurt (source 64) = 0.0567."
+                }
+            },
+            {
+                "value": 0.024,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: corrected US milk CH4 0.0209 kg/kg (Pelton 2025) x 1.15 kg milk/kg yogurt = 0.024."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.0046,
-                "confidence": 3,
+                "value": 0.00144,
+                "confidence": 2,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Yogurt — N2O: derived from milk N2O (0.004 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.0046 kg N2O/kg yogurt. Includes manure direct and indirect N2O emissions from the dairy cow system. System boundary: cradle to farm gate, propagated to yogurt."
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.0046 (P&N and GLEAM entries) — derived from the old milk value(s) 0.004 kg N2O/kg milk, which also double-counted feed fertiliser N2O, which were wrong (see milk entry notes). New value = corrected world milk manure N2O (mean of GLEAM-derived 0.0019 and P&N-consistent 0.0006 = 0.00125) x 1.15 = 0.00144."
                 }
             },
             {
-                "value": 0.0046,
+                "value": 0.0003,
                 "confidence": 3,
+                "region": "US",
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Yogurt — N2O: derived from milk N2O (0.004 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.0046 kg N2O/kg yogurt. P&N and GLEAM agree on the milk N2O value; both propagated values are identical at 0.0046. System boundary: on-farm, propagated to yogurt."
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: corrected US milk manure N2O 0.00026 kg/kg (Pelton 2025) x 1.15 = 0.0003."
                 }
             }
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.092,
-                "confidence": 3,
+                "value": 1.26,
+                "confidence": 2,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Yogurt — CO2: derived from milk CO2 (0.08 kg/kg, P&N 2018) × 1.15 kg milk/kg yogurt = 0.092 kg CO2/kg yogurt. On-farm energy use (milking, cooling, fermentation processing energy). System boundary: cradle to farm gate, propagated to yogurt."
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "CORRECTION 2026-09-24: replaced 0.092 (P&N) and 0.0805 (GLEAM) — derived from the old milk value(s) 0.08/0.07 kg CO2/kg milk, on-farm energy only, no post-farm stages, which were wrong (see milk entry notes). New value = corrected world milk CO2 0.94 (on-farm energy 0.05 + P&N post-farm stages incl. losses 0.886) x 1.15 = 1.081, plus extra yogurt processing: FAO 2010 Table 4.9 (Europe) post-farm processing/transport/packaging is 0.304 kg CO2e per kg farm milk for fermented milk vs 0.153 for fresh milk -> +0.151 x 1.15 = 0.174. Total 1.26."
                 }
             },
             {
-                "value": 0.0805,
-                "confidence": 3,
+                "value": 0.8,
+                "confidence": 2,
+                "region": "US",
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Yogurt — CO2: derived from milk CO2 (0.07 kg/kg, GLEAM v3.0) × 1.15 kg milk/kg yogurt = 0.0805 kg CO2/kg yogurt. GLEAM on-farm energy CO2 propagated to yogurt via 1.15 conversion factor. System boundary: on-farm, propagated to yogurt."
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "US: corrected US milk CO2 0.54 (on-farm energy + post-farm, see milk) x 1.15 = 0.62 + extra yogurt processing 0.174 (FAO 2010 Table 4.9, source 291) = 0.80. Pelton 2026 reports US yogurt at 2.38 (milk-solids allocation) to 4.35 kg CO2e/kg (economic allocation, acid whey to feed) at the processing gate; those figures include strained Greek yogurt, which uses ~3x more milk per kg than the plain yogurt modelled here (1.15 kg milk/kg)."
                 }
             }
         ],
@@ -646,13 +771,24 @@
                 "food_slug": "corn",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 1.058,
-                        "confidence": 3,
+                        "value": 0.391,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Yogurt — corn feed: 0.92 kg corn/kg milk × 1.15 kg milk/kg yogurt = 1.058 kg corn/kg yogurt. Propagates milk corn feed intensity to yogurt via the standard milk-to-yogurt conversion factor."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 1.058 (old Alberta-ration milk value 0.92 x 1.15; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.34 kg corn/kg milk x 1.15 kg milk/kg yogurt = 0.391. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.333,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.29 kg corn/kg milk x 1.15 = 0.333."
                         }
                     }
                 ]
@@ -662,13 +798,24 @@
                 "food_slug": "alfalfa",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.483,
-                        "confidence": 3,
+                        "value": 0.127,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Yogurt — alfalfa feed: 0.42 kg alfalfa/kg milk × 1.15 kg milk/kg yogurt = 0.483 kg alfalfa/kg yogurt. Propagates milk alfalfa feed intensity to yogurt."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.483 (old Alberta-ration milk value 0.42 x 1.15; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.11 kg alfalfa/kg milk x 1.15 kg milk/kg yogurt = 0.127. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.196,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.17 kg alfalfa/kg milk x 1.15 = 0.196."
                         }
                     }
                 ]
@@ -678,13 +825,24 @@
                 "food_slug": "soy",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.196,
-                        "confidence": 3,
+                        "value": 0.184,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Yogurt — soy feed: 0.17 kg soy/kg milk × 1.15 kg milk/kg yogurt = 0.196 kg soy/kg yogurt. Propagates milk soy feed intensity to yogurt."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.196 (old Alberta-ration milk value 0.17 x 1.15; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.16 kg soy/kg milk x 1.15 kg milk/kg yogurt = 0.184. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.057,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.05 kg soy/kg milk x 1.15 = 0.057."
                         }
                     }
                 ]
@@ -694,13 +852,24 @@
                 "food_slug": "grass-hay",
                 "kg_feed_per_kg_output": [
                     {
-                        "value": 0.138,
-                        "confidence": 3,
+                        "value": 0.655,
+                        "confidence": 2,
                         "source": {
-                            "id": 37,
-                            "url": "https://albertamilk.com/ask-dairy-farmer/how-much-feed-does-a-cow-need-to-produce-1-litre-of-milk/",
-                            "title": "Alberta Milk — Feed Required per Litre of Milk",
-                            "note": "Yogurt — grass hay feed: 0.12 kg hay/kg milk × 1.15 kg milk/kg yogurt = 0.138 kg hay/kg yogurt. Propagates milk hay feed intensity to yogurt."
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.138 (old Alberta-ration milk value 0.12 x 1.15; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.57 kg grass-hay/kg milk x 1.15 kg milk/kg yogurt = 0.655. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.057,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.05 kg grass-hay/kg milk x 1.15 = 0.057."
                         }
                     }
                 ]
@@ -715,6 +884,441 @@
                     "url": "",
                     "title": "Model estimate — needs proper sourcing",
                     "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                }
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "slug": "butter",
+        "name": "Butter",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "sentient_harm_explanation": "Butter is made from cow's milk, so it carries the same animal deaths as milk. It takes about 22 kg of milk to make 1 kg of butter, but the skim milk and buttermilk left over are sold as food too, so butter is charged with only its value share, about 8 kg of milk per kg. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime share of about 3,800 kg of butter in the US or 1,600 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 7.17,
+                    "fat": 0.8111,
+                    "sat_fat": 0.5137,
+                    "protein": 0.0085,
+                    "fiber": 0,
+                    "sodium": 6.43,
+                    "carbs": 0.0006,
+                    "sugar": 0.0006,
+                    "cholesterol": 2.15,
+                    "trans_fat": 0.0328
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Butter, salted (SR Legacy, FDC ID 173410) — per 100 g: 717 kcal, fat 81.11 g, saturated 51.368 g, protein 0.85 g, fiber 0 g, sodium 643 mg, carbohydrate 0.06 g, sugars 0.06 g, cholesterol 215 mg, trans 3.278 g. Converted to per gram: calories 7.17 kcal/g, fat 0.8111 g/g, sat_fat 0.5137 g/g, protein 0.0085 g/g, sodium 6.43 mg/g, carbs 0.0006 g/g, sugar 0.0006 g/g, cholesterol 2.15 mg/g, trans_fat 0.0328 g/g."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3000000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 1620,
+                "confidence": 2,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Butter — converted from lifetime milk per cow ÷ 8.2 kg allocated milk-equivalent per kg butter (the same factor used for every other butter per-kg value in this entry). 13,300 kg milk / 8.2 = 1,622 ≈ 1,620 kg butter-equivalent per cow. (Physically, 13,300 kg milk ÷ 21.8 = 610 kg of butter; the rest of the cow's burden is charged to the skim milk / buttermilk co-products.) Allocation: 21.8 kg of farm milk goes into 1 kg of butter (USDA milk-equivalent, milkfat basis, source 248), but that milk also yields skim milk and buttermilk that are sold as food. Following Flysjö (2011, source 249), raw milk is split between butter and its co-products by the economic value of fat and protein (1:1.7 weighting), which charges butter with ~8.2 kg milk-equivalent per kg (≈38% of the 21.8 kg): raw milk = 80–85% of the 9.0 kg CO2e/kg butter footprint (~7.4 kg CO2e) ÷ 0.91 kg CO2e/kg raw milk = 8.2. The same 8.2 factor is used for every per-kg field in this entry (lifetime output, GHG, land, feed). For reference: no allocation would be 21.8; IDF milk-solids allocation ~6.2. Underlying milk: Milk (world) — lifetime milk per cow: FAOSTAT 2023 world cattle milk yield 2,685 kg per milk animal per year × productive life 4.97 yr = 13,340 kg ≈ 13,300 kg. World productive life 4.97 yr = 1 / cow-weighted average annual replacement rate (20.1%), using GLEAM 1.0 Table 2.3 regional replacement rates (NA 35%, W. Europe 31%, S. Asia 21%, Sub-Saharan Africa 10%, etc.) weighted by FAOSTAT 2023 milk-animal counts per region (source 226). Derived; low-yield, long-lived cows in South Asia and Africa dominate the world average. In India cow slaughter is restricted in many states, so 'per death' there is partly death from old age/abandonment rather than slaughter."
+                }
+            },
+            {
+                "value": 3820,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Butter — converted from lifetime milk per cow ÷ 8.2 kg allocated milk-equivalent per kg butter (the same factor used for every other butter per-kg value in this entry). 31,300 kg milk / 8.2 = 3,817 ≈ 3,820 kg butter-equivalent per cow. (Physically, 31,300 kg milk ÷ 21.8 = 1,436 kg of butter; the rest of the cow's burden is charged to the skim milk / buttermilk co-products.) Allocation: 21.8 kg of farm milk goes into 1 kg of butter (USDA milk-equivalent, milkfat basis, source 248), but that milk also yields skim milk and buttermilk that are sold as food. Following Flysjö (2011, source 249), raw milk is split between butter and its co-products by the economic value of fat and protein (1:1.7 weighting), which charges butter with ~8.2 kg milk-equivalent per kg (≈38% of the 21.8 kg): raw milk = 80–85% of the 9.0 kg CO2e/kg butter footprint (~7.4 kg CO2e) ÷ 0.91 kg CO2e/kg raw milk = 8.2. The same 8.2 factor is used for every per-kg field in this entry (lifetime output, GHG, land, feed). For reference: no allocation would be 21.8; IDF milk-solids allocation ~6.2. Underlying milk: Milk (US) — lifetime milk per cow: USDA NASS 2024 average 24,178 lb (10,967 kg) milk per cow per year × productive life 2.86 yr (1 / 35% annual replacement rate for North American dairy herds, GLEAM 1.0 Table 2.3, source 225) = 31,330 kg ≈ 31,300 kg. Cross-check: FAOSTAT 2023 US yield 10,923 kg → 31,200 kg. USDA NAHMS Dairy 2014 reports ~34% of cows removed per year plus on-farm deaths, consistent with a ~35% replacement rate."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Butter — same dairy cow as milk. Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Butter — same dairy cow as milk. Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Butter — same dairy cow as milk. Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Butter — same dairy cow as milk. Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Butter — yield_fraction 1.0: all per-kg-output values are already expressed per kg butter as sold. The milk-to-butter factor (8.2 kg allocated milk-equivalent per kg butter) is captured in the per-kg-output lifetime, GHG, land and feed values, not here."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 9.0,
+                "confidence": 3,
+                "source": {
+                    "id": 249,
+                    "url": "https://doi.org/10.3168/jds.2011-4545",
+                    "title": "Flysjö (2011) — Potential for improving the carbon footprint of butter and blend products (Journal of Dairy Science 94:5833)",
+                    "note": "Butter — total GHG: 9.0 kg CO2e/kg for 80%-fat butter in 250-g wrap at the consumer, excluding consumer waste (9.3 for 250-g tub). Directly measured butter LCA (Arla, Denmark), cradle-to-consumer; raw milk allocated between butter and co-products by value-weighted fat:protein (1:1.7). Raw milk (0.91 kg CO2e/kg ECM, Danish average) = 80–85% of the total. Authors note Nilsson et al. (2010) 9.6 and Sheane et al. (2011) 8.9 for other northern-European butter. Low-emission Danish milk: global butter is likely higher (see derived value)."
+                }
+            },
+            {
+                "value": 20.1,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "CORRECTION 2026-09-24: replaced 25.83 (P&N milk 3.15 x 8.2) — that multiplied milk's own processing, packaging, transport, retail and loss stages (0.89 kg CO2e/kg milk) by 8.2 as if butter went through the fluid-milk chain 8.2 times. New value = P&N milk farm-gate stages only (land-use change 0.51 + farm 1.51 + animal feed 0.24 = 2.26 kg CO2e/kg milk, OWID supply-chain split of Poore & Nemecek 2018) x 8.2 kg milk-equivalent/kg butter (sources 248-249) = 18.5, plus butter post-farm stages 1.6 (Flysjö 2011: 15-20% of 9.0) = 20.1. Global-mean milk basis (incl. land-use change), hence well above the Danish direct measurement."
+                }
+            },
+            {
+                "value": 14.3,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "US: derived. Pelton, Bernal & Kurt 2026 — US butter production emits 13.9 Mt CO2e/yr (2020, cradle-to-processing gate, conditional allocation: economic where co-products go to feed, milk-solids otherwise); US 2020 butter production 2,145.9 million lb = 973,000 t (sum of monthly USDA figures, source 296). 13.9e9 / 0.973e9 = 14.3 kg CO2e/kg butter."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.0054,
+                "confidence": 2,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "CORRECTION 2026-09-24: replaced 0.00082 ha/kg (source 55) — it was ~1 m2 per kg milk, close to P&N's 10th-percentile farm (1.11 m2/kg) rather than a typical value (P&N milk mean 8.95, median 2.1 m2/kg), and its note said it included arable feed land, which the feed rows already count (double count). It also left out fresh grass grazing (~29% of the world dairy diet). This field is now GRAZING LAND ONLY (permanent pasture/meadow); feed-crop land comes from the feed rows. Butter = milk grazing land x 8.2 kg milk-equivalent per kg butter (21.8 kg farm milk per kg butter with Flysjo 2011 economic fat:protein allocation to co-products, sources 248-249), the same factor used for every butter per-kg field. World: 0.00066 ha/kg milk (grazing only, P&N 2018 Data S2 permanent pasture 6.275 m2/kg milk, rescaled from P&N's ~87% economic milk share to the GLEAM ~0.92 share; see milk) x 8.2 = 0.00541 -> 0.0054 ha/kg butter."
+                }
+            },
+            {
+                "value": 0.0016,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "CORRECTION 2026-09-24: added US value. Butter = milk grazing land x 8.2 kg milk-equivalent per kg butter (21.8 kg farm milk per kg butter with Flysjo 2011 economic fat:protein allocation to co-products, sources 248-249), the same factor used for every butter per-kg field. US: 0.0002 ha/kg milk (Eshel et al. 2014: US dairy pasture ~20 Mha / 81.3 Mt milk = 2.46 m2/kg, x Pelton 2025 81% milk allocation = 1.99 m2/kg; see milk) x 8.2 = 0.00164 -> 0.0016 ha/kg butter."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Butter — same dairy cow pasture as milk; per-hectare ET is unchanged (butter's larger area per kg is captured in pasture_ha_per_kg_output). Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Butter — same dairy cow pasture as milk; per-hectare ET is unchanged (butter's larger area per kg is captured in pasture_ha_per_kg_output). Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Butter — same dairy land system as milk. Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.404,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 1.968 (P&N) and 1.804 (GLEAM) — derived from the old milk value(s) 0.24/0.22 kg CH4/kg milk, which were wrong (see milk entry notes). New value = corrected world milk CH4 0.0493 kg/kg x 8.2 kg milk-equivalent/kg butter (Flysjö 2011 economic fat:protein allocation of 21.8 kg farm milk, sources 248-249) = 0.404."
+                }
+            },
+            {
+                "value": 0.171,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: corrected US milk CH4 0.0209 (Pelton 2025) x 8.2 = 0.171."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0103,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.0328 (P&N and GLEAM entries) — derived from the old milk value(s) 0.004 kg N2O/kg milk, which also double-counted feed fertiliser N2O, which were wrong (see milk entry notes). New value = corrected world milk manure N2O 0.00125 x 8.2 = 0.0103."
+                }
+            },
+            {
+                "value": 0.0021,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "US: corrected US milk manure N2O 0.00026 (Pelton 2025) x 8.2 = 0.0021."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.01,
+                "confidence": 2,
+                "source": {
+                    "id": 249,
+                    "url": "https://doi.org/10.3168/jds.2011-4545",
+                    "title": "Flysjö (2011) — Potential for improving the carbon footprint of butter and blend products (Journal of Dairy Science 94:5833)",
+                    "note": "CORRECTION 2026-09-24: replaced 0.656 (P&N) and 0.574 (GLEAM) — derived from the old milk value(s) 0.08/0.07 kg CO2/kg milk x 8.2, on-farm energy only, no butter processing/packaging/transport, which were wrong (see milk entry notes). New value = world on-farm energy 0.05 kg CO2/kg milk (GLEAM 2013 Table E9, source 290) x 8.2 = 0.41, plus butter post-farm stages 1.6 kg CO2e/kg: Flysjö 2011 finds raw milk = 80-85% of the 9.0 kg CO2e/kg butter footprint, so dairy processing, packaging, transport and retail = 15-20% = 1.35-1.8 (midpoint 1.6). Total 2.01. The milk post-farm stages are NOT multiplied by 8.2 (butter goes through its own chain)."
+                }
+            },
+            {
+                "value": 2.35,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 249,
+                    "url": "https://doi.org/10.3168/jds.2011-4545",
+                    "title": "Flysjö (2011) — Potential for improving the carbon footprint of butter and blend products (Journal of Dairy Science 94:5833)",
+                    "note": "US: US on-farm energy + feed milling 0.092 kg CO2/kg milk (Pelton 2025, source 292) x 8.2 = 0.75, plus butter post-farm stages 1.6 (Flysjö 2011, as world). Total 2.35."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.788,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 7.544 (old Alberta-ration milk value 0.92 x 8.2; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.34 kg corn/kg milk x 8.2 kg milk-equivalent/kg butter = 2.788. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 2.378,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.29 kg corn/kg milk x 8.2 = 2.378."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.902,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 3.444 (old Alberta-ration milk value 0.42 x 8.2; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.11 kg alfalfa/kg milk x 8.2 kg milk-equivalent/kg butter = 0.902. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 1.394,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.17 kg alfalfa/kg milk x 8.2 = 1.394."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.312,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 1.394 (old Alberta-ration milk value 0.17 x 8.2; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.16 kg soy/kg milk x 8.2 kg milk-equivalent/kg butter = 1.312. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.41,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.05 kg soy/kg milk x 8.2 = 0.41."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 4.674,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "CORRECTION 2026-09-24: replaced 0.984 (old Alberta-ration milk value 0.12 x 8.2; see milk feed notes for why that ration was wrong). New value = corrected world milk 0.57 kg grass-hay/kg milk x 8.2 kg milk-equivalent/kg butter = 4.674. Milk-allocated intake; corn includes corn silage as corn-grain equivalent (see milk)."
+                        }
+                    },
+                    {
+                        "value": 0.41,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "US: corrected US milk 0.05 kg grass-hay/kg milk x 8.2 = 0.41."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 5984,
+                "confidence": 4,
+                "source": {
+                    "id": 250,
+                    "url": "https://en.wikipedia.org/wiki/Butter",
+                    "title": "FAOSTAT — Butter of cow milk production, 2023 (as tabulated in Wikipedia 'Butter')",
+                    "note": "Butter (world) — FAOSTAT 2023 world production of butter of cow milk 5,983,836 t ≈ 5,984 Gg (FAOSTAT QCL, reproduced in the Wikipedia 'Butter' production table). Top producers: US 957,773 t, Germany 468,880 t, New Zealand 462,400 t, France 403,970 t."
+                }
+            },
+            {
+                "value": 959,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 251,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/jd474j74j/np194z93v/daryan24.pdf",
+                    "title": "USDA NASS — Dairy Products 2023 Summary (April 2024)",
+                    "note": "Butter (US) — 2023 US butter production 2,115,028 thousand lb (2.12 billion lb) × 0.4536 kg/lb = 959 Gg. Cross-check: FAOSTAT 2023 US butter 957,773 t (source 250)."
                 }
             }
         ]

@@ -15,3 +15,16 @@ source files.
 
 Validation runs during import, so errors in the source files are
 caught before they reach the database.
+
+Animal feed is charged at each crop's farm-gate emissions
+(farm_gate_emissions_per_kg), not its store-shelf value, because animals
+don't eat the processing, packaging and retail stages of a crop.
+Crops without a farm-gate value fall back to emissions_per_kg.
+
+After the database is built, the pipeline compares each animal's
+computed emissions (CO2 + CH4 + N2O + feed) with its published total
+and prints a warning when they differ by more than 1.5×.
+The build still succeeds; the warning is there to catch unit slips in
+the gas fields.
+Data corrections and the reasons for them are logged in
+data/json/CORRECTIONS.md.

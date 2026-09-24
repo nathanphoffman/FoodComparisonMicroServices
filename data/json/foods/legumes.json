@@ -210,22 +210,66 @@
         "emissions_per_kg": [
             {
                 "value": 3.0,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Soy — emissions_per_kg: ~3.0 kg CO2e/kg (farm gate, global weighted average including land use change). P&N 2018 supplementary data reports a soybean farm-gate range of ~1.0–6.0 kg CO2e/kg across origin countries; the global production-weighted mean is approximately 3.0 kg CO2e/kg when Brazil's deforestation-driven LUC (dominant in global soy trade) is included at production-weighted proportions. Prior value of 2.0 underweighted LUC intensity; prior value of 0.7 was incorrectly sourced from the soybean yield page."
+                    "note": "Soy — emissions_per_kg: ~3.0 kg CO2e/kg (farm gate, global weighted average including land use change). P&N 2018 supplementary data reports a soybean farm-gate range of ~1.0–6.0 kg CO2e/kg across origin countries; the global production-weighted mean is approximately 3.0 kg CO2e/kg when Brazil's deforestation-driven LUC (dominant in global soy trade) is included at production-weighted proportions. Prior value of 2.0 underweighted LUC intensity; prior value of 0.7 was incorrectly sourced from the soybean yield page. CORRECTION 2026-09-24: 3.0 cannot be verified against P&N 2018. P&N has no raw-soybean product: soy is represented only by tofu and soymilk (Supplementary Table S1) plus soybean oil, and no 'supplementary ~1.0–6.0 range' for soybeans appears in the supplement. Back-calculating from the P&N soybean-oil row (Data S2, source 270: LUC 3.096 + farm 1.519 = 4.615 per kg oil; oil ~40% of economic value, ~0.195 kg oil per kg beans) implies ~2.25 kg CO2e/kg soybeans at farm gate incl. LUC. A 2026 systematic review (Springer et al., source 275) reports a composite global mean of 1.10 kg CO2e/kg soybeans. Confidence lowered 3 -> 2."
                 }
             },
             {
                 "value": 3.0,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Soy — emissions_per_kg: P&N 2018 via OWID. OWID reports tofu at 3.16 kg CO2e/kg and soy milk at 0.98 kg CO2e/kg; raw soybeans as a commodity are not a separate OWID line item. The farm-gate raw soybean value is approximately 3.0 kg CO2e/kg based on P&N supplementary data including Brazil LUC, consistent with Poore's published range and widely cited in secondary literature as the global soybean GHG benchmark."
+                    "note": "Soy — emissions_per_kg: P&N 2018 via OWID. OWID reports tofu at 3.16 kg CO2e/kg and soy milk at 0.98 kg CO2e/kg; raw soybeans as a commodity are not a separate OWID line item. The farm-gate raw soybean value is approximately 3.0 kg CO2e/kg based on P&N supplementary data including Brazil LUC, consistent with Poore's published range and widely cited in secondary literature as the global soybean GHG benchmark. CORRECTION 2026-09-24: OWID has no raw-soybean entity, so the ~3.0 is not an OWID/P&N number; P&N-implied soybeans are ~2.25 and a 2026 review's global composite is 1.10 kg CO2e/kg (see note on the source 55 value). Confidence lowered 3 -> 2."
+                }
+            }
+        ],
+        "farm_gate_emissions_per_kg": [
+            {
+                "value": 1.8,
+                "confidence": 2,
+                "source": {
+                    "id": 270,
+                    "url": "https://josephpoore.com/data/science-2018/Data%20S2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2, 'Results - Global Totals' sheet (GHG per kg FAO Food Balance Sheet commodity, by supply-chain stage)",
+                    "note": "Soy — farm_gate_emissions_per_kg: represents SOYBEAN MEAL (not whole beans), because the animal feed arrays that reference soy describe soybean-meal inclusion rates. ECONOMIC allocation between meal and oil (P&N's method; P&N states ~60% of soy crop impact goes to meal). Derivation from P&N Data S2 'Results - Global Totals' row 'Soybean Oil' (per kg oil): LUC 3.096 + farm 1.519 = 4.615. Crush yields ~0.195 kg oil + ~0.79 kg meal per kg beans, so beans = 4.615 x 0.195 / 0.40 = 2.25 kg CO2e/kg; meal = 0.60 x 2.25 / 0.79 = 1.71. Plus crushing, at most ~0.12 (P&N crushing+refining 0.311 per kg oil scaled to meal the same way; an upper bound since it includes oil refining) -> 1.8. Stages included: land-use change + farm + crushing. Excluded: transport to feed mill, retail. Under MASS allocation (meal and oil charged equally per kg) meal would be ~2.3. Confidence 2 (derived). Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 1.66,
+                "confidence": 3,
+                "source": {
+                    "id": 275,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X25002999",
+                    "title": "Springer et al. (2026) — Explaining global variation in life-cycle GHG emissions from soybeans and soybean meal: a systematic review (Agricultural Systems 233:104559)",
+                    "note": "Soy (soybean meal) — farm_gate_emissions_per_kg: Springer et al. 2026 systematic review of 22 soybean-meal LCA studies/databases covering 30 countries reports a composite global average of 1.66 kg CO2e/kg soybean meal (range 0.25–6.50), with land-use change the main driver of variation (Brazil/Argentina high). Boundary cradle to crushing-plant gate; allocation follows the underlying studies (mostly economic). Agrees with the 1.8 derived from P&N. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.36,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 273,
+                    "url": "https://doi.org/10.1007/s11367-012-0386-y",
+                    "title": "Adom et al. (2012) — Regional carbon footprint analysis of dairy feeds for milk production in the USA (Int J LCA 17:520–534)",
+                    "note": "Soy (soybean meal) — farm_gate_emissions_per_kg (US): Adom et al. 2012 US national average 410 g CO2e/kg DRY soybean meal (cultivation + crushing to meal; no land-use change). Converted to as-fed meal at ~12% moisture: 0.41 x 0.88 = 0.36. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.33,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 276,
+                    "url": "https://ussec.org/wp-content/uploads/2025/10/Sustainable-US-Soy-Carbon-Footprint-General-2025.pdf",
+                    "title": "USSEC (2025) — Examining U.S. Soy's Carbon Footprint (Mérieux NutriSciences | Blonk, Agri-footprint 6.3)",
+                    "note": "Soy (soybean meal) — farm_gate_emissions_per_kg (US): Blonk Agri-footprint 6.3 (PEF feed rules, 20-yr LUC look-back) gives US whole soybeans 0.43 kg CO2e/kg INCLUDING land-use change + peat (0.38 excluding), cradle-to-market (includes shipping to market). Converted to meal with P&N-style economic allocation: 0.43 x 0.60 / 0.79 = 0.33. Crushing (~+0.02) and the included shipping roughly offset. Confidence 2 (derived, industry factsheet). Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
                 }
             }
         ],

@@ -79,6 +79,7 @@ class Plant(TypedDict):
     pesticide_kg_ha: list[SourcedNumber] | None
     fertilizer_kg_ha: list[SourcedNumber] | None
     emissions_per_kg: list[SourcedNumber] | None
+    farm_gate_emissions_per_kg: NotRequired[list[SourcedNumber] | None]
     tillage_events_per_year: list[SourcedNumber] | None
     co2_capture_kg_ha_yr: list[SourcedNumber] | None
     cooked_weight_ratio: list[SourcedNumber] | None

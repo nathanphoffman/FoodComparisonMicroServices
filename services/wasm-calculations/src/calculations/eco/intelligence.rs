@@ -60,7 +60,7 @@ pub(super) fn compute_pesticide_victim_intelligence(
 /// (productive life for dairy and layers). Wild-caught and hunted foods are 0.
 pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
     match slug {
-        "milk" | "yogurt" => 5.0,
+        "milk" | "yogurt" | "butter" => 5.0,
         "egg" => 1.5,
         "beef" => 1.5,
         "chicken" => 0.12,
@@ -79,7 +79,7 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
 /// Used by both direct-kill and bycatch scoring to normalise kill impact.
 pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
     match slug {
-        "beef" | "milk" | "yogurt" | "tuna" => 20.0,
+        "beef" | "milk" | "yogurt" | "butter" | "tuna" => 20.0,
         "chicken" | "egg" => 8.0,
         "pork" | "lamb" => 12.0,
         "turkey" => 10.0,

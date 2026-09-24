@@ -134,6 +134,8 @@ def _compute_water_and_emissions(
     pasture_baseline is the pasture evapotranspiration in liters per kg of animal output
     (pasture_ha_per_kg_output × pasture_green_water_l_per_ha). It is a water metric and
     only seeds total_green_water. Emissions are in kg CO2-eq and must start at zero.
+    Feed emissions use each crop's farm-gate value (see RawPlant.feed_emissions_per_kg),
+    because animals don't eat the processing / packaging / retail stages of a crop.
     """
     total_emissions = 0.0
     total_green_water = pasture_baseline  # liters of green water from pasture grazing itself
@@ -143,7 +145,7 @@ def _compute_water_and_emissions(
         feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
         if feed_ratio is None:
             continue
-        plant_emissions = entry.plant.emissions_per_kg.weighted_average()
+        plant_emissions = entry.plant.feed_emissions_per_kg
         if plant_emissions:
             total_emissions += feed_ratio * plant_emissions
         green_water = entry.plant.green_water_per_kg.weighted_average()

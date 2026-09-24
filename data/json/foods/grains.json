@@ -203,7 +203,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O, farm energy, and land use change; P&N 2018 Table S5 'Wheat & Rye' category)."
+                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O, farm energy, and land use change; P&N 2018 Table S5 'Wheat & Rye' category). CORRECTION 2026-09-24: 1.57 is NOT farm gate and is not from Table S5 (that table is meat processing conversions). It is the P&N retail-weight mean for 'Wheat & Rye (Bread)' — functional unit 1 kg of BREAD (Supplementary Table S1) — and is cradle-to-retail: per kg bread LUC 0.10 + farm 0.82 + processing 0.21 + transport 0.13 + packaging 0.09 + retail 0.06 + losses 0.18 (OWID supply-chain, source 72). Farm gate per kg wheat grain is 0.95 (P&N Data S2, source 270); see farm_gate_emissions_per_kg. Basis check 2026-09-24 (value kept): nutrition, yield and water are per kg whole wheat grain/flour while 1.57 is per kg bread. In P&N the two bases are nearly equal — Data S2 Global Totals per kg wheat GRAIN: farm 0.847 vs 0.82 per kg bread, chain total ex-losses 1.44 (incl. baking) — so per kg grain incl. losses is ~1.5–1.6. No conversion needed; the value slightly over-counts because it includes baking energy."
                 }
             },
             {
@@ -213,7 +213,30 @@
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                    "note": "Wheat — emissions_per_kg: 1.57 kg CO2e/kg confirmed via OWID chart of P&N 2018 data. CORRECTION 2026-09-24: the OWID 1.57 is 'Wheat & Rye' per kg of bread, cradle-to-retail (includes milling/baking, transport, packaging, retail and losses), not farm gate. Basis check 2026-09-24 (value kept): nutrition, yield and water are per kg whole wheat grain/flour while 1.57 is per kg bread. In P&N the two bases are nearly equal — Data S2 Global Totals per kg wheat GRAIN: farm 0.847 vs 0.82 per kg bread, chain total ex-losses 1.44 (incl. baking) — so per kg grain incl. losses is ~1.5–1.6. No conversion needed; the value slightly over-counts because it includes baking energy."
+                }
+            }
+        ],
+        "farm_gate_emissions_per_kg": [
+            {
+                "value": 0.95,
+                "confidence": 3,
+                "source": {
+                    "id": 270,
+                    "url": "https://josephpoore.com/data/science-2018/Data%20S2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2, 'Results - Global Totals' sheet (GHG per kg FAO Food Balance Sheet commodity, by supply-chain stage)",
+                    "note": "Wheat (grain) — farm_gate_emissions_per_kg: 0.95 kg CO2e/kg grain = LUC 0.100 + farm 0.847 from P&N 2018 Data S2 'Results - Global Totals' row 'Wheat & Rye (Bread)', per kg of FAO Food Balance Sheet commodity (wheat grain equivalent), excluding waste. Stages included: land-use change + on-farm. Excluded: milling/bread making (0.217), transport (0.129), packaging (0.090), retail (0.058), losses. Includes rye (small share of the category). Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.37,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 273,
+                    "url": "https://doi.org/10.1007/s11367-012-0386-y",
+                    "title": "Adom et al. (2012) — Regional carbon footprint analysis of dairy feeds for milk production in the USA (Int J LCA 17:520–534)",
+                    "note": "Wheat — farm_gate_emissions_per_kg (US): Adom et al. 2012 US national average 430 g CO2e/kg DRY winter wheat grain (cradle to farm gate; no land-use change — US wheat area is stable/shrinking). Converted to as-fed at 13.5% moisture: 0.43 x 0.865 = 0.37. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
                 }
             }
         ],
@@ -518,23 +541,57 @@
         ],
         "emissions_per_kg": [
             {
-                "value": 1.7,
-                "confidence": 3,
+                "value": 1.13,
+                "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O from high-N corn production, farm energy, and land use change; P&N 2018 Table S5 'Maize' category)."
+                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg global weighted average (farm gate; includes fertilizer N2O from high-N corn production, farm energy, and land use change; P&N 2018 Table S5 'Maize' category). CORRECTION 2026-09-24: 1.7 is NOT farm gate and is not from Table S5 (Table S5 of the P&N supplement is meat processing conversions). It is the P&N retail-weight mean for 'Maize (Meal)' — functional unit 1 kg of maize meal for polenta (Supplementary Table S1) — and is cradle-to-retail: per kg meal LUC 0.48 + farm 0.72 + processing 0.08 + transport 0.09 + packaging 0.09 + retail 0.04 + losses 0.21 (OWID food-emissions-supply-chain, source 72). Per kg of maize GRAIN (P&N Data S2 Global Totals, source 270) the ex-waste chain total is ~0.99 and farm gate (LUC + farm) is 0.79; see farm_gate_emissions_per_kg. CORRECTION 2026-09-24: value changed 1.7 -> 1.13. Corn's nutrition is whole dry corn GRAIN (FDC 3.65 kcal/g), and its yield and water are per kg grain, but 1.7 is per kg of maize MEAL (degermed, ~0.66 kg meal per kg grain). Converted to per kg grain: 1.70 x 0.664 = 1.13, where 0.664 = P&N farm-gate per kg grain (LUC 0.315 + farm 0.475 = 0.79, Data S2 Global Totals, source 270) / farm-gate per kg meal (0.48 + 0.72 = 1.19, OWID source 72). Cross-check: Data S2 per-kg-grain chain total excluding losses is 0.99; + ~14% losses (P&N meal loss share) ~1.13. Only corn's own food row uses this field; animal feed uses farm_gate_emissions_per_kg, so feed calculations are unchanged. Confidence 2 because the whole chain is scaled by one ratio (meal processing is not separated)."
                 }
             },
             {
-                "value": 1.7,
-                "confidence": 3,
+                "value": 1.13,
+                "confidence": 2,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                    "note": "Corn (Maize) — emissions_per_kg: 1.7 kg CO2e/kg confirmed via OWID chart of P&N 2018 data. CORRECTION 2026-09-24: the OWID 1.7 is per kg maize meal and cradle-to-retail (includes processing, transport, packaging, retail and losses), not farm gate and not per kg grain. CORRECTION 2026-09-24: value changed 1.7 -> 1.13. Corn's nutrition is whole dry corn GRAIN (FDC 3.65 kcal/g), and its yield and water are per kg grain, but 1.7 is per kg of maize MEAL (degermed, ~0.66 kg meal per kg grain). Converted to per kg grain: 1.70 x 0.664 = 1.13, where 0.664 = P&N farm-gate per kg grain (LUC 0.315 + farm 0.475 = 0.79, Data S2 Global Totals, source 270) / farm-gate per kg meal (0.48 + 0.72 = 1.19, OWID source 72). Cross-check: Data S2 per-kg-grain chain total excluding losses is 0.99; + ~14% losses (P&N meal loss share) ~1.13. Only corn's own food row uses this field; animal feed uses farm_gate_emissions_per_kg, so feed calculations are unchanged. Confidence 2 because the whole chain is scaled by one ratio (meal processing is not separated)."
+                }
+            }
+        ],
+        "farm_gate_emissions_per_kg": [
+            {
+                "value": 0.79,
+                "confidence": 3,
+                "source": {
+                    "id": 270,
+                    "url": "https://josephpoore.com/data/science-2018/Data%20S2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2, 'Results - Global Totals' sheet (GHG per kg FAO Food Balance Sheet commodity, by supply-chain stage)",
+                    "note": "Corn (maize grain) — farm_gate_emissions_per_kg: 0.79 kg CO2e/kg grain = LUC 0.315 + farm 0.475 from P&N 2018 Data S2 'Results - Global Totals' row 'Maize (Meal)', expressed per kg of FAO Food Balance Sheet commodity (maize grain equivalent), excluding waste. Stages included: land-use change + on-farm (fertiliser production and N2O, machinery, drying, irrigation). Excluded: dry milling (0.052), transport (0.060), packaging (0.060), retail (0.026) and losses. Cross-check: OWID per-kg-meal farm-gate is 0.48 + 0.72 = 1.19; 0.79/1.19 = 0.66 kg meal per kg grain, a normal dry-milling yield. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.2,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 272,
+                    "url": "https://iopscience.iop.org/article/10.1088/1748-9326/ac018f",
+                    "title": "Liu et al. (2021) — Varied farm-level carbon intensities of corn feedstock help reduce corn ethanol GHG emissions (Environ. Res. Lett.; Argonne GREET)",
+                    "note": "Corn — farm_gate_emissions_per_kg (US): 204 g CO2e/kg corn, the US national average cradle-to-farm-gate carbon intensity for the 2018 crop from Argonne GREET (surveyed farms 210 g/kg, range 119–407). Stages: fertiliser/chemical production, field N2O, farm energy. Excludes land-use change and soil carbon; US corn is grown on long-established cropland, so direct LUC is taken as ~0 (P&N LUC is driven by deforestation in expanding tropical producers). Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.33,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 273,
+                    "url": "https://doi.org/10.1007/s11367-012-0386-y",
+                    "title": "Adom et al. (2012) — Regional carbon footprint analysis of dairy feeds for milk production in the USA (Int J LCA 17:520–534)",
+                    "note": "Corn — farm_gate_emissions_per_kg (US): Adom et al. 2012 US national average 390 g CO2e/kg DRY corn grain (cradle to farm gate; nitrogen fertiliser the largest contributor; no land-use change). Converted to as-fed grain at 15.5% moisture: 0.39 x 0.845 = 0.33. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
                 }
             }
         ],
@@ -784,22 +841,45 @@
         "emissions_per_kg": [
             {
                 "value": 1.4,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Sorghum — emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 dryland cereal range; sorghum is largely rain-fed with lower nitrogen inputs than corn, placing it at the lower end of the cereal GHG range; farm gate including fertilizer N2O and land use change)."
+                    "note": "Sorghum — emissions_per_kg: 1.4 kg CO2e/kg (P&N 2018 dryland cereal range; sorghum is largely rain-fed with lower nitrogen inputs than corn, placing it at the lower end of the cereal GHG range; farm gate including fertilizer N2O and land use change). CORRECTION 2026-09-24: could not be verified. P&N 2018 has no sorghum product and no 'dryland cereal range' (Supplementary Table S1 lists wheat & rye, maize, oats, rice, barley); the closest P&N group is 'Cereals & Oilcrops Misc.', whose ex-waste chain total is ~1.31 kg CO2e/kg (farm gate 0.91) per P&N Data S2 (source 270). 1.4 is therefore an unsourced estimate; confidence lowered 3 -> 2."
                 }
             },
             {
                 "value": 1.4,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Sorghum — emissions_per_kg: ~1.4 kg CO2e/kg per OWID/P&N 2018 'other cereals' grouping for dryland grains."
+                    "note": "Sorghum — emissions_per_kg: ~1.4 kg CO2e/kg per OWID/P&N 2018 'other cereals' grouping for dryland grains. CORRECTION 2026-09-24: OWID's ghg-per-kg-poore chart has no sorghum or 'other cereals' entity (its cereals are Wheat & Rye, Maize, Barley, Oatmeal, Rice), so this value cannot be confirmed there; confidence lowered 3 -> 2."
+                }
+            }
+        ],
+        "farm_gate_emissions_per_kg": [
+            {
+                "value": 0.91,
+                "confidence": 2,
+                "source": {
+                    "id": 270,
+                    "url": "https://josephpoore.com/data/science-2018/Data%20S2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2, 'Results - Global Totals' sheet (GHG per kg FAO Food Balance Sheet commodity, by supply-chain stage)",
+                    "note": "Sorghum — farm_gate_emissions_per_kg: proxy. P&N 2018 has no sorghum row; uses the 'Cereals & Oilcrops Misc.' row of P&N Data S2 'Results - Global Totals' (per kg FAO Food Balance Sheet commodity, excluding waste): LUC 0.161 + farm 0.744 = 0.905. Stages included: land-use change + on-farm. Excluded: processing, transport, packaging, retail, losses. Confidence 2 because it is a mixed-crop category, not sorghum-specific. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
+                }
+            },
+            {
+                "value": 0.25,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 274,
+                    "url": "https://www.sorghumcheckoff.com/wp-content/uploads/2021/10/The-Carbon-Footprint-of-Sorghum.pdf",
+                    "title": "SGS North America for United Sorghum Checkoff (2015) — The Carbon Footprint of Sorghum",
+                    "note": "Sorghum — farm_gate_emissions_per_kg (US): SGS 2015 survey of 300+ growers in 9 states (80% of US sorghum acres) found 0.25 kg CO2e/kg grain (6.4 kg CO2e/bushel), cradle to farm gate / first handler; range 0.05–0.74, SD 0.1. Mostly N fertiliser production and field N2O plus fuel. Excludes land-use change and soil carbon. Industry-funded (Sorghum Checkoff), confidence 3. Added 2026-09-24 so animal feed is charged farm-gate, not retail, emissions."
                 }
             }
         ],
@@ -888,22 +968,22 @@
             {
                 "value": {
                     "calories": 1.3,
-                    "fat": 0.003,
-                    "sat_fat": 0.001,
-                    "protein": 0.027,
+                    "fat": 0.0028,
+                    "sat_fat": 0.00077,
+                    "protein": 0.0269,
                     "fiber": 0.004,
                     "sodium": 0.01,
-                    "carbs": 0.285,
-                    "sugar": 0,
+                    "carbs": 0.282,
+                    "sugar": 0.0005,
                     "cholesterol": 0,
                     "trans_fat": 0
                 },
                 "confidence": 5,
                 "source": {
-                    "id": 1,
-                    "url": "https://fdc.nal.usda.gov/",
-                    "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "id": 307,
+                    "url": "https://fdc.nal.usda.gov/food-details/168878/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168878: Rice, white, long-grain, regular, enriched, cooked",
+                    "note": "CORRECTION 2026-09-24: all nutrition fields now taken from one cooked form, FDC 168878 (white long-grain rice, boiled, no salt), per 100 g: 130 kcal, fat 0.28 g, sat fat 0.077 g, protein 2.69 g, fiber 0.4 g, sodium 1 mg, carbs 28.2 g, sugar 0.05 g, water 68.4 g. Previous entry was already cooked rice (1.3 kcal/g) but carbs 0.285 / sugar 0 did not match a single FDC item, and there was no cooked_weight_ratio, so these cooked-weight nutrients were compared against per-kg-DRY yield/water/emissions (rice looked ~2.8x worse per calorie than it is)."
                 }
             }
         ],
@@ -915,30 +995,42 @@
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Basis note 2026-09-24: rice yield_kg_ha is already expressed as MILLED rice (paddy x FAO milling extraction rate, see yield_kg_ha notes), so no further edible fraction applies; the pipeline does not apply yield_fraction to plant yield."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.8,
+                "confidence": 4,
+                "source": {
+                    "id": 308,
+                    "url": "https://fdc.nal.usda.gov/food-details/169756/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169756: Rice, white, long-grain, regular, raw, unenriched",
+                    "note": "CORRECTION 2026-09-24: added so rice's per-kg-dry (milled) yield, water and emissions are converted to the per-kg-cooked basis of its nutrition. Derived from FDC dry-matter: raw long-grain white rice (FDC 169756) water 11.6 g/100 g = 88.4% solids; cooked (FDC 168878) water 68.4 g/100 g = 31.6% solids; 88.4 / 31.6 = 2.80 g cooked per g dry. Cross-check by energy: 365 / 130 kcal = 2.81. Typical package/USDA range for white long-grain rice is ~2.5–3."
                 }
             }
         ],
         "yield_kg_ha": [
             {
-                "value": 4700,
+                "value": 3055,
                 "confidence": 4,
                 "source": {
                     "id": 29,
                     "url": "https://ourworldindata.org/grapher/rice-yields",
                     "title": "Our World in Data — Rice Yields",
-                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data."
+                    "note": "Rice — yield_kg_ha: Global average paddy rice yield of 4,700 kg/ha based on FAO data. CORRECTION 2026-09-24: was 4,700 kg/ha of PADDY (rough, in-husk) rice, but rice's water (2,500 L/kg), emissions (P&N per kg milled rice) and nutrition are per kg of MILLED white rice. Converted to milled basis: 4,700 x 0.65 = 3,055 kg milled rice/ha. 0.65 = median 'Milled Paddy Rice' extraction rate across the 67 countries in FAO Technical Conversion Factors (source 311; range 0.60–0.73) and the same 0.65 milling yield already used for the world water value. yield_fraction is not applied to plant yield by the pipeline, so the conversion is made here."
                 }
             },
             {
-                "value": 8482,
+                "value": 6107,
                 "confidence": 5,
                 "region": "US",
                 "source": {
                     "id": 120,
                     "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
                     "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
-                    "note": "All rice — US national average 2019–2023, rough (paddy) basis to match the world paddy entry: 7,473, 7,619, 7,710, 7,385, 7,649 lb/acre, mean 7,567.2 lb/acre (= 75.67 cwt/acre) × 0.45359 kg/lb ÷ 0.40469 ha/acre (×1.12085) = 8,482 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                    "note": "All rice — US national average 2019–2023, rough (paddy) basis to match the world paddy entry: 7,473, 7,619, 7,710, 7,385, 7,649 lb/acre, mean 7,567.2 lb/acre (= 75.67 cwt/acre) × 0.45359 kg/lb ÷ 0.40469 ha/acre (×1.12085) = 8,482 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions). CORRECTION 2026-09-24: was 8,482 kg/ha rough (paddy) basis; converted to milled basis to match rice's milled water, emissions and nutrition: 8,482 x 0.72 = 6,107 kg milled rice/ha. 0.72 = FAO Technical Conversion Factors 'Milled Paddy Rice' extraction rate for the United States (source 311)."
                 }
             }
         ],
@@ -1072,23 +1164,34 @@
         ],
         "emissions_per_kg": [
             {
-                "value": 2.7,
-                "confidence": 3,
+                "value": 4.45,
+                "confidence": 4,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Rice — emissions_per_kg: 2.7 kg CO2e/kg global weighted average (farm gate; notably high due to CH4 from methanogenic bacteria in flooded paddy fields, which contributes ~50% of total rice GHG footprint; also includes fertilizer N2O and farm energy; P&N 2018 Table S5 'Rice' category)."
+                    "note": "Rice — emissions_per_kg (per kg milled white rice, cradle-to-retail). CORRECTION 2026-09-24: was 2.7, which is NOT the P&N value (source of 2.7 unknown; it does not appear in P&N Data S2). P&N 2018 Data S2 'Results - Retail Weight' gives Rice mean 4.45 kg CO2e per kg of rice (median 3.73, 5th–95th pctl 1.15–10.26), cradle-to-retail incl. losses. Basis is MILLED rice: the farm stage per kg retail rice (3.55, OWID source 72) equals the 'Global Totals' farm stage per kg of FAO 'Rice (Milled Equivalent)' commodity (3.553, source 270). Stages per kg: LUC -0.02, farm 3.55 (mostly paddy CH4), processing 0.07, transport 0.10, packaging 0.08, retail 0.06, losses 0.61. Matches the milled-basis yield/water; the pipeline divides by cooked_weight_ratio 2.8 -> ~1.59 per kg cooked rice. Previous note (2.7, 'farm gate', 'Table S5') was wrong on value, boundary and table."
                 }
             },
             {
-                "value": 2.7,
-                "confidence": 3,
+                "value": 4.45,
+                "confidence": 4,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Rice — emissions_per_kg: 2.7 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                    "note": "Rice — emissions_per_kg: CORRECTION 2026-09-24: was 2.7 'confirmed via OWID'; the OWID ghg-per-kg-poore chart actually shows Rice = 4.45 kg CO2e/kg (checked 2026-09-24 via the chart CSV), per kg milled rice, cradle-to-retail."
+                }
+            },
+            {
+                "value": 1.47,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 312,
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378429014002573",
+                    "title": "Brodt et al. (2014) — Life cycle greenhouse gas emissions in California rice production (Field Crops Research 169: 89–98)",
+                    "note": "CORRECTION 2026-09-24: added US value (rice previously had none, so US view used the world 2.7). Brodt et al. 2014: 1.47 kg CO2e per kg MILLED rice (90% white, 10% brown), California, cultivation + fallow season + drying + milling; excludes packaging, retail and losses; field CH4/N2O from measured field data (with IPCC Tier 1 field factors the total is 3.60); GWP100 IPCC 2007; co-product credits for hulls/bran by displacement. California only (~20–25% of US rice; the Mid-South uses different water management), and a narrower boundary than the world P&N value, so confidence 2."
                 }
             }
         ],
@@ -1224,61 +1327,61 @@
         ],
         "yield_kg_ha": [
             {
-                "value": 2500,
+                "value": 1375,
                 "confidence": 4,
                 "source": {
                     "id": 33,
                     "url": "https://ourworldindata.org/crop-yields",
                     "title": "Our World in Data — Crop Yields",
-                    "note": "Oats — yield_kg_ha: FAO global average used for yield value."
+                    "note": "Oats — yield_kg_ha: FAO global average used for yield value. CORRECTION 2026-09-24: was 2500 kg/ha oat grain; now 1375 kg rolled oats/ha (2500 x 0.55). Nutrition is rolled oats / oatmeal (FDC 'Oats', 3.89 kcal/g, dehulled) but this value was per kg of harvested oat GRAIN (incl. ~25–30% inedible hull). Converted to per kg rolled oats with FAO Technical Conversion Factors 'Oats, Rolled' extraction rate 0.55 (median of 35 countries, range 0.45–0.73; US 0.58; source 311). P&N's own oatmeal numbers imply ~0.73 kg oatmeal per kg oats, so this conversion may overstate by up to ~25%."
                 }
             }
         ],
         "water_per_kg": [
             {
-                "value": 1788,
+                "value": 3251,
                 "confidence": 5,
                 "source": {
                     "id": 30,
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-24: was 1788 L/kg oat grain (Mekonnen & Hoekstra, oats HS 1004); now 3251 L/kg rolled oats (1788 / 0.55). Nutrition is rolled oats / oatmeal (FDC 'Oats', 3.89 kcal/g, dehulled) but this value was per kg of harvested oat GRAIN (incl. ~25–30% inedible hull). Converted to per kg rolled oats with FAO Technical Conversion Factors 'Oats, Rolled' extraction rate 0.55 (median of 35 countries, range 0.45–0.73; US 0.58; source 311). P&N's own oatmeal numbers imply ~0.73 kg oatmeal per kg oats, so this conversion may overstate by up to ~25%."
                 }
             }
         ],
         "green_water_per_kg": [
             {
-                "value": 1576,
+                "value": 2865,
                 "confidence": 3,
                 "source": {
                     "id": 67,
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-24: was 1576 L/kg oat grain (Mekonnen & Hoekstra, oats HS 1004); now 2865 L/kg rolled oats (1576 / 0.55). Nutrition is rolled oats / oatmeal (FDC 'Oats', 3.89 kcal/g, dehulled) but this value was per kg of harvested oat GRAIN (incl. ~25–30% inedible hull). Converted to per kg rolled oats with FAO Technical Conversion Factors 'Oats, Rolled' extraction rate 0.55 (median of 35 countries, range 0.45–0.73; US 0.58; source 311). P&N's own oatmeal numbers imply ~0.73 kg oatmeal per kg oats, so this conversion may overstate by up to ~25%."
                 }
             }
         ],
         "blue_water_per_kg": [
             {
-                "value": 46,
+                "value": 84,
                 "confidence": 3,
                 "source": {
                     "id": 67,
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-24: was 46 L/kg oat grain (Mekonnen & Hoekstra, oats HS 1004); now 84 L/kg rolled oats (46 / 0.55). Nutrition is rolled oats / oatmeal (FDC 'Oats', 3.89 kcal/g, dehulled) but this value was per kg of harvested oat GRAIN (incl. ~25–30% inedible hull). Converted to per kg rolled oats with FAO Technical Conversion Factors 'Oats, Rolled' extraction rate 0.55 (median of 35 countries, range 0.45–0.73; US 0.58; source 311). P&N's own oatmeal numbers imply ~0.73 kg oatmeal per kg oats, so this conversion may overstate by up to ~25%."
                 }
             }
         ],
         "grey_water_per_kg": [
             {
-                "value": 33,
+                "value": 60,
                 "confidence": 3,
                 "source": {
                     "id": 67,
                     "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-24: was 33 L/kg oat grain (Mekonnen & Hoekstra, oats HS 1004); now 60 L/kg rolled oats (33 / 0.55). Nutrition is rolled oats / oatmeal (FDC 'Oats', 3.89 kcal/g, dehulled) but this value was per kg of harvested oat GRAIN (incl. ~25–30% inedible hull). Converted to per kg rolled oats with FAO Technical Conversion Factors 'Oats, Rolled' extraction rate 0.55 (median of 35 countries, range 0.45–0.73; US 0.58; source 311). P&N's own oatmeal numbers imply ~0.73 kg oatmeal per kg oats, so this conversion may overstate by up to ~25%."
                 }
             }
         ],
@@ -1320,23 +1423,23 @@
         ],
         "emissions_per_kg": [
             {
-                "value": 1.58,
+                "value": 2.48,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Oats — emissions_per_kg: 1.58 kg CO2e/kg (P&N 2018 groups oats with 'Wheat & Rye' as temperate small grains sharing a similar fertilizer N2O and land use profile; farm gate including land use change)."
+                    "note": "Oats — emissions_per_kg: CORRECTION 2026-09-24: was 1.58, described as P&N 'grouping oats with Wheat & Rye' — P&N has no such grouping. 1.58 is P&N Data S2 'Global Totals' Oatmeal per kg of oat GRAIN (FAO commodity), excluding losses (LUC 0.001 + farm 1.37 + processing 0.042 + transport 0.067 + packaging 0.066 + retail 0.029 = 1.575; source 270). Nutrition is per kg rolled oats, so the matching value is P&N's retail-weight mean for 'Oatmeal': 2.48 kg CO2e per kg oatmeal, cradle-to-retail incl. losses (Data S2 'Results - Retail Weight'; OWID ghg-per-kg-poore shows 2.48; stages per kg oatmeal: farm 1.87, processing 0.06, transport 0.09, packaging 0.09, retail 0.04, losses 0.33)."
                 }
             },
             {
-                "value": 1.58,
+                "value": 2.48,
                 "confidence": 3,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Oats — emissions_per_kg: ~1.58 kg CO2e/kg per OWID/P&N 2018 temperate small grains grouping."
+                    "note": "Oats — emissions_per_kg: CORRECTION 2026-09-24: was 1.58, described as P&N 'grouping oats with Wheat & Rye' — P&N has no such grouping. 1.58 is P&N Data S2 'Global Totals' Oatmeal per kg of oat GRAIN (FAO commodity), excluding losses (LUC 0.001 + farm 1.37 + processing 0.042 + transport 0.067 + packaging 0.066 + retail 0.029 = 1.575; source 270). Nutrition is per kg rolled oats, so the matching value is P&N's retail-weight mean for 'Oatmeal': 2.48 kg CO2e per kg oatmeal, cradle-to-retail incl. losses (Data S2 'Results - Retail Weight'; OWID ghg-per-kg-poore shows 2.48; stages per kg oatmeal: farm 1.87, processing 0.06, transport 0.09, packaging 0.09, retail 0.04, losses 0.33)."
                 }
             }
         ],
@@ -1425,22 +1528,22 @@
             {
                 "value": {
                     "calories": 1.2,
-                    "fat": 0.019,
-                    "sat_fat": 0.002,
+                    "fat": 0.0192,
+                    "sat_fat": 0.00231,
                     "protein": 0.044,
                     "fiber": 0.028,
                     "sodium": 0.07,
-                    "carbs": 0.215,
-                    "sugar": 0.009,
+                    "carbs": 0.213,
+                    "sugar": 0.0087,
                     "cholesterol": 0,
                     "trans_fat": 0
                 },
                 "confidence": 5,
                 "source": {
-                    "id": 1,
-                    "url": "https://fdc.nal.usda.gov/",
-                    "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "id": 309,
+                    "url": "https://fdc.nal.usda.gov/food-details/168917/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168917: Quinoa, cooked",
+                    "note": "CORRECTION 2026-09-24: nutrition was already COOKED quinoa (1.2 kcal/g) while yield, water and emissions are per kg of dry seed, with no cooked_weight_ratio — quinoa looked ~3x worse per calorie than it is. Now all fields from one cooked item, FDC 168917 (Quinoa, cooked), per 100 g: 120 kcal, fat 1.92 g, sat fat 0.231 g, protein 4.4 g, fiber 2.8 g, sodium 7 mg, carbs 21.3 g, sugar 0.87 g; and cooked_weight_ratio added."
                 }
             }
         ],
@@ -1453,6 +1556,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 3.05,
+                "confidence": 4,
+                "source": {
+                    "id": 310,
+                    "url": "https://fdc.nal.usda.gov/food-details/168874/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168874: Quinoa, uncooked",
+                    "note": "CORRECTION 2026-09-24: added so quinoa's per-kg-dry yield, water and emissions match its cooked-weight nutrition. Derived from FDC dry-matter: uncooked quinoa (FDC 168874) water 13.3 g/100 g = 86.7% solids; cooked (FDC 168917) water 71.6 g/100 g = 28.4% solids; 86.7 / 28.4 = 3.05 g cooked per g dry. Cross-check by energy: 368 / 120 kcal = 3.07."
                 }
             }
         ],
@@ -1688,7 +1803,7 @@
                     "id": 33,
                     "url": "https://ourworldindata.org/crop-yields",
                     "title": "Our World in Data — Crop Yields",
-                    "note": "Barley — yield_kg_ha: 3,100 kg/ha (global average; EU, Russia, Australia main producers; FAO 2020–2022)."
+                    "note": "Barley — yield_kg_ha: 3,100 kg/ha (global average; EU, Russia, Australia main producers; FAO 2020–2022). Basis note 2026-09-24: yield is harvested barley grain incl. hull; nutrition is USDA 'Barley, hulled' (hull removed, ~10–13% lighter). Not converted — no sourced grain->hulled-barley extraction rate (FAO TCF only lists pot barley 0.70 and pearled 0.62, which are more heavily polished products). Land and water per kg eaten are therefore understated by ~10–15%."
                 }
             },
             {
@@ -1699,7 +1814,7 @@
                     "id": 120,
                     "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
                     "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
-                    "note": "Barley — US national average 2019–2023: 77.7, 77.2, 60.5, 71.7, 72.4 bu/acre, mean 71.90 bu/acre × 48 lb/bu × 0.45359 kg/lb ÷ 0.40469 ha/acre (×53.80) = 3,868 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions)."
+                    "note": "Barley — US national average 2019–2023: 77.7, 77.2, 60.5, 71.7, 72.4 bu/acre, mean 71.90 bu/acre × 48 lb/bu × 0.45359 kg/lb ÷ 0.40469 ha/acre (×53.80) = 3,868 kg/ha. 2019–2020 from NASS Crop Production 2021 Summary (cropan22, https://downloads.usda.library.cornell.edu/usda-esmis/files/k3569432s/sn00c1252/g158cj98r/cropan22.pdf); 2021–2023 from the 2023 Summary (cropan24, latest revisions). Basis note 2026-09-24: yield is harvested barley grain incl. hull; nutrition is USDA 'Barley, hulled' (hull removed, ~10–13% lighter). Not converted — no sourced grain->hulled-barley extraction rate (FAO TCF only lists pot barley 0.70 and pearled 0.62, which are more heavily polished products). Land and water per kg eaten are therefore understated by ~10–15%."
                 }
             }
         ],
@@ -1834,22 +1949,22 @@
         "emissions_per_kg": [
             {
                 "value": 1.5,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg global weighted average (farm gate; temperate cereal; slightly lower than wheat due to lower average nitrogen application rates; P&N 2018 Table S5 'Barley' category includes fertilizer N2O, farm energy, and land use change). Note: prior value of 0.57 in this dataset was a data entry error inconsistent with the P&N source."
+                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg global weighted average (farm gate; temperate cereal; slightly lower than wheat due to lower average nitrogen application rates; P&N 2018 Table S5 'Barley' category includes fertilizer N2O, farm energy, and land use change). Note: prior value of 0.57 in this dataset was a data entry error inconsistent with the P&N source. CORRECTION 2026-09-24: value kept, confidence 3 -> 2. 1.5 is NOT the P&N/OWID figure: P&N 'Barley (Beer)' is 1.18 kg CO2e per kg of BEER (Data S2 Retail Weight; OWID ghg-per-kg-poore shows Barley = 1.18; its stages are dominated by packaging 0.50 and retail 0.26), so P&N has no per-kg-barley-grain value for food barley and the 'Table S5' reference is wrong. For scale, a Finnish farm-gate LCA gives 0.57 kg CO2e/kg barley grain (Rajaniemi et al. 2011, Agronomy Research 9 Spec. Iss. 1; source 313); cradle-to-retail on a hulled-barley basis would be roughly 0.8–1.2. 1.5 is therefore an unverified estimate that is probably high."
                 }
             },
             {
                 "value": 1.5,
-                "confidence": 3,
+                "confidence": 2,
                 "source": {
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg confirmed via OWID chart of P&N 2018 data."
+                    "note": "Barley — emissions_per_kg: 1.5 kg CO2e/kg confirmed via OWID chart of P&N 2018 data. CORRECTION 2026-09-24: value kept, confidence 3 -> 2. 1.5 is NOT the P&N/OWID figure: P&N 'Barley (Beer)' is 1.18 kg CO2e per kg of BEER (Data S2 Retail Weight; OWID ghg-per-kg-poore shows Barley = 1.18; its stages are dominated by packaging 0.50 and retail 0.26), so P&N has no per-kg-barley-grain value for food barley and the 'Table S5' reference is wrong. For scale, a Finnish farm-gate LCA gives 0.57 kg CO2e/kg barley grain (Rajaniemi et al. 2011, Agronomy Research 9 Spec. Iss. 1; source 313); cradle-to-retail on a hulled-barley basis would be roughly 0.8–1.2. 1.5 is therefore an unverified estimate that is probably high."
                 }
             }
         ],

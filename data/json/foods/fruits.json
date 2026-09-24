@@ -1673,5 +1673,803 @@
                 }
             }
         ]
+    },
+    {
+        "id": 64,
+        "slug": "strawberries",
+        "name": "Strawberries",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.32,
+                    "fat": 0.003,
+                    "sat_fat": 0.00015,
+                    "protein": 0.0067,
+                    "fiber": 0.02,
+                    "sodium": 0.01,
+                    "carbs": 0.0768,
+                    "sugar": 0.0489,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Strawberries — FDC 167762 'Strawberries, raw' (SR Legacy), per 100 g: 32 kcal, protein 0.67 g, fat 0.30 g, sat fat 0.015 g, trans 0 g, carbs 7.68 g, fiber 2.0 g, sugars 4.89 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.94,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Strawberries — yield_fraction: SR28 FOOD_DES NDB 09316 'Strawberries, raw': refuse 6% (caps and stems), so edible fraction = 0.94."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 23900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Strawberries — yield_kg_ha (world): FAOSTAT QCL item 544, World yield 2020–2024 = 23,105; 23,684; 24,085; 24,253 (E); 24,604 (E) kg/ha; 5-year mean 23,946 kg/ha, rounded. Fresh fruit weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 56900,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 181,
+                    "url": "https://downloads.usda.library.cornell.edu/usda-esmis/files/zs25x846c/6682zt197/qf85q241d/ncit0524.pdf",
+                    "title": "USDA NASS — Noncitrus Fruits and Nuts 2023 Summary (May 2024)",
+                    "note": "Strawberries — yield_kg_ha (US): NASS national yield per harvested acre 2021–2023 = 532, 507, 485 cwt/acre (CA 625/590/575, FL 230/220/210). Mean 508.0 cwt/acre x 112.085 = 56,939 kg/ha, rounded. FAOSTAT US 2021–2023 (57,003 / 56,779 / 56,753 kg/ha) agrees."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 347,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Strawberries — water_per_kg: 347 L/kg global average = green 201 + blue 109 + grey 37. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 544 Strawberries (HS 081010), 1996–2005: green 201 / blue 109 / grey 37 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 165,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Strawberries — water_per_kg (US): 165 L/kg = green 79 + blue 54 + grey 32 (total incl. grey, same basis as world). Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 544 Strawberries (HS 081010), 1996–2005, m³/ton = L/kg. US footprint is low because California coastal strawberries have very high yields (~57 t/ha)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 201,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Strawberries — green_water_per_kg: 201 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 544 Strawberries (HS 081010), 1996–2005: green 201 / blue 109 / grey 37 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 79,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Strawberries — green_water_per_kg (US): 79 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 544 Strawberries (HS 081010), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 109,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Strawberries — blue_water_per_kg: 109 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 544 Strawberries (HS 081010), 1996–2005: green 201 / blue 109 / grey 37 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 54,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Strawberries — blue_water_per_kg (US): 54 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 544 Strawberries (HS 081010), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Strawberries — grey_water_per_kg: 37 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 544 Strawberries (HS 081010), 1996–2005: green 201 / blue 109 / grey 37 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 32,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Strawberries — grey_water_per_kg (US): 32 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 544 Strawberries (HS 081010), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 267,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — pesticide_kg_ha (US): total active ingredient per bearing ha from the NASS class TOTAL rows (fungicide + herbicide + insecticide + 'other'), divided by bearing acres back-calculated from captan (lb / (rate x %treated)): 2021 9,113,500 lb / 49,657 ac = 206 kg/ha; 2023 18,602,100 lb / 57,285 ac = 364 kg/ha; 2025 12,980,800 lb / 62,664 ac = 232 kg/ha (2025 herbicide total withheld). Mean 267 kg/ha. About 70–85% of this is pre-plant soil fumigants (class 'other'): chloropicrin ~161 kg/ha and 1,3-dichloropropene ~24 kg/ha per bearing ha (3-survey means), which are not in pesticides.json. Excluding fumigants, fungicide+herbicide+insecticide totals are ~34 / 58 / 45 kg/ha. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 269,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "NASS Agricultural Chemical Use, strawberries PROGRAM STATES, fertilizer N + P2O5 + K2O per bearing acre (lb/acre/yr x % treated x 1.12085): 2018 528, 2019 118, 2023 160 kg/ha; mean 269 kg/ha. Large survey-to-survey swings (2018 N 191 lb/ac on 98% vs 2023 N 75 lb/ac on 60%), hence confidence 2."
+                }
+            },
+            {
+                "value": 285,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 268,
+                    "url": "https://coststudyfiles.ucdavis.edu/2024/04/04/2024Strawberry-FULL-FINAL-March2024.pdf",
+                    "title": "UC Davis / UCCE (2024) — Sample Costs to Produce and Harvest Strawberries, Central Coast Region (Santa Cruz & Monterey)",
+                    "note": "Strawberries — fertilizer_kg_ha (US, California Central Coast): UC cost study assumes 500 lb/acre 18-8-13 pre-plant (90 N + 40 P2O5 + 65 K2O) plus 350 lb/acre CAN 17 fertigation (59.5 N) = 254.5 lb nutrients/acre x 1.12085 = 285 kg/ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Strawberries — emissions_per_kg (world): Poore & Nemecek (2018) 'Berries & Grapes' global mean, 1.53 kg CO2e/kg (full supply chain incl. land use, farm, transport, packaging, retail). Category pools berries with grapes; no strawberry-specific global figure."
+                }
+            },
+            {
+                "value": 1.83,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 265,
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959652616302700",
+                    "title": "Tabatabaie & Murthy (2016) — Cradle to farm gate life cycle assessment of strawberry production in the United States (J. Cleaner Production 127)",
+                    "note": "Strawberries — emissions_per_kg (US): Tabatabaie & Murthy 2016 cradle-to-farm-gate GWP 1.75 (California) and 2.50 (Florida) kg CO2e/kg (also NC 5.48, OR 2.21; minor states). Weighted by NASS 2023 total production (CA 24,600k cwt, FL 2,960k cwt; source 181): 1.83 kg CO2e/kg. Farm gate only (plastics, fuel, fertilizer dominate)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 268,
+                    "url": "https://coststudyfiles.ucdavis.edu/2024/04/04/2024Strawberry-FULL-FINAL-March2024.pdf",
+                    "title": "UC Davis / UCCE (2024) — Sample Costs to Produce and Harvest Strawberries, Central Coast Region (Santa Cruz & Monterey)",
+                    "note": "Strawberries — tillage_events_per_year (US, California Central Coast): annual crop replanted every year; the UC cost study lists disc 6x, subsoil 2x, chisel 2x, list/shape beds 1x, and a year-end disc 2x = 13 tillage passes per season. No world figure found; world falls back to this value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 9,
+                "name": "Captan",
+                "kg_ha": [
+                    {
+                        "value": 12.0239,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — captan: 2021 15.975 lb/ac on 49%, 2023 14.491 on 90%, 2025 12.711 on 89%; 3-survey mean. Main botrytis (gray mold) fungicide."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.8151,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — pendimethalin: 2021 1.357 lb/ac on 16%, 2023 5.892 on 21% (2025 withheld); 2-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0223,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — thiamethoxam: 2023 0.084 lb/ac on 35%, 2025 0.061 on 17% (2021 withheld); 2-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0082,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — imidacloprid: 2025 0.105 lb/ac on 7% (2021 and 2023 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.0259,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Strawberries — diazinon: 2021 1.157 lb/ac on 2% (2023 and 2025 withheld)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 10129,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Strawberries — availability_gg (world): FAOSTAT QCL item 544 World production 2020–2024 = 9.08, 9.81, 10.27, 10.75 (E), 10.73 (E) Mt; mean 10,129 Gg."
+                }
+            },
+            {
+                "value": 1268,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 181,
+                    "url": "https://downloads.usda.library.cornell.edu/usda-esmis/files/zs25x846c/6682zt197/qf85q241d/ncit0524.pdf",
+                    "title": "USDA NASS — Noncitrus Fruits and Nuts 2023 Summary (May 2024)",
+                    "note": "Strawberries — availability_gg (US): NASS utilized production 2021–2023 = 27,854.7 / 28,494.3 / 27,526.6 thousand cwt; mean x 45.359 kg/cwt = 1,268 Gg. FAOSTAT US 2021–2023 (1,211 / 1,294 / 1,305 Gg) is on a total-production basis."
+                }
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "slug": "blueberries",
+        "name": "Blueberries",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.57,
+                    "fat": 0.0033,
+                    "sat_fat": 0.00028,
+                    "protein": 0.0074,
+                    "fiber": 0.024,
+                    "sodium": 0.01,
+                    "carbs": 0.1449,
+                    "sugar": 0.0996,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Blueberries — FDC 171711 'Blueberries, raw' (SR Legacy), per 100 g: 57 kcal, protein 0.74 g, fat 0.33 g, sat fat 0.028 g, trans 0 g, carbs 14.49 g, fiber 2.4 g, sugars 9.96 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.95,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Blueberries — yield_fraction: SR28 FOOD_DES NDB 09050 'Blueberries, raw': refuse 5% (stems and green or spoiled berries), so edible fraction = 0.95."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 6640,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Blueberries — yield_kg_ha (world): FAOSTAT QCL item 552, World yield 2020–2024 = 6,353; 6,513; 6,963; 6,326; 7,047 kg/ha; 5-year mean 6,640 kg/ha, rounded. Entry models cultivated (highbush) blueberries, but the FAOSTAT world figure mixes in managed wild lowbush area (e.g. Canada, 3,362 kg/ha in 2023) and omits China, which is not reported; confidence 3."
+                }
+            },
+            {
+                "value": 7150,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 181,
+                    "url": "https://downloads.usda.library.cornell.edu/usda-esmis/files/zs25x846c/6682zt197/qf85q241d/ncit0524.pdf",
+                    "title": "USDA NASS — Noncitrus Fruits and Nuts 2023 Summary (May 2024)",
+                    "note": "Blueberries — yield_kg_ha (US, cultivated highbush only): NASS 'Blueberry, Cultivated' national yield per harvested acre 2021–2023 = 6,380 / 6,480 / 6,290 lb/acre; mean 6,383 lb/acre x 1.12085 = 7,155 kg/ha, rounded. Wild (Maine lowbush) blueberries, 1,840–2,500 lb/acre, are excluded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 845,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Blueberries — water_per_kg: 845 L/kg global average = green 341 + blue 334 + grey 170. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 552 Blueberries (HS 081040_c), 1996–2005: green 341 / blue 334 / grey 170 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 753,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Blueberries — water_per_kg (US): 753 L/kg = green 229 + blue 303 + grey 221 (total incl. grey, same basis as world). Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 552 Blueberries (HS 081040_c), 1996–2005, m³/ton = L/kg. M&H blueberry item covers all blueberries (cultivated and wild) in the US country average."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 341,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Blueberries — green_water_per_kg: 341 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 552 Blueberries (HS 081040_c), 1996–2005: green 341 / blue 334 / grey 170 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 229,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Blueberries — green_water_per_kg (US): 229 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 552 Blueberries (HS 081040_c), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 334,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Blueberries — blue_water_per_kg: 334 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 552 Blueberries (HS 081040_c), 1996–2005: green 341 / blue 334 / grey 170 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 303,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Blueberries — blue_water_per_kg (US): 303 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 552 Blueberries (HS 081040_c), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 170,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Blueberries — grey_water_per_kg: 170 L/kg global average. Mekonnen & Hoekstra Report 47 Vol. 1, Appendix II global average, product 552 Blueberries (HS 081040_c), 1996–2005: green 341 / blue 334 / grey 170 m³/t = L/kg."
+                }
+            },
+            {
+                "value": 221,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Blueberries — grey_water_per_kg (US): 221 L/kg. Mekonnen & Hoekstra Report 47 Vol. 2, Appendix II, United States of America CNTRY-average column, product 552 Blueberries (HS 081040_c), 1996–2005, m³/ton = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 14.6,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — pesticide_kg_ha (US, cultivated): total active ingredient per bearing ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by bearing acres back-calculated from captan: 2021 1,243,600 lb / 86,254 ac = 16.2 kg/ha; 2023 1,037,000 lb / 90,902 ac = 12.8; 2025 1,182,700 lb / 89,999 ac = 14.7. Mean 14.6 kg/ha. Fungicides (captan, sulfur, others) are the largest share. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 179,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Blueberries — fertilizer_kg_ha (US, cultivated): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per bearing acre (lb/acre/yr x % treated x 1.12085): 2019 N 65 on 84%, P2O5 59 on 79%, K2O 61 on 83% = 170 kg/ha; 2023 N 83 on 74%, P2O5 63 on 79%, K2O 68 on 83% = 188 kg/ha; mean 179 kg/ha (elemental sulfur for soil acidification excluded)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Blueberries — emissions_per_kg (world): Poore & Nemecek (2018) 'Berries & Grapes' global mean, 1.53 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools berries with grapes; no blueberry-specific global figure."
+                }
+            },
+            {
+                "value": 0.48,
+                "confidence": 2,
+                "source": {
+                    "id": 266,
+                    "url": "https://link.springer.com/article/10.1007/s11367-016-1034-8",
+                    "title": "Cordes, Iriarte & Villalobos (2016) — Evaluating the carbon footprint of Chilean organic blueberry production (Int. J. Life Cycle Assess. 21:281–292)",
+                    "note": "Blueberries — emissions_per_kg (world, Chile): Cordes et al. 2016 report cradle-to-farm-gate carbon footprints of 0.27–0.69 kg CO2e/kg for studied Chilean organic highbush orchards excluding land-use change; 0.48 is the midpoint of that range. Chile is a top-3 exporter. Organic, farm-gate only, small sample: confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 2,
+                "source": {
+                    "id": 269,
+                    "url": "https://fruitsandnuts.ucdavis.edu/sites/g/files/dgvnsk12441/files/391-203.pdf",
+                    "title": "Penn State Extension — Agricultural Alternatives: Highbush Blueberry Production",
+                    "note": "Blueberries — tillage_events_per_year: highbush blueberry is a perennial shrub planting that bears for decades (Penn State: up to 50 years). Tillage happens only at establishment; rows are kept under permanent organic (sawdust) mulch and weeds are handled with herbicide, sod between rows, or at most shallow cultivation. No annual primary tillage, so 0 (confidence 2 because some growers do shallow cultivation)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 9,
+                "name": "Captan",
+                "kg_ha": [
+                    {
+                        "value": 2.6941,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — captan: 2021 5.245 lb/ac on 50%, 2023 4.473 on 53%, 2025 4.265 on 52%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.6302,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — malathion: 2021 2.161 lb/ac on 29%, 2023 2.316 on 29%, 2025 2.285 on 17%; 3-survey mean (spotted-wing drosophila, blueberry maggot)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.3139,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — glyphosate (all reported salts summed per year): 2021 iso. salt 2.352 lb/ac on 12% + pot. salt 4.93 on 4%; 2023 acid 1.372 on 1% + iso. 1.142 on 10% + pot. 0.773 on 7%; 2025 iso. 1.252 on 5% + pot. 1.291 on 9%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.1053,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — S-metolachlor: 2021 1.308 lb/ac on 8%, 2023 2.287 on 6%, 2025 1.996 on 2%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.1027,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — diazinon: 2021 0.665 lb/ac on 24%, 2023 0.594 on 10%, 2025 0.508 on 11%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.085,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — propiconazole: 2021 0.201 lb/ac on 18%, 2023 0.384 on 20%, 2025 0.395 on 29%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.0483,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — paraquat: 2021 0.753 lb/ac on 8%, 2023 1.023 on 5%, 2025 0.891 on 2%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0407,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — imidacloprid: 2021 0.18 lb/ac on 17%, 2023 0.286 on 23%, 2025 0.126 on 10%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0241,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — reported as zeta-cypermethrin (an enriched isomer mixture of cypermethrin, mapped to the cypermethrin toxicity profile): 2021 0.056 lb/ac on 44%, 2023 0.065 on 43%, 2025 0.06 on 20%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.0918,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — 2,4-D dimethylamine salt: 2021 8.191 lb/ac on 1% (choline salt and later years withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.0329,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — pendimethalin: 2023 2.932 lb/ac on 1% (2021 and 2025 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0073,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys, PROGRAM STATES aggregate (strawberries: CA+FL; blueberries: GA, MI, NJ, NC, OR, WA). Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085. Blueberries — thiamethoxam: 2021 0.114 lb/ac on 4%, 2023 0.121 on 7%, 2025 0.131 on 5%; 3-survey mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1231,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Blueberries — availability_gg (world): FAOSTAT QCL item 552 World production 2020–2024 = 1.043, 1.204, 1.308, 1.210, 1.393 Mt; mean 1,231 Gg. Includes wild lowbush harvest (e.g. Canada) and excludes China (not reported to FAOSTAT), so it understates true world supply."
+                }
+            },
+            {
+                "value": 304,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 181,
+                    "url": "https://downloads.usda.library.cornell.edu/usda-esmis/files/zs25x846c/6682zt197/qf85q241d/ncit0524.pdf",
+                    "title": "USDA NASS — Noncitrus Fruits and Nuts 2023 Summary (May 2024)",
+                    "note": "Blueberries — availability_gg (US, cultivated): NASS 'Blueberry, Cultivated' utilized production 2021–2023 = 698.2 / 671.5 / 642.2 million lb; mean x 0.45359 = 304 Gg. Wild Maine blueberries (~40–57 Gg/yr) excluded."
+                }
+            }
+        ]
     }
 ]

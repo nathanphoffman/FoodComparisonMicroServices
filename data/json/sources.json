@@ -6,7 +6,8 @@
         "notes": [
             "Peanuts — yield_kg_ha (US): US peanut yields 2022 4,012 and 2023 3,742 lb/acre (in-shell); combined with 2019–2021 from the Crop Production 2021 Summary (cropan22) for a 2019–2023 mean of 3,927.2 lb/acre = 4,402 kg/ha.",
             "Grains — yield_kg_ha (US), 2019–2023 means (2019–2020 from cropan22, 2021–2023 from this report): corn 173.26 bu/acre ×56 lb = 10,875 kg/ha; wheat 48.16 bu/acre ×60 lb = 3,239 kg/ha; barley 71.90 bu/acre ×48 lb = 3,868 kg/ha; rice 7,567.2 lb/acre rough (paddy) = 8,482 kg/ha.",
-            "Legumes — yield_kg_ha (US), 2019–2023 means (2019–2020 from cropan22, 2021–2023 from this report): soybeans 50.06 bu/acre ×60 lb = 3,367 kg/ha; all chickpeas 1,277.4 lb/acre = 1,432 kg/ha; black-class dry edible beans 2,039.2 lb/acre = 2,286 kg/ha."
+            "Legumes — yield_kg_ha (US), 2019–2023 means (2019–2020 from cropan22, 2021–2023 from this report): soybeans 50.06 bu/acre ×60 lb = 3,367 kg/ha; all chickpeas 1,277.4 lb/acre = 1,432 kg/ha; black-class dry edible beans 2,039.2 lb/acre = 2,286 kg/ha.",
+            "Dairy — corn silage as corn-grain equivalent (milk/yogurt/butter feed): 2023 corn grain 177.3 bu/ac = 11.1 t/ha as-fed; corn for silage 20.1 short tons/ac as harvested (x 35% DM = 15.8 t DM/ha). 1 kg silage DM ~ 0.70 kg corn grain by land (and roughly by emissions)."
         ]
     },
     {
@@ -417,7 +418,8 @@
         "title": "Alberta Milk — Feed Required per Litre of Milk",
         "notes": [
             "Dairy cow — feed ratio (productive period only): ~1.35 kg feed per kg milk during active lactation.",
-            "Dairy cow — feed note: This is the lactation-phase baseline only; see source 39 for the full lifetime calculation that also includes dry periods and heifer rearing."
+            "Dairy cow — feed note: This is the lactation-phase baseline only; see source 39 for the full lifetime calculation that also includes dry periods and heifer rearing.",
+            "CORRECTION 2026-09-24: no longer used for milk, yogurt or butter feed ratios. The derived ration (one Alberta high-yield ration applied worldwide, no silage/pasture/residues, 100% charged to milk) was replaced by GLEAM 2013 regional rations (source 290) with milk-allocated intake from GLEAM/Pelton 2025 (sources 290, 292). Still used by other entries, so kept."
         ]
     },
     {
@@ -441,7 +443,8 @@
             "Dairy cow — lifetime feed breakdown: ~36,450 kg lactation feed (1.35 kg/kg milk × 27,000 kg milk) + ~2,700 kg dry-period feed (3 periods × 60 days × 15 kg/day) + ~5,840 kg heifer rearing (730 days × 8 kg DM/day) = ~44,990 kg total.",
             "Dairy cow — lifetime milk output: ~27,000 kg per cow over productive life.",
             "Dairy cow — lifetime FCR: 44,990 ÷ 27,000 ≈ 1.67 kg feed per kg milk.",
-            "Dairy cow — feed split applied: 55% corn / 25% alfalfa / 10% soy / 7% grass hay → corn 0.92, alfalfa 0.42, soy 0.17, hay 0.12 kg per kg milk."
+            "Dairy cow — feed split applied: 55% corn / 25% alfalfa / 10% soy / 7% grass hay → corn 0.92, alfalfa 0.42, soy 0.17, hay 0.12 kg per kg milk.",
+            "CORRECTION 2026-09-24: the split above sums to 97%, omits silage, pasture and crop residues, and charges 100% of herd feed to milk; dairy.json milk/yogurt/butter feed now uses GLEAM 2013 rations (source 290) and milk-allocated intake (sources 290, 292) instead."
         ]
     },
     {
@@ -727,6 +730,7 @@
             "Animals — ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output: FAO GLEAM v3.0 provides species-level GHG intensities from the on-farm livestock system boundary (enteric fermentation + manure management for CH4/N2O; on-farm energy for CO2). Land use change and feed production emissions are excluded. Values are global weighted averages across production systems.",
             "Beef cattle CH4: ~8.2 kg CH4/kg retail beef; N2O: ~0.10 kg/kg; CO2 (on-farm): ~0.55 kg/kg.",
             "Dairy cow CH4: ~0.22 kg CH4/kg milk; N2O: ~0.004 kg/kg; CO2: ~0.07 kg/kg.",
+            "CORRECTION 2026-09-24: the dairy cow line above is not supported by GLEAM. FAO's GLEAM ruminant report (source 290) gives global cow milk 2.8 kg CO2e/kg FPCM with CH4 ~50% -> ~0.056 kg CH4/kg (0.22 is ~4x too high), and the 0.004 N2O included feed-fertiliser N2O. dairy.json milk/yogurt/butter no longer cite source 56 for gas values; corrected values cite sources 290-293. The other species lines were not re-checked here.",
             "Pig CH4: ~0.20 kg CH4/kg pork; N2O: ~0.022 kg/kg; CO2: ~0.50 kg/kg.",
             "Broiler chicken CH4: ~0.035 kg CH4/kg meat; N2O: ~0.016 kg/kg; CO2: ~0.42 kg/kg.",
             "Layer hen CH4: ~0.045 kg CH4/kg eggs (manure management, on-farm only; no enteric CH4 for poultry); N2O: ~0.00010 kg/kg (on-farm manure; confined housing produces minimal N2O); CO2: ~0.040 kg/kg (on-farm energy use only). NOTE: Previously recorded N2O 0.011 and CO2 0.32 values were incorrect — those figures included upstream feed/fertilizer emissions outside the GLEAM on-farm system boundary.",
@@ -747,6 +751,8 @@
             "Beef native_fraction: 0.65 — approximately 35% of global beef pasture involves some degree of ecosystem conversion, concentrated in tropical regions (Brazil accounts for ~24% of tropical deforestation from cattle ranching). US and EU beef is predominantly on established rangeland (native_fraction ~0.90); Brazilian beef ~0.40-0.50.",
             "Lamb native_fraction: 0.85 — lamb production concentrated in NZ, UK, and Australia on long-established temperate grassland with minimal ongoing conversion.",
             "Milk native_fraction: 0.80 — dairy farming predominantly on established agricultural land near infrastructure.",
+            "CORRECTION 2026-09-24: dairy.json previously attributed milk CH4 0.24, N2O 0.004 and CO2 0.08 kg/kg milk to this source; P&N does not publish per-gas values, and 0.24 kg CH4 alone (6.7 kg CO2e) exceeds P&N's 3.15 kg CO2e/kg milk total. Those entries were replaced (see sources 72, 290-293). P&N's milk 3.15 kg CO2e/kg is the global mean (OWID 'global average'), not a median.",
+            "CORRECTION 2026-09-24 (pasture_ha_per_kg_output): the 'Milk pasture ~0.0001 ha per kg' line above is wrong. 1 m2/kg is near P&N's 10th-percentile milk land use (1.11 m2/L; mean 8.95, median 2.1), and it was described as pasture + feed cropland, which double counts the feed rows. dairy.json milk/yogurt/butter now use grazing-only values: world 0.00066 ha/kg milk from P&N Data S2 permanent pasture 6.275 m2/kg (source 297), US 0.0002 ha/kg from Eshel et al. 2014 (source 298). Milk, yogurt and butter no longer cite source 55 for this field.",
             "Sweet potato — emissions_per_kg: 0.59 kg CO2-eq/kg (low-input tropical root crop; P&N 2018 global median).",
             "Chickpeas — emissions_per_kg: 0.86 kg CO2e/kg (farm gate global weighted average; includes N2O from N-fixation residues; net lower than cereals; P&N 2018).",
             "Black beans — emissions_per_kg: ~2.0 kg CO2e/kg (Phaseolus vulgaris dry beans; P&N 2018 supplementary global median; higher than chickpeas due to LUC exposure in Brazil/Mexico and higher cultivation intensity; prior dataset value of 0.97 incorrectly referenced the chickpea/small-legume figure).",
@@ -818,6 +824,7 @@
             "n2o (GLEAM): 0.004 × 1.15 = 0.0046 kg N2O/kg yogurt.",
             "co2 (P&N): 0.08 × 1.15 = 0.092 kg CO2/kg yogurt.",
             "co2 (GLEAM): 0.07 × 1.15 = 0.0805 kg CO2/kg yogurt.",
+            "CORRECTION 2026-09-24: the ch4/n2o/co2 derivations above used wrong milk values (see sources 55, 56). Yogurt now uses corrected milk values x 1.15: CH4 world 0.0567 / US 0.024, N2O world 0.00144 / US 0.0003, CO2 world 1.26 / US 0.80 (incl. post-farm stages and extra yogurt processing from FAO 2010, source 291). The yogurt CH4 'midpoint' entry (0.264) that cited this source was removed because it re-averaged the other two entries and double-weighted them. The 1.15 kg milk/kg yogurt factor is still used.",
             "yield_fraction: 1.0 (conversion already expressed per kg yogurt as consumed).",
             "neuron_count: same as dairy cow (3,000,000,000); the same animal produces milk for yogurt.",
             "weight_kg: same as dairy cow (680 kg)."
@@ -1070,7 +1077,8 @@
         "notes": [
             "Supply-chain stage breakdown of GHG emissions (kg CO2e per kg food) from Poore & Nemecek (2018), published by Our World in Data. Stages covered: land use change, animal feed, farm (on-farm CH4/N2O/CO2 only), processing, transport, retail, packaging, consumer waste losses.",
             "Eggs — full supply chain breakdown (kg CO2e per kg eggs): land use change 0.710, animal feed 2.205, farm (on-farm) 1.320, processing 0.000, transport 0.084, retail 0.036, packaging 0.161, losses 0.153. Total: ~4.67 kg CO2e/kg eggs. Cross-checks against ghg-per-kg-poore CSV value of 4.67 kg CO2e/kg (source 71).",
-            "Eggs — on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields."
+            "Eggs — on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields.",
+            "Milk — full supply chain breakdown (kg CO2e per kg milk, OWID CSV downloaded 2026-09-24): land use change 0.512, farm 1.509, animal feed 0.244, processing 0.154, transport 0.093, retail 0.265, packaging 0.100, losses 0.274. Total 3.15. Used in dairy.json for milk co2_kg_per_kg_output (on-farm energy + post-farm stages 0.886 incl. losses), for P&N-consistent bounds on milk CH4 (~0.038) and manure N2O (~0.0006) from the 1.51 farm stage (P&N GWP CH4=34, N2O=298), and for butter emissions_per_kg (farm-gate stages 2.26 x 8.2 + 1.6)."
         ]
     },
     {
@@ -1235,6 +1243,315 @@
         "title": "EFSA AHAW Panel (2019) — Killing for purposes other than slaughter: poultry (EFSA Journal 17(11):5850)",
         "notes": [
             "Egg — offspring_captivity_years: describes the killing of surplus male day-old layer chicks in the hatchery (maceration or gas) immediately after hatching and sexing. Chicks are killed on the day of hatch, so time alive outside the egg is ~1 day (1/365 ≈ 0.003 years)."
+        ]
+    },
+    {
+        "id": 248,
+        "url": "https://en.wikipedia.org/wiki/Milk_equivalent",
+        "title": "Wikipedia — Milk equivalent (USDA milkfat-basis conversion; CRS Report for Congress, Womach 2005)",
+        "notes": [
+            "Butter — milk-to-butter ratio: 'on a milkfat basis, it takes about 21.8 pounds of farm milk to make a pound of butter' (USDA milk-equivalent factor, via Congressional Research Service glossary). Consistent with USDA ERS dairy conversion factors (butter 80.5% milkfat, 1.85% skim solids; 80.5 / 21.8 ≈ 3.7% farm-milk fat). Used as the physical ratio (21.8 kg milk per kg butter) before co-product allocation."
+        ]
+    },
+    {
+        "id": 249,
+        "url": "https://doi.org/10.3168/jds.2011-4545",
+        "title": "Flysjö (2011) — Potential for improving the carbon footprint of butter and blend products (Journal of Dairy Science 94:5833)",
+        "notes": [
+            "Butter — emissions_per_kg: 9.0 kg CO2e/kg (250-g wrap, excl. consumer waste), 9.3 (250-g tub), Danish Arla butter, cradle-to-consumer. Raw milk (0.91 kg CO2e/kg ECM) = 80–85% of CF; raw milk allocated between butter and skim/buttermilk co-products by value-weighted fat:protein (1:1.7). IDF (2010) milk-solids allocation would lower results ~24%.",
+            "Butter — allocation factor: 0.825 × 9.0 / 0.91 ≈ 8.2 kg milk-equivalent charged per kg butter; used for all butter per-kg fields (lifetime output, GHG gases, land, feed)."
+        ]
+    },
+    {
+        "id": 250,
+        "url": "https://en.wikipedia.org/wiki/Butter",
+        "title": "FAOSTAT — Butter of cow milk production, 2023 (as tabulated in Wikipedia 'Butter')",
+        "notes": [
+            "Butter — availability_gg: FAOSTAT 2023 world butter of cow milk 5,983,836 t (≈5,984 Gg); US 957,773 t."
+        ]
+    },
+    {
+        "id": 251,
+        "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/jd474j74j/np194z93v/daryan24.pdf",
+        "title": "USDA NASS — Dairy Products 2023 Summary (April 2024)",
+        "notes": [
+            "Butter — availability_gg (US): 2023 US butter production 2,115,028 thousand lb (2.12 billion lb, +2.7% vs 2022) = 959 Gg."
+        ]
+    },
+    {
+        "id": 263,
+        "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+        "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+        "notes": [
+            "Strawberries — yield_kg_ha and availability_gg (world): World (area 5000) item 544 yield 2020–2024 mean 23,946 kg/ha; production 2020–2024 mean 10,129 Gg (2023–2024 are FAO estimates, flag E).",
+            "Blueberries — yield_kg_ha and availability_gg (world): World item 552 yield 2020–2024 mean 6,640 kg/ha; production mean 1,231 Gg. Mixes cultivated highbush with managed wild lowbush (Canada) and omits China (not reported)."
+        ]
+    },
+    {
+        "id": 264,
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+        "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+        "notes": [
+            "Strawberries — yield_fraction: NDB 09316 refuse 6% (caps and stems) -> 0.94.",
+            "Blueberries — yield_fraction: NDB 09050 refuse 5% (stems and green or spoiled berries) -> 0.95."
+        ]
+    },
+    {
+        "id": 265,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959652616302700",
+        "title": "Tabatabaie & Murthy (2016) — Cradle to farm gate life cycle assessment of strawberry production in the United States (J. Cleaner Production 127)",
+        "notes": [
+            "Strawberries — emissions_per_kg (US): cradle-to-farm-gate GWP CA 1.75, FL 2.50, NC 5.48, OR 2.21 kg CO2e/kg; CA/FL production-weighted (NASS 2023) = 1.83 kg CO2e/kg."
+        ]
+    },
+    {
+        "id": 266,
+        "url": "https://link.springer.com/article/10.1007/s11367-016-1034-8",
+        "title": "Cordes, Iriarte & Villalobos (2016) — Evaluating the carbon footprint of Chilean organic blueberry production (Int. J. Life Cycle Assess. 21:281–292)",
+        "notes": [
+            "Blueberries — emissions_per_kg (world, Chile): farm-gate carbon footprint of organic highbush orchards 0.27–0.69 kg CO2e/kg excluding land-use change; midpoint 0.48 used at confidence 2."
+        ]
+    },
+    {
+        "id": 267,
+        "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+        "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+        "notes": [
+            "Strawberries — pesticide_kg_ha (US) ~267 kg a.i./ha per bearing ha (2021/2023/2025 PROGRAM STATES CA+FL; 70–85% is soil fumigants chloropicrin and 1,3-D) and per-compound rates for captan, pendimethalin, thiamethoxam, imidacloprid, diazinon; fertilizer_kg_ha (US) N+P2O5+K2O 2018/2019/2023 mean 269 kg/ha.",
+            "Blueberries — pesticide_kg_ha (US) 14.6 kg a.i./ha per bearing ha (2021/2023/2025 PROGRAM STATES GA, MI, NJ, NC, OR, WA) and per-compound rates for 12 compounds; fertilizer_kg_ha (US) N+P2O5+K2O 2019/2023 mean 179 kg/ha.",
+            "Method: bearing acres back-calculated from captan (lb / (lb/acre/yr x % treated)); per-compound kg/ha = lb/acre/yr x % treated x 1.12085."
+        ]
+    },
+    {
+        "id": 268,
+        "url": "https://coststudyfiles.ucdavis.edu/2024/04/04/2024Strawberry-FULL-FINAL-March2024.pdf",
+        "title": "UC Davis / UCCE (2024) — Sample Costs to Produce and Harvest Strawberries, Central Coast Region (Santa Cruz & Monterey)",
+        "notes": [
+            "Strawberries — tillage_events_per_year (US): 13 passes (disc 6x, subsoil 2x, chisel 2x, list/shape beds, year-end disc 2x); fertilizer_kg_ha (US): 500 lb/ac 18-8-13 + 350 lb/ac CAN 17 = 285 kg nutrients/ha."
+        ]
+    },
+    {
+        "id": 269,
+        "url": "https://fruitsandnuts.ucdavis.edu/sites/g/files/dgvnsk12441/files/391-203.pdf",
+        "title": "Penn State Extension — Agricultural Alternatives: Highbush Blueberry Production",
+        "notes": [
+            "Blueberries — tillage_events_per_year: perennial planting bearing up to 50 years, permanent sawdust mulch in rows, weeds controlled by herbicide, sod middles or shallow cultivation; 0 annual tillage events."
+        ]
+    },
+    {
+        "id": 270,
+        "url": "https://josephpoore.com/data/science-2018/Data%20S2.xls",
+        "title": "Poore & Nemecek (2018) — Data S2, 'Results - Global Totals' sheet (GHG per kg FAO Food Balance Sheet commodity, by supply-chain stage)",
+        "notes": [
+            "Sheet 'Results - Global Totals' gives GHG (kg CO2e, IPCC 2013) per kg of FAO Food Balance Sheet commodity (i.e. per kg primary crop equivalent, e.g. kg wheat or maize grain), excluding waste, split into LUC, Feed, Farm, Processing, Transport, Packaging, Retail. Unlike the OWID charts (per kg retail product: bread, maize meal, tofu), these rows are usable per kg grain.",
+            "Farm gate (LUC + Farm) per kg commodity: Maize 0.315 + 0.475 = 0.79; Wheat & Rye 0.100 + 0.847 = 0.95; Cereals & Oilcrops Misc. 0.161 + 0.744 = 0.905 (sorghum proxy); Soybean Oil 3.096 + 1.519 = 4.615 per kg oil (used to back-calculate soybeans ~2.25 and soybean meal ~1.7 under economic allocation).",
+            "Used 2026-09-24 for farm_gate_emissions_per_kg of corn, wheat, sorghum and soy (feed crops are charged farm-gate, not retail, emissions)."
+        ]
+    },
+    {
+        "id": 271,
+        "url": "https://josephpoore.com/data/science-2018/Science%20360%206392%20987%20-%20SUPPLEMENTARY%20MATERIALS.pdf",
+        "title": "Poore & Nemecek (2018) — Supplementary Materials (Table S1 functional units; oilseed meal allocation)",
+        "notes": [
+            "Table S1 functional units: Wheat & Rye = 1 kg bread; Maize = 1 kg meal (for polenta); Soybeans = 1 kg tofu or 1 L soymilk; Barley = 1 L beer; Oil crops = 1 L refined oil. There is no raw-soybean, sorghum, alfalfa or grass-hay product. Table S5 is meat processing conversions (not crop emissions).",
+            "Economic allocation is used between co-products; for soy ~60% of crop impact is apportioned to meal (sensitivity section, Table S16 discussion).",
+            "Cited 2026-09-24 in CORRECTION notes on corn, wheat, sorghum, soy, alfalfa and grass-hay emissions_per_kg."
+        ]
+    },
+    {
+        "id": 272,
+        "url": "https://iopscience.iop.org/article/10.1088/1748-9326/ac018f",
+        "title": "Liu et al. (2021) — Varied farm-level carbon intensities of corn feedstock help reduce corn ethanol GHG emissions (Environ. Res. Lett.; Argonne GREET)",
+        "notes": [
+            "Corn — farm_gate_emissions_per_kg (US): national average cradle-to-farm-gate carbon intensity 204 g CO2e/kg corn (2018 crop, GREET); surveyed farms 210 g/kg, range 119–407. Excludes land-use change and soil carbon."
+        ]
+    },
+    {
+        "id": 273,
+        "url": "https://doi.org/10.1007/s11367-012-0386-y",
+        "title": "Adom et al. (2012) — Regional carbon footprint analysis of dairy feeds for milk production in the USA (Int J LCA 17:520–534)",
+        "notes": [
+            "US national average cradle-to-farm-gate carbon footprints, g CO2e per kg DRY feed: corn grain 390, corn silage 200, DDGS dry mill 910, DDGS wet mill 670, oats 850, soybeans 390, soybean meal 410, winter wheat 430, alfalfa hay 170, forage mix 160. Inorganic N fertiliser is the largest contributor; no land-use change.",
+            "farm_gate_emissions_per_kg (US), converted to as-fed: corn 0.39 x 0.845 = 0.33; wheat 0.43 x 0.865 = 0.37; soybean meal 0.41 x 0.88 = 0.36; alfalfa hay 0.17 x 0.90 = 0.15; grass hay (forage mix proxy) 0.16 x 0.88 = 0.14."
+        ]
+    },
+    {
+        "id": 274,
+        "url": "https://www.sorghumcheckoff.com/wp-content/uploads/2021/10/The-Carbon-Footprint-of-Sorghum.pdf",
+        "title": "SGS North America for United Sorghum Checkoff (2015) — The Carbon Footprint of Sorghum",
+        "notes": [
+            "Sorghum — farm_gate_emissions_per_kg (US): 0.25 kg CO2e/kg sorghum (6.4 kg CO2e/bushel), cradle to farm gate, survey of 300+ growers in 9 states (80% of planted acres); SD 0.1, range 0.05–0.74. Excludes land-use change and soil carbon change."
+        ]
+    },
+    {
+        "id": 275,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0308521X25002999",
+        "title": "Springer et al. (2026) — Explaining global variation in life-cycle GHG emissions from soybeans and soybean meal: a systematic review (Agricultural Systems 233:104559)",
+        "notes": [
+            "Review of 27 soybean and 22 soybean-meal LCA studies/databases across 30 countries. Composite global average: soybeans 1.10 kg CO2e/kg; soybean meal 1.66 kg CO2e/kg (range 0.25–6.50). Variation driven by land-use change, farming practice, allocation and method choices.",
+            "Soy — farm_gate_emissions_per_kg (soybean meal) world 1.66; also cited in the CORRECTION on soy emissions_per_kg."
+        ]
+    },
+    {
+        "id": 276,
+        "url": "https://ussec.org/wp-content/uploads/2025/10/Sustainable-US-Soy-Carbon-Footprint-General-2025.pdf",
+        "title": "USSEC (2025) — Examining U.S. Soy's Carbon Footprint (Mérieux NutriSciences | Blonk, Agri-footprint 6.3)",
+        "notes": [
+            "Whole soybeans, cradle-to-market, PEF feed rules: US 0.38 excluding LUC, 0.43 including LUC + peat; Argentina 0.33 / 4.50; Brazil 0.49 / 4.55 kg CO2e/kg.",
+            "Soy — farm_gate_emissions_per_kg (US, soybean meal): 0.43 x 0.60 / 0.79 = 0.33 (economic allocation to meal). Industry factsheet; confidence 2."
+        ]
+    },
+    {
+        "id": 277,
+        "url": "https://doi.org/10.1016/j.aquaculture.2025.742239",
+        "title": "Deville et al. (2025) — Identifying current trends in the environmental impacts linked to fishmeal and fish oil production in Peru (Aquaculture 600:742239)",
+        "notes": [
+            "LCA of a Peruvian producer (~10% of national output; 169 anchoveta vessels, 4 plants; 2019 and 2021). Energy allocation. ~320 kg CO2e per t fishmeal and ~4,430 kg CO2e per t fish oil; landing 1 t anchoveta 109.1 (2019) and 88.1 (2021) kg CO2e; fishery ~45% of GHG.",
+            "Fishmeal / fish oil — farm_gate_emissions_per_kg (0.32 / 4.43); also cited in CORRECTIONs showing the existing fishmeal 6.0–6.5 values are ~10-20x too high."
+        ]
+    },
+    {
+        "id": 290,
+        "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+        "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+        "notes": [
+            "Cow milk — global average 2.8 kg CO2e/kg FPCM, cradle to farm gate (excl. pasture-expansion LUC), GWP100 CH4=25, N2O=298. FPCM = 4.0% fat, 3.3% protein.",
+            "Cow milk — gas shares (global dairy, Figure 5 and text p.23): CH4 50% (enteric 46.5%, enteric >92% of CH4), N2O ~29% (applied & deposited manure ~17%, rest manure storage and fertiliser/crop residues), CO2 ~20% (feed, soybean LUC, energy, post-farm 0.7%). -> CH4 0.056 kg/kg FPCM; manure-only N2O ~0.0019 kg/kg FPCM (pie labels are hard to match exactly).",
+            "Allocation between milk and dairy-herd meat (Table B22, protein basis): 0.90-0.96 to milk by region (N. America 0.94, W. Europe 0.95, South Asia 0.90).",
+            "Dairy cattle ration by region (Table B7, % DM): e.g. N. America fresh grass 14.4, hay 17.0, legumes & silage 30.6, bran 4.4, oilseed meals 6.4, wet distillers grain 4.3, grains 22.8. Used with approximate 2023 FAOSTAT regional shares for world milk feed ratios.",
+            "Direct on-farm energy for milk (Table E9): ~0.02-0.03 kg CO2/kg milk in developing regions, 0.05-0.07 OECD (USA ~0.07); world ~0.05 used."
+        ]
+    },
+    {
+        "id": 291,
+        "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+        "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+        "notes": [
+            "Global milk production, processing and transport: 2.4 kg CO2e/kg FPCM (+/-26%); cradle-to-farm-gate = 93% of total; CH4 ~52% of total (GWP 25) -> ~0.050 kg CH4/kg FPCM. Dairy sector 1,969 Mt CO2e, of which 1,328 milk, 151 culled-cow meat, 490 fattened-calf meat.",
+            "Table 4.9 (Europe) post-farm processing, transport and packaging per kg farm milk: fresh milk and cream 0.153, fermented milk and cream 0.304 kg CO2e -> extra yogurt processing ~0.15 per kg milk used.",
+            "0.24 kg CH4/kg milk (formerly in dairy.json) may be this report's 2.4 kg CO2e/kg with a slipped decimal — unconfirmed."
+        ]
+    },
+    {
+        "id": 292,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+        "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+        "notes": [
+            "US milk 2020: 1.38 kg CO2e/kg FPCM farm gate (regions 1.24-1.87), AR6 GWP (biogenic CH4 27, N2O 273), biophysical allocation 81% milk / 19% meat. Shares: concentrate feed 35%, enteric 27%, manure 19% (73% CH4 / 27% N2O), forage feed 13%, farm energy 5%, feed milling ~1%, feed transport ~0.7%. Feed factors include direct LUC.",
+            "Derived per kg FPCM: CH4 0.0209 (enteric 0.0138 + manure 0.0071), manure N2O 0.00026, on-farm energy + feed milling/transport CO2 ~0.092."
+        ]
+    },
+    {
+        "id": 293,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+        "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+        "notes": [
+            "Cradle-to-processing gate (~90% of cradle-to-grave), 2020, AR6. Fluid milk 1.34 kg CO2e/kg packaged milk, farm = 88% (post-farm to processing gate ~0.16). Yogurt 4.35 (economic allocation, acid whey to feed) or 2.38 (milk-solids allocation). Cheddar 7.13. Ice cream 3.3.",
+            "Butter: 13.9 Mt CO2e/yr (9% of US dairy total 163.3 Mt); with 2020 US butter output ~973,000 t (source 296) -> ~14.3 kg CO2e/kg butter (derived)."
+        ]
+    },
+    {
+        "id": 294,
+        "url": "https://www.sciencedirect.com/science/article/pii/S0958694612001975",
+        "title": "Thoma et al. (2013) — Greenhouse gas emissions from milk production and consumption in the United States: a cradle-to-grave LCA circa 2008 (Int. Dairy J. 31:S3)",
+        "notes": [
+            "US fluid milk: 2.05 (90% CI 1.77-2.4) kg CO2e per kg milk consumed, incl. 12% loss at retail and 20% at consumption; farm gate 1.23 kg CO2e/kg FPCM; 1.42 kg FPCM needed per kg consumed; 72% of emissions before the farm gate; post-farm 0.57 per kg consumed. Per kg purchased ~1.64 (2.05 x 0.8)."
+        ]
+    },
+    {
+        "id": 295,
+        "url": "https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch10_Livestock.pdf",
+        "title": "IPCC (2019) — 2019 Refinement to the 2006 IPCC Guidelines, Vol. 4 Ch. 10: Emissions from Livestock and Manure Management",
+        "notes": [
+            "Table 10.12 methane yield: dairy cows high-producing (>8,500 kg/yr) 19.0-20.0 g CH4/kg DMI (Ym 5.7-6.0%), medium (5,000-8,500) 21.0 (6.3%), low (<5,000) 21.4 (6.5%); non-dairy cattle mixed rations 21.0. Used to back out milk-allocated feed intake from enteric CH4 (world ~2.43, US ~0.71 kg DM per kg milk)."
+        ]
+    },
+    {
+        "id": 296,
+        "url": "https://esmis.nal.usda.gov/sites/default/release-files/d791sg21k/h702s208v/707973087/DYMBUTTER_PROD.PDF",
+        "title": "USDA AMS Dairy Market News / NASS — U.S. Butter Production by month (million pounds)",
+        "notes": [
+            "2020 monthly US butter production (million lb): 204.948, 194.756, 200.052, 227.212, 172.353, 149.145, 152.958, 150.931, 150.721, 161.991, 172.909, 207.926 -> 2,145.9 million lb = ~973,000 t. Used to turn Pelton 2026's 13.9 Mt CO2e butter total into ~14.3 kg CO2e/kg."
+        ]
+    },
+    {
+        "id": 297,
+        "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+        "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+        "notes": [
+            "Science's copy returns 403 to scripts; read from the identical author-saved file mirrored at https://github.com/g-delrieu/greenr/raw/master/greenr/data/aaq0216_DataS2.xls (Author/Last saved by Joseph Poore, 2018-04-10).",
+            "'Results - Global Totals': land use per kg Food Balance Sheet unit (2009-11), split Arable / Fallow / Permanent Pasture (m2/kg). Milk: 1.327 / 0.402 / 6.275 (470,267 kt). Bovine meat (dairy herd): 10.096 / 1.965 / 13.667 (31,425 kt). -> milk carries ~87.3% of dairy-herd permanent pasture under P&N's economic allocation.",
+            "'Results - Retail Weight', Milk land use (m2 per litre): 5th pctl 0.8, 10th 1.11, mean 8.95, median 2.1, 90th 9.3, 95th 32.19.",
+            "Used for dairy.json milk/yogurt/butter pasture_ha_per_kg_output (world, grazing only): 6.275 x 0.92/0.873 = 6.61 m2/kg milk = 0.00066 ha/kg (rescaled to the GLEAM ~0.92 milk share used for the gas and feed fields); yogurt x1.15, butter x8.2."
+        ]
+    },
+    {
+        "id": 298,
+        "url": "https://doi.org/10.1073/pnas.1402183111",
+        "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+        "notes": [
+            "SI workbook read from https://github.com/RPGroup-PBoC/human_impacts/tree/master/data/agriculture/eshel2014_livestock_resource_requirements/source (eshel2014_supplement.xlsx). 2000-2010 USDA data.",
+            "US dairy land (10^6 acres/yr, mean +- std): concentrates 15.9 +- 4.9, processed roughage 7.1 +- 2.5, pasture 49.2 +- 28.1 (6.9% of US pasture feed; US pasture total 767 M acres = cropland pasture 36 + grassland pasture 600.5 + grazed forest 130.5). Nationally ~200,000 million m2 (~20 Mha) of pasture for dairy.",
+            "US milk production 2001-2010 mean 179,308 million lb = 81.3 Mt (same workbook). All dairy-herd feed is charged to dairy products (an 8.3% culled-dairy share is computed but not used).",
+            "Used for dairy.json milk pasture_ha_per_kg_output (US, grazing only): 2.46 m2/kg x Pelton 2025 81% milk allocation = 1.99 m2/kg = 0.0002 ha/kg; yogurt x1.15, butter x8.2."
+        ]
+    },
+    {
+        "id": 307,
+        "url": "https://fdc.nal.usda.gov/food-details/168878/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 168878: Rice, white, long-grain, regular, enriched, cooked",
+        "notes": [
+            "Per 100 g: energy 130 kcal, water 68.4 g, protein 2.69 g, fat 0.28 g, sat fat 0.077 g, carbs 28.2 g, fiber 0.4 g, sugars 0.05 g, sodium 1 mg, cholesterol 0. Used for rice nutrition (cooked basis) and, with 169756, the rice cooked_weight_ratio. Retrieved via FDC API 2026-09-24."
+        ]
+    },
+    {
+        "id": 308,
+        "url": "https://fdc.nal.usda.gov/food-details/169756/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 169756: Rice, white, long-grain, regular, raw, unenriched",
+        "notes": [
+            "Per 100 g: energy 365 kcal, water 11.6 g, protein 7.13 g, fat 0.66 g, carbs 80.0 g, fiber 1.3 g. Rice cooked_weight_ratio = solids 88.4% / 31.6% (cooked, FDC 168878) = 2.80; energy check 365/130 = 2.81. Retrieved via FDC API 2026-09-24."
+        ]
+    },
+    {
+        "id": 309,
+        "url": "https://fdc.nal.usda.gov/food-details/168917/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 168917: Quinoa, cooked",
+        "notes": [
+            "Per 100 g: energy 120 kcal, water 71.6 g, protein 4.4 g, fat 1.92 g, sat fat 0.231 g, carbs 21.3 g, fiber 2.8 g, sugars 0.87 g, sodium 7 mg, cholesterol 0. Used for quinoa nutrition (cooked basis). Retrieved via FDC API 2026-09-24."
+        ]
+    },
+    {
+        "id": 310,
+        "url": "https://fdc.nal.usda.gov/food-details/168874/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 168874: Quinoa, uncooked",
+        "notes": [
+            "Per 100 g: energy 368 kcal, water 13.3 g, protein 14.1 g, fat 6.07 g, carbs 64.2 g, fiber 7.0 g. Quinoa cooked_weight_ratio = solids 86.7% / 28.4% (cooked, FDC 168917) = 3.05; energy check 368/120 = 3.07. Retrieved via FDC API 2026-09-24."
+        ]
+    },
+    {
+        "id": 311,
+        "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+        "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+        "notes": [
+            "'Milled Paddy Rice' extraction rate (% of paddy weight): median 65 across 67 countries (range 60–73); United States 72. Used to convert rice yield from paddy to milled basis (world x0.65, US x0.72).",
+            "'Oats, Rolled' extraction rate: median 55 across 35 countries (range 45–73); United States 58. Used to convert oat yield and water from oat grain to rolled-oat basis (x0.55 / ÷0.55).",
+            "Barley: United States pot barley 70, pearled barley 62 (median pot barley 70 across 41 countries). No hulled-barley factor, so barley was not converted."
+        ]
+    },
+    {
+        "id": 312,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378429014002573",
+        "title": "Brodt et al. (2014) — Life cycle greenhouse gas emissions in California rice production (Field Crops Research 169: 89–98)",
+        "notes": [
+            "1.47 kg CO2e per kg milled rice (90% white / 10% brown), California, measured field CH4 and N2O, GWP100 (IPCC 2007); boundary cultivation + fallow season + drying + milling, excludes packaging, retail, home preparation. Field emissions 69% of total; fertiliser production 0.28 kg CO2e/kg. With IPCC Tier 1 field emission factors the total is 3.60. Yield 9.3 t/ha dried paddy. Open PDF: https://agronomy-rice.ucdavis.edu/sites/g/files/dgvnsk11966/files/media/documents/Life%20cycle%20greenhouse%20gas%20emissions%20in%20California%20rice%20production.pdf"
+        ]
+    },
+    {
+        "id": 313,
+        "url": "https://agronomy.emu.ee/vol09Spec1/p09s123.pdf",
+        "title": "Rajaniemi, Mikkola & Ahokas (2011) — Greenhouse gas emissions from oats, barley, wheat and rye production (Agronomy Research 9, Special Issue 1: 189–195)",
+        "notes": [
+            "Finland, cradle to farm gate: oats 0.57, barley 0.57, spring wheat 0.59, rye 0.87 kg CO2e per kg grain (barley yield 3,380 kg/ha, 1,930 kg CO2e/ha). Cited in barley's emissions note as a scale check only."
         ]
     }
 ]

@@ -35,6 +35,7 @@ PLANT_KEYS = {
     "green_water_per_kg", "blue_water_per_kg", "grey_water_per_kg",
     "soil_erosion", "pesticide_kg_ha", "fertilizer_kg_ha", "emissions_per_kg",
     "tillage_events_per_year", "co2_capture_kg_ha_yr", "cooked_weight_ratio",
+    "farm_gate_emissions_per_kg",
 }
 
 

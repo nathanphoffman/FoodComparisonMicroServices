@@ -69,11 +69,14 @@
         "avocado",
         "coconut",
         "mango",
-        "orange"
+        "orange",
+        "strawberries",
+        "blueberries"
     ],
     "dairy": [
         "milk",
-        "yogurt"
+        "yogurt",
+        "butter"
     ],
     "oils": [
         "olive-oil"
