@@ -74,7 +74,7 @@ export function PercentSliders<K extends string>({
         <div className="flex justify-start">
             <button onClick={handleBalance} className="text-xs text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">Balance Sliders</button>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {keys.map(key => (
                 <div key={key} className="flex flex-col gap-1 flex-1">
                     <div className="flex justify-between text-xs text-neutral-500">

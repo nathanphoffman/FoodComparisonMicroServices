@@ -8,23 +8,24 @@ import type { FoodWeights, ScorePriorities } from './FoodTableTypes';
 import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
 import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
 import type { SortKey } from './FoodTableSort';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
 export type ColumnKey = SortKey | 'dummy';
 
-export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean }[] = [
-    { key: 'name',           label: 'Food',              sortKey: 'name',           defaultVisible: true  },
-    { key: 'nutritionScore', label: 'Nutrition Score',   sortKey: 'nutritionScore', defaultVisible: true  },
-    { key: 'emissions',      label: 'CO₂e (kg / kg)',    sortKey: 'emissions',      defaultVisible: true  },
-    { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true  },
-    { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true  },
-    { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true  },
-    { key: 'captiveSentience', label: 'Captive Sentience Cost', sortKey: 'captiveSentience', defaultVisible: true },
-    { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true  },
-    { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true  },
-    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true  },
-    { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false },
+export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean; mobileVisible: boolean }[] = [
+    { key: 'name',           label: 'Food',              sortKey: 'name',           defaultVisible: true,  mobileVisible: true  },
+    { key: 'nutritionScore', label: 'Nutrition Score',   sortKey: 'nutritionScore', defaultVisible: true,  mobileVisible: true  },
+    { key: 'emissions',      label: 'CO₂e (kg / kg)',    sortKey: 'emissions',      defaultVisible: true,  mobileVisible: false },
+    { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true,  mobileVisible: false },
+    { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true,  mobileVisible: false },
+    { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true,  mobileVisible: false },
+    { key: 'captiveSentience', label: 'Captive Sentience Cost', sortKey: 'captiveSentience', defaultVisible: true, mobileVisible: false },
+    { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true,  mobileVisible: false },
+    { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true,  mobileVisible: false },
+    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true,  mobileVisible: true  },
+    { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false, mobileVisible: false },
 ];
 
 export type ColConfig = (typeof COLUMN_CONFIG)[number];
@@ -99,7 +100,18 @@ export function FoodTableInputs({
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
     const [showToggle, setShowToggle] = useState(false);
+    const [showControls, setShowControls] = useState(false);
     const toggleRef                   = useRef<HTMLDivElement>(null);
+    const isMobile                    = useIsMobile();
+
+    // On mobile, start with a short column list; users can add more via Columns.
+    useEffect(() => {
+        if (!isMobile) return;
+        const mobileCols = COLUMN_CONFIG.filter(c => c.mobileVisible);
+        setVisible(new Set(mobileCols.map(c => c.key)));
+        onActiveColsChange(mobileCols);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isMobile]);
 
     function handleWeights(weights: FoodWeights) {
         const next = { ...sliderValues, weights };
@@ -165,35 +177,43 @@ export function FoodTableInputs({
     }
 
     useEffect(() => {
-        function onClickOutside(e: MouseEvent) {
+        function onClickOutside(e: PointerEvent) {
             if (toggleRef.current && !toggleRef.current.contains(e.target as Node)) {
                 setShowToggle(false);
             }
         }
-        document.addEventListener('mousedown', onClickOutside);
-        return () => document.removeEventListener('mousedown', onClickOutside);
+        document.addEventListener('pointerdown', onClickOutside);
+        return () => document.removeEventListener('pointerdown', onClickOutside);
     }, []);
 
     return (
         <>
-            <FoodTableSliders
-                onChange={handleWeights}
-                onScorePrioritiesChange={handleScorePriorities}
-                onGreenWaterChange={handleGreenWater}
-                onGreyWaterChange={handleGreyWater}
-                onPhilosophicalKillChange={handleKillMultiplier}
-                onCaptivityChange={handleCaptivityMultiplier}
-                onNeuronExponentChange={handleNeuronExponent}
-                onWeightExponentChange={handleWeightExponent}
-                onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
-                onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
-                neuronExponent={sliderValues.neuronExponent}
-                weightExponent={sliderValues.weightExponent}
-                finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
-            />
-            <div className="mb-4 px-1">
-                <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
-                <MealBuilder foods={foods} onChange={handleMealChange} />
+            <button
+                onClick={() => setShowControls(v => !v)}
+                className="md:hidden mb-3 w-full text-sm text-neutral-600 border border-neutral-200 rounded px-3 py-2 flex items-center justify-between bg-white"
+            >
+                Adjust scoring <span className="text-xs">{showControls ? '▴' : '▾'}</span>
+            </button>
+            <div className={showControls ? 'block' : 'hidden md:block'}>
+                <FoodTableSliders
+                    onChange={handleWeights}
+                    onScorePrioritiesChange={handleScorePriorities}
+                    onGreenWaterChange={handleGreenWater}
+                    onGreyWaterChange={handleGreyWater}
+                    onPhilosophicalKillChange={handleKillMultiplier}
+                    onCaptivityChange={handleCaptivityMultiplier}
+                    onNeuronExponentChange={handleNeuronExponent}
+                    onWeightExponentChange={handleWeightExponent}
+                    onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
+                    onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
+                    neuronExponent={sliderValues.neuronExponent}
+                    weightExponent={sliderValues.weightExponent}
+                    finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
+                />
+                <div className="mb-4 px-1">
+                    <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
+                    <MealBuilder foods={foods} onChange={handleMealChange} />
+                </div>
             </div>
             {scoringError && (
                 <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
@@ -208,13 +228,13 @@ export function FoodTableInputs({
                     >✕</button>
                 </div>
             )}
-            <div className="flex justify-end items-center gap-3 mb-2" ref={toggleRef}>
+            <div className="flex flex-wrap justify-end items-center gap-3 mb-2" ref={toggleRef}>
                 <div className="flex items-center gap-2 text-sm text-neutral-500">
                     <span>Data region</span>
                     <select
                         value={dataRegion}
                         onChange={e => onDataRegionChange(e.target.value as DataRegion)}
-                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
                     >
                         {DATA_REGION_OPTIONS.map(option => (
                             <option key={option.value} value={option.value}>{option.label}</option>
@@ -230,7 +250,7 @@ export function FoodTableInputs({
                             setSliderValues(next);
                             onSliderValuesChange(next);
                         }}
-                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
                     >
                         {[...foods].sort((a, b) => a.name.localeCompare(b.name)).map(f => (
                             <option key={f.slug} value={f.slug}>{f.name}</option>

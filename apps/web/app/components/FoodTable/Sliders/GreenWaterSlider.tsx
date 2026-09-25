@@ -19,7 +19,7 @@ export function GreenWaterSlider({ onChange }: { onChange?: (v: number) => void 
     };
 
     return (
-        <div className="flex flex-col gap-1 flex-1 border-l border-neutral-200 pl-6">
+        <div className="flex flex-col gap-1 flex-1 border-t border-neutral-200 pt-4 md:border-t-0 md:pt-0 md:border-l md:pl-6">
             <div className="flex justify-between text-xs text-neutral-500">
                 <span>Rain Water</span>
                 <span className="font-medium text-neutral-700">{greenWaterWeight}%</span>

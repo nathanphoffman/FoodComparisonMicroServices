@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useIsMobile } from "../../../hooks/useIsMobile";
 
 export function ExpandableSliderGroup({
     label,
@@ -12,6 +13,12 @@ export function ExpandableSliderGroup({
     defaultOpen?: boolean;
 }) {
     const [open, setOpen] = useState(defaultOpen);
+    const isMobile = useIsMobile();
+
+    // Start collapsed on mobile so the table isn't buried under controls.
+    useEffect(() => {
+        if (isMobile) setOpen(false);
+    }, [isMobile]);
 
     return (
         <div className="flex flex-col gap-3 border border-neutral-100 rounded-lg p-3">
@@ -34,7 +41,7 @@ export function ExpandableSliderGroup({
                 </svg>
             </button>
             {open && (
-                <div className="flex gap-6">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                     {children}
                 </div>
             )}

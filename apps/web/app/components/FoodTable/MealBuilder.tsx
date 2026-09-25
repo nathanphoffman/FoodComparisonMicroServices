@@ -85,7 +85,7 @@ export function MealBuilder({ foods, onChange }: Props) {
                 <div className="flex flex-col gap-1.5 pt-1">
                     {ingredients.map((ing, idx) => (
                         <div key={ing.slug} className="flex items-start gap-2">
-                            <span className="text-xs text-neutral-600 w-28 truncate shrink-0">{ing.name}</span>
+                            <span className="text-xs text-neutral-600 w-20 md:w-28 truncate shrink-0">{ing.name}</span>
                             <span className="text-xs text-neutral-500 w-8 text-right shrink-0">
                                 {Math.round(fractions[ing.slug] * 100)}%
                             </span>

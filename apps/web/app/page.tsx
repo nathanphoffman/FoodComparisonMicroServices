@@ -4,7 +4,7 @@ import { FoodTable } from './components/FoodTable/FoodTable';
 export default function Home() {
   return (
     <div>
-      <h1 className="text-4xl font-bold tracking-tight">Food Comparison</h1>
+      <h1 className="text-2xl md:text-4xl font-bold tracking-tight">Food Comparison</h1>
       <p>
         Explore foods by their nutritional profiles, environmental footprints,
         and the ethical dimensions of how they are produced.

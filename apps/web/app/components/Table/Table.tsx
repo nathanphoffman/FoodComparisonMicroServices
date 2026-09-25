@@ -8,8 +8,9 @@ type Header = {
 
 export function Table({ headers = [], children }: { headers?: Header[], children?: React.ReactNode }) {
   return (
-    <div className="rounded-xl border border-neutral-200 bg-white shadow-sm">
-      <table className="w-full border-separate border-spacing-0">
+    <div className="rounded-xl border border-neutral-200 bg-white shadow-sm max-md:overflow-x-auto">
+      {/* On mobile the first (Food) column stays pinned while the rest scrolls sideways */}
+      <table className="w-full border-separate border-spacing-0 max-md:[&_tr>*:first-child]:sticky max-md:[&_tr>*:first-child]:left-0 max-md:[&_tr>*:first-child]:z-[1] max-md:[&_td:first-child]:bg-inherit">
         <thead>
           <tr>
             {headers.map((header) => (
