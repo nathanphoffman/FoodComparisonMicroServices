@@ -112,13 +112,18 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     sentient_harm_detail.direct_kill_score = direct_kill_raw;
     sentient_harm_detail.captive_sentience_score = captive_raw;
 
-    let availability = if land_use_raw == 0.0 {
-        food.availability_gg.unwrap_or(1.0)
-    } else {
-        food.availability_gg
-            .map(|a| (a / land_use_raw).max(1.0) / divisor)
-            .unwrap_or(1.0)
-    };
+    // Scalability: food produced ÷ land needed per unit of food, both in the same
+    // calorie/protein units as the other columns. Production in units = Gg × divisor;
+    // land per unit = land per kg ÷ divisor. (Dividing by the divisor instead used to
+    // inflate watery, low-calorie foods like milk.)
+    let availability = food.availability_gg.map_or(1.0, |production_gg| {
+        let production_units = production_gg * divisor;
+        if land_use_raw == 0.0 {
+            production_units
+        } else {
+            (production_units / (land_use_raw / divisor)).max(1.0)
+        }
+    });
 
     ScoredRow {
         name: food.name.clone(),
