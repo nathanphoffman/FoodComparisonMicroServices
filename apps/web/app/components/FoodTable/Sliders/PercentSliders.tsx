@@ -39,15 +39,18 @@ export function PercentSliders<K extends string>({
     labels,
     descriptions,
     modals,
+    defaultLevels,
     onChange,
 }: {
     keys: K[];
     labels: Record<K, string>;
     descriptions: Record<K, string>;
     modals?: Partial<Record<K, React.ComponentType<{ onClose: () => void }>>>;
+    /** Starting slider levels (0–MAX_LEVEL); equal when omitted. */
+    defaultLevels?: Levels<K>;
     onChange?: (shares: Levels<K>) => void;
 }) {
-    const [levels, setLevels] = useState<Levels<K>>(() => equalLevels(keys));
+    const [levels, setLevels] = useState<Levels<K>>(() => defaultLevels ?? equalLevels(keys));
     const [openModal, setOpenModal] = useState<K | null>(null);
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);

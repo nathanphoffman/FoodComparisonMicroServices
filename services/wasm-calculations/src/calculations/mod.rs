@@ -192,7 +192,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
 /// of the chosen unit (it used to fall back to 1, scoring zero-protein oils as if
 /// they had average protein). With every weight at 0, compares per kg.
 fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Option<f64> {
-    if query.calorie_weight + query.protein_weight + query.dry_mass_weight <= 0.0 {
+    if query.calorie_weight + query.protein_weight + query.dry_mass_weight + query.wet_mass_weight <= 0.0 {
         return Some(1.0);
     }
     // calories and protein are given to us in per gram
@@ -203,6 +203,9 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
     // No mass term: comparing per kg mostly measures water content (and dry vs cooked).
     let weighted = (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
         + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm)
-        + (query.dry_mass_weight / 100.0) * (dry_mass_per_gram(food) * GRAMS_PER_KG / norms.dry_mass_norm);
+        + (query.dry_mass_weight / 100.0) * (dry_mass_per_gram(food) * GRAMS_PER_KG / norms.dry_mass_norm)
+        // Wet mass: every food is stored per kg as eaten (beans, rice, quinoa etc. on a
+        // cooked basis), so one kg of food is one kg of wet mass — no norm needed.
+        + (query.wet_mass_weight / 100.0);
     if weighted > 0.0 { Some(weighted) } else { None }
 }

@@ -1702,5 +1702,29 @@
             "Rates (lb/acre/yr on treated acres, % area treated): mancozeb 5.604, 24%; s-metolachlor 5.848, 23%; glyphosate iso. salt 0.736, 13% + pot. salt 1.836, 11%; pendimethalin 1.101, 9%; carbaryl 1.237, 12%; permethrin 1.145, 6%; zeta-cypermethrin 0.196, 21%; thiamethoxam 0.193, 19%. Imidacloprid, malathion and paraquat withheld (D).",
             "Total applied 3,066,100 lb (fungicide 274,800; herbicide 155,800; insecticide 113,200; other — mostly soil fumigants — 2,522,300) ≈ 84 lb/acre = 94.5 kg/ha per planted ha (16.8 kg/ha excluding fumigants)."
         ]
+    },
+    {
+        "id": 348,
+        "url": "https://fdc.nal.usda.gov/food-details/2257046/nutrients",
+        "title": "USDA FoodData Central — Foundation Foods: Oat milk, unsweetened, plain, refrigerated (fdcId 2257046)",
+        "notes": [
+            "Per 100 g: 48.33 kcal (Atwater general), 0.797 g protein, 2.749 g fat, 5.100 g carbohydrate (by difference), 2.322 g total sugars, 0.0 g fiber, 41.98 mg sodium, 90.6 g water. Saturated fat not reported. Read via FDC API 2026-09-26."
+        ]
+    },
+    {
+        "id": 349,
+        "url": "https://www.oatly.com/en-gb/products/oat-drink/oat-drink-organic-1l",
+        "title": "Oatly — Oat Drink Organic (ingredients: water, oats 10%, sea salt)",
+        "notes": [
+            "Oatly's organic oat drink lists oats at 10% of the recipe; the fortified Original uses the same oat base (water, oats) plus ≤2% rapeseed oil, minerals and vitamins."
+        ]
+    },
+    {
+        "id": 350,
+        "url": "https://www.tandfonline.com/doi/full/10.1080/87559129.2025.2450263",
+        "title": "Oat Milk By-Product: A Review of Nutrition, Processing and Applications of Oat Pulp (Food Reviews International, 2025)",
+        "notes": [
+            "Estimates current global oat milk sales at roughly 1–2 billion litres per year (from market value ÷ an average ~$5 per 64 oz retail price). Read via search summary only (publisher page returns 403)."
+        ]
     }
 ]

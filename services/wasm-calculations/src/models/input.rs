@@ -120,9 +120,11 @@ pub struct SliderQuery {
     #[serde(default = "default_calorie_weight")]
     pub calorie_weight: f64,  // 0–100 (default 50)
     #[serde(default = "default_protein_weight")]
-    pub protein_weight: f64,  // 0–100 (default 50)
+    pub protein_weight: f64,  // 0–100 (default 20)
     #[serde(default)]
-    pub dry_mass_weight: f64, // 0–100 (UI default 33; 0 if omitted): weight without water
+    pub dry_mass_weight: f64, // 0–100 (UI default 20; 0 if omitted): weight without water
+    #[serde(default)]
+    pub wet_mass_weight: f64, // 0–100 (UI default 10; 0 if omitted): weight as eaten (cooked for beans/grains)
     #[serde(default = "default_green_water")]
     pub green_water:    f64,  // 0–100 (default 25)
     #[serde(default = "default_grey_water")]
@@ -194,7 +196,7 @@ fn default_land_type_weights() -> LandTypes {
 }
 
 fn default_calorie_weight()               -> f64 { 50.0 }
-fn default_protein_weight()               -> f64 { 50.0 }
+fn default_protein_weight()               -> f64 { 20.0 }
 fn default_green_water()                  -> f64 { 25.0 }
 fn default_grey_water()                   -> f64 { 25.0 }
 fn default_kill_multiplier()              -> f64 { 1.0 }

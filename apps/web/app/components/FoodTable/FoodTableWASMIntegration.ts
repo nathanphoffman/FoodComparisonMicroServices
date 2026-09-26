@@ -13,6 +13,7 @@ type SliderQuery = {
     calorieWeight:              number;
     proteinWeight:              number;
     dryMassWeight:              number;
+    wetMassWeight:              number;
     greenWater:                 number;
     greyWater:                  number;
     killMultiplier:             number;
@@ -100,6 +101,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 calorieWeight:             weights.calories,
                 proteinWeight:             weights.protein,
                 dryMassWeight:             weights.dryMass,
+                wetMassWeight:             weights.wetMass,
                 greenWater:                greenWaterWeight,
                 greyWater:                 greyWaterWeight,
                 killMultiplier:            killMultiplier,

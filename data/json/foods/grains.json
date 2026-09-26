@@ -2116,5 +2116,234 @@
                 }
             }
         ]
+    },
+    {
+        "id": 71,
+        "slug": "oat-milk",
+        "name": "Oat Milk (Unsweetened)",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Same oats as the oats entry: mostly Canadian, Nordic and Russian grassland and long-cleared forest farmland.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.4833,
+                    "fat": 0.0275,
+                    "sat_fat": 0.003,
+                    "protein": 0.008,
+                    "fiber": 0.0,
+                    "sodium": 0.42,
+                    "carbs": 0.051,
+                    "sugar": 0.0232,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 348,
+                    "url": "https://fdc.nal.usda.gov/food-details/2257046/nutrients",
+                    "title": "USDA FoodData Central — Foundation Foods: Oat milk, unsweetened, plain, refrigerated (fdcId 2257046)",
+                    "note": "Unsweetened oat milk — USDA FDC Foundation Foods fdcId 2257046, per 100 g converted to per gram: 48.33 kcal, 2.749 g fat, 0.797 g protein, 0 g fiber, 5.10 g carbs, 2.32 g sugars, 41.98 mg sodium. sat_fat not reported by FDC: estimated 0.3 g/100 g (~11% of fat; most fat is added rapeseed oil at ~7% saturated plus oat lipids at ~18%; Oatly labels show 0.2 g saturates per 1.5 g fat)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 348,
+                    "url": "https://fdc.nal.usda.gov/food-details/2257046/nutrients",
+                    "title": "USDA FoodData Central — Foundation Foods: Oat milk, unsweetened, plain, refrigerated (fdcId 2257046)",
+                    "note": "Oat milk — yield_fraction 1: nutrition is for the ready-to-drink product as purchased."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 13750,
+                "confidence": 3,
+                "source": {
+                    "id": 349,
+                    "url": "https://www.oatly.com/en-gb/products/oat-drink/oat-drink-organic-1l",
+                    "title": "Oatly — Oat Drink Organic (ingredients: water, oats 10%, sea salt)",
+                    "note": "Oat milk — yield_kg_ha: oats yield_kg_ha (id 21, 1375 kg rolled oats/ha) ÷ 10% oat content (Oatly recipe) = 13,750 kg oat milk/ha. Same method as almond milk. Cross-check: OWID/Poore & Nemecek direct oat-milk land use 0.76 m2/L (source 341) ÷ 1.03 kg/L = 0.738 m2/kg ≈ 13,550 kg/ha — within ~2%."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 339.3,
+                "confidence": 3,
+                "source": {
+                    "id": 341,
+                    "url": "https://ourworldindata.org/grapher/environmental-footprint-milks",
+                    "title": "Our World in Data — Environmental Footprint of Dairy and Plant-Based Milks (Poore & Nemecek 2018 meta-analysis)",
+                    "note": "Oat milk — water_per_kg: green 286.5 + blue 46.8 + grey 6.0 = 339.3 L/kg (see component notes)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 286.5,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Oat milk — green_water_per_kg: oats green water (id 21, 2865 L/kg, Mekonnen & Hoekstra) × 10% oat content = 286.5 L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 46.8,
+                "confidence": 3,
+                "source": {
+                    "id": 341,
+                    "url": "https://ourworldindata.org/grapher/environmental-footprint-milks",
+                    "title": "Our World in Data — Environmental Footprint of Dairy and Plant-Based Milks (Poore & Nemecek 2018 meta-analysis)",
+                    "note": "Oat milk — blue_water_per_kg: OWID/Poore & Nemecek oat-milk freshwater withdrawals 48.24 L/L ÷ 1.03 kg/L = 46.8 L/kg. Covers irrigation plus processing water; oats' own blue water × 10% would be only 8.4 L/kg, so most of this is processing."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 6.0,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Oat milk — grey_water_per_kg: oats grey water (id 21, 60 L/kg, Mekonnen & Hoekstra) × 10% oat content = 6.0 L/kg."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.877,
+                "confidence": 3,
+                "source": {
+                    "id": 341,
+                    "url": "https://ourworldindata.org/grapher/environmental-footprint-milks",
+                    "title": "Our World in Data — Environmental Footprint of Dairy and Plant-Based Milks (Poore & Nemecek 2018 meta-analysis)",
+                    "note": "Oat milk — emissions_per_kg: OWID/Poore & Nemecek direct oat-milk figure 0.903 kg CO2e/L (cradle to retail: farming + processing + packaging + transport + retail) ÷ 1.03 kg/L = 0.877 kg CO2e/kg. Same basis as almond milk."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Oat milk — 2,4-D: reused unchanged from oats (id 21). Per-hectare field rate; unaffected by processing into milk. Oats — 2,4-D: 0.25 kg/ha; malathion: 0.03 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Oat milk — Malathion: reused unchanged from oats (id 21). Per-hectare field rate; unaffected by processing into milk. Oats — 2,4-D: 0.25 kg/ha; malathion: 0.03 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1550,
+                "confidence": 1,
+                "source": {
+                    "id": 350,
+                    "url": "https://www.tandfonline.com/doi/full/10.1080/87559129.2025.2450263",
+                    "title": "Oat Milk By-Product: A Review of Nutrition, Processing and Applications of Oat Pulp (Food Reviews International, 2025)",
+                    "note": "Oat milk — availability_gg: rough estimate. Review (source 350) puts global oat milk sales at ~1–2 billion L/yr; midpoint 1.5 billion L × 1.03 kg/L ≈ 1,550 Gg. Consistent with ~$3–3.5B global market value ÷ ~$2.6/L retail. Not a verified production statistic."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oat milk — soil_erosion: reused unchanged from oats (id 21); per-hectare field metric. Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oat milk — pesticide_kg_ha: reused unchanged from oats (id 21); per-hectare field metric. Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oat milk — fertilizer_kg_ha: reused unchanged from oats (id 21); per-hectare field metric. Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oat milk — tillage_events_per_year: reused unchanged from oats (id 21); per-hectare field metric. Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1500,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Oat milk — co2_capture_kg_ha_yr: reused unchanged from oats (id 21); per-hectare field metric. Oats — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ]
     }
 ]

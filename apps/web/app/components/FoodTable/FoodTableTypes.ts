@@ -2,6 +2,7 @@ export type FoodWeights = {
     calories: number;
     protein:  number;
     dryMass:  number;
+    wetMass:  number;
 };
 
 // How much each measure counts toward the Improvement score (sums to 100).
