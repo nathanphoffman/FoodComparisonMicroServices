@@ -1,5 +1,7 @@
 use serde::Serialize;
 
+use super::LandTypes;
+
 // Serialised with camelCase to match the existing TypeScript detail types in
 // FoodTableTypes.ts, so FoodTableTooltips.tsx needs no changes.
 
@@ -32,6 +34,12 @@ pub struct LandUseDetail {
     pub yield_kilograms_per_hectare:  Option<f64>,
     pub pasture_hectares_per_kilogram: Option<f64>,
     pub feed_land_m2_per_kg:          Option<f64>,
+    /// Unweighted land area (m² per kg), before the land type multiplier.
+    pub raw_m2_per_kg:                f64,
+    /// This food's land split; None when the food has no split.
+    pub land_types:                   Option<LandTypes>,
+    /// Weighted average of the Land Use slider weights over the split (1.0 = neutral).
+    pub multiplier:                   f64,
 }
 
 /// Per-species/source breakdown of sentient harm score (pre-combination values).

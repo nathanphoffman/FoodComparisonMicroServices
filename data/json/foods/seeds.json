@@ -7,6 +7,10 @@
         "category": "seeds",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_grassland": 1.0
+        },
+        "land_types_note": "Canadian prairie and Kazakh/Russian steppe.",
         "nutrition": [
             {
                 "value": {

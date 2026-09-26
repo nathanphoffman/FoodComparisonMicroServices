@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   // webpack can't bundle — load it straight from node_modules instead.
   serverExternalPackages: ['sql.js'],
   env: {
-    DB_VERSION: 'v142',
+    DB_VERSION: 'v143',
   },
   webpack(config) {
     // wasm-pack --target web uses `new URL('*.wasm', import.meta.url)` which

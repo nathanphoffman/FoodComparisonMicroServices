@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See apps/web/app/_wasm-signal.ts for full explanation.
 import { WASM_BUILD_ID } from '../../_wasm-signal';
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood, LandTypes } from '@/lib/queries/commonFoods';
 import type { ScoredRow } from './FoodTableSort';
 import type { SliderValues } from './FoodTableInputs';
 
@@ -29,6 +29,7 @@ type SliderQuery = {
     waterPriority:              number;
     landUsePriority:            number;
     availabilityPriority:       number;
+    landTypeWeights:            LandTypes;
 };
 
 // Single input object passed to WASM — keeps the boundary simple and
@@ -76,7 +77,7 @@ export async function loadWasm() {
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
     const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
             neuronExponent, weightExponent, finalIntelligenceExponent,
-            zeroBetterMultiplier, referenceSlug, mealIngredients } = sliderValues;
+            zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights } = sliderValues;
 
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
@@ -114,6 +115,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 waterPriority:             scorePriorities.water,
                 landUsePriority:           scorePriorities.landUse,
                 availabilityPriority:      scorePriorities.availability,
+                landTypeWeights:           landTypeWeights,
             },
         };
 

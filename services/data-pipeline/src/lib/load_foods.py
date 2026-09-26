@@ -11,6 +11,7 @@ from pathlib import Path
 from dataclasses import dataclass
 
 from ..food_types import Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide
+from .validate import assert_land_types
 
 CATEGORY_FILES = [
     "dairy", "eggs", "feeds", "fruits", "grains",
@@ -20,7 +21,7 @@ CATEGORY_FILES = [
 
 FOOD_KEYS = {
     "id", "slug", "name", "type", "human_food", "tags", "nutrition", "availability_gg",
-    "sentient_harm_explanation",
+    "sentient_harm_explanation", "land_types",
 }
 
 ANIMAL_KEYS = {
@@ -66,6 +67,7 @@ def load_category_foods(data_dir: Path) -> CategoryData:
             continue
         category_items: list[dict] = json.loads(category_path.read_text(encoding="utf-8"))
         for item in category_items:
+            assert_land_types(item.get("land_types"), f"{item.get('slug')}.land_types")
             all_foods.append(_extract_food_base(item))
             if item.get("type") == "animal":
                 all_animals.append(_extract_animal_record(item))

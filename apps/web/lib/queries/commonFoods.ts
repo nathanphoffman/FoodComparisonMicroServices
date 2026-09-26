@@ -41,6 +41,19 @@ export type RawFood = {
   availability_gg: number | null;
   // plain-English tooltip text for the sentient harm columns
   sentient_harm_explanation: string | null;
+  // fraction of this food's land in each land type (sums to 1); null for foods with no farmland
+  land_types: LandTypes | null;
+};
+
+// One value per broad land type — a food's land split (fractions) or the Land Use
+// slider weights (multipliers). Keys match the Rust LandTypes struct.
+export type LandTypes = {
+  tropical_forest:     number;
+  tropical_savanna:    number;
+  temperate_grassland: number;
+  temperate_forest:    number;
+  dry:                 number;
+  wetland:             number;
 };
 
 const QUERY = `
@@ -67,7 +80,7 @@ const QUERY = `
          feed.land_m2_per_kg           AS feed_land_m2_per_kg,
          bycatch_animal.neuron_count   AS bycatch_neuron_count,
          bycatch_animal.weight_kg      AS bycatch_weight_kg,
-         f.availability_gg, f.sentient_harm_explanation
+         f.availability_gg, f.sentient_harm_explanation, f.land_types
   FROM   foods_normalized f
   LEFT JOIN foods_normalized feed ON feed.food_id = f.food_id AND feed.is_feed = 1
   LEFT JOIN foods_normalized bycatch_animal ON bycatch_animal.slug = f.bycatch_food_slug
@@ -77,5 +90,7 @@ const QUERY = `
 
 export async function fetchCommonFoods(): Promise<RawFood[]> {
   const db = await getNormalizedDb();
-  return rowsToObjects(db.exec(QUERY)) as unknown as RawFood[];
+  const rows = rowsToObjects(db.exec(QUERY)) as unknown as (Omit<RawFood, 'land_types'> & { land_types: string | null })[];
+  // land_types is stored as a JSON string in SQLite
+  return rows.map(row => ({ ...row, land_types: row.land_types ? JSON.parse(row.land_types) : null }));
 }

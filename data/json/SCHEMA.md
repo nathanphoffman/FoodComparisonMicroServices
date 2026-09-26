@@ -187,6 +187,16 @@ plant-specific or animal-specific fields depending on `type`.
   // live, and they change with the sliders. Omit or null when not needed.
   "sentient_harm_explanation": <string|null>,
 
+  // Optional. Ballpark split of the land this food is grown on (pasture + feed
+  // crops for animals), as fractions summing to 1. Used to weight the Land Use
+  // score by the "Land Use" sliders — does NOT affect land-driven deaths or
+  // availability. Omit for foods with no farmland (seafood, wild foods).
+  // Keys: tropical_forest, tropical_savanna, temperate_grassland,
+  //       temperate_forest, dry, wetland
+  "land_types": { "<key>": <number 0-1>, ... },
+  // Optional. Plain-English reason for the land_types split.
+  "land_types_note": <string>,
+
   // --- Nutrition (per gram of edible food as purchased) ---
   "nutrition": [
     {

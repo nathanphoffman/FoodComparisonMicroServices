@@ -34,7 +34,7 @@ public class DbService
                feed.land_m2_per_kg            AS feed_land_m2_per_kg,
                bycatch_animal.neuron_count    AS bycatch_neuron_count,
                bycatch_animal.weight_kg       AS bycatch_weight_kg,
-               f.availability_gg, f.sentient_harm_explanation
+               f.availability_gg, f.sentient_harm_explanation, f.land_types
         FROM   foods_normalized f
         LEFT JOIN foods_normalized feed
                ON feed.food_id = f.food_id AND feed.is_feed = 1 AND feed.region = f.region

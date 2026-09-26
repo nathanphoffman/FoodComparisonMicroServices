@@ -9,6 +9,12 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.8,
+            "temperate_forest": 0.1,
+            "dry": 0.1
+        },
+        "land_types_note": "Mostly steppe and prairie (US Plains, Canada, Russia, Ukraine, Argentina).",
         "nutrition": [
             {
                 "value": {
@@ -351,6 +357,12 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_grassland": 0.75,
+            "tropical_savanna": 0.15,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "US Corn Belt prairie dominates, with Brazil and tropical smallholder corn making up the rest.",
         "nutrition": [
             {
                 "value": {
@@ -706,6 +718,11 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_savanna": 0.6,
+            "temperate_grassland": 0.4
+        },
+        "land_types_note": "African and Indian savanna plus the US Great Plains.",
         "nutrition": [
             {
                 "value": {
@@ -964,6 +981,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "wetland": 0.9,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Flooded paddies on river floodplains and deltas across Asia; some frontier expansion into forest.",
         "nutrition": [
             {
                 "value": {
@@ -1290,6 +1312,11 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Canada, Russia and Northern Europe prairie and long-cleared forest.",
         "nutrition": [
             {
                 "value": {
@@ -1524,6 +1551,10 @@
         "tags": [
             "grain"
         ],
+        "land_types": {
+            "dry": 1.0
+        },
+        "land_types_note": "Dry Andean highlands of Bolivia and Peru.",
         "nutrition": [
             {
                 "value": {
@@ -1760,6 +1791,11 @@
         "tags": [
             "grain"
         ],
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "temperate_forest": 0.3
+        },
+        "land_types_note": "Russia, Canada, Australia and Northern Europe cropland.",
         "nutrition": [
             {
                 "value": {

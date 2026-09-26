@@ -1,3 +1,6 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 namespace FoodApi.Models;
 
 /// <summary>
@@ -73,4 +76,13 @@ public class FoodRow
 
     // Plain-English tooltip text for the sentient harm columns (NULL if none)
     public string? SentientHarmExplanation { get; set; }
+
+    // Land type split as stored in the DB: a JSON object string, NULL for foods with no farmland.
+    // Dapper fills this; it's sent to the client as a parsed object via LandTypesJson.
+    [JsonIgnore]
+    public string? LandTypes { get; set; }
+
+    [JsonPropertyName("land_types")]
+    public JsonElement? LandTypesJson =>
+        LandTypes is null ? null : JsonDocument.Parse(LandTypes).RootElement.Clone();
 }

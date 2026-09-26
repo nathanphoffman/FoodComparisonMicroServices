@@ -9,6 +9,10 @@
     "tags": [
       "common"
     ],
+    "land_types": {
+      "dry": 1.0
+    },
+    "land_types_note": "Dry Mediterranean groves in Spain, Italy, Greece and Tunisia.",
     "nutrition": [
       {
         "value": {
@@ -285,6 +289,11 @@
     "tags": [
       "common"
     ],
+    "land_types": {
+      "temperate_grassland": 0.8,
+      "temperate_forest": 0.2
+    },
+    "land_types_note": "Canadian prairie plus long-cleared European farmland.",
     "sentient_harm_explanation": null,
     "nutrition": [
       {
@@ -531,6 +540,12 @@
     "tags": [
       "common"
     ],
+    "land_types": {
+      "temperate_grassland": 0.55,
+      "tropical_savanna": 0.3,
+      "tropical_forest": 0.15
+    },
+    "land_types_note": "US Midwest and Argentine pampas grassland, plus Brazil, where soy expanded into Cerrado savanna and Amazon edges.",
     "sentient_harm_explanation": null,
     "nutrition": [
       {
@@ -848,6 +863,11 @@
     "tags": [
       "common"
     ],
+    "land_types": {
+      "tropical_forest": 0.85,
+      "wetland": 0.15
+    },
+    "land_types_note": "Indonesia and Malaysia; a large share of plantations replaced rainforest, and some drained carbon-rich peat swamp.",
     "sentient_harm_explanation": "Palm oil has no direct animal-slaughter component (it's a plant food), but new oil-palm plantations are a leading driver of tropical deforestation in Indonesia and Malaysia, destroying rainforest habitat for orangutans, Sumatran tigers, elephants and other wildlife. This repo doesn't model wildlife habitat loss as a separate death count — it's reflected indirectly through this food's land-use figures (yield_kg_ha, which drives the land-use / crop-deforestation score) and its unusually large land-use-change share of emissions_per_kg.",
     "nutrition": [
       {

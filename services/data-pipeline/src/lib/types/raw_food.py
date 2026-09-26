@@ -77,6 +77,7 @@ class RawFood:
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
             availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
             sentient_harm_explanation=self._data.get("sentient_harm_explanation"),
+            land_types=self._data.get("land_types"),
         )
 
     def _display_name(self) -> str:

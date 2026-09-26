@@ -7,6 +7,11 @@
         "category": "leafy",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "dry": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Irrigated California/Arizona and Mediterranean Spain, plus temperate China and Europe.",
         "nutrition": [
             {
                 "value": {
@@ -313,6 +318,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "dry": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Irrigated California/Arizona and Mediterranean Spain, plus temperate China and Europe.",
         "nutrition": [
             {
                 "value": {
@@ -563,6 +573,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.6,
+            "dry": 0.4
+        },
+        "land_types_note": "Temperate Europe/US Northeast plus irrigated California.",
         "nutrition": [
             {
                 "value": {

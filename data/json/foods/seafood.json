@@ -10,6 +10,12 @@
             "fish",
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.4,
+            "tropical_savanna": 0.4,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Land is only the feed crops (soy, wheat, corn); much aquafeed soy comes from Brazil.",
         "nutrition": [
             {
                 "value": {
@@ -594,6 +600,13 @@
             "seafood",
             "common"
         ],
+        "land_types": {
+            "wetland": 0.4,
+            "tropical_savanna": 0.3,
+            "temperate_grassland": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Ponds in Southeast Asia and Latin America often replaced mangroves; the rest is soy/wheat feed land.",
         "nutrition": [
             {
                 "value": {
@@ -1022,6 +1035,12 @@
             "fish",
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.5,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Land is only the feed crops (soy, wheat, corn); much aquafeed soy comes from Brazil.",
         "nutrition": [
             {
                 "value": {

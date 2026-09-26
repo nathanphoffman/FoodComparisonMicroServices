@@ -10,6 +10,12 @@
             "meat",
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Mostly grassland pasture and feed crops, but cattle ranching drives most Amazon deforestation and much Cerrado clearing.",
         "nutrition": [
             {
                 "value": {
@@ -334,6 +340,12 @@
             "meat",
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
         "nutrition": [
             {
                 "value": {
@@ -564,6 +576,12 @@
         "tags": [
             "meat"
         ],
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
         "nutrition": [
             {
                 "value": {
@@ -779,6 +797,12 @@
             "meat",
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.75,
+            "tropical_savanna": 0.15,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
         "nutrition": [
             {
                 "value": {
@@ -953,6 +977,12 @@
         "tags": [
             "meat"
         ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "dry": 0.3,
+            "temperate_forest": 0.1
+        },
+        "land_types_note": "Grassland pasture in NZ, UK and China, plus dry Australian rangeland.",
         "nutrition": [
             {
                 "value": {

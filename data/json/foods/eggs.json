@@ -9,6 +9,12 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.75,
+            "tropical_savanna": 0.15,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
         "sentient_harm_explanation": "For every laying hen, two animals die: the hen herself, killed at the end of lay, and about one male chick. Male chicks of egg-laying breeds don't lay eggs and grow too slowly to be worth raising for meat, so they are killed at the hatchery on the day they hatch. Numbers used per hen: about 20.6 kg of eggs over her life, about 1 male chick culled (slightly less in the EU, where some eggs are sexed before hatching), and roughly 1.5 years in captivity for the hen versus about 1 day for the chick.",
         "nutrition": [
             {

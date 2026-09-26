@@ -7,6 +7,11 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 0.8,
+            "temperate_grassland": 0.2
+        },
+        "land_types_note": "Grown in long-cleared temperate forest regions (China, Europe, US Northeast/Northwest).",
         "nutrition": [
             {
                 "value": {
@@ -342,6 +347,11 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_forest": 0.9,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Humid tropical lowlands in Latin America, India and Southeast Asia, largely former rainforest.",
         "nutrition": [
             {
                 "value": {
@@ -608,6 +618,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "tropical_forest": 0.5,
+            "dry": 0.5
+        },
+        "land_types_note": "Mexico (Michoacán highland forest clearing) plus irrigated dry regions in Peru, Chile and California.",
         "nutrition": [
             {
                 "value": {
@@ -856,6 +871,11 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_forest": 0.8,
+            "wetland": 0.2
+        },
+        "land_types_note": "Coastal humid tropics (Indonesia, Philippines, India); some plantations on former mangrove and coastal wetland.",
         "nutrition": [
             {
                 "value": {
@@ -1080,6 +1100,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "tropical_forest": 0.5,
+            "tropical_savanna": 0.5
+        },
+        "land_types_note": "India, Southeast Asia and Latin America; split between humid tropical forest and drier tropical savanna.",
         "nutrition": [
             {
                 "value": {
@@ -1346,6 +1371,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "tropical_savanna": 0.4,
+            "dry": 0.6
+        },
+        "land_types_note": "Brazil's São Paulo region (former Cerrado/Atlantic forest margin) plus Mediterranean-climate groves in Spain, Florida and California.",
         "nutrition": [
             {
                 "value": {
@@ -1684,6 +1714,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "dry": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Irrigated coastal California and Mediterranean Spain, plus temperate Europe and China.",
         "nutrition": [
             {
                 "value": {
@@ -2030,6 +2065,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.8,
+            "dry": 0.2
+        },
+        "land_types_note": "Temperate North America and Europe, plus irrigated desert coast of Peru and Chile.",
         "nutrition": [
             {
                 "value": {

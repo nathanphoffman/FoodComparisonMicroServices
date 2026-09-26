@@ -9,6 +9,12 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_grassland": 0.55,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.15
+        },
+        "land_types_note": "US Midwest and Argentine pampas grassland, plus Brazil, where soy expanded into Cerrado savanna and Amazon edges.",
         "nutrition": [
             {
                 "value": {
@@ -368,6 +374,11 @@
         "category": "legumes",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_grassland": 0.8,
+            "dry": 0.2
+        },
+        "land_types_note": "Mostly Canadian prairie, plus dry regions of India, Turkey and Australia.",
         "nutrition": [
             {
                 "value": {
@@ -615,6 +626,12 @@
             "legume",
             "common"
         ],
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "dry": 0.3,
+            "temperate_grassland": 0.2
+        },
+        "land_types_note": "Semi-arid India (savanna), plus dry Australia, Turkey and prairie Canada.",
         "nutrition": [
             {
                 "value": {
@@ -932,6 +949,12 @@
         "tags": [
             "legume"
         ],
+        "land_types": {
+            "temperate_grassland": 0.4,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.3
+        },
+        "land_types_note": "Latin America (Brazil, Mexico, Central America) plus US prairie.",
         "nutrition": [
             {
                 "value": {
@@ -1251,6 +1274,12 @@
             "soy",
             "processed"
         ],
+        "land_types": {
+            "temperate_grassland": 0.55,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.15
+        },
+        "land_types_note": "US Midwest and Argentine pampas grassland, plus Brazil, where soy expanded into Cerrado savanna and Amazon edges.",
         "nutrition": [
             {
                 "value": {

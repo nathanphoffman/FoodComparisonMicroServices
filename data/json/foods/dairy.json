@@ -9,6 +9,12 @@
         "tags": [
             "dairy"
         ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
         "sentient_harm_explanation": "Each dairy cow is eventually killed (or, in some countries, dies) once her milk yield drops, and to keep producing milk she must give birth to a calf roughly every year. Only about one of her calves is kept to replace her; the others die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US: ~2 years growing up plus ~3 years milking; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 31,000 kg of milk in the US or 13,000 kg worldwide (lower-yield cows in South Asia and Africa pull the world figure down).",
         "nutrition": [
             {
@@ -474,6 +480,12 @@
         "tags": [
             "dairy"
         ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
         "sentient_harm_explanation": "Yogurt is made from cow's milk (about 1.15 kg of milk per kg of yogurt), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 27,000 kg of yogurt in the US or 11,600 kg worldwide.",
         "nutrition": [
             {
@@ -898,6 +910,12 @@
         "tags": [
             "dairy"
         ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
         "sentient_harm_explanation": "Butter is made from cow's milk, so it carries the same animal deaths as milk. It takes about 22 kg of milk to make 1 kg of butter, but the skim milk and buttermilk left over are sold as food too, so butter is charged with only its value share, about 8 kg of milk per kg. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime share of about 3,800 kg of butter in the US or 1,600 kg worldwide.",
         "nutrition": [
             {

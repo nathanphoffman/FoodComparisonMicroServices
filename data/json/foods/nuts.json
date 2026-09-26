@@ -7,6 +7,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "dry": 1.0
+        },
+        "land_types_note": "Irrigated Mediterranean-climate orchards, ~80% in California's Central Valley.",
         "nutrition": [
             {
                 "value": {
@@ -305,6 +309,11 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 0.5,
+            "dry": 0.5
+        },
+        "land_types_note": "China (temperate forest regions) and irrigated California.",
         "nutrition": [
             {
                 "value": {
@@ -563,6 +572,11 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_savanna": 0.6,
+            "tropical_forest": 0.4
+        },
+        "land_types_note": "West African and Indian savanna, plus Vietnam's former tropical forest.",
         "nutrition": [
             {
                 "value": {
@@ -795,6 +809,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "dry": 1.0
+        },
+        "land_types_note": "Dry, irrigated regions of Iran, California and Turkey.",
         "nutrition": [
             {
                 "value": {
@@ -1053,6 +1071,11 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "dry": 0.3
+        },
+        "land_types_note": "US Southeast river-bottom forest land, plus irrigated Texas, New Mexico and northern Mexico.",
         "nutrition": [
             {
                 "value": {
@@ -1301,6 +1324,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 1.0
+        },
+        "land_types_note": "Mostly Turkey's Black Sea coast, a temperate forest region.",
         "nutrition": [
             {
                 "value": {
@@ -1543,6 +1570,11 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_forest": 0.5,
+            "tropical_savanna": 0.5
+        },
+        "land_types_note": "South Africa, Kenya, Australia and Hawaii; subtropical forest margins and savanna.",
         "nutrition": [
             {
                 "value": {
@@ -1935,6 +1967,12 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "temperate_grassland": 0.3,
+            "temperate_forest": 0.2
+        },
+        "land_types_note": "Indian and West African savanna, plus China and the US.",
         "nutrition": [
             {
                 "value": {
@@ -2238,6 +2276,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 1.0
+        },
+        "land_types_note": "Largely wild-harvested from standing temperate conifer forest (Korea, Siberia, pinyon) rather than cleared land.",
         "nutrition": [
             {
                 "value": {
@@ -2454,6 +2496,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_grassland": 1.0
+        },
+        "land_types_note": "Ukrainian and Russian steppe grassland.",
         "nutrition": [
             {
                 "value": {
@@ -2702,6 +2748,10 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "dry": 1.0
+        },
+        "land_types_note": "Irrigated Mediterranean-climate orchards, ~80% in California's Central Valley.",
         "sentient_harm_explanation": "Commercial almond orchards depend on trucked-in honeybee colonies (roughly two-thirds of all US managed hives each February) for pollination; the resulting hive stress, pesticide exposure and elevated bee mortality are an indirect harm shared by every product made from these almonds, including this milk.",
         "nutrition": [
             {

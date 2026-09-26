@@ -130,7 +130,9 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     };
 
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
-    let (land_use_raw, land_use_detail) = eco::compute_land_use(food);
+    // land_use_raw is physical area (used for availability); land_use_weighted is
+    // scaled by the Land Use sliders and only drives the Land Use column/score.
+    let (land_use_raw, land_use_weighted, land_use_detail) = eco::compute_land_use(food, query);
     let (water_raw, water_detail) = water::effective_water(food, query);
     let (sentient_harm_raw, mut sentient_harm_detail) = eco::compute_sentient_harm(food, query);
 
@@ -161,7 +163,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
 
         nutrition_score,
         emissions: per_unit(emissions_raw),
-        land_use: per_unit(land_use_raw),
+        land_use: per_unit(land_use_weighted),
         water: per_unit(water_raw),
         direct_kill: per_unit(direct_kill_raw),
         captive_sentience: per_unit(captive_raw),

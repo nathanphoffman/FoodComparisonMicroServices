@@ -11,8 +11,10 @@ import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider
 import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
 import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplierSlider";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
+import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
+import type { LandTypes } from "@/lib/queries/commonFoods";
 
 export type { FoodWeights };
 
@@ -27,6 +29,7 @@ export function FoodTableSliders({
     onWeightExponentChange,
     onFinalIntelligenceExponentChange,
     onZeroBetterMultiplierChange,
+    onLandTypeWeightsChange,
     neuronExponent,
     weightExponent,
     finalIntelligenceExponent,
@@ -41,6 +44,7 @@ export function FoodTableSliders({
     onWeightExponentChange?: (v: number) => void;
     onFinalIntelligenceExponentChange?: (v: number) => void;
     onZeroBetterMultiplierChange?: (v: number) => void;
+    onLandTypeWeightsChange?: (w: LandTypes) => void;
     neuronExponent: number;
     weightExponent: number;
     finalIntelligenceExponent: number;
@@ -73,6 +77,9 @@ export function FoodTableSliders({
             <ExpandableSliderGroup label="Water">
                 <GreyWaterSlider onChange={onGreyWaterChange} />
                 <GreenWaterSlider onChange={onGreenWaterChange} />
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Land Use">
+                <LandTypeSliders onChange={onLandTypeWeightsChange} />
             </ExpandableSliderGroup>
         </div>
     );

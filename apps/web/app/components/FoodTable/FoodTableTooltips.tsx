@@ -1,6 +1,8 @@
 import type { SentientHarmDetail, EmissionsBreakdown, IntelligenceDetail, KillDetail, LandUseDetail, NutritionDetail, WaterDetail } from './FoodTableTypes';
 import { formatCount, formatIntelligenceValue, formatNeurons, formatYears, nutritionScale } from './FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../Table/Tooltip';
+import { LAND_TYPE_LABELS } from './Sliders/LandTypeSliders';
+import type { LandTypes } from '@/lib/queries/commonFoods';
 
 const MILLIGRAMS_PER_GRAM = 1000;
 const PERCENT_MULTIPLIER  = 100;
@@ -51,7 +53,7 @@ export function LandUseTooltip({ detail, divisor, unit, children }: { detail: La
     (m2PerKg / divisor).toLocaleString(undefined, { maximumFractionDigits: 1 });
 
   return (
-    <Tooltip content={
+    <Tooltip content={<>
       <TooltipSection title="Land use breakdown">
         {detail.type === 'plant' && detail.yieldKilogramsPerHectare != null && (
           <TooltipRow label="Crop yield" value={`${detail.yieldKilogramsPerHectare.toLocaleString()} kg/ha`} />
@@ -69,7 +71,19 @@ export function LandUseTooltip({ detail, divisor, unit, children }: { detail: La
           />
         )}
       </TooltipSection>
-    }>
+      {detail.landTypes && (
+        <TooltipSection title="Land type weighting">
+          {(Object.entries(detail.landTypes) as [keyof LandTypes, number][])
+            .filter(([, fraction]) => fraction > 0)
+            .sort(([, a], [, b]) => b - a)
+            .map(([key, fraction]) => (
+              <TooltipRow key={key} label={LAND_TYPE_LABELS[key]} value={`${Math.round(fraction * 100)}%`} />
+            ))}
+          <TooltipRow label="Actual area" value={`${fmt(detail.rawM2PerKg)} m²/${unit}`} />
+          <TooltipRow label="Land type weight" value={`× ${detail.multiplier.toFixed(2)}`} />
+        </TooltipSection>
+      )}
+    </>}>
       {children}
     </Tooltip>
   );

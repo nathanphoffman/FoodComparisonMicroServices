@@ -1,4 +1,4 @@
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 /// Raw food row returned by the C# data API (GET /api/foods).
 /// Field names are snake_case to match the JSON output from the C# API
@@ -72,6 +72,45 @@ pub struct FoodRow {
 
     // Global supply availability
     pub availability_gg: Option<f64>,
+
+    // Fraction of this food's land in each land type (sums to 1); None for foods
+    // with no farmland (seafood, wild foods).
+    #[serde(default)]
+    pub land_types: Option<LandTypes>,
+}
+
+/// One value per broad land type. Used both for a food's land split (fractions)
+/// and for the Land Use slider weights (multipliers, 1.0 = neutral).
+/// Keys are snake_case everywhere — food data, slider query and tooltip detail.
+#[derive(Debug, Clone, Default, Deserialize, Serialize)]
+#[serde(default)]
+pub struct LandTypes {
+    pub tropical_forest:     f64,
+    pub tropical_savanna:    f64,
+    pub temperate_grassland: f64,
+    pub temperate_forest:    f64,
+    pub dry:                 f64,
+    pub wetland:             f64,
+}
+
+impl LandTypes {
+    fn values(&self) -> [f64; 6] {
+        [
+            self.tropical_forest, self.tropical_savanna, self.temperate_grassland,
+            self.temperate_forest, self.dry, self.wetland,
+        ]
+    }
+
+    /// Weighted average of `weights` over this split. Returns 1.0 (neutral)
+    /// for an empty split.
+    pub fn multiplier(&self, weights: &LandTypes) -> f64 {
+        let total: f64 = self.values().iter().sum();
+        if total <= 0.0 {
+            return 1.0;
+        }
+        let weighted: f64 = self.values().iter().zip(weights.values()).map(|(f, w)| f * w).sum();
+        weighted / total
+    }
 }
 
 /// Slider state sent from the Next.js FoodTable component.
@@ -119,6 +158,11 @@ pub struct SliderQuery {
     pub land_use_priority:     f64,
     #[serde(default = "default_priority")]
     pub availability_priority: f64,
+
+    // Land Use sliders: how much a m² of each land type counts toward the Land Use
+    // score. Doesn't affect land-driven deaths or availability, which use raw area.
+    #[serde(default = "default_land_type_weights")]
+    pub land_type_weights: LandTypes,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -129,6 +173,18 @@ pub struct MealIngredient {
 
 fn default_zero_better_multiplier() -> f64 { 2.0 }
 fn default_priority()               -> f64 { 1.0 }
+
+// Keep in sync with DEFAULT_LAND_TYPE_WEIGHTS in LandTypeSliders.tsx.
+fn default_land_type_weights() -> LandTypes {
+    LandTypes {
+        tropical_forest:     3.0,
+        wetland:             2.0,
+        tropical_savanna:    1.5,
+        temperate_forest:    1.0,
+        dry:                 1.0,
+        temperate_grassland: 0.75,
+    }
+}
 
 fn default_calorie_weight()               -> f64 { 50.0 }
 fn default_protein_weight()               -> f64 { 50.0 }
@@ -146,4 +202,30 @@ fn default_final_intelligence_exponent()  -> f64 { 1.0 }
 pub struct ScoreInput {
     pub foods: Vec<FoodRow>,
     pub query: SliderQuery,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn land_type_multiplier() {
+        let weights = default_land_type_weights();
+
+        let palm = LandTypes { tropical_forest: 0.85, wetland: 0.15, ..Default::default() };
+        assert!((palm.multiplier(&weights) - 2.85).abs() < 1e-9);
+
+        let wheat = LandTypes { temperate_grassland: 1.0, ..Default::default() };
+        assert!((wheat.multiplier(&weights) - 0.75).abs() < 1e-9);
+
+        // no split → neutral
+        assert_eq!(LandTypes::default().multiplier(&weights), 1.0);
+
+        // all weights at 1.0 → neutral regardless of split
+        let ones = LandTypes {
+            tropical_forest: 1.0, tropical_savanna: 1.0, temperate_grassland: 1.0,
+            temperate_forest: 1.0, dry: 1.0, wetland: 1.0,
+        };
+        assert!((palm.multiplier(&ones) - 1.0).abs() < 1e-9);
+    }
 }

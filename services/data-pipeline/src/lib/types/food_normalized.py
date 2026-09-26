@@ -66,6 +66,7 @@ class FoodNormalized:
     co2_kg_per_kg_output: float | None = None
     availability_gg: float | None = None
     sentient_harm_explanation: str | None = None
+    land_types: dict[str, float] | None = None
 
     def to_db_params(self) -> tuple[int | float | str | None, ...]:
         """Returns all fields as a flat tuple matching the INSERT SQL column order."""
@@ -89,4 +90,5 @@ class FoodNormalized:
             self.native_fraction, self.bycatch_amount, self.bycatch_food_slug,
             self.ch4_kg_per_kg_output, self.n2o_kg_per_kg_output, self.co2_kg_per_kg_output,
             self.availability_gg, self.sentient_harm_explanation,
+            json.dumps(self.land_types) if self.land_types else None,
         )

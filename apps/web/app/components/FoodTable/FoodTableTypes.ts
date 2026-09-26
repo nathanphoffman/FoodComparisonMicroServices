@@ -32,6 +32,9 @@ export type LandUseDetail = {
     yieldKilogramsPerHectare:    number | null;
     pastureHectaresPerKilogram:  number | null;
     feedLandM2PerKg:             number | null;
+    rawM2PerKg:                  number;            // area before the land type multiplier
+    landTypes:                   LandTypes | null;  // this food's land split
+    multiplier:                  number;            // weighted average of the Land Use sliders (1 = neutral)
 };
 
 export type NutritionDetail = {
@@ -76,7 +79,7 @@ export type SentientHarmDetail = {
     captiveSentienceScore:     number;
 };
 
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood, LandTypes } from '@/lib/queries/commonFoods';
 
 // Minimal RawFood stub for the synthetic "your-meal" row, which is produced by
 // WASM but never exists in rawFoods from the API.
@@ -95,7 +98,7 @@ export const MEAL_STUB: RawFood = {
     feed_pesticide_insect_paf: null, feed_pesticide_terrestrial_paf: null, feed_pesticide_bee_hazard: null,
     feed_pesticide_kg_per_kg_food: null, feed_land_m2_per_kg: null,
     bycatch_amount: null, bycatch_food_slug: null, bycatch_neuron_count: null, bycatch_weight_kg: null,
-    availability_gg: null, sentient_harm_explanation: null,
+    availability_gg: null, sentient_harm_explanation: null, land_types: null,
 };
 
 export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {

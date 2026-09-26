@@ -67,5 +67,9 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     -- Plain-English tooltip text explaining how sentient harm is derived for this food; NULL if none
     sentient_harm_explanation TEXT,
 
+    -- JSON object of land type -> fraction of this food's land (sums to 1), e.g.
+    --   {"tropical_forest": 0.5, "temperate_grassland": 0.5}; NULL for foods with no farmland
+    land_types TEXT,
+
     PRIMARY KEY (food_id, is_feed, region)
 );

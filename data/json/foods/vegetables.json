@@ -9,6 +9,12 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "dry": 0.5,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.2
+        },
+        "land_types_note": "Irrigated California and Mediterranean, plus China and India.",
         "nutrition": [
             {
                 "value": {
@@ -328,6 +334,11 @@
         "category": "vegetables",
         "human_food": 1,
         "tags": [],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "dry": 0.3
+        },
+        "land_types_note": "Mostly China (long-cleared temperate forest), plus Mediterranean and Middle East.",
         "nutrition": [
             {
                 "value": {
@@ -578,6 +589,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "temperate_grassland": 0.3
+        },
+        "land_types_note": "China, Europe and Russia cropland, plus North American prairie.",
         "nutrition": [
             {
                 "value": {
@@ -899,6 +915,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.5,
+            "dry": 0.5
+        },
+        "land_types_note": "China and India temperate regions, plus irrigated California.",
         "nutrition": [
             {
                 "value": {
@@ -1220,6 +1241,12 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.5,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Half grown in China; the rest in African savanna and humid tropics.",
         "nutrition": [
             {
                 "value": {
@@ -1509,6 +1536,11 @@
         "tags": [
             "common"
         ],
+        "land_types": {
+            "temperate_forest": 0.8,
+            "dry": 0.2
+        },
+        "land_types_note": "Mostly China, plus dry regions of India, Spain and California.",
         "nutrition": [
             {
                 "value": {
