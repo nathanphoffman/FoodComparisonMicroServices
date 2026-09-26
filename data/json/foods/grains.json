@@ -695,6 +695,32 @@
                         }
                     }
                 ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 3,
+                        "source": {
+                            "id": 343,
+                            "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0173836",
+                            "title": "Alford & Krupke (2017) — Translocation of the neonicotinoid seed treatment clothianidin in maize (PLOS ONE)",
+                            "note": "Corn — thiamethoxam (id 8) stands in for the neonicotinoid seed treatment (clothianidin or thiamethoxam; clothianidin is not in pesticides.json and is thiamethoxam's main metabolite). Label rates 0.25–1.25 mg a.i./kernel × ~79,000 kernels/ha = 0.02–0.10 kg/ha; ~0.05 kg/ha on treated seed (mostly low/mid rates) × ~80% of acres treated ≈ 0.04 kg/ha averaged over all corn. Added 2026-09-26: corn previously listed no insecticide, understating its insect/bee harm."
+                        }
+                    },
+                    {
+                        "value": 0.04,
+                        "confidence": 3,
+                        "source": {
+                            "id": 344,
+                            "url": "https://www.sciencedaily.com/releases/2015/04/150402092123.htm",
+                            "title": "Douglas & Tooker (2015) — Rapid increase in neonicotinoid insecticides driven by seed treatments (Environmental Science & Technology; ScienceDaily summary)",
+                            "note": "Corn — thiamethoxam (id 8) stands in for the neonicotinoid seed treatment (clothianidin or thiamethoxam; clothianidin is not in pesticides.json and is thiamethoxam's main metabolite). Label rates 0.25–1.25 mg a.i./kernel × ~79,000 kernels/ha = 0.02–0.10 kg/ha; ~0.05 kg/ha on treated seed (mostly low/mid rates) × ~80% of acres treated ≈ 0.04 kg/ha averaged over all corn. Added 2026-09-26: corn previously listed no insecticide, understating its insect/bee harm."
+                        }
+                    }
+                ]
             }
         ],
         "availability_gg": [

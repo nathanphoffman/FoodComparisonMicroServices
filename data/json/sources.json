@@ -1657,5 +1657,29 @@
         "notes": [
             "Class-action complaint alleged Blue Diamond Almond Breeze (a market-leading US brand) contains ~2% almonds by weight, with water, calcium carbonate, sunflower lecithin, gellan/locust bean gum and vitamins making up the rest; other industry commentary puts mainstream commercial almond milk in the ~2-3% almond range. Used as the basis for the ~2.5% almond-content midpoint assumption applied when deriving almond-milk yield_kg_ha and water_per_kg from the repo's almonds entry (id 1) for the almond-milk entry (id 69)."
         ]
+    },
+    {
+        "id": 343,
+        "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0173836",
+        "title": "Alford & Krupke (2017) — Translocation of the neonicotinoid seed treatment clothianidin in maize (PLOS ONE)",
+        "notes": [
+            "Neonicotinoids are used in US maize solely as seed treatments; >80% of maize planted annually is treated with clothianidin or thiamethoxam at 0.25–1.25 mg active ingredient per kernel."
+        ]
+    },
+    {
+        "id": 344,
+        "url": "https://www.sciencedaily.com/releases/2015/04/150402092123.htm",
+        "title": "Douglas & Tooker (2015) — Rapid increase in neonicotinoid insecticides driven by seed treatments (Environmental Science & Technology; ScienceDaily summary)",
+        "notes": [
+            "By 2011 at least 79% of US corn acres were planted with neonicotinoid-coated seed."
+        ]
+    },
+    {
+        "id": 345,
+        "url": "https://croplife.org/case-study/the-role-of-insecticides-in-the-integrated-management-of-pests-of-oil-palm-in-southeast-asia/",
+        "title": "CropLife International — The Role of Insecticides in the Integrated Management of Pests of Oil Palm in Southeast Asia",
+        "notes": [
+            "Industry source. No more than 5% of oil palm area receives insecticide in any one year; application averages about once per ~25-year planting generation (bagworm / nettle caterpillar outbreaks; foliar spray or trunk injection). No products or dose rates given."
+        ]
     }
 ]

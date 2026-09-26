@@ -649,45 +649,45 @@
         "native_fraction": null,
         "ch4_kg_per_kg_output": [
             {
-                "value": 0.22,
+                "value": 0.066,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.22 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
                 }
             },
             {
-                "value": 0.2,
+                "value": 0.074,
                 "confidence": 3,
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.2. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.025,
+                "value": 0.0024,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.025 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
                 }
             },
             {
-                "value": 0.022,
+                "value": 0.0022,
                 "confidence": 3,
                 "source": {
-                    "id": 56,
-                    "url": "https://www.fao.org/gleam/en/",
-                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.022. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
                 }
             }
         ],
@@ -882,13 +882,13 @@
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.02,
+                "value": 7.5e-05,
                 "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.02 — same unit slip already fixed for chicken and eggs: 0.02 was kg CO2e, not kg N2O (0.02 kg N2O would be 5.3 kg CO2e/kg, ~300x chicken's 0.000068). 0.02 CO2e / 265 = 0.000075 kg N2O/kg, in line with chicken (poultry litter produces little N2O)."
                 }
             }
         ],

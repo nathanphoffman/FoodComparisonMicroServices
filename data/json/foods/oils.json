@@ -1078,6 +1078,22 @@
             }
           }
         ]
+      },
+      {
+        "pesticide_id": 6,
+        "name": "Cypermethrin",
+        "kg_ha": [
+          {
+            "value": 0.003,
+            "confidence": 2,
+            "source": {
+              "id": 345,
+              "url": "https://croplife.org/case-study/the-role-of-insecticides-in-the-integrated-management-of-pests-of-oil-palm-in-southeast-asia/",
+              "title": "CropLife International — The Role of Insecticides in the Integrated Management of Pests of Oil Palm in Southeast Asia",
+              "note": "Palm oil — cypermethrin (id 6) as the representative pyrethroid for bagworm / nettle caterpillar outbreak spraying. CropLife: ≤5% of oil palm area is treated in any year. Typical pyrethroid foliar dose ~0.05 kg a.i./ha per spray × ~5% of area ≈ 0.003 kg/ha/yr averaged over all plantations. Dose rate is a model estimate (source gives no rates); confidence 2. Added 2026-09-26: palm oil previously listed no insecticide."
+            }
+          }
+        ]
       }
     ],
     "availability_gg": [
