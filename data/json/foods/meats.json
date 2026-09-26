@@ -457,23 +457,23 @@
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.45,
+                "value": 3.427,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Chicken — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
+                    "note": "CORRECTION 2026-09-26: replaced 0.45 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.45 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.45 + 2.977 = 3.427. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
                 }
             },
             {
-                "value": 0.42,
+                "value": 3.397,
                 "confidence": 3,
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Chicken — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
+                    "note": "CORRECTION 2026-09-26: replaced 0.42 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.42 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.42 + 2.977 = 3.397. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
                 }
             }
         ],
@@ -693,23 +693,23 @@
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.55,
+                "value": 3.836,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.55 — it covered on-farm energy only, so every stage after the farm gate was missing and pork was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.55 on-farm + Poore & Nemecek post-farm stages for 'Pig Meat' (OWID supply-chain grapher, source 72): processing 0.416 + transport 0.501 + retail 0.278 + packaging 0.432 + supply-chain losses 1.659 = 3.286 kg CO2e/kg; 0.55 + 3.286 = 3.836. Post-farm stages are stored here as CO2e."
                 }
             },
             {
-                "value": 0.5,
+                "value": 3.786,
                 "confidence": 3,
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.5 — it covered on-farm energy only, so every stage after the farm gate was missing and pork was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.5 on-farm + Poore & Nemecek post-farm stages for 'Pig Meat' (OWID supply-chain grapher, source 72): processing 0.416 + transport 0.501 + retail 0.278 + packaging 0.432 + supply-chain losses 1.659 = 3.286 kg CO2e/kg; 0.5 + 3.286 = 3.786. Post-farm stages are stored here as CO2e."
                 }
             }
         ],
@@ -894,13 +894,13 @@
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.4,
+                "value": 3.377,
                 "confidence": 2,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
+                    "note": "CORRECTION 2026-09-26: replaced 0.4 — it covered on-farm energy only, so every stage after the farm gate was missing and turkey was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.4 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.4 + 2.977 = 3.377. Post-farm stages are stored here as CO2e. Turkey has no separate P&N row; poultry meat stages used."
                 }
             }
         ],

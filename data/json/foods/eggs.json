@@ -196,23 +196,23 @@
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.045,
+                "value": 0.479,
                 "confidence": 3,
                 "source": {
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Egg — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating in confinement houses). Residual from P&N Farm component after CH4 and N2O. Feed-related CO2 (land use change 0.710, feed crop 2.205 kg CO2e/kg) is tracked in the feed and land use fields. Previous value of 0.35 kg/kg was incorrect — it appears to have included feed-related CO2 rather than on-farm energy CO2 only."
+                    "note": "CORRECTION 2026-09-26: replaced 0.045 — it covered on-farm energy only, so every stage after the farm gate was missing and egg was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.045 on-farm + Poore & Nemecek post-farm stages for 'Eggs' (OWID supply-chain grapher, source 72): processing 0.000 + transport 0.084 + retail 0.036 + packaging 0.161 + supply-chain losses 0.153 = 0.434 kg CO2e/kg; 0.045 + 0.434 = 0.479. Post-farm stages are stored here as CO2e. Previous note: Egg — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating in confinement houses). Residual from P&N Farm component after CH4 and N2O. Feed-related CO2 (land use change 0.710, feed crop 2.205 kg CO2e/kg) is tracked in the feed and land use fields. Previous value of 0.35 kg/kg was incorrect — it appears to have included feed-related CO2 rather than on-farm energy CO2 only."
                 }
             },
             {
-                "value": 0.04,
+                "value": 0.474,
                 "confidence": 3,
                 "source": {
                     "id": 56,
                     "url": "https://www.fao.org/gleam/en/",
                     "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
-                    "note": "Egg — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for layer hens (fuel and electricity for housing, manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global average for confined systems."
+                    "note": "CORRECTION 2026-09-26: replaced 0.04 — it covered on-farm energy only, so every stage after the farm gate was missing and egg was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.04 on-farm + Poore & Nemecek post-farm stages for 'Eggs' (OWID supply-chain grapher, source 72): processing 0.000 + transport 0.084 + retail 0.036 + packaging 0.161 + supply-chain losses 0.153 = 0.434 kg CO2e/kg; 0.04 + 0.434 = 0.474. Post-farm stages are stored here as CO2e. Previous note: Egg — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for layer hens (fuel and electricity for housing, manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global average for confined systems."
                 }
             }
         ],
