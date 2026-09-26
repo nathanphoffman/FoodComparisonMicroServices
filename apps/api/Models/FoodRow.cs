@@ -85,4 +85,15 @@ public class FoodRow
     [JsonPropertyName("land_types")]
     public JsonElement? LandTypesJson =>
         LandTypes is null ? null : JsonDocument.Parse(LandTypes).RootElement.Clone();
+
+    // Food group from the source JSON file (e.g. "nuts", "leafy"); used by the table's filter buttons.
+    public string? Category { get; set; }
+
+    // Tags as stored in the DB: a JSON array string. Sent to the client as a parsed array via TagsJson.
+    [JsonIgnore]
+    public string? Tags { get; set; }
+
+    [JsonPropertyName("tags")]
+    public string[] TagsJson =>
+        Tags is null ? [] : JsonSerializer.Deserialize<string[]>(Tags) ?? [];
 }

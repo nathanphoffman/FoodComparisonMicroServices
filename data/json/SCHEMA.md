@@ -195,6 +195,8 @@ plant-specific or animal-specific fields depending on `type`.
   //       temperate_forest, dry, wetland
   "land_types": { "<key>": <number 0-1>, ... },
   // Optional. Plain-English reason for the land_types split.
+  // Tags: "common" = shown by default; "milk" = listed under the Milks filter
+  // in the food table, in addition to the food's own category.
   "land_types_note": <string>,
 
   // --- Nutrition (per gram of edible food as purchased) ---

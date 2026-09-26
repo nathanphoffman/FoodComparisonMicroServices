@@ -78,6 +78,7 @@ class RawFood:
             availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
             sentient_harm_explanation=self._data.get("sentient_harm_explanation"),
             land_types=self._data.get("land_types"),
+            category=self._data.get("category"),
         )
 
     def _display_name(self) -> str:

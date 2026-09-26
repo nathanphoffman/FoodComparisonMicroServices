@@ -2125,7 +2125,8 @@
         "category": "grains",
         "human_food": 1,
         "tags": [
-            "common"
+            "common",
+            "milk"
         ],
         "land_types": {
             "temperate_grassland": 0.6,

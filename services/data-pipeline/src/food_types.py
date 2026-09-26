@@ -46,6 +46,8 @@ class Food(TypedDict):
     sentient_harm_explanation: NotRequired[str | None]
     # fraction of this food's land in each broad land type (sums to 1); see data/json/SCHEMA.md
     land_types: NotRequired[dict[str, float] | None]
+    # which foods/<category>.json file the food lives in (e.g. "nuts", "leafy")
+    category: NotRequired[str]
 
 
 class Animal(TypedDict):

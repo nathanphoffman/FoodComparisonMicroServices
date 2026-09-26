@@ -23,6 +23,7 @@ import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableInputs';
 import type { ColConfig, SliderValues, DataRegion } from './FoodTableInputs';
 import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
+import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -37,6 +38,7 @@ export function FoodTable() {
 
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const [dataRegion, setDataRegion] = useState<DataRegion>(DEFAULT_DATA_REGION);
+    const [foodFilter, setFoodFilter] = useState<string>(DEFAULT_FOOD_FILTER);
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
@@ -77,7 +79,10 @@ export function FoodTable() {
 
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
-    const foodsToSort = scored.has('your-meal') ? [...rawFoods, MEAL_STUB] : rawFoods;
+    // Filtering only hides rows; every food is still scored so scores don't shift
+    // with the filter. The custom meal row always stays visible.
+    const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, foodFilter));
+    const foodsToSort = scored.has('your-meal') ? [...visibleFoods, MEAL_STUB] : visibleFoods;
     const displayRows = sortRows(foodsToSort, scored);
 
     // ── Render ────────────────────────────────────────────────────────────────
@@ -114,7 +119,9 @@ export function FoodTable() {
                 dataRegion={dataRegion}
                 onDataRegionChange={setDataRegion}
             />
-     
+
+            <FoodTableFilters selected={foodFilter} onChange={setFoodFilter} />
+
             <Table headers={headers}>
                 {displayRows.map(food => {
                     const scoredRow = scored.get(food.slug);

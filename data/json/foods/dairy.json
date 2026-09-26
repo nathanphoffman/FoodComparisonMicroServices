@@ -7,7 +7,8 @@
         "category": "dairy",
         "human_food": 1,
         "tags": [
-            "dairy"
+            "dairy",
+            "milk"
         ],
         "land_types": {
             "temperate_grassland": 0.6,

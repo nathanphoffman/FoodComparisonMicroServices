@@ -71,5 +71,8 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     --   {"tropical_forest": 0.5, "temperate_grassland": 0.5}; NULL for foods with no farmland
     land_types TEXT,
 
+    -- Food group, from the foods/<category>.json file it lives in (e.g. 'nuts', 'leafy'); NULL for feed rows
+    category TEXT,
+
     PRIMARY KEY (food_id, is_feed, region)
 );
