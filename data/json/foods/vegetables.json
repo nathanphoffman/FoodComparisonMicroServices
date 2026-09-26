@@ -1835,5 +1835,317 @@
                 }
             }
         ]
+    },
+    {
+        "id": 70,
+        "slug": "bell-pepper",
+        "name": "Bell Pepper",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.4,
+            "dry": 0.25,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.15
+        },
+        "land_types_note": "~39% China (long-cleared farmland), then India (savanna), irrigated Mexico/Türkiye/Spain/Egypt, and Indonesia (former rainforest).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.2,
+                    "fat": 0.0017,
+                    "sat_fat": 0.0006,
+                    "protein": 0.0086,
+                    "fiber": 0.017,
+                    "sodium": 0.027,
+                    "carbs": 0.0464,
+                    "sugar": 0.0241,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bell pepper — green, raw (USDA SR Legacy fdcId 170427) per 100 g: 20 kcal, 0.86 g protein, 0.17 g fat, 0.06 g sat fat, 1.7 g fiber, 4.64 g carbs, 2.41 g sugars, 2.7 mg sodium; converted to per gram. Averaged with red (equal weight)."
+                }
+            },
+            {
+                "value": {
+                    "calories": 0.26,
+                    "fat": 0.003,
+                    "sat_fat": 0.0006,
+                    "protein": 0.0099,
+                    "fiber": 0.021,
+                    "sodium": 0.04,
+                    "carbs": 0.0603,
+                    "sugar": 0.042,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bell pepper — red, raw (USDA SR Legacy fdcId 170108) per 100 g: 26 kcal, 0.99 g protein, 0.30 g fat, 0.06 g sat fat, 2.1 g fiber, 6.03 g carbs, 4.2 g sugars, 4 mg sodium; converted to per gram. Averaged with green (equal weight)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bell pepper — sold and eaten whole (minus a small core); yield_fraction 1 as for tomato."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15697,
+                "confidence": 4,
+                "source": {
+                    "id": 346,
+                    "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:401",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Chillies and peppers, green (item 401), 2020–2024",
+                    "note": "Bell pepper — yield_kg_ha (world): FAOSTAT 'Chillies and peppers, green' (item 401) 2020–2024 mean 15,697 kg/ha. The item also includes fresh chillies, which yield less per ha than bell peppers, so this likely understates bell pepper yield somewhat."
+                }
+            },
+            {
+                "value": 31892,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 346,
+                    "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:401",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Chillies and peppers, green (item 401), 2020–2024",
+                    "note": "Bell pepper — yield_kg_ha (US): FAOSTAT item 401, United States 2020–2024 mean 31,892 kg/ha."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 379,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Bell pepper — water_per_kg: Mekonnen & Hoekstra global average for 'Chillies and peppers, green' = 240 green + 42 blue + 97 grey = 379 L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 240,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chillies and peppers, green — global average green water footprint 240 m3/t."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 42,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chillies and peppers, green — global average blue water footprint 42 m3/t."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 97,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chillies and peppers, green — global average grey water footprint 97 m3/t."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 94.5,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 347,
+                    "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                    "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                    "note": "Bell pepper — pesticide_kg_ha (US): all active ingredients applied ÷ planted area = 94.5 kg/ha, ~80% of which is soil fumigants ('other'); 16.8 kg/ha excluding fumigants. Same basis as strawberries (source 267)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Bell pepper — emissions_per_kg: Poore & Nemecek (2018) 'Other Vegetables' global mean 0.53 kg CO2e/kg (cradle to retail; OWID ghg-per-kg-poore). P&N has no pepper-specific category. Cross-check: CarbonCloud Netherlands heated-greenhouse bell pepper 1.32 kg CO2e/kg (agriculture stage) — greenhouse peppers are higher, but most world production is field or unheated-tunnel grown."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.5075,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — Mancozeb: 5.604 lb/acre/yr on treated acres × 24% of planted area × 1.12085 = 1.5075 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 1.5076,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — s-metolachlor: 5.848 lb/acre/yr on treated acres × 23% of planted area × 1.12085 = 1.5076 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.3336,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — glyphosate: isopropylamine salt 0.736 lb/acre/yr × 13% + potassium salt 1.836 × 11%, × 1.12085 = 0.3336 kg/ha averaged over all planted area (NASS 2020)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.1111,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — Pendimethalin: 1.101 lb/acre/yr on treated acres × 9% of planted area × 1.12085 = 0.1111 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.1664,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — Carbaryl: 1.237 lb/acre/yr on treated acres × 12% of planted area × 1.12085 = 0.1664 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.077,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — Permethrin: 1.145 lb/acre/yr on treated acres × 6% of planted area × 1.12085 = 0.077 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0461,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — zeta-cypermethrin (recorded as cypermethrin): 0.196 lb/acre/yr on treated acres × 21% of planted area × 1.12085 = 0.0461 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0411,
+                        "confidence": 4,
+                        "source": {
+                            "id": 347,
+                            "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+                            "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+                            "note": "Bell pepper — Thiamethoxam: 0.193 lb/acre/yr on treated acres × 19% of planted area × 1.12085 = 0.0411 kg/ha averaged over all planted area (NASS 2020 vegetable chemical use, program states). US survey used for all regions, as for tomato and corn."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 43510,
+                "confidence": 4,
+                "source": {
+                    "id": 346,
+                    "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:401",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Chillies and peppers, green (item 401), 2020–2024",
+                    "note": "Bell pepper — availability_gg: FAOSTAT item 401 world production 2020–2024 mean 43.51 Mt = 43,510 Gg. Includes fresh chillies (bell/sweet peppers are the majority by weight but FAO does not split them)."
+                }
+            }
+        ]
     }
 ]

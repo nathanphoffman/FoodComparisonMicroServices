@@ -1681,5 +1681,26 @@
         "notes": [
             "Industry source. No more than 5% of oil palm area receives insecticide in any one year; application averages about once per ~25-year planting generation (bagworm / nettle caterpillar outbreaks; foliar spray or trunk injection). No products or dose rates given."
         ]
+    },
+    {
+        "id": 346,
+        "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:401",
+        "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Chillies and peppers, green (item 401), 2020–2024",
+        "notes": [
+            "Values read from the FAOSTAT QCL bulk download (https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip, also source 263); linked here via the FAOSTAT item 401 record on UNdata.",
+            "Chillies and peppers, green (item 401) — World (area 5000): yield 2020–2024 = 15,289 / 15,536 / 15,745 / 16,003 / 15,910 kg/ha (mean 15,697); production 41.94 / 42.40 / 44.00 / 44.44 / 44.77 Mt (mean 43.51 Mt = 43,510 Gg); area ~2.78 Mha. World figures are FAO estimates (flag E). Item pools bell/sweet peppers with fresh chillies.",
+            "US (item 401): yield 2020–2024 = 31,773 / 32,640 / 33,388 / 30,962 / 30,699 kg/ha (mean 31,892); production ~0.55–0.62 Mt; ~18,000 ha harvested.",
+            "Top producers 2023: China 17.36 Mt (~39%), India 5.16 Mt (~12%), Mexico 3.68 Mt (~8%), Türkiye 3.08 Mt (~7%), Indonesia 3.06 Mt (~7%), Spain 1.39 Mt (~3%), Egypt 1.09 Mt (~2.5%)."
+        ]
+    },
+    {
+        "id": 347,
+        "url": "https://quickstats.nass.usda.gov/results/41AFAA5C-224B-31FB-9BE9-6F1CE97B0C50",
+        "title": "USDA NASS Quick Stats — 2020 Vegetable Chemical Use: Peppers, Bell (PROGRAM STATES)",
+        "notes": [
+            "2020 survey, program-states aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres × % of planted area treated × 1.12085. Implied planted area ~36,400 acres (s-metolachlor 48,900 lb ÷ (23% × 5.848 lb/acre/yr)).",
+            "Rates (lb/acre/yr on treated acres, % area treated): mancozeb 5.604, 24%; s-metolachlor 5.848, 23%; glyphosate iso. salt 0.736, 13% + pot. salt 1.836, 11%; pendimethalin 1.101, 9%; carbaryl 1.237, 12%; permethrin 1.145, 6%; zeta-cypermethrin 0.196, 21%; thiamethoxam 0.193, 19%. Imidacloprid, malathion and paraquat withheld (D).",
+            "Total applied 3,066,100 lb (fungicide 274,800; herbicide 155,800; insecticide 113,200; other — mostly soil fumigants — 2,522,300) ≈ 84 lb/acre = 94.5 kg/ha per planted ha (16.8 kg/ha excluding fumigants)."
+        ]
     }
 ]
