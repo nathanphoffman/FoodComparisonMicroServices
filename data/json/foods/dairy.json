@@ -2,7 +2,7 @@
     {
         "id": 33,
         "slug": "milk",
-        "name": "Milk",
+        "name": "Cows Milk",
         "type": "animal",
         "category": "dairy",
         "human_food": 1,
