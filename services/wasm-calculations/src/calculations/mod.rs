@@ -12,6 +12,7 @@ use crate::models::{FoodRow, ScoredRow, SliderQuery};
 const GRAMS_PER_KG: f64 = 1_000.0;
 const CALORIE_NORM_FALLBACK: f64 = 1_000.0;
 const PROTEIN_NORM_FALLBACK: f64 = 100.0;
+const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
 const FIBER_SCORE_WEIGHT: f64 = 2.0;
 const SAT_FAT_SCORE_PENALTY: f64 = 2.0;
 
@@ -37,6 +38,14 @@ fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
 struct NormFactors {
     calorie_norm: f64,
     protein_norm: f64,
+    dry_mass_norm: f64,
+}
+
+/// Grams of dry matter per gram of food: everything except water, approximated as
+/// protein + fat + carbohydrate (USDA carbs include fiber). Ash (~1%) is ignored.
+/// The same whether a food is measured raw or cooked, since cooking only adds water.
+fn dry_mass_per_gram(food: &FoodRow) -> f64 {
+    food.protein + food.fat + food.carbs.unwrap_or(0.0)
 }
 
 impl NormFactors {
@@ -46,6 +55,8 @@ impl NormFactors {
                 .unwrap_or(CALORIE_NORM_FALLBACK),
             protein_norm: mean_nonzero(foods.iter().map(|f| f.protein * GRAMS_PER_KG))
                 .unwrap_or(PROTEIN_NORM_FALLBACK),
+            dry_mass_norm: mean_nonzero(foods.iter().map(|f| dry_mass_per_gram(f) * GRAMS_PER_KG))
+                .unwrap_or(DRY_MASS_NORM_FALLBACK),
         }
     }
 }
@@ -70,15 +81,29 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
 
     if let Some((ref reference, ref caps)) = scoring_context {
         for row in &mut rows {
-            row.final_score =
-                scoring::compute_improvement(row, reference, caps, query);
+            row.final_score = if reference.divisor <= 0.0 {
+                None // the reference itself has none of the Compare By unit
+            } else if row.divisor <= 0.0 {
+                Some(0.0) // provides none of what we're comparing by — worst possible
+            } else {
+                scoring::compute_improvement(row, reference, caps, query)
+            };
         }
     }
 
     if let Some(mut meal) = meal::synthesize_meal(&rows, &query.meal_ingredients) {
+        // An ingredient with none of the Compare By unit has no per-unit impacts, so
+        // the meal can't be compared fairly either.
+        let has_unitless_ingredient = query.meal_ingredients.iter().any(|ingredient| {
+            ingredient.fraction > 0.0
+                && rows.iter().any(|r| r.slug == ingredient.slug && r.divisor <= 0.0)
+        });
         if let Some((ref reference, ref caps)) = scoring_context {
-            meal.final_score =
-                scoring::compute_improvement(&meal, reference, caps, query);
+            meal.final_score = if has_unitless_ingredient || reference.divisor <= 0.0 {
+                None
+            } else {
+                scoring::compute_improvement(&meal, reference, caps, query)
+            };
         }
         rows.push(meal);
     }
@@ -89,7 +114,10 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
 // ── Per-food computation ─────────────────────────────────────────────────────
 
 fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> ScoredRow {
+    // None when the food has none of the Compare By unit (e.g. oil when comparing
+    // by protein only): every per-unit value is then undefined, not per-kg.
     let divisor = compute_divisor(food, query, norms);
+    let per_unit = |raw: f64| divisor.map(|d| raw / d);
 
     let nutrition_score = if food.calories > 0.0 {
         let raw =
@@ -116,37 +144,37 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     // calorie/protein units as the other columns. Production in units = Gg × divisor;
     // land per unit = land per kg ÷ divisor. (Dividing by the divisor instead used to
     // inflate watery, low-calorie foods like milk.)
-    let availability = food.availability_gg.map_or(1.0, |production_gg| {
+    let availability = divisor.map(|divisor| food.availability_gg.map_or(1.0, |production_gg| {
         let production_units = production_gg * divisor;
         if land_use_raw == 0.0 {
             production_units
         } else {
             (production_units / (land_use_raw / divisor)).max(1.0)
         }
-    });
+    }));
 
     ScoredRow {
         name: food.name.clone(),
         slug: food.slug.clone(),
         food_type: food.food_type.clone(),
-        divisor,
+        divisor: divisor.unwrap_or(0.0),
 
         nutrition_score,
-        emissions: Some(emissions_raw / divisor),
-        land_use: Some(land_use_raw / divisor),
-        water: Some(water_raw / divisor),
-        direct_kill: Some(direct_kill_raw / divisor),
-        captive_sentience: Some(captive_raw / divisor),
+        emissions: per_unit(emissions_raw),
+        land_use: per_unit(land_use_raw),
+        water: per_unit(water_raw),
+        direct_kill: per_unit(direct_kill_raw),
+        captive_sentience: per_unit(captive_raw),
         // kill_multiplier is applied to sentient_harm as a divisor, matching TS.
         // Captivity is intentional harm, so it sits alongside direct kill.
         // At 0× intentional harm carries no weight, so only accidental harm counts.
-        sentient_harm: Some(if query.kill_multiplier > 0.0 {
-            (direct_kill_raw + captive_raw) / divisor + sentient_harm_raw / divisor / query.kill_multiplier
+        sentient_harm: per_unit(if query.kill_multiplier > 0.0 {
+            direct_kill_raw + captive_raw + sentient_harm_raw / query.kill_multiplier
         } else {
-            sentient_harm_raw / divisor
+            sentient_harm_raw
         }),
         final_score: None, // filled in by apply()
-        availability: Some(availability),
+        availability,
 
         emissions_breakdown,
         water_detail,
@@ -158,7 +186,13 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
 
 // ── Divisor (unit normalisation) ─────────────────────────────────────────────
 
-fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> f64 {
+/// Amount of Compare By units in one kg of this food. None when the food has none
+/// of the chosen unit (it used to fall back to 1, scoring zero-protein oils as if
+/// they had average protein). With every weight at 0, compares per kg.
+fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Option<f64> {
+    if query.calorie_weight + query.protein_weight + query.dry_mass_weight <= 0.0 {
+        return Some(1.0);
+    }
     // calories and protein are given to us in per gram
     let calories_per_kg = food.calories * GRAMS_PER_KG;
     let protein_per_kg = food.protein * GRAMS_PER_KG;
@@ -166,10 +200,7 @@ fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> 
     // norms are also per gram, so we are effectively amount over norm times weight percentage.
     // No mass term: comparing per kg mostly measures water content (and dry vs cooked).
     let weighted = (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
-        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm);
-    if weighted > 0.0 {
-        weighted
-    } else {
-        1.0
-    }
+        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm)
+        + (query.dry_mass_weight / 100.0) * (dry_mass_per_gram(food) * GRAMS_PER_KG / norms.dry_mass_norm);
+    if weighted > 0.0 { Some(weighted) } else { None }
 }

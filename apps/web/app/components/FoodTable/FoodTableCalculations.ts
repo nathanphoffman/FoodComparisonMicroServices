@@ -53,6 +53,7 @@ export function nutritionScale(calories: number): number {
 export function getUnitLabel(weights: FoodWeights): string {
     if (weights.calories === 100) return '1000 kcal';
     if (weights.protein  === 100) return '100g protein';
+    if (weights.dryMass  === 100) return 'kg dry matter';
     return 'weighted unit';
 }
 

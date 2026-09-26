@@ -10,7 +10,8 @@
         "brazil-nuts",
         "peanuts",
         "pine-nuts",
-        "sunflower-seeds"
+        "sunflower-seeds",
+        "almond-milk"
     ],
     "meats": [
         "beef",
@@ -79,7 +80,10 @@
         "butter"
     ],
     "oils": [
-        "olive-oil"
+        "olive-oil",
+        "canola-oil",
+        "soybean-oil",
+        "palm-oil"
     ],
     "seeds": [
         "flaxseed"

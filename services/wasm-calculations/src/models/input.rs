@@ -82,6 +82,8 @@ pub struct SliderQuery {
     pub calorie_weight: f64,  // 0–100 (default 50)
     #[serde(default = "default_protein_weight")]
     pub protein_weight: f64,  // 0–100 (default 50)
+    #[serde(default)]
+    pub dry_mass_weight: f64, // 0–100 (UI default 33; 0 if omitted): weight without water
     #[serde(default = "default_green_water")]
     pub green_water:    f64,  // 0–100 (default 25)
     #[serde(default = "default_grey_water")]

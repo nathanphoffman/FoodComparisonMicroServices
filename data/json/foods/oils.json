@@ -1,278 +1,1076 @@
 [
-    {
-        "id": 45,
-        "slug": "olive-oil",
-        "name": "Olive Oil",
-        "type": "plant",
-        "category": "oils",
-        "human_food": 1,
-        "tags": [
-            "common"
-        ],
-        "nutrition": [
-            {
-                "value": {
-                    "calories": 8.84,
-                    "fat": 1,
-                    "sat_fat": 0.138,
-                    "protein": 0,
-                    "fiber": 0,
-                    "sodium": 0.02,
-                    "carbs": 0,
-                    "sugar": 0,
-                    "cholesterol": 0,
-                    "trans_fat": 0
-                },
-                "confidence": 5,
-                "source": {
-                    "id": 1,
-                    "url": "https://fdc.nal.usda.gov/",
-                    "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
-                }
+  {
+    "id": 45,
+    "slug": "olive-oil",
+    "name": "Olive Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1,
+          "sat_fat": 0.138,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0.02,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 400,
+        "confidence": 3,
+        "source": {
+          "id": 33,
+          "url": "https://ourworldindata.org/crop-yields",
+          "title": "Our World in Data — Crop Yields",
+          "note": null
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 14430,
+        "confidence": 3,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": null
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 11544,
+        "confidence": 2,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": null
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 2165,
+        "confidence": 2,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": null
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 294,
+        "confidence": 3,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": null
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 0.3,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": null
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1.2,
+        "confidence": 3,
+        "source": {
+          "id": 52,
+          "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+          "title": "USDA NASS — Agricultural Chemical Use Survey",
+          "note": null
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 90,
+        "confidence": 3,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": null
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 6.0,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg (global weighted average from farm to farm gate; includes fertilizer N2O, farm energy, and land use; high value reflects ~10 kg olives needed per kg oil, concentrating upstream crop emissions; P&N 2018 range 3.5–7.5 kg/kg)."
+        }
+      },
+      {
+        "value": 6.0,
+        "confidence": 3,
+        "source": {
+          "id": 71,
+          "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+          "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+          "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg per the OWID visualization of Poore & Nemecek (2018) data. Confirms the P&N 2018 global weighted average for olive oil production including upstream olive farming and pressing."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 0,
+        "confidence": 4,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": null
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 7000,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": null
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 1.0,
+            "confidence": 3,
+            "source": {
+              "id": 77,
+              "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
+              "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
+              "note": "Olive oil — glyphosate kg_ha: Directed post-emergence application for weed control in established olive orchards. UC IPM registered rate 0.8–1.5 lb a.e./acre for in-season applications; midpoint 1.15 lb/acre = 1.29 kg/ha per application. Conventional Mediterranean systems apply 1–2 times annually under-canopy or as strip treatment; global weighted average ~1.0 kg a.i./ha/yr. Glyphosate is the dominant herbicide in Spanish olive production (>90% of no-till orchards) and is widely used in California, Tunisia, and other producing regions."
             }
-        ],
-        "yield_fraction": [
-            {
-                "value": 1,
-                "confidence": 5,
-                "source": {
-                    "id": 1,
-                    "url": "https://fdc.nal.usda.gov/",
-                    "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
-                }
+          },
+          {
+            "value": 1.0,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Olive oil — glyphosate kg_ha: USDA NASS Fruits survey data for California olive orchards corroborates UC IPM registered rate; glyphosate is the most frequently applied herbicide in US olive production. Application rates consistent with 1.0–1.5 kg a.i./ha/yr for conventional systems applying 1–2 directed sprays annually for weed suppression under trees."
             }
-        ],
-        "yield_kg_ha": [
-            {
-                "value": 400,
-                "confidence": 3,
-                "source": {
-                    "id": 33,
-                    "url": "https://ourworldindata.org/crop-yields",
-                    "title": "Our World in Data — Crop Yields",
-                    "note": null
-                }
-            }
-        ],
-        "water_per_kg": [
-            {
-                "value": 14430,
-                "confidence": 3,
-                "source": {
-                    "id": 30,
-                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
-                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "green_water_per_kg": [
-            {
-                "value": 11544,
-                "confidence": 2,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "blue_water_per_kg": [
-            {
-                "value": 2165,
-                "confidence": 2,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "grey_water_per_kg": [
-            {
-                "value": 294,
-                "confidence": 3,
-                "source": {
-                    "id": 67,
-                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
-                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
-                    "note": null
-                }
-            }
-        ],
-        "soil_erosion": [
-            {
-                "value": 0.3,
-                "confidence": 3,
-                "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
-                }
-            }
-        ],
-        "pesticide_kg_ha": [
-            {
-                "value": 1.2,
-                "confidence": 3,
-                "source": {
-                    "id": 52,
-                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
-                    "title": "USDA NASS — Agricultural Chemical Use Survey",
-                    "note": null
-                }
-            }
-        ],
-        "fertilizer_kg_ha": [
-            {
-                "value": 90,
-                "confidence": 3,
-                "source": {
-                    "id": 62,
-                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
-                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": null
-                }
-            }
-        ],
-        "emissions_per_kg": [
-            {
-                "value": 6.0,
-                "confidence": 3,
-                "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg (global weighted average from farm to farm gate; includes fertilizer N2O, farm energy, and land use; high value reflects ~10 kg olives needed per kg oil, concentrating upstream crop emissions; P&N 2018 range 3.5–7.5 kg/kg)."
-                }
-            },
-            {
-                "value": 6.0,
-                "confidence": 3,
-                "source": {
-                    "id": 71,
-                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Olive oil — emissions_per_kg: ~6.0 kg CO2e/kg per the OWID visualization of Poore & Nemecek (2018) data. Confirms the P&N 2018 global weighted average for olive oil production including upstream olive farming and pressing."
-                }
-            }
-        ],
-        "tillage_events_per_year": [
-            {
-                "value": 0,
-                "confidence": 4,
-                "source": {
-                    "id": 62,
-                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
-                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": null
-                }
-            }
-        ],
-        "co2_capture_kg_ha_yr": [
-            {
-                "value": 7000,
-                "confidence": 3,
-                "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": null
-                }
-            }
-        ],
-        "pesticides": [
-            {
-                "pesticide_id": 1,
-                "name": "Glyphosate",
-                "kg_ha": [
-                    {
-                        "value": 1.0,
-                        "confidence": 3,
-                        "source": {
-                            "id": 77,
-                            "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
-                            "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
-                            "note": "Olive oil — glyphosate kg_ha: Directed post-emergence application for weed control in established olive orchards. UC IPM registered rate 0.8–1.5 lb a.e./acre for in-season applications; midpoint 1.15 lb/acre = 1.29 kg/ha per application. Conventional Mediterranean systems apply 1–2 times annually under-canopy or as strip treatment; global weighted average ~1.0 kg a.i./ha/yr. Glyphosate is the dominant herbicide in Spanish olive production (>90% of no-till orchards) and is widely used in California, Tunisia, and other producing regions."
-                        }
-                    },
-                    {
-                        "value": 1.0,
-                        "confidence": 3,
-                        "source": {
-                            "id": 52,
-                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
-                            "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Olive oil — glyphosate kg_ha: USDA NASS Fruits survey data for California olive orchards corroborates UC IPM registered rate; glyphosate is the most frequently applied herbicide in US olive production. Application rates consistent with 1.0–1.5 kg a.i./ha/yr for conventional systems applying 1–2 directed sprays annually for weed suppression under trees."
-                        }
-                    }
-                ]
-            },
-            {
-                "pesticide_id": 13,
-                "name": "Pendimethalin",
-                "kg_ha": [
-                    {
-                        "value": 0.5,
-                        "confidence": 2,
-                        "source": {
-                            "id": 77,
-                            "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
-                            "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
-                            "note": "Olive oil — pendimethalin kg_ha: Pre-emergence herbicide applied at 1.9–3.8 lb a.i./acre (Prowl H2O) in California olive orchards; full-field rate 3.19 kg/ha. Applied as directed strip treatment to ~50% of orchard floor in many operations, yielding an effective ~0.5–1.0 kg a.i./ha on a whole-orchard area basis. Not used in all Mediterranean systems; more prevalent in intensively managed California and newer Spanish super-intensive orchards. Value of 0.5 kg/ha reflects typical use in the fraction of global olive production where this herbicide is registered and applied."
-                        }
-                    }
-                ]
-            },
-            {
-                "pesticide_id": 7,
-                "name": "Imidacloprid",
-                "kg_ha": [
-                    {
-                        "value": 0.12,
-                        "confidence": 2,
-                        "source": {
-                            "id": 78,
-                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
-                            "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
-                            "note": "Olive oil — imidacloprid kg_ha: Neonicotinoid insecticide used for olive fruit fly (Bactrocera oleae) control and other sucking pests. Applied as bait spray at field trial doses comparable to dimethoate; global conventional use ~0.1–0.15 kg a.i./ha per application, typically 1–2 applications per season in regions where it remains registered. Banned from EU olive use under Regulation 2018/783 (outdoor uses), so current global use is concentrated in non-EU producing regions (Tunisia, Morocco, Turkey, California). Value of 0.12 kg/ha represents a global production-weighted average including both applying and non-applying regions."
-                        }
-                    }
-                ]
-            },
-            {
-                "pesticide_id": 10,
-                "name": "Mancozeb",
-                "kg_ha": [
-                    {
-                        "value": 0.5,
-                        "confidence": 2,
-                        "source": {
-                            "id": 78,
-                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
-                            "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
-                            "note": "Olive oil — mancozeb kg_ha: Dithiocarbamate fungicide used alongside copper compounds for olive leaf spot (Venturia oleaginea / Colletotrichum gloeosporioides) and as a protectant fungicide. Applied at 0.3–0.5 kg a.i./ha per application in systems where copper alone is insufficient; 1–2 applications per year typical. Note: copper compounds (copper hydroxide, copper oxychloride) are the primary fungicide in olive production globally at 2–3 kg Cu/ha/yr, but copper is an inorganic element not represented in this pesticides list. Mancozeb at 0.5 kg/ha represents secondary synthetic fungicide use in conventional non-organic olive systems."
-                        }
-                    }
-                ]
-            }
-        ],
-        "availability_gg": [
-            {
-                "value": 3500,
-                "confidence": 1,
-                "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
-                }
-            }
+          }
         ]
-    }
+      },
+      {
+        "pesticide_id": 13,
+        "name": "Pendimethalin",
+        "kg_ha": [
+          {
+            "value": 0.5,
+            "confidence": 2,
+            "source": {
+              "id": 77,
+              "url": "https://ipm.ucanr.edu/agriculture/olive/herbicide-treatment-table/",
+              "title": "UC IPM — Olive Herbicide Treatment Table (University of California Integrated Pest Management Program)",
+              "note": "Olive oil — pendimethalin kg_ha: Pre-emergence herbicide applied at 1.9–3.8 lb a.i./acre (Prowl H2O) in California olive orchards; full-field rate 3.19 kg/ha. Applied as directed strip treatment to ~50% of orchard floor in many operations, yielding an effective ~0.5–1.0 kg a.i./ha on a whole-orchard area basis. Not used in all Mediterranean systems; more prevalent in intensively managed California and newer Spanish super-intensive orchards. Value of 0.5 kg/ha reflects typical use in the fraction of global olive production where this herbicide is registered and applied."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 7,
+        "name": "Imidacloprid",
+        "kg_ha": [
+          {
+            "value": 0.12,
+            "confidence": 2,
+            "source": {
+              "id": 78,
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
+              "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
+              "note": "Olive oil — imidacloprid kg_ha: Neonicotinoid insecticide used for olive fruit fly (Bactrocera oleae) control and other sucking pests. Applied as bait spray at field trial doses comparable to dimethoate; global conventional use ~0.1–0.15 kg a.i./ha per application, typically 1–2 applications per season in regions where it remains registered. Banned from EU olive use under Regulation 2018/783 (outdoor uses), so current global use is concentrated in non-EU producing regions (Tunisia, Morocco, Turkey, California). Value of 0.12 kg/ha represents a global production-weighted average including both applying and non-applying regions."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 10,
+        "name": "Mancozeb",
+        "kg_ha": [
+          {
+            "value": 0.5,
+            "confidence": 2,
+            "source": {
+              "id": 78,
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7760811/",
+              "title": "Lozano et al. (2021) — Pesticide Residues in Honeybees, Bumblebees and Olive Oil after Applications Against Olive Fruit Fly (PMC/Insects)",
+              "note": "Olive oil — mancozeb kg_ha: Dithiocarbamate fungicide used alongside copper compounds for olive leaf spot (Venturia oleaginea / Colletotrichum gloeosporioides) and as a protectant fungicide. Applied at 0.3–0.5 kg a.i./ha per application in systems where copper alone is insufficient; 1–2 applications per year typical. Note: copper compounds (copper hydroxide, copper oxychloride) are the primary fungicide in olive production globally at 2–3 kg Cu/ha/yr, but copper is an inorganic element not represented in this pesticides list. Mancozeb at 0.5 kg/ha represents secondary synthetic fungicide use in conventional non-organic olive systems."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 3500,
+        "confidence": 1,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+        }
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "slug": "canola-oil",
+    "name": "Canola Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "sentient_harm_explanation": null,
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1,
+          "sat_fat": 0.074,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Canola oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, canola', reported per gram (884 kcal, 100 g fat, 7.4 g sat fat per 100 g)."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 820,
+        "confidence": 3,
+        "source": {
+          "id": 33,
+          "url": "https://ourworldindata.org/crop-yields",
+          "title": "Our World in Data — Crop Yields",
+          "note": "Canola/rapeseed oil — yield_kg_ha is OIL per hectare, not seed. World rapeseed seed yield ~2,050 kg/ha (OWID Crop Yields, recent FAOSTAT-based global average) x ~40% oil-extraction rate (seed is 35-46% oil by weight, ~40% typical recoverable yield; source 319, Univ. Kentucky Extension ID-114) = ~820 kg oil/ha. US seed yield (USDA NASS, 2019-2023 average ~1,857 lb/acre = ~2,080 kg/ha) is within ~2-3% of the world figure, so no separate US tag is added; the world value is used for both regions. The pipeline does not apply yield_fraction to plants, so land-use math (10000/yield_kg_ha) requires this field to already be oil output, not seed."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 4300,
+        "confidence": 3,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Global average water footprint of rapeseed/canola oil, product-level (economic allocation between oil and meal per M&H methodology)."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 3354,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: 78% of the 4,300 L/kg total, approximating rapeseed's largely rainfed production in the top producers (Canada, EU) offset by some irrigated production in India (source 322 methodology applied by analogy); not a directly reported oil-level breakdown."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 516,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: 12% of the 4,300 L/kg total (see green_water_per_kg note)."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 430,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: 10% of the 4,300 L/kg total (see green_water_per_kg note)."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 3.5,
+        "confidence": 2,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Canola oil — soil_erosion: no canola-specific P&N figure located; estimated comparable to other tilled broadacre oilseed row crops (cf. this repo's soybean value of 4.5 t/ha/yr). Confidence lowered to 2 pending a canola-specific source."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 1,
+        "confidence": 2,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Canola oil — tillage_events_per_year: widely grown under reduced/no-till in Canada (the dominant producer) alongside conventional tillage in other regions; ~1 pass/yr global-average estimate."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 2200,
+        "confidence": 2,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Canola oil — co2_capture_kg_ha_yr: rough estimate for an annual broadacre oilseed row crop, similar order of magnitude to soybean (1,500) and wheat; no canola-specific measurement located."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 200,
+        "confidence": 3,
+        "source": {
+          "id": 318,
+          "url": "https://www.library.nd.gov/statedocs/NDSUExtensionService/sf882.pdf",
+          "title": "NDSU Extension SF-882 — North Dakota Fertilizer Recommendation Tables and Equations",
+          "note": "NDSU recommends ~130-150 lb N/acre + 20-30 lb P2O5/acre + 20-30 lb S/acre for a 2,000-3,000 lb/acre yield potential (~235 kg/ha combined at the high end for intensive North American systems). Rounded down to ~200 kg/ha to reflect a global average including lower-input production regions (EU, China)."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 3.69,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Canola/rapeseed oil — emissions_per_kg: ~3.69 kg CO2e/kg, cradle-to-retail global weighted average (Poore & Nemecek 2018 'Rapeseed Oil' row, via OWID's food-emissions-supply-chain dataset). Stage breakdown: land-use change 0.20 (small — rapeseed has comparatively little deforestation-linked LUC vs. soy/palm) + farm 2.16 + processing/animal-feed 0.18+0.18 + transport 0.04 + packaging 0.78 + retail 0.24 = 3.69. P&N's methodology allocates co-product impact between rapeseed oil and rapeseed meal by ECONOMIC VALUE, consistent with this repo's soybean-meal allocation (source 270 note in legumes.json). Canola oil captures the large majority of crush value despite being the mass minority: seed is ~40% oil / ~60% meal by mass (source 321, Canola Council of Canada), but oil sells for roughly 3.5-4x meal's price per kg, implying an approximate 70-75% economic-value share to oil. This 3.69 figure already reflects P&N's own allocation, not a mass split."
+        }
+      },
+      {
+        "value": 3.69,
+        "confidence": 3,
+        "source": {
+          "id": 71,
+          "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+          "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+          "note": "Canola/rapeseed oil — emissions_per_kg: OWID's visualization of the same Poore & Nemecek (2018) 'Rapeseed Oil' data; confirms 3.69 kg CO2e/kg cradle-to-retail global average."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1.5,
+        "confidence": 3,
+        "source": {
+          "id": 52,
+          "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+          "title": "USDA NASS — Agricultural Chemical Use Survey",
+          "note": "Canola oil — pesticide_kg_ha: combined glyphosate (pre-seed burndown + in-crop on Roundup Ready varieties) and neonicotinoid seed-treatment insecticide; see pesticides[] breakdown."
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 1.4,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Canola oil — glyphosate kg_ha: pre-seed burndown application plus in-crop application on Roundup Ready canola (label max 0.75 lb a.e./acre in-crop = 0.84 kg/ha; typical North American programs also apply a pre-seed burndown pass of similar magnitude). ~1.4 kg/ha reflects a global weighted average including non-RR (EU) regions with lower glyphosate reliance."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 8,
+        "name": "Thiamethoxam",
+        "kg_ha": [
+          {
+            "value": 0.04,
+            "confidence": 2,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Canola oil — thiamethoxam kg_ha: neonicotinoid seed treatment, standard on most North American canola seed for flea beetle (Phyllotreta spp.) control at typical seed-treatment rates. Restricted in the EU for some uses; figure reflects a global weighted average."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 31000,
+        "confidence": 3,
+        "source": {
+          "id": 314,
+          "url": "https://www.fas.usda.gov/sites/default/files/2024-05/oilseeds.pdf",
+          "title": "USDA FAS — Oilseeds: World Markets and Trade",
+          "note": "World rapeseed/canola oil production ~31 million tonnes (2023), rising toward ~34.5 million tonnes by 2025/26 per USDA FAS Oilseeds: World Markets and Trade."
+        }
+      },
+      {
+        "value": 900,
+        "confidence": 3,
+        "source": {
+          "id": 315,
+          "url": "https://www.ers.usda.gov/data-products/oil-crops-yearbook",
+          "title": "USDA ERS — Oil Crops Yearbook / Oil Crops Outlook",
+          "note": "US crude canola oil production ~1.9 billion lb (~862,000 t, ~900 Gg) per USDA ERS Oil Crops Outlook (2024), reflecting rapid growth in US canola crush capacity (North Dakota, Illinois) driven by renewable-diesel demand."
+        },
+        "region": "US"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "slug": "soybean-oil",
+    "name": "Soybean Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "sentient_harm_explanation": null,
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1,
+          "sat_fat": 0.156,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Soybean oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, soybean, salad or cooking', reported per gram (884 kcal, 100 g fat, 15.6 g sat fat per 100 g)."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 512,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — yield_kg_ha is OIL per hectare, not whole beans. World soybean yield 2,800 kg/ha (this repo's legumes.json 'soy' world yield_kg_ha) x 18.3% oil-extraction rate (a 60 lb bushel yields ~11 lb oil per CME Group 'Understanding Soybean Crush', source 320) = ~512 kg oil/ha. This is a physical mass yield, not an economically-allocated figure — see emissions_per_kg / water_per_kg notes for how P&N/M&H allocate impact (not land) between oil and meal."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 4200,
+        "confidence": 3,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Global average water footprint of soybean oil, product-level (economic allocation between oil and meal per M&H methodology; ~40% of soy's economic value goes to oil, matching this repo's soybean-meal 60% allocation in legumes.json source 270)."
+        }
+      },
+      {
+        "value": 3251,
+        "confidence": 2,
+        "source": {
+          "id": 121,
+          "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+          "note": "Derived US value: scaled from the world oil-level total (4,200 L/kg) by the ratio of this repo's US to world soybean crop-level water footprints (US 1,662 / world 2,148 L/kg seed = 0.774), giving 4,200 x 0.774 = 3,251 L/kg. No US-specific product-level (oil) M&H figure was located, so this cross-scaling assumes the US:world ratio is similar at the crop and product level."
+        },
+        "region": "US"
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 3968,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: soybean's own world crop-level green share (2,029 / 2,148 = 94.5%, from legumes.json) applied to the 4,200 L/kg oil total."
+        }
+      },
+      {
+        "value": 3053,
+        "confidence": 2,
+        "source": {
+          "id": 121,
+          "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+          "note": "Derived: soybean's own US crop-level green share (1,560 / 1,662 = 93.9%, from legumes.json) applied to the 3,251 L/kg US oil total."
+        },
+        "region": "US"
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 108,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: soybean's own world crop-level blue share (55 / 2,148 = 2.6%) applied to the 4,200 L/kg oil total."
+        }
+      },
+      {
+        "value": 179,
+        "confidence": 2,
+        "source": {
+          "id": 121,
+          "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+          "note": "Derived: soybean's own US crop-level blue share (92 / 1,662 = 5.5%) applied to the 3,251 L/kg US oil total."
+        },
+        "region": "US"
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 124,
+        "confidence": 2,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Derived: soybean's own world crop-level grey share (64 / 2,148 = 3.0%) applied to the 4,200 L/kg oil total."
+        }
+      },
+      {
+        "value": 20,
+        "confidence": 2,
+        "source": {
+          "id": 121,
+          "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+          "note": "Derived: soybean's own US crop-level grey share (10 / 1,662 = 0.6%) applied to the 3,251 L/kg US oil total."
+        },
+        "region": "US"
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 4.5,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — soil_erosion: reused from this repo's soybean crop entry (legumes.json 'soy'); per-hectare cultivation practices are identical regardless of whether the beans are crushed for oil."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 2,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — tillage_events_per_year: reused from this repo's soybean crop entry (legumes.json 'soy')."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 1500,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — co2_capture_kg_ha_yr: reused from this repo's soybean crop entry (legumes.json 'soy')."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 80,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — fertilizer_kg_ha: reused from this repo's soybean crop entry (legumes.json 'soy'); soy fixes much of its own nitrogen via rhizobia, so fertilizer demand is lower than canola's."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 6.36,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Soybean oil — emissions_per_kg: ~6.36 kg CO2e/kg, cradle-to-retail global weighted average (Poore & Nemecek 2018 'Soybean Oil' row, via OWID's food-emissions-supply-chain dataset). Stage breakdown: land-use change 2.87 (large — driven by Brazil-origin deforestation, which dominates the global soy trade) + farm 1.41 + processing/animal-feed 0.29+0.28 + transport 0.04 + packaging 0.79 + retail 0.66 = 6.36. This is P&N's own economically-allocated oil-side figure: their Data S2 soybean-oil row (LUC 3.096 + farm 1.519 = 4.615 per kg oil, farm-gate) is the same figure legumes.json 'soy' (source 270) used to back out soybean MEAL's farm-gate emissions via ~60% economic allocation to meal / ~40% to oil — so this repo's soybean-oil and soybean-meal emissions figures are internally consistent, derived from the same P&N oil-row data with the same ~40/60 economic split."
+        }
+      },
+      {
+        "value": 6.36,
+        "confidence": 3,
+        "source": {
+          "id": 71,
+          "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+          "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+          "note": "Soybean oil — emissions_per_kg: OWID's visualization of the same Poore & Nemecek (2018) 'Soybean Oil' data; confirms 6.36 kg CO2e/kg cradle-to-retail global average."
+        }
+      },
+      {
+        "value": 2.6,
+        "confidence": 2,
+        "source": {
+          "id": 276,
+          "url": "https://ussec.org/wp-content/uploads/2025/10/Sustainable-US-Soy-Carbon-Footprint-General-2025.pdf",
+          "title": "USSEC (2025) — Examining U.S. Soy's Carbon Footprint (Mérieux NutriSciences | Blonk, Agri-footprint 6.3)",
+          "note": "Derived US value: USSEC/Blonk Agri-footprint 6.3 reports US whole soybeans at 0.43 kg CO2e/kg (cradle-to-market, incl. LUC+peat; this repo's legumes.json 'soy' source 276). Applying the same ~40% economic-value allocation to oil and the same 18.3% mass extraction rate used for yield_kg_ha: 0.43 x 0.40 / 0.183 = 0.94 kg CO2e/kg oil on a cradle-to-market (farm+crush) basis. Adding the same processing/packaging/retail increment the world figure carries beyond its farm+crush P&N base (6.36 - 4.615 = 1.76) gives an estimated cradle-to-retail US total of ~0.94 + 1.76 = ~2.6 kg CO2e/kg. Notably lower than the world average because US soy is not linked to Brazil-style deforestation LUC. Confidence 2 — multi-step derivation, not a direct US soybean-oil LCA."
+        },
+        "region": "US"
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1.5,
+        "confidence": 4,
+        "source": {
+          "id": 10,
+          "url": "https://ourworldindata.org/grapher/soybean-yields",
+          "title": "Our World in Data — Soybean Yields",
+          "note": "Soybean oil — pesticide_kg_ha: reused from this repo's soybean crop entry (legumes.json 'soy')."
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 0.84,
+            "confidence": 5,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Soybean oil — glyphosate kg_ha: reused from this repo's soybean crop entry (legumes.json 'soy'); same per-hectare herbicide program regardless of end use of the beans."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 11,
+        "name": "Metolachlor",
+        "kg_ha": [
+          {
+            "value": 0.14,
+            "confidence": 4,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Soybean oil — metolachlor kg_ha: reused from this repo's soybean crop entry (legumes.json 'soy')."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 3,
+        "name": "Chlorpyrifos",
+        "kg_ha": [
+          {
+            "value": 0.03,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Soybean oil — chlorpyrifos kg_ha: reused from this repo's soybean crop entry (legumes.json 'soy'); minor."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 70000,
+        "confidence": 3,
+        "source": {
+          "id": 314,
+          "url": "https://www.fas.usda.gov/sites/default/files/2024-05/oilseeds.pdf",
+          "title": "USDA FAS — Oilseeds: World Markets and Trade",
+          "note": "World soybean oil production ~70 million tonnes (2024/25) per USDA FAS Oilseeds: World Markets and Trade."
+        }
+      },
+      {
+        "value": 5300,
+        "confidence": 3,
+        "source": {
+          "id": 315,
+          "url": "https://www.ers.usda.gov/data-products/oil-crops-yearbook",
+          "title": "USDA ERS — Oil Crops Yearbook / Oil Crops Outlook",
+          "note": "US soybean oil production ~11.5-12 billion lb (~5.2-5.4 million t) per USDA ERS Oil Crops Yearbook, recent years."
+        },
+        "region": "US"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "slug": "palm-oil",
+    "name": "Palm Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "sentient_harm_explanation": "Palm oil has no direct animal-slaughter component (it's a plant food), but new oil-palm plantations are a leading driver of tropical deforestation in Indonesia and Malaysia, destroying rainforest habitat for orangutans, Sumatran tigers, elephants and other wildlife. This repo doesn't model wildlife habitat loss as a separate death count — it's reflected indirectly through this food's land-use figures (yield_kg_ha, which drives the land-use / crop-deforestation score) and its unusually large land-use-change share of emissions_per_kg.",
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1,
+          "sat_fat": 0.497,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Palm oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, palm', reported per gram (884 kcal, 100 g fat, ~49.7 g sat fat per 100 g — roughly half saturated, unusually high for a vegetable oil)."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 3500,
+        "confidence": 3,
+        "source": {
+          "id": 317,
+          "url": "https://www.fao.org/4/y4355e/y4355e03.htm",
+          "title": "FAO — Oil Palm (agronomy chapter: FFB yield, oil extraction rate, fertilizer demand)",
+          "note": "Palm oil — yield_kg_ha is crude palm OIL per hectare, not fresh fruit bunches (FFB). Global average FFB yield ~18-19 t/ha/yr at ~20% oil-extraction rate (OER, typical range 17-27%) gives a global-average crude palm oil yield of ~3.5 t/ha/yr — well below the 11-18 t/ha potential of best-managed plantations, reflecting smallholder and aging-plantation drag on the world average. This is far higher per hectare than any other oil crop (olive ~400, canola ~820, soybean ~512), which is why palm has displaced other oils commercially despite its emissions/deforestation profile. Palm KERNEL oil (~0.4-0.6 t/ha, a secondary product of the kernel/shell, not the fruit pulp) is a minor co-product (~10% of CPO by weight) and is not separately modeled here. The US grows no commercial oil palm (only small experimental plantings in Puerto Rico/Hawaii); all US palm oil is imported, primarily from Indonesia and Malaysia, so no separate region:'US' values are given for this food anywhere below — world figures apply."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 5000,
+        "confidence": 3,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Global average water footprint of palm oil, product-level (economic allocation between crude palm oil and palm kernel oil/meal per M&H methodology)."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 4500,
+        "confidence": 2,
+        "source": {
+          "id": 322,
+          "url": "https://jopr.mpob.gov.my/wp-content/uploads/2026/01/joprinpress2026-prima.pdf",
+          "title": "Malaysian Palm Oil Board (MPOB) — The Water Footprint of Oil Palm Plantation",
+          "note": "Derived: 90% of the 5,000 L/kg total. Malaysian and Indonesian field studies of oil palm/FFB water footprint consistently find green water ~83-95% of the total (predominantly rainfed in the humid tropics); 90% used as a representative midpoint."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 100,
+        "confidence": 2,
+        "source": {
+          "id": 322,
+          "url": "https://jopr.mpob.gov.my/wp-content/uploads/2026/01/joprinpress2026-prima.pdf",
+          "title": "Malaysian Palm Oil Board (MPOB) — The Water Footprint of Oil Palm Plantation",
+          "note": "Derived: 2% of the 5,000 L/kg total — oil palm is almost entirely rain-fed in its main growing regions, so irrigation withdrawal is minimal (field studies report ~0.7-2%)."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 400,
+        "confidence": 2,
+        "source": {
+          "id": 322,
+          "url": "https://jopr.mpob.gov.my/wp-content/uploads/2026/01/joprinpress2026-prima.pdf",
+          "title": "Malaysian Palm Oil Board (MPOB) — The Water Footprint of Oil Palm Plantation",
+          "note": "Derived: 8% of the 5,000 L/kg total. Palm oil mill effluent (POME) is a well-documented, high-organic-load wastewater stream, so the grey-water (pollutant-dilution) component is proportionally larger than for most crops (field studies report ~4-17%)."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 2.0,
+        "confidence": 2,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Palm oil — soil_erosion: mature plantations typically maintain leguminous ground cover between rows, which substantially limits erosion versus bare-tilled annual row crops; estimate reflects established stands. Does not include the much higher erosion/carbon loss during initial land clearing and establishment, which is captured separately via the land-use-change component of emissions_per_kg."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 0,
+        "confidence": 4,
+        "source": {
+          "id": 317,
+          "url": "https://www.fao.org/4/y4355e/y4355e03.htm",
+          "title": "FAO — Oil Palm (agronomy chapter: FFB yield, oil extraction rate, fertilizer demand)",
+          "note": "Palm oil — tillage_events_per_year: perennial tree crop; no tillage after establishment (consistent with this repo's olive-oil entry, another perennial tree oil crop)."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 10000,
+        "confidence": 2,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Palm oil — co2_capture_kg_ha_yr: rough estimate. Oil palm is a perennial tree crop with large standing woody biomass, continuous year-round canopy, and high overall biomass productivity, so growing-season carbon capture is estimated well above annual row crops (soybean 1,500) and above olive (7,000). This reflects standing-crop uptake only — it is not a net carbon balance and does not offset the large one-time land-use-change emissions from clearing forest for new plantings, which are captured separately in emissions_per_kg."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 350,
+        "confidence": 2,
+        "source": {
+          "id": 317,
+          "url": "https://www.fao.org/4/y4355e/y4355e03.htm",
+          "title": "FAO — Oil Palm (agronomy chapter: FFB yield, oil extraction rate, fertilizer demand)",
+          "note": "Palm oil — fertilizer_kg_ha: mature oil palm is heavily fertilized (particularly potassium, given high bunch-yield nutrient removal, plus nitrogen and magnesium); ~350 kg/ha/yr combined NPK+Mg is a representative estimate for conventional mature plantations. No single authoritative global-average figure located; confidence 2."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 7.39,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Palm oil — emissions_per_kg: ~7.39 kg CO2e/kg, cradle-to-retail global weighted average (Poore & Nemecek 2018 'Palm Oil' row, via OWID's food-emissions-supply-chain dataset) — the highest of the major vegetable oils. Stage breakdown: land-use change 2.76 (the single largest driver, reflecting tropical deforestation and peatland conversion for new plantings in Indonesia and Malaysia) + farm 1.88 + processing/animal-feed 1.13+0.19 + transport 0.04 + packaging 0.79 + retail 0.55 = 7.39."
+        }
+      },
+      {
+        "value": 7.39,
+        "confidence": 3,
+        "source": {
+          "id": 71,
+          "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+          "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+          "note": "Palm oil — emissions_per_kg: OWID's visualization of the same Poore & Nemecek (2018) 'Palm Oil' data; confirms 7.39 kg CO2e/kg cradle-to-retail global average, and that land-use change is the largest single component."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1.0,
+        "confidence": 2,
+        "source": {
+          "id": 99,
+          "url": "",
+          "title": "Model estimate — needs proper sourcing",
+          "note": "Palm oil — pesticide_kg_ha: oil palm has comparatively low agrochemical pesticide use versus annual row crops (main inputs are inter-row herbicides); ~1.0 kg/ha estimate. No comprehensive global-average figure located; confidence 2."
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 0.7,
+            "confidence": 2,
+            "source": {
+              "id": 99,
+              "url": "",
+              "title": "Model estimate — needs proper sourcing",
+              "note": "Palm oil — glyphosate kg_ha: used for inter-row and circle weeding in mature plantations; estimate, exact global-average application data not well documented in the literature reviewed."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 16,
+        "name": "Paraquat",
+        "kg_ha": [
+          {
+            "value": 0.3,
+            "confidence": 2,
+            "source": {
+              "id": 99,
+              "url": "",
+              "title": "Model estimate — needs proper sourcing",
+              "note": "Palm oil — paraquat kg_ha: still used for weed control in parts of Indonesia and Malaysia despite being banned in the EU and several other jurisdictions; estimate reflects continued use in major producing regions."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 81000,
+        "confidence": 3,
+        "source": {
+          "id": 314,
+          "url": "https://www.fas.usda.gov/sites/default/files/2024-05/oilseeds.pdf",
+          "title": "USDA FAS — Oilseeds: World Markets and Trade",
+          "note": "World palm oil production ~81 million tonnes (2024/25) per USDA FAS Oilseeds: World Markets and Trade; roughly 85% from Indonesia and Malaysia combined. No US production (see yield_kg_ha note) — the US market is entirely served by imports, so no separate region:'US' availability value is given."
+        }
+      }
+    ]
+  }
 ]
