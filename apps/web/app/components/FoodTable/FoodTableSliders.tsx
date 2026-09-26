@@ -12,6 +12,7 @@ import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExp
 import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplierSlider";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
+import { WinDampeningSlider }               from "./Sliders/WinDampeningSlider";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
 import type { LandTypes } from "@/lib/queries/commonFoods";
@@ -30,6 +31,7 @@ export function FoodTableSliders({
     onFinalIntelligenceExponentChange,
     onZeroBetterMultiplierChange,
     onLandTypeWeightsChange,
+    onWinDampeningChange,
     neuronExponent,
     weightExponent,
     finalIntelligenceExponent,
@@ -45,6 +47,7 @@ export function FoodTableSliders({
     onFinalIntelligenceExponentChange?: (v: number) => void;
     onZeroBetterMultiplierChange?: (v: number) => void;
     onLandTypeWeightsChange?: (w: LandTypes) => void;
+    onWinDampeningChange?: (v: number) => void;
     neuronExponent: number;
     weightExponent: number;
     finalIntelligenceExponent: number;
@@ -55,7 +58,10 @@ export function FoodTableSliders({
                 <WeightSliders onChange={onChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Score Priorities">
-                <ScorePrioritySliders onChange={onScorePrioritiesChange} />
+                <div className="flex flex-col gap-4 w-full">
+                    <ScorePrioritySliders onChange={onScorePrioritiesChange} />
+                    <WinDampeningSlider onChange={onWinDampeningChange} />
+                </div>
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <div className="flex flex-col gap-3 w-full">

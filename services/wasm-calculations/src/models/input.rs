@@ -163,6 +163,12 @@ pub struct SliderQuery {
     // score. Doesn't affect land-driven deaths or availability, which use raw area.
     #[serde(default = "default_land_type_weights")]
     pub land_type_weights: LandTypes,
+
+    // How much a big win in one measure is dampened when combining measures into
+    // the Improvement score: 0 = linear (arithmetic mean), 1 = geometric mean
+    // (default, the original behavior), 2 = harmonic mean (weakest measure dominates).
+    #[serde(default = "default_win_dampening")]
+    pub win_dampening: f64,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -173,6 +179,7 @@ pub struct MealIngredient {
 
 fn default_zero_better_multiplier() -> f64 { 2.0 }
 fn default_priority()               -> f64 { 1.0 }
+fn default_win_dampening()          -> f64 { 1.0 }
 
 // Keep in sync with DEFAULT_LAND_TYPE_WEIGHTS in LandTypeSliders.tsx.
 fn default_land_type_weights() -> LandTypes {

@@ -8,6 +8,7 @@ import type { FoodWeights, ScorePriorities } from './FoodTableTypes';
 import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
 import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
 import { DEFAULT_LAND_TYPE_WEIGHTS } from './Sliders/LandTypeSliders';
+import { DEFAULT_WIN_DAMPENING } from './Sliders/WinDampeningSlider';
 import type { LandTypes } from '@/lib/queries/commonFoods';
 import type { SortKey } from './FoodTableSort';
 import { useIsMobile } from '../../hooks/useIsMobile';
@@ -58,6 +59,7 @@ export type SliderValues = {
     finalIntelligenceExponent:  number;
     zeroBetterMultiplier:       number;
     landTypeWeights:            LandTypes;
+    winDampening:               number;
     referenceSlug:              string;
     mealIngredients:            MealIngredient[];
 };
@@ -74,6 +76,7 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     finalIntelligenceExponent:  1.15,
     zeroBetterMultiplier:       1.5,
     landTypeWeights:            DEFAULT_LAND_TYPE_WEIGHTS,
+    winDampening:               DEFAULT_WIN_DAMPENING,
     referenceSlug:              'avocado',
     mealIngredients:            [],
 };
@@ -172,6 +175,11 @@ export function FoodTableInputs({
         setSliderValues(next);
         onSliderValuesChange(next);
     }
+    function handleWinDampening(winDampening: number) {
+        const next = { ...sliderValues, winDampening };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
     function handleMealChange(mealIngredients: MealIngredient[]) {
         const next = { ...sliderValues, mealIngredients };
         setSliderValues(next);
@@ -216,6 +224,7 @@ export function FoodTableInputs({
                     onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
                     onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
                     onLandTypeWeightsChange={handleLandTypeWeights}
+                    onWinDampeningChange={handleWinDampening}
                     neuronExponent={sliderValues.neuronExponent}
                     weightExponent={sliderValues.weightExponent}
                     finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
