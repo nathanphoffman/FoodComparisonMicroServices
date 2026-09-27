@@ -252,13 +252,13 @@
         ],
         "availability_gg": [
             {
-                "value": 93000,
-                "confidence": 1,
+                "value": 90115,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Hen eggs in shell, fresh' (tonnes) = 90,115 Gg."
                 }
             }
         ]

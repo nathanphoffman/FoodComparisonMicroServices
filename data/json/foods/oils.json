@@ -268,13 +268,13 @@
     ],
     "availability_gg": [
       {
-        "value": 3500,
-        "confidence": 1,
+        "value": 3002,
+        "confidence": 4,
         "source": {
-          "id": 99,
-          "url": "",
-          "title": "Model estimate — needs proper sourcing",
-          "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+          "id": 263,
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+          "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+          "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Olive oil (2020–2023)' = 3,002 Gg."
         }
       }
     ]
@@ -1105,6 +1105,728 @@
           "url": "https://www.fas.usda.gov/sites/default/files/2024-05/oilseeds.pdf",
           "title": "USDA FAS — Oilseeds: World Markets and Trade",
           "note": "World palm oil production ~81 million tonnes (2024/25) per USDA FAS Oilseeds: World Markets and Trade; roughly 85% from Indonesia and Malaysia combined. No US production (see yield_kg_ha note) — the US market is entirely served by imports, so no separate region:'US' availability value is given."
+        }
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "slug": "sunflower-oil",
+    "name": "Sunflower Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "land_types": {
+      "temperate_grassland": 1.0
+    },
+    "land_types_note": "Ukrainian and Russian steppe grassland, same as sunflower seeds.",
+    "sentient_harm_explanation": null,
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1.0,
+          "sat_fat": 0.103,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Sunflower oil — USDA SR Legacy 'Oil, sunflower, linoleic (approx. 65%)' (fdcId 171025): 884 kcal, 100 g fat, 10.3 g sat fat per 100 g; per gram."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 734,
+        "confidence": 3,
+        "source": {
+          "id": 356,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:268",
+          "title": "FAOSTAT — Sunflower seed (item 267) and Sunflower-seed oil, crude (item 268), 2020–2024",
+          "note": "Sunflower oil — yield_kg_ha is OIL per hectare: FAOSTAT world sunflower seed yield 2020–2024 mean 1,882.5 kg/ha (source 356) × FAO median oil extraction 39% (source 311) = 734 kg oil/ha. All crop land charged to the oil, as for soybean oil."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 6792,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Sunflower Oil — water_per_kg: Mekonnen & Hoekstra refined-oil product water footprint 6,088 green + 299 blue + 405 grey = 6,792 L/kg (economic allocation between oil and cake)."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 6088,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Sunflower Oil — Mekonnen & Hoekstra refined oil, green component."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 299,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Sunflower Oil — Mekonnen & Hoekstra refined oil, blue component."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 405,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Sunflower Oil — Mekonnen & Hoekstra refined oil, grey component."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 2,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Sunflower Oil — soil_erosion: reused from this repo's sunflower-seeds entry (id 47); per-hectare field metric, unchanged by crushing for oil. "
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 2,
+        "confidence": 3,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": "Sunflower Oil — tillage_events_per_year: reused from this repo's sunflower-seeds entry (id 47); per-hectare field metric, unchanged by crushing for oil. "
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 1200,
+        "confidence": 3,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Sunflower Oil — co2_capture_kg_ha_yr: reused from this repo's sunflower-seeds entry (id 47); per-hectare field metric, unchanged by crushing for oil. "
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 90,
+        "confidence": 3,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": "Sunflower Oil — fertilizer_kg_ha: reused from this repo's sunflower-seeds entry (id 47); per-hectare field metric, unchanged by crushing for oil. "
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 3.6,
+        "confidence": 3,
+        "source": {
+          "id": 72,
+          "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+          "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+          "note": "Sunflower oil — emissions_per_kg: Poore & Nemecek (2018) 'Sunflower Oil' via OWID supply-chain grapher: LUC 0.12 + farm 1.98 + processing 0.21 + transport 0.18 + retail 0.04 + packaging 0.78 + losses 0.28 = 3.60 kg CO2e/kg, cradle to retail."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1,
+        "confidence": 3,
+        "source": {
+          "id": 52,
+          "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+          "title": "USDA NASS — Agricultural Chemical Use Survey",
+          "note": "Sunflower Oil — pesticide_kg_ha: reused from sunflower-seeds (id 47). "
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 0.7,
+            "confidence": 4,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Sunflower Oil — Glyphosate: reused unchanged from sunflower-seeds (id 47); per-hectare rate. Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 7,
+        "name": "Imidacloprid",
+        "kg_ha": [
+          {
+            "value": 0.06,
+            "confidence": 4,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Sunflower Oil — Imidacloprid: reused unchanged from sunflower-seeds (id 47); per-hectare rate. Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 13,
+        "name": "Pendimethalin",
+        "kg_ha": [
+          {
+            "value": 0.55,
+            "confidence": 4,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Sunflower Oil — Pendimethalin: reused unchanged from sunflower-seeds (id 47); per-hectare rate. Sunflower seeds — glyphosate: 0.7 kg/ha; imidacloprid: 0.06 kg/ha; pendimethalin: 0.55 kg/ha. Values from USDA NASS Field Crops Chemical Use Survey (ND/SD/MN production areas, 2018–2022 average)."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 20413,
+        "confidence": 4,
+        "source": {
+          "id": 356,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:268",
+          "title": "FAOSTAT — Sunflower seed (item 267) and Sunflower-seed oil, crude (item 268), 2020–2024",
+          "note": "Sunflower oil — availability_gg: FAOSTAT world sunflower-seed oil (crude) production 2020–2023 mean 20.41 Mt = 20,413 Gg."
+        }
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "slug": "coconut-oil",
+    "name": "Coconut Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "land_types": {
+      "tropical_forest": 0.8,
+      "wetland": 0.2
+    },
+    "land_types_note": "Coastal humid tropics (Philippines, Indonesia, India), same as coconuts.",
+    "sentient_harm_explanation": null,
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.92,
+          "fat": 0.991,
+          "sat_fat": 0.825,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0.00028
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Coconut oil — USDA SR Legacy 'Oil, coconut' (fdcId 171412): 892 kcal, 99.1 g fat, 82.5 g sat fat, 0.028 g trans fat per 100 g; per gram."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 708,
+        "confidence": 3,
+        "source": {
+          "id": 358,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:252",
+          "title": "FAOSTAT — Coconuts, in shell (item 249) and Coconut oil (item 252), 2020–2024",
+          "note": "Coconut oil — yield_kg_ha is OIL per hectare: FAOSTAT world coconut (in shell) yield 2020–2024 mean 5,761 kg/ha (source 358) × FAO median copra 19.5% of coconuts × oil of copra 63% (source 311) = 708 kg oil/ha. All crop land charged to the oil."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 4491,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Coconut Oil — water_per_kg: Mekonnen & Hoekstra refined-oil product water footprint 4,461 green + 3 blue + 27 grey = 4,491 L/kg (economic allocation between oil and cake)."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 4461,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Coconut Oil — Mekonnen & Hoekstra refined oil, green component."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 3,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Coconut Oil — Mekonnen & Hoekstra refined oil, blue component."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 27,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Coconut Oil — Mekonnen & Hoekstra refined oil, grey component."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 0.3,
+        "confidence": 2,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Coconut Oil — soil_erosion: reused from this repo's coconut entry (id 46); per-hectare field metric, unchanged by crushing for oil. Coconut — emissions_per_kg: 3.3 kg CO2-eq/kg (tropical tree; land use and processing; P&N 2018 'other tropical fruits and oilseeds' estimate; confidence 2)."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 0,
+        "confidence": 3,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": "Coconut Oil — tillage_events_per_year: reused from this repo's coconut entry (id 46); per-hectare field metric, unchanged by crushing for oil. Coconut — fertilizer_kg_ha: ~80 kg/ha (smallholder tropical palm; limited fertilizer use in traditional production; commercial estates higher at ~150 kg/ha)."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 8000,
+        "confidence": 2,
+        "source": {
+          "id": 55,
+          "url": "https://science.sciencemag.org/content/360/6392/987",
+          "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+          "note": "Coconut Oil — co2_capture_kg_ha_yr: reused from this repo's coconut entry (id 46); per-hectare field metric, unchanged by crushing for oil. Coconut — emissions_per_kg: 3.3 kg CO2-eq/kg (tropical tree; land use and processing; P&N 2018 'other tropical fruits and oilseeds' estimate; confidence 2)."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 80,
+        "confidence": 2,
+        "source": {
+          "id": 62,
+          "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+          "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+          "note": "Coconut Oil — fertilizer_kg_ha: reused from this repo's coconut entry (id 46); per-hectare field metric, unchanged by crushing for oil. Coconut — fertilizer_kg_ha: ~80 kg/ha (smallholder tropical palm; limited fertilizer use in traditional production; commercial estates higher at ~150 kg/ha)."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 4.58,
+        "confidence": 3,
+        "source": {
+          "id": 360,
+          "url": "https://apps.carboncloud.com/climatehub/product-reports/id/7642119883",
+          "title": "CarbonCloud ClimateHub — Crude coconut oil, Philippines (verified product report)",
+          "note": "Coconut oil — emissions_per_kg: CarbonCloud crude coconut oil, Philippines, 3.29 kg CO2e/kg (agriculture + processing; source 360) + Poore & Nemecek vegetable-oil post-factory stages (sunflower oil row: transport 0.18 + retail 0.04 + packaging 0.78 + losses 0.28 = 1.29; source 72) = 4.58 kg CO2e/kg. Land-use change probably not included, so likely an underestimate where plantations replaced forest."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 0.5,
+        "confidence": 2,
+        "source": {
+          "id": 52,
+          "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+          "title": "USDA NASS — Agricultural Chemical Use Survey",
+          "note": "Coconut Oil — pesticide_kg_ha: reused from coconut (id 46). "
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 3,
+        "name": "Chlorpyrifos",
+        "kg_ha": [
+          {
+            "value": 0.2,
+            "confidence": 2,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Coconut Oil — Chlorpyrifos: reused unchanged from coconut (id 46); per-hectare rate. Coconut — chlorpyrifos: 0.2 kg/ha; malathion: 0.1 kg/ha. Coconut is not directly surveyed by USDA NASS (tropical smallholder crop; primary producers are Philippines, Indonesia, India). Values derived from FAO coconut crop protection profiles and regional agronomic literature. Chlorpyrifos used for rhinoceros beetle (Oryctes rhinoceros) and red palm weevil control. Confidence 2 — no direct NASS survey data."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 4,
+        "name": "Malathion",
+        "kg_ha": [
+          {
+            "value": 0.1,
+            "confidence": 2,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Coconut Oil — Malathion: reused unchanged from coconut (id 46); per-hectare rate. Coconut — chlorpyrifos: 0.2 kg/ha; malathion: 0.1 kg/ha. Values derived from FAO coconut crop protection profiles. Malathion applied for mite (Aceria guerreronis) and scale insect control. Confidence 2 — no direct NASS survey data."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 3064,
+        "confidence": 4,
+        "source": {
+          "id": 358,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:252",
+          "title": "FAOSTAT — Coconuts, in shell (item 249) and Coconut oil (item 252), 2020–2024",
+          "note": "Coconut oil — availability_gg: FAOSTAT world coconut oil production 2020–2023 mean 3.06 Mt = 3,064 Gg."
+        }
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "slug": "peanut-oil",
+    "name": "Peanut Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "land_types": {
+      "tropical_savanna": 0.5,
+      "temperate_grassland": 0.3,
+      "temperate_forest": 0.2
+    },
+    "land_types_note": "Indian and West African savanna plus China and the US, same as peanuts.",
+    "sentient_harm_explanation": null,
+    "nutrition": [
+      {
+        "value": {
+          "calories": 8.84,
+          "fat": 1.0,
+          "sat_fat": 0.169,
+          "protein": 0,
+          "fiber": 0,
+          "sodium": 0,
+          "carbs": 0,
+          "sugar": 0,
+          "cholesterol": 0,
+          "trans_fat": 0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Peanut oil — USDA SR Legacy 'Oil, peanut, salad or cooking' (fdcId 171410): 884 kcal, 100 g fat, 16.9 g sat fat per 100 g; per gram."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Already measured in edible oil form; no further processing loss applied here."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 560,
+        "confidence": 3,
+        "source": {
+          "id": 357,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:244",
+          "title": "FAOSTAT — Groundnuts, excluding shelled (item 242) and Groundnut oil (item 244), 2020–2024",
+          "note": "Peanut oil — yield_kg_ha is OIL per hectare: FAOSTAT world groundnut (in-shell) yield 2020–2024 mean 1,776.6 kg/ha (source 357) × FAO median shelling 70% × oil of groundnuts 45% (source 311) = 560 kg oil/ha. All crop land charged to the oil."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 7528,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Peanut Oil — water_per_kg: Mekonnen & Hoekstra refined-oil product water footprint 6,681 green + 405 blue + 442 grey = 7,528 L/kg (economic allocation between oil and cake)."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 6681,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Peanut Oil — Mekonnen & Hoekstra refined oil, green component."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 405,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Peanut Oil — Mekonnen & Hoekstra refined oil, blue component."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 442,
+        "confidence": 4,
+        "source": {
+          "id": 316,
+          "url": "https://hess.copernicus.org/articles/15/1577/2011/",
+          "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
+          "note": "Peanut Oil — Mekonnen & Hoekstra refined oil, grey component."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 2,
+        "confidence": 5,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Peanut Oil — soil_erosion: reused from this repo's peanuts entry (id 31); per-hectare field metric, unchanged by crushing for oil. Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 2,
+        "confidence": 5,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Peanut Oil — tillage_events_per_year: reused from this repo's peanuts entry (id 31); per-hectare field metric, unchanged by crushing for oil. Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 1500,
+        "confidence": 5,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Peanut Oil — co2_capture_kg_ha_yr: reused from this repo's peanuts entry (id 31); per-hectare field metric, unchanged by crushing for oil. Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 0,
+        "confidence": 5,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Peanut Oil — fertilizer_kg_ha: reused from this repo's peanuts entry (id 31); per-hectare field metric, unchanged by crushing for oil. Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 4.6,
+        "confidence": 3,
+        "source": {
+          "id": 359,
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12399079/",
+          "title": "Ma et al. (2025) — Peanut oil is more environmentally sustainable than rapeseed oil from a carbon and nitrogen footprint perspective in China (PeerJ)",
+          "note": "Peanut oil — emissions_per_kg: Ma et al. 2025 China cradle-to-factory-gate 3.31 kg CO2e/kg oil (13 major regions, 2004–2023, mass allocation, no LUC; source 359) + Poore & Nemecek vegetable-oil post-factory stages (1.29; source 72) = 4.60 kg CO2e/kg. China is the largest peanut-oil producer."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 1.5,
+        "confidence": 5,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Peanut Oil — pesticide_kg_ha: reused from peanuts (id 31). Peanuts — water_per_kg: 3,740 L/kg; averaged with secondary sources → final 3,537 L/kg. Report 47 gives 2,782 L/kg for in-shell peanuts; 3,740 reflects shelled/edible kernel basis after accounting for ~74% kernel recovery. Difference is within expected range for basis discrepancy."
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 3,
+        "name": "Chlorpyrifos",
+        "kg_ha": [
+          {
+            "value": 0.15,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Peanut Oil — Chlorpyrifos: reused unchanged from peanuts (id 31); per-hectare rate. Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 10,
+        "name": "Mancozeb",
+        "kg_ha": [
+          {
+            "value": 0.4,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Peanut Oil — Mancozeb: reused unchanged from peanuts (id 31); per-hectare rate. Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 13,
+        "name": "Pendimethalin",
+        "kg_ha": [
+          {
+            "value": 0.35,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Peanut Oil — Pendimethalin: reused unchanged from peanuts (id 31); per-hectare rate. Peanuts — chlorpyrifos: 0.15 kg/ha; mancozeb: 0.4 kg/ha; pendimethalin: 0.35 kg/ha."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 6478,
+        "confidence": 4,
+        "source": {
+          "id": 357,
+          "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:244",
+          "title": "FAOSTAT — Groundnuts, excluding shelled (item 242) and Groundnut oil (item 244), 2020–2024",
+          "note": "Peanut oil — availability_gg: FAOSTAT world groundnut oil production 2020–2023 mean 6.48 Mt = 6,478 Gg."
         }
       }
     ]

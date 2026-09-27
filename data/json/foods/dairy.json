@@ -460,13 +460,13 @@
         ],
         "availability_gg": [
             {
-                "value": 900000,
-                "confidence": 1,
+                "value": 773343,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Raw milk of cattle' = 773,343 Gg."
                 }
             }
         ]
@@ -890,13 +890,13 @@
         ],
         "availability_gg": [
             {
-                "value": 100000,
+                "value": 68000,
                 "confidence": 1,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 364,
+                    "url": "https://www.marketgrowthreports.com/market-reports/yogurt-market-115878",
+                    "title": "Market Growth Reports — Yogurt Market Size, Growth, Global Report",
+                    "note": "availability_gg: market report — >68 million tons of yogurt consumed worldwide in 2024 (no primary source cited). FAOSTAT's reported yoghurt (~5 Mt) omits the US, China and most of Asia, so it is only a lower bound."
                 }
             }
         ]

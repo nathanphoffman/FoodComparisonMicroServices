@@ -355,13 +355,13 @@
         ],
         "availability_gg": [
             {
-                "value": 370000,
-                "confidence": 1,
+                "value": 370953,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Soya beans' = 370,953 Gg. Whole-crop supply (most is crushed for oil and meal). Converted to cooked weight by the pipeline."
                 }
             }
         ]
@@ -604,13 +604,13 @@
         ],
         "availability_gg": [
             {
-                "value": 6500,
-                "confidence": 1,
+                "value": 6929,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Lentils, dry' = 6,929 Gg. Dry weight; converted to cooked weight by the pipeline."
                 }
             }
         ]
@@ -928,13 +928,13 @@
         ],
         "availability_gg": [
             {
-                "value": 15000,
-                "confidence": 1,
+                "value": 16472,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Chick peas, dry' = 16,472 Gg. Dry weight; converted to cooked weight by the pipeline."
                 }
             }
         ]
@@ -1251,13 +1251,13 @@
         ],
         "availability_gg": [
             {
-                "value": 7000,
-                "confidence": 1,
+                "value": 29760,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Beans, dry' = 29,760 Gg. All dry beans (Phaseolus), matching this entry's yield basis; black beans are a subset. Converted to cooked weight by the pipeline."
                 }
             }
         ]

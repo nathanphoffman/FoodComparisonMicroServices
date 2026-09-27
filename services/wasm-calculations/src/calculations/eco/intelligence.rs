@@ -71,6 +71,8 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
         "tilapia-farmed" => 0.6,
         "shrimp-farmed" => 0.4,
         "mussels-farmed" => 1.5,
+        "oysters-farmed" => 2.5, // Pacific oysters reach market size in ~18–36 months
+        "clams-farmed" => 1.75,  // Manila clams take ~1.5–2 years from seed to harvest
         _ => 0.0,
     }
 }

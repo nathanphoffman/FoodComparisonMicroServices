@@ -297,13 +297,13 @@
         ],
         "availability_gg": [
             {
-                "value": 28000,
-                "confidence": 1,
+                "value": 28147,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Lettuce and chicory' = 28,147 Gg. Includes chicory."
                 }
             }
         ]
@@ -552,13 +552,13 @@
         ],
         "availability_gg": [
             {
-                "value": 26000,
-                "confidence": 1,
+                "value": 32340,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Spinach' = 32,340 Gg."
                 }
             }
         ]
@@ -807,13 +807,13 @@
         ],
         "availability_gg": [
             {
-                "value": 1500,
+                "value": 110,
                 "confidence": 1,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 363,
+                    "url": "https://www.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_US/st99_1_036_036.pdf",
+                    "title": "USDA NASS — 2022 Census of Agriculture, Table 36: Vegetables, Potatoes, and Melons Harvested for Sale",
+                    "note": "availability_gg: US only — 2022 Census of Agriculture 18,121 acres harvested (7,333 ha) × this entry's 15,000 kg/ha = 110 Gg. No global kale statistic exists (FAO pools kale with other brassicas); true world supply is much larger (Europe, East Africa's sukuma wiki, Brazil's couve), so this is a lower bound."
                 }
             }
         ]

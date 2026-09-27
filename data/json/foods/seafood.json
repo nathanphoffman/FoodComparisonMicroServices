@@ -245,13 +245,13 @@
         ],
         "availability_gg": [
             {
-                "value": 4000,
-                "confidence": 1,
+                "value": 1738,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean Atlantic salmon aquaculture 2.67 Mt live weight × yield_fraction 0.65 = 1,738 Gg."
                 }
             }
         ]
@@ -401,13 +401,13 @@
         "feed": [],
         "availability_gg": [
             {
-                "value": 7000,
-                "confidence": 1,
+                "value": 3145,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean principal market tunas capture 5.24 Mt live weight × yield_fraction 0.6 = 3,145 Gg."
                 }
             }
         ]
@@ -578,13 +578,13 @@
         "feed": [],
         "availability_gg": [
             {
-                "value": 4000,
-                "confidence": 1,
+                "value": 1872,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean shrimps and prawns capture 3.12 Mt live weight × yield_fraction 0.6 = 1,872 Gg."
                 }
             }
         ]
@@ -846,13 +846,13 @@
         ],
         "availability_gg": [
             {
-                "value": 5000,
-                "confidence": 1,
+                "value": 4472,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean shrimps and prawns aquaculture 7.45 Mt live weight × yield_fraction 0.6 = 4,472 Gg."
                 }
             }
         ]
@@ -1013,13 +1013,13 @@
         "feed": [],
         "availability_gg": [
             {
-                "value": 3500,
-                "confidence": 1,
+                "value": 4210,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean sardine/pilchard/sardinella capture (a large share is reduced to fishmeal) 5.61 Mt live weight × yield_fraction 0.75 = 4,210 Gg."
                 }
             }
         ]
@@ -1250,13 +1250,13 @@
         ],
         "availability_gg": [
             {
-                "value": 6500,
-                "confidence": 1,
+                "value": 2121,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean tilapias and other cichlids aquaculture 6.43 Mt live weight × yield_fraction 0.33 = 2,121 Gg."
                 }
             }
         ]
@@ -1387,13 +1387,287 @@
         "feed": [],
         "availability_gg": [
             {
-                "value": 2000,
-                "confidence": 1,
+                "value": 533,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean mussels aquaculture 1.97 Mt live weight × yield_fraction 0.27 = 533 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "slug": "oysters-farmed",
+        "name": "Oysters (Farmed)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "shellfish",
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.81,
+                    "fat": 0.023,
+                    "sat_fat": 0.0051,
+                    "protein": 0.0945,
+                    "fiber": 0,
+                    "sodium": 1.06,
+                    "carbs": 0.0495,
+                    "sugar": 0,
+                    "cholesterol": 0.5,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Oysters (Farmed) — nutrition: USDA SR Legacy 'Mollusks, oyster, Pacific, raw' (fdcId 174219) per 100 g: 81 kcal, 9.45 g protein, 2.3 g fat, 0.51 g sat fat, 4.95 g carbs, 106 mg sodium, 50 mg cholesterol; converted to per gram. Pacific/cupped oysters are the bulk of world production (eastern farmed oysters, fdcId 175172, are leaner: 59 kcal, 5.22 g protein)."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 17000,
+                "confidence": 2,
+                "source": {
+                    "id": 92,
+                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545011/",
+                    "title": "Gillette & Bhatt (2013) — Invertebrate Nervous Systems and Bivalve Neurobiology (PMC / Scholarpedia)",
+                    "note": "Oysters (Farmed) — neuron_count: bivalves have no brain, only three pairs of ganglia (cerebral, pedal, visceral). Same ~17,000-neuron estimate as blue mussels (15,000–20,000 from bivalve neuroanatomy literature); no species-specific count found."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.07,
+                "confidence": 2,
+                "source": {
+                    "id": 351,
+                    "url": "https://www.fao.org/4/x5954e/x5954e01.htm",
+                    "title": "FAO — Handling and Processing Oysters (Torry Advisory Note)",
+                    "note": "Oysters (Farmed) — weight_kg: FAO grades run from ~100 g (grade 1) down to 35–40 g (grade 5) whole in shell; 0.07 kg used as a mid-grade market oyster."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.1,
+                "confidence": 2,
+                "source": {
+                    "id": 351,
+                    "url": "https://www.fao.org/4/x5954e/x5954e01.htm",
+                    "title": "FAO — Handling and Processing Oysters (Torry Advisory Note)",
+                    "note": "Oysters (Farmed) — yield_fraction: FAO — meat yield from Pacific oysters is 5–14% of total live weight (depends on shell thickness); 0.10 used as central value."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Oysters (Farmed) — ch4_kg_per_kg_output: set to 0; bivalves have no enteric fermentation, and the small sediment/metabolic emissions are included in the CO2e total in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Oysters (Farmed) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full farmed-bivalve CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.92,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Oysters (Farmed) — co2_kg_per_kg_output (stored as total CO2e): bivalve LCA median 392 kg CO2e per tonne live (shell-on) weight, excl. post-harvest transport ÷ meat yield 0.1 = 3.92 kg CO2e per kg meat. No feed, fertiliser or land."
+                }
+            },
+            {
+                "value": 1.05,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Oysters (Farmed) — co2_kg_per_kg_output (stored as total CO2e): MacLeod et al. 2020 global bivalve estimate 11.1 kg CO2e per kg protein × 0.0945 kg protein per kg meat (USDA) = 1.05 kg CO2e per kg meat."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 673,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean oysters aquaculture 6.73 Mt live weight × yield_fraction 0.1 = 673 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "slug": "clams-farmed",
+        "name": "Clams (Farmed)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "shellfish",
+            "common"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.86,
+                    "fat": 0.0096,
+                    "sat_fat": 0.0019,
+                    "protein": 0.147,
+                    "fiber": 0,
+                    "sodium": 6.01,
+                    "carbs": 0.0357,
+                    "sugar": 0,
+                    "cholesterol": 0.3,
+                    "trans_fat": 0.00015
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Clams (Farmed) — nutrition: USDA SR Legacy 'Mollusks, clam, mixed species, raw' (fdcId 174214) per 100 g: 86 kcal (FDC's 360 figure is kJ), 14.7 g protein, 0.96 g fat, 0.187 g sat fat, 3.57 g carbs, 601 mg sodium, 30 mg cholesterol; converted to per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 17000,
+                "confidence": 2,
+                "source": {
+                    "id": 92,
+                    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3545011/",
+                    "title": "Gillette & Bhatt (2013) — Invertebrate Nervous Systems and Bivalve Neurobiology (PMC / Scholarpedia)",
+                    "note": "Clams (Farmed) — neuron_count: bivalves have no brain, only three pairs of ganglia (cerebral, pedal, visceral). Same ~17,000-neuron estimate as blue mussels (15,000–20,000 from bivalve neuroanatomy literature); no species-specific count found."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.016,
+                "confidence": 2,
+                "source": {
+                    "id": 352,
+                    "url": "https://www.clovegarden.com/ingred/sf_bvmanilz.html",
+                    "title": "Clove Garden — Manila Clams (ingredient notes: count, size and meat yield)",
+                    "note": "Clams (Farmed) — weight_kg: Manila clams (the dominant farmed clam) ran ~28 per pound (~16 g each, shell on)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.17,
+                "confidence": 2,
+                "source": {
+                    "id": 352,
+                    "url": "https://www.clovegarden.com/ingred/sf_bvmanilz.html",
+                    "title": "Clove Garden — Manila Clams (ingredient notes: count, size and meat yield)",
+                    "note": "Clams (Farmed) — yield_fraction: ~19% meat by whole weight for Manila clams (retail measurement); studies report ~10–17% depending on conditions; 0.17 used."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Clams (Farmed) — ch4_kg_per_kg_output: set to 0; bivalves have no enteric fermentation, and the small sediment/metabolic emissions are included in the CO2e total in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Clams (Farmed) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full farmed-bivalve CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.31,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Clams (Farmed) — co2_kg_per_kg_output (stored as total CO2e): bivalve LCA median 392 kg CO2e per tonne live (shell-on) weight, excl. post-harvest transport ÷ meat yield 0.17 = 2.31 kg CO2e per kg meat. No feed, fertiliser or land."
+                }
+            },
+            {
+                "value": 1.63,
+                "confidence": 3,
+                "source": {
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Clams (Farmed) — co2_kg_per_kg_output (stored as total CO2e): MacLeod et al. 2020 global bivalve estimate 11.1 kg CO2e per kg protein × 0.147 kg protein per kg meat (USDA) = 1.63 kg CO2e per kg meat."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 979,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean clams, cockles and arkshells aquaculture 5.76 Mt live weight × yield_fraction 0.17 = 979 Gg."
                 }
             }
         ]

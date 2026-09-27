@@ -75,11 +75,21 @@ class RawFood:
             trans_fat=nutrition_average.get("trans_fat") if nutrition_average else None,
             **(self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS),
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
-            availability_gg=SourcedArray(self._data.get("availability_gg")).weighted_average(),
+            availability_gg=self._availability_gg(),
             sentient_harm_explanation=self._data.get("sentient_harm_explanation"),
             land_types=self._data.get("land_types"),
             category=self._data.get("category"),
         )
+
+    def _availability_gg(self) -> float | None:
+        """World supply in Gg, on the same basis as the food's nutrition. Production is
+        sourced as dry harvest; foods eaten cooked (rice, beans) are converted to cooked
+        weight with cooked_weight_ratio, the same way their yield is."""
+        availability = SourcedArray(self._data.get("availability_gg")).weighted_average()
+        cooked_ratio = self._plant.cooked_weight_ratio.weighted_average() if self._plant else None
+        if availability and cooked_ratio:
+            return availability * cooked_ratio
+        return availability
 
     def _display_name(self) -> str:
         """Food name, suffixed with "(Cooked)" when metrics are converted to a cooked-weight basis."""

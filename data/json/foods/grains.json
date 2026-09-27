@@ -338,13 +338,13 @@
         ],
         "availability_gg": [
             {
-                "value": 780000,
-                "confidence": 1,
+                "value": 791992,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Wheat' = 791,992 Gg."
                 }
             }
         ]
@@ -725,13 +725,13 @@
         ],
         "availability_gg": [
             {
-                "value": 1200000,
-                "confidence": 1,
+                "value": 1194841,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Maize (corn)' = 1,194,841 Gg. Includes maize grown for feed and ethanol."
                 }
             }
         ]
@@ -986,13 +986,13 @@
         ],
         "availability_gg": [
             {
-                "value": 62000,
-                "confidence": 1,
+                "value": 59878,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Sorghum' = 59,878 Gg."
                 }
             }
         ]
@@ -1319,13 +1319,13 @@
         ],
         "availability_gg": [
             {
-                "value": 520000,
-                "confidence": 1,
+                "value": 515616,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg (milled basis, to match this entry's yield): FAOSTAT world production 2020–2024 mean 'Rice' (paddy) 793,255 Gg × 0.65 FAO milling extraction (source 311) = 515,616 Gg milled. Converted to cooked weight by the pipeline."
                 }
             }
         ]
@@ -1556,13 +1556,13 @@
         ],
         "availability_gg": [
             {
-                "value": 23000,
-                "confidence": 1,
+                "value": 12637,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg (rolled-oat basis, to match this entry): FAOSTAT world production 2020–2024 mean 'Oats' 22,976 Gg grain × 0.55 FAO rolled-oat extraction (source 311) = 12,637 Gg."
                 }
             }
         ]
@@ -1796,13 +1796,13 @@
         ],
         "availability_gg": [
             {
-                "value": 190,
-                "confidence": 1,
+                "value": 155,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Quinoa' = 155 Gg. Dry weight; converted to cooked weight by the pipeline."
                 }
             }
         ]
@@ -2106,13 +2106,13 @@
         ],
         "availability_gg": [
             {
-                "value": 155000,
-                "confidence": 1,
+                "value": 148648,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Barley' = 148,648 Gg."
                 }
             }
         ]

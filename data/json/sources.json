@@ -350,7 +350,11 @@
             "Macadamia nuts — yield_kg_ha: Industry yield data.",
             "Brazil nuts — yield_kg_ha: Industry yield data.",
             "Peanuts — yield_kg_ha: Industry yield data.",
-            "Pine nuts — yield_kg_ha: Industry yield data."
+            "Pine nuts — yield_kg_ha: Industry yield data.",
+            "World pecan production, kernel basis: 155,962 / 168,267 / 141,245 / 154,120 / 161,746 t for 2019/20–2023/24 (mean 156,268 t); 2023/24 was 323,491 t in-shell = 161,746 t kernel.",
+            "World macadamia production 2024: 328,023 t in-shell (3.5% moisture) = 89,420 t kernel.",
+            "World pine nut production: China's five-year average is 27% of world = 9,358 t kernel → world five-year average ≈ 34,700 t kernel (2023/24: 8,375 t = 39% → ~21,500 t). Most pine nuts are wild-harvested.",
+            "Brazil nuts: 87,900 t in-shell = 29,300 t kernel (ratio 0.333)."
         ]
     },
     {
@@ -1292,7 +1296,8 @@
         "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
         "notes": [
             "Strawberries — yield_kg_ha and availability_gg (world): World (area 5000) item 544 yield 2020–2024 mean 23,946 kg/ha; production 2020–2024 mean 10,129 Gg (2023–2024 are FAO estimates, flag E).",
-            "Blueberries — yield_kg_ha and availability_gg (world): World item 552 yield 2020–2024 mean 6,640 kg/ha; production mean 1,231 Gg. Mixes cultivated highbush with managed wild lowbush (Canada) and omits China (not reported)."
+            "Blueberries — yield_kg_ha and availability_gg (world): World item 552 yield 2020–2024 mean 6,640 kg/ha; production mean 1,231 Gg. Mixes cultivated highbush with managed wild lowbush (Canada) and omits China (not reported).",
+            "World production 2020–2024 means used for availability_gg (tonnes → Gg): almonds in shell 3,866; apples 95,053; avocados 9,717; bananas 133,938; barley 148,648; beans dry 29,760; Brazil nuts in shell 79; cashew nuts in shell 4,047; cauliflowers and broccoli 26,457; chick peas 16,472; coconuts in shell 64,013; cucumbers and gherkins 87,634; game meat 2,030; garlic (item 406) 29,514; groundnuts in shell 55,387; hazelnuts in shell 1,135; hen eggs 90,115; lentils 6,929; lettuce and chicory 28,147; linseed 3,278; maize 1,194,841; mangoes/guavas/mangosteens 59,192; cattle meat 66,624; chicken meat 122,746; pig meat 120,570; sheep meat 11,123; turkey meat 5,310; oats 22,976; olive oil 3,002; oranges 68,304; pistachios in shell 1,207; potatoes 380,130; quinoa 155; raw cow milk 773,343; rice (paddy) 793,255; sorghum 59,878; soya beans 370,953; spinach 32,340; sunflower seed 54,255; sweet potatoes 90,914; tomatoes 185,023; walnuts in shell 4,034; wheat 791,992. Meat items are carcass weight."
         ]
     },
     {
@@ -1543,7 +1548,9 @@
         "notes": [
             "'Milled Paddy Rice' extraction rate (% of paddy weight): median 65 across 67 countries (range 60–73); United States 72. Used to convert rice yield from paddy to milled basis (world x0.65, US x0.72).",
             "'Oats, Rolled' extraction rate: median 55 across 35 countries (range 45–73); United States 58. Used to convert oat yield and water from oat grain to rolled-oat basis (x0.55 / ÷0.55).",
-            "Barley: United States pot barley 70, pearled barley 62 (median pot barley 70 across 41 countries). No hulled-barley factor, so barley was not converted."
+            "Barley: United States pot barley 70, pearled barley 62 (median pot barley 70 across 41 countries). No hulled-barley factor, so barley was not converted.",
+            "Oilseed extraction rates (median across countries, computed from the country tables): oil of sunflower seed 39% of seed (n=71, range 25–47); groundnuts shelled 70% of in-shell (n=62); oil of groundnuts 45% of shelled (n=85, range 30–52); copra 19.5% of coconuts (n=60); oil of copra 63% of copra (n=27, range 55–65). Used for sunflower, peanut and coconut oil yield_kg_ha.",
+            "Nut kernel (shelled) extraction rates, median across countries: almonds shelled 35% of in-shell (n=13); walnuts shelled 40% (n=14); cashew nuts shelled 25% (n=7); hazelnuts shelled 50% (n=12). Used to put nut availability_gg on the kernel basis of the nut entries."
         ]
     },
     {
@@ -1583,7 +1590,8 @@
         "url": "https://hess.copernicus.org/articles/15/1577/2011/",
         "title": "Mekonnen & Hoekstra (2011) — The Green, Blue and Grey Water Footprint of Crops and Derived Crop Products (HESS 15, 1577-1600)",
         "notes": [
-            "Global average product-level water footprints used for oils.json water_per_kg: soybean oil 4,200 m3/t, rapeseed oil 4,300 m3/t, palm oil 5,000 m3/t. These product-level figures reflect M&H's economic (value-fraction) allocation between oil and co-product meal/cake, not a simple mass split from the parent crop's water footprint."
+            "Global average product-level water footprints used for oils.json water_per_kg: soybean oil 4,200 m3/t, rapeseed oil 4,300 m3/t, palm oil 5,000 m3/t. These product-level figures reflect M&H's economic (value-fraction) allocation between oil and co-product meal/cake, not a simple mass split from the parent crop's water footprint.",
+            "Refined oil product-level water footprints (green / blue / grey = total, m3/t): sunflower seed oil 6,088 / 299 / 405 = 6,792; groundnut oil 6,681 / 405 / 442 = 7,529; coconut (copra) oil 4,461 / 3 / 27 = 4,490."
         ]
     },
     {
@@ -1725,6 +1733,127 @@
         "title": "Oat Milk By-Product: A Review of Nutrition, Processing and Applications of Oat Pulp (Food Reviews International, 2025)",
         "notes": [
             "Estimates current global oat milk sales at roughly 1–2 billion litres per year (from market value ÷ an average ~$5 per 64 oz retail price). Read via search summary only (publisher page returns 403)."
+        ]
+    },
+    {
+        "id": 351,
+        "url": "https://www.fao.org/4/x5954e/x5954e01.htm",
+        "title": "FAO — Handling and Processing Oysters (Torry Advisory Note)",
+        "notes": [
+            "Meat yield from Pacific oysters is 5–14% of total live weight (varies with shell thickness). Grade 1 oysters are typically about 100 g whole, grade 5 about 35–40 g."
+        ]
+    },
+    {
+        "id": 352,
+        "url": "https://www.clovegarden.com/ingred/sf_bvmanilz.html",
+        "title": "Clove Garden — Manila Clams (ingredient notes: count, size and meat yield)",
+        "notes": [
+            "Manila clams ran about 28 clams to the pound (~16 g each, ~1.9 × 1.4 inch shells); a pound of clams yields about 3 ounces of meat (19%). Retail measurement, not a survey; published studies report Manila clam meat yields of ~10–17% depending on farming conditions."
+        ]
+    },
+    {
+        "id": 353,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+        "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+        "notes": [
+            "Farmed bivalves: excluding post-harvest transport, LCA estimates range from –5 to 1,874 kg CO2e per tonne wet (live, shell-on) weight, median 392 kg CO2e/t. Cites a global estimate of 11.1 t CO2e per t protein for bivalve production (MacLeod et al. 2020). Shells average 68.6% of total bivalve weight."
+        ]
+    },
+    {
+        "id": 354,
+        "url": "https://www.fao.org/3/cd0683en/online/sofia/2024/aquaculture-production.html",
+        "title": "FAO — The State of World Fisheries and Aquaculture 2024 (SOFIA): Aquaculture production",
+        "notes": [
+            "Cupped oysters (Crassostrea spp.) were the second-most produced aquaculture species in 2022 at 6.2 million tonnes (live weight), behind whiteleg shrimp (6.8 Mt)."
+        ]
+    },
+    {
+        "id": 355,
+        "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2023.1084386/full",
+        "title": "Effects of Manila clam Ruditapes philippinarum culture on the macrobenthic community (Frontiers in Marine Science, 2023)",
+        "notes": [
+            "Manila clam total production ~4 million tonnes (2019, citing FAO 2021); China's cultured production ~3 Mt, >90% of world cultured output. Manila clam is the second most important farmed bivalve worldwide."
+        ]
+    },
+    {
+        "id": 356,
+        "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:268",
+        "title": "FAOSTAT — Sunflower seed (item 267) and Sunflower-seed oil, crude (item 268), 2020–2024",
+        "notes": [
+            "Read from the FAOSTAT QCL bulk download (source 263). World sunflower seed yield 2020–2024 = 1,820 / 1,969 / 1,843 / 1,963 / 1,818 kg/ha (mean 1,882.5). World sunflower-seed oil production 2020–2023 = 20.45 / 18.38 / 20.17 / 22.66 Mt (mean 20.41 Mt)."
+        ]
+    },
+    {
+        "id": 357,
+        "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:244",
+        "title": "FAOSTAT — Groundnuts, excluding shelled (item 242) and Groundnut oil (item 244), 2020–2024",
+        "notes": [
+            "Read from the FAOSTAT QCL bulk download (source 263). World groundnut (in-shell) yield 2020–2024 = 1,747 / 1,682 / 1,811 / 1,796 / 1,847 kg/ha (mean 1,776.6). World groundnut oil production 2020–2023 = 6.46 / 6.43 / 6.60 / 6.43 Mt (mean 6.48 Mt)."
+        ]
+    },
+    {
+        "id": 358,
+        "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:252",
+        "title": "FAOSTAT — Coconuts, in shell (item 249) and Coconut oil (item 252), 2020–2024",
+        "notes": [
+            "Read from the FAOSTAT QCL bulk download (source 263). World coconut (in shell) yield 2020–2024 = 5,562 / 5,803 / 5,803 / 5,789 / 5,848 kg/ha (mean 5,761). World coconut oil production 2020–2023 = 2.91 / 2.91 / 3.31 / 3.12 Mt (mean 3.06 Mt)."
+        ]
+    },
+    {
+        "id": 359,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12399079/",
+        "title": "Ma et al. (2025) — Peanut oil is more environmentally sustainable than rapeseed oil from a carbon and nitrogen footprint perspective in China (PeerJ)",
+        "notes": [
+            "Cradle-to-factory-gate LCA across 13 major Chinese peanut regions, 2004–2023: peanut oil 3,312.2 kg CO2e per tonne oil (rapeseed oil 3,722.4). Mass allocation; 2.86 t peanuts per t oil (~35% extraction). Excludes land-use change, transport and packaging."
+        ]
+    },
+    {
+        "id": 360,
+        "url": "https://apps.carboncloud.com/climatehub/product-reports/id/7642119883",
+        "title": "CarbonCloud ClimateHub — Crude coconut oil, Philippines (verified product report)",
+        "notes": [
+            "Crude coconut oil, Philippines: 3.29 kg CO2e/kg (read 2026-09-26; an earlier cached listing showed 2.89). Agriculture 98%, processing 2%; transport, packaging and retail ~0%. Page does not say whether land-use change is included."
+        ]
+    },
+    {
+        "id": 361,
+        "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+        "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+        "notes": [
+            "World production, tonnes live weight, 2019–2023 mean. Aquaculture = freshwater + brackishwater + marine; capture = capture production.",
+            "Atlantic salmon (SAL) aquaculture 2.67 Mt; principal market tunas capture (skipjack, yellowfin, bigeye, albacore, Atlantic/Pacific/southern bluefin) 5.24 Mt; ISSCAAP Shrimps, prawns — capture 3.12 Mt, aquaculture 7.45 Mt; all species named sardine/pilchard/sardinella, capture 5.61 Mt; ISSCAAP Tilapias and other cichlids aquaculture 6.43 Mt; ISSCAAP Mussels aquaculture 1.97 Mt; Oysters aquaculture 6.73 Mt; Clams, cockles, arkshells aquaculture 5.76 Mt."
+        ]
+    },
+    {
+        "id": 362,
+        "url": "https://recipes.howstuffworks.com/why-pistachios-are-sold-in-their-shells.htm",
+        "title": "HowStuffWorks — Why Pistachios Are Sold in Their Shells",
+        "notes": [
+            "The kernel (nutmeat) makes up about 48–50% of in-shell pistachio weight."
+        ]
+    },
+    {
+        "id": 363,
+        "url": "https://www.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_US/st99_1_036_036.pdf",
+        "title": "USDA NASS — 2022 Census of Agriculture, Table 36: Vegetables, Potatoes, and Melons Harvested for Sale",
+        "notes": [
+            "Kale, 2022: 7,743 farms, 18,121 acres harvested (2017: 8,066 farms, 15,325 acres)."
+        ]
+    },
+    {
+        "id": 364,
+        "url": "https://www.marketgrowthreports.com/market-reports/yogurt-market-115878",
+        "title": "Market Growth Reports — Yogurt Market Size, Growth, Global Report",
+        "notes": [
+            "States more than 68 million tons of yogurt were consumed worldwide in 2024 (Europe >26 Mt, China >8.2 Mt, India 3.6 Mt). No primary source cited. FAOSTAT's 'Yoghurt' item (891) totals only ~5 Mt because few countries report it (no US or China)."
+        ]
+    },
+    {
+        "id": 365,
+        "url": "https://www.grandviewresearch.com/industry-analysis/almond-milk-market",
+        "title": "Grand View Research — Almond Milk Market Size and Share, Industry Report",
+        "notes": [
+            "Global almond milk market valued at USD 10.84 billion in 2023 (other firms: USD 10.7–13.2 billion). Value only; no volume given."
         ]
     }
 ]

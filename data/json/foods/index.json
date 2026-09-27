@@ -61,7 +61,9 @@
         "salmon",
         "tuna",
         "shrimp",
-        "sardines"
+        "sardines",
+        "oysters-farmed",
+        "clams-farmed"
     ],
     "eggs": [
         "egg"
@@ -85,7 +87,10 @@
         "olive-oil",
         "canola-oil",
         "soybean-oil",
-        "palm-oil"
+        "palm-oil",
+        "sunflower-oil",
+        "coconut-oil",
+        "peanut-oil"
     ],
     "seeds": [
         "flaxseed"

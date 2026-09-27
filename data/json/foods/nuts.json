@@ -290,13 +290,13 @@
         ],
         "availability_gg": [
             {
-                "value": 1400,
-                "confidence": 1,
+                "value": 1353,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 311,
+                    "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+                    "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Almonds, in shell' 3,866 Gg in-shell × 0.35 FAO kernel extraction (source 311) = 1,353 Gg kernels."
                 }
             }
         ]
@@ -553,13 +553,13 @@
         ],
         "availability_gg": [
             {
-                "value": 3700,
-                "confidence": 1,
+                "value": 1614,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 311,
+                    "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+                    "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Walnuts, in shell' 4,034 Gg in-shell × 0.40 FAO kernel extraction (source 311) = 1,614 Gg kernels."
                 }
             }
         ]
@@ -790,13 +790,13 @@
         ],
         "availability_gg": [
             {
-                "value": 3900,
-                "confidence": 1,
+                "value": 1012,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 311,
+                    "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+                    "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Cashew nuts, in shell' 4,047 Gg in-shell × 0.25 FAO kernel extraction (source 311) = 1,012 Gg kernels."
                 }
             }
         ]
@@ -1052,13 +1052,13 @@
         ],
         "availability_gg": [
             {
-                "value": 900,
-                "confidence": 1,
+                "value": 592,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 362,
+                    "url": "https://recipes.howstuffworks.com/why-pistachios-are-sold-in-their-shells.htm",
+                    "title": "HowStuffWorks — Why Pistachios Are Sold in Their Shells",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Pistachios, in shell' 1,207 Gg in-shell × 0.49 kernel share (48–50%, source 362) = 592 Gg kernels."
                 }
             }
         ]
@@ -1305,13 +1305,13 @@
         ],
         "availability_gg": [
             {
-                "value": 160,
-                "confidence": 1,
+                "value": 156,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "availability_gg (kernel basis): INC world pecan production 2019/20–2023/24 mean 156,268 t kernel = 156 Gg."
                 }
             }
         ]
@@ -1551,13 +1551,13 @@
         ],
         "availability_gg": [
             {
-                "value": 1100,
-                "confidence": 1,
+                "value": 568,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 311,
+                    "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+                    "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Hazelnuts, in shell' 1,135 Gg in-shell × 0.50 FAO kernel extraction (source 311) = 568 Gg kernels."
                 }
             }
         ]
@@ -1804,13 +1804,13 @@
         ],
         "availability_gg": [
             {
-                "value": 200,
-                "confidence": 1,
+                "value": 89,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "availability_gg (kernel basis): INC world macadamia production 2024 = 89,420 t kernel (328,023 t in-shell). Single year."
                 }
             }
         ]
@@ -1948,13 +1948,13 @@
         "pesticides": [],
         "availability_gg": [
             {
-                "value": 80,
-                "confidence": 1,
+                "value": 26,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Brazil nuts, in shell' 79 Gg in-shell × 0.333 kernel share (INC: 87,900 t in-shell = 29,300 t kernel, source 35) = 26 Gg kernels."
                 }
             }
         ]
@@ -2257,13 +2257,13 @@
         ],
         "availability_gg": [
             {
-                "value": 48000,
-                "confidence": 1,
+                "value": 38771,
+                "confidence": 3,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 311,
+                    "url": "https://www.fao.org/fileadmin/templates/ess/documents/methodology/tcf.pdf",
+                    "title": "FAO — Technical Conversion Factors for Agricultural Commodities (extraction rates by country, 1992–1996 averages)",
+                    "note": "availability_gg (kernel basis, to match this entry's nutrition): FAOSTAT world production 2020–2024 mean 'Groundnuts, excluding shelled' 55,387 Gg in-shell × 0.70 FAO shelling rate (source 311) = 38,771 Gg kernels."
                 }
             }
         ]
@@ -2477,13 +2477,13 @@
         ],
         "availability_gg": [
             {
-                "value": 60,
-                "confidence": 1,
+                "value": 35,
+                "confidence": 2,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 35,
+                    "url": "https://inc.nutfruit.org/wp-content/uploads/2025/01/Statistical-Yearbook-2024.pdf",
+                    "title": "INC — Nuts & Dried Fruits Statistical Yearbook 2024",
+                    "note": "availability_gg (kernel basis): INC — China's five-year average 9,358 t kernel is 27% of world → ~34,700 t kernel. Mostly wild-harvested; production swings with 3–5-year bumper crops."
                 }
             }
         ]
@@ -2729,13 +2729,13 @@
         ],
         "availability_gg": [
             {
-                "value": 20000,
-                "confidence": 1,
+                "value": 54255,
+                "confidence": 4,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Best-guess estimate from model knowledge. Confidence 1 — must be replaced with verified FAO/USDA production statistics before use."
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Sunflower seed' = 54,255 Gg. Whole-crop supply; most is crushed for oil."
                 }
             }
         ]
@@ -3023,13 +3023,13 @@
         ],
         "availability_gg": [
             {
-                "value": 2222,
+                "value": 4211,
                 "confidence": 1,
                 "source": {
-                    "id": 99,
-                    "url": "",
-                    "title": "Model estimate — needs proper sourcing",
-                    "note": "Almond milk (id 69) — availability_gg: rough estimate from web-search-aggregated market-research figures (Persistence Market Research / TechSci-style industry reports), not a verified primary statistic. Global almond-milk volume estimated at ~2.2 billion litres/yr (2023) × 1.01 kg/L density = ~2,222,000 t = 2,222 gg. Cross-check: US plant-based-milk retail sales were ~337.7 million gallons (~1,278 million L) in 2023 with almond milk at ~55-59% share → ~730-750 million L US (~750 gg); other estimates for the US ranged as low as ~400 million L to as high as ~850 million L, reflecting real inconsistency across market-research sources. Confidence 1 — flagged for replacement with a verified industry-association or USDA ERS figure if one becomes available."
+                    "id": 365,
+                    "url": "https://www.grandviewresearch.com/industry-analysis/almond-milk-market",
+                    "title": "Grand View Research — Almond Milk Market Size and Share, Industry Report",
+                    "note": "availability_gg: rough estimate — USD 10.84B global almond milk market (2023) ÷ ~USD 2.6/L retail (same price assumption as oat milk) ≈ 4.17 billion L × 1.01 kg/L ≈ 4,211 Gg. Market value is sourced; the price per litre is an assumption."
                 }
             }
         ]
