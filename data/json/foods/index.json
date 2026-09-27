@@ -63,7 +63,11 @@
         "shrimp",
         "sardines",
         "oysters-farmed",
-        "clams-farmed"
+        "clams-farmed",
+        "pollock",
+        "cod",
+        "carp-farmed",
+        "catfish-farmed"
     ],
     "eggs": [
         "egg"
@@ -94,5 +98,8 @@
     ],
     "seeds": [
         "flaxseed"
+    ],
+    "sweeteners": [
+        "maple-syrup"
     ]
 }

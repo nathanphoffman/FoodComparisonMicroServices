@@ -24,6 +24,7 @@ export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'vegetables', label: 'Vegetables',   categories: ['vegetables', 'leafy'] },
     { key: 'fruits',     label: 'Fruits',       categories: ['fruits'] },
     { key: 'oils',       label: 'Oils',         categories: ['oils'] },
+    { key: 'sweeteners', label: 'Sweeteners',   categories: ['sweeteners'] },
 ];
 
 export const DEFAULT_FOOD_FILTER = 'all';

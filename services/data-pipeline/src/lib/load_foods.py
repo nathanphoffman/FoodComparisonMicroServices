@@ -16,7 +16,7 @@ from .validate import assert_land_types
 CATEGORY_FILES = [
     "dairy", "eggs", "feeds", "fruits", "grains",
     "leafy", "legumes", "meats", "nuts", "oils",
-    "seafood", "seeds", "vegetables",
+    "seafood", "seeds", "sweeteners", "vegetables",
 ]
 
 FOOD_KEYS = {

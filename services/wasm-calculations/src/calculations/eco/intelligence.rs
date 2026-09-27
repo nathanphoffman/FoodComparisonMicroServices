@@ -73,6 +73,8 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
         "mussels-farmed" => 1.5,
         "oysters-farmed" => 2.5, // Pacific oysters reach market size in ~18–36 months
         "clams-farmed" => 1.75,  // Manila clams take ~1.5–2 years from seed to harvest
+        "carp-farmed" => 2.0,    // Chinese carps are grown ~2 years from fry to 1–2 kg
+        "catfish-farmed" => 0.8, // pangasius 6–8 months grow-out + nursery; channel catfish 15–18 months
         _ => 0.0,
     }
 }
@@ -81,7 +83,8 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
 /// Used by both direct-kill and bycatch scoring to normalise kill impact.
 pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
     match slug {
-        "beef" | "milk" | "yogurt" | "butter" | "tuna" => 20.0,
+        "beef" | "milk" | "yogurt" | "butter" | "tuna" | "cod" => 20.0,
+        "pollock" => 12.0,
         "chicken" | "egg" => 8.0,
         "pork" | "lamb" => 12.0,
         "turkey" => 10.0,

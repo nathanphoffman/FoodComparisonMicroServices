@@ -1674,5 +1674,735 @@
                 }
             }
         ]
+    },
+    {
+        "id": 77,
+        "slug": "pollock",
+        "name": "Pollock (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.76,
+                    "fat": 0.0082,
+                    "sat_fat": 0.00148,
+                    "protein": 0.1717,
+                    "fiber": 0,
+                    "sodium": 1.59,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.61,
+                    "trans_fat": 3e-05
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pollock (Wild) — nutrition: USDA SR Legacy 'Fish, pollock, Alaska, raw' (fdcId 173725) per 100 g: 76 kcal, 17.17 g protein, 0.82 g fat, 0.148 g sat fat, 0 g carbs, 159 mg sodium, 61 mg cholesterol; converted to per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 10000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Pollock (Wild) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
+                }
+            },
+            {
+                "value": 130000000,
+                "confidence": 2,
+                "source": {
+                    "id": 40,
+                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
+                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
+                    "note": "Pollock (Wild) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.9,
+                "confidence": 3,
+                "source": {
+                    "id": 372,
+                    "url": "https://www.fisheries.noaa.gov/species/alaska-pollock",
+                    "title": "NOAA Fisheries — Alaska Pollock species page",
+                    "note": "Pollock (Wild) — weight_kg: NOAA — Alaska pollock typically weigh 1–3 lb; 2 lb (0.9 kg) used."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.36,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Pollock (Wild) — yield_fraction: FAO TP 309 — Alaska pollack skinless fillets 36% of whole fish (total edible flesh 41%)."
+                }
+            }
+        ],
+        "bycatch_food_id": 16,
+        "bycatch_food_slug": "salmon",
+        "bycatch_amount": [
+            {
+                "value": 0.01,
+                "confidence": 3,
+                "source": {
+                    "id": 372,
+                    "url": "https://www.fisheries.noaa.gov/species/alaska-pollock",
+                    "title": "NOAA Fisheries — Alaska Pollock species page",
+                    "note": "Pollock (Wild) — bycatch_amount: NOAA — less than 1% of the pollock midwater-trawl catch is other species; Pacific salmon is the main bycatch concern, so salmon is the bycatch species. 0.01 kg per kg landed used as an upper bound."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Pollock (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Pollock (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 4.72,
+                "confidence": 2,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Pollock (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 North America fleet average 1.7 kg CO2e per kg landed (pollock is the largest US fishery by volume and noted as low-fuel) ÷ fillet yield 0.36 = 4.72 kg CO2e per kg fillet. Fishing stage only. Low mercury (FDA/EPA 'Best Choice')."
+                }
+            },
+            {
+                "value": 3.7,
+                "confidence": 2,
+                "source": {
+                    "id": 369,
+                    "url": "https://www.goodnewsnetwork.org/this-fish-has-the-lowest-carbon-footprint-of-any-protein-in-the-world/",
+                    "title": "Good News Network — Alaska pollock carbon footprint (reporting a Quantis LCA for Genuine Alaska Pollock Producers)",
+                    "note": "Pollock (Wild) — co2_kg_per_kg_output (stored as total CO2e): Quantis LCA for Genuine Alaska Pollock Producers ~3.7 kg CO2e per kg frozen pollock (fishing + processing). Industry-funded; basis assumed to be edible product."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 1255,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean Alaska pollock capture 3.49 Mt live weight × yield_fraction 0.36 = 1,255 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "slug": "cod",
+        "name": "Cod (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.82,
+                    "fat": 0.0067,
+                    "sat_fat": 0.00131,
+                    "protein": 0.1781,
+                    "fiber": 0,
+                    "sodium": 0.54,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.43,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cod (Wild) — nutrition: USDA SR Legacy 'Fish, cod, Atlantic, raw' (fdcId 171955) per 100 g: 82 kcal, 17.81 g protein, 0.67 g fat, 0.131 g sat fat, 0 g carbs, 54 mg sodium, 43 mg cholesterol; converted to per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 10000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Cod (Wild) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
+                }
+            },
+            {
+                "value": 130000000,
+                "confidence": 2,
+                "source": {
+                    "id": 40,
+                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
+                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
+                    "note": "Cod (Wild) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 3.0,
+                "confidence": 2,
+                "source": {
+                    "id": 373,
+                    "url": "https://www.fisheries.noaa.gov/species/atlantic-cod",
+                    "title": "NOAA Fisheries — Atlantic Cod species page",
+                    "note": "Cod (Wild) — weight_kg: NOAA gives cod up to 77 lb; commercially landed cod are mostly a few kg, so 3 kg is used as a typical landed fish."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.34,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Cod (Wild) — yield_fraction: FAO TP 309 — Atlantic cod skinless fillets 34% of whole fish (total edible flesh 47%)."
+                }
+            }
+        ],
+        "bycatch_food_id": 36,
+        "bycatch_food_slug": "sardines",
+        "bycatch_amount": [
+            {
+                "value": 0.096,
+                "confidence": 3,
+                "source": {
+                    "id": 374,
+                    "url": "https://www.fao.org/4/y5936e/y5936e0a.htm",
+                    "title": "Kelleher (2005) — Discards in the world's marine fisheries: an update (FAO Fisheries Technical Paper 470)",
+                    "note": "Cod (Wild) — bycatch_amount: Kelleher 2005 — trawlers targeting demersal finfish discard 9.6% of catch. Sardines are the proxy for discarded small finfish, as for wild shrimp. Per kg landed."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Cod (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Cod (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 7.06,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Cod (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 demersal fish 2.4 kg CO2e per kg landed ÷ fillet yield 0.34 = 7.06 kg CO2e per kg fillet. Fishing stage only. Low mercury (FDA/EPA 'Best Choice')."
+                }
+            },
+            {
+                "value": 6.45,
+                "confidence": 3,
+                "source": {
+                    "id": 368,
+                    "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.817335/full",
+                    "title": "Reducing the Fuel Use Intensity of Fisheries: Through Efficient Fishing Techniques and Recovered Fish Stocks (Frontiers in Marine Science, 2022)",
+                    "note": "Cod (Wild) — co2_kg_per_kg_output (stored as total CO2e): cod demersal trawl fuel use 0.342 (Baltic) and 0.987 (North Sea) L/kg, mean 0.665 L/kg × 3.3 kg CO2e/L (Parker 2018 factor) = 2.19 kg CO2e per kg landed ÷ 0.34 = 6.45 per kg fillet."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 368,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean Atlantic cod capture 1.08 Mt live weight × yield_fraction 0.34 = 368 Gg (aquaculture ~4 kt, ignored)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "slug": "carp-farmed",
+        "name": "Carp (Farmed)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.5,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Land is only the feed crops (soy, wheat, corn); same split as farmed tilapia, since much aquafeed soy comes from Brazil.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.27,
+                    "fat": 0.056,
+                    "sat_fat": 0.01083,
+                    "protein": 0.1783,
+                    "fiber": 0,
+                    "sodium": 0.49,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.66,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Carp (Farmed) — nutrition: USDA SR Legacy 'Fish, carp, raw' (fdcId 171952) per 100 g: 127 kcal, 17.83 g protein, 5.6 g fat, 1.083 g sat fat, 0 g carbs, 49 mg sodium, 66 mg cholesterol; converted to per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 10000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Carp (Farmed) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
+                }
+            },
+            {
+                "value": 130000000,
+                "confidence": 2,
+                "source": {
+                    "id": 40,
+                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
+                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
+                    "note": "Carp (Farmed) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 371,
+                    "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                    "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                    "note": "Carp (Farmed) — weight_kg: farmed grass, silver and common carp are typically harvested at 1–2 kg; 1.5 kg used."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.36,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Carp (Farmed) — yield_fraction: FAO TP 309 — common carp skinless fillets 36% of whole fish (total edible flesh 54%). Much carp is sold whole, but the fillet basis matches the nutrition."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Carp (Farmed) — ch4_kg_per_kg_output: set to 0; MacLeod et al. 2020 counts no pond methane (only rice methane inside feed), and fish have no enteric fermentation."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00738,
+                "confidence": 3,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Carp (Farmed) — n2o_kg_per_kg_output: MacLeod et al. 2020 aquatic N2O factor 1.69 g N2O–N per kg live weight = 2.66 g N2O/kg LW ÷ fillet yield 0.36 = 0.00738 kg N2O per kg fillet. Pond N2O from excreted N and uneaten feed; feed-crop N2O is counted separately through feed."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.92,
+                "confidence": 2,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Carp (Farmed) — co2_kg_per_kg_output (on-farm energy only): MacLeod et al. 2020 — derived average on-farm energy for fed finfish ≈ 0.69 kg CO2e/kg LW ÷ fillet yield 0.36 = 1.92 kg CO2 per kg fillet. Feed emissions are counted through feed. For reference MacLeod's total for cyprinids is 3.25 kg CO2e/kg LW (cradle to farm gate)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.26,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Carp (Farmed) — soy kg_feed_per_kg_output: Fry et al. 2018 common carp FCR 1.5–2.0 (1.75 used); ~26% of farmed carp are unfed filter feeders (silver + bighead carp, FishStat), so average feed ≈ 0.74 × 1.75 = 1.30 kg per kg live weight ÷ fillet yield 0.36. Soy stands in for soybean and rapeseed meal. Feed per kg fillet ≈ 3.60 kg; soy share ~35% of the diet (rough estimate, no ingredient breakdown found) → 1.26 kg soy/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.08,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Carp (Farmed) — wheat kg_feed_per_kg_output: Fry et al. 2018 common carp FCR 1.5–2.0 (1.75 used); ~26% of farmed carp are unfed filter feeders (silver + bighead carp, FishStat), so average feed ≈ 0.74 × 1.75 = 1.30 kg per kg live weight ÷ fillet yield 0.36. Wheat stands in for wheat and rice bran. Feed per kg fillet ≈ 3.60 kg; wheat share ~30% of the diet (rough estimate, no ingredient breakdown found) → 1.08 kg wheat/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.08,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Carp (Farmed) — corn kg_feed_per_kg_output: Fry et al. 2018 common carp FCR 1.5–2.0 (1.75 used); ~26% of farmed carp are unfed filter feeders (silver + bighead carp, FishStat), so average feed ≈ 0.74 × 1.75 = 1.30 kg per kg live weight ÷ fillet yield 0.36. Feed per kg fillet ≈ 3.60 kg; corn share ~30% of the diet (rough estimate, no ingredient breakdown found) → 1.08 kg corn/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 54,
+                "food_slug": "fishmeal",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.18,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Carp (Farmed) — fishmeal kg_feed_per_kg_output: Fry et al. 2018 common carp FCR 1.5–2.0 (1.75 used); ~26% of farmed carp are unfed filter feeders (silver + bighead carp, FishStat), so average feed ≈ 0.74 × 1.75 = 1.30 kg per kg live weight ÷ fillet yield 0.36. Feed per kg fillet ≈ 3.60 kg; fishmeal share ~5% of the diet (rough estimate, no ingredient breakdown found) → 0.18 kg fishmeal/kg fillet."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 11309,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean ISSCAAP 'Carps, barbels and other cyprinids' aquaculture 31.41 Mt live weight (grass 5.98, silver 4.98, common 4.17, catla 3.85, bighead 3.26, rohu 2.59 Mt) × yield_fraction 0.36 = 11,309 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "slug": "catfish-farmed",
+        "name": "Catfish (Farmed)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.5,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Land is only the feed crops (soy, wheat, corn); same split as farmed tilapia, since much aquafeed soy comes from Brazil.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.19,
+                    "fat": 0.0594,
+                    "sat_fat": 0.0131,
+                    "protein": 0.1523,
+                    "fiber": 0,
+                    "sodium": 0.98,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.55,
+                    "trans_fat": 0.00052
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Catfish (Farmed) — nutrition: USDA SR Legacy 'Fish, catfish, channel, farmed, raw' (fdcId 175165) per 100 g: 119 kcal, 15.23 g protein, 5.94 g fat, 1.31 g sat fat, 0 g carbs, 98 mg sodium, 55 mg cholesterol; converted to per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 10000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Catfish (Farmed) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
+                }
+            },
+            {
+                "value": 130000000,
+                "confidence": 2,
+                "source": {
+                    "id": 40,
+                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
+                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
+                    "note": "Catfish (Farmed) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 1.0,
+                "confidence": 3,
+                "source": {
+                    "id": 376,
+                    "url": "https://thefishsite.com/articles/pangasius-farming-an-overview",
+                    "title": "The Fish Site — Pangasius farming: an overview",
+                    "note": "Catfish (Farmed) — weight_kg: pangasius (the largest farmed catfish) is harvested at 0.8–1.1 kg (The Fish Site); US channel catfish at 0.34–0.68 kg (UF/IFAS). 1.0 kg used."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.33,
+                "confidence": 2,
+                "source": {
+                    "id": 377,
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484860800851X",
+                    "title": "Prediction of fillet weight, fillet yield, and fillet fat for live river catfish (Pangasianodon hypophthalmus) (Aquaculture, 2008)",
+                    "note": "Catfish (Farmed) — yield_fraction: industry average pangasius fillet yield ~33% of live weight. Channel catfish dress out at 60–65% headed, gutted and skinless (UF/IFAS), with fillets lower."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Catfish (Farmed) — ch4_kg_per_kg_output: set to 0; MacLeod et al. 2020 counts no pond methane (only rice methane inside feed), and fish have no enteric fermentation."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00805,
+                "confidence": 3,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Catfish (Farmed) — n2o_kg_per_kg_output: MacLeod et al. 2020 aquatic N2O factor 1.69 g N2O–N per kg live weight = 2.66 g N2O/kg LW ÷ fillet yield 0.33 = 0.00805 kg N2O per kg fillet. Pond N2O from excreted N and uneaten feed; feed-crop N2O is counted separately through feed."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.09,
+                "confidence": 2,
+                "source": {
+                    "id": 370,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+                    "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+                    "note": "Catfish (Farmed) — co2_kg_per_kg_output (on-farm energy only): MacLeod et al. 2020 — derived average on-farm energy for fed finfish ≈ 0.69 kg CO2e/kg LW ÷ fillet yield 0.33 = 2.09 kg CO2 per kg fillet. Feed emissions are counted through feed. For reference MacLeod's total for catfish is 3.05 kg CO2e/kg LW (cradle to farm gate)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.06,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Catfish (Farmed) — soy kg_feed_per_kg_output: FCR 1.7 kg feed per kg live weight (Fry et al. 2018 channel catfish 1.2–2.2; UF/IFAS 1.5–2.2) ÷ fillet yield 0.33. Feed per kg fillet ≈ 5.15 kg; soy share ~40% of the diet (rough estimate, no ingredient breakdown found) → 2.06 kg soy/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.29,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Catfish (Farmed) — corn kg_feed_per_kg_output: FCR 1.7 kg feed per kg live weight (Fry et al. 2018 channel catfish 1.2–2.2; UF/IFAS 1.5–2.2) ÷ fillet yield 0.33. Feed per kg fillet ≈ 5.15 kg; corn share ~25% of the diet (rough estimate, no ingredient breakdown found) → 1.29 kg corn/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.55,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Catfish (Farmed) — wheat kg_feed_per_kg_output: FCR 1.7 kg feed per kg live weight (Fry et al. 2018 channel catfish 1.2–2.2; UF/IFAS 1.5–2.2) ÷ fillet yield 0.33. Wheat stands in for wheat middlings and rice bran. Feed per kg fillet ≈ 5.15 kg; wheat share ~30% of the diet (rough estimate, no ingredient breakdown found) → 1.55 kg wheat/kg fillet."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 54,
+                "food_slug": "fishmeal",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.26,
+                        "confidence": 1,
+                        "source": {
+                            "id": 371,
+                            "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+                            "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+                            "note": "Catfish (Farmed) — fishmeal kg_feed_per_kg_output: FCR 1.7 kg feed per kg live weight (Fry et al. 2018 channel catfish 1.2–2.2; UF/IFAS 1.5–2.2) ÷ fillet yield 0.33. Feed per kg fillet ≈ 5.15 kg; fishmeal share ~5% of the diet (rough estimate, no ingredient breakdown found) → 0.26 kg fishmeal/kg fillet."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2118,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean aquaculture of all catfish species 6.42 Mt live weight (striped catfish/pangasius 2.73, torpedo-shaped 1.21, yellow 0.58, channel 0.52, pangas NEI 0.45 Mt) × yield_fraction 0.33 = 2,118 Gg."
+                }
+            }
+        ]
     }
 ]

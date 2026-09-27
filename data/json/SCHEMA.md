@@ -22,7 +22,8 @@ data/json/
 │   ├── fruits.json
 │   ├── nuts.json
 │   ├── seeds.json
-│   └── oils.json
+│   ├── oils.json
+│   └── sweeteners.json
 ├── pesticides.json          # pesticide toxicity profiles
 └── sources.json             # bibliography / citation registry
 ```

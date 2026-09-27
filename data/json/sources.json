@@ -1821,7 +1821,8 @@
         "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
         "notes": [
             "World production, tonnes live weight, 2019–2023 mean. Aquaculture = freshwater + brackishwater + marine; capture = capture production.",
-            "Atlantic salmon (SAL) aquaculture 2.67 Mt; principal market tunas capture (skipjack, yellowfin, bigeye, albacore, Atlantic/Pacific/southern bluefin) 5.24 Mt; ISSCAAP Shrimps, prawns — capture 3.12 Mt, aquaculture 7.45 Mt; all species named sardine/pilchard/sardinella, capture 5.61 Mt; ISSCAAP Tilapias and other cichlids aquaculture 6.43 Mt; ISSCAAP Mussels aquaculture 1.97 Mt; Oysters aquaculture 6.73 Mt; Clams, cockles, arkshells aquaculture 5.76 Mt."
+            "Atlantic salmon (SAL) aquaculture 2.67 Mt; principal market tunas capture (skipjack, yellowfin, bigeye, albacore, Atlantic/Pacific/southern bluefin) 5.24 Mt; ISSCAAP Shrimps, prawns — capture 3.12 Mt, aquaculture 7.45 Mt; all species named sardine/pilchard/sardinella, capture 5.61 Mt; ISSCAAP Tilapias and other cichlids aquaculture 6.43 Mt; ISSCAAP Mussels aquaculture 1.97 Mt; Oysters aquaculture 6.73 Mt; Clams, cockles, arkshells aquaculture 5.76 Mt.",
+            "Alaska pollock capture 3.49 Mt; Atlantic cod capture 1.08 Mt (aquaculture 0.004 Mt); ISSCAAP Carps, barbels and other cyprinids aquaculture 31.41 Mt; all catfish species (incl. Pangas NEI) aquaculture 6.42 Mt."
         ]
     },
     {
@@ -1854,6 +1855,152 @@
         "title": "Grand View Research — Almond Milk Market Size and Share, Industry Report",
         "notes": [
             "Global almond milk market valued at USD 10.84 billion in 2023 (other firms: USD 10.7–13.2 billion). Value only; no volume given."
+        ]
+    },
+    {
+        "id": 366,
+        "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+        "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+        "notes": [
+            "Yield as a proportion of whole fish weight — skinless fillets / total edible flesh: Atlantic cod 34% / 47%; Alaska pollack 36% / 41%; common carp 36% / 54%. Skinless fillet yields used for yield_fraction (nutrition is raw fillet)."
+        ]
+    },
+    {
+        "id": 367,
+        "url": "https://www.nature.com/articles/s41558-018-0117-x",
+        "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+        "notes": [
+            "Table 1 (2011): global fisheries 489 L fuel per tonne, 2.2 kg CO2e per kg landed; demersal fish 539 L/t, 2.4 kg CO2e/kg; pelagic fish >30 cm 1.9; North America region 1.7 kg CO2e/kg. Uses 3.3 kg CO2e per litre of fuel (combustion + upstream). Text: Alaska pollock trawl fisheries 'consume relatively little fuel compared to similar whitefish fisheries'."
+        ]
+    },
+    {
+        "id": 368,
+        "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2022.817335/full",
+        "title": "Reducing the Fuel Use Intensity of Fisheries: Through Efficient Fishing Techniques and Recovered Fish Stocks (Frontiers in Marine Science, 2022)",
+        "notes": [
+            "Atlantic cod fuel use intensity by technique: Baltic demersal trawl (105–120 mm) 0.3422 L/kg; North Sea demersal trawl (>120 mm) 0.9867 L/kg."
+        ]
+    },
+    {
+        "id": 369,
+        "url": "https://www.goodnewsnetwork.org/this-fish-has-the-lowest-carbon-footprint-of-any-protein-in-the-world/",
+        "title": "Good News Network — Alaska pollock carbon footprint (reporting a Quantis LCA for Genuine Alaska Pollock Producers)",
+        "notes": [
+            "Quantis LCA commissioned by Genuine Alaska Pollock Producers: ~3.7 kg CO2e per kg of frozen pollock, covering energy through to a frozen product. Industry-funded; product basis not stated precisely. Read from a news article (original report not accessed)."
+        ]
+    },
+    {
+        "id": 370,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7363927/",
+        "title": "MacLeod et al. (2020) — Quantifying greenhouse gas emissions from global aquaculture (Scientific Reports)",
+        "notes": [
+            "Tables 1–2 (2017): world production (kt live weight) / emissions (kt CO2e), cradle to farm gate — cyprinids 23,102 / 75,057 (3.25 kg CO2e/kg LW); catfish 5,468 / 16,692 (3.05); all aquaculture 74,855 / 245,357; bivalves 15,914 / 18,157.",
+            "Aquatic N2O emission factor: 1.69 g N2O–N per kg of production (0.791 kg CO2e/kg LW) = 2.66 g N2O per kg live weight. Feed production is 57% of aquaculture emissions; the rest is mostly aquatic N2O and on-farm energy (pumping, aeration, vehicles).",
+            "On-farm energy estimate for fed finfish (derived): non-feed 43% × 245,357 = 105,503 kt; minus aquatic N2O on fed production (58,941 kt × 0.791 = 46,622) and bivalves (18,157, all non-feed) = 40,724 kt over 58,941 kt fed production ≈ 0.69 kg CO2e/kg LW. Includes energy-intensive shrimp aeration, so likely high for carp/catfish ponds."
+        ]
+    },
+    {
+        "id": 371,
+        "url": "https://iopscience.iop.org/article/10.1088/1748-9326/aaa273",
+        "title": "Fry et al. (2018) — Feed conversion efficiency in aquaculture: do we measure it correctly? (Environmental Research Letters)",
+        "notes": [
+            "Table 1: FCR (feed per kg live weight gain) common carp 1.5–2.0; channel catfish 1.2–2.2; tilapia 1.4–2.4. Edible portion: carps 0.36–0.54; catfish 0.35–0.63."
+        ]
+    },
+    {
+        "id": 372,
+        "url": "https://www.fisheries.noaa.gov/species/alaska-pollock",
+        "title": "NOAA Fisheries — Alaska Pollock species page",
+        "notes": [
+            "Alaska pollock typically 12–20 inches, 1–3 lb; lifespan ~12 years; caught with midwater (pelagic) trawls; 'less than 1 percent of the total catch ... is made up of other species', main concern Pacific salmon. Stocks not overfished / not subject to overfishing (2023)."
+        ]
+    },
+    {
+        "id": 373,
+        "url": "https://www.fisheries.noaa.gov/species/atlantic-cod",
+        "title": "NOAA Fisheries — Atlantic Cod species page",
+        "notes": [
+            "Atlantic cod up to 77 lb and 51 inches; lifespan more than 20 years; caught with trawls, gillnets, bottom longlines, rod and reel. Both US Atlantic cod stocks are overfished."
+        ]
+    },
+    {
+        "id": 374,
+        "url": "https://www.fao.org/4/y5936e/y5936e0a.htm",
+        "title": "Kelleher (2005) — Discards in the world's marine fisheries: an update (FAO Fisheries Technical Paper 470)",
+        "notes": [
+            "Discard rate for trawlers targeting demersal finfish: 9.6% (all fisheries); overall marine fisheries ~8%."
+        ]
+    },
+    {
+        "id": 375,
+        "url": "https://ask.ifas.ufl.edu/publication/FA010",
+        "title": "UF/IFAS CIR1052/FA010 — Farm-Raised Channel Catfish",
+        "notes": [
+            "Channel catfish: 60–65% dressed (headed, gutted, skinless) from live weight; processed at 340–680 g (0.75–1.5 lb); 15–18 months egg to market; FCR 1.5–2.2 lb feed per lb fish; diets 25–36% crude protein."
+        ]
+    },
+    {
+        "id": 376,
+        "url": "https://thefishsite.com/articles/pangasius-farming-an-overview",
+        "title": "The Fish Site — Pangasius farming: an overview",
+        "notes": [
+            "Pangasius harvested at 800–1,100 g after 6–8 months of grow-out (plus ~2 months nursery)."
+        ]
+    },
+    {
+        "id": 377,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S004484860800851X",
+        "title": "Prediction of fillet weight, fillet yield, and fillet fat for live river catfish (Pangasianodon hypophthalmus) (Aquaculture, 2008)",
+        "notes": [
+            "Industry figures give an average pangasius fillet yield of ~33% of live weight (skin-on ~44%, skinless ~37%, trimmed ~32% in another study). Read via search summary only (publisher page returns 403)."
+        ]
+    },
+    {
+        "id": 378,
+        "url": "https://www.perennia.ca/wp-content/uploads/2021/06/Characteristics-of-a-Good-Maple-Stand.pdf",
+        "title": "Perennia — Characteristics of a Good Sugar Maple Stand",
+        "notes": [
+            "Good sugar woods have 200 to 300 taps per hectare (80 to 120 per acre)."
+        ]
+    },
+    {
+        "id": 379,
+        "url": "https://www.themaplenews.com/stories/season-summaries/2/all/",
+        "title": "The Maple News — Season summaries (Quebec Maple Syrup Producers harvest reports)",
+        "notes": [
+            "Quebec harvest (million lb) and average yield per tap (lb): 2019 159 / 3.43; 2020 175 / 3.59; 2022 211.2 / 4.26; 2023 124 / 2.43; 2024 239 / 4.47; 2025 224.9 / 4.04."
+        ]
+    },
+    {
+        "id": 380,
+        "url": "https://cbvinstitute.com/wp-content/uploads/2024/06/Maple-Syrup-Insights_Final-EN.pdf",
+        "title": "CBV Institute (2024) — Canada's Maple Syrup Industry, eh!",
+        "notes": [
+            "In 2024 Canada produced about 73% of world maple syrup; 90.7% of Canadian production came from Quebec (so Quebec ≈ 66% of world). Read via search summary only."
+        ]
+    },
+    {
+        "id": 381,
+        "url": "https://ciraig.org/index.php/blog/is-maple-syrup-good-for-the-planet/",
+        "title": "CIRAIG — Is maple syrup good for the planet?",
+        "notes": [
+            "Citing an AGECO Group study: a can of Quebec maple syrup (2021) emits about 600 g CO2e; more than half comes from evaporation, and about 50% of syrup is made with oil-fired evaporators."
+        ]
+    },
+    {
+        "id": 382,
+        "url": "https://pubs.acs.org/doi/10.1021/acs.est.4c03067",
+        "title": "Checkoway, Lewis & Keoleian (2024) — Carbon and Energy Footprinting across Archetypes for U.S. Maple Syrup Production (Environmental Science & Technology)",
+        "notes": [
+            "Cradle-to-retail-gate carbon footprint of US maple syrup: small producers 27–118 kg CO2e/gal (wood-fired, 61–90% biogenic on-site) and 18–65 kg CO2e/gal (oil-fired); large producers 3.5–7 kg CO2e/gal (electric to oil-fired). Reverse osmosis cuts emissions 57–82%."
+        ]
+    },
+    {
+        "id": 383,
+        "url": "https://research.fs.usda.gov/download/treesearch/15706.pdf",
+        "title": "Scott et al. (2004) — Changes in Carbon Storage and Net Carbon Exchange One Year After an Initial Shelterwood Harvest at Howland Forest, ME (Environmental Management)",
+        "notes": [
+            "Unharvested control stand at Howland Forest, Maine (spruce–hemlock–hardwood) stores about 1.8 Mg C/ha/year (eddy covariance)."
         ]
     }
 ]

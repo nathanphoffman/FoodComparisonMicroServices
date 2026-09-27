@@ -1,0 +1,163 @@
+[
+    {
+        "id": 81,
+        "slug": "maple-syrup",
+        "name": "Maple Syrup",
+        "type": "plant",
+        "category": "sweeteners",
+        "human_food": 1,
+        "tags": [],
+        "land_types": {
+            "temperate_forest": 1.0
+        },
+        "land_types_note": "Tapped from standing sugar maple forest (Quebec, Ontario, New Brunswick, US Northeast). The forest is kept, not cleared, but is managed for maple.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.6,
+                    "fat": 0.0006,
+                    "sat_fat": 7e-05,
+                    "protein": 0.0004,
+                    "fiber": 0,
+                    "sodium": 0.12,
+                    "carbs": 0.6704,
+                    "sugar": 0.6046,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Maple Syrup — nutrition: USDA SR Legacy 'Syrups, maple' (fdcId 169661) per 100 g: 260 kcal, 0.04 g protein, 0.06 g fat, 0.007 g sat fat, 67.04 g carbs, 60.46 g sugars, 12 mg sodium, 32.39 g water; converted to per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Maple Syrup — yield_fraction: syrup is sold and eaten as produced; nothing is discarded."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 425,
+                "confidence": 3,
+                "source": {
+                    "id": 379,
+                    "url": "https://www.themaplenews.com/stories/season-summaries/2/all/",
+                    "title": "The Maple News — Season summaries (Quebec Maple Syrup Producers harvest reports)",
+                    "note": "Maple Syrup — yield_kg_ha: Quebec average yield 3.76 lb/tap (mean of 2020 and 2022–2025 QMSP harvests) = 1.71 kg/tap × 250 taps/ha (Perennia: 200–300 taps/ha in good sugar woods) = 425 kg syrup/ha/yr."
+                }
+            }
+        ],
+        "water_per_kg": [],
+        "green_water_per_kg": [],
+        "blue_water_per_kg": [],
+        "grey_water_per_kg": [],
+        "soil_erosion": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 378,
+                    "url": "https://www.perennia.ca/wp-content/uploads/2021/06/Characteristics-of-a-Good-Maple-Stand.pdf",
+                    "title": "Perennia — Characteristics of a Good Sugar Maple Stand",
+                    "note": "Maple Syrup — soil_erosion: 0; sap is collected from standing forest with no soil disturbance."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 378,
+                    "url": "https://www.perennia.ca/wp-content/uploads/2021/06/Characteristics-of-a-Good-Maple-Stand.pdf",
+                    "title": "Perennia — Characteristics of a Good Sugar Maple Stand",
+                    "note": "Maple Syrup — pesticide_kg_ha: 0; sugarbushes are not routinely sprayed (occasional insect-outbreak spraying ignored)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 378,
+                    "url": "https://www.perennia.ca/wp-content/uploads/2021/06/Characteristics-of-a-Good-Maple-Stand.pdf",
+                    "title": "Perennia — Characteristics of a Good Sugar Maple Stand",
+                    "note": "Maple Syrup — fertilizer_kg_ha: 0; sugarbushes are not routinely fertilized (occasional liming ignored)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 378,
+                    "url": "https://www.perennia.ca/wp-content/uploads/2021/06/Characteristics-of-a-Good-Maple-Stand.pdf",
+                    "title": "Perennia — Characteristics of a Good Sugar Maple Stand",
+                    "note": "Maple Syrup — tillage_events_per_year: 0; standing forest, never tilled."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.84,
+                "confidence": 3,
+                "source": {
+                    "id": 381,
+                    "url": "https://ciraig.org/index.php/blog/is-maple-syrup-good-for-the-planet/",
+                    "title": "CIRAIG — Is maple syrup good for the planet?",
+                    "note": "Maple Syrup — emissions_per_kg: AGECO study via CIRAIG — ~600 g CO2e per can of Quebec syrup (2021). A standard Quebec can is 540 mL × 1.33 kg/L = 0.72 kg syrup → 0.84 kg CO2e/kg. Over half is evaporation; ~50% of syrup boiled with oil."
+                }
+            },
+            {
+                "value": 1.04,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 382,
+                    "url": "https://pubs.acs.org/doi/10.1021/acs.est.4c03067",
+                    "title": "Checkoway, Lewis & Keoleian (2024) — Carbon and Energy Footprinting across Archetypes for U.S. Maple Syrup Production (Environmental Science & Technology)",
+                    "note": "Maple Syrup — emissions_per_kg (US): large US producers 3.5–7 kg CO2e per US gallon (electric to oil-fired), midpoint 5.25 ÷ 5.03 kg syrup/gal (3.785 L × 1.33 kg/L) = 1.04 kg CO2e/kg. Large producers make most US syrup; small wood/oil operations are far higher (18–118 kg/gal)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 6600,
+                "confidence": 2,
+                "source": {
+                    "id": 383,
+                    "url": "https://research.fs.usda.gov/download/treesearch/15706.pdf",
+                    "title": "Scott et al. (2004) — Changes in Carbon Storage and Net Carbon Exchange One Year After an Initial Shelterwood Harvest at Howland Forest, ME (Environmental Management)",
+                    "note": "Maple Syrup — co2_capture_kg_ha_yr: unharvested northeastern forest at Howland, Maine stores ~1.8 Mg C/ha/yr = 6,600 kg CO2/ha/yr. Mixed conifer–hardwood stand used as a proxy for a sugar maple forest."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "pesticides": [],
+        "availability_gg": [
+            {
+                "value": 133,
+                "confidence": 3,
+                "source": {
+                    "id": 379,
+                    "url": "https://www.themaplenews.com/stories/season-summaries/2/all/",
+                    "title": "The Maple News — Season summaries (Quebec Maple Syrup Producers harvest reports)",
+                    "note": "availability_gg: Quebec mean harvest 194.8 million lb (2020, 2022–2025) = 88,367 t; Quebec ≈ 66% of world (90.7% of Canada × Canada 73% of world, CBV Institute 2024) → world ≈ 133,000 t = 133 Gg."
+                }
+            }
+        ]
+    }
+]
