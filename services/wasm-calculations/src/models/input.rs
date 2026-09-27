@@ -77,6 +77,10 @@ pub struct FoodRow {
     // with no farmland (seafood, wild foods).
     #[serde(default)]
     pub land_types: Option<LandTypes>,
+
+    // "wild" marks hunted/fished animals and gathered plants (Over-Hunting / Over-Gathering sliders).
+    #[serde(default)]
+    pub tags: Vec<String>,
 }
 
 /// One value per broad land type. Used both for a food's land split (fractions)
@@ -171,6 +175,13 @@ pub struct SliderQuery {
     // (default, the original behavior), 2 = harmonic mean (weakest measure dominates).
     #[serde(default = "default_win_dampening")]
     pub win_dampening: f64,
+
+    // Final-score divisors for foods tagged "wild": how many times more we hunt
+    // (animals) or gather (plants) than is sustainable. 1 = no penalty.
+    #[serde(default = "default_over_hunting_factor")]
+    pub over_hunting_factor: f64,
+    #[serde(default = "default_over_gathering_factor")]
+    pub over_gathering_factor: f64,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -182,6 +193,9 @@ pub struct MealIngredient {
 fn default_zero_better_multiplier() -> f64 { 2.0 }
 fn default_priority()               -> f64 { 1.0 }
 fn default_win_dampening()          -> f64 { 1.0 }
+// Keep in sync with DEFAULT_OVER_HUNTING / DEFAULT_OVER_GATHERING in OverHuntingSlider.tsx / OverGatheringSlider.tsx.
+fn default_over_hunting_factor()    -> f64 { 2.5 }
+fn default_over_gathering_factor()  -> f64 { 1.5 }
 
 // Keep in sync with DEFAULT_LAND_TYPE_WEIGHTS in LandTypeSliders.tsx.
 fn default_land_type_weights() -> LandTypes {

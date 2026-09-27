@@ -26,7 +26,7 @@ export function WinDampeningSlider({ onChange }: { onChange?: (v: number) => voi
     };
 
     return (
-        <div className="flex flex-col gap-1 md:max-w-sm">
+        <div className="flex flex-col gap-1 flex-1">
             <div className="flex justify-between text-xs text-neutral-500">
                 <span>Big-Win Dampening</span>
                 <span className="font-medium text-neutral-700">{value.toFixed(1)} ({describe(value)})</span>

@@ -32,6 +32,8 @@ type SliderQuery = {
     availabilityPriority:       number;
     landTypeWeights:            LandTypes;
     winDampening:               number;
+    overHuntingFactor:          number;
+    overGatheringFactor:        number;
 };
 
 // Single input object passed to WASM — keeps the boundary simple and
@@ -79,7 +81,8 @@ export async function loadWasm() {
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
     const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
             neuronExponent, weightExponent, finalIntelligenceExponent,
-            zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, winDampening } = sliderValues;
+            zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, winDampening,
+            overHuntingFactor, overGatheringFactor } = sliderValues;
 
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
@@ -120,6 +123,8 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 availabilityPriority:      scorePriorities.availability,
                 landTypeWeights:           landTypeWeights,
                 winDampening:              winDampening,
+                overHuntingFactor:         overHuntingFactor,
+                overGatheringFactor:       overGatheringFactor,
             },
         };
 

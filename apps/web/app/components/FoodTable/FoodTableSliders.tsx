@@ -13,6 +13,8 @@ import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplier
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
 import { WinDampeningSlider }               from "./Sliders/WinDampeningSlider";
+import { OverHuntingSlider }                from "./Sliders/OverHuntingSlider";
+import { OverGatheringSlider }              from "./Sliders/OverGatheringSlider";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
 import type { LandTypes } from "@/lib/queries/commonFoods";
@@ -32,6 +34,8 @@ export function FoodTableSliders({
     onZeroBetterMultiplierChange,
     onLandTypeWeightsChange,
     onWinDampeningChange,
+    onOverHuntingChange,
+    onOverGatheringChange,
     neuronExponent,
     weightExponent,
     finalIntelligenceExponent,
@@ -48,6 +52,8 @@ export function FoodTableSliders({
     onZeroBetterMultiplierChange?: (v: number) => void;
     onLandTypeWeightsChange?: (w: LandTypes) => void;
     onWinDampeningChange?: (v: number) => void;
+    onOverHuntingChange?: (v: number) => void;
+    onOverGatheringChange?: (v: number) => void;
     neuronExponent: number;
     weightExponent: number;
     finalIntelligenceExponent: number;
@@ -58,10 +64,7 @@ export function FoodTableSliders({
                 <WeightSliders onChange={onChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Score Priorities">
-                <div className="flex flex-col gap-4 w-full">
-                    <ScorePrioritySliders onChange={onScorePrioritiesChange} />
-                    <WinDampeningSlider onChange={onWinDampeningChange} />
-                </div>
+                <ScorePrioritySliders onChange={onScorePrioritiesChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <div className="flex flex-col gap-3 w-full">
@@ -86,6 +89,13 @@ export function FoodTableSliders({
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Land Use">
                 <LandTypeSliders onChange={onLandTypeWeightsChange} />
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Opinionated">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
+                    <WinDampeningSlider onChange={onWinDampeningChange} />
+                    <OverHuntingSlider onChange={onOverHuntingChange} />
+                    <OverGatheringSlider onChange={onOverGatheringChange} />
+                </div>
             </ExpandableSliderGroup>
         </div>
     );

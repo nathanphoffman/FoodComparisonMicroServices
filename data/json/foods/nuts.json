@@ -1822,7 +1822,9 @@
         "type": "plant",
         "category": "nuts",
         "human_food": 1,
-        "tags": [],
+        "tags": [
+            "wild"
+        ],
         "nutrition": [
             {
                 "value": {
@@ -2275,7 +2277,9 @@
         "type": "plant",
         "category": "nuts",
         "human_food": 1,
-        "tags": [],
+        "tags": [
+            "wild"
+        ],
         "land_types": {
             "temperate_forest": 1.0
         },

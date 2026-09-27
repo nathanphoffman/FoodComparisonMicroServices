@@ -9,6 +9,8 @@ import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
 import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
 import { DEFAULT_LAND_TYPE_WEIGHTS } from './Sliders/LandTypeSliders';
 import { DEFAULT_WIN_DAMPENING } from './Sliders/WinDampeningSlider';
+import { DEFAULT_OVER_HUNTING } from './Sliders/OverHuntingSlider';
+import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
 import type { LandTypes } from '@/lib/queries/commonFoods';
 import type { SortKey } from './FoodTableSort';
 import { useIsMobile } from '../../hooks/useIsMobile';
@@ -60,6 +62,8 @@ export type SliderValues = {
     zeroBetterMultiplier:       number;
     landTypeWeights:            LandTypes;
     winDampening:               number;
+    overHuntingFactor:          number;
+    overGatheringFactor:        number;
     referenceSlug:              string;
     mealIngredients:            MealIngredient[];
 };
@@ -77,7 +81,9 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     zeroBetterMultiplier:       1.5,
     landTypeWeights:            DEFAULT_LAND_TYPE_WEIGHTS,
     winDampening:               DEFAULT_WIN_DAMPENING,
-    referenceSlug:              'avocado',
+    overHuntingFactor:          DEFAULT_OVER_HUNTING,
+    overGatheringFactor:        DEFAULT_OVER_GATHERING,
+    referenceSlug:              'chicken',
     mealIngredients:            [],
 };
 
@@ -180,6 +186,16 @@ export function FoodTableInputs({
         setSliderValues(next);
         onSliderValuesChange(next);
     }
+    function handleOverHunting(overHuntingFactor: number) {
+        const next = { ...sliderValues, overHuntingFactor };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
+    function handleOverGathering(overGatheringFactor: number) {
+        const next = { ...sliderValues, overGatheringFactor };
+        setSliderValues(next);
+        onSliderValuesChange(next);
+    }
     function handleMealChange(mealIngredients: MealIngredient[]) {
         const next = { ...sliderValues, mealIngredients };
         setSliderValues(next);
@@ -225,6 +241,8 @@ export function FoodTableInputs({
                     onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
                     onLandTypeWeightsChange={handleLandTypeWeights}
                     onWinDampeningChange={handleWinDampening}
+                    onOverHuntingChange={handleOverHunting}
+                    onOverGatheringChange={handleOverGathering}
                     neuronExponent={sliderValues.neuronExponent}
                     weightExponent={sliderValues.weightExponent}
                     finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
