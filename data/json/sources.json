@@ -2002,5 +2002,33 @@
         "notes": [
             "Unharvested control stand at Howland Forest, Maine (spruce–hemlock–hardwood) stores about 1.8 Mg C/ha/year (eddy covariance)."
         ]
+    },
+    {
+        "id": 384,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+        "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+        "notes": [
+            "Table 1 (isotropic fractionator, total brain cells — neurons not separated): medaka 0.492 g body / 8.38 mg brain / 6.66 M cells; zebrafish 0.73 g / 9.74 mg / 8.92 M; Astyanax 3.7 g / 43.55 mg / 26.09 M; brown trout 177.15 g / 354.73 mg / 100.84 M. Wrasses and cichlids also measured (up to 235 mg brain, 146 M cells).",
+            "Brain mass scales with body mass^0.50 across ray-finned fishes (phylogenetic regression slope 0.50 ± 0.01). Cell density falls as brains get larger (zebrafish ~916k cells/mg, trout ~284k cells/mg).",
+            "Fit used for fish neuron_count estimates: log-log least squares over the four non-wrasse, non-cichlid species (medaka, zebrafish, Astyanax, trout): total cells (millions) = 1.669 × brain mass (mg)^0.706."
+        ]
+    },
+    {
+        "id": 385,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12464356/",
+        "title": "Teles, Melo, Herculano-Houzel & Oliveira (2025) — Larger Fish Have Larger Brains With More Neurons Across but Not Within Cohorts Raised in Different Growth Conditions (J Comp Neurol; PMC12464356)",
+        "notes": [
+            "Direct NeuN neuron counts in Mozambique tilapia: 584,447 to 16,422,728 neurons across 80 individuals of 1.4–33.5 g. About 2.00 non-neuronal cells per neuron (so neurons ≈ 1/3 of total brain cells). Neuron number scales with body mass at an exponent of ~0.5.",
+            "Check of the fish neuron_count method: a 33.5 g fish gives brain 354.73 × (33.5/177.15)^0.5 = 154 mg → 1.669 × 154^0.706 = 58.9 M cells → 19.6 M neurons, versus 16.4 M measured (method ~20% high at this size)."
+        ]
+    },
+    {
+        "id": 386,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13023358/",
+        "title": "Brain Morphology and Quantitative Assessment of Sensory Brain Areas in Southern Bluefin Tuna, Thunnus maccoyii (J Comp Neurol, 2025; PMC13023358)",
+        "notes": [
+            "MRI of southern bluefin tuna (~95–101 cm): whole-brain segmentation of specimen SBT8 sums to ~3,750 mm3 (~3.7 g); corpus cerebelli 1,299 mm3 = 35% of brain volume.",
+            "Check of the fish neuron_count method: a ~1 m bluefin weighs ~18 kg; brain 354.73 × (18,000/177.15)^0.5 = 3,576 mg predicted vs ~3,700 mg measured, so body-to-brain scaling holds to tuna size. The large, neuron-dense cerebellum could put tuna above the estimate."
+        ]
     }
 ]

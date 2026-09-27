@@ -41,23 +41,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
-                "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": null
-                }
-            },
-            {
-                "value": 130000000,
+                "value": 110000000,
                 "confidence": 2,
                 "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": null
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Salmon (Farmed) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 4,500 g body → 354.73 × (4,500/177.15)^0.5 = 1,788 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 1,788^0.706 = 330.1 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 110.0 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386). Extrapolated ~25× beyond the largest fish counted (trout); confidence lowered."
                 }
             }
         ],
@@ -293,13 +283,13 @@
         ],
         "neuron_count": [
             {
-                "value": 30000000,
-                "confidence": 3,
+                "value": 274500000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Tuna — neuron_count: ~30 million neurons."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Tuna (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 60,000 g body → 354.73 × (60,000/177.15)^0.5 = 6,528 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 6,528^0.706 = 823.6 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 274.5 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386). Extrapolated ~340× beyond the largest fish counted; tuna brains are 35% cerebellum, which is neuron-dense in other vertebrates, so this may be low (the all-11-species fit gives ~615 M). Confidence lowered."
                 }
             }
         ],
@@ -896,13 +886,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 2,
+                "value": 28700000,
+                "confidence": 3,
                 "source": {
-                    "id": 45,
-                    "url": "https://en.wikipedia.org/wiki/Sardine",
-                    "title": "Wikipedia — Sardine",
-                    "note": "Sardines — neuron_count: No direct empirical neuronal count for sardines exists in the peer-reviewed literature. As small teleost fish with brain structure comparable to other clupeoids, an estimate of ~10 million neurons is applied, consistent with figures used for small pelagic fish of similar body size (e.g., reference values for small fish in the range of 5–30 million neurons). This carries significant uncertainty."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Sardines (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 100 g body → 354.73 × (100/177.15)^0.5 = 267 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 267^0.706 = 86.1 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 28.7 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
@@ -1069,23 +1059,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
+                "value": 57000000,
+                "confidence": 3,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Farmed tilapia — neuron_count: No direct empirical neuron count for Nile tilapia exists. As a teleost fish of moderate body size, an estimate of ~10 million neurons is applied, consistent with small-to-medium teleost fish reference values. Carries significant uncertainty."
-                }
-            },
-            {
-                "value": 130000000,
-                "confidence": 2,
-                "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": "Farmed tilapia — neuron_count (upper scaling estimate): Applying the vertebrate scaling-adjusted estimate (Invincible Wellbeing curve-fitting ÷ 15 for fish brain-to-body ratio) to a 700g tilapia yields approximately 130 million neurons. This is the same scaling method used for Atlantic salmon; carries high uncertainty but provides a biologically grounded upper bound."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Tilapia (Farmed) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 700 g body → 354.73 × (700/177.15)^0.5 = 705 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 705^0.706 = 171.1 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 57.0 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
@@ -1712,23 +1692,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
+                "value": 62300000,
+                "confidence": 3,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Pollock (Wild) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
-                }
-            },
-            {
-                "value": 130000000,
-                "confidence": 2,
-                "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": "Pollock (Wild) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Pollock (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 900 g body → 354.73 × (900/177.15)^0.5 = 800 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 800^0.706 = 187.0 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 62.3 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
@@ -1870,23 +1840,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
+                "value": 95400000,
+                "confidence": 3,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Cod (Wild) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
-                }
-            },
-            {
-                "value": 130000000,
-                "confidence": 2,
-                "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": "Cod (Wild) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Cod (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 3,000 g body → 354.73 × (3,000/177.15)^0.5 = 1,460 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 1,460^0.706 = 286.1 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 95.4 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
@@ -2033,23 +1993,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
+                "value": 74700000,
+                "confidence": 3,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Carp (Farmed) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
-                }
-            },
-            {
-                "value": 130000000,
-                "confidence": 2,
-                "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": "Carp (Farmed) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Carp (Farmed) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 1,500 g body → 354.73 × (1,500/177.15)^0.5 = 1,032 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 1,032^0.706 = 224.0 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 74.7 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
@@ -2240,23 +2190,13 @@
         ],
         "neuron_count": [
             {
-                "value": 10000000,
-                "confidence": 1,
+                "value": 64700000,
+                "confidence": 3,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Catfish (Farmed) — neuron_count: no direct neuron count exists for this species; ~10 million used for a medium teleost fish, the same estimate as farmed tilapia. High uncertainty."
-                }
-            },
-            {
-                "value": 130000000,
-                "confidence": 2,
-                "source": {
-                    "id": 40,
-                    "url": "https://forum.effectivealtruism.org/posts/4SpYcqZvuyZ8JyiCK/neuron-count-based-measures-may-currently-underweight",
-                    "title": "EA Forum — Neuron Count Measures May Underweight Suffering in Farmed Fish",
-                    "note": "Catfish (Farmed) — neuron_count (upper scaling estimate): same vertebrate-scaling estimate (÷15 for fish brain-to-body ratio) applied to farmed tilapia and salmon; no species-specific count found. High uncertainty."
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Catfish (Farmed) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 1,000 g body → 354.73 × (1,000/177.15)^0.5 = 843 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 843^0.706 = 194.1 M cells; this captures cell density falling as fish brains grow. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 64.7 M neurons. Checks: the same method gives 19.6 M for a 33.5 g tilapia vs 16.4 M counted (source 385), and predicts a 3.6 g brain for an 18 kg bluefin vs ~3.7 g by MRI (source 386)."
                 }
             }
         ],
