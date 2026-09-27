@@ -1341,46 +1341,46 @@
         "ch4_kg_per_kg_output": [
             {
                 "value": 0,
-                "confidence": 4,
+                "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Mussels (Farmed) — ch4_kg_per_kg_output: Farmed mussels produce zero CH4. Bivalve mollusks have no enteric fermentation (no rumen or hindgut fermentation); the digestive process involves enzymatic breakdown of phytoplankton and organic particles filtered from the water column. P&N 2018 reports farmed bivalves (mussels, oysters, clams) at ~0.64 kg CO2e/kg, arising entirely from vessel fuel for harvest, processing energy, and transport — with no biological CH4 source. CH4 = 0 is definitive for filter-feeding bivalves."
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Mussels (Farmed) — ch4_kg_per_kg_output: set to 0; bivalves have no enteric fermentation, and the small sediment/metabolic emissions are included in the CO2e total in co2_kg_per_kg_output."
                 }
             }
         ],
         "n2o_kg_per_kg_output": [
             {
-                "value": 0.0005,
+                "value": 0,
                 "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Mussels (Farmed) — n2o_kg_per_kg_output: Trace N2O from processing and refrigeration of harvested mussels. P&N 2018 reports farmed bivalves at ~0.64 kg CO2e/kg total; there are no significant N2O pathways in rope-culture mussel aquaculture (no feed, no pond effluent, no fertilizer). A residual value of 0.0005 kg N2O/kg is assigned to account for minor refrigerant leakage and cold-chain processing, consistent with the negligible N2O role in filter-feeder aquaculture systems."
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Mussels (Farmed) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full farmed-bivalve CO2e total."
                 }
             }
         ],
         "co2_kg_per_kg_output": [
             {
-                "value": 0.51,
+                "value": 1.45,
                 "confidence": 3,
                 "source": {
-                    "id": 55,
-                    "url": "https://science.sciencemag.org/content/360/6392/987",
-                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Mussels (Farmed) — co2_kg_per_kg_output: P&N 2018 reports farmed bivalves (shellfish category, including mussels, oysters, clams) at ~0.64 kg CO2e/kg total — the lowest GHG footprint of any animal protein in the dataset. Subtracting N2O CO2e (0.0005 × 265 = 0.133 kg CO2e) leaves ~0.51 kg direct CO2/kg mussel meat. This CO2 arises from: (1) vessel fuel for longline/rope harvest operations (~0.2–0.3 kg CO2/kg); (2) on-shore processing and depuration energy (~0.1–0.15 kg CO2/kg); (3) transport and retail cold chain (~0.05–0.1 kg CO2/kg). Rope and longline aquaculture requires no feed inputs, no freshwater, and effectively zero land use, making mussels one of the most environmentally efficient animal protein sources available. No land-use change CO2 applies to open-water aquaculture."
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Mussels (Farmed) — co2_kg_per_kg_output (stored as total CO2e): bivalve LCA median 392 kg CO2e per tonne live (shell-on) weight, excl. post-harvest transport ÷ meat yield 0.27 = 1.45 kg CO2e per kg meat. No feed, fertiliser or land."
                 }
             },
             {
-                "value": 0.51,
+                "value": 1.32,
                 "confidence": 3,
                 "source": {
-                    "id": 71,
-                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
-                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Mussels (Farmed) — co2_kg_per_kg_output: OWID P&N 2018 visualization places farmed shellfish (mussels, oysters, clams combined) at ~0.64 kg CO2e/kg — the lowest of all animal proteins by a wide margin. After subtracting N2O CO2e (0.0005 × 265 ≈ 0.13 kg CO2e), direct CO2 is ~0.51 kg/kg. Mussels' near-zero environmental footprint reflects the absence of feed production, land clearing, and on-farm energy inputs characteristic of rope/longline aquaculture. The dominant emission source is vessel fuel for harvest and transport."
+                    "id": 353,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8824708/",
+                    "title": "Climate-Friendly Seafood: The Potential for Emissions Reduction and Carbon Capture in Marine Aquaculture (BioScience, 2022; PMC8824708)",
+                    "note": "Mussels (Farmed) — co2_kg_per_kg_output (stored as total CO2e): MacLeod et al. 2020 global bivalve estimate 11.1 kg CO2e per kg protein × 0.119 kg protein per kg meat (USDA) = 1.32 kg CO2e per kg meat."
                 }
             }
         ],
