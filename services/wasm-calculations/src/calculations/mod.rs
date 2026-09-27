@@ -15,6 +15,11 @@ const PROTEIN_NORM_FALLBACK: f64 = 100.0;
 const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
 const FIBER_SCORE_WEIGHT: f64 = 2.0;
 const SAT_FAT_SCORE_PENALTY: f64 = 2.0;
+/// Grams of sugar per gram of fiber still treated as "whole food" sugar (fruit).
+/// Only sugar beyond this is penalised, so table sugar and syrups lose points
+/// but whole fruit barely moves.
+const SUGAR_FIBER_ALLOWANCE: f64 = 5.0;
+const FREE_SUGAR_SCORE_PENALTY: f64 = 0.25;
 
 // ── Batch-derived normalisation ───────────────────────────────────────────────
 
@@ -143,8 +148,10 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
     let per_unit = |raw: f64| divisor.map(|d| raw / d);
 
     let nutrition_score = if food.calories > 0.0 {
-        let raw =
-            food.protein + FIBER_SCORE_WEIGHT * food.fiber - SAT_FAT_SCORE_PENALTY * food.sat_fat;
+        let free_sugar = (food.sugar.unwrap_or(0.0) - SUGAR_FIBER_ALLOWANCE * food.fiber).max(0.0);
+        let raw = food.protein + FIBER_SCORE_WEIGHT * food.fiber
+            - SAT_FAT_SCORE_PENALTY * food.sat_fat
+            - FREE_SUGAR_SCORE_PENALTY * free_sugar;
 
         // nutrition score should be flat, not weighted by a divisor it is absolute
         Some(raw * 100.0 / food.calories)

@@ -10,7 +10,7 @@ pub struct DimensionCaps {
     pub water:         f64,
     pub sentient_harm: f64,
     /// Added to every nutrition score before taking the food / reference ratio.
-    /// Nutrition scores can be negative (saturated fat outweighs protein + fiber),
+    /// Nutrition scores can be negative (saturated fat or free sugar outweighs protein + fiber),
     /// and a plain ratio can't handle that — negative foods used to be skipped,
     /// which hid their bad nutrition. 0 when every score is already ≥ the floor.
     pub nutrition_offset: f64,

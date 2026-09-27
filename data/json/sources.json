@@ -2030,5 +2030,45 @@
             "MRI of southern bluefin tuna (~95–101 cm): whole-brain segmentation of specimen SBT8 sums to ~3,750 mm3 (~3.7 g); corpus cerebelli 1,299 mm3 = 35% of brain volume.",
             "Check of the fish neuron_count method: a ~1 m bluefin weighs ~18 kg; brain 354.73 × (18,000/177.15)^0.5 = 3,576 mg predicted vs ~3,700 mg measured, so body-to-brain scaling holds to tuna size. The large, neuron-dense cerebellum could put tuna above the estimate."
         ]
+    },
+    {
+        "id": 387,
+        "url": "https://www.scielo.br/j/pd/a/8T9J5VphBk7P9XzzBYJSLZQ/?format=html&lang=en",
+        "title": "Reis, Victória Filho, Andrade & Barroso (2019) — Use of Herbicides in Sugarcane in the São Paulo State (Planta Daninha)",
+        "notes": [
+            "Herbicide use on São Paulo sugarcane: 3.68 kg/ha (2010) rising to 5.00 kg/ha (2014); Photosystem II inhibitors (atrazine, ametryn, diuron) most used."
+        ]
+    },
+    {
+        "id": 388,
+        "url": "https://www.sciencedirect.com/science/article/pii/S2666683922000359",
+        "title": "Soil erosion on the Brazilian sugarcane cropping system: An overview (Geography and Sustainability, 2022)",
+        "notes": [
+            "Review of 18 Brazilian sugarcane studies under conventional tillage: median soil loss 7.2 Mg/ha/yr (natural rain 28, modeling 9.3, simulated rain 2)."
+        ]
+    },
+    {
+        "id": 389,
+        "url": "https://doi.org/10.3390/agronomy15082004",
+        "title": "Effect of Organic and Mineral Phosphate Fertilization of the Plant Cane and First Ratoon on the Second Ratoon in the Brazilian Cerrado (Agronomy, 2025)",
+        "notes": [
+            "Plant cane and first ratoon fertilized with 90 kg/ha N and 80 kg/ha K2O per cycle; P2O5 treatments 0–110 kg/ha."
+        ]
+    },
+    {
+        "id": 390,
+        "url": "https://www.wilmar-international.com/annualreport2024/documents/Our-Sugar-Journey.pdf",
+        "title": "Wilmar International Annual Report 2024 — Our Sugar Journey",
+        "notes": [
+            "World sugar production 2023/24 ~180 Mt: ~85% cane (~152 Mt), ~15% beet."
+        ]
+    },
+    {
+        "id": 391,
+        "url": "https://www.fas.usda.gov/data/gain/2026/04/brazil-sugar-annual",
+        "title": "USDA FAS GAIN — Brazil: Sugar Annual (April 2026)",
+        "notes": [
+            "Brazil average industrial yield forecast at 138.2 kg total recoverable sugar per tonne of cane (MY2026/27)."
+        ]
     }
 ]
