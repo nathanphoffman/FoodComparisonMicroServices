@@ -37,6 +37,8 @@ PLANT_KEYS = {
     "soil_erosion", "pesticide_kg_ha", "fertilizer_kg_ha", "emissions_per_kg",
     "tillage_events_per_year", "co2_capture_kg_ha_yr", "cooked_weight_ratio",
     "farm_gate_emissions_per_kg",
+    "wild_fish_kg_per_kg", "wild_fish_neuron_count", "wild_fish_weight_kg",
+    "wild_fish_lifespan_years",
 }
 
 

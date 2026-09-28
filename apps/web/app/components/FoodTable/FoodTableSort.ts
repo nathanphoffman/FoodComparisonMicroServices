@@ -40,6 +40,8 @@ export type ScoredRow = {
     land_use_detail:       LandUseDetail;
     sentient_harm_detail:  SentientHarmDetail;
     kill_detail:           KillDetail | null;
+    // Wild fish killed per kg for fishmeal / fish oil; null if none
+    wild_fish_deaths_per_kg: number | null;
 };
 
 // ── Hook ──────────────────────────────────────────────────────────────────────

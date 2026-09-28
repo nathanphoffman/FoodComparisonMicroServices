@@ -44,6 +44,11 @@ class RawPlant:
         self.tillage_events_per_year = SourcedArray(data.get("tillage_events_per_year"))
         self.co2_capture_kg_ha_yr    = SourcedArray(data.get("co2_capture_kg_ha_yr"))
         self.cooked_weight_ratio     = SourcedArray(data.get("cooked_weight_ratio"))
+        # Wild fish killed to make this product (fishmeal, fish oil).
+        self.wild_fish_kg_per_kg      = SourcedArray(data.get("wild_fish_kg_per_kg"))
+        self.wild_fish_neuron_count   = SourcedArray(data.get("wild_fish_neuron_count"))
+        self.wild_fish_weight_kg      = SourcedArray(data.get("wild_fish_weight_kg"))
+        self.wild_fish_lifespan_years = SourcedArray(data.get("wild_fish_lifespan_years"))
         self._pesticide_associations = pesticide_associations
 
     @property
@@ -130,6 +135,10 @@ class RawPlant:
             "pesticide_bee_hazard":      self.avg_pesticide_weighted_bee_hazard,
             "pesticide_kg_per_kg_food":  _per_cooked_kg(self.avg_pesticide_kg_per_kg_food, cooked_ratio),
             "land_m2_per_kg":            land_square_meters_per_kg,
+            "wild_fish_kg_per_kg":       self.wild_fish_kg_per_kg.weighted_average(),
+            "wild_fish_neuron_count":    self.wild_fish_neuron_count.weighted_average(),
+            "wild_fish_weight_kg":       self.wild_fish_weight_kg.weighted_average(),
+            "wild_fish_lifespan_years":  self.wild_fish_lifespan_years.weighted_average(),
         }
 
     def _weighted_paf_by_pesticide_kg(self, paf_attribute_name: str) -> float | None:

@@ -37,6 +37,11 @@ export type RawFood = {
   bycatch_food_slug:    string | null;
   bycatch_neuron_count: number | null;
   bycatch_weight_kg:    number | null;
+  // wild fish killed for fishmeal / fish oil — per kg of product, or summed over an animal's feed
+  wild_fish_kg_per_kg:      number | null;
+  wild_fish_neuron_count:   number | null;
+  wild_fish_weight_kg:      number | null;
+  wild_fish_lifespan_years: number | null;
   // global supply availability
   availability_gg: number | null;
   // plain-English tooltip text for the sentient harm columns
@@ -71,6 +76,7 @@ const QUERY = `
          f.offspring_deaths_per_animal, f.offspring_captivity_years,
          f.native_fraction, f.bycatch_amount, f.bycatch_food_slug,
          f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
+         f.wild_fish_kg_per_kg, f.wild_fish_neuron_count, f.wild_fish_weight_kg, f.wild_fish_lifespan_years,
          feed.water_per_kg             AS feed_water_per_kg,
          feed.emissions_per_kg         AS feed_emissions_per_kg,
          feed.green_water_per_kg       AS feed_green_water_per_kg,

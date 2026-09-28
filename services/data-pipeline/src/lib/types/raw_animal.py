@@ -64,6 +64,7 @@ class RawAnimal:
             "ch4_kg_per_kg_output":          self.ch4_kg_per_kg_output.weighted_average(),
             "n2o_kg_per_kg_output":          self.n2o_kg_per_kg_output.weighted_average(),
             "co2_kg_per_kg_output":          self.co2_kg_per_kg_output.weighted_average(),
+            **_compute_wild_fish_in_feed(self._feed_entries),
         }
 
     def feed_normalized_fields(self) -> dict[str, float | None] | None:
@@ -110,6 +111,32 @@ class RawAnimal:
             "pesticide_bee_hazard":      bee_hazard,
             "pesticide_kg_per_kg_food":  pesticide_kg_per_kg or None,
         }
+
+
+def _compute_wild_fish_in_feed(feed_entries: list[FeedEntry]) -> dict[str, float | None]:
+    """Wild fish killed to make this animal's fishmeal / fish oil, per kg of output.
+
+    The kill is the animal's own (the fish die to feed it), so it goes on the animal's
+    main row, not the feed row. The species values are the kg-weighted average across
+    feeds; today fishmeal and fish oil share one species (anchoveta), so they're equal.
+    """
+    total_fish_kg = 0.0
+    weighted = {"wild_fish_neuron_count": 0.0, "wild_fish_weight_kg": 0.0, "wild_fish_lifespan_years": 0.0}
+    for entry in feed_entries:
+        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
+        fish_kg_per_kg_feed = entry.plant.wild_fish_kg_per_kg.weighted_average()
+        if not feed_ratio or not fish_kg_per_kg_feed:
+            continue
+        fish_kg = feed_ratio * fish_kg_per_kg_feed
+        total_fish_kg += fish_kg
+        for field in weighted:
+            weighted[field] += fish_kg * (getattr(entry.plant, field).weighted_average() or 0.0)
+    if total_fish_kg <= 0:
+        return {"wild_fish_kg_per_kg": None, **{field: None for field in weighted}}
+    return {
+        "wild_fish_kg_per_kg": total_fish_kg,
+        **{field: value / total_fish_kg for field, value in weighted.items()},
+    }
 
 
 def _compute_land_use_square_meters_per_kg(feed_entries: list[FeedEntry]) -> float:

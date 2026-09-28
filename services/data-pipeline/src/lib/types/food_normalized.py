@@ -64,6 +64,11 @@ class FoodNormalized:
     ch4_kg_per_kg_output: float | None = None
     n2o_kg_per_kg_output: float | None = None
     co2_kg_per_kg_output: float | None = None
+    # wild fish killed per kg (fishmeal / fish oil, and animals fed them)
+    wild_fish_kg_per_kg: float | None = None
+    wild_fish_neuron_count: float | None = None
+    wild_fish_weight_kg: float | None = None
+    wild_fish_lifespan_years: float | None = None
     availability_gg: float | None = None
     sentient_harm_explanation: str | None = None
     land_types: dict[str, float] | None = None
@@ -90,6 +95,8 @@ class FoodNormalized:
             self.pasture_ha_per_kg_output, self.pasture_green_water_l_per_ha,
             self.native_fraction, self.bycatch_amount, self.bycatch_food_slug,
             self.ch4_kg_per_kg_output, self.n2o_kg_per_kg_output, self.co2_kg_per_kg_output,
+            self.wild_fish_kg_per_kg, self.wild_fish_neuron_count,
+            self.wild_fish_weight_kg, self.wild_fish_lifespan_years,
             self.availability_gg, self.sentient_harm_explanation,
             json.dumps(self.land_types) if self.land_types else None,
             self.category,

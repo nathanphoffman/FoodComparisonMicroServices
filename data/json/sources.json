@@ -2070,5 +2070,22 @@
         "notes": [
             "Brazil average industrial yield forecast at 138.2 kg total recoverable sugar per tonne of cane (MY2026/27)."
         ]
+    },
+    {
+        "id": 392,
+        "url": "https://fishbase.se/summary/Engraulis-ringens",
+        "title": "FishBase — Engraulis ringens (Peruvian anchoveta) species summary",
+        "notes": [
+            "Length-weight a=0.00457, b=3.13 (cm TL); common length 14.0 cm TL; max reported age 3 years."
+        ]
+    },
+    {
+        "id": 393,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11482318/",
+        "title": "Majluf, Matthews, Pauly, Skerritt & Palomares (2024) — A review of the global use of fishmeal and fish oil and the Fish In:Fish Out metric (Science Advances; PMC11482318)",
+        "notes": [
+            "Fishmeal yield 16–25% of whole-fish weight (industry average 22.5%); fish oil average 5% (0.2–25%).",
+            "In 2021, almost 30% of global fishmeal and 51% of fish oil were made from by-products (trimmings) rather than whole fish."
+        ]
     }
 ]

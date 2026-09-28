@@ -136,11 +136,11 @@ export function IntelligenceValue({ value }: { value: number | null }) {
   return <span className={getIntelligenceColor(value)}>{formatIntelligenceValue(value)}</span>;
 }
 
-export function IntelligenceCell({ value, detail, killDetail, explanation }: { value: number | null; detail: IntelligenceDetail; killDetail?: KillDetail | null; explanation?: string | null }) {
+export function IntelligenceCell({ value, detail, killDetail, wildFishDeathsPerKg, explanation }: { value: number | null; detail: IntelligenceDetail; killDetail?: KillDetail | null; wildFishDeathsPerKg?: number | null; explanation?: string | null }) {
   return (
     <Cell key="intelligence" align="right">
       {value != null
-        ? <IntelligenceTooltip detail={detail} killDetail={killDetail} explanation={explanation}><IntelligenceValue value={value} /></IntelligenceTooltip>
+        ? <IntelligenceTooltip detail={detail} killDetail={killDetail} wildFishDeathsPerKg={wildFishDeathsPerKg} explanation={explanation}><IntelligenceValue value={value} /></IntelligenceTooltip>
         : <IntelligenceValue value={null} />
       }
     </Cell>

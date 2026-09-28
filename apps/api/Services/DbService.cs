@@ -22,6 +22,8 @@ public class DbService
                f.pasture_ha_per_kg_output,
                f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output, f.co2_kg_per_kg_output,
                f.bycatch_amount, f.bycatch_food_slug,
+               f.wild_fish_kg_per_kg, f.wild_fish_neuron_count,
+               f.wild_fish_weight_kg, f.wild_fish_lifespan_years,
                feed.water_per_kg              AS feed_water_per_kg,
                feed.emissions_per_kg          AS feed_emissions_per_kg,
                feed.green_water_per_kg        AS feed_green_water_per_kg,

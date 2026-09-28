@@ -61,6 +61,13 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     n2o_kg_per_kg_output     REAL,  -- manure management; excludes land use + feed crop fertilizer
     co2_kg_per_kg_output     REAL,  -- on-farm energy, processing, transport; excludes land use + feed
 
+    -- Wild fish killed to make fishmeal / fish oil. On fishmeal and fish oil rows it is
+    -- per kg of product; on animals fed them it is summed over the feed, per kg of output.
+    wild_fish_kg_per_kg      REAL,  -- kg of whole wild fish killed per kg of this food; NULL if none
+    wild_fish_neuron_count   REAL,  -- neurons of one of those fish (e.g. Peruvian anchoveta)
+    wild_fish_weight_kg      REAL,  -- body weight of one of those fish
+    wild_fish_lifespan_years REAL,  -- lifespan of that species, for the intelligence score
+
     -- Global supply availability
     availability_gg REAL,   -- total world supply available, in gigagrams (Gg); NULL if not yet sourced
 

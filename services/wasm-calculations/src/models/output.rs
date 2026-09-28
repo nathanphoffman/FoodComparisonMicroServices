@@ -112,4 +112,6 @@ pub struct ScoredRow {
     pub land_use_detail:      LandUseDetail,
     pub sentient_harm_detail: SentientHarmDetail,
     pub kill_detail:          Option<KillDetail>,
+    /// Wild fish killed per kg for fishmeal / fish oil (for the tooltip); None if none.
+    pub wild_fish_deaths_per_kg: Option<f64>,
 }

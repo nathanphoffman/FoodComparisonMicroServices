@@ -59,6 +59,13 @@ public class FoodRow
     public double? BycatchNeuronCount { get; set; }
     public double? BycatchWeightKg    { get; set; }
 
+    // Wild fish killed for fishmeal / fish oil — per kg of product, or summed
+    // over an animal's feed (NULL when none)
+    public double? WildFishKgPerKg       { get; set; }
+    public double? WildFishNeuronCount   { get; set; }
+    public double? WildFishWeightKg      { get; set; }
+    public double? WildFishLifespanYears { get; set; }
+
     // Feed aggregate columns (from the self-join)
     public double? FeedWaterPerKg                { get; set; }
     public double? FeedEmissionsPerKg            { get; set; }

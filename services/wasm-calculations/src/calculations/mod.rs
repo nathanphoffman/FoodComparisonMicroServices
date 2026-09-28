@@ -213,6 +213,7 @@ fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFactors) -> Scor
         land_use_detail,
         sentient_harm_detail,
         kill_detail: eco::compute_kill_detail(food, query),
+        wild_fish_deaths_per_kg: eco::wild_fish_deaths_per_kg(food),
     }
 }
 

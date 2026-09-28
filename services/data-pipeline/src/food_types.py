@@ -87,6 +87,11 @@ class Plant(TypedDict):
     tillage_events_per_year: list[SourcedNumber] | None
     co2_capture_kg_ha_yr: list[SourcedNumber] | None
     cooked_weight_ratio: list[SourcedNumber] | None
+    # Wild fish killed to make this product (fishmeal, fish oil); absent otherwise.
+    wild_fish_kg_per_kg: NotRequired[list[SourcedNumber] | None]
+    wild_fish_neuron_count: NotRequired[list[SourcedNumber] | None]
+    wild_fish_weight_kg: NotRequired[list[SourcedNumber] | None]
+    wild_fish_lifespan_years: NotRequired[list[SourcedNumber] | None]
 
 
 class Source(TypedDict):

@@ -99,6 +99,7 @@ export const MEAL_STUB: RawFood = {
     feed_pesticide_insect_paf: null, feed_pesticide_terrestrial_paf: null, feed_pesticide_bee_hazard: null,
     feed_pesticide_kg_per_kg_food: null, feed_land_m2_per_kg: null,
     bycatch_amount: null, bycatch_food_slug: null, bycatch_neuron_count: null, bycatch_weight_kg: null,
+    wild_fish_kg_per_kg: null, wild_fish_neuron_count: null, wild_fish_weight_kg: null, wild_fish_lifespan_years: null,
     availability_gg: null, sentient_harm_explanation: null, land_types: null,
     category: null, tags: [],
 };

@@ -595,7 +595,55 @@
         "tillage_events_per_year": null,
         "co2_capture_kg_ha_yr": null,
         "pesticides": [],
-        "availability_gg": null
+        "availability_gg": null,
+        "wild_fish_kg_per_kg": [
+            {
+                "value": 2.55,
+                "confidence": 3,
+                "source": {
+                    "id": 393,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11482318/",
+                    "title": "Majluf, Matthews, Pauly, Skerritt & Palomares (2024) — A review of the global use of fishmeal and fish oil and the Fish In:Fish Out metric (Science Advances; PMC11482318)",
+                    "note": "Fishmeal — wild_fish_kg_per_kg: whole fish → 22.5% fishmeal + 5% fish oil by weight (industry averages); fish split between the two by mass, so each kg of meal or oil takes 1 ÷ 0.275 = 3.64 kg of fish. ~30% of fishmeal comes from trimmings of fish already caught for food, so only 70% is from fish killed for reduction: 3.64 × 0.70 = 2.55 kg whole wild fish per kg fishmeal."
+                }
+            }
+        ],
+        "wild_fish_neuron_count": [
+            {
+                "value": 15600000.0,
+                "confidence": 2,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Peruvian anchoveta (the main reduction fish) — neuron_count ESTIMATE using the same method as the other fish (source 384): 17.7 g body → 354.73 × (17.7/177.15)^0.5 = 112 mg brain → 1.669 × 112^0.706 = 46.7 M brain cells → ÷3 = 15.6 M neurons."
+                }
+            }
+        ],
+        "wild_fish_weight_kg": [
+            {
+                "value": 0.0177,
+                "confidence": 3,
+                "source": {
+                    "id": 392,
+                    "url": "https://fishbase.se/summary/Engraulis-ringens",
+                    "title": "FishBase — Engraulis ringens (Peruvian anchoveta) species summary",
+                    "note": "Peruvian anchoveta — FishBase length-weight W = 0.00457 × 14^3.13 = 17.7 g at the common length of 14 cm."
+                }
+            }
+        ],
+        "wild_fish_lifespan_years": [
+            {
+                "value": 3,
+                "confidence": 3,
+                "source": {
+                    "id": 392,
+                    "url": "https://fishbase.se/summary/Engraulis-ringens",
+                    "title": "FishBase — Engraulis ringens (Peruvian anchoveta) species summary",
+                    "note": "Peruvian anchoveta — max reported age 3 years (FishBase)."
+                }
+            }
+        ]
     },
     {
         "id": 55,
@@ -695,6 +743,54 @@
         "tillage_events_per_year": null,
         "co2_capture_kg_ha_yr": null,
         "pesticides": [],
-        "availability_gg": null
+        "availability_gg": null,
+        "wild_fish_kg_per_kg": [
+            {
+                "value": 1.78,
+                "confidence": 3,
+                "source": {
+                    "id": 393,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11482318/",
+                    "title": "Majluf, Matthews, Pauly, Skerritt & Palomares (2024) — A review of the global use of fishmeal and fish oil and the Fish In:Fish Out metric (Science Advances; PMC11482318)",
+                    "note": "Fish oil — wild_fish_kg_per_kg: whole fish → 22.5% fishmeal + 5% fish oil by weight (industry averages); fish split between the two by mass, so each kg of meal or oil takes 1 ÷ 0.275 = 3.64 kg of fish. ~51% of fish oil comes from trimmings, so 49% is from fish killed for reduction: 3.64 × 0.49 = 1.78 kg whole wild fish per kg fish oil."
+                }
+            }
+        ],
+        "wild_fish_neuron_count": [
+            {
+                "value": 15600000.0,
+                "confidence": 2,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Peruvian anchoveta (the main reduction fish) — neuron_count ESTIMATE using the same method as the other fish (source 384): 17.7 g body → 354.73 × (17.7/177.15)^0.5 = 112 mg brain → 1.669 × 112^0.706 = 46.7 M brain cells → ÷3 = 15.6 M neurons."
+                }
+            }
+        ],
+        "wild_fish_weight_kg": [
+            {
+                "value": 0.0177,
+                "confidence": 3,
+                "source": {
+                    "id": 392,
+                    "url": "https://fishbase.se/summary/Engraulis-ringens",
+                    "title": "FishBase — Engraulis ringens (Peruvian anchoveta) species summary",
+                    "note": "Peruvian anchoveta — FishBase length-weight W = 0.00457 × 14^3.13 = 17.7 g at the common length of 14 cm."
+                }
+            }
+        ],
+        "wild_fish_lifespan_years": [
+            {
+                "value": 3,
+                "confidence": 3,
+                "source": {
+                    "id": 392,
+                    "url": "https://fishbase.se/summary/Engraulis-ringens",
+                    "title": "FishBase — Engraulis ringens (Peruvian anchoveta) species summary",
+                    "note": "Peruvian anchoveta — max reported age 3 years (FishBase)."
+                }
+            }
+        ]
     }
 ]

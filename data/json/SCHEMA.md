@@ -293,6 +293,16 @@ Plants get environmental impact data for crop production.
                              // For processed feeds (soybean meal, fishmeal) include the milling /
                              //   reduction step, since the animal eats the processed product.
 
+  // --- Wild fish killed (reduction-fishery products: fishmeal, fish oil) ---
+  // Omit for every other plant. The pipeline also sums these over an animal's feed
+  // (kg_feed_per_kg_output × wild_fish_kg_per_kg), so salmon etc. are charged for
+  // the fish in their feed. Scored as DIRECT kill (fish caught on purpose).
+  "wild_fish_kg_per_kg": [...],      // SourcedValue  kg whole wild fish killed / kg product
+                             // Exclude the share made from trimmings of fish caught for food.
+  "wild_fish_neuron_count": [...],   // SourcedValue  neurons of one source fish (e.g. anchoveta)
+  "wild_fish_weight_kg": [...],      // SourcedValue  kg body weight of one source fish
+  "wild_fish_lifespan_years": [...], // SourcedValue  years, used in the intelligence score
+
   // --- Per-pesticide breakdown ---
   "pesticides": [
     {

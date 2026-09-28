@@ -58,6 +58,13 @@ pub struct FoodRow {
     pub bycatch_neuron_count: Option<f64>,
     pub bycatch_weight_kg:    Option<f64>,
 
+    // Wild fish killed for fishmeal / fish oil — per kg of product, or summed
+    // over an animal's feed. Intentional kills, so they count as direct kill.
+    pub wild_fish_kg_per_kg:      Option<f64>,
+    pub wild_fish_neuron_count:   Option<f64>,
+    pub wild_fish_weight_kg:      Option<f64>,
+    pub wild_fish_lifespan_years: Option<f64>,
+
     // Feed aggregate columns (self-join result in the DB query)
     pub feed_water_per_kg:              Option<f64>,
     pub feed_emissions_per_kg:          Option<f64>,

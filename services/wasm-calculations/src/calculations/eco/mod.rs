@@ -111,12 +111,39 @@ fn offspring_captivity_years(food: &FoodRow) -> f64 {
 }
 
 /// Deaths per kg of food: the producing animal plus any offspring killed to keep
-/// it in production (dairy calves, culled male chicks). Offspring are scored as
-/// the same species as the parent.
+/// it in production (dairy calves, culled male chicks), plus wild fish killed for
+/// fishmeal / fish oil. Offspring are scored as the same species as the parent.
 pub(super) fn compute_direct_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
-    intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
+    let own = intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
         intelligence * (1.0 + offspring_deaths(food)) / output_kg
-    })
+    });
+    own + wild_fish_kill(food, query)
+}
+
+/// Number of wild fish killed per kg of food, for fishmeal / fish oil and for
+/// animals fed them. None when the food involves no reduction fishery.
+pub(super) fn wild_fish_deaths_per_kg(food: &FoodRow) -> Option<f64> {
+    match (food.wild_fish_kg_per_kg, food.wild_fish_weight_kg) {
+        (Some(fish_kg), Some(fish_weight_kg)) if fish_kg > 0.0 && fish_weight_kg > 0.0 => Some(fish_kg / fish_weight_kg),
+        _ => None,
+    }
+}
+
+/// Intelligence-weighted kill of the wild fish behind fishmeal / fish oil.
+/// These fish are caught on purpose, so this is direct kill, not accidental harm.
+fn wild_fish_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
+    let (Some(deaths_per_kg), Some(neuron_count)) = (wild_fish_deaths_per_kg(food), food.wild_fish_neuron_count) else {
+        return 0.0;
+    };
+    let fish_weight_kg = food.wild_fish_weight_kg.unwrap_or(0.0);
+    deaths_per_kg * compute_intelligence(
+        neuron_count,
+        fish_weight_kg,
+        food.wild_fish_lifespan_years.unwrap_or(1.0),
+        query.neuron_exponent,
+        query.weight_exponent,
+        query.final_intelligence_exponent,
+    )
 }
 
 // ── Captive sentience ─────────────────────────────────────────────────────────

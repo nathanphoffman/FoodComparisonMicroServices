@@ -141,14 +141,17 @@ function KillRows({ killDetail }: { killDetail: KillDetail }) {
   );
 }
 
-export function IntelligenceTooltip({ detail, killDetail, explanation, children }: { detail: IntelligenceDetail; killDetail?: KillDetail | null; explanation?: string | null; children: React.ReactNode }) {
+export function IntelligenceTooltip({ detail, killDetail, wildFishDeathsPerKg, explanation, children }: { detail: IntelligenceDetail; killDetail?: KillDetail | null; wildFishDeathsPerKg?: number | null; explanation?: string | null; children: React.ReactNode }) {
   return (
     <Tooltip content={
       <TooltipSection title="Intelligence score">
-        <TooltipRow label="Neuron count" value={formatNeurons(detail.neuronCount)} />
+        {(detail.neuronCount > 0 || !wildFishDeathsPerKg) && <TooltipRow label="Neuron count" value={formatNeurons(detail.neuronCount)} />}
         {detail.weightKg != null && <TooltipRow label="Animal weight" value={`${detail.weightKg} kg`} />}
         {detail.yieldFraction != null && <TooltipRow label="Yield fraction" value={`${(detail.yieldFraction * PERCENT_MULTIPLIER).toFixed(0)}%`} />}
         {killDetail && <KillRows killDetail={killDetail} />}
+        {wildFishDeathsPerKg != null && (
+          <TooltipRow label="Wild fish killed for fishmeal / oil" value={`${formatCount(wildFishDeathsPerKg)} per kg`} />
+        )}
         <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-500 text-xs">neuron and weight exponents adjustable via Intelligence Math sliders</div>
         <ExplanationNote text={explanation} />
       </TooltipSection>
