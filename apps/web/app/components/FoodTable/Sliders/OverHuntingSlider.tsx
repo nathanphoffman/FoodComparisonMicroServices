@@ -7,9 +7,10 @@ import { OverHuntingModal } from "../../Modals/OverHuntingModal";
 
 // Keep in sync with default_over_hunting_factor() in Rust.
 export const DEFAULT_OVER_HUNTING = 2.5;
+export const MAX_OVER_HUNTING = 5;
 
-export function OverHuntingSlider({ onChange }: { onChange?: (v: number) => void }) {
-    const [value, setValue] = useState(DEFAULT_OVER_HUNTING);
+export function OverHuntingSlider({ onChange, initialValue = DEFAULT_OVER_HUNTING }: { onChange?: (v: number) => void; initialValue?: number }) {
+    const [value, setValue] = useState(initialValue);
     const [showModal, setShowModal] = useState(false);
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
@@ -25,7 +26,7 @@ export function OverHuntingSlider({ onChange }: { onChange?: (v: number) => void
                 <span>Over-Hunting Factor</span>
                 <span className="font-medium text-neutral-700">{value.toFixed(1)}×</span>
             </div>
-            <Slider min={1} max={5} step={0.5} value={value} onChange={handleChange} />
+            <Slider min={1} max={MAX_OVER_HUNTING} step={0.5} value={value} onChange={handleChange} />
             <div className="text-xs text-neutral-400 mt-0.5">
                 divides the Improvement score of wild-caught animals
                 <button onClick={() => setShowModal(true)} className="ml-1.5 text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">more info</button>

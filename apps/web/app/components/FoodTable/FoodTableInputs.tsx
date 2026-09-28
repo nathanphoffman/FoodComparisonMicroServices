@@ -14,6 +14,8 @@ import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
 import type { LandTypes } from '@/lib/queries/commonFoods';
 import type { SortKey } from './FoodTableSort';
 import { useIsMobile } from '../../hooks/useIsMobile';
+import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
+import type { Preset } from './FoodTablePresets';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
@@ -126,80 +128,89 @@ export function FoodTableInputs({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isMobile]);
 
-    function handleWeights(weights: FoodWeights) {
-        const next = { ...sliderValues, weights };
+    // Presets reset the sliders by remounting them (sliderResetKey) with the
+    // preset's values. Any manual change afterwards clears the highlight.
+    const [activePreset, setActivePreset] = useState<string | null>(DEFAULT_PRESET_KEY);
+    const [sliderResetKey, setSliderResetKey] = useState(0);
+    const [scorePriorityLevels, setScorePriorityLevels] = useState(
+        () => PRESETS.find(preset => preset.key === DEFAULT_PRESET_KEY)!.scorePriorityLevels
+    );
+
+    function commit(next: SliderValues) {
         setSliderValues(next);
         onSliderValuesChange(next);
+    }
+    function commitManual(next: SliderValues) {
+        setActivePreset(null);
+        commit(next);
+    }
+    function handlePreset(preset: Preset) {
+        // Keep the custom meal; everything else goes back to defaults first.
+        commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes, mealIngredients: sliderValues.mealIngredients });
+        setScorePriorityLevels(preset.scorePriorityLevels);
+        setSliderResetKey(key => key + 1);
+        setActivePreset(preset.key);
+    }
+
+    function handleWeights(weights: FoodWeights) {
+        const next = { ...sliderValues, weights };
+        commitManual(next);
     }
     function handleScorePriorities(scorePriorities: ScorePriorities) {
         const next = { ...sliderValues, scorePriorities };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleGreenWater(greenWaterWeight: number) {
         const next = { ...sliderValues, greenWaterWeight };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleGreyWater(greyWaterWeight: number) {
         const next = { ...sliderValues, greyWaterWeight };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleKillMultiplier(killMultiplier: number) {
         const next = { ...sliderValues, killMultiplier };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleCaptivityMultiplier(captivityMultiplier: number) {
         const next = { ...sliderValues, captivityMultiplier };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleNeuronExponent(neuronExponent: number) {
         const next = { ...sliderValues, neuronExponent };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleWeightExponent(weightExponent: number) {
         const next = { ...sliderValues, weightExponent };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleFinalIntelligenceExponent(finalIntelligenceExponent: number) {
         const next = { ...sliderValues, finalIntelligenceExponent };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleZeroBetterMultiplier(zeroBetterMultiplier: number) {
         const next = { ...sliderValues, zeroBetterMultiplier };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleLandTypeWeights(landTypeWeights: LandTypes) {
         const next = { ...sliderValues, landTypeWeights };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleWinDampening(winDampening: number) {
         const next = { ...sliderValues, winDampening };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleOverHunting(overHuntingFactor: number) {
         const next = { ...sliderValues, overHuntingFactor };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleOverGathering(overGatheringFactor: number) {
         const next = { ...sliderValues, overGatheringFactor };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commitManual(next);
     }
     function handleMealChange(mealIngredients: MealIngredient[]) {
         const next = { ...sliderValues, mealIngredients };
-        setSliderValues(next);
-        onSliderValuesChange(next);
+        commit(next);
     }
 
     function handleToggle(key: ColumnKey) {
@@ -221,6 +232,7 @@ export function FoodTableInputs({
 
     return (
         <>
+            <FoodTablePresets selected={activePreset} onSelect={handlePreset} />
             <button
                 onClick={() => setShowControls(v => !v)}
                 className="md:hidden mb-3 w-full text-sm text-neutral-600 border border-neutral-200 rounded px-3 py-2 flex items-center justify-between bg-white"
@@ -243,6 +255,11 @@ export function FoodTableInputs({
                     onWinDampeningChange={handleWinDampening}
                     onOverHuntingChange={handleOverHunting}
                     onOverGatheringChange={handleOverGathering}
+                    resetKey={sliderResetKey}
+                    scorePriorityLevels={scorePriorityLevels}
+                    killMultiplier={sliderValues.killMultiplier}
+                    captivityMultiplier={sliderValues.captivityMultiplier}
+                    overHuntingFactor={sliderValues.overHuntingFactor}
                     neuronExponent={sliderValues.neuronExponent}
                     weightExponent={sliderValues.weightExponent}
                     finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
@@ -284,8 +301,7 @@ export function FoodTableInputs({
                         value={sliderValues.referenceSlug}
                         onChange={e => {
                             const next = { ...sliderValues, referenceSlug: e.target.value };
-                            setSliderValues(next);
-                            onSliderValuesChange(next);
+                            commitManual(next);
                         }}
                         className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
                     >

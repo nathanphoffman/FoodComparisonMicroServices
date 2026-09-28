@@ -36,6 +36,11 @@ export function FoodTableSliders({
     onWinDampeningChange,
     onOverHuntingChange,
     onOverGatheringChange,
+    resetKey,
+    scorePriorityLevels,
+    killMultiplier,
+    captivityMultiplier,
+    overHuntingFactor,
     neuronExponent,
     weightExponent,
     finalIntelligenceExponent,
@@ -54,6 +59,13 @@ export function FoodTableSliders({
     onWinDampeningChange?: (v: number) => void;
     onOverHuntingChange?: (v: number) => void;
     onOverGatheringChange?: (v: number) => void;
+    // Changing resetKey remounts every slider so it picks up its starting value
+    // again (used by presets). Sliders not listed here start at their defaults.
+    resetKey: number;
+    scorePriorityLevels: ScorePriorities;
+    killMultiplier: number;
+    captivityMultiplier: number;
+    overHuntingFactor: number;
     neuronExponent: number;
     weightExponent: number;
     finalIntelligenceExponent: number;
@@ -61,10 +73,10 @@ export function FoodTableSliders({
     return (
         <div className="flex flex-col gap-3 mb-4">
             <ExpandableSliderGroup label="Compare By">
-                <WeightSliders onChange={onChange} />
+                <WeightSliders key={`WeightSliders-${resetKey}`} onChange={onChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Score Priorities">
-                <ScorePrioritySliders onChange={onScorePrioritiesChange} />
+                <ScorePrioritySliders key={`ScorePrioritySliders-${resetKey}`} onChange={onScorePrioritiesChange} defaultLevels={scorePriorityLevels} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <div className="flex flex-col gap-3 w-full">
@@ -74,27 +86,27 @@ export function FoodTableSliders({
                         finalIntelligenceExponent={finalIntelligenceExponent}
                     />
                     <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                        <NeuronExponentSlider onChange={onNeuronExponentChange} />
-                        <WeightExponentSlider onChange={onWeightExponentChange} />
-                        <FinalIntelligenceExponentSlider onChange={onFinalIntelligenceExponentChange} />
-                        <PhilosophicalKillSlider onChange={onPhilosophicalKillChange} />
-                        <CaptivitySlider onChange={onCaptivityChange} />
-                        <ZeroBetterMultiplierSlider onChange={onZeroBetterMultiplierChange} />
+                        <NeuronExponentSlider key={`NeuronExponentSlider-${resetKey}`} onChange={onNeuronExponentChange} />
+                        <WeightExponentSlider key={`WeightExponentSlider-${resetKey}`} onChange={onWeightExponentChange} />
+                        <FinalIntelligenceExponentSlider key={`FinalIntelligenceExponentSlider-${resetKey}`} onChange={onFinalIntelligenceExponentChange} />
+                        <PhilosophicalKillSlider key={`PhilosophicalKillSlider-${resetKey}`} onChange={onPhilosophicalKillChange} initialValue={killMultiplier} />
+                        <CaptivitySlider key={`CaptivitySlider-${resetKey}`} onChange={onCaptivityChange} initialValue={captivityMultiplier} />
+                        <ZeroBetterMultiplierSlider key={`ZeroBetterMultiplierSlider-${resetKey}`} onChange={onZeroBetterMultiplierChange} />
                     </div>
                 </div>
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Water">
-                <GreyWaterSlider onChange={onGreyWaterChange} />
-                <GreenWaterSlider onChange={onGreenWaterChange} />
+                <GreyWaterSlider key={`GreyWaterSlider-${resetKey}`} onChange={onGreyWaterChange} />
+                <GreenWaterSlider key={`GreenWaterSlider-${resetKey}`} onChange={onGreenWaterChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Land Use">
-                <LandTypeSliders onChange={onLandTypeWeightsChange} />
+                <LandTypeSliders key={`LandTypeSliders-${resetKey}`} onChange={onLandTypeWeightsChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Opinionated">
                 <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
-                    <WinDampeningSlider onChange={onWinDampeningChange} />
-                    <OverHuntingSlider onChange={onOverHuntingChange} />
-                    <OverGatheringSlider onChange={onOverGatheringChange} />
+                    <WinDampeningSlider key={`WinDampeningSlider-${resetKey}`} onChange={onWinDampeningChange} />
+                    <OverHuntingSlider key={`OverHuntingSlider-${resetKey}`} onChange={onOverHuntingChange} initialValue={overHuntingFactor} />
+                    <OverGatheringSlider key={`OverGatheringSlider-${resetKey}`} onChange={onOverGatheringChange} />
                 </div>
             </ExpandableSliderGroup>
         </div>
