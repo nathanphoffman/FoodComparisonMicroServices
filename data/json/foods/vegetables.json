@@ -2147,5 +2147,365 @@
                 }
             }
         ]
+    },
+    {
+        "id": 93,
+        "slug": "potato-starch",
+        "name": "Potato Starch",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "processed",
+            "starch"
+        ],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "temperate_grassland": 0.3
+        },
+        "land_types_note": "Same land as the potato it is made from.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.32,
+                    "fat": 0.002,
+                    "sat_fat": 0,
+                    "protein": 0.003,
+                    "fiber": 0,
+                    "sodium": 0,
+                    "carbs": 0.829,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 418,
+                    "url": "https://world.openfoodfacts.org/product/3258561100104",
+                    "title": "Open Food Facts — Belle France potato starch (3258561100104)",
+                    "note": "Potato Starch — nutrition: Belle France potato starch label per 100 g: 332 kcal, fat 0.2 g, protein 0.3 g, carbs 82.9 g, sugars 0, salt 0; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 3.37,
+                    "fat": 0,
+                    "sat_fat": 0,
+                    "protein": 0.001,
+                    "fiber": 0.001,
+                    "sodium": 0.16,
+                    "carbs": 0.827,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 419,
+                    "url": "https://world.openfoodfacts.org/product/8713445021012",
+                    "title": "Open Food Facts — Bioculinair organic potato starch (8713445021012)",
+                    "note": "Potato Starch — nutrition: Bioculinair organic potato starch label per 100 g: 337 kcal, protein 0.1 g, fibre 0.1 g, carbs 82.7 g, sodium 16 mg; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 3.36,
+                    "fat": 0.001,
+                    "sat_fat": 0,
+                    "protein": 0.006,
+                    "fiber": 0.004,
+                    "sodium": 0,
+                    "carbs": 0.83,
+                    "sugar": 0.002,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 420,
+                    "url": "https://world.openfoodfacts.org/product/5906827020106",
+                    "title": "Open Food Facts — Melvit potato starch (5906827020106)",
+                    "note": "Potato Starch — nutrition: Melvit potato starch label per 100 g: 336 kcal, fat 0.1 g, protein 0.6 g, fibre 0.4 g, carbs 83 g, sugars 0.2 g; per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 418,
+                    "url": "https://world.openfoodfacts.org/product/3258561100104",
+                    "title": "Open Food Facts — Belle France potato starch (3258561100104)",
+                    "note": "Potato Starch — yield_fraction: 1.0, eaten/used as purchased; yield_kg_ha is already in kg potato starch."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 4400,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — yield_kg_ha: Potato entry 22000 kg/ha / 5.0 = 4400. 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            },
+            {
+                "value": 10100,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 160,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/fx719m44h/6q184c88z/v118t7605/pots0924.pdf",
+                    "title": "USDA NASS — Potatoes 2023 Summary (September 2024)",
+                    "note": "Potato Starch — yield_kg_ha: Potato entry 50500 kg/ha / 5.0 = 10100. 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1250,
+                "confidence": 2,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Potato Starch — water_per_kg: Potato entry 250 L/kg x 5.0 = 1250 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            },
+            {
+                "value": 1990,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato Starch — water_per_kg: Potato entry 398 L/kg x 5.0 = 1990 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 940,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Potato Starch — green_water_per_kg: Potato entry 188 L/kg x 5.0 = 940 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            },
+            {
+                "value": 245,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato Starch — green_water_per_kg: Potato entry 49 L/kg x 5.0 = 245 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 245,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Potato Starch — blue_water_per_kg: Potato entry 49 L/kg x 5.0 = 245 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            },
+            {
+                "value": 445,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato Starch — blue_water_per_kg: Potato entry 89 L/kg x 5.0 = 445 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 315,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Potato Starch — grey_water_per_kg: Potato entry 63 L/kg x 5.0 = 315 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            },
+            {
+                "value": 1300,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Potato Starch — grey_water_per_kg: Potato entry 260 L/kg x 5.0 = 1300 (crop water only). 5.0 kg fresh potatoes per kg potato starch: Starch Europe / CESPU (source 417) — the EU processes ~7.5 Mt of starch potatoes into ~1.5 Mt of potato starch a year. Starch potatoes carry more starch than the table potatoes in the potato entry, so using that entry's yield slightly overstates land; the co-products (potato protein, pulp, juice) are not credited. Confidence 2."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 4.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — soil_erosion: per-hectare value of the potato it is made from, copied from the potato entry (4.5); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 4,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — pesticide_kg_ha: per-hectare value of the potato it is made from, copied from the potato entry (4); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 130,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — fertilizer_kg_ha: per-hectare value of the potato it is made from, copied from the potato entry (130); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.52,
+                "confidence": 3,
+                "source": {
+                    "id": 416,
+                    "url": "https://starch.eu/wp-content/uploads/2022/04/LCA-2022-Summary-Report-Starch-Europe-FINAL-130422.pdf",
+                    "title": "Starch Europe (2022) — LCA of starch products for the European starch industry, summary report",
+                    "note": "Potato Starch — emissions_per_kg: Starch Europe 2022 LCA, native starch from potatoes 632.4 kg CO2e per tonne dry substance (agriculture 401.3, transport 17.0, starch slurry 55.8, native starch process 158.3), cradle to factory gate; economic allocation for agriculture, mass allocation in the starch plant. x ~0.83 dry substance in starch as sold (~83 g carbohydrate per 100 g) = 0.52 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — tillage_events_per_year: per-hectare value of the potato it is made from, copied from the potato entry (2); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Potato Starch — co2_capture_kg_ha_yr: per-hectare value of the potato it is made from, copied from the potato entry (1000); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.34,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Potato Starch — pesticides.Chlorpyrifos.kg_ha: copied from the potato entry (0.34)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Potato Starch — pesticides.Imidacloprid.kg_ha: copied from the potato entry (0.15)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.2,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Potato Starch — pesticides.Mancozeb.kg_ha: copied from the potato entry (1.2)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Potato Starch — pesticides.Metolachlor.kg_ha: copied from the potato entry (0.25)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1500,
+                "confidence": 2,
+                "source": {
+                    "id": 417,
+                    "url": "https://starch.eu/priority/joint-starch-europe-cespu-statement-the-eu-potato-starch-value-chain-sustainability-and-the-eu-green-deal/",
+                    "title": "Starch Europe & CESPU — Joint statement: The EU potato starch value chain (7.5 Mt starch potatoes -> 1.5 Mt potato starch per year)",
+                    "note": "Potato Starch — availability_gg: EU potato starch production ~1.5 Mt/yr (Starch Europe / CESPU). The EU makes most of the world's potato starch, but China and others add more, so this is a lower bound for the world. Confidence 2."
+                }
+            }
+        ]
     }
 ]

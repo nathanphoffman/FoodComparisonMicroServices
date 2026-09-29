@@ -2346,5 +2346,671 @@
                 }
             }
         ]
+    },
+    {
+        "id": 94,
+        "slug": "rice-starch",
+        "name": "Rice Starch",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "processed",
+            "starch"
+        ],
+        "land_types": {
+            "wetland": 0.9,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Same land as the rice it is made from.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.81,
+                    "fat": 0.0005,
+                    "sat_fat": 0.0001,
+                    "protein": 0.0026,
+                    "fiber": 0.009,
+                    "sodium": 0.09,
+                    "carbs": 0.9122,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Rice Starch — nutrition: no rice starch label found (USDA SR Legacy and Open Food Facts have none), so USDA FDC 169698 'Cornstarch' (SR 20027) is used as a stand-in: both are near-pure starch. Per 100 g: 381 kcal, fat 0.05 g, protein 0.26 g, fiber 0.9 g, sodium 9 mg, carbs 91.22 g; per gram. Confidence 3."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Rice Starch — yield_fraction: 1.0, eaten/used as purchased; yield_kg_ha is already in kg rice starch."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 2444,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — yield_kg_ha: Rice entry 3055 kg/ha / 1.25 = 2444. 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            },
+            {
+                "value": 4886,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Rice Starch — yield_kg_ha: Rice entry 6107 kg/ha / 1.25 = 4886. 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3125,
+                "confidence": 2,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Rice Starch — water_per_kg: Rice entry 2500 L/kg x 1.25 = 3125 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            },
+            {
+                "value": 2625,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Starch — water_per_kg: Rice entry 2100 L/kg x 1.25 = 2625 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2089,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Starch — green_water_per_kg: Rice entry 1671 L/kg x 1.25 = 2089 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            },
+            {
+                "value": 762,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Starch — green_water_per_kg: Rice entry 610 L/kg x 1.25 = 762 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 681,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Starch — blue_water_per_kg: Rice entry 545 L/kg x 1.25 = 681 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            },
+            {
+                "value": 1528,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Starch — blue_water_per_kg: Rice entry 1222 L/kg x 1.25 = 1528 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 355,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Starch — grey_water_per_kg: Rice entry 284 L/kg x 1.25 = 355 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            },
+            {
+                "value": 335,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Starch — grey_water_per_kg: Rice entry 268 L/kg x 1.25 = 335 (crop water only). 1.25 kg milled rice per kg rice starch: milled rice is ~78% carbohydrate (BENEO, source 425); wet milling recovers ~85-90% of it as starch sold at ~85% dry matter -> ~0.8 kg starch per kg rice. Rice protein is a co-product of the same process (BENEO) but is not credited here; it is small by mass. Confidence 2."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — soil_erosion: per-hectare value of the rice it is made from, copied from the rice entry (1); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.8,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — pesticide_kg_ha: per-hectare value of the rice it is made from, copied from the rice entry (1.8); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — fertilizer_kg_ha: per-hectare value of the rice it is made from, copied from the rice entry (100); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 5.74,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Rice Starch — emissions_per_kg: rice entry 4.45 kg CO2e/kg milled rice x 1.25 = 5.56, plus starch processing ~0.18 (Starch Europe 2022, source 416: starch slurry 55.8 + native starch process 158.3 kg CO2e per t dry substance, x 0.85) = 5.74. Derived; no rice-starch-specific LCA found."
+                }
+            },
+            {
+                "value": 5.74,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Rice Starch — emissions_per_kg: rice entry 4.45 kg CO2e/kg milled rice x 1.25 = 5.56, plus starch processing ~0.18 (Starch Europe 2022, source 416: starch slurry 55.8 + native starch process 158.3 kg CO2e per t dry substance, x 0.85) = 5.74. Derived; no rice-starch-specific LCA found."
+                }
+            },
+            {
+                "value": 2.02,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 312,
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378429014002573",
+                    "title": "Brodt et al. (2014) — Life cycle greenhouse gas emissions in California rice production (Field Crops Research 169: 89–98)",
+                    "note": "Rice Starch — emissions_per_kg: rice entry 1.47 kg CO2e/kg milled rice x 1.25 = 1.84, plus starch processing ~0.18 (Starch Europe 2022, source 416: starch slurry 55.8 + native starch process 158.3 kg CO2e per t dry substance, x 0.85) = 2.02. Derived; no rice-starch-specific LCA found."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — tillage_events_per_year: per-hectare value of the rice it is made from, copied from the rice entry (1); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 500,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Starch — co2_capture_kg_ha_yr: per-hectare value of the rice it is made from, copied from the rice entry (500); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Starch — pesticides.Carbaryl.kg_ha: copied from the rice entry (0.12)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.18,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Starch — pesticides.2,4-D.kg_ha: copied from the rice entry (0.18)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Starch — pesticides.Propiconazole.kg_ha: copied from the rice entry (0.05)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 410,
+                "confidence": 1,
+                "source": {
+                    "id": 427,
+                    "url": "https://www.gminsights.com/industry-analysis/rice-starch-market",
+                    "title": "Global Market Insights — Rice starch market size (2024)",
+                    "note": "Rice Starch — availability_gg: no production statistic found. Market reports put the 2024 global rice starch market at ~USD 620 million (search result; page not directly readable); at an assumed ~USD 1,500 per tonne that is ~410 kt = 410 Gg. Rough, confidence 1."
+                }
+            }
+        ]
+    },
+    {
+        "id": 95,
+        "slug": "rice-protein",
+        "name": "Rice Protein",
+        "type": "plant",
+        "category": "grains",
+        "human_food": 1,
+        "tags": [
+            "processed"
+        ],
+        "land_types": {
+            "wetland": 0.9,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Same land as the rice it is made from.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.733,
+                    "fat": 0.0367,
+                    "sat_fat": 0.01,
+                    "protein": 0.8,
+                    "fiber": 0.0367,
+                    "sodium": 0.005,
+                    "carbs": 0.0367,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 421,
+                    "url": "https://world.openfoodfacts.org/product/5060343744226",
+                    "title": "Open Food Facts — Bulk brown rice protein (5060343744226)",
+                    "note": "Rice Protein — nutrition: Bulk brown rice protein label per 100 g: 373 kcal, fat 3.7 g, sat 1 g, protein 80 g, fibre 3.7 g, carbs 3.7 g, sugars 0; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 3.91,
+                    "fat": 0.05,
+                    "sat_fat": 0.02,
+                    "protein": 0.84,
+                    "fiber": 0.032,
+                    "sodium": 1.0,
+                    "carbs": 0.01,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 422,
+                    "url": "https://world.openfoodfacts.org/product/8718774006310",
+                    "title": "Open Food Facts — Body & Fit rice protein (8718774006310)",
+                    "note": "Rice Protein — nutrition: Body & Fit rice protein label per 100 g: 391 kcal, fat 5 g, sat 2 g, protein 84 g, fibre 3.2 g, sodium 100 mg, carbs 1 g; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 4.06,
+                    "fat": 0.038,
+                    "sat_fat": 0.01,
+                    "protein": 0.8,
+                    "fiber": 0.037,
+                    "sodium": 0.39,
+                    "carbs": 0.11,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 423,
+                    "url": "https://world.openfoodfacts.org/product/7350039930735",
+                    "title": "Open Food Facts — Superfruit rice protein powder (7350039930735)",
+                    "note": "Rice Protein — nutrition: Superfruit rice protein powder label per 100 g: 406 kcal, fat 3.8 g, sat 1 g, protein 80 g, fibre 3.7 g, sodium 39 mg, carbs 11 g; per gram."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 421,
+                    "url": "https://world.openfoodfacts.org/product/5060343744226",
+                    "title": "Open Food Facts — Bulk brown rice protein (5060343744226)",
+                    "note": "Rice Protein — yield_fraction: 1.0, eaten/used as purchased; yield_kg_ha is already in kg rice protein."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 1697,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — yield_kg_ha: Rice entry 3055 kg/ha / 1.8 = 1697. 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            },
+            {
+                "value": 3393,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 120,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/k3569432s/ns065v292/8910md644/cropan24.pdf",
+                    "title": "USDA NASS — Crop Production 2023 Summary (January 2024)",
+                    "note": "Rice Protein — yield_kg_ha: Rice entry 6107 kg/ha / 1.8 = 3393. 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 4500,
+                "confidence": 2,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Rice Protein — water_per_kg: Rice entry 2500 L/kg x 1.8 = 4500 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            },
+            {
+                "value": 3780,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Protein — water_per_kg: Rice entry 2100 L/kg x 1.8 = 3780 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3008,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Protein — green_water_per_kg: Rice entry 1671 L/kg x 1.8 = 3008 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            },
+            {
+                "value": 1098,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Protein — green_water_per_kg: Rice entry 610 L/kg x 1.8 = 1098 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 981,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Protein — blue_water_per_kg: Rice entry 545 L/kg x 1.8 = 981 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            },
+            {
+                "value": 2200,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Protein — blue_water_per_kg: Rice entry 1222 L/kg x 1.8 = 2200 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 511,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Rice Protein — grey_water_per_kg: Rice entry 284 L/kg x 1.8 = 511 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            },
+            {
+                "value": 482,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Rice Protein — grey_water_per_kg: Rice entry 268 L/kg x 1.8 = 482 (crop water only). 1.8 kg milled rice per kg rice protein (economic allocation): CarbonCloud (source 424) puts rice protein 80% (China) at 8.58 kg CO2e/kg with agriculture 47% = 4.03, and its own milled-rice benchmark at 2.20 kg CO2e/kg -> 4.03 / 2.20 = ~1.8 kg rice charged per kg protein (by mass it would be ~10 kg, but the starch/syrup co-products carry most of the burden). Confidence 2."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — soil_erosion: per-hectare value of the rice it is made from, copied from the rice entry (1); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.8,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — pesticide_kg_ha: per-hectare value of the rice it is made from, copied from the rice entry (1.8); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — fertilizer_kg_ha: per-hectare value of the rice it is made from, copied from the rice entry (100); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 8.58,
+                "confidence": 3,
+                "source": {
+                    "id": 424,
+                    "url": "https://apps.carboncloud.com/climatehub/product-reports/id/166751695355",
+                    "title": "CarbonCloud ClimateHub — Rice protein 80%, China: 8.58 kg CO2e/kg",
+                    "note": "Rice Protein — emissions_per_kg: CarbonCloud verified product report, rice protein 80% (China): 8.58 kg CO2e/kg (agriculture 47%, processing 51%, transport 2%)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — tillage_events_per_year: per-hectare value of the rice it is made from, copied from the rice entry (1); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 500,
+                "confidence": 2,
+                "source": {
+                    "id": 29,
+                    "url": "https://ourworldindata.org/grapher/rice-yields",
+                    "title": "Our World in Data — Rice Yields",
+                    "note": "Rice Protein — co2_capture_kg_ha_yr: per-hectare value of the rice it is made from, copied from the rice entry (500); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.12,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Protein — pesticides.Carbaryl.kg_ha: copied from the rice entry (0.12)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.18,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Protein — pesticides.2,4-D.kg_ha: copied from the rice entry (0.18)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Rice Protein — pesticides.Propiconazole.kg_ha: copied from the rice entry (0.05)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 150,
+                "confidence": 1,
+                "source": {
+                    "id": 426,
+                    "url": "https://www.marketgrowthreports.com/market-reports/rice-protein-market-106155",
+                    "title": "Market Growth Reports — Rice protein market (2023 volume)",
+                    "note": "Rice Protein — availability_gg: market report figure (via search result; page not directly readable): ~150,000 t of rice protein ingredients processed globally in 2023 (half isolates, half concentrates) = 150 Gg. Confidence 1."
+                }
+            }
+        ]
     }
 ]

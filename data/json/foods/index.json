@@ -30,7 +30,9 @@
         "oats",
         "quinoa",
         "barley",
-        "oat-milk"
+        "oat-milk",
+        "rice-starch",
+        "rice-protein"
     ],
     "legumes": [
         "soy",
@@ -53,7 +55,8 @@
         "broccoli",
         "sweet-potato",
         "garlic",
-        "bell-pepper"
+        "bell-pepper",
+        "potato-starch"
     ],
     "leafy": [
         "lettuce",
@@ -89,7 +92,10 @@
         "milk",
         "yogurt",
         "butter",
-        "whey-protein"
+        "whey-protein",
+        "cheddar",
+        "mozzarella",
+        "parmesan"
     ],
     "oils": [
         "olive-oil",
@@ -109,6 +115,7 @@
     ],
     "composites": [
         "impossible-burger",
-        "beyond-burger"
+        "beyond-burger",
+        "violife-parmesan"
     ]
 }

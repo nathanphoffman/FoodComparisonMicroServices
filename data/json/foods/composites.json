@@ -10,7 +10,8 @@
             "composite",
             "processed",
             "soy",
-            "meat-substitute"
+            "meat-substitute",
+            "vegan"
         ],
         "nutrition": [
             {
@@ -173,7 +174,8 @@
         "tags": [
             "composite",
             "processed",
-            "meat-substitute"
+            "meat-substitute",
+            "vegan"
         ],
         "nutrition": [
             {
@@ -245,7 +247,7 @@
                 ]
             },
             {
-                "food_slug": "rice",
+                "food_slug": "rice-protein",
                 "fraction": [
                     {
                         "value": 0.03,
@@ -255,18 +257,6 @@
                             "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
                             "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
                             "note": "Beyond Burger — rice protein share: listed after coconut oil (0.039), and must cover the protein not supplied by pea protein; ~0.03. Confidence 1."
-                        }
-                    }
-                ],
-                "base_kg_per_kg": [
-                    {
-                        "value": 3.0,
-                        "confidence": 1,
-                        "source": {
-                            "id": 401,
-                            "url": "https://css.umich.edu/sites/default/files/publication/CSS18-10.pdf",
-                            "title": "Heller & Keoleian (2018) — Beyond Meat's Beyond Burger Life Cycle Assessment (Univ. of Michigan Center for Sustainable Systems, CSS18-10)",
-                            "note": "Beyond Burger — kg rice charged per kg rice protein: no rice-protein LCA found. Brown rice is ~8% protein, so ~10 kg rice make 1 kg of 80% protein by mass, but most of the burden goes to the starch / syrup co-product; the pea protein isolate factor (economic allocation, ~3 kg crop per kg isolate) is used as a stand-in. Confidence 1; rice protein is only ~3% of the burger."
                         }
                     }
                 ]
@@ -337,6 +327,178 @@
                     "url": "https://www.sec.gov/Archives/edgar/data/1655210/000165521025000034/bynd-20241231.htm",
                     "title": "Beyond Meat, Inc. — Form 10-K for fiscal year 2024 (SEC)",
                     "note": "Beyond Burger — availability_gg (product's own): Beyond Meat FY2024 10-K, volume of products sold 70,034 thousand lb = 31,767 t = 31.8 Gg. Covers all Beyond Meat products, not only the burger, so it overstates the burger alone. Confidence 2. The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 92,
+        "slug": "violife-parmesan",
+        "name": "Violife Just Like Parmesan (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "cheese-substitute",
+            "vegan"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.857,
+                    "fat": 0.1786,
+                    "sat_fat": 0.1607,
+                    "protein": 0.0357,
+                    "fiber": 0,
+                    "sodium": 13.93,
+                    "carbs": 0.2857,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 414,
+                    "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                    "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                    "note": "Violife Just Like Parmesan — nutrition: US label via Open Food Facts, per 100 g: 285.7 kcal, fat 17.86 g, sat 16.07 g, protein 3.57 g, fiber 0, sodium 1,393 mg (salt 3.48 g), carbs 28.57 g, sugars 0, no cholesterol; per gram. US labels round per 28 g serving (e.g. protein 1 g), so small values are approximate; confidence 4."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "coconut-oil",
+                "fraction": [
+                    {
+                        "value": 0.175,
+                        "confidence": 3,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — coconut oil share: EU Prosociano label states 17%; US label fat 17.86 g/100 g, nearly all from coconut oil -> 0.175. US label (Open Food Facts 0810934030116): filtered water, potato & rice starch, food starch-modified (potato), coconut oil, salt (sea salt), rice protein, parmesan flavor (vegan sources), olive extract, beta carotene (color), vitamin B12. The EU Prosociano label gives coconut oil 17%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "potato-starch",
+                "fraction": [
+                    {
+                        "value": 0.28,
+                        "confidence": 2,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — potato starch (native + modified) share, now the Potato Starch food: label carbs 28.57 g/100 g come from the starches (~83% carbohydrate as sold) -> ~0.34 kg starch per kg; the label lists 'potato & rice starch' then 'modified potato starch', so most is potato: ~0.28 potato, ~0.06 rice. US label (Open Food Facts 0810934030116): filtered water, potato & rice starch, food starch-modified (potato), coconut oil, salt (sea salt), rice protein, parmesan flavor (vegan sources), olive extract, beta carotene (color), vitamin B12. The EU Prosociano label gives coconut oil 17%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "rice-starch",
+                "fraction": [
+                    {
+                        "value": 0.06,
+                        "confidence": 1,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — rice starch share: part of 'potato & rice starch' (see potato note); ~0.06, confidence 1."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "rice-protein",
+                "fraction": [
+                    {
+                        "value": 0.03,
+                        "confidence": 1,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — rice protein share: listed after salt (~3.5%), and label protein 3.57 g/100 g at ~80% protein -> ~0.03. Confidence 1."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "salt",
+                "fraction": [
+                    {
+                        "value": 0.035,
+                        "confidence": 3,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — sea salt: label salt 3.48 g/100 g. No crop footprint."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "other minor ingredients (flavor, olive extract, beta carotene, vitamin B12)",
+                "fraction": [
+                    {
+                        "value": 0.015,
+                        "confidence": 2,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — minor ingredients, ~1.5%. No crop footprint."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.405,
+                        "confidence": 2,
+                        "source": {
+                            "id": 414,
+                            "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+                            "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+                            "note": "Violife Parmesan — filtered water: first ingredient; the remainder after coconut oil 0.175, starches 0.34, rice protein 0.03, salt 0.035, minor 0.015."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 2.1,
+                "confidence": 2,
+                "source": {
+                    "id": 413,
+                    "url": "https://www.violife.com/en-us/-/media/Project/Upfield/Brands/Violife-Foods/Violife-Foods-US-New/Assets/About-Us/upfield-violife-technicalsummary-quantis-april2022.pdf",
+                    "title": "Quantis for Upfield (2022) — Violife 100% vegan alternative to cheese vs. dairy cheese: LCA technical summary (ISO 14040/44, peer reviewed)",
+                    "note": "Violife Parmesan — processing emissions: Quantis 2022 (source 413) gives 3.4 kg CO2e/kg for the US Parmesan-style wedge, cradle to grave (farming, manufacturing, packaging, distribution, retail, consumer use, packaging end-of-life; food waste excluded). This dataset's ingredients (coconut oil, potato starch, rice starch, rice protein — the starches and protein already include their own processing to factory gate) add up to ~1.3 in the US region, so Violife's own manufacturing, packaging, distribution and retail are ~3.4 - 1.3 = 2.1. Quantis says distribution is one of the two main drivers. Derived, confidence 2. (Was 1.6 when the starches were modelled as raw potato and rice.)"
+                }
+            }
+        ],
+        "processing_water_per_kg": [],
+        "availability_gg": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 413,
+                    "url": "https://www.violife.com/en-us/-/media/Project/Upfield/Brands/Violife-Foods/Violife-Foods-US-New/Assets/About-Us/upfield-violife-technicalsummary-quantis-april2022.pdf",
+                    "title": "Quantis for Upfield (2022) — Violife 100% vegan alternative to cheese vs. dairy cheese: LCA technical summary (ISO 14040/44, peer reviewed)",
+                    "note": "Violife Parmesan — availability_gg (product's own): ASSUMED low guess of 0.5 Gg/yr (500 t). Upfield publishes no Violife volumes; this is one niche product (a Parmesan-style wedge) within a brand whose whole range is likely in the tens of kt/yr. Deliberately set at the low end on request, confidence 1. The pipeline blends it with the ingredients' world supply."
                 }
             }
         ]

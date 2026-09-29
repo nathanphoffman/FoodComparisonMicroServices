@@ -1588,7 +1588,8 @@
             "legume",
             "soy",
             "processed",
-            "meat-substitute"
+            "meat-substitute",
+            "vegan"
         ],
         "land_types": {
             "temperate_grassland": 0.76,

@@ -4,7 +4,9 @@
         "url": "https://fdc.nal.usda.gov/",
         "title": "USDA FoodData Central",
         "notes": [
-            "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+            "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram.",
+            "Cheese nutrition: cheddar FDC 173414 (SR 1009), mozzarella low-moisture part-skim FDC 171244 (SR 1029), parmesan hard FDC 170848 (SR 1033).",
+            "Rice Starch — nutrition stand-in: FDC 169698 'Cornstarch' (SR 20027)."
         ]
     },
     {
@@ -891,7 +893,8 @@
             "Supply-chain stage breakdown of GHG emissions (kg CO2e per kg food) from Poore & Nemecek (2018), published by Our World in Data. Stages covered: land use change, animal feed, farm (on-farm CH4/N2O/CO2 only), processing, transport, retail, packaging, consumer waste losses.",
             "Eggs — full supply chain breakdown (kg CO2e per kg eggs): land use change 0.710, animal feed 2.205, farm (on-farm) 1.320, processing 0.000, transport 0.084, retail 0.036, packaging 0.161, losses 0.153. Total: ~4.67 kg CO2e/kg eggs. Cross-checks against ghg-per-kg-poore CSV value of 4.67 kg CO2e/kg (source 71).",
             "Eggs — on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields.",
-            "Milk — full supply chain breakdown (kg CO2e per kg milk, OWID CSV downloaded 2026-09-24): land use change 0.512, farm 1.509, animal feed 0.244, processing 0.154, transport 0.093, retail 0.265, packaging 0.100, losses 0.274. Total 3.15. Used in dairy.json for milk co2_kg_per_kg_output (on-farm energy + post-farm stages 0.886 incl. losses), for P&N-consistent bounds on milk CH4 (~0.038) and manure N2O (~0.0006) from the 1.51 farm stage (P&N GWP CH4=34, N2O=298), and for butter emissions_per_kg (farm-gate stages 2.26 x 8.2 + 1.6)."
+            "Milk — full supply chain breakdown (kg CO2e per kg milk, OWID CSV downloaded 2026-09-24): land use change 0.512, farm 1.509, animal feed 0.244, processing 0.154, transport 0.093, retail 0.265, packaging 0.100, losses 0.274. Total 3.15. Used in dairy.json for milk co2_kg_per_kg_output (on-farm energy + post-farm stages 0.886 incl. losses), for P&N-consistent bounds on milk CH4 (~0.038) and manure N2O (~0.0006) from the 1.51 farm stage (P&N GWP CH4=34, N2O=298), and for butter emissions_per_kg (farm-gate stages 2.26 x 8.2 + 1.6).",
+            "Cheese — supply-chain breakdown (OWID CSV 2026-09-28): land use change 4.467, farm 13.096, animal feed 2.353, processing 0.740, transport 0.139, retail 0.333, packaging 0.172, losses 2.577. Post-farm stages excl. losses (1.38) used for cheddar, mozzarella and parmesan co2_kg_per_kg_output."
         ]
     },
     {
@@ -1264,7 +1267,8 @@
         "url": "https://en.wikipedia.org/wiki/Milk_equivalent",
         "title": "Wikipedia — Milk equivalent (USDA milkfat-basis conversion; CRS Report for Congress, Womach 2005)",
         "notes": [
-            "Butter — milk-to-butter ratio: 'on a milkfat basis, it takes about 21.8 pounds of farm milk to make a pound of butter' (USDA milk-equivalent factor, via Congressional Research Service glossary). Consistent with USDA ERS dairy conversion factors (butter 80.5% milkfat, 1.85% skim solids; 80.5 / 21.8 ≈ 3.7% farm-milk fat). Used as the physical ratio (21.8 kg milk per kg butter) before co-product allocation."
+            "Butter — milk-to-butter ratio: 'on a milkfat basis, it takes about 21.8 pounds of farm milk to make a pound of butter' (USDA milk-equivalent factor, via Congressional Research Service glossary). Consistent with USDA ERS dairy conversion factors (butter 80.5% milkfat, 1.85% skim solids; 80.5 / 21.8 ≈ 3.7% farm-milk fat). Used as the physical ratio (21.8 kg milk per kg butter) before co-product allocation.",
+            "Cheddar — 9.2 kg farm milk per kg American-type cheese (milkfat basis)."
         ]
     },
     {
@@ -2178,7 +2182,8 @@
         "url": "https://air.unimi.it/retrieve/dfa8b9a2-96c5-748b-e053-3a05fe0a3a96/Bacenetti%20et%20al_2019_Whey%20protein%20concentrate%20(WPC)%20production%20Environmental%20impact%20assessment.pdf",
         "title": "Bacenetti et al. (2019) — Whey protein concentrate (WPC) production: Environmental impact assessment (J. Food Engineering 224:139-147)",
         "notes": [
-            "Whey Protein — 5.0 kg milk-equivalent per kg WPC80 (economic allocation: whey 4.8% at the cheese plant, WPC80 81.8% at the WPC plant) and total GHG 5.9 kg CO2e/kg (economic)."
+            "Whey Protein — 5.0 kg milk-equivalent per kg WPC80 (economic allocation: whey 4.8% at the cheese plant, WPC80 81.8% at the WPC plant) and total GHG 5.9 kg CO2e/kg (economic).",
+            "Cheddar, mozzarella, parmesan — whey share 4.8% and (parmesan) cheese share 76.2% of the cheese plant's milk burden under economic allocation."
         ]
     },
     {
@@ -2218,7 +2223,152 @@
         "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/r781zd41r/4b29d481c/daryan25.pdf",
         "title": "USDA NASS — Dairy Products 2024 Summary (April 2025)",
         "notes": [
-            "Whey Protein — availability_gg (US) 248 Gg: 2024 WPC 50-89.9% (354.1 M lb) + WPI (192.6 M lb)."
+            "Whey Protein — availability_gg (US) 248 Gg: 2024 WPC 50-89.9% (354.1 M lb) + WPI (192.6 M lb).",
+            "Cheese (US 2024): cheddar 3,785,308; mozzarella 4,788,499; parmesan 447,731 thousand lb."
+        ]
+    },
+    {
+        "id": 410,
+        "url": "https://doi.org/10.1007/s11367-013-0553-9",
+        "title": "Kim, Thoma, Nutter et al. (2013) — Life cycle assessment of cheese and whey production in the USA (Int. J. Life Cycle Assess. 18:1019-1035)",
+        "notes": [
+            "Cheddar 8.60 and mozzarella 7.28 kg CO2e/kg (US, cradle to grave, milk-solids allocation), used as US emissions_per_kg check values."
+        ]
+    },
+    {
+        "id": 411,
+        "url": "https://www.parmigianoreggiano.com/product-guide-glossary",
+        "title": "Consorzio del Formaggio Parmigiano Reggiano — Product guide glossary (about 1,100 L of milk per vat, 2 wheels of ~40 kg)",
+        "notes": [
+            "Parmesan — ~550 L milk per ~40 kg wheel -> 14.2 kg milk per kg cheese."
+        ]
+    },
+    {
+        "id": 412,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0048969722039535",
+        "title": "Life cycle assessment of Parmigiano Reggiano PDO cheese with the product environmental footprint method (Science of the Total Environment, 2022)",
+        "notes": [
+            "Parmesan — total GHG 15.34 kg CO2e/kg aged cheese (cradle to grave)."
+        ]
+    },
+    {
+        "id": 413,
+        "url": "https://www.violife.com/en-us/-/media/Project/Upfield/Brands/Violife-Foods/Violife-Foods-US-New/Assets/About-Us/upfield-violife-technicalsummary-quantis-april2022.pdf",
+        "title": "Quantis for Upfield (2022) — Violife 100% vegan alternative to cheese vs. dairy cheese: LCA technical summary (ISO 14040/44, peer reviewed)",
+        "notes": [
+            "Violife Parmesan (composite) — US Prosociano/Parmesan wedge 200 g: 3.4 kg CO2e/kg (cradle to grave), land 2.2 m2·yr/kg, water 0.145 m3/kg (Tables 1-3). Used to set processing emissions / water as the total minus the ingredient crops."
+        ]
+    },
+    {
+        "id": 414,
+        "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
+        "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
+        "notes": [
+            "Violife Parmesan (composite) — nutrition and ingredient list (US label)."
+        ]
+    },
+    {
+        "id": 415,
+        "url": "https://en.wikipedia.org/wiki/Starch_production",
+        "title": "Wikipedia — Starch production (potato starch yield ~175 kg per tonne of potatoes)",
+        "notes": [
+            "Violife Parmesan (composite) — potato starch yield 175 kg per tonne of potatoes -> 5.7 kg potatoes per kg starch."
+        ]
+    },
+    {
+        "id": 416,
+        "url": "https://starch.eu/wp-content/uploads/2022/04/LCA-2022-Summary-Report-Starch-Europe-FINAL-130422.pdf",
+        "title": "Starch Europe (2022) — LCA of starch products for the European starch industry, summary report",
+        "notes": [
+            "Potato Starch — native potato starch 632.4 kg CO2e per t dry substance (cradle to gate); Rice Starch — starch processing ~0.18 kg CO2e/kg (slurry + native starch process)."
+        ]
+    },
+    {
+        "id": 417,
+        "url": "https://starch.eu/priority/joint-starch-europe-cespu-statement-the-eu-potato-starch-value-chain-sustainability-and-the-eu-green-deal/",
+        "title": "Starch Europe & CESPU — Joint statement: The EU potato starch value chain (7.5 Mt starch potatoes -> 1.5 Mt potato starch per year)",
+        "notes": [
+            "Potato Starch — 7.5 Mt starch potatoes -> 1.5 Mt potato starch (5.0 kg potatoes per kg starch); EU production 1.5 Mt used as availability."
+        ]
+    },
+    {
+        "id": 418,
+        "url": "https://world.openfoodfacts.org/product/3258561100104",
+        "title": "Open Food Facts — Belle France potato starch (3258561100104)",
+        "notes": [
+            "Potato Starch — nutrition label."
+        ]
+    },
+    {
+        "id": 419,
+        "url": "https://world.openfoodfacts.org/product/8713445021012",
+        "title": "Open Food Facts — Bioculinair organic potato starch (8713445021012)",
+        "notes": [
+            "Potato Starch — nutrition label."
+        ]
+    },
+    {
+        "id": 420,
+        "url": "https://world.openfoodfacts.org/product/5906827020106",
+        "title": "Open Food Facts — Melvit potato starch (5906827020106)",
+        "notes": [
+            "Potato Starch — nutrition label."
+        ]
+    },
+    {
+        "id": 421,
+        "url": "https://world.openfoodfacts.org/product/5060343744226",
+        "title": "Open Food Facts — Bulk brown rice protein (5060343744226)",
+        "notes": [
+            "Rice Protein — nutrition label."
+        ]
+    },
+    {
+        "id": 422,
+        "url": "https://world.openfoodfacts.org/product/8718774006310",
+        "title": "Open Food Facts — Body & Fit rice protein (8718774006310)",
+        "notes": [
+            "Rice Protein — nutrition label."
+        ]
+    },
+    {
+        "id": 423,
+        "url": "https://world.openfoodfacts.org/product/7350039930735",
+        "title": "Open Food Facts — Superfruit rice protein powder (7350039930735)",
+        "notes": [
+            "Rice Protein — nutrition label."
+        ]
+    },
+    {
+        "id": 424,
+        "url": "https://apps.carboncloud.com/climatehub/product-reports/id/166751695355",
+        "title": "CarbonCloud ClimateHub — Rice protein 80%, China: 8.58 kg CO2e/kg",
+        "notes": [
+            "Rice Protein — 8.58 kg CO2e/kg, agriculture 47% -> ~1.8 kg milled rice charged per kg protein."
+        ]
+    },
+    {
+        "id": 425,
+        "url": "https://www.food.be/sites/food/files/companies/0012000000RYYCRAA5/01257000000VEN0AAO/BENEOBrochureSpecialtyRiceIngredients.pdf",
+        "title": "BENEO — Specialty rice ingredients brochure (rice ~78% carbohydrate, ~7% protein; rice starch and endosperm rice protein by wet milling)",
+        "notes": [
+            "Rice Starch / Rice Protein — rice composition (~78% carbohydrate, ~7% protein) and the wet-milling process that yields both."
+        ]
+    },
+    {
+        "id": 426,
+        "url": "https://www.marketgrowthreports.com/market-reports/rice-protein-market-106155",
+        "title": "Market Growth Reports — Rice protein market (2023 volume)",
+        "notes": [
+            "Rice Protein — ~150 kt processed globally in 2023."
+        ]
+    },
+    {
+        "id": 427,
+        "url": "https://www.gminsights.com/industry-analysis/rice-starch-market",
+        "title": "Global Market Insights — Rice starch market size (2024)",
+        "notes": [
+            "Rice Starch — ~USD 620 M market in 2024 -> ~410 kt at ~USD 1,500/t (assumed price)."
         ]
     }
 ]

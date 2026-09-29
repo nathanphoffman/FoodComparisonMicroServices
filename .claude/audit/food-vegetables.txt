@@ -2,3 +2,4 @@
 2026-09-24 13:18:08 | Added US yield_kg_ha entries (NASS 2019–2023 means): potato 50500 (src 160), sweet-potato 22400, tomato 96900 (fresh+processing), broccoli 16000, garlic 17100 (CA only) (src 161)
 2026-09-24 13:18:08 | Added US water_per_kg/green/blue/grey entries from Mekonnen & Hoekstra Report 47 Vol 2 US999 column (src 121): potato 398 (49/89/260), sweet-potato 890 (210/57/623), tomato 127 (31/74/22), broccoli 326 (161/82/83), garlic 379 (116/186/77)
 2026-09-24 13:18:08 | Added sources 160 (NASS Potatoes 2023 Summary), 161 (NASS Vegetables 2023 Summary); appended vegetables note to existing source 121
+2026-09-28 13:11:36 | potato-starch: added new food id 93 (plant, vegetables). Derived from potato with 5.0 kg potatoes/kg starch (Starch Europe/CESPU 7.5 Mt -> 1.5 Mt, src 417); emissions 0.52 (Starch Europe LCA 632 kg/t DS x 0.83, src 416); nutrition 3 labels (src 418-420); availability 1,500 Gg = EU production, world lower bound (confidence 2)

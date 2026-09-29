@@ -198,7 +198,9 @@ plant-specific or animal-specific fields depending on `type`.
   "land_types": { "<key>": <number 0-1>, ... },
   // Optional. Plain-English reason for the land_types split.
   // Tags: "common" = shown by default; "milk" = listed under the Milks filter
-  // in the food table, in addition to the food's own category.
+  // in the food table, in addition to the food's own category. "meat-substitute"
+  // also lists a food under Meat, "cheese-substitute" under Dairy & Eggs, and
+  // "vegan" under Vegan.
   "land_types_note": <string>,
 
   // --- Nutrition (per gram of edible food as purchased) ---

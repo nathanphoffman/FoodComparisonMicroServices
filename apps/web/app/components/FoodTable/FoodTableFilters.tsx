@@ -3,20 +3,20 @@
 import type { RawFood } from '@/lib/queries/commonFoods';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)
-// and/or a tag. A food can appear under more than one filter — almond milk is both
-// a Milk and a Nut product.
+// and/or any of its tags. A food can appear under more than one filter — almond milk
+// is both a Milk and a Nut product, and the Beyond Burger is both Meat and Vegan.
 type FoodFilter = {
     key:         string;
     label:       string;
     categories?: string[];
-    tag?:        string;
+    tags?:       string[];
 };
 
 export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'all',        label: 'All' },
-    { key: 'milks',      label: 'Milks',        tag: 'milk' },
-    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'] },
-    { key: 'meat',       label: 'Meat',         categories: ['meats'] },
+    { key: 'milks',      label: 'Milks',        tags: ['milk'] },
+    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'], tags: ['cheese-substitute'] },
+    { key: 'meat',       label: 'Meat',         categories: ['meats'], tags: ['meat-substitute'] },
     { key: 'seafood',    label: 'Seafood',      categories: ['seafood'] },
     { key: 'grains',     label: 'Grains',       categories: ['grains'] },
     { key: 'legumes',    label: 'Legumes',      categories: ['legumes'] },
@@ -26,15 +26,16 @@ export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'oils',       label: 'Oils',         categories: ['oils'] },
     { key: 'sweeteners', label: 'Sweeteners',   categories: ['sweeteners'] },
     { key: 'composites', label: 'Composites',   categories: ['composites'] },
+    { key: 'vegan',      label: 'Vegan',        tags: ['vegan'] },
 ];
 
 export const DEFAULT_FOOD_FILTER = 'all';
 
 export function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
     const filter = FOOD_FILTERS.find(f => f.key === filterKey);
-    if (!filter || (!filter.categories && !filter.tag)) return true;
+    if (!filter || (!filter.categories && !filter.tags)) return true;
     return (filter.categories?.includes(food.category ?? '') ?? false)
-        || (filter.tag !== undefined && (food.tags ?? []).includes(filter.tag));
+        || (filter.tags?.some(tag => (food.tags ?? []).includes(tag)) ?? false);
 }
 
 export function FoodTableFilters({ selected, onChange }: { selected: string; onChange: (key: string) => void }) {
