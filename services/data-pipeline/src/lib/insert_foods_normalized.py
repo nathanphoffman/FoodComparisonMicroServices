@@ -8,11 +8,15 @@ the foods_normalized table (the main row + an optional feed-impact row for anima
 
 import sqlite3
 
-from ..food_types import Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed
+from ..food_types import (
+    Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed, Composite, CompositeIngredient,
+)
 from .types.raw_food import RawFood
 from .types.raw_plant import RawPlant, PesticideAssociation
 from .types.raw_animal import RawAnimal, FeedEntry
 from .types.raw_animal_feed import RawAnimalFeed
+from .types.raw_composite import RawComposite, IngredientEntry
+from .types.sourced_array import SourcedArray
 from .types.raw_pesticide import RawPesticide
 from .types.raw_plant_pesticide import RawPlantPesticide
 
@@ -44,6 +48,8 @@ def insert(
     pesticides: list[Pesticide],
     animal_feed: list[AnimalFeed],
     region: str,
+    composites: list[Composite] | None = None,
+    composite_ingredients: list[CompositeIngredient] | None = None,
 ) -> None:
     """Builds and inserts all normalized rows for one region into the foods_normalized table."""
     plant_by_food_id, plant_by_plant_id = _index_plants(plants)
@@ -51,6 +57,8 @@ def insert(
     pesticide_by_id = _index_pesticides(pesticides)
     plant_pesticides_by_plant_id = _index_plant_pesticides(plant_pesticides)
     feed_by_animal_id = _index_animal_feed(animal_feed)
+    composite_by_food_id = {composite["food_id"]: composite for composite in composites or []}
+    food_by_id = {food["id"]: food for food in foods}
 
     for food in foods:
         raw_plant = _build_raw_plant(
@@ -60,7 +68,11 @@ def insert(
             food["id"], animal_by_food_id, feed_by_animal_id,
             plant_by_plant_id, plant_pesticides_by_plant_id, pesticide_by_id
         )
-        raw_food = RawFood(food, raw_plant, raw_animal)
+        raw_composite = _build_raw_composite(
+            food["id"], composite_by_food_id, composite_ingredients or [], food_by_id,
+            plant_by_plant_id, plant_pesticides_by_plant_id, pesticide_by_id
+        )
+        raw_food = RawFood(food, raw_plant, raw_animal, raw_composite)
         food_row = raw_food.to_normalized()
         food_row.region = region
         connection.execute(INSERT_SQL, food_row.to_db_params())
@@ -156,3 +168,39 @@ def _build_raw_animal(
         ) is not None
     ]
     return RawAnimal(animal_data, feed_entries)
+
+
+def _build_raw_composite(
+    food_id: int,
+    composite_by_food_id: dict[int, Composite],
+    composite_ingredients: list[CompositeIngredient],
+    food_by_id: dict[int, Food],
+    plant_by_plant_id: dict[int, Plant],
+    plant_pesticides_by_plant_id: dict[int, list[RawPlantPesticide]],
+    pesticide_by_id: dict[int, RawPesticide],
+) -> RawComposite | None:
+    """Builds a RawComposite for the given food_id, or None if the food isn't a composite.
+    Ingredients with no crop (added water) carry no footprint and are skipped."""
+    composite = composite_by_food_id.get(food_id)
+    if not composite:
+        return None
+    entries: list[IngredientEntry] = []
+    for ingredient in composite_ingredients:
+        plant_id = ingredient["plant_id"]
+        if ingredient["composite_id"] != composite["id"] or plant_id is None:
+            continue
+        raw_plant = _build_raw_plant(
+            plant_id, plant_by_plant_id, plant_pesticides_by_plant_id, pesticide_by_id
+        )
+        fraction = SourcedArray(ingredient["fraction"]).weighted_average()
+        if raw_plant is None or not fraction:
+            continue
+        ingredient_food = food_by_id[plant_id]
+        entries.append(IngredientEntry(
+            fraction=fraction,
+            base_kg_per_kg=SourcedArray(ingredient.get("base_kg_per_kg")).weighted_average() or 1.0,
+            plant=raw_plant,
+            land_types=ingredient_food.get("land_types"),
+            availability_gg=SourcedArray(ingredient_food.get("availability_gg")).weighted_average(),
+        ))
+    return RawComposite(composite, entries)

@@ -13,18 +13,26 @@ from typing import TYPE_CHECKING
 
 from ...food_types import Animal
 from .sourced_array import SourcedArray
+from .crop_mix import (
+    CropShare,
+    compute_land_use_square_meters_per_kg,
+    compute_per_yield_impacts,
+    compute_pesticide_paf_impacts,
+    compute_water_and_emissions,
+    compute_wild_fish,
+)
 
 if TYPE_CHECKING:
     from .raw_plant import RawPlant
     from .raw_animal_feed import RawAnimalFeed
 
 
-class FeedEntry:
+class FeedEntry(CropShare):
     """Pairs a feed ratio record with its corresponding plant metrics."""
 
     def __init__(self, feed: "RawAnimalFeed", plant: "RawPlant") -> None:
+        super().__init__(feed.kg_feed_per_kg_output.weighted_average(), plant)
         self.feed = feed
-        self.plant = plant
 
 
 class RawAnimal:
@@ -64,7 +72,7 @@ class RawAnimal:
             "ch4_kg_per_kg_output":          self.ch4_kg_per_kg_output.weighted_average(),
             "n2o_kg_per_kg_output":          self.n2o_kg_per_kg_output.weighted_average(),
             "co2_kg_per_kg_output":          self.co2_kg_per_kg_output.weighted_average(),
-            **_compute_wild_fish_in_feed(self._feed_entries),
+            **compute_wild_fish(self._feed_entries),
         }
 
     def feed_normalized_fields(self) -> dict[str, float | None] | None:
@@ -76,11 +84,11 @@ class RawAnimal:
         pasture_evaporation_liters_per_ha = self.pasture_green_water_l_per_ha.weighted_average() or 0
         pasture_baseline_water = pasture_hectares_per_kg * pasture_evaporation_liters_per_ha
 
-        land_square_meters = _compute_land_use_square_meters_per_kg(self._feed_entries)
-        emissions, green_water, blue_water, grey_water = _compute_water_and_emissions(
+        land_square_meters = compute_land_use_square_meters_per_kg(self._feed_entries)
+        emissions, green_water, blue_water, grey_water = compute_water_and_emissions(
             self._feed_entries, pasture_baseline=pasture_baseline_water
         )
-        soil_erosion, fertilizer, tillage, carbon_capture = _compute_per_yield_impacts(
+        soil_erosion, fertilizer, tillage, carbon_capture = compute_per_yield_impacts(
             self._feed_entries
         )
         (
@@ -89,7 +97,7 @@ class RawAnimal:
             terrestrial_paf,
             insect_paf,
             bee_hazard,
-        ) = _compute_pesticide_paf_impacts(self._feed_entries)
+        ) = compute_pesticide_paf_impacts(self._feed_entries)
 
         return {
             "yield_kg_ha":               None,
@@ -111,169 +119,3 @@ class RawAnimal:
             "pesticide_bee_hazard":      bee_hazard,
             "pesticide_kg_per_kg_food":  pesticide_kg_per_kg or None,
         }
-
-
-def _compute_wild_fish_in_feed(feed_entries: list[FeedEntry]) -> dict[str, float | None]:
-    """Wild fish killed to make this animal's fishmeal / fish oil, per kg of output.
-
-    The kill is the animal's own (the fish die to feed it), so it goes on the animal's
-    main row, not the feed row. The species values are the kg-weighted average across
-    feeds; today fishmeal and fish oil share one species (anchoveta), so they're equal.
-    """
-    total_fish_kg = 0.0
-    weighted = {"wild_fish_neuron_count": 0.0, "wild_fish_weight_kg": 0.0, "wild_fish_lifespan_years": 0.0}
-    for entry in feed_entries:
-        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
-        fish_kg_per_kg_feed = entry.plant.wild_fish_kg_per_kg.weighted_average()
-        if not feed_ratio or not fish_kg_per_kg_feed:
-            continue
-        fish_kg = feed_ratio * fish_kg_per_kg_feed
-        total_fish_kg += fish_kg
-        for field in weighted:
-            weighted[field] += fish_kg * (getattr(entry.plant, field).weighted_average() or 0.0)
-    if total_fish_kg <= 0:
-        return {"wild_fish_kg_per_kg": None, **{field: None for field in weighted}}
-    return {
-        "wild_fish_kg_per_kg": total_fish_kg,
-        **{field: value / total_fish_kg for field, value in weighted.items()},
-    }
-
-
-def _compute_land_use_square_meters_per_kg(feed_entries: list[FeedEntry]) -> float:
-    """Sums feed-crop land use across all feed sources, in m² per kg of animal output."""
-    total_land_square_meters = 0.0
-    for entry in feed_entries:
-        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
-        if feed_ratio is None:
-            continue
-        average_yield_kg_per_ha = entry.plant.yield_kg_ha.weighted_average()
-        if average_yield_kg_per_ha and average_yield_kg_per_ha > 0:
-            total_land_square_meters += feed_ratio * 10000 / average_yield_kg_per_ha
-    return total_land_square_meters
-
-
-def _compute_water_and_emissions(
-    feed_entries: list[FeedEntry],
-    pasture_baseline: float,
-) -> tuple[float, float, float, float]:
-    """Returns (total_emissions, green_water, blue_water, grey_water) summed across feed sources.
-
-    pasture_baseline is the pasture evapotranspiration in liters per kg of animal output
-    (pasture_ha_per_kg_output × pasture_green_water_l_per_ha). It is a water metric and
-    only seeds total_green_water. Emissions are in kg CO2-eq and must start at zero.
-    Feed emissions use each crop's farm-gate value (see RawPlant.feed_emissions_per_kg),
-    because animals don't eat the processing / packaging / retail stages of a crop.
-    """
-    total_emissions = 0.0
-    total_green_water = pasture_baseline  # liters of green water from pasture grazing itself
-    total_blue_water = 0.0
-    total_grey_water = 0.0
-    for entry in feed_entries:
-        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
-        if feed_ratio is None:
-            continue
-        plant_emissions = entry.plant.feed_emissions_per_kg
-        if plant_emissions:
-            total_emissions += feed_ratio * plant_emissions
-        green_water = entry.plant.green_water_per_kg.weighted_average()
-        blue_water = entry.plant.blue_water_per_kg.weighted_average()
-        grey_water = entry.plant.grey_water_per_kg.weighted_average()
-        total_water = entry.plant.water_per_kg.weighted_average()
-        if green_water:
-            total_green_water += feed_ratio * green_water
-        if blue_water:
-            total_blue_water += feed_ratio * blue_water
-        if grey_water:
-            total_grey_water += feed_ratio * grey_water
-        if green_water is None and blue_water is None and total_water:
-            total_green_water += feed_ratio * total_water
-    return total_emissions, total_green_water, total_blue_water, total_grey_water
-
-
-def _compute_per_yield_impacts(
-    feed_entries: list[FeedEntry],
-) -> tuple[float, float, float, float]:
-    """Returns (soil_erosion, fertilizer, tillage, carbon_capture) summed across feed sources."""
-    total_soil_erosion = 0.0
-    total_fertilizer = 0.0
-    total_tillage = 0.0
-    total_carbon_capture = 0.0
-    for entry in feed_entries:
-        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
-        if feed_ratio is None:
-            continue
-        average_yield_kg_per_ha = entry.plant.yield_kg_ha.weighted_average()
-        if not average_yield_kg_per_ha or average_yield_kg_per_ha <= 0:
-            continue
-        soil_erosion = entry.plant.soil_erosion.weighted_average()
-        fertilizer = entry.plant.fertilizer_kg_ha.weighted_average()
-        tillage = entry.plant.tillage_events_per_year.weighted_average()
-        carbon_capture = entry.plant.co2_capture_kg_ha_yr.weighted_average()
-        if soil_erosion:
-            total_soil_erosion += feed_ratio * soil_erosion / average_yield_kg_per_ha
-        if fertilizer:
-            total_fertilizer += feed_ratio * fertilizer / average_yield_kg_per_ha
-        if tillage:
-            total_tillage += feed_ratio * tillage / average_yield_kg_per_ha
-        if carbon_capture:
-            total_carbon_capture += feed_ratio * carbon_capture / average_yield_kg_per_ha
-    return total_soil_erosion, total_fertilizer, total_tillage, total_carbon_capture
-
-
-def _compute_pesticide_paf_impacts(
-    feed_entries: list[FeedEntry],
-) -> tuple[float, float | None, float | None, float | None, float | None]:
-    """Returns (pesticide_kg_per_kg, freshwater_paf, terrestrial_paf, insect_paf, bee_hazard).
-
-    PAF values are weighted by cropland area (feed_ratio / yield_kg_ha) rather than by
-    pesticide_kg_per_kg_food.  Area-weighting ensures that each feed crop's toxicity
-    contribution scales with how much land it actually occupies, not how much pesticide
-    it uses per kg of food.  Weighting by pesticide_kg over-represents high-pesticide-
-    intensity crops and under-represents high-yield crops (e.g. corn dominates because
-    it uses the most pesticide per kg chicken, while wheat's high-paf compounds are
-    diluted by corn's large pesticide mass).
-    """
-    total_pesticide_kg_per_kg = 0.0
-    freshwater_numerator = freshwater_denominator = 0.0
-    terrestrial_numerator = terrestrial_denominator = 0.0
-    insect_numerator = insect_denominator = 0.0
-    bee_hazard_numerator = bee_hazard_denominator = 0.0
-    for entry in feed_entries:
-        feed_ratio = entry.feed.kg_feed_per_kg_output.weighted_average()
-        if feed_ratio is None:
-            continue
-        pesticide_kg_per_kg_food = entry.plant.avg_pesticide_kg_per_kg_food
-        if not pesticide_kg_per_kg_food:
-            continue
-        total_pesticide_kg_per_kg += feed_ratio * pesticide_kg_per_kg_food
-
-        # Use hectares of cropland per kg of animal output as the aggregation weight so
-        # that the resulting average PAF matches what you'd get by summing per-crop impacts.
-        average_yield = entry.plant.yield_kg_ha.weighted_average()
-        if not average_yield or average_yield <= 0:
-            continue
-        area_ha = feed_ratio / average_yield
-
-        freshwater_paf = entry.plant.avg_pesticide_weighted_freshwater_paf
-        terrestrial_paf = entry.plant.avg_pesticide_weighted_terrestrial_paf
-        insect_paf = entry.plant.avg_pesticide_weighted_insect_paf
-        bee_hazard = entry.plant.avg_pesticide_weighted_bee_hazard
-        if freshwater_paf is not None:
-            freshwater_numerator += area_ha * freshwater_paf
-            freshwater_denominator += area_ha
-        if terrestrial_paf is not None:
-            terrestrial_numerator += area_ha * terrestrial_paf
-            terrestrial_denominator += area_ha
-        if insect_paf is not None:
-            insect_numerator += area_ha * insect_paf
-            insect_denominator += area_ha
-        if bee_hazard is not None:
-            bee_hazard_numerator += area_ha * bee_hazard
-            bee_hazard_denominator += area_ha
-    return (
-        total_pesticide_kg_per_kg,
-        freshwater_numerator / freshwater_denominator if freshwater_denominator else None,
-        terrestrial_numerator / terrestrial_denominator if terrestrial_denominator else None,
-        insect_numerator / insect_denominator if insect_denominator else None,
-        bee_hazard_numerator / bee_hazard_denominator if bee_hazard_denominator else None,
-    )

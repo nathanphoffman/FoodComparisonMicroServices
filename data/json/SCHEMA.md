@@ -23,7 +23,8 @@ data/json/
 │   ├── nuts.json
 │   ├── seeds.json
 │   ├── oils.json
-│   └── sweeteners.json
+│   ├── sweeteners.json
+│   └── composites.json     # foods made from other foods (see "Composite foods")
 ├── pesticides.json          # pesticide toxicity profiles
 └── sources.json             # bibliography / citation registry
 ```
@@ -412,6 +413,52 @@ bycatch references, and feed composition.
   ]
 }
 ```
+
+---
+
+### Composite foods (`composites.json`)
+
+A composite is a food made from other foods in the dataset (e.g. a plant-based burger made
+from soy, sunflower oil and coconut oil). Instead of plant fields, it lists its ingredients;
+the pipeline sums the ingredients' crop impacts (the same math as an animal's `feed`) and
+writes a normal plant-style row, so the API and scoring need nothing special.
+
+`type` is `"plant"`, `category` is `"composites"`. Keep base fields and `nutrition` (from the
+product label). Plant fields (`yield_kg_ha`, water, emissions …) are **not** set — they are
+computed. `land_types` is optional: when omitted it is the land-area-weighted mix of the
+ingredients' splits.
+
+```jsonc
+{
+  "ingredients": [                       // weight fractions must sum to 1 (±0.02)
+    {
+      "food_slug": "soy",                // must be a plant food in another category file
+      "fraction": [...],                 // SourcedValue  kg ingredient / kg product
+      "base_kg_per_kg": [...]            // optional SourcedValue  kg base food / kg ingredient
+                                         //   (default 1). Turns a processed ingredient back into
+                                         //   its base food, e.g. soy protein concentrate → soybeans.
+    },
+    { "food_slug": null, "label": "water", "fraction": [...] }  // no crop footprint
+  ],
+  "processing_emissions_per_kg": [...],  // SourcedValue  kg CO₂e / kg product — factory energy,
+                                         //   fermentation, packaging, non-crop inputs. Added on top
+                                         //   of the ingredients' farm-gate crop emissions.
+  "processing_water_per_kg": [...],      // SourcedValue  L / kg product — factory water, added to blue.
+  "availability_gg": [...]               // the product's own world production (optional)
+}
+```
+
+How the row is built (per kg of product):
+- land m² = Σ fraction × base_kg_per_kg × 10,000 / ingredient yield_kg_ha; `yield_kg_ha` = 10,000 / land.
+- water (green / blue / grey) and emissions = Σ ingredient kg × the ingredient's per-kg value
+  (farm-gate emissions where set), plus the processing fields.
+- per-hectare fields (erosion, fertilizer, tillage, CO₂ capture, pesticide kg/ha) and pesticide
+  PAFs = land-area-weighted averages over the ingredients.
+- `availability_gg` = √(own × ingredients), where ingredients = fraction-weighted average of each
+  ingredient's world supply. A geometric mean because the two differ by orders of magnitude;
+  falls back to whichever side exists.
+
+Only plant ingredients are supported; animal ingredients are rejected at build time.
 
 ---
 

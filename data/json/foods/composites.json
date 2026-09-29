@@ -1,0 +1,344 @@
+[
+    {
+        "id": 84,
+        "slug": "impossible-burger",
+        "name": "Impossible Burger (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "soy",
+            "meat-substitute"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.04,
+                    "fat": 0.115,
+                    "sat_fat": 0.0531,
+                    "protein": 0.1681,
+                    "fiber": 0.044,
+                    "sodium": 3.27,
+                    "carbs": 0.0796,
+                    "sugar": 0.0088,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 395,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                    "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                    "note": "Impossible Meat — nutrition: FDC 2664240 (Impossible Foods label, 2023 recipe) per 100 g raw: 204 kcal, fat 11.5 g, sat fat 5.31 g, protein 16.81 g, fiber 4.4 g, sodium 327 mg, carbs 7.96 g, sugars 0.88 g, cholesterol 0, trans fat 0; converted to per gram. Raw (as purchased) values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "soy",
+                "fraction": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 395,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                            "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                            "note": "Impossible Burger — soy protein concentrate (SPC) share: label protein 16.8 g/100 g, almost all from SPC at ~70% protein (dry) -> ~0.24 kg SPC/kg, less ~0.02 for the small soy protein isolate / yeast extract share -> 0.22. Label ingredient order (FDC 2664240, 2023 recipe): water, soy protein concentrate, sunflower oil, coconut oil, natural flavors, then <=2% each of methylcellulose, dextrose, starch, yeast extract, soy leghemoglobin, salt, vitamins."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Burger — kg soybeans charged per kg SPC: ~1.7 kg beans make 1 kg SPC by mass (0.79 kg meal per kg beans x ~0.75 SPC yield from meal), but the beans also yield ~0.19 kg oil. With economic allocation (meal carries ~60% of the bean's impact, as in the soy entry's farm-gate note) that is ~0.76 kg bean-equivalent per kg meal / 0.75 -> ~1.0 per kg SPC. Cross-check: Quantis gives soy protein ~24% of 2.5 m2·yr/kg = 0.6 m2 per kg burger, i.e. ~0.2 kg beans at US yields, same as 0.22 x 1.0."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "sunflower-oil",
+                "fraction": [
+                    {
+                        "value": 0.055,
+                        "confidence": 2,
+                        "source": {
+                            "id": 395,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                            "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                            "note": "Impossible Burger — sunflower oil share: solved from label fat 11.5 g and sat fat 5.31 g per 100 g, assuming the two oils supply the fat, coconut oil ~86% saturated and sunflower oil ~10%: coconut 0.055, sunflower 0.055 kg/kg. Label ingredient order (FDC 2664240, 2023 recipe): water, soy protein concentrate, sunflower oil, coconut oil, natural flavors, then <=2% each of methylcellulose, dextrose, starch, yeast extract, soy leghemoglobin, salt, vitamins."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "coconut-oil",
+                "fraction": [
+                    {
+                        "value": 0.055,
+                        "confidence": 2,
+                        "source": {
+                            "id": 395,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                            "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                            "note": "Impossible Burger — coconut oil share: see the sunflower oil note (solved from label fat 11.5 g / sat fat 5.31 g per 100 g). Quantis: coconut oil sourced from the Philippines, unirrigated."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "other minor ingredients (flavors, methylcellulose, starch, dextrose, yeast extract, heme, salt)",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 395,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                            "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                            "note": "Impossible Burger — minor ingredients: 'natural flavors' plus the '2% or less of' list. No crop footprint is modelled for them; heme fermentation is counted in processing_emissions_per_kg instead."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.62,
+                        "confidence": 2,
+                        "source": {
+                            "id": 395,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                            "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                            "note": "Impossible Burger — added water: first ingredient on the label; the remainder after SPC 0.22, oils 0.11 and minor 0.05."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 2.3,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Burger — processing emissions: Quantis Table 15 total 3.50 kg CO2e/kg = ingredients 2.09 + production 1.38 + packaging 0.02. Production + packaging = 1.40 (factory electricity, refrigerants). The ingredient stage also includes non-crop inputs, led by heme (LegH) fermentation; estimated as 2.09 minus crops modelled here (~0.85: soy, sunflower oil, coconut oil at this dataset's farm-gate values) minus potato protein (~9% of total = 0.32, dropped from the current recipe) = ~0.9. 1.40 + 0.9 = 2.3. Derived, confidence 2."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 31,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Burger — processing water: Quantis Table 15 production 22.13 + packaging 0.19 L/kg, plus 8.5 L/kg for coconut oil refining (Sec. 5.2.1) = ~31 L/kg, counted as blue water. Heme fermentation water is not broken out in the report and is not included."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2.7,
+                "confidence": 1,
+                "source": {
+                    "id": 396,
+                    "url": "https://www.fastcompany.com/90214790/impossible-foods-is-making-500000-pounds-of-fake-meat-a-month",
+                    "title": "Fast Company (2018) — Impossible Foods is making 500,000 pounds of fake meat a month",
+                    "note": "Impossible Burger — availability_gg (product's own): 2018 Oakland plant ramp-up to 500,000 lb/month = 6 million lb/yr = 2,722 t = 2.7 Gg. Only public volume found; later output (co-manufacturers, more retail) is likely higher. Confidence 1. The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "slug": "beyond-burger",
+        "name": "Beyond Burger (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "meat-substitute"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.04,
+                    "fat": 0.124,
+                    "sat_fat": 0.0442,
+                    "protein": 0.177,
+                    "fiber": 0.018,
+                    "sodium": 3.45,
+                    "carbs": 0.0619,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 402,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                    "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                    "note": "Beyond Burger — nutrition: FDC 2367272 (Beyond Meat label) per 100 g raw: 204 kcal, fat 12.4 g, sat fat 4.42 g, protein 17.7 g, fiber 1.8 g, sodium 345 mg, carbs 6.19 g, sugars 0, cholesterol 0, trans fat 0; converted to per gram. Same values as Beyond Beef ground (FDC 2663629, 2023)."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "pea-protein",
+                "fraction": [
+                    {
+                        "value": 0.19,
+                        "confidence": 2,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — pea protein share: label protein 17.7 g/100 g comes from pea + rice protein (~80% protein each) -> ~0.22 kg combined; rice protein is listed after coconut oil (0.039), so ~0.03, leaving ~0.19 pea protein. Label (FDC 2367272): water, pea protein, expeller-pressed canola oil, refined coconut oil, rice protein, natural flavors, dried yeast, cocoa butter, methylcellulose, then <=1% each of potato starch, salt, potassium chloride, beet juice color, apple extract, pomegranate concentrate, sunflower lecithin, vinegar, lemon juice concentrate, vitamins."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "canola-oil",
+                "fraction": [
+                    {
+                        "value": 0.07,
+                        "confidence": 2,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — canola oil share: solved from label fat 12.4 g and sat fat 4.42 g per 100 g, allowing ~1 g cocoa butter (60% sat) and ~0.5 g fat from the proteins; canola ~7% saturated, coconut ~86%: canola 0.070, coconut 0.039 kg/kg. Matches the label order (canola before coconut)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "coconut-oil",
+                "fraction": [
+                    {
+                        "value": 0.039,
+                        "confidence": 2,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — coconut oil share: see the canola oil note (solved from label fat and saturated fat). Heller & Keoleian 2018: coconut oil from Malaysia / Indonesia."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "rice",
+                "fraction": [
+                    {
+                        "value": 0.03,
+                        "confidence": 1,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — rice protein share: listed after coconut oil (0.039), and must cover the protein not supplied by pea protein; ~0.03. Confidence 1."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 3.0,
+                        "confidence": 1,
+                        "source": {
+                            "id": 401,
+                            "url": "https://css.umich.edu/sites/default/files/publication/CSS18-10.pdf",
+                            "title": "Heller & Keoleian (2018) — Beyond Meat's Beyond Burger Life Cycle Assessment (Univ. of Michigan Center for Sustainable Systems, CSS18-10)",
+                            "note": "Beyond Burger — kg rice charged per kg rice protein: no rice-protein LCA found. Brown rice is ~8% protein, so ~10 kg rice make 1 kg of 80% protein by mass, but most of the burden goes to the starch / syrup co-product; the pea protein isolate factor (economic allocation, ~3 kg crop per kg isolate) is used as a stand-in. Confidence 1; rice protein is only ~3% of the burger."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "other minor ingredients (flavors, dried yeast, cocoa butter, methylcellulose, potato starch, salt, fruit extracts)",
+                "fraction": [
+                    {
+                        "value": 0.07,
+                        "confidence": 2,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — minor ingredients: natural flavors, dried yeast, cocoa butter and methylcellulose (each above 1%) plus the '1% or less' list. No crop footprint modelled; their emissions are estimated in processing_emissions_per_kg."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.601,
+                        "confidence": 2,
+                        "source": {
+                            "id": 402,
+                            "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+                            "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+                            "note": "Beyond Burger — added water: first ingredient on the label; the remainder after pea protein 0.19, canola 0.07, coconut 0.039, rice protein 0.03 and minor 0.07."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 1.7,
+                "confidence": 2,
+                "source": {
+                    "id": 401,
+                    "url": "https://css.umich.edu/sites/default/files/publication/CSS18-10.pdf",
+                    "title": "Heller & Keoleian (2018) — Beyond Meat's Beyond Burger Life Cycle Assessment (Univ. of Michigan Center for Sustainable Systems, CSS18-10)",
+                    "note": "Beyond Burger — processing emissions: Heller & Keoleian 2018 Table 8 (per 0.113 kg patty, cradle to distribution, total 0.38 kg CO2e = 3.4 kg/kg): processing 0.05 + packaging 0.08 + cold storage 0.01 = 0.14; plus ingredient transport (6% of total, Table 9) 0.023; plus non-crop minor ingredients ~0.03 (ingredient stage 0.22 minus pea protein 20%, canola 12%, coconut 7% and transport 6% of total). Sum ~0.19 per patty = 1.7 kg/kg. Distribution to retail (0.02) excluded to match other composites. Recipe then was Beyond Burger 1.0, similar ingredients. Confidence 2."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 25,
+                "confidence": 2,
+                "source": {
+                    "id": 401,
+                    "url": "https://css.umich.edu/sites/default/files/publication/CSS18-10.pdf",
+                    "title": "Heller & Keoleian (2018) — Beyond Meat's Beyond Burger Life Cycle Assessment (Univ. of Michigan Center for Sustainable Systems, CSS18-10)",
+                    "note": "Beyond Burger — processing water: Heller & Keoleian 2018 Table 8 absolute water use per patty: processing 1.11 + packaging 1.64 + cold storage 0.04 = 2.79 L = ~25 L/kg, counted as blue water."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 31.8,
+                "confidence": 2,
+                "source": {
+                    "id": 403,
+                    "url": "https://www.sec.gov/Archives/edgar/data/1655210/000165521025000034/bynd-20241231.htm",
+                    "title": "Beyond Meat, Inc. — Form 10-K for fiscal year 2024 (SEC)",
+                    "note": "Beyond Burger — availability_gg (product's own): Beyond Meat FY2024 10-K, volume of products sold 70,034 thousand lb = 31,767 t = 31.8 Gg. Covers all Beyond Meat products, not only the burger, so it overstates the burger alone. Confidence 2. The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    }
+]

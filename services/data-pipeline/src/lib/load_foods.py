@@ -8,15 +8,19 @@ This module normalises that into the separate lists the insert functions expect.
 
 import json
 from pathlib import Path
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
-from ..food_types import Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide
-from .validate import assert_land_types
+from ..food_types import (
+    Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide, Composite, CompositeIngredient,
+)
+from .validate import assert_land_types, assert_composite_ingredients
 
 CATEGORY_FILES = [
     "dairy", "eggs", "feeds", "fruits", "grains",
     "leafy", "legumes", "meats", "nuts", "oils",
     "seafood", "seeds", "sweeteners", "vegetables",
+    # Must stay last: composites are built from foods in the other files.
+    "composites",
 ]
 
 FOOD_KEYS = {
@@ -41,6 +45,10 @@ PLANT_KEYS = {
     "wild_fish_lifespan_years",
 }
 
+# A food with an "ingredients" list is a composite: its crop impacts are built from
+# its ingredients, plus these processing extras. See data/json/SCHEMA.md.
+COMPOSITE_KEYS = {"processing_emissions_per_kg", "processing_water_per_kg"}
+
 
 @dataclass
 class CategoryData:
@@ -50,6 +58,8 @@ class CategoryData:
     animal_feed: list[AnimalFeed]
     plant_kills: list[PlantAnimalKill]
     plant_pesticides: list[PlantPesticide]
+    composites: list[Composite] = field(default_factory=list)
+    composite_ingredients: list[CompositeIngredient] = field(default_factory=list)
 
 
 def load_category_foods(data_dir: Path) -> CategoryData:
@@ -60,6 +70,7 @@ def load_category_foods(data_dir: Path) -> CategoryData:
     all_animal_feed: list[AnimalFeed] = []
     all_plant_kills: list[PlantAnimalKill] = []
     all_plant_pesticides: list[PlantPesticide] = []
+    composite_items: list[dict] = []
     next_feed_id = 1
     next_plant_pesticide_id = 1
 
@@ -71,7 +82,9 @@ def load_category_foods(data_dir: Path) -> CategoryData:
         for item in category_items:
             assert_land_types(item.get("land_types"), f"{item.get('slug')}.land_types")
             all_foods.append(_extract_food_base(item))
-            if item.get("type") == "animal":
+            if "ingredients" in item:
+                composite_items.append(item)
+            elif item.get("type") == "animal":
                 all_animals.append(_extract_animal_record(item))
                 new_feed_entries, next_feed_id = _extract_animal_feed_entries(
                     item, next_feed_id
@@ -84,6 +97,8 @@ def load_category_foods(data_dir: Path) -> CategoryData:
                 )
                 all_plant_pesticides.extend(new_pesticide_entries)
 
+    composites, composite_ingredients = _extract_composites(composite_items, all_foods, all_plants)
+
     return CategoryData(
         foods=all_foods,
         animals=all_animals,
@@ -91,6 +106,8 @@ def load_category_foods(data_dir: Path) -> CategoryData:
         animal_feed=all_animal_feed,
         plant_kills=all_plant_kills,
         plant_pesticides=all_plant_pesticides,
+        composites=composites,
+        composite_ingredients=composite_ingredients,
     )
 
 
@@ -148,3 +165,31 @@ def _extract_plant_pesticide_entries(
         })
         next_plant_pesticide_id += 1
     return pesticide_entries, next_plant_pesticide_id
+
+
+def _extract_composites(
+    composite_items: list[dict], foods: list[Food], plants: list[Plant]
+) -> tuple[list[Composite], list[CompositeIngredient]]:
+    """Builds composite records and their ingredient rows, resolving ingredient slugs
+    to plant ids. Ingredients must be plant foods (animal composites aren't supported)."""
+    food_by_slug = {food["slug"]: food for food in foods}
+    plant_ids = {plant["id"] for plant in plants}
+    composites: list[Composite] = []
+    ingredients: list[CompositeIngredient] = []
+    for item in composite_items:
+        assert_composite_ingredients(item, food_by_slug, plant_ids)
+        composite: dict = {"id": item["id"], "food_id": item["id"]}
+        for field_name in COMPOSITE_KEYS:
+            composite[field_name] = item.get(field_name)
+        composites.append(composite)  # type: ignore[arg-type]
+        for ingredient in item["ingredients"]:
+            slug = ingredient.get("food_slug")
+            ingredients.append({
+                "id": len(ingredients) + 1,
+                "composite_id": item["id"],
+                "plant_id": food_by_slug[slug]["id"] if slug else None,
+                "label": slug or ingredient["label"],
+                "fraction": ingredient["fraction"],
+                "base_kg_per_kg": ingredient.get("base_kg_per_kg"),
+            })
+    return composites, ingredients

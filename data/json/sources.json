@@ -814,7 +814,8 @@
         "notes": [
             "Primary source for green_water_per_kg and blue_water_per_kg splits for plant foods. Reports global average green, blue, and grey water footprints per crop in m³/ton (= L/kg) based on a grid-based model covering 1996–2005 production data at 5×5 arcminute resolution.",
             "Green water = evapotranspiration from soil moisture recharged by rainfall (no human extraction). Blue water = evapotranspiration of irrigation water drawn from surface/groundwater.",
-            "Values used here are global production-weighted averages from Table A1. Confidence 3 for major staple crops (wheat, corn, rice, soy, sorghum, potato) where M&H have dense country coverage. Confidence 2 for tree nuts and specialty crops where regional variation is high or M&H coverage is thinner."
+            "Values used here are global production-weighted averages from Table A1. Confidence 3 for major staple crops (wheat, corn, rice, soy, sorghum, potato) where M&H have dense country coverage. Confidence 2 for tree nuts and specialty crops where regional variation is high or M&H coverage is thinner.",
+            "Peas — Vol. 1 global average for FAO item 187 'Peas, dry': green 1,453 / blue 33 / grey 493 m3/t, total 1,979."
         ]
     },
     {
@@ -878,7 +879,8 @@
             "Brazil nuts — emissions_per_kg: ~0.2 kg CO2e/kg (P&N 2018 via OWID GHG chart; wild-harvested from Amazon rainforest canopy trees with zero cultivation inputs; GHG footprint consists almost entirely of harvest transport; the lowest value of any nut in the P&N dataset).",
             "Spinach — emissions_per_kg: 0.53 kg CO2e/kg from OWID 'Other Vegetables' category (P&N 2018 data); corroborates the P&N 2018 direct value of 0.47 kg CO2e/kg; both within the expected 0.3–0.6 kg CO2e/kg range for low-input leafy crops.",
             "Kale — emissions_per_kg: 0.51 kg CO2e/kg from OWID 'Brassicas' category (P&N 2018 data); closely corroborates the P&N 2018 direct value of 0.49 kg CO2e/kg for kale as a leafy brassica; within the known-correct brassica range of 0.4–0.9 kg CO2e/kg.",
-            "Tofu — emissions_per_kg (world): OWID tofu line item 3.16 kg CO2e/kg used directly for the tofu entry in legumes.json."
+            "Tofu — emissions_per_kg (world): OWID tofu line item 3.16 kg CO2e/kg used directly for the tofu entry in legumes.json.",
+            "Peas — emissions_per_kg: OWID 'Peas' category 0.98 kg CO2e/kg used directly for the peas entry."
         ]
     },
     {
@@ -1297,7 +1299,8 @@
         "notes": [
             "Strawberries — yield_kg_ha and availability_gg (world): World (area 5000) item 544 yield 2020–2024 mean 23,946 kg/ha; production 2020–2024 mean 10,129 Gg (2023–2024 are FAO estimates, flag E).",
             "Blueberries — yield_kg_ha and availability_gg (world): World item 552 yield 2020–2024 mean 6,640 kg/ha; production mean 1,231 Gg. Mixes cultivated highbush with managed wild lowbush (Canada) and omits China (not reported).",
-            "World production 2020–2024 means used for availability_gg (tonnes → Gg): almonds in shell 3,866; apples 95,053; avocados 9,717; bananas 133,938; barley 148,648; beans dry 29,760; Brazil nuts in shell 79; cashew nuts in shell 4,047; cauliflowers and broccoli 26,457; chick peas 16,472; coconuts in shell 64,013; cucumbers and gherkins 87,634; game meat 2,030; garlic (item 406) 29,514; groundnuts in shell 55,387; hazelnuts in shell 1,135; hen eggs 90,115; lentils 6,929; lettuce and chicory 28,147; linseed 3,278; maize 1,194,841; mangoes/guavas/mangosteens 59,192; cattle meat 66,624; chicken meat 122,746; pig meat 120,570; sheep meat 11,123; turkey meat 5,310; oats 22,976; olive oil 3,002; oranges 68,304; pistachios in shell 1,207; potatoes 380,130; quinoa 155; raw cow milk 773,343; rice (paddy) 793,255; sorghum 59,878; soya beans 370,953; spinach 32,340; sunflower seed 54,255; sweet potatoes 90,914; tomatoes 185,023; walnuts in shell 4,034; wheat 791,992. Meat items are carcass weight."
+            "World production 2020–2024 means used for availability_gg (tonnes → Gg): almonds in shell 3,866; apples 95,053; avocados 9,717; bananas 133,938; barley 148,648; beans dry 29,760; Brazil nuts in shell 79; cashew nuts in shell 4,047; cauliflowers and broccoli 26,457; chick peas 16,472; coconuts in shell 64,013; cucumbers and gherkins 87,634; game meat 2,030; garlic (item 406) 29,514; groundnuts in shell 55,387; hazelnuts in shell 1,135; hen eggs 90,115; lentils 6,929; lettuce and chicory 28,147; linseed 3,278; maize 1,194,841; mangoes/guavas/mangosteens 59,192; cattle meat 66,624; chicken meat 122,746; pig meat 120,570; sheep meat 11,123; turkey meat 5,310; oats 22,976; olive oil 3,002; oranges 68,304; pistachios in shell 1,207; potatoes 380,130; quinoa 155; raw cow milk 773,343; rice (paddy) 793,255; sorghum 59,878; soya beans 370,953; spinach 32,340; sunflower seed 54,255; sweet potatoes 90,914; tomatoes 185,023; walnuts in shell 4,034; wheat 791,992. Meat items are carcass weight.",
+            "Peas — yield_kg_ha 1,897 and availability_gg 13,869: item 187 'Peas, dry', World, 2020–2024 (same bulk file)."
         ]
     },
     {
@@ -2086,6 +2089,136 @@
         "notes": [
             "Fishmeal yield 16–25% of whole-fish weight (industry average 22.5%); fish oil average 5% (0.2–25%).",
             "In 2021, almost 30% of global fishmeal and 51% of fish oil were made from by-products (trimmings) rather than whole fish."
+        ]
+    },
+    {
+        "id": 394,
+        "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+        "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+        "notes": [
+            "Impossible Meat — cradle-to-gate LCA of 1 kg Impossible Burger 2.0 (Table 15): 3.50 kg CO2e, 2.5 m2·yr land, 106.82 L water consumption, 1.28 g PO4-eq. Commissioned by Impossible Foods; ISO 14044 critical review. Used for yield_kg_ha, emissions_per_kg, blue water, and ingredient land shares.",
+            "Impossible Burger (composite) — processing_emissions_per_kg 2.3 (production + packaging 1.40 plus estimated heme/minor inputs ~0.9) and processing_water_per_kg 31 (production + packaging 22.3 plus coconut refining 8.5); ingredient land cross-check for soy base_kg_per_kg."
+        ]
+    },
+    {
+        "id": 395,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+        "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+        "notes": [
+            "Impossible Meat — nutrition per 100 g raw from the branded label record (113 g serving).",
+            "Impossible Burger (composite) — ingredient weight fractions estimated from the label's protein, fat and saturated fat and the ingredient order."
+        ]
+    },
+    {
+        "id": 396,
+        "url": "https://www.fastcompany.com/90214790/impossible-foods-is-making-500000-pounds-of-fake-meat-a-month",
+        "title": "Fast Company (2018) — Impossible Foods is making 500,000 pounds of fake meat a month",
+        "notes": [
+            "Impossible Burger (composite) — availability_gg: 500,000 lb/month (2018) = 2.7 Gg/yr."
+        ]
+    },
+    {
+        "id": 397,
+        "url": "https://apps.carboncloud.com/climatehub/product-reports/id/1512532204291",
+        "title": "CarbonCloud ClimateHub — Pea protein isolate (79% protein), France: 4.04 kg CO2e/kg",
+        "notes": [
+            "Pea Protein — emissions_per_kg 4.04 kg CO2e/kg (France, 79% protein)."
+        ]
+    },
+    {
+        "id": 398,
+        "url": "https://zenodo.org/records/21219152",
+        "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+        "notes": [
+            "Pea Protein — emissions_per_kg 4.74 (economic allocation) and the peas-to-isolate factor (~3 kg dry peas per kg isolate, from allocation factors 72% EA / 27% MA in Table 2)."
+        ]
+    },
+    {
+        "id": 399,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2477360/nutrients",
+        "title": "USDA FoodData Central — Bob's Red Mill Unsweetened Pea Protein Powder (Branded, FDC 2477360, 2023; ingredient: pea protein isolate)",
+        "notes": [
+            "Pea Protein — nutrition per 100 g from the branded label."
+        ]
+    },
+    {
+        "id": 400,
+        "url": "https://www.industryresearch.biz/market-reports/pea-protein-isolate-market-109778",
+        "title": "Industry Research — Pea Protein Isolate Market report (2024 production volume)",
+        "notes": [
+            "Pea Protein — availability_gg 180 Gg (2024 global pea protein isolate production)."
+        ]
+    },
+    {
+        "id": 401,
+        "url": "https://css.umich.edu/sites/default/files/publication/CSS18-10.pdf",
+        "title": "Heller & Keoleian (2018) — Beyond Meat's Beyond Burger Life Cycle Assessment (Univ. of Michigan Center for Sustainable Systems, CSS18-10)",
+        "notes": [
+            "Beyond Burger (composite) — processing_emissions_per_kg 1.7 and processing_water_per_kg 25 from Tables 8 and 9 (per 0.113 kg patty: total 0.38 kg CO2e, land 0.45 m2a, water 3.27 L)."
+        ]
+    },
+    {
+        "id": 402,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
+        "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
+        "notes": [
+            "Beyond Burger (composite) — nutrition and ingredient-share estimates from the label."
+        ]
+    },
+    {
+        "id": 403,
+        "url": "https://www.sec.gov/Archives/edgar/data/1655210/000165521025000034/bynd-20241231.htm",
+        "title": "Beyond Meat, Inc. — Form 10-K for fiscal year 2024 (SEC)",
+        "notes": [
+            "Beyond Burger (composite) — availability_gg 31.8 Gg (70.0 million lb of all products sold in 2024)."
+        ]
+    },
+    {
+        "id": 404,
+        "url": "https://air.unimi.it/retrieve/dfa8b9a2-96c5-748b-e053-3a05fe0a3a96/Bacenetti%20et%20al_2019_Whey%20protein%20concentrate%20(WPC)%20production%20Environmental%20impact%20assessment.pdf",
+        "title": "Bacenetti et al. (2019) — Whey protein concentrate (WPC) production: Environmental impact assessment (J. Food Engineering 224:139-147)",
+        "notes": [
+            "Whey Protein — 5.0 kg milk-equivalent per kg WPC80 (economic allocation: whey 4.8% at the cheese plant, WPC80 81.8% at the WPC plant) and total GHG 5.9 kg CO2e/kg (economic)."
+        ]
+    },
+    {
+        "id": 405,
+        "url": "https://apps.carboncloud.com/climatehub/product-reports/id/153737708776",
+        "title": "CarbonCloud ClimateHub — Whey protein, 80% protein, Sweden: 7.32 kg CO2e/kg",
+        "notes": [
+            "Whey Protein — total GHG 7.32 kg CO2e/kg and post-farm share 43% (3.15 kg CO2e/kg) used for co2_kg_per_kg_output."
+        ]
+    },
+    {
+        "id": 406,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2339098/nutrients",
+        "title": "USDA FoodData Central — NOW Whey Protein Concentrate powder, unflavored (Branded, FDC 2339098, 2022)",
+        "notes": [
+            "Whey Protein — nutrition per 100 g (WPC, unflavored)."
+        ]
+    },
+    {
+        "id": 407,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2338258/nutrients",
+        "title": "USDA FoodData Central — Agri-Mark Premium Natural Whey Protein (WPC, Branded, FDC 2338258, 2022)",
+        "notes": [
+            "Whey Protein — nutrition per 100 g (WPC, unflavored)."
+        ]
+    },
+    {
+        "id": 408,
+        "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2339424/nutrients",
+        "title": "USDA FoodData Central — Reserveage Grass-Fed Whey Protein (WPC, Branded, FDC 2339424, 2022)",
+        "notes": [
+            "Whey Protein — nutrition per 100 g (WPC, unflavored)."
+        ]
+    },
+    {
+        "id": 409,
+        "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/r781zd41r/4b29d481c/daryan25.pdf",
+        "title": "USDA NASS — Dairy Products 2024 Summary (April 2025)",
+        "notes": [
+            "Whey Protein — availability_gg (US) 248 Gg: 2024 WPC 50-89.9% (354.1 M lb) + WPI (192.6 M lb)."
         ]
     }
 ]

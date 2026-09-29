@@ -1341,5 +1341,468 @@
                 }
             }
         ]
+    },
+    {
+        "id": 88,
+        "slug": "whey-protein",
+        "name": "Whey Protein",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "processed"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Whey protein is made from the whey left over when milk is turned into cheese, so it carries the same animal deaths as milk. It takes over 100 kg of milk to make 1 kg of whey protein powder, but cheese is the main product and gets most of the blame, so whey protein is charged with only its value share, about 5 kg of milk per kg. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death, about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime share of about 6,300 kg of whey protein in the US or 2,700 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.94,
+                    "fat": 0.0606,
+                    "sat_fat": 0.0303,
+                    "protein": 0.727,
+                    "fiber": 0,
+                    "sodium": 1.67,
+                    "carbs": 0.0909,
+                    "sugar": 0.0303,
+                    "cholesterol": 1.52,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 406,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2339098/nutrients",
+                    "title": "USDA FoodData Central — NOW Whey Protein Concentrate powder, unflavored (Branded, FDC 2339098, 2022)",
+                    "note": "Whey Protein — nutrition: FDC 2339098 (NOW, whey protein concentrate + <1% sunflower lecithin, unflavored) per 100 g: 394 kcal, fat 6.06 g, sat 3.03 g, protein 72.7 g, sodium 167 mg, carbs 9.09 g, sugars 3.03 g, cholesterol 152 mg; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 3.85,
+                    "fat": 0.0385,
+                    "sat_fat": 0.0192,
+                    "protein": 0.769,
+                    "fiber": 0,
+                    "sodium": 1.35,
+                    "carbs": 0.0769,
+                    "sugar": 0.0385,
+                    "cholesterol": 1.92,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 407,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2338258/nutrients",
+                    "title": "USDA FoodData Central — Agri-Mark Premium Natural Whey Protein (WPC, Branded, FDC 2338258, 2022)",
+                    "note": "Whey Protein — nutrition: FDC 2338258 (Agri-Mark, whey protein concentrate + soy lecithin, unflavored) per 100 g: 385 kcal, fat 3.85 g, sat 1.92 g, protein 76.9 g, sodium 135 mg, carbs 7.69 g, sugars 3.85 g, cholesterol 192 mg; per gram."
+                }
+            },
+            {
+                "value": {
+                    "calories": 4.18,
+                    "fat": 0.057,
+                    "sat_fat": 0.038,
+                    "protein": 0.798,
+                    "fiber": 0,
+                    "sodium": 1.71,
+                    "carbs": 0.076,
+                    "sugar": 0.038,
+                    "cholesterol": 1.71,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 408,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2339424/nutrients",
+                    "title": "USDA FoodData Central — Reserveage Grass-Fed Whey Protein (WPC, Branded, FDC 2339424, 2022)",
+                    "note": "Whey Protein — nutrition: FDC 2339424 (Reserveage, whey protein concentrate + sunflower lecithin, unflavored) per 100 g: 418 kcal, fat 5.7 g, sat 3.8 g, protein 79.8 g, sodium 171 mg, carbs 7.6 g, sugars 3.8 g, cholesterol 171 mg; per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3000000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 2660.0,
+                "confidence": 2,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Whey Protein — lifetime milk per cow 13300 kg / 5.0 kg allocated milk-equivalent per kg whey protein = 2660 kg whey-protein-equivalent per cow. x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            },
+            {
+                "value": 6260.0,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Whey Protein — lifetime milk per cow 31300 kg / 5.0 kg allocated milk-equivalent per kg whey protein = 6260 kg whey-protein-equivalent per cow. x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Whey Protein — yield_fraction 1.0: all per-kg-output values are already per kg whey protein powder; the milk-to-whey-protein factor (5.0 kg allocated milk-equivalent) is in the lifetime, GHG, land and feed values, not here."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 7.32,
+                "confidence": 2,
+                "source": {
+                    "id": 405,
+                    "url": "https://apps.carboncloud.com/climatehub/product-reports/id/153737708776",
+                    "title": "CarbonCloud ClimateHub — Whey protein, 80% protein, Sweden: 7.32 kg CO2e/kg",
+                    "note": "Whey Protein — total GHG: CarbonCloud verified benchmark, whey protein 80% (Sweden), 7.32 kg CO2e/kg (agriculture 57%, transport 35%, processing 6%, packaging 2%)."
+                }
+            },
+            {
+                "value": 5.9,
+                "confidence": 2,
+                "source": {
+                    "id": 404,
+                    "url": "https://air.unimi.it/retrieve/dfa8b9a2-96c5-748b-e053-3a05fe0a3a96/Bacenetti%20et%20al_2019_Whey%20protein%20concentrate%20(WPC)%20production%20Environmental%20impact%20assessment.pdf",
+                    "title": "Bacenetti et al. (2019) — Whey protein concentrate (WPC) production: Environmental impact assessment (J. Food Engineering 224:139-147)",
+                    "note": "Whey Protein — total GHG: Bacenetti et al. 2019, WPC80 (Italy), 40,652 kg CO2e per t protein under dry-matter allocation, -81.1% under economic allocation (Table 8) = 7,683 kg per t protein x ~0.77 kg protein per kg WPC80 = 5.9 kg CO2e/kg. Excludes final spray drying (outside their boundary), so slightly low."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.0033,
+                "confidence": 2,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Whey Protein — pasture_ha_per_kg_output: milk value 0.00066 x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            },
+            {
+                "value": 0.001,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Whey Protein — pasture_ha_per_kg_output: milk value 0.0002 x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.2463,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Whey Protein — world milk CH4 0.0493 kg/kg (confidence-weighted mean of the milk entry's world values) x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            },
+            {
+                "value": 0.105,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Whey Protein — US: milk CH4 0.021 (Pelton 2025) x 5.0."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00625,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Whey Protein — world milk manure N2O 0.00125 kg/kg (confidence-weighted mean of the milk entry's world values) x 5.0 kg milk-equivalent per kg whey protein (WPC80). Economic allocation, the same approach as butter: Bacenetti et al. 2019 (source 404) — ~10 kg milk makes 1 kg cheese + ~9 kg whey, and the cheese factory charges whey 4.8% of the milk burden (76.2% cheese) -> 0.053 kg milk per kg whey; WPC80 takes ~114 kg whey (0.75% protein, ~90% recovery) and 81.8% of the WPC-plant burden -> 114 x 0.053 x 0.818 = ~5.0. Mass or milk-solids allocation would charge several times more (Pelton, Bernal & Kurt 2026, source 293, milk-solids: WPC 16-20, WPI ~25 kg CO2e/kg). Confidence 2."
+                }
+            },
+            {
+                "value": 0.0013,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Whey Protein — US: milk manure N2O 0.00026 (Pelton 2025) x 5.0."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.4,
+                "confidence": 2,
+                "source": {
+                    "id": 405,
+                    "url": "https://apps.carboncloud.com/climatehub/product-reports/id/153737708776",
+                    "title": "CarbonCloud ClimateHub — Whey protein, 80% protein, Sweden: 7.32 kg CO2e/kg",
+                    "note": "Whey Protein — world on-farm energy 0.05 kg CO2/kg milk (GLEAM 2013 Table E9, source 290, as in the milk and butter entries) x 5.0 = 0.25, plus whey-protein post-farm stages 3.15 kg CO2e/kg: CarbonCloud (source 405) WPC80 7.32 kg CO2e/kg with agriculture 57%, transport 35%, processing 6%, packaging 2% -> 43% = 3.15 (ultrafiltration, spray drying, packaging, transport). Milk's own post-farm stages are NOT multiplied (whey protein goes through its own chain). Total 3.40."
+                }
+            },
+            {
+                "value": 3.61,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 405,
+                    "url": "https://apps.carboncloud.com/climatehub/product-reports/id/153737708776",
+                    "title": "CarbonCloud ClimateHub — Whey protein, 80% protein, Sweden: 7.32 kg CO2e/kg",
+                    "note": "Whey Protein — US: on-farm energy + feed milling 0.092 kg CO2/kg milk (Pelton 2025, source 292) x 5.0 = 0.46, plus whey-protein post-farm stages 3.15 kg CO2e/kg: CarbonCloud (source 405) WPC80 7.32 kg CO2e/kg with agriculture 57%, transport 35%, processing 6%, packaging 2% -> 43% = 3.15 (ultrafiltration, spray drying, packaging, transport). Milk's own post-farm stages are NOT multiplied (whey protein goes through its own chain). Total 3.61."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.7,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Whey Protein — milk feed 0.34 kg corn/kg milk x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    },
+                    {
+                        "value": 1.45,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Whey Protein — milk feed 0.29 kg corn/kg milk (US) x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.55,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Whey Protein — milk feed 0.11 kg alfalfa/kg milk x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    },
+                    {
+                        "value": 0.85,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Whey Protein — milk feed 0.17 kg alfalfa/kg milk (US) x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.8,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Whey Protein — milk feed 0.16 kg soy/kg milk x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    },
+                    {
+                        "value": 0.25,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Whey Protein — milk feed 0.05 kg soy/kg milk (US) x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.85,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Whey Protein — milk feed 0.57 kg grass-hay/kg milk x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    },
+                    {
+                        "value": 0.25,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Whey Protein — milk feed 0.05 kg grass-hay/kg milk (US) x 5.0 kg milk-equivalent per kg whey protein (economic allocation, Bacenetti et al. 2019)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 248,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 409,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/r781zd41r/4b29d481c/daryan25.pdf",
+                    "title": "USDA NASS — Dairy Products 2024 Summary (April 2025)",
+                    "note": "Whey Protein — availability_gg (US): USDA NASS Dairy Products 2024 Summary — whey protein concentrate 50.0-89.9% protein 354,053 thousand lb + whey protein isolates (>=90%) 192,573 thousand lb = 546.6 million lb = 248 Gg. Lower-protein WPC (25-49.9%) excluded. No official world figure found, so the pipeline uses this US value for every region; world production is likely 2-3x higher (EU, New Zealand)."
+                }
+            }
+        ]
     }
 ]

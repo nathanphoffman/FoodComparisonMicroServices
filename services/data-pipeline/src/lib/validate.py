@@ -28,3 +28,31 @@ def assert_land_types(value: dict | None, label: str) -> None:
     total = sum(value.values())
     if abs(total - 1.0) > 0.01:
         raise ValueError(f"{label} fractions must sum to 1, got {total:.3f}")
+
+
+def assert_composite_ingredients(item: dict, food_by_slug: dict, plant_ids: set[int]) -> None:
+    """Raises ValueError if a composite's ingredients reference unknown or non-plant foods,
+    or their weight fractions don't sum to 1."""
+    slug = item.get("slug")
+    ingredients = item.get("ingredients") or []
+    if not ingredients:
+        raise ValueError(f"{slug}.ingredients must be a non-empty list")
+    total = 0.0
+    for ingredient in ingredients:
+        ingredient_slug = ingredient.get("food_slug")
+        if ingredient_slug is None:
+            if not ingredient.get("label"):
+                raise ValueError(f"{slug}: an ingredient with no food_slug needs a label (e.g. 'water')")
+        elif ingredient_slug not in food_by_slug:
+            raise ValueError(f"{slug}: unknown ingredient food_slug {ingredient_slug!r}")
+        elif food_by_slug[ingredient_slug]["id"] not in plant_ids:
+            raise ValueError(f"{slug}: ingredient {ingredient_slug!r} must be a plant food")
+        assert_sourced_array(ingredient.get("fraction"), f"{slug}.ingredients[{ingredient_slug or ingredient.get('label')}].fraction")
+        total += _mean_value(ingredient["fraction"])
+    if abs(total - 1.0) > 0.02:
+        raise ValueError(f"{slug}.ingredients fractions must sum to 1, got {total:.3f}")
+
+
+def _mean_value(sourced_array: list[dict]) -> float:
+    """Plain mean of a sourced array's values (only used for sanity checks)."""
+    return sum(item["value"] for item in sourced_array) / len(sourced_array)

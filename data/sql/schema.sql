@@ -104,6 +104,24 @@ CREATE TABLE IF NOT EXISTS animal_feed (
     kg_feed_per_kg_output  TEXT    NOT NULL   -- json array of {value: kg feed/kg output, source_id}
 );
 
+-- Composite foods (made from other foods, e.g. a plant-based burger). Their crop
+-- impacts are summed from composite_ingredients at build time; these are the extras.
+CREATE TABLE IF NOT EXISTS composites (
+    id                          INTEGER PRIMARY KEY AUTOINCREMENT,
+    food_id                     INTEGER NOT NULL REFERENCES foods(id),
+    processing_emissions_per_kg TEXT,  -- json array of {value: kg CO2e/kg product, source_id, confidence}; factory, fermentation, packaging
+    processing_water_per_kg     TEXT   -- json array of {value: L/kg product, source_id, confidence}; factory water, counted as blue
+);
+
+CREATE TABLE IF NOT EXISTS composite_ingredients (
+    id             INTEGER PRIMARY KEY AUTOINCREMENT,
+    composite_id   INTEGER NOT NULL REFERENCES composites(id),
+    plant_id       INTEGER REFERENCES plants(id),  -- NULL for ingredients with no crop footprint (added water)
+    label          TEXT    NOT NULL,               -- ingredient food slug, or a name like 'water'
+    fraction       TEXT    NOT NULL,               -- json array of {value: kg ingredient/kg product, source_id, confidence}
+    base_kg_per_kg TEXT                            -- json array of {value: kg base food/kg ingredient, source_id, confidence}; NULL = 1
+);
+
 CREATE TABLE IF NOT EXISTS pesticides (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     name            TEXT    NOT NULL UNIQUE,

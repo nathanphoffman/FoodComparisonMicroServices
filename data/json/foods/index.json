@@ -37,7 +37,10 @@
         "lentils",
         "chickpeas",
         "black-beans",
-        "tofu"
+        "tofu",
+        "impossible-meat",
+        "peas",
+        "pea-protein"
     ],
     "feeds": [
         "alfalfa",
@@ -85,7 +88,8 @@
     "dairy": [
         "milk",
         "yogurt",
-        "butter"
+        "butter",
+        "whey-protein"
     ],
     "oils": [
         "olive-oil",
@@ -102,5 +106,9 @@
     "sweeteners": [
         "maple-syrup",
         "cane-sugar"
+    ],
+    "composites": [
+        "impossible-burger",
+        "beyond-burger"
     ]
 }

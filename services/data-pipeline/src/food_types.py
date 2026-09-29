@@ -108,6 +108,23 @@ class AnimalFeed(TypedDict):
     kg_feed_per_kg_output: list[SourcedNumber]
 
 
+class Composite(TypedDict):
+    """A food made from other foods (e.g. a plant-based burger); see data/json/SCHEMA.md."""
+    id: int
+    food_id: int
+    processing_emissions_per_kg: list[SourcedNumber] | None
+    processing_water_per_kg: list[SourcedNumber] | None
+
+
+class CompositeIngredient(TypedDict):
+    id: int
+    composite_id: int
+    plant_id: int | None  # None for ingredients with no crop footprint (added water)
+    label: str            # the ingredient food's slug, or a name like "water"
+    fraction: list[SourcedNumber]              # kg of ingredient per kg of product
+    base_kg_per_kg: list[SourcedNumber] | None  # kg of base food per kg of ingredient (default 1)
+
+
 class PlantAnimalKill(TypedDict):
     id: int
     plant_id: int

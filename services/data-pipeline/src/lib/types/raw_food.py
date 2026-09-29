@@ -15,6 +15,7 @@ from .food_normalized import FoodNormalized
 if TYPE_CHECKING:
     from .raw_plant import RawPlant
     from .raw_animal import RawAnimal
+    from .raw_composite import RawComposite
 
 # Null-out dicts for foods that have no plant or no animal record.
 # yield_fraction is intentionally absent from both: it is supplied by whichever
@@ -46,10 +47,12 @@ class RawFood:
         data: Food,
         plant: "RawPlant | None",
         animal: "RawAnimal | None",
+        composite: "RawComposite | None" = None,
     ) -> None:
         self._data = data
         self._plant = plant
         self._animal = animal
+        self._composite = composite
         self.nutrition = SourcedNutritionArray(data["nutrition"])
 
     def to_normalized(self) -> FoodNormalized:
@@ -73,19 +76,34 @@ class RawFood:
             sugar=nutrition_average.get("sugar") if nutrition_average else None,
             cholesterol=nutrition_average.get("cholesterol") if nutrition_average else None,
             trans_fat=nutrition_average.get("trans_fat") if nutrition_average else None,
-            **(self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS),
+            **self._plant_fields(),
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
             availability_gg=self._availability_gg(),
             sentient_harm_explanation=self._data.get("sentient_harm_explanation"),
-            land_types=self._data.get("land_types"),
+            land_types=self._land_types(),
             category=self._data.get("category"),
         )
+
+    def _plant_fields(self) -> dict:
+        """Crop metrics: built from ingredients for a composite, else the plant's own."""
+        if self._composite:
+            return self._composite.normalized_fields()
+        return self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS
+
+    def _land_types(self) -> dict[str, float] | None:
+        """The food's own land split; a composite without one gets its ingredients' mix."""
+        land_types = self._data.get("land_types")
+        if land_types is None and self._composite:
+            return self._composite.land_types()
+        return land_types
 
     def _availability_gg(self) -> float | None:
         """World supply in Gg, on the same basis as the food's nutrition. Production is
         sourced as dry harvest; foods eaten cooked (rice, beans) are converted to cooked
         weight with cooked_weight_ratio, the same way their yield is."""
         availability = SourcedArray(self._data.get("availability_gg")).weighted_average()
+        if self._composite:
+            return self._composite.availability_gg(availability)
         cooked_ratio = self._plant.cooked_weight_ratio.weighted_average() if self._plant else None
         if availability and cooked_ratio:
             return availability * cooked_ratio

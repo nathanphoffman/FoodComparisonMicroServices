@@ -1576,5 +1576,781 @@
                 }
             }
         ]
+    },
+    {
+        "id": 83,
+        "slug": "impossible-meat",
+        "name": "Impossible Meat",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume",
+            "soy",
+            "processed",
+            "meat-substitute"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.76,
+            "tropical_forest": 0.19,
+            "wetland": 0.05
+        },
+        "land_types_note": "Soy (US Midwest) and sunflower (temperate grassland regions) take ~3/4 of the land; coconut oil from the Philippines, mostly former tropical forest, the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.04,
+                    "fat": 0.115,
+                    "sat_fat": 0.0531,
+                    "protein": 0.1681,
+                    "fiber": 0.044,
+                    "sodium": 3.27,
+                    "carbs": 0.0796,
+                    "sugar": 0.0088,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 395,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                    "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                    "note": "Impossible Meat — nutrition: FDC 2664240 (Impossible Foods label, 2023 recipe) per 100 g raw: 204 kcal, fat 11.5 g, sat fat 5.31 g, protein 16.81 g, fiber 4.4 g, sodium 327 mg, carbs 7.96 g, sugars 0.88 g, cholesterol 0, trans fat 0; converted to per gram. Raw (as purchased) values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 395,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
+                    "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
+                    "note": "Impossible Meat — yield_fraction: 1.0, eaten as purchased with no inedible portion; yield_kg_ha is already expressed in kg product."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 4000,
+                "confidence": 3,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — yield_kg_ha: Quantis Table 15 land occupation 2.5 m2·yr per kg Impossible Burger 2.0 (cradle-to-gate, inventory level) -> 10,000 / 2.5 = 4,000 kg/ha. Industry-commissioned, ISO-reviewed LCA; confidence 3. Cross-check from recipe (~0.4 kg soybeans, ~0.06 kg sunflower oil, ~0.05 kg coconut oil per kg) with the dataset's crop yields gives ~3.0 m2·yr/kg, same order."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1288,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — water_per_kg: each ingredient crop's per-ha water (dataset water_per_kg x yield_kg_ha: green 1132 + blue 107 (Quantis) + grey 49; soy 6.0M, sunflower 5.0M, coconut 3.2M L/ha total) weighted by land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it), divided by yield_kg_ha 4000. Derived, confidence 2."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1132,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — green_water_per_kg: each ingredient crop's per-ha water (dataset water_per_kg x yield_kg_ha: soy 5.68M, sunflower 4.47M, coconut 3.16M L/ha) weighted by land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it), divided by yield_kg_ha 4000. Derived, confidence 2."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 107,
+                "confidence": 3,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — blue_water_per_kg: Quantis Table 15 water consumption 106.82 L per kg (crop irrigation + processing; 62 L of it from potato protein, which the current recipe has dropped, so this likely overstates today's product). Crop-only derivation from the dataset's soy/sunflower/coconut blue water gives ~37 L/kg."
+                }
+            },
+            {
+                "value": 37,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — blue_water_per_kg: each ingredient crop's per-ha water (dataset water_per_kg x yield_kg_ha: soy 0.154M, sunflower 0.219M, coconut 0.002M L/ha; crop irrigation only, excludes factory water) weighted by land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it), divided by yield_kg_ha 4000. Derived, confidence 2."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 49,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — grey_water_per_kg: each ingredient crop's per-ha water (dataset water_per_kg x yield_kg_ha: soy 0.179M, sunflower 0.297M, coconut 0.019M L/ha) weighted by land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it), divided by yield_kg_ha 4000. Derived, confidence 2."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 2.4,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — soil_erosion: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (4.5 / 2 / 0.3 t/ha/yr); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.0,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — pesticide_kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (1.5 / 1.0 / 0.5 kg/ha); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 85,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — fertilizer_kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (80 / 90 / 80 kg/ha); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.5,
+                "confidence": 3,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — emissions_per_kg: Quantis Table 15, 3.50 kg CO2e per kg Impossible Burger 2.0 (IMPACT 2002+; 2.09 ingredients incl. heme fermentation, 1.38 production, 0.02 packaging). Cradle-to-factory-gate, so excludes distribution/retail (P&N-style values include those). US production (California). Industry-commissioned; confidence 3."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — tillage_events_per_year: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (2 / 2 / 0 events/yr); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2900,
+                "confidence": 2,
+                "source": {
+                    "id": 394,
+                    "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                    "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                    "note": "Impossible Meat — co2_capture_kg_ha_yr: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (1500 / 1200 / 8000 kg/ha/yr); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.58,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Glyphosate.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0.84 / sunflower 0.7 / coconut 0); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.25,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Pendimethalin.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0 / sunflower 0.55 / coconut 0); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.057,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Chlorpyrifos.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0.03 / sunflower 0 / coconut 0.2); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.043,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Metolachlor.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0.14 / sunflower 0 / coconut 0); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.027,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Imidacloprid.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0 / sunflower 0.06 / coconut 0); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.024,
+                        "confidence": 2,
+                        "source": {
+                            "id": 394,
+                            "url": "https://assets.ctfassets.net/hhv516v5f7sj/4exF7Ex74UoYku640WSF3t/cc213b148ee80fa2d8062e430012ec56/Impossible_foods_comparative_LCA.pdf",
+                            "title": "Khan et al. / Quantis (2019) — Comparative Environmental LCA of the Impossible Burger with Conventional Ground Beef Burger (Final Report, 27 Feb 2019)",
+                            "note": "Impossible Meat — pesticides.Malathion.kg_ha: land-share-weighted mix of the dataset's own soy / sunflower-oil / coconut-oil entries (soy 0 / sunflower 0 / coconut 0.1); land-share weights soy 0.31 / sunflower 0.45 / coconut 0.24, from Quantis Sec. 5.2.1 crop land occupation per kg (soy ~0.6, sunflower oil 0.89, coconut oil 0.46 m2·yr; potato protein 0.38 dropped because the current recipe no longer lists it). Derived, confidence 2."
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "slug": "peas",
+        "name": "Peas",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [],
+        "land_types": {
+            "temperate_grassland": 0.8,
+            "dry": 0.2
+        },
+        "land_types_note": "Mostly Russian steppe and Canadian prairie, plus China, the northern US plains and drier parts of India and Australia.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.18,
+                    "fat": 0.0039,
+                    "sat_fat": 0.00054,
+                    "protein": 0.0834,
+                    "fiber": 0.083,
+                    "sodium": 0.02,
+                    "carbs": 0.211,
+                    "sugar": 0.029,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Peas — nutrition: USDA FDC 172429 (SR Legacy 16086) 'Peas, split, mature seeds, cooked, boiled, without salt' per 100 g: 118 kcal, fat 0.39 g, sat fat 0.054 g, protein 8.34 g, fiber 8.3 g, sodium 2 mg, carbs 21.1 g, sugars 2.9 g; converted to per gram. Cooked basis, matching cooked_weight_ratio."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Peas — yield_fraction: 1.0, FAOSTAT dry pea production is threshed, dry seed with no further inedible portion."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 3.0,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Peas — cooked_weight_ratio: dry matter of raw split peas (FDC 172428 / SR 16085, water 8.69 g/100 g -> 91.3% DM) divided by cooked (FDC 172429, water 69.5 g/100 g -> 30.5% DM) = 2.99 g cooked per g dry. Calories agree (364 / 118 = 3.08)."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1897,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Peas — yield_kg_ha (world): 2020–2024 total production / total area = 69,343 kt / 36.55 Mha = 1,897 kg/ha. FAOSTAT QCL bulk download, item 187 'Peas, dry', World, 2020–2024: production 14,722 / 12,492 / 14,217 / 13,754 / 14,158 kt; area harvested 7.28 / 7.24 / 7.23 / 7.44 / 7.36 Mha."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1979,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Peas — water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average for FAO item 187 'Peas, dry' = 1,979 m3/t (green 1,453 + blue 33 + grey 493). No US value added: the US figure could not be read reliably from the Vol. 2 appendix, so world values are used for every region."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1453,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Peas — green_water_per_kg: Report 47 Vol. 1, 'Peas, dry' global average green water footprint 1,453 m3/t."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 33,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Peas — blue_water_per_kg: Report 47 Vol. 1, 'Peas, dry' global average blue water footprint 33 m3/t."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 493,
+                "confidence": 4,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Peas — grey_water_per_kg: Report 47 Vol. 1, 'Peas, dry' global average grey water footprint 493 m3/t."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Peas — soil_erosion: copied from the lentils entry (1.5, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Peas — pesticide_kg_ha: copied from the lentils entry (0.5, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Peas — fertilizer_kg_ha: copied from the lentils entry (0, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.98,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Peas — emissions_per_kg: OWID / Poore & Nemecek (2018) 'Peas' food category, 0.98 kg CO2e per kg dry peas (global mean, cradle to retail). P&N's 'Peas' row is dry field peas."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Peas — tillage_events_per_year: copied from the lentils entry (1, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Peas — co2_capture_kg_ha_yr: copied from the lentils entry (1000, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Peas — pesticides.Pendimethalin.kg_ha: copied from the lentils entry (0.22, source 52): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Peas — pesticides.Malathion.kg_ha: copied from the lentils entry (0.04, source 52): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 13869,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Peas — availability_gg: FAOSTAT world production 2020–2024 mean, 'Peas, dry' = 13,869 Gg. Dry weight; converted to cooked weight by the pipeline. FAOSTAT QCL bulk download, item 187 'Peas, dry', World, 2020–2024: production 14,722 / 12,492 / 14,217 / 13,754 / 14,158 kt; area harvested 7.28 / 7.24 / 7.23 / 7.44 / 7.36 Mha."
+                }
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "slug": "pea-protein",
+        "name": "Pea Protein",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume",
+            "processed"
+        ],
+        "land_types": {
+            "temperate_grassland": 0.8,
+            "dry": 0.2
+        },
+        "land_types_note": "Same land as the dry peas it is made from.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.7,
+                    "fat": 0.0556,
+                    "sat_fat": 0,
+                    "protein": 0.778,
+                    "fiber": 0.037,
+                    "sodium": 9.63,
+                    "carbs": 0.0741,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 399,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2477360/nutrients",
+                    "title": "USDA FoodData Central — Bob's Red Mill Unsweetened Pea Protein Powder (Branded, FDC 2477360, 2023; ingredient: pea protein isolate)",
+                    "note": "Pea Protein — nutrition: FDC 2477360 (Bob's Red Mill Unsweetened Pea Protein Powder; single ingredient, pea protein isolate) per 100 g: 370 kcal, fat 5.56 g, sat fat 0 (label rounding), protein 77.8 g, fiber 3.7 g, sodium 963 mg (from pH adjustment in wet processing), carbs 7.41 g, sugars 0; converted to per gram. Single branded product, so confidence 4."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 399,
+                    "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2477360/nutrients",
+                    "title": "USDA FoodData Central — Bob's Red Mill Unsweetened Pea Protein Powder (Branded, FDC 2477360, 2023; ingredient: pea protein isolate)",
+                    "note": "Pea Protein — yield_fraction: 1.0, the powder is eaten as purchased; yield_kg_ha is already expressed in kg pea protein."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [],
+        "yield_kg_ha": [
+            {
+                "value": 632,
+                "confidence": 2,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — yield_kg_ha: peas entry 1,897 kg/ha / 3.0 = 632 kg/ha. Peas-to-isolate factor: x 3.0 kg dry peas per kg pea protein isolate. Früh et al. 2026 (source 398, Table 2): isolate takes 27% of the pea dry matter by mass, but carries 72% of the burden under economic allocation (the study's reference case, since starch and fibre co-products are worth much less). 0.72 / 0.27 = 2.7 kg dehulled pea DM, ~3.0 kg dry peas with hulls. Confidence 2."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 5937,
+                "confidence": 2,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — water_per_kg: peas entry 1,979 L/kg x 3.0 kg dry peas per kg pea protein isolate. Früh et al. 2026 (source 398, Table 2): isolate takes 27% of the pea dry matter by mass, but carries 72% of the burden under economic allocation (the study's reference case, since starch and fibre co-products are worth much less). 0.72 / 0.27 = 2.7 kg dehulled pea DM, ~3.0 kg dry peas with hulls. Confidence 2. = 5,937 L/kg. Crop water only; the wet-fractionation process water is not included (not reported)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 4359,
+                "confidence": 2,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — green_water_per_kg: peas entry 1,453 L/kg x 3.0 kg dry peas per kg pea protein isolate. Früh et al. 2026 (source 398, Table 2): isolate takes 27% of the pea dry matter by mass, but carries 72% of the burden under economic allocation (the study's reference case, since starch and fibre co-products are worth much less). 0.72 / 0.27 = 2.7 kg dehulled pea DM, ~3.0 kg dry peas with hulls. Confidence 2. = 4,359 L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 99,
+                "confidence": 2,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — blue_water_per_kg: peas entry 33 L/kg x 3.0 kg dry peas per kg pea protein isolate. Früh et al. 2026 (source 398, Table 2): isolate takes 27% of the pea dry matter by mass, but carries 72% of the burden under economic allocation (the study's reference case, since starch and fibre co-products are worth much less). 0.72 / 0.27 = 2.7 kg dehulled pea DM, ~3.0 kg dry peas with hulls. Confidence 2. = 99 L/kg (crop only)."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 1479,
+                "confidence": 2,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — grey_water_per_kg: peas entry 493 L/kg x 3.0 kg dry peas per kg pea protein isolate. Früh et al. 2026 (source 398, Table 2): isolate takes 27% of the pea dry matter by mass, but carries 72% of the burden under economic allocation (the study's reference case, since starch and fibre co-products are worth much less). 0.72 / 0.27 = 2.7 kg dehulled pea DM, ~3.0 kg dry peas with hulls. Confidence 2. = 1,479 L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Pea Protein — soil_erosion: per-hectare value of the peas it is made from, copied from the peas entry (1.5); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha (peas yield / 3.0)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Pea Protein — pesticide_kg_ha: per-hectare value of the peas it is made from, copied from the peas entry (0.5); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha (peas yield / 3.0)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Pea Protein — fertilizer_kg_ha: per-hectare value of the peas it is made from, copied from the peas entry (0); per-ha values don't change with processing, per-kg effects follow from yield_kg_ha (peas yield / 3.0)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 4.74,
+                "confidence": 3,
+                "source": {
+                    "id": 398,
+                    "url": "https://zenodo.org/records/21219152",
+                    "title": "Früh, Busch, Detzel & Ettinger (2026) — Environmental Footprint of Pea Proteins (Zenodo, doi:10.5281/zenodo.21219152)",
+                    "note": "Pea Protein — emissions_per_kg: Früh et al. 2026, pea protein isolate (81% protein), Germany, cradle to factory gate, economic allocation (reference case): 4.74 kg CO2e/kg (2.85 under mass allocation). Their Table 2 lists other PPI studies at 2.28–4.18 kg CO2e/kg."
+                }
+            },
+            {
+                "value": 4.04,
+                "confidence": 2,
+                "source": {
+                    "id": 397,
+                    "url": "https://apps.carboncloud.com/climatehub/product-reports/id/1512532204291",
+                    "title": "CarbonCloud ClimateHub — Pea protein isolate (79% protein), France: 4.04 kg CO2e/kg",
+                    "note": "Pea Protein — emissions_per_kg: CarbonCloud verified product report, pea protein isolate (79% protein) made in France: 4.04 kg CO2e/kg (agriculture 42%, processing 50%, transport 8%)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 1,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Pea Protein — tillage_events_per_year: per-hectare value copied from the peas entry (1); per-ha values don't change with processing."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 1000,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Pea Protein — co2_capture_kg_ha_yr: per-hectare value copied from the peas entry (1000); per-ha values don't change with processing."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pea Protein — pesticides.Pendimethalin.kg_ha: per-hectare value copied from the peas entry (0.22)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pea Protein — pesticides.Malathion.kg_ha: per-hectare value copied from the peas entry (0.04)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 180,
+                "confidence": 1,
+                "source": {
+                    "id": 400,
+                    "url": "https://www.industryresearch.biz/market-reports/pea-protein-isolate-market-109778",
+                    "title": "Industry Research — Pea Protein Isolate Market report (2024 production volume)",
+                    "note": "Pea Protein — availability_gg: market report states 2024 global pea protein isolate production exceeded 180,000 t = 180 Gg. Market-research figure, not an official statistic; confidence 1. (A separate market estimate puts all pea protein, incl. concentrates and textured, at ~350 kt in 2023.)"
+                }
+            }
+        ]
     }
 ]
