@@ -3,19 +3,17 @@
 import { useState, useEffect } from 'react';
 import { Table } from '../Table/Table';
 import { Row } from '../Table/Row';
-import {
-    NameCell,
-    NutritionScoreCell,
-    EmissionsCell,
-    LandUseCell,
-    IntelligenceCell,
-    WaterCell,
-    SentientHarmCell,
-    CaptiveSentienceCell,
-    FinalScoreCell,
-    AvailabilityCell,
-    DummyCell,
-} from './FoodTableFields';
+import { NameCell } from './Cells/NameCell';
+import { NutritionScoreCell } from './Cells/NutritionScoreCell';
+import { EmissionsCell } from './Cells/EmissionsCell';
+import { LandUseCell } from './Cells/LandUseCell';
+import { IntelligenceCell } from './Cells/IntelligenceCell';
+import { WaterCell } from './Cells/WaterCell';
+import { SentientHarmCell } from './Cells/SentientHarmCell';
+import { CaptiveSentienceCell } from './Cells/CaptiveSentienceCell';
+import { FinalScoreCell } from './Cells/FinalScoreCell';
+import { AvailabilityCell } from './Cells/AvailabilityCell';
+import { DummyCell } from './Cells/DummyCell';
 import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
