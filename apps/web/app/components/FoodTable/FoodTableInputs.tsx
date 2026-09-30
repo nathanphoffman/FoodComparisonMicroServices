@@ -1,95 +1,14 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { MealBuilder } from './MealBuilder';
-import type { MealIngredient } from './MealBuilder';
-import type { FoodWeights, ScorePriorities } from './FoodTableTypes';
-import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
-import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
-import { DEFAULT_LAND_TYPE_WEIGHTS } from './Sliders/LandTypeSliders';
-import { DEFAULT_WIN_DAMPENING } from './Sliders/WinDampeningSlider';
-import { DEFAULT_OVER_HUNTING } from './Sliders/OverHuntingSlider';
-import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
-import type { LandTypes } from '@/lib/queries/commonFoods';
-import type { SortKey } from './FoodTableSort';
+import type { ColConfig, ColumnKey, DataRegion, SliderValues } from './FoodTableTypes';
+import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
 import type { Preset } from './FoodTablePresets';
-
-// ── Column config ─────────────────────────────────────────────────────────────
-
-export type ColumnKey = SortKey | 'dummy';
-
-export const COLUMN_CONFIG: { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean; mobileVisible: boolean }[] = [
-    { key: 'name',           label: 'Food',              sortKey: 'name',           defaultVisible: true,  mobileVisible: true  },
-    { key: 'nutritionScore', label: 'Nutrition Score',   sortKey: 'nutritionScore', defaultVisible: true,  mobileVisible: true  },
-    { key: 'emissions',      label: 'CO₂e (kg / kg)',    sortKey: 'emissions',      defaultVisible: true,  mobileVisible: false },
-    { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true,  mobileVisible: false },
-    { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true,  mobileVisible: false },
-    { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true,  mobileVisible: false },
-    { key: 'captiveSentience', label: 'Captive Sentience Cost', sortKey: 'captiveSentience', defaultVisible: true, mobileVisible: false },
-    { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true,  mobileVisible: false },
-    { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true,  mobileVisible: false },
-    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true,  mobileVisible: true  },
-    { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false, mobileVisible: false },
-];
-
-export type ColConfig = (typeof COLUMN_CONFIG)[number];
-
-// ── Data region ───────────────────────────────────────────────────────────────
-
-export type DataRegion = 'world' | 'us' | 'avg';
-
-export const DEFAULT_DATA_REGION: DataRegion = 'avg';
-
-const DATA_REGION_OPTIONS: { value: DataRegion; label: string }[] = [
-    { value: 'world', label: 'World' },
-    { value: 'us',    label: 'US' },
-    { value: 'avg',   label: 'Average of World + US' },
-];
-
-// ── Slider values ─────────────────────────────────────────────────────────────
-
-export type SliderValues = {
-    weights:                    FoodWeights;
-    scorePriorities:            ScorePriorities;
-    greenWaterWeight:           number;
-    greyWaterWeight:            number;
-    killMultiplier:             number;
-    captivityMultiplier:        number;
-    neuronExponent:             number;
-    weightExponent:             number;
-    finalIntelligenceExponent:  number;
-    zeroBetterMultiplier:       number;
-    landTypeWeights:            LandTypes;
-    winDampening:               number;
-    overHuntingFactor:          number;
-    overGatheringFactor:        number;
-    referenceSlug:              string;
-    mealIngredients:            MealIngredient[];
-};
-
-export const DEFAULT_SLIDER_VALUES: SliderValues = {
-    weights:                    DEFAULT_FOOD_WEIGHTS,
-    scorePriorities:            DEFAULT_SCORE_PRIORITIES,
-    greenWaterWeight:           25,
-    greyWaterWeight:            25,
-    killMultiplier:             500,
-    captivityMultiplier:        1,
-    neuronExponent:             1.5,
-    weightExponent:             0.70,
-    finalIntelligenceExponent:  1.15,
-    zeroBetterMultiplier:       1.5,
-    landTypeWeights:            DEFAULT_LAND_TYPE_WEIGHTS,
-    winDampening:               DEFAULT_WIN_DAMPENING,
-    overHuntingFactor:          DEFAULT_OVER_HUNTING,
-    overGatheringFactor:        DEFAULT_OVER_GATHERING,
-    referenceSlug:              'chicken',
-    mealIngredients:            [],
-};
-
-// ── Component ─────────────────────────────────────────────────────────────────
+import { FoodTableToolbar } from './FoodTableToolbar';
 
 type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
@@ -114,10 +33,8 @@ export function FoodTableInputs({
     const [visibleColumns, setVisible]    = useState<Set<ColumnKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
-    const [showToggle, setShowToggle] = useState(false);
     const [showControls, setShowControls] = useState(false);
-    const toggleRef                   = useRef<HTMLDivElement>(null);
-    const isMobile                    = useIsMobile();
+    const isMobile                        = useIsMobile();
 
     // On mobile, start with a short column list; users can add more via Columns.
     useEffect(() => {
@@ -152,65 +69,9 @@ export function FoodTableInputs({
         setActivePreset(preset.key);
     }
 
-    function handleWeights(weights: FoodWeights) {
-        const next = { ...sliderValues, weights };
-        commitManual(next);
-    }
-    function handleScorePriorities(scorePriorities: ScorePriorities) {
-        const next = { ...sliderValues, scorePriorities };
-        commitManual(next);
-    }
-    function handleGreenWater(greenWaterWeight: number) {
-        const next = { ...sliderValues, greenWaterWeight };
-        commitManual(next);
-    }
-    function handleGreyWater(greyWaterWeight: number) {
-        const next = { ...sliderValues, greyWaterWeight };
-        commitManual(next);
-    }
-    function handleKillMultiplier(killMultiplier: number) {
-        const next = { ...sliderValues, killMultiplier };
-        commitManual(next);
-    }
-    function handleCaptivityMultiplier(captivityMultiplier: number) {
-        const next = { ...sliderValues, captivityMultiplier };
-        commitManual(next);
-    }
-    function handleNeuronExponent(neuronExponent: number) {
-        const next = { ...sliderValues, neuronExponent };
-        commitManual(next);
-    }
-    function handleWeightExponent(weightExponent: number) {
-        const next = { ...sliderValues, weightExponent };
-        commitManual(next);
-    }
-    function handleFinalIntelligenceExponent(finalIntelligenceExponent: number) {
-        const next = { ...sliderValues, finalIntelligenceExponent };
-        commitManual(next);
-    }
-    function handleZeroBetterMultiplier(zeroBetterMultiplier: number) {
-        const next = { ...sliderValues, zeroBetterMultiplier };
-        commitManual(next);
-    }
-    function handleLandTypeWeights(landTypeWeights: LandTypes) {
-        const next = { ...sliderValues, landTypeWeights };
-        commitManual(next);
-    }
-    function handleWinDampening(winDampening: number) {
-        const next = { ...sliderValues, winDampening };
-        commitManual(next);
-    }
-    function handleOverHunting(overHuntingFactor: number) {
-        const next = { ...sliderValues, overHuntingFactor };
-        commitManual(next);
-    }
-    function handleOverGathering(overGatheringFactor: number) {
-        const next = { ...sliderValues, overGatheringFactor };
-        commitManual(next);
-    }
-    function handleMealChange(mealIngredients: MealIngredient[]) {
-        const next = { ...sliderValues, mealIngredients };
-        commit(next);
+    // Sets one slider value by hand, which also clears the preset highlight.
+    function update<K extends keyof SliderValues>(key: K, value: SliderValues[K]) {
+        commitManual({ ...sliderValues, [key]: value });
     }
 
     function handleToggle(key: ColumnKey) {
@@ -219,16 +80,6 @@ export function FoodTableInputs({
         setVisible(next);
         onActiveColsChange(COLUMN_CONFIG.filter(c => next.has(c.key)));
     }
-
-    useEffect(() => {
-        function onClickOutside(e: PointerEvent) {
-            if (toggleRef.current && !toggleRef.current.contains(e.target as Node)) {
-                setShowToggle(false);
-            }
-        }
-        document.addEventListener('pointerdown', onClickOutside);
-        return () => document.removeEventListener('pointerdown', onClickOutside);
-    }, []);
 
     return (
         <>
@@ -241,20 +92,20 @@ export function FoodTableInputs({
             </button>
             <div className={showControls ? 'block' : 'hidden md:block'}>
                 <FoodTableSliders
-                    onChange={handleWeights}
-                    onScorePrioritiesChange={handleScorePriorities}
-                    onGreenWaterChange={handleGreenWater}
-                    onGreyWaterChange={handleGreyWater}
-                    onPhilosophicalKillChange={handleKillMultiplier}
-                    onCaptivityChange={handleCaptivityMultiplier}
-                    onNeuronExponentChange={handleNeuronExponent}
-                    onWeightExponentChange={handleWeightExponent}
-                    onFinalIntelligenceExponentChange={handleFinalIntelligenceExponent}
-                    onZeroBetterMultiplierChange={handleZeroBetterMultiplier}
-                    onLandTypeWeightsChange={handleLandTypeWeights}
-                    onWinDampeningChange={handleWinDampening}
-                    onOverHuntingChange={handleOverHunting}
-                    onOverGatheringChange={handleOverGathering}
+                    onChange={value => update('weights', value)}
+                    onScorePrioritiesChange={value => update('scorePriorities', value)}
+                    onGreenWaterChange={value => update('greenWaterWeight', value)}
+                    onGreyWaterChange={value => update('greyWaterWeight', value)}
+                    onPhilosophicalKillChange={value => update('killMultiplier', value)}
+                    onCaptivityChange={value => update('captivityMultiplier', value)}
+                    onNeuronExponentChange={value => update('neuronExponent', value)}
+                    onWeightExponentChange={value => update('weightExponent', value)}
+                    onFinalIntelligenceExponentChange={value => update('finalIntelligenceExponent', value)}
+                    onZeroBetterMultiplierChange={value => update('zeroBetterMultiplier', value)}
+                    onLandTypeWeightsChange={value => update('landTypeWeights', value)}
+                    onWinDampeningChange={value => update('winDampening', value)}
+                    onOverHuntingChange={value => update('overHuntingFactor', value)}
+                    onOverGatheringChange={value => update('overGatheringFactor', value)}
                     resetKey={sliderResetKey}
                     scorePriorityLevels={scorePriorityLevels}
                     killMultiplier={sliderValues.killMultiplier}
@@ -266,7 +117,8 @@ export function FoodTableInputs({
                 />
                 <div className="mb-4 px-1">
                     <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
-                    <MealBuilder foods={foods} onChange={handleMealChange} />
+                    {/* Meal changes keep the preset highlight, unlike the sliders above. */}
+                    <MealBuilder foods={foods} onChange={mealIngredients => commit({ ...sliderValues, mealIngredients })} />
                 </div>
             </div>
             {scoringError && (
@@ -282,58 +134,15 @@ export function FoodTableInputs({
                     >✕</button>
                 </div>
             )}
-            <div className="flex flex-wrap justify-end items-center gap-3 mb-2" ref={toggleRef}>
-                <div className="flex items-center gap-2 text-sm text-neutral-500">
-                    <span>Data region</span>
-                    <select
-                        value={dataRegion}
-                        onChange={e => onDataRegionChange(e.target.value as DataRegion)}
-                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
-                    >
-                        {DATA_REGION_OPTIONS.map(option => (
-                            <option key={option.value} value={option.value}>{option.label}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-neutral-500">
-                    <span>Compare vs.</span>
-                    <select
-                        value={sliderValues.referenceSlug}
-                        onChange={e => {
-                            const next = { ...sliderValues, referenceSlug: e.target.value };
-                            commitManual(next);
-                        }}
-                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
-                    >
-                        {[...foods].sort((a, b) => a.name.localeCompare(b.name)).map(f => (
-                            <option key={f.slug} value={f.slug}>{f.name}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="relative">
-                    <button
-                        onClick={() => setShowToggle(v => !v)}
-                        className="text-sm text-neutral-500 hover:text-neutral-700 border border-neutral-200 rounded px-3 py-1 flex items-center gap-1"
-                    >
-                        Columns <span className="text-xs">{showToggle ? '▴' : '▾'}</span>
-                    </button>
-                    {showToggle && (
-                        <div className="absolute right-0 top-full mt-1 bg-white border border-neutral-200 rounded shadow-md p-3 space-y-2 z-10 min-w-[160px]">
-                            {COLUMN_CONFIG.filter(c => c.key !== 'name').map(col => (
-                                <label key={col.key} className="flex items-center gap-2 text-sm cursor-pointer text-neutral-700">
-                                    <input
-                                        type="checkbox"
-                                        checked={visibleColumns.has(col.key)}
-                                        onChange={() => handleToggle(col.key)}
-                                        className="accent-neutral-700"
-                                    />
-                                    {col.label}
-                                </label>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </div>
+            <FoodTableToolbar
+                dataRegion={dataRegion}
+                onDataRegionChange={onDataRegionChange}
+                referenceSlug={sliderValues.referenceSlug}
+                onReferenceSlugChange={slug => update('referenceSlug', slug)}
+                foods={foods}
+                visibleColumns={visibleColumns}
+                onToggleColumn={handleToggle}
+            />
         </>
     );
 }

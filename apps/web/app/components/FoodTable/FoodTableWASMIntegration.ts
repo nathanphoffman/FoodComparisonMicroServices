@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { WASM_BUILD_ID } from '../../_wasm-signal';
 import type { RawFood, LandTypes } from '@/lib/queries/commonFoods';
 import type { ScoredRow } from './FoodTableSort';
-import type { SliderValues } from './FoodTableInputs';
+import type { SliderValues } from './FoodTableTypes';
 
 // ── WASM types ────────────────────────────────────────────────────────────────
 

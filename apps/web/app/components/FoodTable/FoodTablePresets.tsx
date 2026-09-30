@@ -1,7 +1,7 @@
 'use client';
 
 import type { ScorePriorities } from './FoodTableTypes';
-import type { SliderValues } from './FoodTableInputs';
+import type { SliderValues } from './FoodTableTypes';
 import { toShares } from './Sliders/PercentSliders';
 import { DEFAULT_SCORE_PRIORITY_LEVELS, SCORE_PRIORITY_KEYS, SCORE_PRIORITY_LABELS } from './Sliders/ScorePrioritySliders';
 import { MAX_PHILOSOPHICAL_KILL } from './Sliders/PhilosophicalKillSlider';

@@ -81,6 +81,35 @@ export type SentientHarmDetail = {
 };
 
 import type { RawFood, LandTypes } from '@/lib/queries/commonFoods';
+import type { SortKey } from './FoodTableSort';
+import type { MealIngredient } from './MealBuilder';
+
+// ── Inputs (columns, data region, sliders) ────────────────────────────────────
+
+export type ColumnKey = SortKey | 'dummy';
+
+export type ColConfig = { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean; mobileVisible: boolean };
+
+export type DataRegion = 'world' | 'us' | 'avg';
+
+export type SliderValues = {
+    weights:                    FoodWeights;
+    scorePriorities:            ScorePriorities;
+    greenWaterWeight:           number;
+    greyWaterWeight:            number;
+    killMultiplier:             number;
+    captivityMultiplier:        number;
+    neuronExponent:             number;
+    weightExponent:             number;
+    finalIntelligenceExponent:  number;
+    zeroBetterMultiplier:       number;
+    landTypeWeights:            LandTypes;
+    winDampening:               number;
+    overHuntingFactor:          number;
+    overGatheringFactor:        number;
+    referenceSlug:              string;
+    mealIngredients:            MealIngredient[];
+};
 
 // Minimal RawFood stub for the synthetic "your-meal" row, which is produced by
 // WASM but never exists in rawFoods from the API.

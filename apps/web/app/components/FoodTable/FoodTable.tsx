@@ -20,8 +20,9 @@ import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTab
 import type { RawFood } from '@/lib/queries/commonFoods';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
-import { FoodTableInputs, COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableInputs';
-import type { ColConfig, SliderValues, DataRegion } from './FoodTableInputs';
+import { FoodTableInputs } from './FoodTableInputs';
+import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableDefaults';
+import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
 import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
 
