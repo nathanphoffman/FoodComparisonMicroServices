@@ -34,7 +34,7 @@ try {
     syncWasm();
     console.log('[wasm-notify] initial WASM binary copied to public/');
 } catch {
-    console.log('[wasm-notify] no existing WASM binary yet — run npm run build:wasm first');
+    console.log('[wasm-notify] no existing WASM binary yet — run pnpm build:wasm first');
 }
 
 let debounce;

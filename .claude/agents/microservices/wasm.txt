@@ -9,7 +9,7 @@ It exports a `score()` function consumed by the UI to rank foods based
 on user slider inputs.
 Scoring logic and biological constants live in `calculations.rs` — do
 not duplicate constants in the web app.
-After any change, rebuild with `npm run build:wasm` and verify the UI
+After any change, rebuild with `pnpm build:wasm` and verify the UI
 still compiles.
 
 Read your current tasks from `.claude/todos/wasm.txt` before starting

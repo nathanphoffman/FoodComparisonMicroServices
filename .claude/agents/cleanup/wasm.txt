@@ -23,7 +23,7 @@ return shape.
 Constants and biological values stay in `calculations.rs` — do not
 scatter them across files or duplicate them in the web app.
 After any change, verify the package still builds with
-`npm run build:wasm`.
+`pnpm build:wasm`.
 
 Append one line to `.claude/audit/cleanup-wasm.txt` after each run:
 `YYYY-MM-DD | <summary>`.

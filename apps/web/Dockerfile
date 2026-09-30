@@ -17,18 +17,20 @@ RUN mkdir -p data/db && cd services/data-pipeline && python -m src.build_db
 
 # 3. Build the Next.js app.
 FROM node:22-slim AS build
+# corepack installs the pnpm version pinned in package.json's "packageManager".
+RUN corepack enable
 WORKDIR /src
-COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/web/package.json apps/web/
 COPY --from=wasm /src/services/wasm-calculations/pkg services/wasm-calculations/pkg
-RUN npm ci
+RUN pnpm install --frozen-lockfile
 COPY apps/web apps/web
 # Use the next.config.ts with the DB_VERSION that matches the built database.
 COPY --from=db /src/apps/web/next.config.ts apps/web/next.config.ts
 # NEXT_PUBLIC_* values are baked into the browser bundle at build time.
 ARG NEXT_PUBLIC_API_URL
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
-RUN npm run build -w apps/web
+RUN pnpm --filter @food/web build
 
 # 4. Runtime image.
 FROM node:22-slim
@@ -37,5 +39,7 @@ ENV NODE_ENV=production
 COPY --from=build /src ./
 COPY --from=db /src/data/db ./data/db
 ENV DATA_DIR=/src/data/db
-# next start reads PORT, which Railway provides.
-CMD ["npm", "run", "start", "-w", "apps/web"]
+# next start reads PORT, which Railway provides. Run next directly so the
+# runtime image doesn't need pnpm installed.
+WORKDIR /src/apps/web
+CMD ["node_modules/.bin/next", "start"]

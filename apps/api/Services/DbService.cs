@@ -74,7 +74,7 @@ public class DbService
         var files = Directory.GetFiles(dataDir, "foods-normalized.*.db");
         if (files.Length == 0)
             throw new InvalidOperationException(
-                $"No foods-normalized.*.db found in {dataDir}. Run 'npm run build-db' first.");
+                $"No foods-normalized.*.db found in {dataDir}. Run 'pnpm build-db' first.");
 
         return files
             .Select(filePath => Path.GetFileNameWithoutExtension(filePath).Replace("foods-normalized.", ""))
