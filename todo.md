@@ -2,7 +2,6 @@
 DO NOT TOUCH THIS FILE AI
 
 
-- Break out large files
-
-
+- final_score.rs has some unfamiliar rust either learn it or change it
+- 
 
