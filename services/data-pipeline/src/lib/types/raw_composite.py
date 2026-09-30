@@ -3,7 +3,7 @@ raw_composite.py — computation wrapper for a composite food (a food made from 
 
 A composite lists its ingredients as kg per kg of product. Its crop impacts (land,
 water, emissions, pesticides …) are the sum of its ingredients' impacts — the same
-math as an animal's feed (see crop_mix.py) — plus the composite's own processing
+math as an animal's feed (see crop_mix/) — plus the composite's own processing
 emissions and water. The result is a normal plant-style row, so the API and scoring
 treat it like any other plant food.
 """

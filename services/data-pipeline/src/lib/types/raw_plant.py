@@ -2,40 +2,20 @@
 raw_plant.py — computation wrapper for a plant record.
 
 Wraps a Plant TypedDict and exposes weighted averages and pesticide impact calculations
-used when building the normalized database row for a plant food.
-
-PAF = Potentially Affected Fraction of species, a measure of ecotoxicity.
+used when building the normalized database row for a plant food. The pesticide math
+itself lives in pesticide_impact.py.
 """
-
-import math
 
 from ...food_types import Plant
 from .sourced_array import SourcedArray
-from .raw_pesticide import RawPesticide
-from .raw_plant_pesticide import RawPlantPesticide
+from .pesticide_impact import (
+    PesticideAssociation,
+    bee_mortality_fraction,
+    dose_scaled_affected_fraction,
+    pesticide_kg_per_kg_food,
+)
 
-
-# Bee exposure and dose-response, from US EPA (2014) Guidance for Assessing Pesticide Risks
-# to Bees (Tier I, foliar sprays). A forager eats 0.292 g/day of nectar and pollen holding
-# up to 98 µg of pesticide per g for each kg a.i./ha sprayed, so it takes in 28.6 µg per
-# kg/ha. That dose over the pesticide's oral LD50 is the risk quotient (RQ). EPA's level
-# of concern RQ = 0.4 corresponds to 10% mortality on the median probit dose-response
-# slope, which puts that slope at ~3.22 (probit 10% = -1.2816 = slope x log10 0.4).
-BEE_ORAL_DOSE_UG_PER_KG_HA = 98 * 0.292
-BEE_PROBIT_SLOPE = -1.2816 / math.log10(0.4)
-
-# Application rate (kg active ingredient per ha) at which a pesticide's PAF is taken to
-# apply. Each PAF is a per-compound toxicity index with no dose attached; scaling it by
-# kg_ha / this rate makes a light spray count for less than a heavy one.
-PAF_REFERENCE_KG_HA = 1.0
-
-
-class PesticideAssociation:
-    """Pairs a plant's pesticide usage record with its full pesticide data."""
-
-    def __init__(self, plant_pesticide: RawPlantPesticide, pesticide: RawPesticide) -> None:
-        self.plant_pesticide = plant_pesticide
-        self.pesticide = pesticide
+SQUARE_METERS_PER_HA = 10000
 
 
 class RawPlant:
@@ -73,55 +53,27 @@ class RawPlant:
     @property
     def avg_pesticide_kg_per_kg_food(self) -> float | None:
         """Total pesticide kg applied per kg of food produced, weighted by yield."""
-        average_yield_kg_per_ha = self.yield_kg_ha.weighted_average()
-        if average_yield_kg_per_ha is None or average_yield_kg_per_ha <= 0:
-            return None
-        total_pesticide_kg_per_kg = sum(
-            kg_per_ha / average_yield_kg_per_ha
-            for association in self._pesticide_associations
-            if (kg_per_ha := association.plant_pesticide.kg_ha.weighted_average()) is not None
-        )
-        return total_pesticide_kg_per_kg or None
+        return pesticide_kg_per_kg_food(self._pesticide_associations, self.yield_kg_ha.weighted_average())
 
     @property
     def pesticide_affected_freshwater_fraction(self) -> float | None:
         """Fraction of freshwater species affected by this crop's pesticide applications (0-1)."""
-        return self._dose_scaled_affected_fraction("avg_freshwater_paf")
+        return dose_scaled_affected_fraction(self._pesticide_associations, "avg_freshwater_paf")
 
     @property
     def pesticide_affected_terrestrial_fraction(self) -> float | None:
         """Fraction of soil species affected by this crop's pesticide applications (0-1)."""
-        return self._dose_scaled_affected_fraction("avg_terrestrial_paf")
+        return dose_scaled_affected_fraction(self._pesticide_associations, "avg_terrestrial_paf")
 
     @property
     def pesticide_affected_insect_fraction(self) -> float | None:
         """Fraction of non-target insects affected by this crop's pesticide applications (0-1)."""
-        return self._dose_scaled_affected_fraction("avg_insect_paf")
+        return dose_scaled_affected_fraction(self._pesticide_associations, "avg_insect_paf")
 
     @property
     def pesticide_bee_mortality_fraction(self) -> float | None:
-        """Fraction of foraging bees on this crop killed by its pesticide applications (0-1).
-
-        Each compound: RQ = 28.6 µg per kg/ha x kg_ha / oral LD50, mortality = probit curve
-        at that RQ (50% at the LD50). Compounds act independently: 1 - product of survivals.
-        Replaces a 'bee hazard' of kg_ha / (LD50 x bee weight) that counted lethal doses in
-        the spray as bees killed, with no exposure step and no upper limit.
-        """
-        surviving_fraction = 1.0
-        found_any = False
-        for association in self._pesticide_associations:
-            kg_per_ha = association.plant_pesticide.kg_ha.weighted_average()
-            bee_ld50 = association.pesticide.avg_bee_ld50
-            if kg_per_ha is None or bee_ld50 is None or bee_ld50 <= 0:
-                continue
-            found_any = True
-            if kg_per_ha <= 0:
-                continue
-            risk_quotient = BEE_ORAL_DOSE_UG_PER_KG_HA * kg_per_ha / bee_ld50
-            probit = BEE_PROBIT_SLOPE * math.log10(risk_quotient)
-            mortality = 0.5 * (1.0 + math.erf(probit / math.sqrt(2.0)))
-            surviving_fraction *= 1.0 - mortality
-        return 1.0 - surviving_fraction if found_any else None
+        """Fraction of foraging bees on this crop killed by its pesticide applications (0-1)."""
+        return bee_mortality_fraction(self._pesticide_associations)
 
     def normalized_fields(self) -> dict[str, float | None]:
         """Returns all plant environmental metrics as a flat dict for FoodNormalized.
@@ -138,7 +90,7 @@ class RawPlant:
             dry_yield_kg_per_ha * cooked_ratio if dry_yield_kg_per_ha else dry_yield_kg_per_ha
         )
         land_square_meters_per_kg = (
-            10000 / average_yield_kg_per_ha if average_yield_kg_per_ha else None
+            SQUARE_METERS_PER_HA / average_yield_kg_per_ha if average_yield_kg_per_ha else None
         )
         return {
             "yield_kg_ha":               average_yield_kg_per_ha,
@@ -164,26 +116,6 @@ class RawPlant:
             "wild_fish_weight_kg":       self.wild_fish_weight_kg.weighted_average(),
             "wild_fish_lifespan_years":  self.wild_fish_lifespan_years.weighted_average(),
         }
-
-    def _dose_scaled_affected_fraction(self, paf_attribute_name: str) -> float | None:
-        """Combined fraction of species affected by all pesticides applied, scaled by dose.
-
-        Each compound affects paf x (kg_ha / PAF_REFERENCE_KG_HA) of species, capped at 1,
-        and compounds act independently: 1 - product of (1 - each fraction). This used to
-        be a kg-weighted AVERAGE of the PAFs, which ignored how much was sprayed, so a crop
-        with a light dose of one strong insecticide scored as high as one drenched in it.
-        """
-        surviving_fraction = 1.0
-        found_any = False
-        for association in self._pesticide_associations:
-            kg_per_ha = association.plant_pesticide.kg_ha.weighted_average()
-            paf_value = getattr(association.pesticide, paf_attribute_name)
-            if kg_per_ha is None or paf_value is None:
-                continue
-            found_any = True
-            affected = min(1.0, paf_value * kg_per_ha / PAF_REFERENCE_KG_HA)
-            surviving_fraction *= 1.0 - affected
-        return 1.0 - surviving_fraction if found_any else None
 
 
 def _per_cooked_kg(value_per_dry_kg: float | None, cooked_ratio: float) -> float | None:
