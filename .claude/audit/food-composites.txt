@@ -10,3 +10,4 @@
 2026-09-28 13:02:43 | violife-parmesan: added own availability_gg 0.5 Gg (assumed low guess, confidence 1, per user) — replaces the ingredient-only fallback flagged above
 2026-09-28 13:11:36 | violife-parmesan: ingredients switched to potato-starch / rice-starch / rice-protein foods (base_kg_per_kg guesses removed); processing_emissions 1.6 -> 2.1 so the US total still matches Quantis 3.4 (ingredients now include their own starch/protein processing)
 2026-09-28 13:11:36 | beyond-burger: rice (base 3.0 guess) switched to the rice-protein food
+2026-09-28 21:31:02 | follow-your-heart-parmesan: added composite id 101 (tags cheese-substitute, vegan). Ingredients from official label (src 438): potato-starch 0.40, palm-oil 0.184, canola-oil 0.116, water 0.15, cellulose 0.05 + maltodextrin 0.05 + minor 0.05 (no footprint). Processing emissions 2.1 borrowed from the Violife composite (confidence 1); own availability 0.2 Gg assumed low

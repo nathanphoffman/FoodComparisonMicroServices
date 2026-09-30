@@ -34,10 +34,10 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     tillage_events_per_year  REAL,
     co2_capture_kg_ha_yr     REAL,
     pesticide_freshwater_paf  REAL,  -- application-weighted average USEtox freshwater PAF (0-1) across all pesticides used on this crop
-    pesticide_terrestrial_paf REAL,  -- application-weighted average USEtox terrestrial PAF (0-1), soil organisms
-    pesticide_insect_paf      REAL,  -- application-weighted average ECOTOX non-target arthropod PAF (0-1), general insect community
-    pesticide_bee_hazard      REAL,  -- application-weighted bee hazard score derived from bee_ld50 via inverse-weighted formula (higher = more hazardous);
-                                     --   NOT a PAF and NOT an LD50 — it is a unitless relative hazard index computed as sum(kg_ha / bee_ld50) / total_kg_ha
+    pesticide_terrestrial_paf REAL,  -- dose-scaled fraction of soil organisms affected (0-1): 1 - prod(1 - min(1, USEtox terrestrial PAF x kg_ha / 1 kg/ha))
+    pesticide_insect_paf      REAL,  -- dose-scaled fraction of non-target insects affected (0-1): 1 - prod(1 - min(1, ECOTOX PAF x kg_ha / 1 kg/ha))
+    pesticide_bee_hazard      REAL,  -- fraction of foraging bees killed (0-1): per compound RQ = 28.6 µg/bee per kg/ha x kg_ha / oral bee_ld50,
+                                     --   mortality from a probit curve (slope 3.22, 50% at the LD50), combined 1 - prod(1 - mortality). US EPA 2014 Tier I defaults.
     pesticide_kg_per_kg_food REAL,   -- total pesticide application intensity in kg active ingredient per kg food output (pesticide_kg_ha / yield_kg_ha)
     land_m2_per_kg           REAL,   -- for is_feed=1 rows: sum of (kg_feed_per_kg_output × 10000 / crop_yield_kg_ha) across all feed crops; NULL for plant food rows
     yield_fraction           REAL,  -- fraction of harvested weight that is edible (shell, peel, pit/seed loss etc.);

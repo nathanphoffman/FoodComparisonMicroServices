@@ -16,7 +16,7 @@ from ..food_types import (
 from .validate import assert_land_types, assert_composite_ingredients
 
 CATEGORY_FILES = [
-    "dairy", "eggs", "feeds", "fruits", "grains",
+    "beverages", "dairy", "eggs", "feeds", "fruits", "grains",
     "leafy", "legumes", "meats", "nuts", "oils",
     "seafood", "seeds", "sweeteners", "vegetables",
     # Must stay last: composites are built from foods in the other files.

@@ -502,5 +502,178 @@
                 }
             }
         ]
+    },
+    {
+        "id": 101,
+        "slug": "follow-your-heart-parmesan",
+        "name": "Follow Your Heart Parmesan Grated (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "cheese-substitute",
+            "vegan"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 4.0,
+                    "fat": 0.3,
+                    "sat_fat": 0.1,
+                    "protein": 0,
+                    "fiber": 0,
+                    "sodium": 17.0,
+                    "carbs": 0.4,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 438,
+                    "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                    "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                    "note": "Follow Your Heart Parmesan Grated — nutrition: official label per 5 g serving (20 kcal, fat 1.5 g, sat fat 0.5 g, sodium 85 mg, carbs 2 g, fiber 0, sugars 0, protein 0) scaled to per gram. US rounding on a 5 g serving is coarse (e.g. sat fat 0.5 g could be 0.25–0.75 g), so confidence 3."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "potato-starch",
+                "fraction": [
+                    {
+                        "value": 0.4,
+                        "confidence": 2,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — modified potato starch share: first ingredient; label carbs 40 g/100 g, of which ~33 g from ~40% potato starch (~83% carbohydrate) and the rest from maltodextrin. Label (source 438): modified potato starch, organic palm fruit oil, filtered water, expeller-pressed canola oil, cellulose, maltodextrin, natural flavors (contains autolyzed yeast), then <2% each of vegetable glycerin, sea salt, citric acid, nutritional yeast, calcium phosphate, bamboo fiber, sodium phosphate, carrageenan, chickpea miso, sunflower lecithin, annatto. Per 2 tsp (5 g): 20 kcal, fat 1.5 g, sat fat 0.5 g, sodium 85 mg, carbs 2 g, fiber 0, sugars 0, protein 0."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "palm-oil",
+                "fraction": [
+                    {
+                        "value": 0.184,
+                        "confidence": 2,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — palm oil share: solved from label fat 30 g and sat fat 10 g per 100 g with the two oils supplying the fat, palm ~50% saturated and canola ~7%: palm 0.184, canola 0.116. Matches the label order (palm before water before canola)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "canola-oil",
+                "fraction": [
+                    {
+                        "value": 0.116,
+                        "confidence": 2,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — canola oil share: see the palm oil note."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "cellulose",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 1,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — cellulose (anti-caking, from wood pulp): ~5%; label fiber rounds to 0 g per 5 g, so under ~10%. No crop in the dataset, so no footprint."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "maltodextrin",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 1,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — maltodextrin: ~5%, listed after cellulose. Made from corn or potato starch; source not stated, so no crop footprint counted (small)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "other minor ingredients (flavors, yeast, glycerin, salt, phosphates, carrageenan, miso, lecithin, annatto)",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — natural flavors plus the '<2%' list; ~5%. No crop footprint."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.15,
+                        "confidence": 2,
+                        "source": {
+                            "id": 438,
+                            "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                            "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                            "note": "Follow Your Heart Parmesan — filtered water: listed after palm oil (0.184) and before canola oil (0.116), so ~0.15."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 2.1,
+                "confidence": 1,
+                "source": {
+                    "id": 413,
+                    "url": "https://www.violife.com/en-us/-/media/Project/Upfield/Brands/Violife-Foods/Violife-Foods-US-New/Assets/About-Us/upfield-violife-technicalsummary-quantis-april2022.pdf",
+                    "title": "Quantis for Upfield (2022) — Violife 100% vegan alternative to cheese vs. dairy cheese: LCA technical summary (ISO 14040/44, peer reviewed)",
+                    "note": "Follow Your Heart Parmesan — processing emissions: no LCA for this product. Uses the Violife Parmesan composite's non-crop share (Quantis 2022 US wedge 3.4 kg CO2e/kg minus its ingredient crops = 2.1: manufacturing, packaging, distribution, retail), as the closest comparable product. Confidence 1."
+                }
+            }
+        ],
+        "processing_water_per_kg": [],
+        "availability_gg": [
+            {
+                "value": 0.2,
+                "confidence": 1,
+                "source": {
+                    "id": 438,
+                    "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+                    "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+                    "note": "Follow Your Heart Parmesan — availability_gg (product's own): ASSUMED low guess of 0.2 Gg/yr (200 t). No sales volumes published; a niche grated product from a small brand, set at the low end as done for Violife. Confidence 1. The pipeline blends it with the ingredients' supply."
+                }
+            }
+        ]
     }
 ]

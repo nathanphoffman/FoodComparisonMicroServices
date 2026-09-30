@@ -75,6 +75,7 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
         "clams-farmed" => 1.75,  // Manila clams take ~1.5–2 years from seed to harvest
         "carp-farmed" => 2.0,    // Chinese carps are grown ~2 years from fry to 1–2 kg
         "catfish-farmed" => 0.8, // pangasius 6–8 months grow-out + nursery; channel catfish 15–18 months
+        "honey" => 0.15,         // worker bees: ~6 weeks in summer, ~6 months over winter, averaged by count
         _ => 0.0,
     }
 }
@@ -91,6 +92,7 @@ pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
         "salmon" => 6.0,
         "shrimp" => 2.0,
         "sardines" => 4.0,
+        "honey" => 0.15, // worker honey bee, averaged over summer (~6 weeks) and winter (~6 months) bees
         _ => 10.0,
     }
 }

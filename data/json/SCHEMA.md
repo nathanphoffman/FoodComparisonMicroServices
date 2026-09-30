@@ -24,6 +24,7 @@ data/json/
 │   ├── seeds.json
 │   ├── oils.json
 │   ├── sweeteners.json
+│   ├── beverages.json      # drinks, stored per kg as drunk (e.g. brewed coffee)
 │   └── composites.json     # foods made from other foods (see "Composite foods")
 ├── pesticides.json          # pesticide toxicity profiles
 └── sources.json             # bibliography / citation registry
@@ -126,6 +127,18 @@ Top-level bibliography registry.  Every `source.id` referenced inside a food fil
 
 One entry per named active ingredient.  Toxicity fractions are used at build time to compute
 per-food pesticide hazard scores by joining against each plant's `pesticides[]` array.
+
+Each PAF is treated as the fraction of species affected at an application of 1 kg a.i./ha.
+A crop's affected fraction scales each compound by its actual `kg_ha` (capped at 1) and
+combines compounds as independent: `1 - Π(1 - min(1, paf × kg_ha / 1))`. So a light spray
+counts for less than a heavy one; before 2026-09-28 it was a kg-weighted average, which
+ignored the amount sprayed.
+
+Bees use `bee_ld50` (acute oral, µg/bee) with US EPA (2014) Tier I defaults: a forager
+takes in 28.6 µg per kg a.i./ha sprayed (98 µg/g in nectar and pollen × 0.292 g/day), so
+RQ = 28.6 × kg_ha / LD50; mortality follows a probit curve with slope ~3.22 (EPA's RQ 0.4 ↔
+10% mortality), 50% at the LD50. Compounds combine as independent. The result is the share
+of the crop's bees killed (0-1), multiplied by bees per ha and ha per kg of food in scoring.
 
 ```jsonc
 [

@@ -25,6 +25,7 @@ export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'fruits',     label: 'Fruits',       categories: ['fruits'] },
     { key: 'oils',       label: 'Oils',         categories: ['oils'] },
     { key: 'sweeteners', label: 'Sweeteners',   categories: ['sweeteners'] },
+    { key: 'beverages',  label: 'Beverages',    categories: ['beverages'] },
     { key: 'composites', label: 'Composites',   categories: ['composites'] },
     { key: 'vegan',      label: 'Vegan',        tags: ['vegan'] },
 ];

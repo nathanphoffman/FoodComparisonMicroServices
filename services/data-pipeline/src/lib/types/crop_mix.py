@@ -133,7 +133,8 @@ def compute_pesticide_paf_impacts(
 ) -> tuple[float, float | None, float | None, float | None, float | None]:
     """Returns (pesticide_kg_per_kg, freshwater_paf, terrestrial_paf, insect_paf, bee_hazard).
 
-    PAF values are weighted by cropland area (ratio / yield_kg_ha) rather than by
+    Each crop's PAF here is already its dose-scaled affected fraction (see
+    RawPlant._dose_scaled_affected_fraction); across crops they are weighted by cropland area (ratio / yield_kg_ha) rather than by
     pesticide_kg_per_kg_food.  Area-weighting ensures that each feed crop's toxicity
     contribution scales with how much land it actually occupies, not how much pesticide
     it uses per kg of food.  Weighting by pesticide_kg over-represents high-pesticide-
@@ -162,10 +163,10 @@ def compute_pesticide_paf_impacts(
             continue
         area_ha = ratio / average_yield
 
-        freshwater_paf = entry.plant.avg_pesticide_weighted_freshwater_paf
-        terrestrial_paf = entry.plant.avg_pesticide_weighted_terrestrial_paf
-        insect_paf = entry.plant.avg_pesticide_weighted_insect_paf
-        bee_hazard = entry.plant.avg_pesticide_weighted_bee_hazard
+        freshwater_paf = entry.plant.pesticide_affected_freshwater_fraction
+        terrestrial_paf = entry.plant.pesticide_affected_terrestrial_fraction
+        insect_paf = entry.plant.pesticide_affected_insect_fraction
+        bee_hazard = entry.plant.pesticide_bee_mortality_fraction
         if freshwater_paf is not None:
             freshwater_numerator += area_ha * freshwater_paf
             freshwater_denominator += area_ha

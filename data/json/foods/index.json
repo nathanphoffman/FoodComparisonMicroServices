@@ -111,11 +111,19 @@
     ],
     "sweeteners": [
         "maple-syrup",
-        "cane-sugar"
+        "cane-sugar",
+        "honey"
     ],
     "composites": [
         "impossible-burger",
         "beyond-burger",
-        "violife-parmesan"
+        "violife-parmesan",
+        "follow-your-heart-parmesan"
+    ],
+    "beverages": [
+        "coffee",
+        "black-tea",
+        "green-tea",
+        "white-tea"
     ]
 }

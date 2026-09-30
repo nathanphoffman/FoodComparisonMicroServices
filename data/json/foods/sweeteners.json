@@ -393,5 +393,243 @@
                 }
             }
         ]
+    },
+    {
+        "id": 100,
+        "slug": "honey",
+        "name": "Honey",
+        "type": "animal",
+        "category": "sweeteners",
+        "human_food": 1,
+        "tags": [],
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "tropical_forest": 0.3,
+            "dry": 0.2
+        },
+        "land_types_note": "Bees forage on land that exists anyway, so the only farmland is the cane sugar fed to hives; its split is used.",
+        "sentient_harm_explanation": "Honey is made by honey bees kept in managed hives. A hive makes about 19 kg of honey a year worldwide (23 kg in the US), and about 150,000 worker bees live and die in it over that year — summer workers live about six weeks, winter bees a few months. We count every one of those bees as a life spent in production, the same way a layer hen's whole life is counted for eggs, which works out to roughly 7,800 bees per kg of honey worldwide. Each bee has about a million neurons (a chicken has ~220 million), so one bee counts for far less than one chicken, but there are very many of them. Their ~0.15 years each inside the hive also count as time in captivity.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.04,
+                    "fat": 0,
+                    "sat_fat": 0,
+                    "protein": 0.003,
+                    "fiber": 0.002,
+                    "sodium": 0.04,
+                    "carbs": 0.824,
+                    "sugar": 0.8212,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Honey — nutrition: USDA FDC 169640 (SR Legacy 19296) 'Honey' per 100 g: 304 kcal, protein 0.3 g, fiber 0.2 g, sodium 4 mg, carbs 82.4 g, sugars 82.12 g; per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 960000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Honey — neuron_count: western honey bee worker brain ~960,000 neurons (Wikipedia list of animals by number of neurons); the same value the model uses for bees killed by pesticides."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.0001,
+                "confidence": 3,
+                "source": {
+                    "id": 433,
+                    "url": "https://www.imanagement.ch/en/other/links/wwwapisavoirch/amazing-facts-about-bees-394",
+                    "title": "apisavoir.ch — Annual balance of a honey bee colony: key figures (bees raised, honey, worker lifespans)",
+                    "note": "Honey — weight_kg: a worker honey bee weighs ~0.1 g (80–120 mg); consistent with 25 kg of bees ≈ 250,000 bees per colony-year (source 433) and with the model's pesticide-bee profile."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 0.0001287,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Honey — kg honey per bee death (world): 19.3 kg honey per hive-year / 150,000 bees per hive-year = 1.29e-04 kg (≈7,772 bees per kg honey). FAOSTAT QCL, World 2020–2024: 'Natural honey' (item 1182) 1,924.5 / 1,890.7 / 1,943.1 / 1,959.4 / 1,987.5 kt, mean 1,941 kt; 'Bees' (item 1181) hives 98.9 / 100.3 / 100.3 / 100.8 / 101.7 M, mean 100.4 M -> 19.3 kg honey per hive per year. US: 61.1 kt from 2.64 M hives -> 23.1 kg. ~150,000 worker bees live and die in a hive each year: apisavoir.ch (source 433) puts a colony's annual bee production at ~25 kg of bees (~250,000 at 0.1 g) and a queen's output at ~500,000 over 4–5 years (~110,000/yr); 150,000 is taken between the two. Every bee raised in the hive is counted, as agreed — like layer hens, their deaths are part of keeping the colony in production."
+                }
+            },
+            {
+                "value": 0.000154,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Honey — kg honey per bee death (US): 23.1 kg / 150,000 = 1.54e-04 kg (≈6,494 bees per kg honey). FAOSTAT QCL, World 2020–2024: 'Natural honey' (item 1182) 1,924.5 / 1,890.7 / 1,943.1 / 1,959.4 / 1,987.5 kt, mean 1,941 kt; 'Bees' (item 1181) hives 98.9 / 100.3 / 100.3 / 100.8 / 101.7 M, mean 100.4 M -> 19.3 kg honey per hive per year. US: 61.1 kt from 2.64 M hives -> 23.1 kg."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [],
+        "offspring_captivity_years": [],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Honey — yield_fraction 1.0: lifetime_output_kg is set directly as kg honey per bee, so no body-weight conversion applies."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 1.44,
+                "confidence": 3,
+                "source": {
+                    "id": 434,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9952000/",
+                    "title": "Pignagnoli et al. (2023) — Greenhouse gas emissions from honey production: two-year survey in Italian beekeeping farms (Animals 13(4):766)",
+                    "note": "Honey — total GHG: Pignagnoli et al. 2023, 20 Italian beekeeping farms over two years, mean 1.44 kg CO2e/kg honey (range 0.44–3.18; stationary 0.58, migratory 2.50). Dominant sources: transport, supplementary feeding, electricity for extraction."
+                }
+            },
+            {
+                "value": 2.5,
+                "confidence": 2,
+                "source": {
+                    "id": 435,
+                    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959652615019113",
+                    "title": "Mujica et al. (2016) — Carbon footprint of honey produced in Argentina (J. Cleaner Production)",
+                    "note": "Honey — total GHG: Mujica et al. 2016, Argentina, 2.5 ± 0.17 kg CO2e/kg honey (extraction 90.7%)."
+                }
+            },
+            {
+                "value": 0.9,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 436,
+                    "url": "https://www.researchgate.net/publication/257680075_Carbon_footprint_and_air_emissions_inventories_for_US_honey_production_Case_studies",
+                    "title": "Kendall et al. (2013) — Carbon footprint and air emissions inventories for US honey production: case studies (Int. J. LCA)",
+                    "note": "Honey — total GHG (US): Kendall et al. 2013 case studies, 0.4 (backyard) to 1.4 (commercial) kg CO2e/kg honey, transport the largest; midpoint 0.9."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [],
+        "pasture_green_water_l_per_ha": [],
+        "native_fraction": [],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 434,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9952000/",
+                    "title": "Pignagnoli et al. (2023) — Greenhouse gas emissions from honey production: two-year survey in Italian beekeeping farms (Animals 13(4):766)",
+                    "note": "Honey — CH4: bees produce no meaningful methane; beekeeping LCAs (Pignagnoli 2023) count none."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 434,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9952000/",
+                    "title": "Pignagnoli et al. (2023) — Greenhouse gas emissions from honey production: two-year survey in Italian beekeeping farms (Animals 13(4):766)",
+                    "note": "Honey — N2O: none from the bees themselves."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.0,
+                "confidence": 2,
+                "source": {
+                    "id": 434,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9952000/",
+                    "title": "Pignagnoli et al. (2023) — Greenhouse gas emissions from honey production: two-year survey in Italian beekeeping farms (Animals 13(4):766)",
+                    "note": "Honey — non-feed CO2 (transport of hives, extraction electricity, materials): Pignagnoli 2023 mean 1.44 kg CO2e/kg minus supplementary feeding (~0.4 of it in the lower-feeding year; feeding is counted separately through the sugar feed row) -> ~1.0."
+                }
+            },
+            {
+                "value": 0.7,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 436,
+                    "url": "https://www.researchgate.net/publication/257680075_Carbon_footprint_and_air_emissions_inventories_for_US_honey_production_Case_studies",
+                    "title": "Kendall et al. (2013) — Carbon footprint and air emissions inventories for US honey production: case studies (Int. J. LCA)",
+                    "note": "Honey — US non-feed CO2: Kendall 2013 midpoint 0.9 minus ~0.2 for sugar feeding -> 0.7."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 82,
+                "food_slug": "cane-sugar",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.518,
+                        "confidence": 1,
+                        "source": {
+                            "id": 437,
+                            "url": "https://www.nationalbeeunit.com/assets/PDFs/3_Resources_for_beekeepers/Best_practice_guidelines/BPG_7a_Feeding_Bees_-_sugar.pdf",
+                            "title": "UK National Bee Unit — Best practice guideline: feeding bees sugar",
+                            "note": "Honey — sugar fed per kg honey (world): ~10 kg sugar per hive per year (syrup in autumn to replace the honey taken, plus spring stimulation; UK National Bee Unit guidance and common practice — no global survey found) / 19.3 kg honey = 0.52. Confidence 1."
+                        }
+                    },
+                    {
+                        "value": 0.433,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 437,
+                            "url": "https://www.nationalbeeunit.com/assets/PDFs/3_Resources_for_beekeepers/Best_practice_guidelines/BPG_7a_Feeding_Bees_-_sugar.pdf",
+                            "title": "UK National Bee Unit — Best practice guideline: feeding bees sugar",
+                            "note": "Honey — sugar fed per kg honey (US): ~10 kg / 23.1 kg = 0.43. Confidence 1."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1941,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Honey — availability_gg (world): FAOSTAT 'Natural honey' 2020–2024 mean = 1,941 Gg. FAOSTAT QCL, World 2020–2024: 'Natural honey' (item 1182) 1,924.5 / 1,890.7 / 1,943.1 / 1,959.4 / 1,987.5 kt, mean 1,941 kt; 'Bees' (item 1181) hives 98.9 / 100.3 / 100.3 / 100.8 / 101.7 M, mean 100.4 M -> 19.3 kg honey per hive per year. US: 61.1 kt from 2.64 M hives -> 23.1 kg."
+                }
+            },
+            {
+                "value": 61,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Honey — availability_gg (US): FAOSTAT US honey production 2020–2024 mean = 61.1 Gg."
+                }
+            }
+        ]
     }
 ]

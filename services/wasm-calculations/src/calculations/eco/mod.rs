@@ -13,7 +13,8 @@ const INSECT_DENSITY_PER_HA: f64 = 1e9;
 const INSECT_DEATH_FRACTION: f64 = 0.1;
 
 const BEE_DENSITY_PER_HA: f64 = 5_000.0;
-const BEE_HAZARD_MORTALITY: f64 = 0.5;
+// pesticide_bee_hazard is already the fraction of bees killed (0-1), computed in the
+// data pipeline from EPA exposure and dose-response defaults, so it is not scaled again.
 
 const WORM_DENSITY_PER_HA: f64 = 500_000.0;
 const WORM_DEATH_FRACTION: f64 = 0.3;
@@ -233,8 +234,7 @@ fn compute_plant_sentient_harm(
         * INSECT_DEATH_FRACTION;
     let bee_deaths = food.pesticide_bee_hazard.unwrap_or(0.0)
         * BEE_DENSITY_PER_HA
-        * area_ha_per_kg
-        * BEE_HAZARD_MORTALITY;
+        * area_ha_per_kg;
     let worm_deaths = food.pesticide_terrestrial_paf.unwrap_or(0.0)
         * WORM_DENSITY_PER_HA
         * area_ha_per_kg
@@ -300,8 +300,7 @@ fn compute_animal_sentient_harm(
             * INSECT_DEATH_FRACTION;
         let feed_bee_deaths = food.feed_pesticide_bee_hazard.unwrap_or(0.0)
             * BEE_DENSITY_PER_HA
-            * feed_area
-            * BEE_HAZARD_MORTALITY;
+            * feed_area;
         let feed_worm_deaths = food.feed_pesticide_terrestrial_paf.unwrap_or(0.0)
             * WORM_DENSITY_PER_HA
             * feed_area

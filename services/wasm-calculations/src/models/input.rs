@@ -205,14 +205,15 @@ fn default_over_hunting_factor()    -> f64 { 2.5 }
 fn default_over_gathering_factor()  -> f64 { 1.5 }
 
 // Keep in sync with DEFAULT_LAND_TYPE_WEIGHTS in LandTypeSliders.tsx.
+// Chaudhary & Brooks (2018) biodiversity factors per biome, relative to temperate forest.
 fn default_land_type_weights() -> LandTypes {
     LandTypes {
-        tropical_forest:     3.0,
-        wetland:             2.0,
-        tropical_savanna:    1.5,
+        tropical_forest:     10.0,
+        wetland:             1.8,
+        tropical_savanna:    1.2,
         temperate_forest:    1.0,
-        dry:                 1.0,
-        temperate_grassland: 0.75,
+        dry:                 0.85,
+        temperate_grassland: 0.45,
     }
 }
 
@@ -243,10 +244,10 @@ mod tests {
         let weights = default_land_type_weights();
 
         let palm = LandTypes { tropical_forest: 0.85, wetland: 0.15, ..Default::default() };
-        assert!((palm.multiplier(&weights) - 2.85).abs() < 1e-9);
+        assert!((palm.multiplier(&weights) - 8.77).abs() < 1e-9);
 
         let wheat = LandTypes { temperate_grassland: 1.0, ..Default::default() };
-        assert!((wheat.multiplier(&weights) - 0.75).abs() < 1e-9);
+        assert!((wheat.multiplier(&weights) - 0.45).abs() < 1e-9);
 
         // no split → neutral
         assert_eq!(LandTypes::default().multiplier(&weights), 1.0);

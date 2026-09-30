@@ -30,13 +30,17 @@ const DESCRIPTIONS: Record<keyof LandTypes, string> = {
 };
 
 // 1.0 = neutral. Keep in sync with default_land_type_weights() in the Rust SliderQuery.
+// From Chaudhary & Brooks (2018) global land occupation biodiversity factors (UNEP-SETAC
+// recommended; potential species loss per m², all five taxa): for each land type, the
+// median and geometric mean over its biome's ecoregions, averaged, relative to temperate
+// forest = 1. Cropland and pasture give the same ratios.
 export const DEFAULT_LAND_TYPE_WEIGHTS: LandTypes = {
-    tropical_forest:     3.0,
-    wetland:             2.0,
-    tropical_savanna:    1.5,
-    temperate_forest:    1.0,
-    dry:                 1.0,
-    temperate_grassland: 0.75,
+    tropical_forest:     10.0,  // Olson biomes 1–3 (tropical moist, dry and coniferous forest)
+    wetland:             1.8,   // biomes 9 and 14 (flooded grassland, mangroves)
+    tropical_savanna:    1.2,   // biome 7
+    temperate_forest:    1.0,   // biomes 4–5
+    dry:                 0.85,  // biomes 12–13 (Mediterranean, desert and xeric)
+    temperate_grassland: 0.45,  // biome 8
 };
 
 export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => void }) {
@@ -64,7 +68,7 @@ export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => voi
                             <span>{LAND_TYPE_LABELS[key]}</span>
                             <span className="font-medium text-neutral-700">{weights[key].toFixed(2)}×</span>
                         </div>
-                        <Slider min={0} max={5} step={0.25} value={weights[key]} onChange={val => handleChange(key, val)} />
+                        <Slider min={0} max={10} step={0.25} value={weights[key]} onChange={val => handleChange(key, val)} />
                         <div className="text-xs text-neutral-400 mt-0.5">{DESCRIPTIONS[key]}</div>
                     </div>
                 ))}

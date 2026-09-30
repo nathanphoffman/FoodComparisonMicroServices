@@ -6,7 +6,9 @@
         "notes": [
             "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram.",
             "Cheese nutrition: cheddar FDC 173414 (SR 1009), mozzarella low-moisture part-skim FDC 171244 (SR 1029), parmesan hard FDC 170848 (SR 1033).",
-            "Rice Starch — nutrition stand-in: FDC 169698 'Cornstarch' (SR 20027)."
+            "Rice Starch — nutrition stand-in: FDC 169698 'Cornstarch' (SR 20027).",
+            "Tea — brewed black tea FDC 173227 (SR 14355), brewed green tea FDC 171917 (SR 14278, also used for white tea).",
+            "Honey — FDC 169640 (SR 19296)."
         ]
     },
     {
@@ -817,7 +819,9 @@
             "Primary source for green_water_per_kg and blue_water_per_kg splits for plant foods. Reports global average green, blue, and grey water footprints per crop in m³/ton (= L/kg) based on a grid-based model covering 1996–2005 production data at 5×5 arcminute resolution.",
             "Green water = evapotranspiration from soil moisture recharged by rainfall (no human extraction). Blue water = evapotranspiration of irrigation water drawn from surface/groundwater.",
             "Values used here are global production-weighted averages from Table A1. Confidence 3 for major staple crops (wheat, corn, rice, soy, sorghum, potato) where M&H have dense country coverage. Confidence 2 for tree nuts and specialty crops where regional variation is high or M&H coverage is thinner.",
-            "Peas — Vol. 1 global average for FAO item 187 'Peas, dry': green 1,453 / blue 33 / grey 493 m3/t, total 1,979."
+            "Peas — Vol. 1 global average for FAO item 187 'Peas, dry': green 1,453 / blue 33 / grey 493 m3/t, total 1,979.",
+            "Coffee — 'Coffee, green' 15,897 m3/t (green 15,249 / blue 116 / grey 532); roasted 18,925.",
+            "Tea — item 667 'Green and black tea' 8,856 m3/t made tea (green 7,232 / blue 898 / grey 726)."
         ]
     },
     {
@@ -882,7 +886,8 @@
             "Spinach — emissions_per_kg: 0.53 kg CO2e/kg from OWID 'Other Vegetables' category (P&N 2018 data); corroborates the P&N 2018 direct value of 0.47 kg CO2e/kg; both within the expected 0.3–0.6 kg CO2e/kg range for low-input leafy crops.",
             "Kale — emissions_per_kg: 0.51 kg CO2e/kg from OWID 'Brassicas' category (P&N 2018 data); closely corroborates the P&N 2018 direct value of 0.49 kg CO2e/kg for kale as a leafy brassica; within the known-correct brassica range of 0.4–0.9 kg CO2e/kg.",
             "Tofu — emissions_per_kg (world): OWID tofu line item 3.16 kg CO2e/kg used directly for the tofu entry in legumes.json.",
-            "Peas — emissions_per_kg: OWID 'Peas' category 0.98 kg CO2e/kg used directly for the peas entry."
+            "Peas — emissions_per_kg: OWID 'Peas' category 0.98 kg CO2e/kg used directly for the peas entry.",
+            "Coffee — 28.53 kg CO2e/kg (green-bean equivalent) used x 0.073 for brewed coffee."
         ]
     },
     {
@@ -1304,7 +1309,10 @@
             "Strawberries — yield_kg_ha and availability_gg (world): World (area 5000) item 544 yield 2020–2024 mean 23,946 kg/ha; production 2020–2024 mean 10,129 Gg (2023–2024 are FAO estimates, flag E).",
             "Blueberries — yield_kg_ha and availability_gg (world): World item 552 yield 2020–2024 mean 6,640 kg/ha; production mean 1,231 Gg. Mixes cultivated highbush with managed wild lowbush (Canada) and omits China (not reported).",
             "World production 2020–2024 means used for availability_gg (tonnes → Gg): almonds in shell 3,866; apples 95,053; avocados 9,717; bananas 133,938; barley 148,648; beans dry 29,760; Brazil nuts in shell 79; cashew nuts in shell 4,047; cauliflowers and broccoli 26,457; chick peas 16,472; coconuts in shell 64,013; cucumbers and gherkins 87,634; game meat 2,030; garlic (item 406) 29,514; groundnuts in shell 55,387; hazelnuts in shell 1,135; hen eggs 90,115; lentils 6,929; lettuce and chicory 28,147; linseed 3,278; maize 1,194,841; mangoes/guavas/mangosteens 59,192; cattle meat 66,624; chicken meat 122,746; pig meat 120,570; sheep meat 11,123; turkey meat 5,310; oats 22,976; olive oil 3,002; oranges 68,304; pistachios in shell 1,207; potatoes 380,130; quinoa 155; raw cow milk 773,343; rice (paddy) 793,255; sorghum 59,878; soya beans 370,953; spinach 32,340; sunflower seed 54,255; sweet potatoes 90,914; tomatoes 185,023; walnuts in shell 4,034; wheat 791,992. Meat items are carcass weight.",
-            "Peas — yield_kg_ha 1,897 and availability_gg 13,869: item 187 'Peas, dry', World, 2020–2024 (same bulk file)."
+            "Peas — yield_kg_ha 1,897 and availability_gg 13,869: item 187 'Peas, dry', World, 2020–2024 (same bulk file).",
+            "Coffee — item 656 'Coffee, green' 2020–2024: yield 900 kg/ha, production 11,035 Gg (converted to brewed coffee).",
+            "Tea — item 667 'Tea leaves' (fresh leaf) 2020–2024: 5,978 kg/ha world.",
+            "Honey — items 1182 'Natural honey' and 1181 'Bees' (hives) 2020–2024: 1,941 kt from 100.4 M hives (19.3 kg/hive); US 61.1 kt / 2.64 M (23.1 kg)."
         ]
     },
     {
@@ -2369,6 +2377,94 @@
         "title": "Global Market Insights — Rice starch market size (2024)",
         "notes": [
             "Rice Starch — ~USD 620 M market in 2024 -> ~410 kt at ~USD 1,500/t (assumed price)."
+        ]
+    },
+    {
+        "id": 428,
+        "url": "https://roastopedia.com/golden-cup-standard/",
+        "title": "Roastopedia — The SCA Golden Cup Standard (55 g coffee per litre of water ±10%)",
+        "notes": [
+            "Coffee — 55 g roasted coffee per litre of water -> ~61 g roasted / 73 g green per kg brewed coffee."
+        ]
+    },
+    {
+        "id": 429,
+        "url": "http://www.scielo.br/j/rbcs/a/Qqckz45Ls64dskxzdpZcdwD/?lang=en",
+        "title": "Fertilizer 15N balance in a coffee cropping system: a case study in Brazil (Revista Brasileira de Ciência do Solo)",
+        "notes": [
+            "Coffee — fertilizer range (Brazil trials 0-800 kg N/ha); used for rough per-hectare coffee inputs (confidence 1)."
+        ]
+    },
+    {
+        "id": 430,
+        "url": "https://horizonepublishing.com/journals/index.php/PST/article/view/5374",
+        "title": "Insights of carbon footprint of tea through life cycle approach (Plant Science Today 11(4), 2024) — black, green and white tea, Tamil Nadu, India",
+        "notes": [
+            "Tea — per kg made tea (Table 4): cultivation 1.5, processing black 2.506 / green 1.88 / white ~0, packaging 2.34, transport 0.096 (consumption 5.8-8.3 and disposal 0.674 excluded); 4 kg fresh leaf per kg made tea; serving 2.5 g (black) / 1.75 g (green, white) per 100 mL; ~250-553 kg N/ha/yr."
+        ]
+    },
+    {
+        "id": 431,
+        "url": "https://firsdtea.com/2024-china-tea-report-production/",
+        "title": "Firsd Tea — 2024 China Tea Report: Production (2023 figures: world 6.6 Mt, China 3.3 Mt by tea type)",
+        "notes": [
+            "Tea — 2023: world 6.6 Mt, China 3.3 Mt (green 57.9% = 1.9 Mt, black 0.49 Mt, white 3%)."
+        ]
+    },
+    {
+        "id": 432,
+        "url": "https://www.epa.gov/sites/default/files/2014-06/documents/pollinator_risk_assessment_guidance_06_19_14.pdf",
+        "title": "US EPA, Health Canada PMRA & California DPR (2014) — Guidance for Assessing Pesticide Risks to Bees",
+        "notes": [
+            "Bee mortality (all plants): Table 2 Tier I foliar-spray adult oral dose = application rate (kg a.i./ha) x 98 µg a.i./g x 0.292 g/day = 28.6 µg/bee per kg/ha; acute level of concern RQ 0.4 = 10% mortality on the median probit dose-response slope (implied slope ~3.22). Used with each pesticide's oral bee LD50 to compute the share of bees killed per crop."
+        ]
+    },
+    {
+        "id": 433,
+        "url": "https://www.imanagement.ch/en/other/links/wwwapisavoirch/amazing-facts-about-bees-394",
+        "title": "apisavoir.ch — Annual balance of a honey bee colony: key figures (bees raised, honey, worker lifespans)",
+        "notes": [
+            "Honey — ~25 kg of bees raised per colony-year (~250,000 bees); queen lays ~500,000 over 4–5 years; summer workers live ~6 weeks, winter bees ~6 months."
+        ]
+    },
+    {
+        "id": 434,
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9952000/",
+        "title": "Pignagnoli et al. (2023) — Greenhouse gas emissions from honey production: two-year survey in Italian beekeeping farms (Animals 13(4):766)",
+        "notes": [
+            "Honey — 1.44 kg CO2e/kg mean (Italy); non-feed share ~1.0 used as co2_kg_per_kg_output."
+        ]
+    },
+    {
+        "id": 435,
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0959652615019113",
+        "title": "Mujica et al. (2016) — Carbon footprint of honey produced in Argentina (J. Cleaner Production)",
+        "notes": [
+            "Honey — 2.5 kg CO2e/kg (Argentina)."
+        ]
+    },
+    {
+        "id": 436,
+        "url": "https://www.researchgate.net/publication/257680075_Carbon_footprint_and_air_emissions_inventories_for_US_honey_production_Case_studies",
+        "title": "Kendall et al. (2013) — Carbon footprint and air emissions inventories for US honey production: case studies (Int. J. LCA)",
+        "notes": [
+            "Honey — 0.4–1.4 kg CO2e/kg (US case studies)."
+        ]
+    },
+    {
+        "id": 437,
+        "url": "https://www.nationalbeeunit.com/assets/PDFs/3_Resources_for_beekeepers/Best_practice_guidelines/BPG_7a_Feeding_Bees_-_sugar.pdf",
+        "title": "UK National Bee Unit — Best practice guideline: feeding bees sugar",
+        "notes": [
+            "Honey — sugar feeding practice; ~10 kg sugar per hive per year assumed (confidence 1)."
+        ]
+    },
+    {
+        "id": 438,
+        "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
+        "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
+        "notes": [
+            "Follow Your Heart Parmesan (composite) — nutrition and ingredient list used for the recipe estimate."
         ]
     }
 ]
