@@ -13,7 +13,6 @@ import { SentientHarmCell } from './Cells/SentientHarmCell';
 import { CaptiveSentienceCell } from './Cells/CaptiveSentienceCell';
 import { FinalScoreCell } from './Cells/FinalScoreCell';
 import { AvailabilityCell } from './Cells/AvailabilityCell';
-import { DummyCell } from './Cells/DummyCell';
 import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
@@ -139,7 +138,6 @@ export function FoodTable() {
                                     case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} killMultiplier={sliderValues.killMultiplier} explanation={food.sentient_harm_explanation} />;
                                     case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
                                     case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
-                                    case 'dummy':          return <DummyCell          key="dummy" />;
                                 }
                             })}
                         </Row>

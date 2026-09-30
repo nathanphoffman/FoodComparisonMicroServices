@@ -19,7 +19,6 @@ export const COLUMN_CONFIG: ColConfig[] = [
     { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true,  mobileVisible: false },
     { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true,  mobileVisible: false },
     { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true,  mobileVisible: true  },
-    { key: 'dummy',          label: 'Test Column',        sortKey: undefined,        defaultVisible: false, mobileVisible: false },
 ];
 
 // ── Data region ───────────────────────────────────────────────────────────────

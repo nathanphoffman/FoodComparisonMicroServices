@@ -151,7 +151,7 @@ export type LandTypes = {
 
 // ── Inputs (columns, data region, sliders) ────────────────────────────────────
 
-export type ColumnKey = SortKey | 'dummy';
+export type ColumnKey = SortKey;
 
 export type ColConfig = { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean; mobileVisible: boolean };
 
