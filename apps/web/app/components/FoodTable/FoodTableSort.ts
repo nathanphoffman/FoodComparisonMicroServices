@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood } from './FoodTableTypes';
 import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail } from './FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────

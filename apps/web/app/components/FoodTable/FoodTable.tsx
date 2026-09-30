@@ -15,7 +15,7 @@ import { FinalScoreCell } from './Cells/FinalScoreCell';
 import { AvailabilityCell } from './Cells/AvailabilityCell';
 import { DummyCell } from './Cells/DummyCell';
 import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs } from './FoodTableInputs';

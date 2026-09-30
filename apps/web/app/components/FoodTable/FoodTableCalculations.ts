@@ -1,4 +1,4 @@
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood } from './FoodTableTypes';
 import type { FoodWeights, IntelligenceDetail, NutritionDetail } from './FoodTableTypes';
 
 // ── Display-only constants ────────────────────────────────────────────────────

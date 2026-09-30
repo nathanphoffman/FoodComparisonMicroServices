@@ -1,5 +1,5 @@
 import type { LandUseDetail } from '../FoodTableTypes';
-import type { LandTypes } from '@/lib/queries/commonFoods';
+import type { LandTypes } from '../FoodTableTypes';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
 import { LAND_TYPE_LABELS } from '../Sliders/LandTypeSliders';
 import { formatPerUnit } from './TooltipParts';

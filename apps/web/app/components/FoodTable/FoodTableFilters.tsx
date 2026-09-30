@@ -1,6 +1,6 @@
 'use client';
 
-import type { RawFood } from '@/lib/queries/commonFoods';
+import type { RawFood } from './FoodTableTypes';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)
 // and/or any of its tags. A food can appear under more than one filter — almond milk

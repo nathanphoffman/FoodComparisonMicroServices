@@ -17,7 +17,7 @@ import { OverHuntingSlider }                from "./Sliders/OverHuntingSlider";
 import { OverGatheringSlider }              from "./Sliders/OverGatheringSlider";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
-import type { LandTypes } from "@/lib/queries/commonFoods";
+import type { LandTypes } from "./FoodTableTypes";
 
 export type { FoodWeights };
 

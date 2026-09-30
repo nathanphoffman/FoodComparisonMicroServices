@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { LandTypeModal } from "../../Modals/LandTypeModal";
-import type { LandTypes } from "@/lib/queries/commonFoods";
+import type { LandTypes } from "../FoodTableTypes";
 
 // Ordered from most to least harmful at the defaults.
 const KEYS: (keyof LandTypes)[] = [
