@@ -7,15 +7,13 @@ import { Cell } from '../Table/Cell';
 import type { SentientHarmDetail, EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail, KillDetail, WaterDetail } from './FoodTableTypes';
 import { formatNeurons, formatIntelligenceValue } from './FoodTableCalculations';
 import { getSentientHarmColor, getIntelligenceColor, getEmissionsColor, getWaterColor, getNutritionScoreColor, getLandUseColor, getNeuronColor, getImprovementColor } from './FoodTableStyles';
-import {
-  SentientHarmTooltip,
-  CaptiveSentienceTooltip,
-  EmissionsTooltip,
-  NutritionTooltip,
-  LandUseTooltip,
-  IntelligenceTooltip,
-  WaterTooltip,
-} from './FoodTableTooltips';
+import { SentientHarmTooltip } from './Tooltips/SentientHarmTooltip';
+import { CaptiveSentienceTooltip } from './Tooltips/CaptiveSentienceTooltip';
+import { EmissionsTooltip } from './Tooltips/EmissionsTooltip';
+import { NutritionTooltip } from './Tooltips/NutritionTooltip';
+import { LandUseTooltip } from './Tooltips/LandUseTooltip';
+import { IntelligenceTooltip } from './Tooltips/IntelligenceTooltip';
+import { WaterTooltip } from './Tooltips/WaterTooltip';
 
 export type { EmissionsBreakdown, NutritionDetail, LandUseDetail, IntelligenceDetail } from './FoodTableTypes';
 
