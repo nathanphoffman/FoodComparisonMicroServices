@@ -1,38 +1,24 @@
 """
-download.py — scrapes source documents and saves them to lib/data/sources/.
+download.py — scrapes source documents and saves them to data/sources/.
 
 Port of packages/data-sourcing/src/download.ts.
-Run: python src/download.py
+Run: python -m src.download  (from services/data-sourcing/)
+
+  - sources.py    — reads sources.json and picks each source's output filename
+  - rate_limit.py — per-domain delay between requests
+  - paths.py      — project file locations
 """
 
 import asyncio
-import json
-import re
-import time
-from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Optional
+from dataclasses import dataclass
 
 from playwright.async_api import async_playwright, Browser, Page
 
-# Root = MicroserviceArchitecture/ (self-contained — no parent references)
-# services/data-sourcing/src/ → services/data-sourcing/ → services/ → MicroserviceArchitecture/
-ROOT         = Path(__file__).resolve().parents[3]
-SOURCES_JSON = ROOT / "data" / "json" / "sources.json"
-OUTPUT_DIR   = ROOT / "data" / "sources"
+from .paths import OUTPUT_DIR
+from .rate_limit import extract_hostname, mark_fetched, wait_for_domain_cooldown
+from .sources import Source, load_sources, output_path
 
-DOMAIN_DELAY_SECONDS = 2.0
 PAGE_TIMEOUT_MS = 30_000
-FORBIDDEN_CHARS = r'[/\\:*?"<>|]'
-
-
-@dataclass
-class Source:
-    id: int
-    url: str
-    title: str
-    notes: list[str] = field(default_factory=list)
-    _status: Optional[str] = None
 
 
 @dataclass
@@ -41,35 +27,6 @@ class Counts:
     skipped_existing: int = 0
     skipped_bad_status: int = 0
     failed: int = 0
-
-
-def sanitize_title(title: str) -> str:
-    cleaned = re.sub(FORBIDDEN_CHARS, "", title)
-    return re.sub(r"\s+", " ", cleaned).strip()
-
-
-def output_path(source: Source) -> Path:
-    return OUTPUT_DIR / f"{source.id} - {sanitize_title(source.title)}.txt"
-
-
-def extract_hostname(url: str) -> str:
-    try:
-        from urllib.parse import urlparse
-        return urlparse(url).hostname or url
-    except Exception:
-        return url
-
-
-async def wait_for_domain_cooldown(
-    hostname: str,
-    last_fetched: dict[str, float],
-) -> None:
-    last = last_fetched.get(hostname)
-    if last is None:
-        return
-    elapsed = time.monotonic() - last
-    if elapsed < DOMAIN_DELAY_SECONDS:
-        await asyncio.sleep(DOMAIN_DELAY_SECONDS - elapsed)
 
 
 async def download_source(
@@ -86,7 +43,7 @@ async def download_source(
     output_path(source).write_text(body_text, encoding="utf-8")
     await page.close()
 
-    last_fetched[hostname] = time.monotonic()
+    mark_fetched(hostname, last_fetched)
     print(f"DOWNLOADED: {source.id} - {source.title}")
 
 
@@ -115,18 +72,7 @@ async def process_sources(sources: list[Source], browser: Browser) -> Counts:
 
 
 async def _run() -> None:
-    raw: list[dict] = json.loads(SOURCES_JSON.read_text(encoding="utf-8"))
-    sources = [
-        Source(
-            id=s["id"],
-            url=s["url"],
-            title=s["title"],
-            notes=s.get("notes") or [],
-            _status=s.get("_status"),
-        )
-        for s in raw
-    ]
-
+    sources = load_sources()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     async with async_playwright() as pw:

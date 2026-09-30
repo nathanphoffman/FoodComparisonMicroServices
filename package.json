@@ -14,7 +14,7 @@
         "build":       "npm run build -w apps/web",
         "build:wasm":  "wasm-pack build services/wasm-calculations --target web",
         "build-db":    "cd services/data-pipeline && python -m src.build_db",
-        "download":    "python services/data-sourcing/src/download.py"
+        "download":    "cd services/data-sourcing && python -m src.download"
     },
     "devDependencies": {
         "concurrently": "^9.1.2",

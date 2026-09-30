@@ -18,7 +18,7 @@ Domain-level rate limiting (`wait_for_domain_cooldown`) is not optional. Any new
 
 ## Functions and files
 
-Prefer more, smaller functions and more, smaller files over large ones. A function that does two things should be two functions. Functions over roughly 20 lines should be broken into named async helpers. Keep I/O and data transformation completely separate: functions that compute a path or sanitise a filename must not also perform network I/O. `download.py` is currently the only module; if a second concern emerges (e.g. PDF parsing, deduplication), extract it to its own module rather than growing `download.py`.
+Prefer more, smaller functions and more, smaller files over large ones. A function that does two things should be two functions. Functions over roughly 20 lines should be broken into named async helpers. Keep I/O and data transformation completely separate: functions that compute a path or sanitise a filename must not also perform network I/O. `download.py` holds the download loop; source loading and filenames live in `sources.py`, the per-domain delay in `rate_limit.py`, and paths in `paths.py`. If another concern emerges (e.g. PDF parsing, deduplication), extract it to its own module rather than growing `download.py`.
 
 ## Paths and constants
 
