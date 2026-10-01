@@ -15,6 +15,22 @@ export interface NutritionValue {
   sugar: number | null;
   cholesterol: number | null;
   trans_fat: number | null;
+  // vitamins and minerals per gram, only when the source reports them (units in data/json/SCHEMA.md)
+  vitamin_a?: number;
+  vitamin_c?: number;
+  vitamin_d?: number;
+  vitamin_e?: number;
+  vitamin_k?: number;
+  folate?: number;
+  vitamin_b12?: number;
+  vitamin_b6?: number;
+  calcium?: number;
+  iron?: number;
+  magnesium?: number;
+  potassium?: number;
+  zinc?: number;
+  phosphorus?: number;
+  selenium?: number;
 }
 
 export interface Food {

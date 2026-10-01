@@ -1,6 +1,7 @@
 use serde::Deserialize;
 
 use super::land_types::LandTypes;
+use super::micronutrients::Micronutrients;
 
 /// Raw food row returned by the C# data API (GET /api/foods).
 /// Field names are snake_case to match the JSON output from the C# API
@@ -26,6 +27,9 @@ pub struct FoodRow {
     pub sugar:        Option<f64>,
     pub cholesterol:  Option<f64>,
     pub trans_fat:    Option<f64>,
+    // Vitamins and minerals per gram; None when none are sourced.
+    #[serde(default)]
+    pub micronutrients: Option<Micronutrients>,
 
     // Plant metrics
     pub yield_kg_ha:               Option<f64>,

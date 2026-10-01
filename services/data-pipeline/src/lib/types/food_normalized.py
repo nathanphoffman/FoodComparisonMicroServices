@@ -31,6 +31,8 @@ class FoodNormalized:
     sugar: float | None = None
     cholesterol: float | None = None
     trans_fat: float | None = None
+    # vitamins and minerals present in the source data, per gram; stored as a JSON object
+    micronutrients: dict[str, float] | None = None
     # plant metrics
     yield_kg_ha: float | None = None
     water_per_kg: float | None = None
@@ -82,6 +84,7 @@ class FoodNormalized:
             json.dumps(self.tags), self.human_food,
             self.calories, self.fat, self.sat_fat, self.protein, self.fiber,
             self.sodium, self.carbs, self.sugar, self.cholesterol, self.trans_fat,
+            json.dumps(self.micronutrients) if self.micronutrients else None,
             self.yield_kg_ha, self.water_per_kg,
             self.green_water_per_kg, self.blue_water_per_kg, self.grey_water_per_kg,
             self.soil_erosion, self.pesticide_kg_ha,

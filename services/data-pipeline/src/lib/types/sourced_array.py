@@ -5,7 +5,7 @@ Port of SourcedNumberArray.ts and SourcedNutritionalValueArray.ts.
 Confidence scores are used as weights; higher confidence pulls the average more strongly.
 """
 
-from ...food_types import SourcedNumber, NutritionValue, SourcedNutrition
+from ...food_types import MICRONUTRIENT_KEYS, SourcedNumber, NutritionValue, SourcedNutrition
 
 
 class SourcedArray:
@@ -51,6 +51,12 @@ class SourcedNutritionArray:
             cholesterol=self._weighted_average_for_field("cholesterol"),
             trans_fat=self._weighted_average_for_field("trans_fat"),
         )
+
+    def micronutrients(self) -> dict[str, float] | None:
+        """Confidence-weighted average of each vitamin/mineral any source reports, or None if none do."""
+        averages = {key: self._weighted_average_for_field(key) for key in MICRONUTRIENT_KEYS}
+        reported = {key: value for key, value in averages.items() if value is not None}
+        return reported or None
 
     def _weighted_average_for_field(self, field_name: str) -> float | None:
         """Returns the confidence-weighted average for a single nutrition field."""

@@ -28,6 +28,15 @@ public class FoodRow
     public double? Cholesterol { get; set; }
     public double? TransFat    { get; set; }
 
+    // Vitamins and minerals per gram as stored in the DB: a JSON object string, NULL if none sourced.
+    // Dapper fills this; it's sent to the client as a parsed object via MicronutrientsJson.
+    [JsonIgnore]
+    public string? Micronutrients { get; set; }
+
+    [JsonPropertyName("micronutrients")]
+    public JsonElement? MicronutrientsJson =>
+        Micronutrients is null ? null : JsonDocument.Parse(Micronutrients).RootElement.Clone();
+
     // Plant metrics
     public double? YieldKgHa                 { get; set; }
     public double? EmissionsPerKg            { get; set; }

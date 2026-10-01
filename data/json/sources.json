@@ -10,7 +10,8 @@
             "Tea — brewed black tea FDC 173227 (SR 14355), brewed green tea FDC 171917 (SR 14278, also used for white tea).",
             "Honey — FDC 169640 (SR 19296).",
             "Onion FDC 170000 (SR 11282), Carrot FDC 170393 (SR 11124), Cassava FDC 169985 (SR 11134), Grapes FDC 174683 (SR 09132), Cabbage FDC 169975 (SR 11109).",
-            "Beet sugar FDC 169655, Molasses 168820, Corn oil 171029, Watermelon 167765, Pineapple 169124, Pumpkin 168448, Eggplant 169228, Kidney beans cooked 173740, Fava beans cooked 173753, Rye grain 168884, Millet raw 169702, Goat roasted 175304, Duck meat only roasted 172411, Goat milk 171278, Octopus raw 174218."
+            "Beet sugar FDC 169655, Molasses 168820, Corn oil 171029, Watermelon 167765, Pineapple 169124, Pumpkin 168448, Eggplant 169228, Kidney beans cooked 173740, Fava beans cooked 173753, Rye grain 168884, Millet raw 169702, Goat roasted 175304, Duck meat only roasted 172411, Goat milk 171278, Octopus raw 174218.",
+            "Legumes — vitamins and minerals (cooked, boiled, without salt): soybeans FDC 174271, lentils 172421, chickpeas 173757, black beans 173735, split peas 172429, kidney beans 173740, fava beans 173753."
         ]
     },
     {
@@ -1221,7 +1222,8 @@
         "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172475/nutrients",
         "title": "USDA FoodData Central — Tofu, raw, firm, prepared with calcium sulfate (FDC 172475, SR Legacy NDB 16426)",
         "notes": [
-            "Tofu — nutrition: firm tofu prepared with calcium sulfate, per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g; sugars not reported."
+            "Tofu — nutrition: firm tofu prepared with calcium sulfate, per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g; sugars not reported.",
+            "Tofu — vitamins and minerals per 100 g: vitamin A 166 IU, vitamin C 0.2 mg, vitamin D 0, folate 29 µg DFE, B12 0, B6 0.092 mg, calcium 683 mg, iron 2.66 mg, magnesium 58 mg, potassium 237 mg, zinc 1.57 mg, phosphorus 190 mg, selenium 17.4 µg; vitamins E and K not reported."
         ]
     },
     {

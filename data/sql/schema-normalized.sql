@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS foods_normalized (
     sugar                    REAL,
     cholesterol              REAL,
     trans_fat                REAL,
+    micronutrients           TEXT,  -- JSON object of vitamins/minerals per gram (keys in data/json/SCHEMA.md); NULL if none sourced
 
     -- plant metrics (NULL for animal foods; populated for plant foods AND feed rows)
     yield_kg_ha              REAL,

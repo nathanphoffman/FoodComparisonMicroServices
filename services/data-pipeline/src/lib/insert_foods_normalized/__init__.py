@@ -22,7 +22,7 @@ from .raw_builders import build_raw_animal, build_raw_composite, build_raw_plant
 INSERT_SQL = """INSERT INTO foods_normalized (
   food_id, is_feed, region, slug, name, type, tags, human_food,
   calories, fat, sat_fat, protein, fiber,
-  sodium, carbs, sugar, cholesterol, trans_fat,
+  sodium, carbs, sugar, cholesterol, trans_fat, micronutrients,
   yield_kg_ha, water_per_kg, green_water_per_kg, blue_water_per_kg, grey_water_per_kg,
   soil_erosion, pesticide_kg_ha,
   fertilizer_kg_ha, emissions_per_kg, tillage_events_per_year, co2_capture_kg_ha_yr,
@@ -35,7 +35,7 @@ INSERT_SQL = """INSERT INTO foods_normalized (
   ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output,
   wild_fish_kg_per_kg, wild_fish_neuron_count, wild_fish_weight_kg, wild_fish_lifespan_years,
   availability_gg, sentient_harm_explanation, land_types, category
-) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
+) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
 
 
 def insert(

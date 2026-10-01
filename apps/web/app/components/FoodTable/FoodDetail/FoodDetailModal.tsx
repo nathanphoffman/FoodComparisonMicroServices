@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import type { FoodDetails, SourcedFigure } from '@/lib/types';
-import type { RawFood } from '../FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type RawFood } from '../FoodTableTypes';
+import { MICRONUTRIENT_INFO } from '../FoodTableCalculations';
 import type { ScoredRow } from '../FoodTableSort';
 import { TILE_COLORS } from '../FoodTableStyles';
 import { FIGURES, type FigureKey, fieldLabel, matchFields } from './FoodDetailFigures';
@@ -214,6 +215,8 @@ const NUTRIENTS: [key: string, label: string, unit: string, scale: number][] = [
   ['fiber', 'fibre', ' g', 100],
   ['sugar', 'sugar', ' g', 100],
   ['sodium', 'sodium', ' mg', 100],
+  ...MICRONUTRIENT_KEYS.map((key): [string, string, string, number] =>
+    [key, MICRONUTRIENT_INFO[key].label, ` ${MICRONUTRIENT_INFO[key].unit}`, 100]),
 ];
 
 /** Numbers as-is (to 4 significant figures); nutrition objects as a per-100 g summary. */

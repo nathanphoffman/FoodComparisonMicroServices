@@ -1,5 +1,6 @@
 mod food_row;
 mod land_types;
+mod micronutrients;
 mod slider_query;
 
 use serde::Deserialize;

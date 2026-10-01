@@ -49,6 +49,7 @@ export type NutritionDetail = {
     fiber:        number;
     sugar:        number | null;
     protein:      number;
+    micronutrients: Micronutrients | null;
 };
 
 export type IntelligenceDetail = {
@@ -107,6 +108,8 @@ export type RawFood = {
   calories: number; fat: number; protein: number; fiber: number; sat_fat: number;
   sodium: number | null; carbs: number | null; sugar: number | null;
   cholesterol: number | null; trans_fat: number | null;
+  // vitamins and minerals per gram (units in data/json/SCHEMA.md); null when none are sourced
+  micronutrients: Micronutrients | null;
   yield_kg_ha: number | null; pasture_ha_per_kg_output: number | null;
   emissions_per_kg: number | null; water_per_kg: number | null;
   neuron_count: number; weight_kg: number | null; yield_fraction: number | null;
@@ -155,6 +158,16 @@ export type RawFood = {
   tags: string[];
 };
 
+export const MICRONUTRIENT_KEYS = [
+  'vitamin_a', 'vitamin_c', 'vitamin_d', 'vitamin_e', 'vitamin_k', 'folate', 'vitamin_b12', 'vitamin_b6',
+  'calcium', 'iron', 'magnesium', 'potassium', 'zinc', 'phosphorus', 'selenium',
+] as const;
+
+export type MicronutrientKey = typeof MICRONUTRIENT_KEYS[number];
+
+// Only the nutrients the source reports are present. Keys match the Rust Micronutrients struct.
+export type Micronutrients = Partial<Record<MicronutrientKey, number>>;
+
 // One value per broad land type — a food's land split (fractions) or the Land Use
 // slider weights (multipliers). Keys match the Rust LandTypes struct.
 export type LandTypes = {
@@ -196,7 +209,7 @@ export type SliderValues = {
 export const MEAL_STUB: RawFood = {
     name: 'Your Meal', slug: 'your-meal', type: 'plant',
     calories: 0, fat: 0, protein: 0, fiber: 0, sat_fat: 0, neuron_count: 0,
-    sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null,
+    sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null, micronutrients: null,
     yield_kg_ha: null, pasture_ha_per_kg_output: null, emissions_per_kg: null,
     water_per_kg: null, weight_kg: null, yield_fraction: null,
     lifetime_output_kg: null, offspring_deaths_per_animal: null, offspring_captivity_years: null,

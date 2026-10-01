@@ -26,6 +26,30 @@ class NutritionValue(TypedDict):
     sugar: float | None
     cholesterol: float | None
     trans_fat: float | None
+    # vitamins and minerals, per gram of food; absent when the source doesn't report them.
+    # Units are in data/json/SCHEMA.md; the keys are listed in MICRONUTRIENT_KEYS.
+    vitamin_a: NotRequired[float]
+    vitamin_c: NotRequired[float]
+    vitamin_d: NotRequired[float]
+    vitamin_e: NotRequired[float]
+    vitamin_k: NotRequired[float]
+    folate: NotRequired[float]
+    vitamin_b12: NotRequired[float]
+    vitamin_b6: NotRequired[float]
+    calcium: NotRequired[float]
+    iron: NotRequired[float]
+    magnesium: NotRequired[float]
+    potassium: NotRequired[float]
+    zinc: NotRequired[float]
+    phosphorus: NotRequired[float]
+    selenium: NotRequired[float]
+
+
+MICRONUTRIENT_KEYS = (
+    "vitamin_a", "vitamin_c", "vitamin_d", "vitamin_e", "vitamin_k",
+    "folate", "vitamin_b12", "vitamin_b6",
+    "calcium", "iron", "magnesium", "potassium", "zinc", "phosphorus", "selenium",
+)
 
 
 class SourcedNutrition(TypedDict):

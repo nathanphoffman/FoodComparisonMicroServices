@@ -76,6 +76,7 @@ class RawFood:
             sugar=nutrition_average.get("sugar") if nutrition_average else None,
             cholesterol=nutrition_average.get("cholesterol") if nutrition_average else None,
             trans_fat=nutrition_average.get("trans_fat") if nutrition_average else None,
+            micronutrients=self.nutrition.micronutrients(),
             **self._plant_fields(),
             **(self._animal.normalized_fields() if self._animal else _NULL_ANIMAL_FIELDS),
             availability_gg=self._availability_gg(),

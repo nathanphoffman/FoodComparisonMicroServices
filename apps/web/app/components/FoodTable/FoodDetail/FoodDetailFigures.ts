@@ -34,7 +34,7 @@ export const FIGURES: Figure[] = [
     format: oneDecimal,
     tone: getNutritionScoreTone,
     fields: () => ['nutrition'],
-    explanation: () => 'Score per 100 kcal: protein and fibre add points; saturated fat, free sugar and sodium take them away.',
+    explanation: () => 'Score per 100 kcal: protein, fibre and vitamins/minerals (1 point per full daily value) add points; saturated fat, free sugar and sodium take them away.',
   },
   {
     key: 'emissions',
