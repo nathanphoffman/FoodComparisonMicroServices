@@ -15,8 +15,8 @@ type Props = {
   onClose: () => void;
 };
 
-/** Pops up when a food name is clicked: the food's figures as coloured tiles, then
- *  its notes — or, once a tile is clicked, the sources behind that figure. */
+/** Pops up when a food name is clicked: the food's figures as coloured rows that
+ *  expand to show the sources behind each one, then the food's notes. */
 export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
   const [details, setDetails] = useState<FoodDetails | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -46,8 +46,6 @@ export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
     };
   }, [onClose]);
 
-  const selectedFigure = FIGURES.find(figure => figure.key === selected);
-
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} aria-hidden="true" />
@@ -74,30 +72,44 @@ export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
         </div>
 
         <div className="overflow-y-auto px-5 py-4">
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          <div className="space-y-1.5">
             {FIGURES.map(figure => {
               const value = scoredRow ? figure.value(scoredRow) : null;
               const tone = value == null || figure.tone == null ? 'neutral' : figure.tone(value);
-              const isSelected = figure.key === selected;
+              const isOpen = figure.key === selected;
               return (
-                <button
-                  key={figure.key}
-                  onClick={() => setSelected(isSelected ? null : figure.key)}
-                  aria-pressed={isSelected}
-                  className={[
-                    'flex aspect-[4/3] flex-col justify-between rounded-xl border p-3 text-left transition sm:aspect-[16/10]',
-                    'hover:shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500',
-                    TILE_COLORS[tone],
-                    isSelected ? 'ring-2 ring-blue-500 ring-offset-1' : '',
-                  ].join(' ')}
-                >
-                  <span className="text-[11px] font-medium uppercase leading-tight tracking-wide opacity-75">
-                    {labels[figure.key]}
-                  </span>
-                  <span className="text-xl font-semibold tabular-nums sm:text-2xl">
-                    {value == null ? '—' : value === 0 && figure.tone ? 'None' : figure.format(value)}
-                  </span>
-                </button>
+                <div key={figure.key} className={`overflow-hidden rounded-lg border ${TILE_COLORS[tone]}`}>
+                  <button
+                    onClick={() => setSelected(isOpen ? null : figure.key)}
+                    aria-expanded={isOpen}
+                    className="flex w-full items-center gap-3 px-3 py-2 text-left transition-colors hover:bg-black/[0.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500"
+                  >
+                    <span className="min-w-0 flex-1 text-[11px] font-medium uppercase leading-tight tracking-wide opacity-80">
+                      {labels[figure.key]}
+                    </span>
+                    <span className="text-base font-semibold tabular-nums">
+                      {value == null ? '—' : value === 0 && figure.tone ? 'None' : figure.format(value)}
+                    </span>
+                    <svg
+                      className={`h-4 w-4 shrink-0 opacity-60 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                      viewBox="0 0 16 16" fill="none" aria-hidden="true"
+                    >
+                      <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  {/* Animates open/closed by easing the row's height from 0fr to 1fr */}
+                  <div className={`grid transition-[grid-template-rows] duration-200 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                    <div className="min-h-0 overflow-hidden">
+                      <div className="border-t border-black/5 bg-white px-3 py-3 text-sm leading-relaxed text-neutral-700">
+                        <FigureSources
+                          explanation={figure.explanation(food)}
+                          fields={details ? matchFields(figure.fields(food), Object.keys(details.sources)) : null}
+                          sources={details?.sources ?? {}}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -105,16 +117,7 @@ export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
           <div className="mt-5 text-sm leading-relaxed text-neutral-700">
             {loadError && <p className="text-red-600">Couldn't load notes and sources: {loadError}</p>}
             {!loadError && !details && <p className="text-neutral-400">Loading…</p>}
-            {details && (selectedFigure
-              ? <FigureSources
-                  label={labels[selectedFigure.key]}
-                  explanation={selectedFigure.explanation(food)}
-                  fields={matchFields(selectedFigure.fields(food), Object.keys(details.sources))}
-                  sources={details.sources}
-                  onBack={() => setSelected(null)}
-                />
-              : <Notes notes={details.notes} />
-            )}
+            {details && <Notes notes={details.notes} />}
           </div>
         </div>
       </div>
@@ -132,32 +135,27 @@ function Notes({ notes }: { notes: string | null }) {
   );
 }
 
-function FigureSources({ label, explanation, fields, sources, onBack }: {
-  label: string;
+function FigureSources({ explanation, fields, sources }: {
   explanation: string;
-  fields: string[];
+  /** null while the sources are still loading */
+  fields: string[] | null;
   sources: FoodDetails['sources'];
-  onBack: () => void;
 }) {
   return (
     <div className="space-y-4">
-      <div className="flex items-baseline justify-between gap-4">
-        <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Sources: {label}</h3>
-        <button onClick={onBack} className="shrink-0 text-xs font-medium text-blue-600 hover:text-blue-700">
-          Back to notes
-        </button>
-      </div>
       <p className="text-neutral-600">{explanation}</p>
-      {fields.length === 0
-        ? <p className="text-neutral-400">No sourced inputs recorded for this figure.</p>
-        : fields.map(field => (
-            <div key={field} className="space-y-2">
-              <h4 className="text-sm font-semibold text-neutral-800">{fieldLabel(field)}</h4>
-              <ul className="space-y-2">
-                {sources[field].map((entry, index) => <SourceEntry key={index} entry={entry} />)}
-              </ul>
-            </div>
-          ))
+      {fields == null
+        ? <p className="text-neutral-400">Loading sources…</p>
+        : fields.length === 0
+          ? <p className="text-neutral-400">No sourced inputs recorded for this figure.</p>
+          : fields.map(field => (
+              <div key={field} className="space-y-2">
+                <h4 className="text-sm font-semibold text-neutral-800">{fieldLabel(field)}</h4>
+                <ul className="space-y-2">
+                  {sources[field].map((entry, index) => <SourceEntry key={index} entry={entry} />)}
+                </ul>
+              </div>
+            ))
       }
     </div>
   );
