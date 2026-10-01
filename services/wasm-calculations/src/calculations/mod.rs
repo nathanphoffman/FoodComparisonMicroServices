@@ -34,7 +34,10 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     //    reference isn't in the batch.
     if let Some(comparison) = Comparison::new(&rows, &foods, query) {
         for row in &mut rows {
-            row.final_score = comparison.food_score(row);
+            if let Some((score, detail)) = comparison.food_score(row) {
+                row.final_score = Some(score);
+                row.improvement_detail = detail;
+            }
         }
         if let Some(meal) = &mut meal {
             meal.final_score = comparison.meal_score(meal, &rows);

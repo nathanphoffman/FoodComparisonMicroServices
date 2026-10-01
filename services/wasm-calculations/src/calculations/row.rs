@@ -68,5 +68,7 @@ pub(super) fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFacto
         sentient_harm_detail,
         kill_detail: eco::compute_kill_detail(food, query),
         wild_fish_deaths_per_kg: eco::wild_fish_deaths_per_kg(food),
+        wild_fish_kill: eco::wild_fish_kill(food, query),
+        improvement_detail: None, // filled in by apply()
     }
 }

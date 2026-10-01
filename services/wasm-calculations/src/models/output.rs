@@ -81,6 +81,32 @@ pub struct KillDetail {
     pub offspring_deaths:           f64, // offspring killed per producing animal
     pub captivity_years:            f64, // producing animal's years in captivity
     pub offspring_captivity_years:  f64, // each offspring's years in captivity
+    pub intelligence_per_death:     f64, // intelligence score of one death of this animal
+    pub lifespan_years:             f64, // species lifespan used in the intelligence score
+}
+
+/// One measure's contribution to the Improvement score: ratio > 1 beats the reference.
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ImprovementTerm {
+    pub measure:  &'static str, // "nutrition" | "emissions" | "landUse" | "water" | "sentientHarm" | "availability"
+    pub ratio:    f64,
+    pub priority: f64,
+    /// True when the food scored 0 here and got the batch's best ratio × the zero-better multiplier.
+    pub zero_capped: bool,
+}
+
+/// How the Improvement score was put together, for the food detail modal.
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct ImprovementDetail {
+    pub terms:    Vec<ImprovementTerm>,
+    /// Power-mean exponent: 1 = plain average, 0 = geometric mean (default), -1 = harmonic.
+    pub exponent: f64,
+    /// Score before the wild penalty.
+    pub mean:     f64,
+    /// Over-Hunting / Over-Gathering divisor relative to the reference (1 = none).
+    pub wild_penalty: f64,
 }
 
 /// Scored row returned to the browser after WASM calculation.
@@ -114,4 +140,8 @@ pub struct ScoredRow {
     pub kill_detail:          Option<KillDetail>,
     /// Wild fish killed per kg for fishmeal / fish oil (for the tooltip); None if none.
     pub wild_fish_deaths_per_kg: Option<f64>,
+    /// Intelligence-weighted kill of those wild fish, per kg (part of direct kill); 0 if none.
+    pub wild_fish_kill: f64,
+    /// Breakdown of final_score; None when final_score is None.
+    pub improvement_detail: Option<ImprovementDetail>,
 }

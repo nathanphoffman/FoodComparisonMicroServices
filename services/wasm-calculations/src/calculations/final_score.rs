@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 use super::scoring::{compute_improvement, DimensionCaps};
-use crate::models::{FoodRow, ScoredRow, SliderQuery};
+use crate::models::{FoodRow, ImprovementDetail, ScoredRow, SliderQuery};
 
 /// Everything needed to turn a row into its final Improvement score: the reference
 /// food it's compared against, the batch caps, and each food's wild penalty.
@@ -28,17 +28,18 @@ impl<'a> Comparison<'a> {
         Some(Self { reference, caps, wild_penalties, query })
     }
 
-    /// Final score for one food row.
-    pub(super) fn food_score(&self, row: &ScoredRow) -> Option<f64> {
+    /// Final score for one food row, and how it was built (None when the score is 0
+    /// because the food has none of the Compare By unit).
+    pub(super) fn food_score(&self, row: &ScoredRow) -> Option<(f64, Option<ImprovementDetail>)> {
         if self.reference.divisor <= 0.0 {
             return None; // the reference itself has none of the Compare By unit
         }
         if row.divisor <= 0.0 {
-            return Some(0.0); // provides none of what we're comparing by — worst possible
+            return Some((0.0, None)); // provides none of what we're comparing by — worst possible
         }
         // Relative to the reference's own penalty, so a wild reference still scores 1.
         let penalty = self.penalty_for(&row.slug) / self.penalty_for(&self.reference.slug);
-        self.penalized_improvement(row, penalty)
+        self.penalized_improvement(row, penalty).map(|detail| (detail.mean / detail.wild_penalty, Some(detail)))
     }
 
     /// Final score for the custom meal row. `rows` are the scored food rows.
@@ -61,15 +62,16 @@ impl<'a> Comparison<'a> {
             .map(|i| i.fraction / total_fraction * self.penalty_for(&i.slug))
             .sum();
         let penalty = meal_penalty / self.penalty_for(&self.reference.slug);
-        self.penalized_improvement(meal, penalty)
+        self.penalized_improvement(meal, penalty).map(|detail| detail.mean / detail.wild_penalty)
     }
 
     fn penalty_for(&self, slug: &str) -> f64 {
         self.wild_penalties.get(slug).copied().unwrap_or(1.0)
     }
 
-    fn penalized_improvement(&self, row: &ScoredRow, penalty: f64) -> Option<f64> {
-        compute_improvement(row, &self.reference, &self.caps, self.query).map(|score| score / penalty)
+    fn penalized_improvement(&self, row: &ScoredRow, penalty: f64) -> Option<ImprovementDetail> {
+        compute_improvement(row, &self.reference, &self.caps, self.query)
+            .map(|detail| ImprovementDetail { wild_penalty: penalty, ..detail })
     }
 }
 

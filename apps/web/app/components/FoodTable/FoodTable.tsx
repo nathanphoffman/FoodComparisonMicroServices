@@ -161,6 +161,13 @@ export function FoodTable() {
                     food={selectedFood}
                     scoredRow={scored.get(selectedFood.slug)}
                     labels={figureLabels}
+                    mathContext={{
+                        sliders: sliderValues,
+                        unit,
+                        referenceRow: scored.get(sliderValues.referenceSlug),
+                        referenceName,
+                        figureLabels,
+                    }}
                     onClose={closeDetail}
                 />
             )}

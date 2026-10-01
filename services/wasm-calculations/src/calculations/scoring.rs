@@ -1,4 +1,4 @@
-use crate::models::{ScoredRow, SliderQuery};
+use crate::models::{ImprovementDetail, ImprovementTerm, ScoredRow, SliderQuery};
 
 /// Nutrition score the worst food in the batch is shifted up to, so every
 /// nutrition score is positive and can be compared as a ratio.
@@ -61,24 +61,25 @@ pub fn compute_improvement(
     reference: &ScoredRow,
     caps: &DimensionCaps,
     query: &SliderQuery,
-) -> Option<f64> {
-    // (ratio, priority) pairs — ratio > 1 means the food beats the reference.
-    let mut weighted_ratios: Vec<(f64, f64)> = Vec::new();
+) -> Option<ImprovementDetail> {
+    // ratio > 1 means the food beats the reference.
+    let mut terms: Vec<ImprovementTerm> = Vec::new();
 
     // Lower-is-better: ratio = reference / food.
     // Zero food score means the food is perfect for this dimension — use the batch
     // cap so it still registers as meaningfully better than the reference.
     // Intelligence uses sentient_harm only; it already includes direct_kill.
-    for (food_score, reference_score, zero_cap, priority) in [
-        (food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
-        (food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
-        (food.water,         reference.water,         caps.water,         query.water_priority),
-        (food.sentient_harm, reference.sentient_harm, caps.sentient_harm, query.intelligence_priority),
+    for (measure, food_score, reference_score, zero_cap, priority) in [
+        ("emissions",    food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
+        ("landUse",      food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
+        ("water",        food.water,         reference.water,         caps.water,         query.water_priority),
+        ("sentientHarm", food.sentient_harm, reference.sentient_harm, caps.sentient_harm, query.intelligence_priority),
     ] {
         if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
             if reference_score > 0.0 {
-                let ratio = if food_score <= 0.0 { zero_cap * query.zero_better_multiplier } else { reference_score / food_score };
-                weighted_ratios.push((ratio, priority));
+                let zero_capped = food_score <= 0.0;
+                let ratio = if zero_capped { zero_cap * query.zero_better_multiplier } else { reference_score / food_score };
+                terms.push(ImprovementTerm { measure, ratio, priority, zero_capped });
             }
         }
     }
@@ -89,19 +90,28 @@ pub fn compute_improvement(
     if let (Some(food_score), Some(reference_score)) = (food.nutrition_score, reference.nutrition_score) {
         let shifted_food      = (food_score      + caps.nutrition_offset).max(NUTRITION_FLOOR);
         let shifted_reference = (reference_score + caps.nutrition_offset).max(NUTRITION_FLOOR);
-        weighted_ratios.push((shifted_food / shifted_reference, query.nutrition_priority));
+        terms.push(ImprovementTerm {
+            measure: "nutrition", ratio: shifted_food / shifted_reference,
+            priority: query.nutrition_priority, zero_capped: false,
+        });
     }
     if let (Some(food_score), Some(reference_score)) = (food.availability, reference.availability) {
         if food_score > 0.0 && reference_score > 0.0 {
-            weighted_ratios.push((food_score / reference_score, query.availability_priority));
+            terms.push(ImprovementTerm {
+                measure: "availability", ratio: food_score / reference_score,
+                priority: query.availability_priority, zero_capped: false,
+            });
         }
     }
 
     // A 0% priority drops that measure out entirely.
-    let total_priority: f64 = weighted_ratios.iter().map(|(_, priority)| priority).sum();
+    let total_priority: f64 = terms.iter().map(|term| term.priority).sum();
     if total_priority <= 0.0 { return None; }
 
-    Some(weighted_power_mean(&weighted_ratios, total_priority, 1.0 - query.win_dampening))
+    let exponent = 1.0 - query.win_dampening;
+    let weighted_ratios: Vec<(f64, f64)> = terms.iter().map(|term| (term.ratio, term.priority)).collect();
+    let mean = weighted_power_mean(&weighted_ratios, total_priority, exponent);
+    Some(ImprovementDetail { terms, exponent, mean, wild_penalty: 1.0 })
 }
 
 /// Weighted power mean of the ratios with exponent `p`: p = 1 is the plain

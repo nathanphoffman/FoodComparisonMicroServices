@@ -6,18 +6,21 @@ import type { RawFood } from '../FoodTableTypes';
 import type { ScoredRow } from '../FoodTableSort';
 import { TILE_COLORS } from '../FoodTableStyles';
 import { FIGURES, type FigureKey, fieldLabel, matchFields } from './FoodDetailFigures';
+import { figureMath, type MathContext, type MathStep } from './FoodDetailMath';
 
 type Props = {
   food: RawFood;
   scoredRow: ScoredRow | undefined;
   /** Column labels as shown in the table header (they change with the Compare By unit). */
   labels: Record<FigureKey, string>;
+  /** Sliders and reference food, for the step-by-step working shown in each row. */
+  mathContext: MathContext;
   onClose: () => void;
 };
 
 /** Pops up when a food name is clicked: the food's figures as coloured rows that
  *  expand to show the sources behind each one, then the food's notes. */
-export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
+export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose }: Props) {
   const [details, setDetails] = useState<FoodDetails | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [selected, setSelected] = useState<FigureKey | null>(null);
@@ -100,7 +103,8 @@ export function FoodDetailModal({ food, scoredRow, labels, onClose }: Props) {
                   {/* Animates open/closed by easing the row's height from 0fr to 1fr */}
                   <div className={`grid transition-[grid-template-rows] duration-200 ease-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
                     <div className="min-h-0 overflow-hidden">
-                      <div className="border-t border-black/5 bg-white px-3 py-3 text-sm leading-relaxed text-neutral-700">
+                      <div className="space-y-4 border-t border-black/5 bg-white px-3 py-3 text-sm leading-relaxed text-neutral-700">
+                        <FigureMath steps={figureMath(figure.key, food, scoredRow, mathContext)} />
                         <FigureSources
                           explanation={figure.explanation(food)}
                           fields={details ? matchFields(figure.fields(food), Object.keys(details.sources)) : null}
@@ -131,6 +135,27 @@ function Notes({ notes }: { notes: string | null }) {
     <div className="space-y-3">
       <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">How we got these numbers</h3>
       {notes.split(/\n\s*\n/).map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+    </div>
+  );
+}
+
+/** The figure's working, one step per line: label, equation with this food's numbers, result. */
+function FigureMath({ steps }: { steps: MathStep[] }) {
+  if (steps.length === 0) return null;
+  return (
+    <div className="rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2.5">
+      <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-500">How it's calculated</h4>
+      <ol className="space-y-2">
+        {steps.map((step, index) => (
+          <li key={index} className="text-xs">
+            <div className="font-medium text-neutral-500">{step.label}</div>
+            <div className="mt-0.5 flex flex-wrap items-baseline gap-x-2">
+              <span className="break-words font-mono text-neutral-700">{step.expression}</span>
+              <span className="whitespace-nowrap font-mono font-semibold text-neutral-900">= {step.result}</span>
+            </div>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }

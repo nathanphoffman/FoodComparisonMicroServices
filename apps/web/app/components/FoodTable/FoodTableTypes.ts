@@ -63,6 +63,23 @@ export type KillDetail = {
     offspringDeaths:         number;
     captivityYears:          number;
     offspringCaptivityYears: number;
+    intelligencePerDeath:    number;  // intelligence score of one death of this animal
+    lifespanYears:           number;  // species lifespan used in that score
+};
+
+// How the Improvement score was built (matches Rust ImprovementDetail).
+export type ImprovementTerm = {
+    measure:    'nutrition' | 'emissions' | 'landUse' | 'water' | 'sentientHarm' | 'availability';
+    ratio:      number;   // > 1 beats the reference
+    priority:   number;   // priority slider share (0–100)
+    zeroCapped: boolean;  // scored 0 here, so got the batch's best ratio × zero-better multiplier
+};
+
+export type ImprovementDetail = {
+    terms:       ImprovementTerm[];
+    exponent:    number;  // power-mean exponent: 1 average, 0 geometric, -1 harmonic
+    mean:        number;  // before the wild penalty
+    wildPenalty: number;  // Over-Hunting / Over-Gathering divisor (1 = none)
 };
 
 export type SentientHarmDetail = {

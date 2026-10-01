@@ -61,7 +61,7 @@ pub(in crate::calculations) fn wild_fish_deaths_per_kg(food: &FoodRow) -> Option
 
 /// Intelligence-weighted kill of the wild fish behind fishmeal / fish oil.
 /// These fish are caught on purpose, so this is direct kill, not accidental harm.
-fn wild_fish_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
+pub(in crate::calculations) fn wild_fish_kill(food: &FoodRow, query: &SliderQuery) -> f64 {
     let (Some(deaths_per_kg), Some(neuron_count)) = (wild_fish_deaths_per_kg(food), food.wild_fish_neuron_count) else {
         return 0.0;
     };
@@ -91,10 +91,12 @@ pub(in crate::calculations) fn compute_captive_sentience(food: &FoodRow, query: 
 
 /// Per-animal numbers behind direct kill and captivity, for the tooltips.
 pub(in crate::calculations) fn compute_kill_detail(food: &FoodRow, query: &SliderQuery) -> Option<KillDetail> {
-    intelligence_and_output(food, query).map(|(_, output_kg)| KillDetail {
+    intelligence_and_output(food, query).map(|(intelligence, output_kg)| KillDetail {
         output_kg_per_death:       output_kg,
         offspring_deaths:          offspring_deaths(food),
         captivity_years:           captivity_years_for_slug(&food.slug),
         offspring_captivity_years: offspring_captivity_years(food),
+        intelligence_per_death:    intelligence,
+        lifespan_years:            lifespan_years_for_slug(&food.slug),
     })
 }

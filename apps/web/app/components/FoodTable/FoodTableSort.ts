@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { RawFood } from './FoodTableTypes';
-import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail } from './FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail, ImprovementDetail } from './FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -42,6 +42,10 @@ export type ScoredRow = {
     kill_detail:           KillDetail | null;
     // Wild fish killed per kg for fishmeal / fish oil; null if none
     wild_fish_deaths_per_kg: number | null;
+    // Intelligence-weighted kill of those fish, per kg (part of direct kill)
+    wild_fish_kill: number;
+    // How final_score was built; null when final_score is null or 0 by default
+    improvement_detail: ImprovementDetail | null;
 };
 
 // ── Hook ──────────────────────────────────────────────────────────────────────

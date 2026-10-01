@@ -93,5 +93,15 @@ Open issues found while reviewing the food data (2026-10-01). Each food's `notes
 - **Animal gas totals vs published totals.** The build warns for butter, whey protein,
   parmesan, egg (US) and honey: gases + feed don't match the published `emissions_per_kg`
   (different allocation methods in the source studies).
+- **Captivity years are hard-coded per slug and miss many animals.** `captivity_years_for_slug`
+  in `services/wasm-calculations/src/calculations/eco/intelligence.rs` has no entry for goat,
+  duck, goat milk, goat cheese, cheddar, mozzarella, parmesan or whey protein, so their own
+  captivity counts as 0 years (milk, yogurt and butter get 5). Consider moving it into the data.
+- **Lifespans are hard-coded per slug too.** `lifespan_years_for_slug` defaults to 10 years for
+  anything not listed (goat, duck, octopus, carp, catfish, the bivalves, cheeses…), and its
+  `"shrimp"` key never matches the real slugs (`shrimp-wild`, `shrimp-farmed`).
+- **Intelligence score rises as body weight falls.** It divides by weight^0.7, so a 17.7 g
+  anchoveta (15.6 M neurons) scores ~233T per death vs ~174T for a 4.5 kg salmon (110 M neurons).
+  Check that this is the intended direction.
 - **Debug delay in the scorer.** `services/wasm-calculations/src/lib.rs` has a "temporary"
   50 ms busy-wait inside `score()`, so every slider change blocks the page for 50 ms.

@@ -59,5 +59,7 @@ pub fn synthesize_meal(rows: &[ScoredRow], ingredients: &[MealIngredient]) -> Op
         sentient_harm_detail: crate::models::SentientHarmDetail::zero(),
         kill_detail:          None,
         wild_fish_deaths_per_kg: None,
+        wild_fish_kill:       0.0,
+        improvement_detail:   None,
     })
 }
