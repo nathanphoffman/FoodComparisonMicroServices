@@ -79,24 +79,27 @@ export async function loadWasm() {
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
 export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
-    const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
-            neuronExponent, weightExponent, finalIntelligenceExponent,
-            zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, winDampening,
-            overHuntingFactor, overGatheringFactor } = sliderValues;
-
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
-    const isInitialWasmMount             = useRef(true);
+    const loadedWasmBuildId              = useRef(WASM_BUILD_ID);
 
     // ── Hard-reload on WASM rebuild (dev only) ────────────────────────────────
+    // Fast Refresh re-renders with the new WASM_BUILD_ID but keeps refs, so a
+    // mismatch means the binary was rebuilt since this page loaded.
     useEffect(() => {
-        if (isInitialWasmMount.current) { isInitialWasmMount.current = false; return; }
-        if (process.env.NODE_ENV === 'development') window.location.reload();
-    }, [WASM_BUILD_ID]);
+        if (process.env.NODE_ENV === 'development' && loadedWasmBuildId.current !== WASM_BUILD_ID) {
+            window.location.reload();
+        }
+    });
 
     // ── Re-score whenever sliders or data change ──────────────────────────────
     useEffect(() => {
         if (!wasmReady || rawFoods.length === 0) return;
+
+        const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
+                neuronExponent, weightExponent, finalIntelligenceExponent,
+                zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, winDampening,
+                overHuntingFactor, overGatheringFactor } = sliderValues;
 
         const input: ScoreInput = {
             foods: rawFoods,

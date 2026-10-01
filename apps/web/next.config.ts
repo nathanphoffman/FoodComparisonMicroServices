@@ -12,11 +12,6 @@ const nextConfig: NextConfig = {
   env: {
     DB_VERSION: 'v176',
   },
-  webpack(config) {
-    // wasm-pack --target web uses `new URL('*.wasm', import.meta.url)` which
-    // webpack 5 handles natively as a static asset — no asyncWebAssembly experiment needed.
-    return config;
-  },
 };
 
 export default nextConfig;

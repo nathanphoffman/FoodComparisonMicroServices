@@ -8,7 +8,7 @@ namespace FoodApi.Models;
 /// Property names are PascalCase; the API serialises to snake_case via
 /// JsonNamingPolicy.SnakeCaseLower, so the JSON output matches the
 /// TypeScript RawFood type directly.
-/// Equivalent to RawFood in apps/web/lib/queries/commonFoods.ts.
+/// Equivalent to RawFood in apps/web/app/components/FoodTable/FoodTableTypes.ts.
 /// </summary>
 public class FoodRow
 {
@@ -30,7 +30,6 @@ public class FoodRow
 
     // Plant metrics
     public double? YieldKgHa                 { get; set; }
-    public double? CookedWeightRatio         { get; set; }
     public double? EmissionsPerKg            { get; set; }
     public double? WaterPerKg                { get; set; }
     public double? GreenWaterPerKg           { get; set; }
