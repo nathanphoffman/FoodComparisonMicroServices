@@ -60,3 +60,19 @@ export interface Plant {
   tillage_events_per_year: ISourced<number>[] | null;
   co2_capture_kg_ha_yr: ISourced<number>[] | null;
 }
+
+/** One sourced figure exactly as stored in the data JSON (food_sources table). */
+export interface SourcedFigure {
+  value: number | Record<string, number | null>;
+  confidence: number;
+  region?: string;
+  source: { id: number; url: string; title: string; note: string | null };
+}
+
+/** Returned by GET /api/foods/[slug]/details for the food detail modal. */
+export interface FoodDetails {
+  name: string;
+  notes: string | null;
+  /** Keyed by field name, e.g. 'yield_kg_ha', 'feed:corn', 'pesticide:Glyphosate'. */
+  sources: Record<string, SourcedFigure[]>;
+}

@@ -139,3 +139,14 @@ CREATE TABLE IF NOT EXISTS plant_pesticides (
     pesticide_id  INTEGER NOT NULL REFERENCES pesticides(id),
     kg_ha         TEXT    -- json array of {value: kg/ha, source_id, confidence}
 );
+
+-- Every sourced figure for a food, flattened for the food detail modal: one row per
+-- field (e.g. 'yield_kg_ha'), feed row ('feed:corn'), composite ingredient
+-- ('ingredient:soy') or pesticide ('pesticide:Glyphosate'). Read-only display data;
+-- the calculations use the typed tables above.
+CREATE TABLE IF NOT EXISTS food_sources (
+    id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    food_id  INTEGER NOT NULL REFERENCES foods(id),
+    field    TEXT    NOT NULL,
+    sources  TEXT    NOT NULL   -- json array of {value, confidence, region?, source: {id, url, title, note}}
+);

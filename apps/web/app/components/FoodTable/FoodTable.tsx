@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Table } from '../Table/Table';
 import { Row } from '../Table/Row';
 import { NameCell } from './Cells/NameCell';
@@ -22,6 +22,8 @@ import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './Foo
 import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
 import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
+import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
+import type { FigureKey } from './FoodDetail/FoodDetailFigures';
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
@@ -37,6 +39,9 @@ export function FoodTable() {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const [dataRegion, setDataRegion] = useState<DataRegion>(DEFAULT_DATA_REGION);
     const [foodFilter, setFoodFilter] = useState<string>(DEFAULT_FOOD_FILTER);
+    // Food whose detail modal is open (null = closed)
+    const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+    const closeDetail = useCallback(() => setSelectedSlug(null), []);
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
@@ -98,6 +103,12 @@ export function FoodTable() {
         finalScore:   `Improvement over ${referenceName}`,
     };
 
+    // Every column's label, for the detail modal's tiles (it shows all figures, not only visible columns)
+    const figureLabels = Object.fromEntries(
+        COLUMN_CONFIG.filter(column => column.key !== 'name').map(column => [column.key, DYNAMIC_LABELS[column.key] ?? column.label]),
+    ) as Record<FigureKey, string>;
+    const selectedFood = selectedSlug ? rawFoods.find(food => food.slug === selectedSlug) : undefined;
+
     const headers = activeCols.map(column => ({
         label: DYNAMIC_LABELS[column.key] ?? column.label,
         ...columnSortProps(column.key),
@@ -128,7 +139,7 @@ export function FoodTable() {
                         <Row key={food.slug} className={food.slug === 'your-meal' ? 'bg-yellow-50' : undefined}>
                             {activeCols.map(column => {
                                 switch (column.key) {
-                                    case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} />;
+                                    case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
                                     case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
                                     case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
                                     case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
@@ -144,6 +155,15 @@ export function FoodTable() {
                     );
                 })}
             </Table>
+
+            {selectedFood && (
+                <FoodDetailModal
+                    food={selectedFood}
+                    scoredRow={scored.get(selectedFood.slug)}
+                    labels={figureLabels}
+                    onClose={closeDetail}
+                />
+            )}
         </div>
     );
 }

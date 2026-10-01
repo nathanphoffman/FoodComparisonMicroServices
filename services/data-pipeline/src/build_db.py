@@ -23,6 +23,7 @@ from .lib.insert_plant_kills import insert as insert_plant_kills
 from .lib.insert_plant_pesticides import insert as insert_plant_pesticides
 from .lib.insert_animal_feed import insert as insert_animal_feed
 from .lib.insert_composites import insert as insert_composites
+from .lib.insert_food_sources import insert as insert_food_sources
 from .lib.insert_foods_normalized import insert as insert_foods_normalized
 from .lib.regions import REGIONS, resolve_regions
 from .lib.check_animal_emissions import check_animal_emissions
@@ -74,6 +75,8 @@ def _populate_source_database(
     insert_plant_pesticides(connection, category_food_data.plant_pesticides)
     insert_animal_feed(connection, category_food_data.animal_feed)
     insert_composites(connection, category_food_data.composites, category_food_data.composite_ingredients)
+    # Display-only: every sourced figure, for the web app's food detail modal
+    insert_food_sources(connection, JSON_DIR)
 
 
 def _populate_normalized_database(
