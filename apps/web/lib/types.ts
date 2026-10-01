@@ -31,6 +31,8 @@ export interface NutritionValue {
   zinc?: number;
   phosphorus?: number;
   selenium?: number;
+  ala?: number;      // omega-3 ALA, g / g
+  epa_dha?: number;  // omega-3 EPA + DHA, mg / g
 }
 
 export interface Food {

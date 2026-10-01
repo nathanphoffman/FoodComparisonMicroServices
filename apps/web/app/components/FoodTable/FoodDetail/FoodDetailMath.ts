@@ -63,20 +63,20 @@ export function figureMath(key: FigureKey, food: RawFood, row: ScoredRow | undef
       const dailyValueShares = MICRONUTRIENT_KEYS
         .filter(key => food.micronutrients?.[key] != null)
         .map(key => [key, per100(food.micronutrients![key]!) / MICRONUTRIENT_INFO[key].dailyValue] as const);
-      const dailyValues = dailyValueShares.reduce((sum, [, share]) => sum + share, 0);
+      const dailyValues = dailyValueShares.reduce((sum, [key, share]) => sum + MICRONUTRIENT_INFO[key].credit * share, 0);
       const points = protein + FIBER_SCORE_WEIGHT * fiber - SAT_FAT_SCORE_PENALTY * satFat
         - FREE_SUGAR_SCORE_PENALTY * freeSugar - sodiumMg / SODIUM_MG_PER_SCORE_POINT + MICRONUTRIENT_SCORE_WEIGHT * dailyValues;
       const kcal = per100(food.calories);
       return [
         { label: 'Free sugar (g / 100 g)', expression: `max(0, sugar − ${SUGAR_FIBER_ALLOWANCE} × fibre) = max(0, ${num(sugar)} − ${SUGAR_FIBER_ALLOWANCE} × ${num(fiber)})`, result: num(freeSugar) },
         ...(dailyValueShares.length > 0 ? [{
-          label: 'Vitamins & minerals (daily values in 100 g)',
-          expression: dailyValueShares.map(([key, share]) => `${MICRONUTRIENT_INFO[key].label} ${pct(share * 100)}`).join(' + '),
+          label: 'Vitamins, minerals & omega-3 (daily values in 100 g)',
+          expression: dailyValueShares.map(([key, share]) => `${MICRONUTRIENT_INFO[key].label} ${pct(share * 100)}${MICRONUTRIENT_INFO[key].credit === 2 ? ' × 2' : ''}`).join(' + '),
           result: num(dailyValues),
         }] : []),
         {
           label: 'Points per 100 g',
-          expression: `protein + ${FIBER_SCORE_WEIGHT} × fibre − ${SAT_FAT_SCORE_PENALTY} × sat. fat − ${FREE_SUGAR_SCORE_PENALTY} × free sugar − sodium mg ÷ ${SODIUM_MG_PER_SCORE_POINT} + ${MICRONUTRIENT_SCORE_WEIGHT} × vitamins & minerals`
+          expression: `protein + ${FIBER_SCORE_WEIGHT} × fibre − ${SAT_FAT_SCORE_PENALTY} × sat. fat − ${FREE_SUGAR_SCORE_PENALTY} × free sugar − sodium mg ÷ ${SODIUM_MG_PER_SCORE_POINT} + ${MICRONUTRIENT_SCORE_WEIGHT} × vitamins, minerals & omega-3`
             + ` = ${num(protein)} + ${FIBER_SCORE_WEIGHT} × ${num(fiber)} − ${SAT_FAT_SCORE_PENALTY} × ${num(satFat)} − ${FREE_SUGAR_SCORE_PENALTY} × ${num(freeSugar)} − ${num(sodiumMg)} ÷ ${SODIUM_MG_PER_SCORE_POINT} + ${MICRONUTRIENT_SCORE_WEIGHT} × ${num(dailyValues)}`,
           result: num(points),
         },

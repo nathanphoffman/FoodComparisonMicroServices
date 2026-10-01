@@ -160,7 +160,7 @@ export type RawFood = {
 
 export const MICRONUTRIENT_KEYS = [
   'vitamin_a', 'vitamin_c', 'vitamin_d', 'vitamin_e', 'vitamin_k', 'folate', 'vitamin_b12', 'vitamin_b6',
-  'calcium', 'iron', 'magnesium', 'potassium', 'zinc', 'phosphorus', 'selenium',
+  'calcium', 'iron', 'magnesium', 'potassium', 'zinc', 'phosphorus', 'selenium', 'ala', 'epa_dha',
 ] as const;
 
 export type MicronutrientKey = typeof MICRONUTRIENT_KEYS[number];

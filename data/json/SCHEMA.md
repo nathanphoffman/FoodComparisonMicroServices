@@ -240,7 +240,7 @@ plant-specific or animal-specific fields depending on `type`.
         "cholesterol": <number>,  // mg cholesterol / g food  (milligrams)
         "trans_fat":   <number>,  // g trans fat / g food
 
-        // Vitamins and minerals — all optional. Leave a key out when the source doesn't
+        // Vitamins, minerals and omega-3 — all optional. Leave a key out when the source doesn't
         // report it (it then adds nothing to the nutrition score). Use 0 only for a reported 0.
         "vitamin_a":   <number>,  // µg RAE / g food
         "vitamin_c":   <number>,  // mg / g food
@@ -256,7 +256,9 @@ plant-specific or animal-specific fields depending on `type`.
         "potassium":   <number>,  // mg / g food
         "zinc":        <number>,  // mg / g food
         "phosphorus":  <number>,  // mg / g food
-        "selenium":    <number>   // µg / g food
+        "selenium":    <number>,  // µg / g food
+        "ala":         <number>,  // g omega-3 ALA / g food (USDA 18:3 n-3; plain 18:3 when that isn't split out)
+        "epa_dha":     <number>   // mg omega-3 EPA + DHA combined / g food (USDA 20:5 n-3 + 22:6 n-3)
       },
       "confidence": <1–5>,
       "source": { ... }
@@ -527,6 +529,8 @@ The build pipeline uses confidence scores as exponents in a weighted geometric m
 | `nutrition.sodium`, `nutrition.cholesterol` | mg / g food |
 | `nutrition.vitamin_c`, `vitamin_e`, `vitamin_b6`, `calcium`, `iron`, `magnesium`, `potassium`, `zinc`, `phosphorus` | mg / g food |
 | `nutrition.vitamin_a` (RAE), `vitamin_d`, `vitamin_k`, `folate` (DFE), `vitamin_b12`, `selenium` | µg / g food |
+| `nutrition.ala` | g / g food |
+| `nutrition.epa_dha` | mg / g food |
 | `yield_fraction` | fraction 0–1 |
 | `cooked_weight_ratio` | g cooked / g dry |
 | `yield_kg_ha` | kg / ha |

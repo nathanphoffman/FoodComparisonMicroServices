@@ -43,14 +43,16 @@
                     "potassium": 5.15,
                     "zinc": 0.0115,
                     "phosphorus": 2.45,
-                    "selenium": 0.073
+                    "selenium": 0.073,
+                    "ala": 0.00598,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 174271 per 100 g: vitamin a 0 µg RAE, vitamin c 1.7 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 19.2 µg, folate 54 µg DFE, vitamin b12 0 µg, vitamin b6 0.234 mg, calcium 102 mg, iron 5.14 mg, magnesium 86 mg, potassium 515 mg, zinc 1.15 mg, phosphorus 245 mg, selenium 7.3 µg; divided by 100 for per-gram values."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 174271 per 100 g: vitamin a 0 µg RAE, vitamin c 1.7 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 19.2 µg, folate 54 µg DFE, vitamin b12 0 µg, vitamin b6 0.234 mg, calcium 102 mg, iron 5.14 mg, magnesium 86 mg, potassium 515 mg, zinc 1.15 mg, phosphorus 245 mg, selenium 7.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 174271 per 100 g: ALA 0.598 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -423,14 +425,16 @@
                     "potassium": 3.69,
                     "zinc": 0.0127,
                     "phosphorus": 1.8,
-                    "selenium": 0.028
+                    "selenium": 0.028,
+                    "ala": 0.00037,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172421 per 100 g: vitamin a 0 µg RAE, vitamin c 1.5 mg, vitamin d 0 µg, vitamin e 0.11 mg, vitamin k 1.7 µg, folate 181 µg DFE, vitamin b12 0 µg, vitamin b6 0.178 mg, calcium 19 mg, iron 3.33 mg, magnesium 36 mg, potassium 369 mg, zinc 1.27 mg, phosphorus 180 mg, selenium 2.8 µg; divided by 100 for per-gram values."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172421 per 100 g: vitamin a 0 µg RAE, vitamin c 1.5 mg, vitamin d 0 µg, vitamin e 0.11 mg, vitamin k 1.7 µg, folate 181 µg DFE, vitamin b12 0 µg, vitamin b6 0.178 mg, calcium 19 mg, iron 3.33 mg, magnesium 36 mg, potassium 369 mg, zinc 1.27 mg, phosphorus 180 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 172421 per 100 g: ALA 0.037 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -692,14 +696,16 @@
                     "potassium": 2.91,
                     "zinc": 0.0153,
                     "phosphorus": 1.68,
-                    "selenium": 0.037
+                    "selenium": 0.037,
+                    "ala": 0.00043,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173757 per 100 g: vitamin a 1 µg RAE, vitamin c 1.3 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 4 µg, folate 172 µg DFE, vitamin b12 0 µg, vitamin b6 0.139 mg, calcium 49 mg, iron 2.89 mg, magnesium 48 mg, potassium 291 mg, zinc 1.53 mg, phosphorus 168 mg, selenium 3.7 µg; divided by 100 for per-gram values."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173757 per 100 g: vitamin a 1 µg RAE, vitamin c 1.3 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 4 µg, folate 172 µg DFE, vitamin b12 0 µg, vitamin b6 0.139 mg, calcium 49 mg, iron 2.89 mg, magnesium 48 mg, potassium 291 mg, zinc 1.53 mg, phosphorus 168 mg, selenium 3.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 173757 per 100 g: ALA 0.043 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1031,14 +1037,16 @@
                     "potassium": 3.55,
                     "zinc": 0.0112,
                     "phosphorus": 1.4,
-                    "selenium": 0.012
+                    "selenium": 0.012,
+                    "ala": 0.00105,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173735 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.87 mg, vitamin k 3.3 µg, folate 149 µg DFE, vitamin b12 0 µg, vitamin b6 0.069 mg, calcium 27 mg, iron 2.1 mg, magnesium 70 mg, potassium 355 mg, zinc 1.12 mg, phosphorus 140 mg, selenium 1.2 µg; divided by 100 for per-gram values."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173735 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.87 mg, vitamin k 3.3 µg, folate 149 µg DFE, vitamin b12 0 µg, vitamin b6 0.069 mg, calcium 27 mg, iron 2.1 mg, magnesium 70 mg, potassium 355 mg, zinc 1.12 mg, phosphorus 140 mg, selenium 1.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 173735 per 100 g: ALA 0.105 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1370,14 +1378,15 @@
                     "potassium": 2.37,
                     "zinc": 0.0157,
                     "phosphorus": 1.9,
-                    "selenium": 0.174
+                    "selenium": 0.174,
+                    "ala": 0.00582
                 },
                 "confidence": 5,
                 "source": {
                     "id": 224,
                     "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172475/nutrients",
                     "title": "USDA FoodData Central — Tofu, raw, firm, prepared with calcium sulfate (FDC 172475, SR Legacy NDB 16426)",
-                    "note": "Tofu — nutrition: FDC 172475 (SR Legacy 16426) per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g, cholesterol 0, trans fat 0; converted to per gram. Sugars not reported in this record; set to 0 (carbs minus fiber = 0.48 g/100 g upper bound). Vitamins and minerals per 100 g: vitamin A 166 IU (≈ 8.3 µg RAE, using 1 IU plant beta-carotene = 0.05 µg RAE), vitamin C 0.2 mg, vitamin D 0, folate 29 µg DFE, B12 0, B6 0.092 mg, calcium 683 mg (high because it is set with calcium sulfate), iron 2.66 mg, magnesium 58 mg, potassium 237 mg, zinc 1.57 mg, phosphorus 190 mg, selenium 17.4 µg. Vitamins E and K are not reported in this record, so they are left out."
+                    "note": "Tofu — nutrition: FDC 172475 (SR Legacy 16426) per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g, cholesterol 0, trans fat 0; converted to per gram. Sugars not reported in this record; set to 0 (carbs minus fiber = 0.48 g/100 g upper bound). Vitamins and minerals per 100 g: vitamin A 166 IU (≈ 8.3 µg RAE, using 1 IU plant beta-carotene = 0.05 µg RAE), vitamin C 0.2 mg, vitamin D 0, folate 29 µg DFE, B12 0, B6 0.092 mg, calcium 683 mg (high because it is set with calcium sulfate), iron 2.66 mg, magnesium 58 mg, potassium 237 mg, zinc 1.57 mg, phosphorus 190 mg, selenium 17.4 µg. Vitamins E and K are not reported in this record, so they are left out. Omega-3 from FDC 172475 per 100 g: ALA 0.582 g (USDA's total 18:3, which is almost all ALA); divided by 100 for per-gram values. EPA and DHA not reported, so left out."
                 }
             }
         ],
@@ -1696,14 +1705,16 @@
                     "potassium": 3.62,
                     "zinc": 0.01,
                     "phosphorus": 0.99,
-                    "selenium": 0.006
+                    "selenium": 0.006,
+                    "ala": 0.00028,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Peas — nutrition: USDA FDC 172429 (SR Legacy 16086) 'Peas, split, mature seeds, cooked, boiled, without salt' per 100 g: 118 kcal, fat 0.39 g, sat fat 0.054 g, protein 8.34 g, fiber 8.3 g, sodium 2 mg, carbs 21.1 g, sugars 2.9 g; converted to per gram. Cooked basis, matching cooked_weight_ratio. Vitamins and minerals from USDA FDC 172429 per 100 g: vitamin a 0 µg RAE, vitamin c 0.4 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 5 µg, folate 65 µg DFE, vitamin b12 0 µg, vitamin b6 0.048 mg, calcium 14 mg, iron 1.29 mg, magnesium 36 mg, potassium 362 mg, zinc 1 mg, phosphorus 99 mg, selenium 0.6 µg; divided by 100 for per-gram values."
+                    "note": "Peas — nutrition: USDA FDC 172429 (SR Legacy 16086) 'Peas, split, mature seeds, cooked, boiled, without salt' per 100 g: 118 kcal, fat 0.39 g, sat fat 0.054 g, protein 8.34 g, fiber 8.3 g, sodium 2 mg, carbs 21.1 g, sugars 2.9 g; converted to per gram. Cooked basis, matching cooked_weight_ratio. Vitamins and minerals from USDA FDC 172429 per 100 g: vitamin a 0 µg RAE, vitamin c 0.4 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 5 µg, folate 65 µg DFE, vitamin b12 0 µg, vitamin b6 0.048 mg, calcium 14 mg, iron 1.29 mg, magnesium 36 mg, potassium 362 mg, zinc 1 mg, phosphorus 99 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 172429 per 100 g: ALA 0.028 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2201,14 +2212,16 @@
                     "potassium": 4.05,
                     "zinc": 0.01,
                     "phosphorus": 1.38,
-                    "selenium": 0.011
+                    "selenium": 0.011,
+                    "ala": 0.0017,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Kidney Beans — FDC 173740 'Beans, kidney, all types, mature seeds, cooked, boiled, without salt' (SR Legacy 16028), per 100 g: 127 kcal, protein 8.67 g, fat 0.5 g, sat fat 0.073 g, carbs 22.8 g, fiber 6.4 g, sugars 0.32 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173740 per 100 g: vitamin a 0 µg RAE, vitamin c 1.2 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 8.4 µg, folate 130 µg DFE, vitamin b12 0 µg, vitamin b6 0.12 mg, calcium 35 mg, iron 2.22 mg, magnesium 42 mg, potassium 405 mg, zinc 1 mg, phosphorus 138 mg, selenium 1.1 µg; divided by 100 for per-gram values."
+                    "note": "Kidney Beans — FDC 173740 'Beans, kidney, all types, mature seeds, cooked, boiled, without salt' (SR Legacy 16028), per 100 g: 127 kcal, protein 8.67 g, fat 0.5 g, sat fat 0.073 g, carbs 22.8 g, fiber 6.4 g, sugars 0.32 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173740 per 100 g: vitamin a 0 µg RAE, vitamin c 1.2 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 8.4 µg, folate 130 µg DFE, vitamin b12 0 µg, vitamin b6 0.12 mg, calcium 35 mg, iron 2.22 mg, magnesium 42 mg, potassium 405 mg, zinc 1 mg, phosphorus 138 mg, selenium 1.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 173740 per 100 g: ALA 0.17 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2497,14 +2510,16 @@
                     "potassium": 2.68,
                     "zinc": 0.0101,
                     "phosphorus": 1.25,
-                    "selenium": 0.026
+                    "selenium": 0.026,
+                    "ala": 0.00012,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Fava Beans — FDC 173753 'Broadbeans (fava beans), mature seeds, cooked, boiled, without salt' (SR Legacy 16053), per 100 g: 110 kcal, protein 7.6 g, fat 0.4 g, sat fat 0.066 g, carbs 19.65 g, fiber 5.4 g, sugars 1.82 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173753 per 100 g: vitamin a 1 µg RAE, vitamin c 0.3 mg, vitamin d 0 µg, vitamin e 0.02 mg, vitamin k 2.9 µg, folate 104 µg DFE, vitamin b12 0 µg, vitamin b6 0.072 mg, calcium 36 mg, iron 1.5 mg, magnesium 43 mg, potassium 268 mg, zinc 1.01 mg, phosphorus 125 mg, selenium 2.6 µg; divided by 100 for per-gram values."
+                    "note": "Fava Beans — FDC 173753 'Broadbeans (fava beans), mature seeds, cooked, boiled, without salt' (SR Legacy 16053), per 100 g: 110 kcal, protein 7.6 g, fat 0.4 g, sat fat 0.066 g, carbs 19.65 g, fiber 5.4 g, sugars 1.82 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173753 per 100 g: vitamin a 1 µg RAE, vitamin c 0.3 mg, vitamin d 0 µg, vitamin e 0.02 mg, vitamin k 2.9 µg, folate 104 µg DFE, vitamin b12 0 µg, vitamin b6 0.072 mg, calcium 36 mg, iron 1.5 mg, magnesium 43 mg, potassium 268 mg, zinc 1.01 mg, phosphorus 125 mg, selenium 2.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 173753 per 100 g: ALA 0.012 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

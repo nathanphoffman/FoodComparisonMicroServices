@@ -352,14 +352,16 @@
                     "potassium": 5.58,
                     "zinc": 0.0053,
                     "phosphorus": 0.49,
-                    "selenium": 0.01
+                    "selenium": 0.01,
+                    "ala": 0.00138,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 168462 (Spinach, raw) per 100 g: vitamin a 469 µg RAE, vitamin c 28.1 mg, vitamin d 0 µg, vitamin e 2.03 mg, vitamin k 482.9 µg, folate 194 µg DFE, vitamin b12 0 µg, vitamin b6 0.195 mg, calcium 99 mg, iron 2.71 mg, magnesium 79 mg, potassium 558 mg, zinc 0.53 mg, phosphorus 49 mg, selenium 1 µg; divided by 100 for per-gram values."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 168462 (Spinach, raw) per 100 g: vitamin a 469 µg RAE, vitamin c 28.1 mg, vitamin d 0 µg, vitamin e 2.03 mg, vitamin k 482.9 µg, folate 194 µg DFE, vitamin b12 0 µg, vitamin b6 0.195 mg, calcium 99 mg, iron 2.71 mg, magnesium 79 mg, potassium 558 mg, zinc 0.53 mg, phosphorus 49 mg, selenium 1 µg; divided by 100 for per-gram values. Omega-3 from FDC 168462 per 100 g: ALA 0.138 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

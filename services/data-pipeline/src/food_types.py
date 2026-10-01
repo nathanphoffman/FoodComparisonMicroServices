@@ -43,12 +43,15 @@ class NutritionValue(TypedDict):
     zinc: NotRequired[float]
     phosphorus: NotRequired[float]
     selenium: NotRequired[float]
+    ala: NotRequired[float]      # omega-3 ALA, g / g food
+    epa_dha: NotRequired[float]  # omega-3 EPA + DHA combined, mg / g food
 
 
 MICRONUTRIENT_KEYS = (
     "vitamin_a", "vitamin_c", "vitamin_d", "vitamin_e", "vitamin_k",
     "folate", "vitamin_b12", "vitamin_b6",
     "calcium", "iron", "magnesium", "potassium", "zinc", "phosphorus", "selenium",
+    "ala", "epa_dha",
 )
 
 
