@@ -9,6 +9,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Wheat grain, nutrition from USDA (as raw grain/flour). World yield ~2.1 t/ha; the US gets ~3.2 t/ha (USDA NASS 2019–2023). Most wheat grows on former steppe and prairie, which the Land Use sliders weigh lightly. Water is Mekonnen & Hoekstra.\n\nEmissions are Poore & Nemecek's 'Wheat & Rye' value (1.57 kg CO2e/kg). That figure is actually per kg of bread and covers milling, baking, transport and retail. It's treated as roughly per kg of grain here (checked 2026-09-24). When wheat is fed to animals, a separate farm-gate value is used instead (0.95 world, 0.37 US), so animals aren't charged for bakery and retail stages. Pesticides (2,4-D and others, ~1.2 kg/ha) and fertilizer are older estimates without a documented derivation. Rye borrows wheat's pesticide profile.",
         "land_types": {
             "temperate_grassland": 0.8,
             "temperate_forest": 0.1,
@@ -357,6 +358,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "notes": "Corn (maize) grain, nutrition from USDA (raw grain). World yield ~5.6 t/ha; the US gets ~10.9 t/ha (Corn Belt). Water is Mekonnen & Hoekstra (much lower per kg in the US). FAOSTAT production includes corn grown for animal feed and ethanol.\n\nEmissions for eating corn are 1.13 kg CO2e per kg of grain. That was corrected on 2026-09-24 from 1.7, which was Poore & Nemecek's figure per kg of maize meal, not grain. As animal feed, corn uses a farm-gate value (0.79 world, including land-use change; ~0.2–0.33 US). Pesticides (atrazine, glyphosate, metolachlor, ~2.3 kg/ha) are US data that stands in for the world.\n\nCorn oil borrows corn's per-hectare data.",
         "land_types": {
             "temperate_grassland": 0.75,
             "tropical_savanna": 0.15,
@@ -744,6 +746,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "notes": "Sorghum grain, nutrition from USDA. Yield (4.2 t/ha) is US data used for every region, which likely overstates world yields; African and Indian sorghum yields are much lower. Water (2,830 L/kg) and per-hectare values have no documented derivation.\n\nEmissions (1.4 kg CO2e/kg) can't be verified: Poore & Nemecek have no sorghum row (flagged 2026-09-24, confidence 2). As animal feed, a farm-gate proxy is used (0.91 world from Poore & Nemecek's 'misc. cereals' row; 0.25 US from a 300-grower survey). Millet borrows sorghum's pesticide profile.",
         "land_types": {
             "tropical_savanna": 0.6,
             "temperate_grassland": 0.4
@@ -1007,6 +1010,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Cooked white rice, nutrition from USDA (boiled long-grain). Everything was put on a consistent basis on 2026-09-24. Nutrition is cooked, so a cooked weight ratio of 2.8 converts the dry-rice yield, water and emissions to cooked. Yield is milled (husked, polished) rice: FAO paddy yield × 65% milling = ~3.1 t/ha world, ~6.1 t/ha US.\n\nRice has the highest emissions of any grain: 4.45 kg CO2e per kg of milled rice (Poore & Nemecek), mostly methane from flooded paddies. The earlier 2.7 wasn't a real Poore & Nemecek value. The US value (1.47, California study) is much lower but excludes packaging and retail. Water is ~2,500 L per kg of milled rice (Mekonnen & Hoekstra paddy figure ÷ milling yield).",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -1338,6 +1342,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
+        "notes": "Rolled oats (oatmeal), nutrition from USDA. Fixed on 2026-09-24: yield and water were per kg of oat grain including the hull, but nutrition is dehulled rolled oats. So yield is now FAO grain yield × 55% (FAO rolled-oat extraction) ≈ 1.4 t/ha, and water was raised to match.\n\nEmissions (2.48 kg CO2e/kg) are Poore & Nemecek's oatmeal value per kg of oatmeal. The earlier 1.58 was per kg of grain. Still open: FAO's 55% conversion and Poore & Nemecek's implied conversion (~73%) disagree. Per-hectare pesticide and fertilizer values are older estimates without a documented derivation. Oat milk is built on this entry.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.4
@@ -1577,6 +1582,7 @@
         "tags": [
             "grain"
         ],
+        "notes": "Cooked quinoa, nutrition from USDA. Fixed on 2026-09-24: nutrition was cooked but environment data was per kg of dry seed, which made quinoa look about 3× worse per calorie than it is. A cooked weight ratio of 3.05 now converts dry to cooked.\n\nYield (1.7 t/ha) may be high: FAOSTAT world quinoa yields are closer to 0.9–1.2 t/ha (flagged, not yet checked). Production is mostly Bolivia and Peru's dry Andean highlands. Emissions (1.5 kg CO2e/kg) are a rough estimate from limited data (confidence 2), and pesticide use (~0.3 kg/ha) has no documented derivation.",
         "land_types": {
             "dry": 1.0
         },
@@ -1817,6 +1823,7 @@
         "tags": [
             "grain"
         ],
+        "notes": "Barley grain, nutrition from USDA 'Barley, hulled'. World yield ~3.1 t/ha (FAO); the US gets ~3.9 t/ha. Note that yield is barley grain including the hull, while nutrition is dehulled, so land per kg is understated by ~10–15%. No sourced conversion factor exists.\n\nEmissions (1.5 kg CO2e/kg) are unverified (confidence 2). Poore & Nemecek's barley row is per kg of beer (1.18), not grain. Water is Mekonnen & Hoekstra. Pesticides and fertilizer are older estimates.",
         "land_types": {
             "temperate_grassland": 0.7,
             "temperate_forest": 0.3
@@ -2129,6 +2136,7 @@
             "milk",
             "beverage"
         ],
+        "notes": "Unsweetened oat milk, nutrition from USDA (FDC Foundation Foods). It's about 10% oats (Oatly recipe), so land is the oats entry's yield ÷ 10% ≈ 13,750 kg of oat milk per ha. That matches Poore & Nemecek's own oat-milk land figure within a few percent.\n\nEmissions (0.88 kg CO2e/kg) and water come straight from Poore & Nemecek's oat-milk value, covering farming, processing, packaging and retail. Per-hectare pesticide and fertilizer are copied from oats. Availability (~1.5 Mt/yr) is a rough market-based estimate (confidence 1).",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.4
@@ -2359,6 +2367,7 @@
             "processed",
             "starch"
         ],
+        "notes": "Rice starch (used in vegan cheeses), modelled from rice. About 1.25 kg of milled rice makes 1 kg of starch. Land and crop water are rice × 1.25, and per-hectare farm values are copied from rice. No rice starch label exists, so nutrition uses USDA cornstarch as a stand-in (both near-pure starch).\n\nEmissions are rice's 4.45 × 1.25 plus starch processing from Starch Europe's LCA ≈ 5.74 kg CO2e/kg (US 2.02). No rice-starch-specific LCA was found.\n\nRice starch takes almost all of the rice's land by weight, while rice protein (made in the same process) uses a value-based share. So the rice field is counted somewhat more than once across the two. Availability (~410 kt) is derived from a market value estimate (confidence 1).",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -2681,6 +2690,7 @@
         "tags": [
             "processed"
         ],
+        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -3024,6 +3034,7 @@
         "tags": [
             "grain"
         ],
+        "notes": "Rye grain, nutrition from USDA. Mostly grown in Germany, Poland, Russia, Belarus and Denmark. Yield is FAOSTAT: ~3.2 t/ha world, ~2.2 t/ha US (US rye is often a cover crop and yields less). Water is Mekonnen & Hoekstra (1,543 L/kg).\n\nEmissions are Poore & Nemecek's 'Wheat & Rye' value (1.57), treated as per kg of grain, as for wheat. There's no rye pesticide or fertilizer data, so those are borrowed from wheat (same small-grain management; confidence 2). That was added on 2026-10-01; before then the missing data was scored as zero pesticide deaths.",
         "land_types": {
             "temperate_forest": 0.8,
             "temperate_grassland": 0.2
@@ -3274,6 +3285,7 @@
         "tags": [
             "grain"
         ],
+        "notes": "Millet grain (mostly pearl millet), nutrition from USDA raw millet. Grown in the semi-arid tropics (India, Niger, Nigeria, Mali, Sudan) at ~1 t/ha (FAOSTAT), one of the lowest-yielding grains, so it needs a lot of land per kg. Water is Mekonnen & Hoekstra (4,478 L/kg, almost all rain).\n\nWeak spots: no millet emissions study was found, so emissions use Poore & Nemecek's 'Wheat & Rye' value (1.57) as a cereal proxy, at confidence 1. Real millet could be higher (very low yields) or lower (little fertilizer). Pesticide and fertilizer are borrowed from sorghum (another low-input dryland cereal; confidence 2), added 2026-10-01 after missing data had been scored as zero.",
         "land_types": {
             "dry": 0.5,
             "tropical_savanna": 0.5

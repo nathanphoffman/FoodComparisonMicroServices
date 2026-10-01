@@ -11,6 +11,7 @@
             "milk",
             "beverage"
         ],
+        "notes": "Whole cow's milk (3.25% fat), nutrition from USDA.\n\nThe animal side: a dairy cow gives about 13,300 kg of milk over her life worldwide. That's FAOSTAT's ~2,700 kg a year × ~5 productive years. In the US it's 31,300 kg (~11,000 kg a year, but cows are replaced faster). To keep milking she must calve every year. Only one calf replaces her, so about 3.5 calves per cow die worldwide (2.1 in the US), most raised for veal or beef for ~1.5 years. Each of those deaths is counted. A cow's neuron count (9.3 billion) is an estimate from her 480 g brain, using counts from related hoofed animals. It was raised from an older 3 billion projection on 2026-10-01.\n\nEmissions are built from parts: methane and nitrous oxide from FAO's GLEAM model, feed from the corn, soy, alfalfa and hay rows, plus Poore & Nemecek's post-farm stages. Two big errors were fixed on 2026-09-24. Methane had been about 5× too high, and grazing land about 7× too low. Grazing land counts only pasture; feed cropland comes through the feed rows, so nothing is counted twice. US values (Pelton 2025, Eshel 2014) are much lower than world ones, because US cows give 4× more milk each.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -482,6 +483,7 @@
         "tags": [
             "dairy"
         ],
+        "notes": "Plain whole-milk yogurt, nutrition from USDA. Every per-kg impact is cow milk × 1.15 kg of milk per kg of yogurt: feed, methane, grazing land and lifetime output (about 11,600 kg of yogurt per cow worldwide, 27,200 in the US). It carries the same cow and calf deaths as milk.\n\nCO2 adds yogurt-specific processing (FAO 2010, Europe) on top of milk's on-farm energy and post-farm stages. The US cross-check (Pelton 2026) gives 2.4–4.4 kg CO2e/kg, but that includes strained Greek yogurt, which uses about 3× more milk.\n\nAvailability (~68 Mt) is from a market report with no primary source (confidence 1). FAOSTAT's yogurt figure leaves out the US and most of Asia.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -912,6 +914,7 @@
         "tags": [
             "dairy"
         ],
+        "notes": "Salted butter, nutrition from USDA. It takes about 22 kg of milk to make 1 kg of butter. The skim milk and buttermilk left over are sold as food too, so butter carries only its value share: about 8.2 kg of milk per kg. This uses Flysjö 2011's fat:protein value split, as in Danish dairy LCAs. Every per-kg impact (feed, methane, grazing land, lifetime output) is milk × 8.2.\n\nCO2 is milk's on-farm energy × 8.2, plus butter's own processing, packaging and transport (1.6 kg CO2e/kg, from the Arla butter LCA). Milk's own retail stages are NOT multiplied; an earlier version did that and overstated butter (fixed 2026-09-24).\n\nThe build check warns that butter's gas-by-gas total doesn't match its published LCA totals (Arla 9.0, Poore & Nemecek-derived 20.1, US 14.3). This is a known open item: the published studies use different allocations.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -1354,6 +1357,7 @@
             "dairy",
             "processed"
         ],
+        "notes": "Whey protein concentrate powder (WPC80), nutrition averaged from three unflavoured USDA-branded products.\n\nWhey is left over from cheesemaking. It takes over 100 kg of milk to make 1 kg of whey protein, but cheese is the main product. The cheese plant charges whey only 4.8% of the milk's burden (Bacenetti et al. 2019), so whey protein carries about 5 kg of milk per kg. Every per-kg impact (feed, methane, grazing land, lifetime output) is milk × 5.\n\nCO2 adds whey-processing stages (ultrafiltration, spray drying, packaging, transport) from CarbonCloud's verified benchmark. The build check warns that the gas total doesn't match the published totals (CarbonCloud 7.3, Bacenetti 5.9); allocation choices drive that gap. Availability is US-only (USDA 2024) and used for every region; world output is likely 2–3× higher.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -1817,6 +1821,7 @@
             "dairy",
             "cheese"
         ],
+        "notes": "Cheddar from cow's milk, nutrition from USDA. USDA's milk-equivalent puts it at about 9.2 kg of milk per kg of cheese. The whey that's sold takes 4.8% of the burden, so cheddar carries 8.8 kg. Every per-kg impact (feed, methane, grazing land, lifetime output) is cow milk × 8.8, so it carries the same cow and calf deaths as milk.\n\nCO2 is milk's on-farm energy × 8.8, plus Poore & Nemecek's cheese processing, transport, retail and packaging (1.38 kg CO2e/kg). Supply-chain losses are left out, since they'd scale the milk footprint already counted. Published totals for comparison: US cheddar 8.6 kg CO2e/kg (Kim 2013), and the all-cheese global average 23.9 (Poore & Nemecek).\n\nAvailability is US production only (1.7 Mt, USDA 2024), used for every region. FAOSTAT doesn't break cheese out by type.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -2239,6 +2244,7 @@
             "dairy",
             "cheese"
         ],
+        "notes": "Low-moisture part-skim mozzarella, the common US pizza cheese; nutrition from USDA. It takes ~9.2 kg of milk per kg, but the milk is partly skimmed first. The cream removed is worth ~1.3 kg of milk, and whey takes a share, so mozzarella carries about 7.5 kg of milk per kg. Every per-kg impact is cow milk × 7.5, so it carries the same animal deaths as milk.\n\nCO2 is milk's on-farm energy × 7.5 plus Poore & Nemecek's cheese post-farm stages, the same method as cheddar. The US published total is 7.3 kg CO2e/kg (Kim 2013). The world all-cheese average (23.9) is kept for reference at confidence 1, because mozzarella is well below average.\n\nAvailability is US production (2.2 Mt, USDA 2024), used for every region.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -2661,6 +2667,7 @@
             "dairy",
             "cheese"
         ],
+        "notes": "Hard Parmesan cheese, nutrition from USDA. Parmigiano Reggiano takes ~14.2 kg of milk per kg (550 L per 40 kg wheel). The cream skimmed off is made into butter and the whey is sold, so parmesan carries about 10.8 kg of milk per kg. Every per-kg impact is cow milk × 10.8, the most of any cheese here, so it has the highest animal impact per kg of the cheeses.\n\nCO2 is milk's on-farm energy × 10.8 plus Poore & Nemecek's cheese post-farm stages. The Parmigiano Reggiano consortium's own LCA gives 15.3 kg CO2e/kg (read from the abstract only, confidence 2).\n\nThe build check warns that parmesan's gas total doesn't match the published totals; allocation differences again. Availability is US 'Parmesan' production (203 Gg, mostly not PDO Parmigiano), used for every region.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.3,
@@ -3083,6 +3090,7 @@
             "milk",
             "beverage"
         ],
+        "notes": "Goat's milk, nutrition from USDA. Unlike cow milk, this reflects the world-average milking goat, mostly small multi-purpose animals in South Asia and Africa. That goat gives only ~95 kg of milk a year (FAOSTAT), versus ~2,700 kg for a cow. That low yield drives everything below. A commercial European or US dairy goat gives 600–1,000 kg a year and would score much better.\n\nEmissions come from FAO's GLEAM model: 5.2 kg CO2e per kg, split into methane, manure nitrous oxide and energy. Feed intake (~6.5 kg dry matter per kg milk) is back-calculated from GLEAM's methane with the IPCC 2019 rule for goats. It's split using GLEAM's goat milk ration: grass, hay, crop residues, a little oilseed meal and grain. Grazed grass becomes pasture area (Mottet 2017: ~1,380 kg grass grazed per ha per year). Crop residues have no crop footprint.\n\nAnimal deaths: each doe gives ~510 kg of milk in her life, and about 4.2 kids per doe die (raised for meat, ~1.3 years). No goat brain has been counted. The 3.6 billion neurons are estimated from goat brain size using counts from related hoofed animals.",
         "land_types": {
             "dry": 0.45,
             "tropical_savanna": 0.35,
@@ -3371,6 +3379,7 @@
             "dairy",
             "cheese"
         ],
+        "notes": "Soft goat cheese (chèvre), nutrition from USDA. Built exactly like cheddar, but on the goat milk entry. FAO's goat-cheese extraction rate is a median of 17% across 21 countries (range 5–30%), so ~5.9 kg of goat milk per kg. After the whey's 4.8% share, goat cheese carries 5.6 kg of goat milk per kg. Every per-kg goat-milk impact is × 5.6.\n\nBecause the world-average milking goat gives so little milk, each goat's whole life yields only ~91 kg of cheese. The deaths of the goat and her ~4.2 kids are spread over very little food, and goat cheese is the lowest-scoring food in the dataset. Cheese from French or US commercial dairy goats would score noticeably better.\n\nCO2 adds Poore & Nemecek's cheese processing, transport, retail and packaging, as for cheddar. Availability is FAOSTAT world goat cheese production (~461 kt a year; France ~90 kt).",
         "land_types": {
             "dry": 0.45,
             "tropical_savanna": 0.35,

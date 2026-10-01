@@ -44,6 +44,8 @@ class Food(TypedDict):
     tags: list[str]
     availability_gg: list[SourcedNumber] | None
     sentient_harm_explanation: NotRequired[str | None]
+    # plain-English summary of how this food's numbers were derived and any quirks; see data/json/SCHEMA.md
+    notes: NotRequired[str | None]
     # fraction of this food's land in each broad land type (sums to 1); see data/json/SCHEMA.md
     land_types: NotRequired[dict[str, float] | None]
     # which foods/<category>.json file the food lives in (e.g. "nuts", "leafy")

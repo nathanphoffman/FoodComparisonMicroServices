@@ -9,6 +9,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Olive oil, nutrition from USDA. Grown in dry Mediterranean groves (Spain, Italy, Greece, Tunisia). About 10 kg of olives make 1 kg of oil, and the whole grove is charged to the oil: ~400 kg of oil per ha. Its land use per kg is the highest of the oils.\n\nWater (14,430 L/kg, Mekonnen & Hoekstra) is the highest of any oil. Emissions are Poore & Nemecek's olive oil value (~6 kg CO2e/kg). Yield, pesticide and fertilizer values have no documented derivation. Availability is FAOSTAT world olive oil (2020–2023, ~3 Mt).",
     "land_types": {
       "dry": 1.0
     },
@@ -289,6 +290,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Canola (rapeseed) oil, nutrition from USDA. Land is oil per ha: world rapeseed yield (~2 t/ha) × ~40% oil extraction ≈ 820 kg/ha, with all of the field charged to the oil. The rapeseed meal left over goes to animal feed and gets no share.\n\nWater (4,300 L/kg) is Mekonnen & Hoekstra's oil figure, which does give the meal a value share. So land and water use different splitting rules for this oil (the same is true of soybean, sunflower, coconut and peanut oil). Emissions are Poore & Nemecek's rapeseed oil value (3.69 kg CO2e/kg, cradle to retail, low land-use change). Grown mainly on the Canadian prairie and long-cleared European farmland.",
     "land_types": {
       "temperate_grassland": 0.8,
       "temperate_forest": 0.2
@@ -540,6 +542,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Soybean oil, nutrition from USDA. Land is oil per ha: world soybean yield (2.8 t/ha) × 18.3% oil extraction ≈ 512 kg of oil per ha, with all the soy field charged to the oil. Soybean meal is actually the main product by value (~60%), and the feed rows of animal foods also charge soy land for the meal they eat. So soy land is counted for both the oil and the meal: soybean oil's land use is overstated.\n\nWater (4,200 L/kg) uses Mekonnen & Hoekstra's value split. Emissions are Poore & Nemecek's soybean oil value (6.36 kg CO2e/kg), driven by Brazilian deforestation (land-use change 2.87). The US value (2.6) is derived from US soy with no deforestation. Availability is USDA's world soybean oil (~70 Mt).",
     "land_types": {
       "temperate_grassland": 0.55,
       "tropical_savanna": 0.3,
@@ -863,6 +866,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Crude palm oil, nutrition from USDA (about half saturated fat). Palm is by far the highest-yielding oil crop: ~3.5 t of oil per ha (fresh fruit bunch yield × ~20% oil extraction), so it needs the least land per kg of any oil.\n\nBut much of that land was tropical rainforest and peat swamp in Indonesia and Malaysia, which the Land Use sliders weigh 10× heavier than temperate land. Emissions are Poore & Nemecek's palm oil value (7.39 kg CO2e/kg), the highest of the major oils, mostly land-use change and peat drainage. Wildlife lost to clearing (orangutans, tigers, elephants) is described but isn't modelled beyond the generic land-clearing deaths. Pesticide use (~1 kg/ha) is an estimate (confidence 2).",
     "land_types": {
       "tropical_forest": 0.85,
       "wetland": 0.15
@@ -1119,6 +1123,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Sunflower oil, nutrition from USDA. Land is oil per ha: FAOSTAT sunflower seed yield (~1.9 t/ha) × 39% oil extraction (FAO median) ≈ 734 kg per ha, with all of the field charged to the oil. Grown mostly on Ukrainian and Russian steppe.\n\nWater (6,792 L/kg) is Mekonnen & Hoekstra's refined-oil figure, which gives the leftover cake a value share. Emissions are Poore & Nemecek's sunflower oil value (3.6 kg CO2e/kg, cradle to retail); its post-farm stages are also used as a stand-in for corn, coconut and peanut oil. Per-hectare pesticide and fertilizer are reused from sunflower seeds.",
     "land_types": {
       "temperate_grassland": 1.0
     },
@@ -1364,6 +1369,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Coconut oil, nutrition from USDA (very high saturated fat). Land is oil per ha: FAOSTAT coconut yield × 19.5% copra × 63% oil (FAO medians) ≈ 708 kg per ha, with all of the grove charged to the oil. Coastal humid tropics: the Philippines, Indonesia and India.\n\nWater (4,491 L/kg, almost all rain) is Mekonnen & Hoekstra's oil figure. Emissions are CarbonCloud's Philippine crude coconut oil (3.29, farm + processing) plus Poore & Nemecek's vegetable-oil retail stages (1.29) ≈ 4.58 kg CO2e/kg. Per-hectare pesticide and fertilizer are reused from coconut; those values are weak.",
     "land_types": {
       "tropical_forest": 0.8,
       "wetland": 0.2
@@ -1594,6 +1600,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Peanut (groundnut) oil, nutrition from USDA. Land is oil per ha: FAOSTAT in-shell groundnut yield × 70% shelling × 45% oil (FAO medians) ≈ 560 kg per ha, with all of the field charged to the oil.\n\nWater (7,528 L/kg) is Mekonnen & Hoekstra's oil figure. Emissions are a 2025 Chinese study (3.31 kg CO2e/kg, farm to factory; China is the largest producer) plus Poore & Nemecek's vegetable-oil retail stages (1.29) ≈ 4.6. Per-hectare pesticide and fertilizer are reused from peanuts.",
     "land_types": {
       "tropical_savanna": 0.5,
       "temperate_grassland": 0.3,
@@ -1841,6 +1848,7 @@
     "tags": [
       "common"
     ],
+    "notes": "Corn oil, nutrition from USDA. Corn oil is a small by-product of corn milling (~3% of the grain), so it gets only its value share of the corn field, not all of it. Corn yield × 1,222/2,575, the Mekonnen & Hoekstra value split, ≈ 2,700 kg of oil per ha (5,200 US). Water uses the same split (2,576 L/kg). If it were charged the whole field, it would need about 30× more land per kg than corn itself.\n\nThis differs from the main oils (canola, soybean, sunflower), which take their whole field, because for corn the oil isn't why the crop is grown. Molasses, rice protein and pea protein follow the same by-product rule.\n\nPoore & Nemecek have no corn oil value. Emissions are corn's farm-gate figure with the same split (1.66) plus sunflower oil's post-farm stages (1.50) ≈ 3.17 kg CO2e/kg (confidence 2). Per-hectare pesticide and fertilizer are reused from corn.",
     "land_types": {
       "temperate_grassland": 0.75,
       "tropical_savanna": 0.15,

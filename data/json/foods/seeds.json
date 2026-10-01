@@ -7,6 +7,7 @@
         "category": "seeds",
         "human_food": 1,
         "tags": [],
+        "notes": "Whole flaxseed (linseed). Nutrition is USDA.\n\nYield (~1.3 t/ha) is the FAO world average; Canada, Kazakhstan and Russia are the main growers, on prairie and steppe. Water is the Mekonnen & Hoekstra global average. Emissions average two sources: Poore & Nemecek's oilseed range (1.4) and the Dutch RIVM database (1.68, including transport to Europe).\n\nSoil erosion, CO2 capture and fertilizer are generic estimates for annual temperate oilseeds rather than flax-specific data.",
         "land_types": {
             "temperate_grassland": 1.0
         },

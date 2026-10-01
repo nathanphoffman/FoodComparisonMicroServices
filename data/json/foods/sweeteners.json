@@ -9,6 +9,7 @@
         "tags": [
             "wild"
         ],
+        "notes": "Sap tapped from standing sugar-maple forest in Quebec, Ontario and the US Northeast, boiled down to syrup. Nutrition is USDA maple syrup.\n\nLand use is zero, and so are the wildlife deaths from clearing land. Sugarbushes are native forest stands that are tapped, not cleared or planted (FAO: 'maple stands of natural origin'). Planted maple orchards exist only as an experimental method. This was changed on 2026-10-01; before that, a 425 kg/ha yield made it look like farmland. It's tagged 'wild', so the Over-Gathering slider penalises it like other wild-harvested foods. Thinning out non-maple trees to favour maples is not counted.\n\nNo pesticides, fertilizer or tillage. Emissions (~0.84 kg CO2e/kg Quebec, ~1.04 US) are mostly the fuel used to boil the sap. Water is left blank, since rain-fed forest uses that water anyway. That counts as a perfect score for water, a known side effect of how zeros are scored.",
         "nutrition": [
             {
                 "value": {
@@ -155,6 +156,7 @@
         "category": "sweeteners",
         "human_food": 1,
         "tags": [],
+        "notes": "Refined white sugar from sugarcane, about 85% of world sugar. Nutrition is USDA granulated sugar: pure calories, no protein or fibre.\n\nAll of the cane field is charged to the sugar: world cane yield (73 t/ha) × ~11% sugar recovery ≈ 8,000 kg of sugar per ha. Molasses, the leftover, gets its own small value-based share on top, so the cane field is counted about 109% in total.\n\nWater (Mekonnen & Hoekstra) is high, because much of India and Pakistan's cane is irrigated. Emissions (Poore & Nemecek, 3.2) include land-use change in Brazil and field burning. Pesticide data is Brazilian herbicide use (São Paulo); insecticides aren't counted, which may understate harm. Much cane land is former tropical forest and cerrado, which the Land Use sliders weigh heavily.",
         "land_types": {
             "tropical_savanna": 0.5,
             "tropical_forest": 0.3,
@@ -389,6 +391,7 @@
         "category": "sweeteners",
         "human_food": 1,
         "tags": [],
+        "notes": "Honey from managed honey-bee hives. Nutrition is USDA honey.\n\nThe animal side is unusual. A hive makes about 19 kg of honey a year worldwide (23 kg in the US), and about 150,000 worker bees live and die in it over that year. Every one of those bees is counted as a life spent in production, the way a laying hen's whole life is counted for eggs. That works out to about 7,800 bees per kg of honey. Each bee has about 960,000 neurons and weighs about 0.1 g.\n\nBees forage on land that exists anyway, so the only farmland charged is the cane sugar fed to hives over winter (~0.5 kg sugar per kg honey). Emissions come from beekeeping LCAs (Italy, Argentina, US): mostly trucking hives and extraction electricity. Bees make no methane.",
         "land_types": {
             "tropical_savanna": 0.5,
             "tropical_forest": 0.3,
@@ -627,6 +630,7 @@
         "category": "sweeteners",
         "human_food": 1,
         "tags": [],
+        "notes": "Refined white sugar from sugar beet, about 15–20% of world sugar, grown in Europe, Russia, the US and Türkiye. Nutrition is identical to cane sugar.\n\nLand: all of the beet field is charged to the sugar, the same rule as cane sugar. World beet yield × 13% extraction (FAO median of 38 countries; US 14%) ≈ 7,900 kg of sugar per ha. This was changed on 2026-10-01 from a value-based split. Water (Mekonnen & Hoekstra) is about half of cane's, and emissions (Poore & Nemecek, 1.81) are lower than cane's 3.2, mostly because beet isn't grown on newly cleared land.\n\nPesticide and fertilizer data are from the last USDA sugarbeet survey, in 2000: old, US-only, confidence 2. Before 2026-10-01 pesticide data was missing, which the scorer counted as zero pesticide deaths and pushed beet sugar to the top of the rankings. Availability is estimated from world beet tonnage, because FAOSTAT reports cane and beet sugar together.",
         "land_types": {
             "temperate_forest": 0.55,
             "temperate_grassland": 0.45
@@ -881,6 +885,7 @@
         "category": "sweeteners",
         "human_food": 1,
         "tags": [],
+        "notes": "Cane molasses, the syrup left over after sugar is crystallised. Nutrition is USDA molasses: mostly sugar, plus some minerals.\n\nMolasses is a by-product, so it gets only its economic share of the cane field, not all of it: cane yield × 210/527, the Mekonnen & Hoekstra value split ≈ 29,000 kg/ha. Water uses the same split. Emissions are derived the same way from cane sugar's 3.2 (≈ 0.95), since Poore & Nemecek has no molasses value (confidence 2). Per-hectare pesticide, fertilizer, erosion and tillage are reused from cane sugar.\n\nThe value split is why molasses scores much better than cane sugar per kg, even though both are mostly sugar. If you split the cane field by calories instead, molasses would land near cane sugar. Corn oil, rice protein and pea protein, the other by-products, use the same value split.",
         "land_types": {
             "tropical_savanna": 0.5,
             "tropical_forest": 0.3,

@@ -10,6 +10,7 @@
             "fish",
             "common"
         ],
+        "notes": "Farmed Atlantic salmon, nutrition from USDA. Most of salmon's footprint is its feed: per kg of fillet about 0.69 kg fishmeal, 0.18 kg fish oil, 0.33 kg soy and 0.18 kg wheat. The fishmeal and oil are made from wild anchoveta, so salmon is charged with the wild fish killed to make its feed, as a direct kill. That's a large part of its sentient harm.\n\nEmissions start from Poore & Nemecek's salmon total (~11.9 kg CO2e/kg). The feed share is counted through the feed rows, small pond methane and nitrous oxide are set from the literature, and the remaining ~4.2 kg is direct CO2 (farm energy and logistics). Land is only the feed cropland, much of it Brazilian soy.\n\nNo salmon brain has been counted. The ~110 million neurons are estimated from body size (4.5 kg) using a fish brain-scaling rule anchored on brown trout. The 4.5 kg weight has no recorded derivation.",
         "land_types": {
             "temperate_grassland": 0.4,
             "tropical_savanna": 0.4,
@@ -258,6 +259,7 @@
             "common",
             "wild"
         ],
+        "notes": "Wild-caught tuna (the main market species), nutrition from USDA. It's tagged 'wild', so the Over-Hunting slider divides its score.\n\nThere's no land, feed or methane. Emissions are almost all fishing-boat diesel: ~3.9 kg CO2 per kg, from Poore & Nemecek's wild-fish range (3–5.4), placed toward the high end because distant-water tuna fleets are fuel-hungry. A large 60 kg fish yields ~60% edible meat, so relatively few animals die per kg.\n\nNo tuna brain has been counted. The ~275 million neurons are estimated from body size using a fish brain-scaling rule. The weight note in the data was copied from an old neuron note. Bycatch isn't modelled for tuna, though longline and purse-seine tuna fisheries do catch sharks, turtles and juvenile fish, so its harm is probably understated.",
         "nutrition": [
             {
                 "value": {
@@ -415,6 +417,7 @@
             "common",
             "wild"
         ],
+        "notes": "Wild trawl-caught shrimp, nutrition from USDA raw shrimp. It's tagged 'wild' for the Over-Hunting slider.\n\nThe big issue is bycatch. Shrimp trawls catch about 5.7 kg of other sea life per kg of shrimp landed, mostly small fish that are discarded dead (WWF; Henriksson 2015 gives 2–10 kg). Sardines stand in for those discarded fish when counting the deaths. Each shrimp is only ~18 g with 60% meat, so ~90 shrimp die per kg as well.\n\nShrimp neurons are estimated at up to 1 million, a conservative upper end. Emissions are trawler diesel, ~3.2 kg CO2 per kg (Poore & Nemecek, Parker 2018). No land or feed.",
         "nutrition": [
             {
                 "value": {
@@ -592,6 +595,7 @@
             "seafood",
             "common"
         ],
+        "notes": "Pond-farmed shrimp (mostly whiteleg shrimp, Penaeus vannamei), nutrition from USDA raw shrimp. Many shrimp ponds in Southeast Asia and Latin America replaced mangrove forest. That land-use change is the biggest single emission source, and it's carried in the large direct-CO2 figure (~18.6 kg per kg) derived from Poore & Nemecek's farmed-prawn total (~26.9).\n\nPonds also give off methane and nitrous oxide from rotting feed and waste (Henriksson 2015). Feed per kg is ~0.75 kg soy, 0.5 kg wheat, 0.34 kg fishmeal and 0.07 kg fish oil. The fishmeal and oil mean wild anchoveta are killed for the feed, counted as a direct kill.\n\nEach shrimp is ~18 g with 60% meat, so ~90 shrimp die per kg. Neurons are estimated at up to 1 million each.",
         "land_types": {
             "wetland": 0.4,
             "tropical_savanna": 0.3,
@@ -861,6 +865,7 @@
             "seafood",
             "wild"
         ],
+        "notes": "Wild sardines and pilchards, caught by purse-seine nets. Nutrition from USDA. Tagged 'wild' for the Over-Hunting slider.\n\nSardines are among the lowest-emission animal foods: purse seines catch dense schools with little fuel, ~1.5 kg CO2 per kg (Poore & Nemecek's small-pelagic range). No land or feed. A large share of the world sardine catch is actually reduced to fishmeal rather than eaten, so availability overstates sardines eaten as food.\n\nEach sardine is ~100 g with 75% edible, so about 13 die per kg. Neurons (~29 million) are estimated from body size using a fish brain-scaling rule. Bycatch is set at 0.1 kg of tuna per kg of sardines, but no derivation is recorded for that number. Sardines are also used as the stand-in species for discarded bycatch in the shrimp and cod entries.",
         "nutrition": [
             {
                 "value": {
@@ -1028,6 +1033,7 @@
             "fish",
             "common"
         ],
+        "notes": "Farmed Nile tilapia, nutrition from USDA. Tilapia eat a mostly plant-based feed (soy, corn, wheat, with a little fishmeal), so they're among the lowest-impact farmed fish. Poore & Nemecek give ~3.2 kg CO2e per kg in total.\n\nOnly about a third of the fish is fillet (0.33 of live weight), so each kg of fillet takes ~5.5 kg of feed and ~4 fish. Pond methane and nitrous oxide are small. Land is only the feed cropland.\n\nNeurons (~57 million) are estimated from body size (0.7 kg) using a fish brain-scaling rule; no tilapia count exists.",
         "land_types": {
             "temperate_grassland": 0.5,
             "tropical_savanna": 0.3,
@@ -1256,6 +1262,7 @@
             "shellfish",
             "common"
         ],
+        "notes": "Farmed blue mussels, grown on ropes. Nutrition from USDA. Mussels filter-feed on wild plankton, so there's no feed, fertilizer or farmland. Emissions are boat fuel and gear. Two methods agree closely: a bivalve LCA median (392 kg CO2e per tonne shell-on ÷ 27% meat) and MacLeod et al. 2020's per-protein figure, ~1.3–1.45 kg CO2e per kg meat.\n\nBivalves have no brain, only small clusters of nerve cells, so neurons are estimated at about 17,000. Each mussel gives only ~3.2 g of meat, so roughly 300 die per kg.\n\nBody weight for the intelligence score is standardized (changed 2026-10-01). Shells are a very different share of each bivalve's weight (oysters ~90%, mussels ~73%). So all three bivalves get their meat weight × 6.53, the average shell-plus-meat ratio, rather than shell-on weight. That stops oysters looking less sentient just because of heavy shells. Meat per animal still uses the real 27% meat yield.",
         "nutrition": [
             {
                 "value": {
@@ -1293,13 +1300,13 @@
         ],
         "weight_kg": [
             {
-                "value": 0.012,
-                "confidence": 3,
+                "value": 0.0212,
+                "confidence": 2,
                 "source": {
                     "id": 91,
                     "url": "https://www.fao.org/fishery/en/culturedspecies/mytilus_edulis",
                     "title": "FAO — Farmed Blue Mussel (Mytilus edulis) Aquaculture Profile",
-                    "note": "Mussels (Farmed) — weight_kg: Commercial blue mussels (Mytilus edulis) at harvest in rope and longline aquaculture typically weigh 10–15 g live weight (shell included); a value of 0.012 kg (12 g) is used as representative for standard market-size mussels at 24–36 months grow-out in temperate waters. The shell accounts for approximately 70–75% of the total live weight."
+                    "note": "CORRECTION 2026-10-01: was 0.012 kg whole live weight. Shells make up very different shares of each bivalve's weight (oysters ~90%, mussels ~73%), so using shell-on weight made oysters look much heavier, and so less sentient per animal, than mussels or clams. Now a standardized body weight: this species' meat weight × (1 + the average non-meat:meat ratio of the three farmed bivalves, 5.53), so every bivalve carries the same shell burden relative to its soft body, like bone is included for mammals. Mussels (Farmed): 3.24 g meat × 6.53 = 21.2 g. Inputs (Mussels (Farmed): 12 g live × 0.27 meat = 3.24 g meat, non-meat:meat 2.70; Oysters (Farmed): 70 g live × 0.1 meat = 7.00 g meat, non-meat:meat 9.00; Clams (Farmed): 16 g live × 0.17 meat = 2.72 g meat, non-meat:meat 4.88). Non-meat = shell + intervalvular water. Used only for the intelligence score; meat per animal is set in lifetime_output_kg. Original live weight basis: Mussels (Farmed) — weight_kg: Commercial blue mussels (Mytilus edulis) at harvest in rope and longline aquaculture typically weigh 10–15 g live weight (shell included); a value of 0.012 kg (12 g) is used as representative for standard market-size mussels at 24–36 months grow-out in temperate waters. The shell accounts for approximately 70–75% of the total live weight."
                 }
             }
         ],
@@ -1379,6 +1386,18 @@
                     "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean mussels aquaculture 1.97 Mt live weight × yield_fraction 0.27 = 533 Gg."
                 }
             }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 0.00324,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Mussels (Farmed) — lifetime_output_kg: edible meat per animal = live weight 0.012 kg × meat yield 0.27 = 0.00324 kg. Set explicitly because weight_kg is now a standardized body weight (see weight_kg), so weight × yield would no longer be the real meat per animal."
+                }
+            }
         ]
     },
     {
@@ -1393,6 +1412,7 @@
             "shellfish",
             "common"
         ],
+        "notes": "Farmed oysters (mostly Pacific cupped oysters), nutrition from USDA Pacific oyster. Like mussels, oysters filter-feed on plankton: no feed, fertilizer or farmland. Emissions are boat fuel and gear. The bivalve LCA median ÷ 10% meat gives 3.9 kg CO2e per kg meat; MacLeod 2020's per-protein figure gives 1.05. The gap comes from the heavy shell.\n\nNeurons are estimated at about 17,000 (no brain, just ganglia). Each oyster gives ~7 g of meat, so ~140 die per kg, fewer than mussels or clams.\n\nBody weight for the intelligence score is standardized across the three bivalves (2026-10-01): meat weight × 6.53, instead of 70 g shell-on, because oyster shells are ~90% of their weight. Open question: the 10% meat yield may be low. A Pacific oyster study reports soft tissue at 14–17% of total weight.",
         "nutrition": [
             {
                 "value": {
@@ -1430,13 +1450,13 @@
         ],
         "weight_kg": [
             {
-                "value": 0.07,
+                "value": 0.0457,
                 "confidence": 2,
                 "source": {
                     "id": 351,
                     "url": "https://www.fao.org/4/x5954e/x5954e01.htm",
                     "title": "FAO — Handling and Processing Oysters (Torry Advisory Note)",
-                    "note": "Oysters (Farmed) — weight_kg: FAO grades run from ~100 g (grade 1) down to 35–40 g (grade 5) whole in shell; 0.07 kg used as a mid-grade market oyster."
+                    "note": "CORRECTION 2026-10-01: was 0.07 kg whole live weight. Shells make up very different shares of each bivalve's weight (oysters ~90%, mussels ~73%), so using shell-on weight made oysters look much heavier, and so less sentient per animal, than mussels or clams. Now a standardized body weight: this species' meat weight × (1 + the average non-meat:meat ratio of the three farmed bivalves, 5.53), so every bivalve carries the same shell burden relative to its soft body, like bone is included for mammals. Oysters (Farmed): 7.00 g meat × 6.53 = 45.7 g. Inputs (Mussels (Farmed): 12 g live × 0.27 meat = 3.24 g meat, non-meat:meat 2.70; Oysters (Farmed): 70 g live × 0.1 meat = 7.00 g meat, non-meat:meat 9.00; Clams (Farmed): 16 g live × 0.17 meat = 2.72 g meat, non-meat:meat 4.88). Non-meat = shell + intervalvular water. Used only for the intelligence score; meat per animal is set in lifetime_output_kg. Original live weight basis: Oysters (Farmed) — weight_kg: FAO grades run from ~100 g (grade 1) down to 35–40 g (grade 5) whole in shell; 0.07 kg used as a mid-grade market oyster."
                 }
             }
         ],
@@ -1516,6 +1536,18 @@
                     "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean oysters aquaculture 6.73 Mt live weight × yield_fraction 0.1 = 673 Gg."
                 }
             }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 0.007,
+                "confidence": 2,
+                "source": {
+                    "id": 351,
+                    "url": "https://www.fao.org/4/x5954e/x5954e01.htm",
+                    "title": "FAO — Handling and Processing Oysters (Torry Advisory Note)",
+                    "note": "Oysters (Farmed) — lifetime_output_kg: edible meat per animal = live weight 0.07 kg × meat yield 0.1 = 0.00700 kg. Set explicitly because weight_kg is now a standardized body weight (see weight_kg), so weight × yield would no longer be the real meat per animal."
+                }
+            }
         ]
     },
     {
@@ -1530,6 +1562,7 @@
             "shellfish",
             "common"
         ],
+        "notes": "Farmed clams (mostly Manila clams), nutrition from USDA mixed-species clams. Filter feeders: no feed, fertilizer or farmland. Emissions are boat and gear fuel, ~1.6–2.3 kg CO2e per kg meat by the two bivalve methods.\n\nNeurons are estimated at about 17,000 (no brain, just ganglia). Each clam gives only ~2.7 g of meat (16 g live × 17% meat), so ~370 die per kg, the most of the three bivalves.\n\nBody weight for the intelligence score is standardized across mussels, oysters and clams (2026-10-01): meat weight × 6.53, the average shell-plus-meat ratio, so no bivalve gets a heavier or lighter 'body' just from its shell type.",
         "nutrition": [
             {
                 "value": {
@@ -1567,13 +1600,13 @@
         ],
         "weight_kg": [
             {
-                "value": 0.016,
+                "value": 0.0178,
                 "confidence": 2,
                 "source": {
                     "id": 352,
                     "url": "https://www.clovegarden.com/ingred/sf_bvmanilz.html",
                     "title": "Clove Garden — Manila Clams (ingredient notes: count, size and meat yield)",
-                    "note": "Clams (Farmed) — weight_kg: Manila clams (the dominant farmed clam) ran ~28 per pound (~16 g each, shell on)."
+                    "note": "CORRECTION 2026-10-01: was 0.016 kg whole live weight. Shells make up very different shares of each bivalve's weight (oysters ~90%, mussels ~73%), so using shell-on weight made oysters look much heavier, and so less sentient per animal, than mussels or clams. Now a standardized body weight: this species' meat weight × (1 + the average non-meat:meat ratio of the three farmed bivalves, 5.53), so every bivalve carries the same shell burden relative to its soft body, like bone is included for mammals. Clams (Farmed): 2.72 g meat × 6.53 = 17.8 g. Inputs (Mussels (Farmed): 12 g live × 0.27 meat = 3.24 g meat, non-meat:meat 2.70; Oysters (Farmed): 70 g live × 0.1 meat = 7.00 g meat, non-meat:meat 9.00; Clams (Farmed): 16 g live × 0.17 meat = 2.72 g meat, non-meat:meat 4.88). Non-meat = shell + intervalvular water. Used only for the intelligence score; meat per animal is set in lifetime_output_kg. Original live weight basis: Clams (Farmed) — weight_kg: Manila clams (the dominant farmed clam) ran ~28 per pound (~16 g each, shell on)."
                 }
             }
         ],
@@ -1653,6 +1686,18 @@
                     "note": "availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean clams, cockles and arkshells aquaculture 5.76 Mt live weight × yield_fraction 0.17 = 979 Gg."
                 }
             }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 0.00272,
+                "confidence": 2,
+                "source": {
+                    "id": 352,
+                    "url": "https://www.clovegarden.com/ingred/sf_bvmanilz.html",
+                    "title": "Clove Garden — Manila Clams (ingredient notes: count, size and meat yield)",
+                    "note": "Clams (Farmed) — lifetime_output_kg: edible meat per animal = live weight 0.016 kg × meat yield 0.17 = 0.00272 kg. Set explicitly because weight_kg is now a standardized body weight (see weight_kg), so weight × yield would no longer be the real meat per animal."
+                }
+            }
         ]
     },
     {
@@ -1667,6 +1712,7 @@
             "common",
             "wild"
         ],
+        "notes": "Wild Alaska pollock, the biggest US fishery by volume and the fish in most fish sticks and fast-food fish sandwiches. Nutrition from USDA. Tagged 'wild' for the Over-Hunting slider.\n\nMidwater trawls catch very little else: under 1% bycatch (NOAA). Pacific salmon, the main concern, is the stand-in bycatch species. Emissions are fishing fuel: Parker et al. 2018's North American average (1.7 kg CO2e per kg landed) ÷ 36% fillet yield ≈ 4.7 per kg fillet; an industry LCA gives ~3.7.\n\nFish are ~0.9 kg with 36% fillet (FAO), so about 3 fish die per kg of fillet. Neurons (~62 million) are estimated from body size.",
         "nutrition": [
             {
                 "value": {
@@ -1815,6 +1861,7 @@
             "common",
             "wild"
         ],
+        "notes": "Wild Atlantic cod, nutrition from USDA. Tagged 'wild' for the Over-Hunting slider. Both US Atlantic cod stocks are overfished.\n\nCod is caught mainly by bottom trawl, which uses more fuel than midwater trawling: Parker et al. 2018's demersal average 2.4 kg CO2e per kg landed ÷ 34% fillet yield ≈ 7 kg per kg fillet. A Baltic/North Sea fuel-use study gives a similar 6.5. Bottom trawls discard ~9.6% of catch (Kelleher 2005), counted with sardines as the stand-in species.\n\nLanded cod are ~3 kg with 34% skinless fillet (FAO). Neurons (~95 million) are estimated from body size; no cod count exists.",
         "nutrition": [
             {
                 "value": {
@@ -1962,6 +2009,7 @@
             "fish",
             "common"
         ],
+        "notes": "Farmed carp (grass, silver, common, bighead and Indian carps), by far the largest farmed fish group in the world, mostly in China and South Asia. Nutrition from USDA raw carp.\n\nFeed per kg of fillet is soy, wheat, corn and a little fishmeal (~3.6 kg total). Fillet yield is only 36%, so feed per kg eaten is high. Much carp is actually sold and eaten whole, which would lower that. Pond nitrous oxide and on-farm energy come from MacLeod et al. 2020's global aquaculture model. Pond methane is not counted there, so it's set to zero, which may understate it.\n\nNeurons (~75 million) are estimated from body size (1.5 kg).",
         "land_types": {
             "temperate_grassland": 0.5,
             "tropical_savanna": 0.3,
@@ -2159,6 +2207,7 @@
             "fish",
             "common"
         ],
+        "notes": "Farmed catfish, mostly pangasius (striped catfish) from Vietnam, plus US channel catfish. Nutrition from USDA farmed channel catfish.\n\nFeed per kg of fillet is soy, wheat, corn and some fishmeal (~5.2 kg), because only ~33% of the fish is fillet. Pond nitrous oxide and on-farm energy come from MacLeod et al. 2020; pond methane is set to zero, as for carp.\n\nFish are ~1 kg at harvest. Neurons (~65 million) are estimated from body size.",
         "land_types": {
             "temperate_grassland": 0.5,
             "tropical_savanna": 0.3,
@@ -2357,6 +2406,7 @@
             "common",
             "wild"
         ],
+        "notes": "Wild common octopus, nutrition from USDA raw octopus. Tagged 'wild' for the Over-Hunting slider.\n\nOctopuses are by far the most neuron-rich seafood here: ~500 million neurons (Young 1963, a direct count), about two-thirds in the arms, all counted. That's more than a chicken or duck. Each octopus is ~2 kg with ~80% edible, so fewer than one dies per kg, but each death counts heavily.\n\nEmissions average two fishing methods. Pots are 3.1 kg CO2e per kg landed (Almeida et al. 2022, Portugal) ÷ 80% edible ≈ 3.9. Trawling is at least double that (≈ 7.75, a lower bound). Much of the world catch (NW Africa, Asia) is trawled. Bycatch isn't modelled, which understates harm for trawled octopus. Availability is FAO's world octopus catch (~377 kt live weight) × 80% edible.",
         "nutrition": [
             {
                 "value": {

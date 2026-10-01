@@ -49,6 +49,15 @@ export default async function FoodPage({ params }: Props) {
       <h1>{food.name}</h1>
       <p>Type: {food.type}</p>
 
+      {food.notes && (
+        <>
+          <h2>How we got these numbers</h2>
+          {food.notes.split(/\n\s*\n/).map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </>
+      )}
+
       <h2>Nutrition (per 100g)</h2>
       <table>
         <tbody>

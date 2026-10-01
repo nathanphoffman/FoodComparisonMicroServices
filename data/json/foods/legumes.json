@@ -9,6 +9,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Cooked soybeans, with a cooked weight ratio of 2.2 to convert from dry. World yield ~2.8 t/ha; the US gets ~3.4 t/ha. Most of the world's soy is crushed for animal feed (meal) and oil. Only ~7% is eaten directly as tofu, soy milk and edamame.\n\nEmissions for eating soy are ~3.0 kg CO2e/kg, driven by Brazilian soy expanding into the Cerrado and Amazon edges (confidence 2). When soy appears in animal feed, it's treated as soybean meal with its own farm-gate value (~1.7–1.8 world, ~0.35 US), using economic allocation between meal and oil.\n\nGlyphosate dominates pesticide use. Per-hectare values are older estimates. Tofu, soybean oil and the Impossible products build on this entry.",
         "land_types": {
             "temperate_grassland": 0.55,
             "tropical_savanna": 0.3,
@@ -374,6 +375,7 @@
         "category": "legumes",
         "human_food": 1,
         "tags": [],
+        "notes": "Cooked lentils, with a cooked weight ratio of 2.5. Yield ~1.2 t/ha (FAO), mostly the Canadian prairies, India, Türkiye and Australia. Water was corrected in May 2026 from an erroneous 5,874 to Mekonnen & Hoekstra's 1,250 L/kg.\n\nLentils fix their own nitrogen, so they use no nitrogen fertilizer. Emissions are ~1.6 kg CO2e/kg, labelled as a Poore & Nemecek lentil estimate (their published 'Peas' pulse category is 0.98). The per-hectare pesticide value has no documented derivation. Peas borrow lentils' pesticide profile.",
         "land_types": {
             "temperate_grassland": 0.8,
             "dry": 0.2
@@ -626,6 +628,7 @@
             "legume",
             "common"
         ],
+        "notes": "Cooked chickpeas, with a cooked weight ratio of 2.7. World yield ~1 t/ha (FAO), depressed by dryland Indian production; the US gets ~1.4 t/ha.\n\nWater is high: 4,325 L/kg world, and 10,157 L/kg in the US. The US figure is almost all modelled grey water (Mekonnen & Hoekstra's nitrogen-runoff model), which seems implausible for a crop that fixes its own nitrogen. Treat the US water value with caution. Emissions are ~0.86 kg CO2e/kg, close to Poore & Nemecek's pulse figures. Chickpeas need little fertilizer.",
         "land_types": {
             "tropical_savanna": 0.5,
             "dry": 0.3,
@@ -949,6 +952,7 @@
         "tags": [
             "legume"
         ],
+        "notes": "Cooked black beans, with a cooked weight ratio of 2.6. Yield is FAO's average for all dry beans (~0.79 t/ha world); the US black-bean yield is ~2.3 t/ha (USDA NASS). Water is Mekonnen & Hoekstra's dry-bean figure. The US value is mostly modelled grey water from nitrogen runoff, which is questionable for a nitrogen-fixing crop.\n\nEmissions are ~2.0 kg CO2e/kg for Phaseolus beans (Poore & Nemecek's 'Other Pulses' is 1.79). Availability is all dry beans worldwide, of which black beans are a subset. Per-hectare pesticide and fertilizer values have no documented derivation. Kidney beans reuse them.",
         "land_types": {
             "temperate_grassland": 0.4,
             "tropical_savanna": 0.3,
@@ -1274,6 +1278,7 @@
             "soy",
             "processed"
         ],
+        "notes": "Firm tofu, nutrition from USDA. About 5 kg of soybeans make 9 kg of raw tofu (Hartini et al. 2024), so land is soy's yield × 1.8. Crop water is soy's ÷ 1.8, and per-hectare farm values are copied from soy.\n\nEmissions: Poore & Nemecek's own tofu value (3.16 kg CO2e/kg world, including Brazilian land-use change and processing) and a US manufacturer case study (0.98, farm to factory gate). Availability is an upper bound (confidence 1): the 7% of world soy eaten directly × 1.8, which also includes soy milk, edamame and tempeh.",
         "land_types": {
             "temperate_grassland": 0.55,
             "tropical_savanna": 0.3,
@@ -1591,6 +1596,7 @@
             "meat-substitute",
             "vegan"
         ],
+        "notes": "Impossible Burger, modelled from Impossible Foods' own Quantis LCA (ISO-reviewed). The 'Impossible Burger (Composite)' entry is the same product built up from its ingredients instead.\n\nLand (2.5 m² per kg → 4,000 kg per ha) and emissions (3.5 kg CO2e/kg, including heme fermentation and factory energy) come straight from Quantis. Note: the Quantis boundary stops at the factory gate, unlike Poore & Nemecek's cradle-to-retail values. Water, pesticides and fertilizer are a land-weighted blend of the dataset's soy, sunflower-oil and coconut-oil entries, using Quantis's land shares.\n\nAvailability is tiny: 2.7 Gg (2018 Oakland plant output) and 5.4 Gg (the plant's capacity target), both confidence 1. Added 2026-10-01; before then missing availability was scored as the worst possible value. Unlike the composite version, it doesn't blend in its ingredients' world supply, so it scores lower on availability.",
         "land_types": {
             "temperate_grassland": 0.76,
             "tropical_forest": 0.19,
@@ -1904,6 +1910,7 @@
         "category": "legumes",
         "human_food": 1,
         "tags": [],
+        "notes": "Cooked split peas, with a cooked weight ratio of 3.0 (from USDA raw vs cooked water content). Yield is FAOSTAT world dry peas (1.9 t/ha), mostly the Russian steppe and Canadian prairie. Water is Mekonnen & Hoekstra (1,979 L/kg); no US water value could be read reliably.\n\nEmissions are Poore & Nemecek's 'Peas' value (0.98 kg CO2e per kg dry peas), one of the lowest protein sources. Pesticide and fertilizer data are borrowed from lentils (same dryland nitrogen-fixing pulse; confidence 2). Peas need no nitrogen fertilizer. Fava beans borrow peas' pesticide profile, and pea protein is built on this entry.",
         "land_types": {
             "temperate_grassland": 0.8,
             "dry": 0.2
@@ -2146,6 +2153,7 @@
             "legume",
             "processed"
         ],
+        "notes": "Pea protein isolate powder (used in Beyond Burger), nutrition from Bob's Red Mill pea protein. About 3 kg of dry peas make 1 kg of isolate under economic allocation (Früh et al. 2026). The isolate is 27% of the pea dry matter by weight but carries 72% of the burden, because starch and fibre co-products are worth less. Land and crop water are peas × 3.0, and per-hectare farm values are copied from peas.\n\nEmissions: Früh et al. 2026 (4.74 kg CO2e/kg, Germany, economic allocation) and CarbonCloud's French isolate (4.04). About half is the wet-processing energy. The high sodium (963 mg per 100 g) comes from pH adjustment during processing.",
         "land_types": {
             "temperate_grassland": 0.8,
             "dry": 0.2
@@ -2387,6 +2395,7 @@
             "legume",
             "common"
         ],
+        "notes": "Cooked kidney beans, with a cooked weight ratio of 2.67 (USDA raw vs cooked water content). Yield is FAOSTAT 'Beans, dry' (~0.9 t/ha world, ~2.2 t/ha US). FAO doesn't separate kidney beans from other dry beans, and availability is likewise all dry beans.\n\nWater is Mekonnen & Hoekstra's dry-bean figure (5,053 L/kg). Emissions use Poore & Nemecek's 'Other Pulses' (1.79 kg CO2e per kg dry beans). Per-hectare pesticide, fertilizer, erosion and tillage values are reused from black beans (same species, Phaseolus vulgaris); those values themselves have no documented derivation.",
         "land_types": {
             "tropical_savanna": 0.5,
             "temperate_grassland": 0.3,
@@ -2667,6 +2676,7 @@
         "tags": [
             "legume"
         ],
+        "notes": "Cooked fava (broad) beans, with a cooked weight ratio of 3.13 (USDA raw vs cooked water content). China and Ethiopia grow about half the world's dry fava beans. Yield is FAOSTAT world (~2.2 t/ha), much higher than other dry beans.\n\nWater is Mekonnen & Hoekstra (2,018 L/kg). Emissions use Poore & Nemecek's 'Other Pulses' (1.79 kg CO2e per kg dry). That's probably high for fava beans, which fix a lot of nitrogen and need little fertilizer. There's no fava pesticide or fertilizer data, so those are borrowed from peas (another cool-season pulse; confidence 2). Added 2026-10-01 after missing data had been scored as zero pesticide deaths.",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_savanna": 0.25,

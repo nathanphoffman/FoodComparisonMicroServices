@@ -13,6 +13,7 @@
             "meat-substitute",
             "vegan"
         ],
+        "notes": "Impossible Burger modelled from its ingredients (a composite), rather than from its own LCA. The 'Impossible Meat' entry is the same product modelled from Impossible Foods' Quantis LCA instead.\n\nThe recipe is worked out from the 2023 label: ~22% soy protein concentrate, ~5.5% each sunflower and coconut oil (solved from total and saturated fat), ~5% minor ingredients, ~62% water. Soy protein concentrate is traced back to soybeans. Crop impacts (land, water, pesticides, farm emissions) come from those ingredients' own entries. Factory emissions (~2.3 kg CO2e/kg) come from the Quantis LCA, including heme fermentation, and are added on top.\n\nAvailability blends the product's own volume (~2.7 Gg/yr, from the 2018 Oakland plant) with its ingredients' world supply, so it isn't penalised for being a small brand. The recipe shares are confidence 2: labels only give ingredient order, not amounts.",
         "nutrition": [
             {
                 "value": {
@@ -177,6 +178,7 @@
             "meat-substitute",
             "vegan"
         ],
+        "notes": "Beyond Burger modelled from its ingredients (a composite). The recipe is worked out from the label: ~19% pea protein, ~7% canola oil, ~4% coconut oil, ~3% rice protein, ~7% minor ingredients (flavours, yeast, cocoa butter, methylcellulose), ~60% water. The oil shares are solved from total and saturated fat; rice protein is a rough estimate (confidence 1).\n\nCrop impacts come from the ingredients' entries: pea protein traces back to peas, rice protein to rice. Factory, packaging, cold storage and ingredient transport emissions (~1.7 kg CO2e/kg) come from the Heller & Keoleian 2018 University of Michigan LCA.\n\nAvailability blends Beyond Meat's 2024 sales volume (31.8 Gg, all products, so it overstates the burger) with its ingredients' supply.",
         "nutrition": [
             {
                 "value": {
@@ -344,6 +346,7 @@
             "cheese-substitute",
             "vegan"
         ],
+        "notes": "Violife's vegan Parmesan-style wedge, modelled from its ingredients. The recipe comes from the US label: ~17.5% coconut oil, ~28% potato starch, ~6% rice starch, ~3% rice protein, ~3.5% salt, ~40% water. Coconut oil and potato starch are the main crop impacts.\n\nThe non-crop part (manufacturing, packaging, distribution, retail) is 2.1 kg CO2e/kg. That's Quantis' 2022 LCA total for this product (3.4) minus the crops modelled here.\n\nUpfield publishes no Violife volumes, so its own availability is a deliberately low guess (0.5 Gg/yr, confidence 1), blended with its ingredients' supply. The nutrition is weak on protein (about 3.6 g per 100 g), which is the main reason it trails dairy Parmesan on nutrition.",
         "nutrition": [
             {
                 "value": {
@@ -516,6 +519,7 @@
             "cheese-substitute",
             "vegan"
         ],
+        "notes": "Follow Your Heart's grated vegan Parmesan, modelled from its ingredients. The recipe is worked out from the label: ~40% modified potato starch, ~18% palm oil and ~12% canola oil (solved from total and saturated fat), ~5% each cellulose, maltodextrin and minor ingredients, ~15% water.\n\nThere's no LCA for this product, so factory and packaging emissions reuse the Violife Parmesan figure (2.1 kg CO2e/kg; confidence 1). Palm oil brings tropical-forest land into the land-use score.\n\nOwn availability is a deliberately low guess (0.2 Gg/yr), blended with its ingredients' supply. The label's 5 g serving makes the nutrition values coarse (confidence 3).",
         "nutrition": [
             {
                 "value": {
@@ -689,6 +693,7 @@
             "beverage",
             "soda"
         ],
+        "notes": "Regular Coca-Cola, modelled from its ingredients: 10.6% sugar by weight (39 g per 355 mL can), split 85% cane / 15% beet like world sugar supply. The rest is carbonated water, caramel colour, phosphoric acid, flavours and caffeine, which have no crop footprint. The US version uses high fructose corn syrup, which isn't modelled.\n\nNutrition is from Coke's own label. It's pure sugar calories and has the worst nutrition score in the dataset.\n\nFactory, can, distribution, chilling and disposal emissions (0.44 kg CO2e/kg) come from the Carbon Trust–certified footprint of a Diet Coke can (150 g CO2e, GB 2009). Diet Coke is the same drink without sugar, so this covers everything except the sugar crop. A glass bottle has more than double the footprint of a can. Factory water is Coca-Cola's reported 1.78 L per L of drink.",
         "nutrition": [
             {
                 "value": {

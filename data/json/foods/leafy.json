@@ -7,6 +7,7 @@
         "category": "leafy",
         "human_food": 1,
         "tags": [],
+        "notes": "Lettuce, nutrition from USDA. 96% is edible. World yield ~25 t/ha (FAO); US ~34 t/ha (USDA, all fresh-market types, 2021–2024). FAOSTAT pools lettuce with chicory for production.\n\nWater is 130 L/kg from the Water Footprint Network's online calculator. Mekonnen & Hoekstra's own figure is 237; the two methods differ. The US value (113) is Mekonnen & Hoekstra's US average. Emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53), for field-grown lettuce.\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year.",
         "land_types": {
             "dry": 0.6,
             "temperate_forest": 0.4
@@ -318,6 +319,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Spinach, nutrition from USDA. Yield is ~20 t/ha (FAO). China grows about 90% of the world's spinach. Water is Mekonnen & Hoekstra (305 L/kg). Emissions: Poore & Nemecek's value (0.47) and 'Other Vegetables' (0.53).\n\nSpinach is grown in several short crops a year, each with seedbed preparation (~3 tillage passes). Pesticides (~0.6 kg/ha) and fertilizer (~120 kg/ha) are generic leafy-vegetable estimates; the pesticide total has no recorded derivation.",
         "land_types": {
             "dry": 0.6,
             "temperate_forest": 0.4
@@ -573,6 +575,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Kale, nutrition from USDA. FAO doesn't report kale separately (it's pooled with other brassicas), so yield (~15 t/ha) is an estimate from broccoli and cabbage yields (confidence 3). Water is Mekonnen & Hoekstra (237 L/kg). Emissions use Poore & Nemecek's brassica values (0.49–0.51).\n\nAvailability is weak: there's no world kale statistic, so it uses only US harvested area (2022 Census) × this yield ≈ 110 Gg (confidence 1). Real world supply is far larger (Europe, East Africa's sukuma wiki, Brazil's couve). Kale is therefore penalised on availability more than it should be.",
         "land_types": {
             "temperate_forest": 0.6,
             "dry": 0.4
@@ -828,6 +831,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Cabbage, nutrition from USDA. 80% is edible (outer leaves and core removed). China grows about half the world's cabbage. Yield is FAOSTAT: ~30.6 t/ha world, ~45.1 t/ha US.\n\nWater is Mekonnen & Hoekstra (280 L/kg). Emissions use Poore & Nemecek's 'Brassicas' (0.51 kg CO2e/kg). Pesticide and fertilizer rates come from USDA vegetable surveys (2020–2022; ~5.6 kg/ha pesticide, ~141 kg/ha fertilizer) and stand in for the world.",
         "land_types": {
             "temperate_forest": 0.7,
             "tropical_savanna": 0.2,

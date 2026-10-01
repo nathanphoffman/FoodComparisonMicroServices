@@ -195,6 +195,15 @@ plant-specific or animal-specific fields depending on `type`.
   "human_food": 0|1,         // 1 = edible by humans; 0 = feed/forage crop only (e.g. alfalfa)
   "tags":       [<string>],  // Descriptive tags, e.g. ["meat","common"], ["fish"], ["nut"]
 
+  // Plain-English summary for readers of how this food's numbers were derived:
+  // where nutrition, yield, water, emissions and (for animals) neuron/weight/death
+  // figures come from, any conversions (cooked ratio, milk-equivalent, value split),
+  // proxies borrowed from other foods, past corrections (CORRECTIONS.md), and known
+  // weak spots. Shown on the food's page (/foods/<slug>). Paragraphs are separated by
+  // a blank line ("\n\n"). Don't include computed scores — they change with the sliders.
+  // Update it whenever the food's data changes.
+  "notes":      <string>,
+
   // Optional plain-English explanation shown in the Direct Kill, Captive
   // Sentience and Sentient Harm tooltips. Explain the reasoning (which animals
   // die, why, and where the per-animal numbers come from) for a reader with no

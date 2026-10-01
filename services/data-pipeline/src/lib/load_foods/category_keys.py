@@ -13,7 +13,7 @@ CATEGORY_FILES = [
 
 FOOD_KEYS = {
     "id", "slug", "name", "type", "human_food", "tags", "nutrition", "availability_gg",
-    "sentient_harm_explanation", "land_types", "category",
+    "sentient_harm_explanation", "land_types", "category", "notes",
 }
 
 ANIMAL_KEYS = {

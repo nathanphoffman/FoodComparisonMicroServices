@@ -10,6 +10,7 @@
             "common",
             "beverage"
         ],
+        "notes": "Everything is per kg of brewed black coffee, not per kg of beans. We take green-bean data and scale it by 0.073 kg of green coffee per kg of brewed coffee (the Specialty Coffee Association's 55 g of grounds per litre). Nutrition is USDA brewed coffee: almost no calories, so coffee scores poorly whenever you compare by calories.\n\nYield, water and emissions all start from the bean. Land comes from the FAOSTAT world green-coffee yield (~900 kg/ha). Water is the Mekonnen & Hoekstra green-coffee footprint, and emissions are Poore & Nemecek's coffee figure (28.5 kg CO2e per kg beans). Most of that emission total is land-use change and supply-chain losses. Brewing water and kettle energy are not counted, as for every other drink.\n\nWeak spots: soil erosion, pesticide use, fertilizer and CO2 capture are rough estimates (confidence 1). No global averages exist, and practice ranges from unsprayed shade-grown smallholdings to intensive Brazilian full-sun farms. Most coffee land is cleared tropical forest, so the Land Use sliders weigh it heavily.",
         "land_types": {
             "tropical_forest": 0.65,
             "tropical_savanna": 0.35
@@ -241,6 +242,7 @@
             "common",
             "beverage"
         ],
+        "notes": "Per kg of brewed tea: one 2.5 g tea bag in a 250 mL cup, so 10 g of made tea per kg. Nutrition is USDA brewed black tea (about 1 kcal per 100 g), so tea scores poorly when comparing by calories.\n\nLand is the FAOSTAT world fresh-leaf yield, divided by 4 kg of fresh leaf per kg of made tea (a Tamil Nadu LCA). Water is the Mekonnen & Hoekstra figure for made tea. Emissions come from the same Tamil Nadu study: cultivation, processing (black tea is withered, rolled, oxidised and dried, the most energy of the three teas), packaging and transport. The kettle is left out, as for coffee, even though it is the study's biggest single stage.\n\nTea is heavily fertilised (~300 kg/ha). Pesticide use, soil erosion and CO2 capture are rough estimates (confidence 1). Availability is world black-tea output from a 2023 industry report.",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_forest": 0.5
@@ -472,6 +474,7 @@
             "common",
             "beverage"
         ],
+        "notes": "Per kg of brewed tea: 2 g of leaves per 250 mL cup, the common Chinese serving, so 8 g of made tea per kg. Nutrition is USDA brewed green tea (about 1 kcal per 100 g).\n\nFarm data are shared with black tea: FAOSTAT fresh-leaf yield ÷ 4 kg leaf per kg made tea, the Mekonnen & Hoekstra water footprint, ~300 kg/ha fertilizer, and rough estimates for pesticides, erosion and CO2 capture. Emissions come from the Tamil Nadu LCA. Green tea's processing is lighter than black tea's (steamed or pan-fired, not oxidised), and fewer grams go in each cup, so it comes out lower per kg brewed.\n\nAvailability is China's green-tea output plus Japan, Vietnam and Indonesia (2023 industry report).",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_forest": 0.5
@@ -702,6 +705,7 @@
         "tags": [
             "beverage"
         ],
+        "notes": "Per kg of brewed tea at 8 g of leaves per kg, the same serving as green tea. USDA has no white tea record, so brewed green tea is used as a stand-in for nutrition: both are about zero-calorie infusions.\n\nFarm data are shared with the other teas: FAOSTAT yield, Mekonnen & Hoekstra water, heavy fertilizer, and rough estimates for pesticides and erosion. Emissions are the lowest of the three teas, because white tea is only sun-withered and dried, so processing energy is about zero. Packaging then dominates.\n\nWhite tea is a niche product (~3% of China's tea), so its availability is small.",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_forest": 0.5

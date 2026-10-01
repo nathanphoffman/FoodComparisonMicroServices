@@ -7,6 +7,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
+        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.",
         "nutrition": [
             {
                 "value": {
@@ -277,6 +278,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
+        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.",
         "nutrition": [
             {
                 "value": {
@@ -515,6 +517,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
+        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.",
         "nutrition": [
             {
                 "value": {
@@ -653,6 +656,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
+        "notes": "Oil pressed from reduction fish (mostly anchoveta) during fishmeal production, fed mainly to farmed salmon. It's not eaten as food here.\n\nWild fish killed: each kg of meal or oil takes about 3.6 kg of fish. About half of fish oil comes from trimmings, so 1.78 kg of fish are killed per kg of fish oil.\n\nEmissions are much higher per kg than fishmeal (~4.4 kg CO2e/kg in the Peruvian LCA), because fish yield little oil relative to meal. The split between meal and oil depends on the allocation method, which is why confidence is 2.",
         "nutrition": [
             {
                 "value": {

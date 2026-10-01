@@ -7,6 +7,7 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "notes": "Fresh apples, nutrition from USDA. 90% is edible (core and stem removed).\n\nWorld yield is FAO's average (~18 t/ha). The US gets about twice that (39.7 t/ha, USDA NASS 2019–2023). Water is the Mekonnen & Hoekstra footprint, lower in the US. Emissions are Poore & Nemecek's apple value (0.43 kg CO2e/kg), one of the lowest fruits.\n\nApples are sprayed often against scab, codling moth and other pests (captan, carbaryl, imidacloprid and others; ~5 kg/ha). The per-hectare figures for erosion, pesticides, fertilizer and CO2 capture are older estimates: their notes don't say where the numbers came from, so treat them as rough.",
         "land_types": {
             "temperate_forest": 0.8,
             "temperate_grassland": 0.2
@@ -347,6 +348,7 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "notes": "Bananas, nutrition from USDA. Only 65% is edible (peel removed). FAO yield (~32 t/ha), Mekonnen & Hoekstra water, and Poore & Nemecek emissions (0.86 kg CO2e/kg, including tropical land-use change).\n\nBananas are grown in humid tropical lowlands, much of it former rainforest, which the Land Use sliders weigh heavily. Export plantations spray heavily (mancozeb fungicide against black sigatoka, paraquat, chlorpyrifos; ~7 kg/ha). The per-hectare erosion, pesticide, fertilizer and CO2-capture figures are older estimates without a documented derivation. Pineapple borrows banana's pesticide profile.",
         "land_types": {
             "tropical_forest": 0.9,
             "tropical_savanna": 0.1
@@ -618,6 +620,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Avocados, nutrition from USDA. 75% is edible (skin and pit removed).\n\nAvocados are thirsty and land-hungry: ~2,000 L of water per kg (Mekonnen & Hoekstra), with heavy irrigation in Chile, Peru and Mexico. Emissions (~2.5 kg CO2e/kg) are high for a fruit, driven by forest clearing for orchards in Michoacán, Mexico. The value is labelled as Poore & Nemecek's 'other tropical fruits' category, but that category isn't in the OWID dataset, so its exact basis is uncertain.\n\nSoil erosion and CO2 capture have notes that don't match the field (copied emission notes), so treat them as rough estimates.",
         "land_types": {
             "tropical_forest": 0.5,
             "dry": 0.5
@@ -871,6 +874,7 @@
         "category": "fruits",
         "human_food": 1,
         "tags": [],
+        "notes": "Coconut meat, nutrition from USDA. Yield is FAO's average (5.6 t/ha of coconut meat equivalent), mostly Indonesia, the Philippines and India. Some plantations replaced mangrove and coastal wetland.\n\nSeveral values here are weak. Water (2,500 L/kg) is an estimate, because Mekonnen & Hoekstra have little direct coconut data (confidence 2). Emissions (3.3 kg CO2e/kg) are an estimate from a broad tropical-fruit category, as Poore & Nemecek don't report coconut on its own. Erosion and CO2 capture carry notes copied from the emissions field. Coconut oil is derived from this entry.",
         "land_types": {
             "tropical_forest": 0.8,
             "wetland": 0.2
@@ -1100,6 +1104,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Mangoes, nutrition from USDA. 69% is edible. Yield (~8 t/ha) is FAO's average, mostly India, China and Thailand. Note that FAOSTAT pools mango with guava and mangosteen for production.\n\nWater (686 L/kg) is Mekonnen & Hoekstra. Emissions (1.1 kg CO2e/kg) come from Poore & Nemecek's 'Other Fruit' range. Pesticides (malathion, mancozeb and others, ~1.5 kg/ha) and fertilizer (~150 kg/ha) are generic orchard estimates. Erosion and CO2 capture carry notes copied from the emissions field.",
         "land_types": {
             "tropical_forest": 0.5,
             "tropical_savanna": 0.5
@@ -1371,6 +1376,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Oranges, nutrition from USDA. 73% is edible (peel removed). World yield is FAO's average (~24 t/ha). The US is lower (18 t/ha), because citrus greening disease has cut Florida's crop sharply since 2019.\n\nEmissions are Poore & Nemecek's citrus value (0.39 kg CO2e/kg), among the lowest fruits. Water is Mekonnen & Hoekstra (lower in the US). Pesticide data is from the USDA citrus survey (Florida and California, ~2.5 kg/ha) and also stands in for the world value. Brazil's São Paulo region, the biggest grower, is former cerrado and Atlantic forest edge.",
         "land_types": {
             "tropical_savanna": 0.4,
             "dry": 0.6
@@ -1714,6 +1720,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Fresh strawberries, nutrition from USDA. 94% is edible (caps removed). World yield ~24 t/ha (FAOSTAT); the US gets ~57 t/ha on irrigated California coast. Emissions: Poore & Nemecek's 'Berries & Grapes' world value (1.53) and a US farm-gate study (1.83, California and Florida).\n\nStrawberries are the most heavily sprayed crop in the dataset: ~267 kg of active ingredient per ha (USDA, CA + FL). 70–85% of that is soil fumigants (chloropicrin, 1,3-dichloropropene) injected before planting. Fumigants aren't in the pesticide toxicity table, so they add to pesticide weight but not to the modelled insect, bee and worm deaths. There's no world pesticide figure, so the world falls back to the US value, which probably overstates the world. California fields are also tilled ~13 times a year.",
         "land_types": {
             "dry": 0.6,
             "temperate_forest": 0.4
@@ -2065,6 +2072,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Cultivated highbush blueberries, nutrition from USDA. 95% is edible.\n\nYield: the FAOSTAT world average (~6.6 t/ha) mixes in managed wild lowbush berries from Canada, which yield less. The US value (7.2 t/ha) is cultivated only. Water is Mekonnen & Hoekstra. Emissions: Poore & Nemecek's 'Berries & Grapes' (1.53) and a Chilean orchard study (0.48, farm gate, organic).\n\nPesticides are from USDA surveys (~14.6 kg/ha, mostly captan and other fungicides). There's no world figure, so the world falls back to the US. Blueberry bushes bear for decades and aren't tilled after planting. World availability leaves out China, which doesn't report to FAOSTAT.",
         "land_types": {
             "temperate_forest": 0.8,
             "dry": 0.2
@@ -2522,6 +2530,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Table grapes, nutrition from USDA. 96% is edible (stems removed). Yield is FAOSTAT world (~11.4 t/ha) and US (~14.5 t/ha). FAOSTAT counts all grapes, and about half the world's tonnage goes to wine.\n\nWater is Mekonnen & Hoekstra (609 L/kg). Emissions are Poore & Nemecek's 'Berries & Grapes' (1.53 kg CO2e/kg). Pesticides are from USDA table-grape surveys (2021/2023/2025): ~95 kg/ha, mostly elemental sulfur and calcium polysulfide fungicides, which are low-toxicity and not in the pesticide toxicity table. That figure also stands in for the world. Mediterranean-climate vineyards count as 'dry' land.",
         "land_types": {
             "dry": 0.55,
             "temperate_forest": 0.45
@@ -2761,6 +2770,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Watermelon, nutrition from USDA. Only 52% is edible (rind and seeds removed), so the land and water per kg eaten are about double the per-kg-harvested figures. China grows about 60% of the world's watermelons.\n\nYield is FAOSTAT (~33.7 t/ha world, 39.4 US). Water is Mekonnen & Hoekstra (235 L/kg). Poore & Nemecek don't report watermelon, so emissions use their 'Other Fruit' average (1.05 kg CO2e/kg; confidence 2). Pesticide and fertilizer rates come from USDA vegetable surveys (2020–2024): ~12 kg/ha of pesticide, mostly mancozeb and chlorothalonil fungicides. They stand in for the world too.",
         "land_types": {
             "temperate_forest": 0.6,
             "dry": 0.25,
@@ -3052,6 +3062,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Pineapple, nutrition from USDA. Only 51% is edible (core, crown and peel removed). Yield is FAOSTAT world (~27.6 t/ha), from the Philippines, Costa Rica, Indonesia and others, often on cleared lowland forest.\n\nWater is Mekonnen & Hoekstra (255 L/kg). Emissions use Poore & Nemecek's 'Other Fruit' average (1.05; confidence 2). There's no pineapple pesticide or fertilizer data, so those are borrowed from banana (another tropical plantation fruit; confidence 2). That was added on 2026-10-01; before then the missing data was scored as zero pesticide deaths.",
         "land_types": {
             "tropical_forest": 0.5,
             "tropical_savanna": 0.5

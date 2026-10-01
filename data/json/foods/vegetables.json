@@ -9,6 +9,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Tomatoes, nutrition from USDA. World yield ~38 t/ha (FAO). The US is ~97 t/ha, mostly California processing tomatoes. Water is Mekonnen & Hoekstra (lower in the US).\n\nEmissions are Poore & Nemecek's tomato value (2.09 kg CO2e/kg), high for a vegetable. That average includes heated greenhouse tomatoes; field tomatoes alone are about 0.7. Many tomatoes you buy in winter are greenhouse-grown, so the higher figure is realistic for them.\n\nPer-hectare erosion, pesticide (~3.5 kg/ha), fertilizer, tillage and CO2-capture values are older estimates whose notes don't explain their derivation.",
         "land_types": {
             "dry": 0.5,
             "temperate_forest": 0.3,
@@ -334,6 +335,7 @@
         "category": "vegetables",
         "human_food": 1,
         "tags": [],
+        "notes": "Cucumbers, nutrition from USDA. Yield is FAO's average (~35 t/ha), mostly China.\n\nWater is 240 L/kg. Note that Mekonnen & Hoekstra's own figure is 353 L/kg; the lower value was kept because much production is greenhouse-grown, which uses less water per kg. Emissions use Poore & Nemecek's 'Other Vegetables' average (0.53), but heated greenhouse cucumbers would be much higher.\n\nPer-hectare erosion, pesticide, fertilizer, tillage and CO2-capture values are older estimates without a documented derivation.",
         "land_types": {
             "temperate_forest": 0.7,
             "dry": 0.3
@@ -589,6 +591,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Potatoes, nutrition from USDA. World yield ~22 t/ha (FAO). The US gets ~50 t/ha (USDA NASS 2019–2023), so US potatoes need less than half the land per kg. Water is Mekonnen & Hoekstra; the US value is higher because of grey water from fertilizer runoff.\n\nEmissions are Poore & Nemecek's potato value (0.46 kg CO2e/kg), one of the lowest foods. Pesticides are mostly mancozeb (late blight fungicide), plus chlorpyrifos, imidacloprid and metolachlor (~4 kg/ha). The per-hectare erosion, pesticide, fertilizer, tillage and CO2-capture values are older estimates whose notes cite the yield source rather than explaining the number.",
         "land_types": {
             "temperate_forest": 0.7,
             "temperate_grassland": 0.3
@@ -915,6 +918,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Broccoli, nutrition from USDA. 89% is edible. Yield is FAO (~15 t/ha world; ~16 t/ha US). FAOSTAT pools broccoli with cauliflower for production. Water is Mekonnen & Hoekstra (cauliflower and broccoli group).\n\nEmissions use Poore & Nemecek's 'Brassicas' average (0.51 kg CO2e/kg). Per-hectare erosion, pesticide (~2 kg/ha), fertilizer, tillage and CO2-capture values are older estimates whose notes don't explain their derivation.",
         "land_types": {
             "temperate_forest": 0.5,
             "dry": 0.5
@@ -1241,6 +1245,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Sweet potatoes, nutrition from USDA. World yield ~11 t/ha; the US gets ~22 t/ha (USDA NASS). About half the world crop is grown in China. Water is Mekonnen & Hoekstra; the US value is much higher because of grey water from fertilizer runoff.\n\nEmissions are 0.59 kg CO2e/kg, slightly above Poore & Nemecek's 'Root Vegetables' (0.43), to reflect tropical smallholder systems. Several world values (yield, water, erosion, pesticide, fertilizer) have no recorded derivation. Sweet potato's pesticide profile (~0.8 kg/ha) is also borrowed by cassava.",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_savanna": 0.3,
@@ -1536,6 +1541,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Garlic, nutrition from USDA. 87% is edible. China grows about 75% of the world's garlic. World yield ~18 t/ha (FAO); US ~17 t/ha (California).\n\nWater is Mekonnen & Hoekstra (656 L/kg world, 379 US). Poore & Nemecek don't report garlic. Emissions are 0.63 kg CO2e/kg: their 'Onions & Leeks' value (0.5) adjusted up for garlic's heavier fertilizer use (~180 kg/ha). That adjustment is a judgment call (confidence 3). FAOSTAT's production item is labelled 'Green garlic' in the bulk file, but its ~29.5 Mt matches total world garlic.",
         "land_types": {
             "temperate_forest": 0.8,
             "dry": 0.2
@@ -1846,6 +1852,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Bell peppers, nutrition averaged from USDA green and red peppers. Yield is FAOSTAT 'Chillies and peppers, green' (~15.7 t/ha world, ~31.9 US). That item also includes fresh chillies, which yield less, so bell pepper yield is probably a bit understated.\n\nWater is Mekonnen & Hoekstra (379 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). Heated Dutch greenhouse peppers are much higher (~1.3 at the farm alone).\n\nUS peppers are heavily treated: ~94.5 kg/ha of active ingredient, about 80% of it soil fumigants that aren't in the pesticide toxicity table (16.8 kg/ha without them). That figure stands in for the world too.",
         "land_types": {
             "temperate_forest": 0.4,
             "dry": 0.25,
@@ -2159,6 +2166,7 @@
             "processed",
             "starch"
         ],
+        "notes": "Potato starch (used in cooking and in vegan cheese composites), nutrition averaged from three EU product labels. About 5 kg of fresh potatoes make 1 kg of starch (Starch Europe: 7.5 Mt of starch potatoes → 1.5 Mt of starch a year). So land and crop water are the potato entry's values × 5, and per-hectare farm values are copied from potato.\n\nEmissions are from Starch Europe's 2022 LCA (~0.52 kg CO2e/kg, cradle to factory gate). Starch potatoes carry more starch than table potatoes, so the 5× factor may slightly overstate land. Availability is EU production only (~1.5 Mt), a lower bound for the world.",
         "land_types": {
             "temperate_forest": 0.7,
             "temperate_grassland": 0.3
@@ -2518,6 +2526,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Dry bulb onions, nutrition from USDA. 90% is edible. Yield is FAOSTAT: ~19 t/ha world, ~61 t/ha in the US, so US onions need about a third of the land per kg.\n\nWater is Mekonnen & Hoekstra (345 L/kg). Emissions use Poore & Nemecek's 'Onions & Leeks' (0.5 kg CO2e/kg). Pesticide and fertilizer rates come from USDA vegetable surveys (2020–2024): ~46 kg/ha of pesticide, much of it soil fumigant (metam) not in the toxicity table. Mancozeb and chlorothalonil are the main fungicides. Fertilizer is heavy (~339 kg/ha). With no world data, the world falls back to these US values.",
         "land_types": {
             "tropical_savanna": 0.35,
             "temperate_forest": 0.35,
@@ -2860,6 +2869,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Carrots, nutrition from USDA. 89% is edible. Yield is FAOSTAT 'Carrots and turnips': ~35 t/ha world, ~49 t/ha US. China grows about 40%.\n\nWater is Mekonnen & Hoekstra (195 L/kg). Emissions use Poore & Nemecek's 'Root Vegetables' (0.43). US pesticide use is high (~115 kg/ha), but 65–95% of it is soil fumigant (1,3-dichloropropene, metam) not in the toxicity table. Excluding fumigants it's ~16–27 kg/ha, and the only listed compound with disclosed data is pendimethalin. With no world data, the world falls back to the US values.",
         "land_types": {
             "temperate_forest": 0.7,
             "dry": 0.2,
@@ -3066,6 +3076,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Cassava (manioc), a staple for hundreds of millions of people in Africa, Asia and Latin America. Nutrition is USDA raw cassava. It must be cooked to remove natural cyanide compounds, but boiling changes its weight little. 84% is edible.\n\nYield is FAOSTAT world (~10 t/ha). Water is Mekonnen & Hoekstra: almost all rain-fed, no irrigation. Emissions are Poore & Nemecek's cassava value (1.32 kg CO2e/kg), higher than other roots because of land-use change in the tropics.\n\nThere's no cassava pesticide or fertilizer data, so those are borrowed from sweet potato (another low-input tropical root crop; confidence 2). Before 2026-10-01 this data was missing, and the scorer counted it as zero pesticide deaths. That pushed cassava above corn in the rankings, which was wrong.",
         "land_types": {
             "tropical_savanna": 0.6,
             "tropical_forest": 0.4
@@ -3262,6 +3273,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Pumpkins and squash, nutrition from USDA raw pumpkin. 70% is edible (seeds, rind and stem removed). Yield is FAOSTAT 'Pumpkins, squash and gourds': ~15.3 t/ha world, ~22.6 t/ha US.\n\nWater is Mekonnen & Hoekstra (336 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). Pesticide and fertilizer rates come from USDA pumpkin surveys (2020–2024; ~9.5 kg/ha pesticide) and stand in for the world. One 2024 mancozeb figure was dropped, because it was more mancozeb than the whole 2024 fungicide total.",
         "land_types": {
             "temperate_forest": 0.5,
             "tropical_savanna": 0.3,
@@ -3621,6 +3633,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Eggplant (aubergine), nutrition from USDA. 81% is edible. China grows about two-thirds of the world's eggplant and India about a quarter. Yield is FAOSTAT world (~28.8 t/ha). Water is Mekonnen & Hoekstra (362 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53).\n\nPesticide and fertilizer data are from the last USDA eggplant survey (2010, only ~900 US acres): ~5.2 kg/ha pesticide, 354 kg/ha fertilizer. That's old and tiny, and South Asian eggplant is sprayed far more heavily (against fruit and shoot borer), so pesticide harm is likely understated (confidence 2). Before 2026-10-01 pesticide data was missing and scored as zero.",
         "land_types": {
             "temperate_forest": 0.6,
             "tropical_savanna": 0.4

@@ -14,7 +14,7 @@ def insert(connection: sqlite3.Connection, foods: list[Food]) -> None:
     """Inserts all food records into the foods table."""
     for food in foods:
         connection.execute(
-            "INSERT INTO foods (id, slug, name, type, nutrition, human_food, tags) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            "INSERT INTO foods (id, slug, name, type, nutrition, human_food, tags, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             (
                 food["id"],
                 food["slug"],
@@ -23,5 +23,6 @@ def insert(connection: sqlite3.Connection, foods: list[Food]) -> None:
                 json.dumps(food["nutrition"]),
                 food["human_food"],
                 json.dumps(food.get("tags") or []),
+                food.get("notes"),
             ),
         )

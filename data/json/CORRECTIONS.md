@@ -6,6 +6,37 @@ still open. Per-value details live in the `note` of each SourcedValue (search fo
 
 ---
 
+## 2026-10-01 — Bivalve body weights standardized for shell
+
+### What was wrong
+
+`weight_kg` for mussels, oysters and clams was whole live weight, shell on. Shells are a very
+different share of each animal (oysters ~90% non-meat, clams ~83%, mussels ~73%), and the
+intelligence score divides by body weight, so oysters looked far less sentient per animal
+purely because of their heavy shells.
+
+### What changed (seafood.json; notes start `CORRECTION 2026-10-01`)
+
+Standardized body weight = meat weight × (1 + average non-meat:meat ratio of the three, 5.53),
+so each carries the same shell burden relative to its soft body, like bone for mammals.
+Non-meat = shell + intervalvular water, from each entry's existing meat yield.
+`lifetime_output_kg` is now set to the real meat per animal so deaths per kg are unchanged.
+
+| | Live (old) | Meat yield | Meat/animal | Non-meat:meat | weight_kg (new) |
+|---|---|---|---|---|---|
+| Mussels | 12 g | 0.27 | 3.24 g | 2.70 | 21.2 g |
+| Oysters | 70 g | 0.10 | 7.00 g | 9.00 | 45.7 g |
+| Clams | 16 g | 0.17 | 2.72 g | 4.88 | 17.8 g |
+
+Scores (default sliders): oysters 2.79 → 2.64, mussels 2.27 → 2.45, clams 2.40 → 2.44.
+
+### Still open
+
+- Oyster meat yield 0.10 may be low: a Pacific oyster study reports soft tissue 14–17% of total
+  weight (KSDB, Dev. Reprod. 25:67). A higher yield would lower the oyster ratio and the average.
+
+---
+
 ## 2026-10-01 — Maple syrup: no land use (tapped native forest)
 
 ### What was wrong

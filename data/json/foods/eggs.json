@@ -9,6 +9,7 @@
         "tags": [
             "common"
         ],
+        "notes": "Chicken eggs from commercial laying hens. Nutrition is USDA whole egg.\n\nThe animal side: each hen lays about 20.6 kg of eggs over a 72-week laying cycle (Lohmann Brown breed standard). One male chick is killed at the hatchery for every hen raised, because male layer chicks don't lay and grow too slowly for meat. In-ovo sexing removes some male embryos before hatching in the EU, but under 1% in the US. Hens spend about 1.5 years in captivity; chicks about 1 day. The neuron count is the measured chicken figure (221 million).\n\nFeed is corn and soy. Emissions split into on-farm manure methane and nitrous oxide (P&N and GLEAM agree) plus Poore & Nemecek's post-farm stages. An earlier version counted only on-farm energy and left out transport, packaging and retail; that was fixed on 2026-09-26.",
         "land_types": {
             "temperate_grassland": 0.75,
             "tropical_savanna": 0.15,

@@ -25,6 +25,7 @@ export interface Food {
   nutrition: ISourced<NutritionValue>[];
   human_food: 0 | 1;
   tags: string[];
+  notes: string | null;
 }
 
 export interface Animal {

@@ -7,6 +7,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Shelled almond kernels, nutrition from USDA. About 80% of the world's almonds come from California's Central Valley, so yield (~3 t/ha) is California data used for every region.\n\nAlmonds are famously thirsty: ~10,000–13,000 L per kg of kernels. That's a California orchard study (10,240) and Mekonnen & Hoekstra (13,080), most of it irrigation water in a drought-prone region. Emissions use Poore & Nemecek's tree-nut figure (~2.3 kg CO2e/kg).\n\nCommercial almond orchards rely on trucked-in honeybee colonies for pollination (about two-thirds of all US managed hives each February), which stresses bees. That indirect harm isn't scored. Per-hectare pesticide (~8.5 kg/ha) and fertilizer notes were copied from the water note, so their exact derivation is unclear. Availability is FAOSTAT in-shell production × 35% kernel (FAO). Almond milk builds on this entry.",
         "land_types": {
             "dry": 1.0
         },
@@ -309,6 +310,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Shelled walnut kernels, nutrition from USDA. Mostly China and irrigated California. Yield (~3.5 t/ha) is industry data.\n\nWater averages Mekonnen & Hoekstra (7,744 L/kg) and a tree-nut study (9,279). Emissions use Poore & Nemecek's tree-nut figure (~2.3 kg CO2e/kg). Per-hectare pesticide and fertilizer notes were copied from the water note, so their derivation is unclear. Availability is FAOSTAT in-shell production × 40% kernel (FAO).",
         "land_types": {
             "temperate_forest": 0.5,
             "dry": 0.5
@@ -572,6 +574,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Cashew kernels, nutrition from USDA. Grown mostly in West Africa, India and Vietnam, at a low yield (~0.7 t/ha, industry data), so cashews need a lot of land per kg.\n\nEmissions (~3.5 kg CO2e/kg) are at the top of Poore & Nemecek's tree-nut range, because the shell contains a caustic oil and must be roasted and shelled by hand or machine before the kernel is edible. Water (9,280 L/kg), pesticide and fertilizer values have no documented derivation. Availability is FAOSTAT in-shell production × 25% kernel (FAO).",
         "land_types": {
             "tropical_savanna": 0.6,
             "tropical_forest": 0.4
@@ -809,6 +812,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Pistachio kernels, nutrition from USDA. Grown in dry, irrigated regions of Iran, California and Türkiye. Yield (~1.2 t/ha) is industry data.\n\nWater averages Mekonnen & Hoekstra (10,697 L/kg) and a tree-nut study (11,356). Emissions (~2.8 kg CO2e/kg) are slightly above other tree nuts because of irrigation pumping in arid regions. Per-hectare pesticide and fertilizer notes were copied from the water note. Availability is FAOSTAT in-shell production × ~49% kernel.",
         "land_types": {
             "dry": 1.0
         },
@@ -1071,6 +1075,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Pecan kernels, nutrition from USDA. Grown in the US Southeast and Southwest and northern Mexico. Yield (~1.5 t/ha), water (~10,000 L/kg), pesticide and fertilizer all cite generic 'industry data' with no specific figures behind them (confidence 3).\n\nEmissions use Poore & Nemecek's tree-nut figure (~2.3 kg CO2e/kg). Availability is the International Nut Council's world pecan kernel production (~156 kt a year).",
         "land_types": {
             "temperate_forest": 0.7,
             "dry": 0.3
@@ -1324,6 +1329,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Hazelnut kernels, nutrition from USDA. Turkey's Black Sea coast produces most of the world's hazelnuts. Yield (~1.7 t/ha) is industry data.\n\nWater averages Mekonnen & Hoekstra (9,807 L/kg) and a tree-nut study (10,511). Emissions use Poore & Nemecek's tree-nut figure (~2.3 kg CO2e/kg); Turkish orchards are largely rain-fed. Per-hectare pesticide and fertilizer notes were copied from the water note. Availability is FAOSTAT in-shell production × 50% kernel (FAO).",
         "land_types": {
             "temperate_forest": 1.0
         },
@@ -1570,6 +1576,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Macadamia kernels, nutrition from USDA. Grown in South Africa, Kenya, Australia and Hawaii. Yield (~2.5 t/ha), water, pesticide and fertilizer values have no documented derivation.\n\nEmissions (~3.5 kg CO2e/kg) are at the top of Poore & Nemecek's tree-nut range, because the very hard shell needs energy-intensive cracking. Availability is the International Nut Council's 2024 world kernel production (~89 kt, a single year).",
         "land_types": {
             "tropical_forest": 0.5,
             "tropical_savanna": 0.5
@@ -1825,6 +1832,7 @@
         "tags": [
             "wild"
         ],
+        "notes": "Brazil nut kernels, nutrition from USDA. Brazil nuts are gathered from wild trees in the Amazon rainforest; they've never been successfully farmed at scale. So there's no farmland: land use, crop water, pesticides and fertilizer are all zero (the dataset's wild-harvest rule). It's tagged 'wild', so the Over-Gathering slider divides its score.\n\nEmissions are ~0.2 kg CO2e/kg, mostly harvest transport, one of the lowest of any food. Because the scorer treats zero land and water as 'perfect', Brazil nuts get a large bonus on those measures. Availability is FAOSTAT in-shell production × ~33% kernel (~26 Gg), very small.",
         "nutrition": [
             {
                 "value": {
@@ -1969,6 +1977,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Shelled peanuts, nutrition from USDA. Peanuts are a legume, not a tree nut. World yield is ~1.6 t/ha (in-shell, industry data); the US gets ~4.4 t/ha (USDA NASS).\n\nWater is ~3,740 L per kg of kernels: Mekonnen & Hoekstra's in-shell figure adjusted for ~74% kernel recovery. Emissions are Poore & Nemecek's groundnut value (~3.2 kg CO2e/kg). That's higher than tree nuts, because tillage, drying and aflatoxin control outweigh the nitrogen-fixing benefit. Peanuts need no nitrogen fertilizer. Per-hectare pesticide and fertilizer notes were copied from the water note. Availability is FAOSTAT in-shell production × 70% shelling (FAO). Peanut oil builds on this entry.",
         "land_types": {
             "tropical_savanna": 0.5,
             "temperate_grassland": 0.3,
@@ -2280,6 +2289,7 @@
         "tags": [
             "wild"
         ],
+        "notes": "Pine nut kernels, nutrition from USDA. Mostly gathered from standing conifer forests (Korean pine, Siberian pine, pinyon), not farmland. It's tagged 'wild' for the Over-Gathering slider.\n\nInconsistency: unlike Brazil nuts and maple syrup, pine nuts still have a yield (200 kg/ha). So they get charged land use and forest-clearing deaths, even though the forest isn't cleared. Their land use is probably overstated. Yield, water (9,000 L/kg), pesticide and fertilizer have no documented derivation.\n\nEmissions (~2 kg CO2e/kg) are the low end of Poore & Nemecek's tree-nut range. Availability (~35 kt kernels) is extrapolated from China's share of world output (International Nut Council). It swings with 3–5-year bumper crops.",
         "land_types": {
             "temperate_forest": 1.0
         },
@@ -2500,6 +2510,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
+        "notes": "Sunflower seeds, nutrition from USDA. Mostly grown on the Ukrainian and Russian steppe, which the Land Use sliders weigh lightly. Yield is ~2 t/ha (FAO). Water is Mekonnen & Hoekstra (3,366 L/kg).\n\nEmissions use Poore & Nemecek's oilseed figure (~1.1 kg CO2e/kg), mostly fertilizer nitrous oxide. Pesticide and fertilizer values have no documented derivation. Most of the world crop is crushed for oil, so availability is the whole crop. Sunflower oil reuses this entry's per-hectare values.",
         "land_types": {
             "temperate_grassland": 1.0
         },
@@ -2755,6 +2766,7 @@
             "milk",
             "beverage"
         ],
+        "notes": "Unsweetened almond milk, nutrition from USDA (FDC Foundation Foods). It's only about 2.5% almonds, judging by its calories, protein and water. So land is the almond yield ÷ 2.5% ≈ 120,000 kg of almond milk per ha. That was corrected on 2026-09-26: the earlier Poore & Nemecek almond-milk land figure implied ~15% almonds and overstated land about 6×.\n\nWater (368 L/kg) and emissions (0.70 kg CO2e/kg, cradle to retail) are Poore & Nemecek's own almond-milk values. The US water value is almonds' California water × 2.5%. Per-hectare pesticide and fertilizer are copied from almonds.\n\nAlmond orchards depend on trucked-in honeybee colonies; that indirect bee harm is described but not scored. Availability (~4.2 Mt) is a rough estimate from global market value ÷ an assumed retail price (confidence 1).",
         "land_types": {
             "dry": 1.0
         },

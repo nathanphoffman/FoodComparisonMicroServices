@@ -10,6 +10,7 @@
             "meat",
             "common"
         ],
+        "notes": "Beef, nutrition from USDA. This is world-average beef, which includes a large share from grazing systems on cleared tropical land: cattle ranching drives most Amazon deforestation.\n\nEmissions come from Poore & Nemecek's global average (~99 kg CO2e/kg), split into methane (~1.9 kg), nitrous oxide and direct CO2, with feed counted separately. The US is far lower: methane, nitrous oxide and energy are from Rotz et al. 2019 and the EPA inventory, because US beef is mostly feedlot-finished and grows faster. Grazing land is large (0.015 ha/kg world; US 0.037 from Eshel 2014). Feed is mostly corn, plus soy, alfalfa, hay and sorghum.\n\nThe neuron count (9.3 billion) is estimated from a cow's 480 g brain, using counts from related hoofed animals. It was raised from 3 billion on 2026-10-01. Several older world values (weight 500 kg, 43% meat yield, world grazing land) have no recorded derivation in their notes.",
         "land_types": {
             "temperate_grassland": 0.6,
             "tropical_savanna": 0.2,
@@ -340,6 +341,7 @@
             "meat",
             "common"
         ],
+        "notes": "Broiler chicken, nutrition from USDA. Chicken's neuron count is a measured value (221 million, isotropic fractionator), one of the few direct counts in the dataset. Each bird weighs ~2.5 kg at slaughter, with 75% usable meat.\n\nFeed (~2.1 kg per kg meat) is corn, soy, wheat and sorghum, so almost all of chicken's land is cropland for feed, including some Brazilian soy. Emissions: on-farm manure methane and nitrous oxide (Poore & Nemecek and GLEAM agree), plus Poore & Nemecek's post-farm stages (processing, transport, retail, packaging, losses). Before 2026-09-26 only on-farm energy was counted. An older unit error stored nitrous oxide as CO2e; that was fixed on 2026-06-04.\n\nNo pasture. The weight note in the data was copied from the neuron note, so the 2.5 kg weight has no recorded derivation.",
         "land_types": {
             "temperate_grassland": 0.7,
             "tropical_savanna": 0.2,
@@ -576,6 +578,7 @@
         "tags": [
             "meat"
         ],
+        "notes": "Pork, nutrition from USDA. Pig neuron count is a measured value (~2.2 billion, Kazu et al. 2014), one of the few direct counts. The pig in that study was young; neuron numbers are mostly set early in life, so it's used for market pigs (~90 kg at slaughter, 70% meat yield).\n\nFeed is corn, soy and wheat. Emissions: on-farm methane and nitrous oxide come from Poore & Nemecek's farm stage, split using GLEAM's pig shares (mostly manure methane). That was fixed on 2026-09-26: before, they added up to ~5× Poore & Nemecek's farm total. Post-farm stages (processing, transport, retail, packaging, losses) were added the same day.\n\nNo pasture, since most pigs are housed.",
         "land_types": {
             "temperate_grassland": 0.7,
             "tropical_savanna": 0.2,
@@ -797,6 +800,7 @@
             "meat",
             "common"
         ],
+        "notes": "Turkey, nutrition from USDA. No turkey brain has been counted. The 262 million neurons are an estimate scaled up slightly from chicken (221 million, measured), since turkeys have somewhat larger brains (confidence 2). Weight is ~10 kg live (toms 11–13 kg, hens 6–8 kg), with 80% usable meat.\n\nFeed is about 2.6 kg per kg live weight: corn, soy and wheat. Emissions follow chicken's method: on-farm manure methane and a little nitrous oxide, plus Poore & Nemecek's poultry post-farm stages (added 2026-09-26). A unit error that stored nitrous oxide as CO2e was fixed the same day.",
         "land_types": {
             "temperate_grassland": 0.75,
             "tropical_savanna": 0.15,
@@ -977,6 +981,7 @@
         "tags": [
             "meat"
         ],
+        "notes": "Lamb, nutrition from USDA. Lambs are slaughtered at ~45 kg live, with ~45% usable meat. No sheep brain has been counted. The 3.6 billion neurons are estimated from sheep brain size (~128 g) using counts from related hoofed animals. That was raised from an older 1.2 billion projection on 2026-10-01.\n\nEmissions come from Poore & Nemecek's global average (~40 kg CO2e/kg), split into methane, nitrous oxide and direct CO2, cross-checked against GLEAM. Grazing land is 0.02 ha/kg on mostly native grassland and Australian rangeland.\n\nKnown issue: the feed rows (4.5 kg corn, 1.2 kg soy, plus hay and alfalfa per kg) come from Australian feedlot-finishing figures. Most of the world's lamb is grass-fed with little grain, so lamb's feed cropland is probably overstated. Its grazing land may be understated.",
         "land_types": {
             "temperate_grassland": 0.6,
             "dry": 0.3,
@@ -1248,6 +1253,7 @@
             "game",
             "wild"
         ],
+        "notes": "Wild white-tailed deer, as hunted in North America. Nutrition from USDA raw venison: very lean.\n\nThere's no farmland, feed or pasture, because the deer live on land that exists anyway. Land use is zero, and the scorer treats zero as a perfect score on that measure. It's tagged 'wild', so the Over-Hunting slider divides its score, to account for limited wild supply. Methane is the deer's own digestion (~3.5 kg per deer per year, Felton 2014). CO2 is mostly hunters driving to and from the hunt.\n\nNo deer brain has been counted. The 5.0 billion neurons are estimated from a ~200 g brain using counts from related hoofed animals (raised from 1.7 billion on 2026-10-01). Deer are ~70 kg live with ~50% boneless meat. Availability is FAOSTAT 'game meat' (all species, so an upper bound for venison).",
         "nutrition": [
             {
                 "value": {
@@ -1385,6 +1391,7 @@
             "game",
             "wild"
         ],
+        "notes": "Wild eastern grey squirrel, as hunted in North America. Nutrition from USDA raw squirrel.\n\nLike venison, there's no farmland, feed or pasture, so land use is zero. It's tagged 'wild' for the Over-Hunting slider. A squirrel weighs ~0.5 kg with ~40% meat, so about 5 squirrels die per kg of meat. Its estimated 450 million neurons (rodent brain-size scaling; no direct count) make it the highest sentient harm per kg of any land animal here. That's why it ranks near the bottom.\n\nCO2 is mostly hunter driving, spread over very little meat per trip. Availability (5 Gg) is a placeholder guess with no data behind it (confidence 1). It should be replaced if a real figure turns up.",
         "nutrition": [
             {
                 "value": {
@@ -1511,6 +1518,7 @@
             "meat",
             "common"
         ],
+        "notes": "Goat meat, nutrition from USDA roasted goat. Goat is one of the most-eaten meats worldwide, mostly in China, India, Pakistan and Africa, from goats grazing rangeland and crop stubble.\n\nEmissions come from FAO's GLEAM model: 23.5 kg CO2e per kg of carcass, split into methane (~57%), manure nitrous oxide and energy, plus Poore & Nemecek's lamb post-farm stages. Feed intake (~28 kg dry matter per kg carcass) is back-calculated from GLEAM's methane with the IPCC 2019 goat rule. It's split by GLEAM's small-ruminant meat ration, weighted by where goat meat is produced. That gives ~29% grazed grass (turned into pasture area using Mottet 2017), 19% hay, 43% crop residues (no crop footprint) and a little oilseed meal.\n\nGoats are ~29 kg at slaughter (FAOSTAT carcass 13.4 kg ÷ GLEAM 46% dressing). No goat brain has been counted. The 3.6 billion neurons are estimated from goat brain size (~125 g) using counts from related hoofed animals. Pasture water and native-land share reuse lamb's values.",
         "land_types": {
             "dry": 0.4,
             "tropical_savanna": 0.3,
@@ -1731,6 +1739,7 @@
             "meat",
             "common"
         ],
+        "notes": "Duck meat, nutrition from USDA roasted duck (meat only). China produces about 80% of the world's duck meat.\n\nDuck neuron count is the measured mallard value (367 million; Kverková 2022), the wild ancestor of domestic ducks. Domestic Pekin ducks have bigger brains, so this may be slightly low. Weight is ~2.4 kg live (FAOSTAT world carcass 1.68 kg ÷ 70% slaughter yield). European commercial Pekins reach 3–3.6 kg.\n\nFeed comes from a 2019 Pekin trial (Lohmann): 2.03 kg of feed per kg live weight, split like chicken's ration (corn, soy, wheat). That trial is a research station, and Asian systems are likely less efficient. No global duck emissions breakdown exists, so methane, nitrous oxide and CO2 are borrowed from chicken (confidence 2).",
         "land_types": {
             "temperate_forest": 0.6,
             "temperate_grassland": 0.2,
