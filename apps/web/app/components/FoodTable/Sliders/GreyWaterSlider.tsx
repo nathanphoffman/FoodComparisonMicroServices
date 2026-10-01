@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { GreyWaterModal } from "../../Modals/GreyWaterModal";
 
-const DEFAULT_GREY_WATER = 25;
+export const DEFAULT_GREY_WATER = 25;
 
 export function GreyWaterSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [greyWaterWeight, setGreyWater] = useState(DEFAULT_GREY_WATER);

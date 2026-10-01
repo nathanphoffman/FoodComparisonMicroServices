@@ -5,6 +5,14 @@ import { DEFAULT_LAND_TYPE_WEIGHTS } from './Sliders/LandTypeSliders';
 import { DEFAULT_WIN_DAMPENING } from './Sliders/WinDampeningSlider';
 import { DEFAULT_OVER_HUNTING } from './Sliders/OverHuntingSlider';
 import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
+import { DEFAULT_GREEN_WATER } from './Sliders/GreenWaterSlider';
+import { DEFAULT_GREY_WATER } from './Sliders/GreyWaterSlider';
+import { DEFAULT_PHILOSOPHICAL_KILL } from './Sliders/PhilosophicalKillSlider';
+import { DEFAULT_CAPTIVITY_MULTIPLIER } from './Sliders/CaptivitySlider';
+import { DEFAULT_NEURON_EXPONENT } from './Sliders/NeuronExponentSlider';
+import { DEFAULT_WEIGHT_EXPONENT } from './Sliders/WeightExponentSlider';
+import { DEFAULT_FINAL_INTELLIGENCE_EXPONENT } from './Sliders/FinalIntelligenceExponentSlider';
+import { DEFAULT_ZERO_BETTER_MULTIPLIER } from './Sliders/ZeroBetterMultiplierSlider';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
@@ -36,14 +44,14 @@ export const DATA_REGION_OPTIONS: { value: DataRegion; label: string }[] = [
 export const DEFAULT_SLIDER_VALUES: SliderValues = {
     weights:                    DEFAULT_FOOD_WEIGHTS,
     scorePriorities:            DEFAULT_SCORE_PRIORITIES,
-    greenWaterWeight:           25,
-    greyWaterWeight:            25,
-    killMultiplier:             500,
-    captivityMultiplier:        1,
-    neuronExponent:             1.5,
-    weightExponent:             0.70,
-    finalIntelligenceExponent:  1.15,
-    zeroBetterMultiplier:       1.5,
+    greenWaterWeight:           DEFAULT_GREEN_WATER,
+    greyWaterWeight:            DEFAULT_GREY_WATER,
+    killMultiplier:             DEFAULT_PHILOSOPHICAL_KILL,
+    captivityMultiplier:        DEFAULT_CAPTIVITY_MULTIPLIER,
+    neuronExponent:             DEFAULT_NEURON_EXPONENT,
+    weightExponent:             DEFAULT_WEIGHT_EXPONENT,
+    finalIntelligenceExponent:  DEFAULT_FINAL_INTELLIGENCE_EXPONENT,
+    zeroBetterMultiplier:       DEFAULT_ZERO_BETTER_MULTIPLIER,
     landTypeWeights:            DEFAULT_LAND_TYPE_WEIGHTS,
     winDampening:               DEFAULT_WIN_DAMPENING,
     overHuntingFactor:          DEFAULT_OVER_HUNTING,

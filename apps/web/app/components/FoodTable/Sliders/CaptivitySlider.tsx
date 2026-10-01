@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { CaptivityModal } from "../../Modals/CaptivityModal";
 
-const DEFAULT_CAPTIVITY_MULTIPLIER = 1;
+export const DEFAULT_CAPTIVITY_MULTIPLIER = 1;
 
 // Log scale: slider position 0–300 maps to 0.01×–10×.
 const MIN_LOG = -2;

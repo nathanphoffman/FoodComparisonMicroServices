@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { NeuronExponentModal } from "../../Modals/NeuronExponentModal";
 
-const DEFAULT_NEURON_EXPONENT = 1.5;
+export const DEFAULT_NEURON_EXPONENT = 1.5;
 
 export function NeuronExponentSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [neuronExponent, setNeuronExponent] = useState(DEFAULT_NEURON_EXPONENT);

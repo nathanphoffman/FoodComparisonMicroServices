@@ -5,7 +5,7 @@ import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { PhilosophicalKillModal } from "../../Modals/PhilosophicalKillModal";
 
-const DEFAULT_PHILOSOPHICAL_KILL = 500;
+export const DEFAULT_PHILOSOPHICAL_KILL = 500;
 export const MAX_PHILOSOPHICAL_KILL = 1000;
 
 export function PhilosophicalKillSlider({ onChange, initialValue = DEFAULT_PHILOSOPHICAL_KILL }: { onChange?: (v: number) => void; initialValue?: number }) {
