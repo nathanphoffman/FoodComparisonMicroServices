@@ -103,8 +103,8 @@ export function FoodTable() {
         ...columnSortProps(column.key),
     }));
 
-    if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
     if (error)   return <p className="mt-6 text-red-600">Failed to load data: {error}</p>;
+    if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
 
     return (
         <div className="mt-6">

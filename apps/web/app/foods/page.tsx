@@ -18,6 +18,7 @@ export default async function FoodsPage() {
          ch4_kg_per_kg_output, n2o_kg_per_kg_output, co2_kg_per_kg_output
   FROM   foods_normalized
   WHERE  is_feed = 0
+  AND    region = 'world'
   AND    EXISTS (
     SELECT 1 FROM json_each(tags) WHERE value = 'common'
   )
