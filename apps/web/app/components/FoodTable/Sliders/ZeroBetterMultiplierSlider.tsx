@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { ZeroBetterMultiplierModal } from "../../Modals/ZeroBetterMultiplierModal";
+import { DEFAULT_ZERO_BETTER_MULTIPLIER } from "../FoodTableDefaults";
 
-export const DEFAULT_ZERO_BETTER_MULTIPLIER = 1.5;
 
 export function ZeroBetterMultiplierSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [value, setValue] = useState(DEFAULT_ZERO_BETTER_MULTIPLIER);

@@ -1,18 +1,5 @@
-import type { ColConfig, DataRegion, SliderValues } from './FoodTableTypes';
-import { DEFAULT_FOOD_WEIGHTS } from './Sliders/WeightSliders';
-import { DEFAULT_SCORE_PRIORITIES } from './Sliders/ScorePrioritySliders';
-import { DEFAULT_LAND_TYPE_WEIGHTS } from './Sliders/LandTypeSliders';
-import { DEFAULT_WIN_DAMPENING } from './Sliders/WinDampeningSlider';
-import { DEFAULT_OVER_HUNTING } from './Sliders/OverHuntingSlider';
-import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
-import { DEFAULT_GREEN_WATER } from './Sliders/GreenWaterSlider';
-import { DEFAULT_GREY_WATER } from './Sliders/GreyWaterSlider';
-import { DEFAULT_PHILOSOPHICAL_KILL } from './Sliders/PhilosophicalKillSlider';
-import { DEFAULT_CAPTIVITY_MULTIPLIER } from './Sliders/CaptivitySlider';
-import { DEFAULT_NEURON_EXPONENT } from './Sliders/NeuronExponentSlider';
-import { DEFAULT_WEIGHT_EXPONENT } from './Sliders/WeightExponentSlider';
-import { DEFAULT_FINAL_INTELLIGENCE_EXPONENT } from './Sliders/FinalIntelligenceExponentSlider';
-import { DEFAULT_ZERO_BETTER_MULTIPLIER } from './Sliders/ZeroBetterMultiplierSlider';
+import type { ColConfig, DataRegion, FoodWeights, LandTypes, ScorePriorities, SliderValues } from './FoodTableTypes';
+import { DEFAULT_LEVEL, toShares } from './Sliders/PercentSliders';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 
@@ -38,6 +25,55 @@ export const DATA_REGION_OPTIONS: { value: DataRegion; label: string }[] = [
     { value: 'us',    label: 'US' },
     { value: 'avg',   label: 'Average of World + US' },
 ];
+
+// ── Slider defaults ───────────────────────────────────────────────────────────
+// Every slider's starting value lives here. Some must match the Rust defaults in
+// the SliderQuery (services/wasm-calculations) — those are marked.
+
+// Levels out of 10; shares come out to 50% calories, 20% protein, 20% dry mass, 10% wet mass.
+export const DEFAULT_FOOD_WEIGHT_LEVELS: FoodWeights = { calories: 5, protein: 2, dryMass: 2, wetMass: 1 };
+export const DEFAULT_FOOD_WEIGHTS: FoodWeights = toShares(DEFAULT_FOOD_WEIGHT_LEVELS);
+
+// Equal weight for all six.
+export const DEFAULT_SCORE_PRIORITY_LEVELS: ScorePriorities = {
+    nutrition:    DEFAULT_LEVEL,
+    emissions:    DEFAULT_LEVEL,
+    intelligence: DEFAULT_LEVEL,
+    water:        DEFAULT_LEVEL,
+    landUse:      DEFAULT_LEVEL,
+    availability: DEFAULT_LEVEL,
+};
+export const DEFAULT_SCORE_PRIORITIES: ScorePriorities = toShares(DEFAULT_SCORE_PRIORITY_LEVELS);
+
+export const DEFAULT_GREEN_WATER                 = 25;
+export const DEFAULT_GREY_WATER                  = 25;
+export const DEFAULT_PHILOSOPHICAL_KILL          = 500;
+export const DEFAULT_CAPTIVITY_MULTIPLIER        = 1;
+export const DEFAULT_NEURON_EXPONENT             = 1.5;
+export const DEFAULT_WEIGHT_EXPONENT             = 0.70;
+export const DEFAULT_FINAL_INTELLIGENCE_EXPONENT = 1.15;
+export const DEFAULT_ZERO_BETTER_MULTIPLIER      = 1.5;
+
+// 1 = geometric mean (the original behavior). Keep in sync with default_win_dampening() in Rust.
+export const DEFAULT_WIN_DAMPENING = 1;
+// Keep in sync with default_over_hunting_factor() in Rust.
+export const DEFAULT_OVER_HUNTING = 2.5;
+// Keep in sync with default_over_gathering_factor() in Rust.
+export const DEFAULT_OVER_GATHERING = 1.5;
+
+// 1.0 = neutral. Keep in sync with default_land_type_weights() in the Rust SliderQuery.
+// From Chaudhary & Brooks (2018) global land occupation biodiversity factors (UNEP-SETAC
+// recommended; potential species loss per m², all five taxa): for each land type, the
+// median and geometric mean over its biome's ecoregions, averaged, relative to temperate
+// forest = 1. Cropland and pasture give the same ratios.
+export const DEFAULT_LAND_TYPE_WEIGHTS: LandTypes = {
+    tropical_forest:     10.0,  // Olson biomes 1–3 (tropical moist, dry and coniferous forest)
+    wetland:             1.8,   // biomes 9 and 14 (flooded grassland, mangroves)
+    tropical_savanna:    1.2,   // biome 7
+    temperate_forest:    1.0,   // biomes 4–5
+    dry:                 0.85,  // biomes 12–13 (Mediterranean, desert and xeric)
+    temperate_grassland: 0.45,  // biome 8
+};
 
 // ── Slider values ─────────────────────────────────────────────────────────────
 

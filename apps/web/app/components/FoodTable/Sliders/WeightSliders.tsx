@@ -5,7 +5,8 @@ import { CalorieWeightModal } from "../../Modals/CalorieWeightModal";
 import { ProteinWeightModal } from "../../Modals/ProteinWeightModal";
 import { DryMassWeightModal } from "../../Modals/DryMassWeightModal";
 import { WetMassWeightModal } from "../../Modals/WetMassWeightModal";
-import { PercentSliders, toShares } from "./PercentSliders";
+import { PercentSliders } from "./PercentSliders";
+import { DEFAULT_FOOD_WEIGHT_LEVELS } from "../FoodTableDefaults";
 
 const KEYS: (keyof FoodWeights)[] = ['calories', 'protein', 'dryMass', 'wetMass'];
 
@@ -30,11 +31,6 @@ const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => voi
     wetMass:  WetMassWeightModal,
 };
 
-// Levels out of 10; shares come out to 50% calories, 20% protein, 20% dry mass, 10% wet mass.
-const DEFAULT_LEVELS: FoodWeights = { calories: 5, protein: 2, dryMass: 2, wetMass: 1 };
-
-export const DEFAULT_FOOD_WEIGHTS: FoodWeights = toShares(DEFAULT_LEVELS);
-
 export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => void }) {
     return (
         <PercentSliders
@@ -42,7 +38,7 @@ export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => voi
             labels={LABELS}
             descriptions={DESCRIPTIONS}
             modals={MODALS}
-            defaultLevels={DEFAULT_LEVELS}
+            defaultLevels={DEFAULT_FOOD_WEIGHT_LEVELS}
             onChange={onChange}
         />
     );

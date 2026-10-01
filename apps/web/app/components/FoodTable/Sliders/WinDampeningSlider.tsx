@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { WinDampeningModal } from "../../Modals/WinDampeningModal";
+import { DEFAULT_WIN_DAMPENING } from "../FoodTableDefaults";
 
-// 1 = geometric mean (the original behavior). Keep in sync with default_win_dampening() in Rust.
-export const DEFAULT_WIN_DAMPENING = 1;
 
 function describe(value: number): string {
     if (value === 0) return 'linear';

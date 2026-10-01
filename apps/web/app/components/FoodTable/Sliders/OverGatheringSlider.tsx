@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { OverGatheringModal } from "../../Modals/OverGatheringModal";
+import { DEFAULT_OVER_GATHERING } from "../FoodTableDefaults";
 
-// Keep in sync with default_over_gathering_factor() in Rust.
-export const DEFAULT_OVER_GATHERING = 1.5;
 
 export function OverGatheringSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [value, setValue] = useState(DEFAULT_OVER_GATHERING);

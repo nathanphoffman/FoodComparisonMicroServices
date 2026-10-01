@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { CaptivityModal } from "../../Modals/CaptivityModal";
+import { DEFAULT_CAPTIVITY_MULTIPLIER } from "../FoodTableDefaults";
 
-export const DEFAULT_CAPTIVITY_MULTIPLIER = 1;
 
 // Log scale: slider position 0–300 maps to 0.01×–10×.
 const MIN_LOG = -2;

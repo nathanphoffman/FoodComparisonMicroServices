@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { NeuronExponentModal } from "../../Modals/NeuronExponentModal";
+import { DEFAULT_NEURON_EXPONENT } from "../FoodTableDefaults";
 
-export const DEFAULT_NEURON_EXPONENT = 1.5;
 
 export function NeuronExponentSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [neuronExponent, setNeuronExponent] = useState(DEFAULT_NEURON_EXPONENT);

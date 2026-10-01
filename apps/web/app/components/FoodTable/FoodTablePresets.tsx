@@ -3,7 +3,8 @@
 import type { ScorePriorities } from './FoodTableTypes';
 import type { SliderValues } from './FoodTableTypes';
 import { toShares } from './Sliders/PercentSliders';
-import { DEFAULT_SCORE_PRIORITY_LEVELS, SCORE_PRIORITY_KEYS, SCORE_PRIORITY_LABELS } from './Sliders/ScorePrioritySliders';
+import { SCORE_PRIORITY_KEYS, SCORE_PRIORITY_LABELS } from './Sliders/ScorePrioritySliders';
+import { DEFAULT_SCORE_PRIORITY_LEVELS } from './FoodTableDefaults';
 import { MAX_PHILOSOPHICAL_KILL } from './Sliders/PhilosophicalKillSlider';
 import { MAX_CAPTIVITY_MULTIPLIER } from './Sliders/CaptivitySlider';
 import { MAX_OVER_HUNTING } from './Sliders/OverHuntingSlider';

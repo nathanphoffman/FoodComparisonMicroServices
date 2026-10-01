@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { FinalIntelligenceExponentModal } from "../../Modals/FinalIntelligenceExponentModal";
+import { DEFAULT_FINAL_INTELLIGENCE_EXPONENT } from "../FoodTableDefaults";
 
-export const DEFAULT_FINAL_INTELLIGENCE_EXPONENT = 1.15;
 
 export function FinalIntelligenceExponentSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [finalIntelligenceExponent, setFinalIntelligenceExponent] = useState(DEFAULT_FINAL_INTELLIGENCE_EXPONENT);

@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { GreenWaterModal } from "../../Modals/GreenWaterModal";
+import { DEFAULT_GREEN_WATER } from "../FoodTableDefaults";
 
-export const DEFAULT_GREEN_WATER = 25;
 
 export function GreenWaterSlider({ onChange }: { onChange?: (v: number) => void }) {
     const [greenWaterWeight, setGreenWater] = useState(DEFAULT_GREEN_WATER);

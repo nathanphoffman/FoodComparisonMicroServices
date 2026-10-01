@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Slider } from "../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../hooks/useDebouncedCallback";
 import { OverHuntingModal } from "../../Modals/OverHuntingModal";
+import { DEFAULT_OVER_HUNTING } from "../FoodTableDefaults";
 
-// Keep in sync with default_over_hunting_factor() in Rust.
-export const DEFAULT_OVER_HUNTING = 2.5;
 export const MAX_OVER_HUNTING = 5;
 
 export function OverHuntingSlider({ onChange, initialValue = DEFAULT_OVER_HUNTING }: { onChange?: (v: number) => void; initialValue?: number }) {
