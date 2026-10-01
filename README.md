@@ -49,6 +49,7 @@ Run `pnpm build-db` again whenever you change anything in `data/json/`.
 | `pnpm build:wasm` | Build the WASM package |
 | `pnpm typecheck` | Type-check the web app (`tsc`) |
 | `pnpm lint` | Lint the web app (ESLint) |
+| `pnpm check` | Typecheck + lint in one go (what CI runs) |
 | `pnpm build-db` | Rebuild the SQLite databases |
 | `pnpm download` | Download source documents into `data/sources/` |
 
