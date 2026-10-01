@@ -29,6 +29,5 @@ export function useDebouncedCallback<T extends (...args: never[]) => void>(
 
         // Register unmount cleanup once (no-op if already registered).
         return cancelRef.current;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [delay]);
 }

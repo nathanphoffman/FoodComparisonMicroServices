@@ -77,7 +77,8 @@ export function FoodTableInputs({
 
     function handleToggle(key: SortKey) {
         const next = new Set(visibleColumns);
-        next.has(key) ? next.delete(key) : next.add(key);
+        if (next.has(key)) next.delete(key);
+        else next.add(key);
         setVisible(next);
         onActiveColsChange(COLUMN_CONFIG.filter(c => next.has(c.key)));
     }

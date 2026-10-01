@@ -6,7 +6,8 @@
         "dev": "node scripts/ensure-wasm-signal.mjs && next dev",
         "build": "node scripts/ensure-wasm-signal.mjs && next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "eslint .",
+        "typecheck": "node scripts/ensure-wasm-signal.mjs && tsc --noEmit"
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.3.0",
@@ -18,10 +19,13 @@
         "wasm-calculations": "link:../../services/wasm-calculations/pkg"
     },
     "devDependencies": {
+        "@eslint/eslintrc": "^3.3.7",
         "@types/node": "^22.0.0",
         "@types/react": "^19.1.0",
         "@types/react-dom": "^19.1.0",
         "@types/sql.js": "^1.4.11",
+        "eslint": "^9.39.5",
+        "eslint-config-next": "~15.5.26",
         "typescript": "^5.8.3"
     }
 }

@@ -10,6 +10,8 @@
         "dev:wasm":    "cd services/wasm-calculations && cargo watch -w src -s 'wasm-pack build --target web'",
         "dev:wasm-notify": "node scripts/wasm-notify.mjs",
         "build":       "pnpm --filter @food/web build",
+        "lint":        "pnpm --filter @food/web lint",
+        "typecheck":   "pnpm --filter @food/web typecheck",
         "build:wasm":  "wasm-pack build services/wasm-calculations --target web",
         "build-db":    "cd services/data-pipeline && python -m src.build_db",
         "download":    "cd services/data-sourcing && python -m src.download"

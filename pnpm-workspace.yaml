@@ -1,5 +1,10 @@
 packages:
   - apps/*
 
+# unrs-resolver (used by eslint-config-next) has an install script that only
+# downloads its native binary as a fallback; pnpm already installs it directly.
+allowBuilds:
+  unrs-resolver: false
+
 overrides:
   postcss: ^8.5.10
