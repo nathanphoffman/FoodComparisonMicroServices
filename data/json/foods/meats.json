@@ -2566,7 +2566,7 @@
             "meat",
             "organ"
         ],
-        "notes": "Raw pork liver, nutrition from USDA (FDC 167862). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from pork: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of pork meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Pork's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): pork meat production × about 0.023 kg of liver per kg of meat.",
+        "notes": "Raw pork liver, nutrition from USDA (FDC 167862). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from pork: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of pork meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Pork's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): pork meat production × about 0.023 kg of liver per kg of meat.\n\nVitamins D and E come from the UK's CoFID database because USDA's record doesn't list them. Vitamin K (88 µg per 100 g) comes from a third-party nutrition website and couldn't be checked against a primary source, so treat it with caution.",
         "land_types": {
             "temperate_grassland": 0.7,
             "tropical_savanna": 0.2,
@@ -2607,6 +2607,31 @@
                     "url": "https://fdc.nal.usda.gov/food-details/167862/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 167862: Pork, fresh, variety meats and by-products, liver, raw",
                     "note": "Pork Liver — nutrition: FDC 167862 'Pork, fresh, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 134 kcal, fat 3.65 g, sat fat 1.17 g, protein 21.39 g, fiber 0, sodium 87 mg, carbs 2.47 g, cholesterol 301 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 6502 µg RAE, vitamin c 25.3 mg, folate 212 µg DFE, vitamin b12 26 µg, vitamin b6 0.69 mg, calcium 9 mg, iron 23.3 mg, magnesium 18 mg, potassium 273 mg, zinc 5.76 mg, phosphorus 288 mg, selenium 52.7 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values. Omega-3 from FDC 167862 per 100 g: ALA 0.03 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20 mg (EPA 0 + DHA 20); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.011,
+                    "vitamin_e": 0.0033
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 463,
+                    "url": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+                    "title": "Public Health England — McCance and Widdowson's Composition of Foods Integrated Dataset (CoFID) 2021",
+                    "note": "Pork Liver — stand-in vitamins: USDA's pork liver record (167862) has no vitamin D or E, so they come from CoFID food 18-417 'Liver, pig, raw' (10 samples, LGC carcase meat and offal survey 1982–1983). Per 100 g: vitamin d 1.1 µg, vitamin e 0.33 mg; divided by 100 for per-gram values. CoFID doesn't list vitamin K for pig liver either, so it stays missing. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_k": 0.88
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 464,
+                    "url": "https://www.foodintake.space/calories/pork-products/pork-liver/pork-liver-raw/",
+                    "title": "foodintake.space — Pork, liver, raw (third-party nutrition site; credits the Canadian Nutrient File)",
+                    "note": "Pork Liver — vitamin K: 88 µg per 100 g (0.88 µg/g). DUBIOUS SOURCING: this is from a third-party nutrition website, not a primary database. It credits the Canadian Nutrient File, but that could not be checked (Health Canada's site didn't respond). USDA and the UK's CoFID both list no vitamin K for pig liver, and 88 µg is high for liver (USDA beef liver: 3.1 µg), so it may include vitamin K2 or be an error. Confidence 1; replace with a primary source if one turns up."
                 }
             }
         ],
@@ -2802,7 +2827,7 @@
             "meat",
             "organ"
         ],
-        "notes": "Raw lamb liver, nutrition from USDA (FDC 172531). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from lamb: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of lamb meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Lamb's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): lamb meat production × about 0.031 kg of liver per kg of meat.",
+        "notes": "Raw lamb liver, nutrition from USDA (FDC 172531). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from lamb: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of lamb meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Lamb's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): lamb meat production × about 0.031 kg of liver per kg of meat.\n\nSome vitamins come from a stand-in USDA record (Lamb, New Zealand, imported, liver, raw) because the main record doesn't list them.",
         "land_types": {
             "temperate_grassland": 0.6,
             "dry": 0.3,
@@ -2842,6 +2867,20 @@
                     "url": "https://fdc.nal.usda.gov/food-details/172531/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 172531: Lamb, variety meats and by-products, liver, raw",
                     "note": "Lamb Liver — nutrition: FDC 172531 'Lamb, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 139 kcal, fat 5.02 g, sat fat 1.94 g, protein 20.38 g, fiber 0, sodium 70 mg, carbs 1.78 g, cholesterol 371 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 7391 µg RAE, vitamin c 4 mg, folate 230 µg DFE, vitamin b12 90.05 µg, vitamin b6 0.9 mg, calcium 7 mg, iron 7.37 mg, magnesium 19 mg, potassium 313 mg, zinc 4.66 mg, phosphorus 364 mg, selenium 82.4 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values. Omega-3 from FDC 172531 per 100 g: ALA 0.07 g (USDA's total 18:3, which is almost all ALA); divided by 100 for per-gram values. EPA and DHA not reported, so left out."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0086,
+                    "epa_dha": 2.92
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 462,
+                    "url": "https://fdc.nal.usda.gov/food-details/172615/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172615: Lamb, New Zealand, imported, liver, raw",
+                    "note": "Lamb Liver — stand-in vitamins: USDA's lamb liver record (172531) has no vitamin D, E or EPA/DHA, so they come from raw New Zealand lamb liver. Per 100 g: vitamin d 0 µg, vitamin e 0.86 mg, epa dha 292 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],

@@ -14,7 +14,8 @@
             "Legumes — vitamins and minerals (cooked, boiled, without salt): soybeans FDC 174271, lentils 172421, chickpeas 173757, black beans 173735, split peas 172429, kidney beans 173740, fava beans 173753.",
             "Spinach — vitamins and minerals: FDC 168462 (Spinach, raw).",
             "Bivalves — vitamins and minerals (raw): blue mussel FDC 174216, Pacific oyster 174219, mixed-species clam 174214.",
-            "Omega-3 (ALA = 18:3 n-3, or total 18:3 when not split out; EPA + DHA = 20:5 n-3 + 22:6 n-3) for the legumes, spinach, livers and bivalves comes from the same FDC records as their vitamins and minerals."
+            "Omega-3 (ALA = 18:3 n-3, or total 18:3 when not split out; EPA + DHA = 20:5 n-3 + 22:6 n-3) for the legumes, spinach, livers and bivalves comes from the same FDC records as their vitamins and minerals.",
+            "Fish and other seafood — vitamins, minerals and omega-3: salmon (Atlantic, farmed, raw) FDC 175167, yellowfin tuna raw 175159, shrimp raw 175179, sardines (Atlantic, canned in oil, with bone) 175139, tilapia (cooked, dry heat) 175177, Alaska pollock raw 173725, Atlantic cod raw 171955, carp raw 171952, farmed channel catfish raw 175165, octopus raw 174218."
         ]
     },
     {
@@ -2644,6 +2645,63 @@
         "title": "USDA FoodData Central — SR Legacy 172531: Lamb, variety meats and by-products, liver, raw",
         "notes": [
             "Lamb Liver — nutrition: FDC 172531 'Lamb, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 139 kcal, fat 5.02 g, sat fat 1.94 g, protein 20.38 g, fiber 0, sodium 70 mg, carbs 1.78 g, cholesterol 371 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 7391 µg RAE, vitamin c 4 mg, folate 230 µg DFE, vitamin b12 90.05 µg, vitamin b6 0.9 mg, calcium 7 mg, iron 7.37 mg, magnesium 19 mg, potassium 313 mg, zinc 4.66 mg, phosphorus 364 mg, selenium 82.4 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 458,
+        "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+        "notes": [
+            "Shrimp (Wild) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry.",
+            "Shrimp (Farmed) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 459,
+        "url": "https://fdc.nal.usda.gov/food-details/175129/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 175129: Fish, pollock, Atlantic, raw",
+        "notes": [
+            "Pollock (Wild) — stand-in vitamins: USDA's raw Alaska pollock record (173725) lists no vitamins, so they come from raw Atlantic pollock, a close relative. The raw Alaska record that does list vitamins (175130) has added water, which would understate them. Per 100 g: vitamin a 14 µg RAE, vitamin c 0 mg, vitamin d 1 µg, vitamin e 0.23 mg, vitamin k 0.1 µg, folate 3 µg DFE, vitamin b12 3.19 µg, vitamin b6 0.287 mg, selenium 36.5 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 460,
+        "url": "https://fdc.nal.usda.gov/food-details/171978/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 171978: Mollusks, oyster, eastern, wild, raw",
+        "notes": [
+            "Oysters (Farmed) — stand-in vitamins: USDA's Pacific oyster record (174219) has no vitamin D, E or K, so they come from raw wild eastern oyster. Per 100 g: vitamin d 0 µg, vitamin e 0.85 mg, vitamin k 1 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 461,
+        "url": "https://fdc.nal.usda.gov/food-details/172476/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172476: Tofu, raw, regular, prepared with calcium sulfate",
+        "notes": [
+            "Tofu — stand-in vitamins: USDA's firm tofu record (172475) has no vitamin E, K or EPA/DHA, so they come from raw regular tofu (also set with calcium sulfate), scaled up by calories (144 ÷ 76 kcal) because firm tofu has less water. Per 100 g after scaling: vitamin e 0.0189 mg, vitamin k 4.55 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 462,
+        "url": "https://fdc.nal.usda.gov/food-details/172615/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172615: Lamb, New Zealand, imported, liver, raw",
+        "notes": [
+            "Lamb Liver — stand-in vitamins: USDA's lamb liver record (172531) has no vitamin D, E or EPA/DHA, so they come from raw New Zealand lamb liver. Per 100 g: vitamin d 0 µg, vitamin e 0.86 mg, epa dha 292 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 463,
+        "url": "https://www.gov.uk/government/publications/composition-of-foods-integrated-dataset-cofid",
+        "title": "Public Health England — McCance and Widdowson's Composition of Foods Integrated Dataset (CoFID) 2021",
+        "notes": [
+            "Pork Liver — stand-in vitamins: USDA's pork liver record (167862) has no vitamin D or E, so they come from CoFID food 18-417 'Liver, pig, raw' (10 samples, LGC carcase meat and offal survey 1982–1983). Per 100 g: vitamin d 1.1 µg, vitamin e 0.33 mg; divided by 100 for per-gram values. CoFID doesn't list vitamin K for pig liver either, so it stays missing. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 464,
+        "url": "https://www.foodintake.space/calories/pork-products/pork-liver/pork-liver-raw/",
+        "title": "foodintake.space — Pork, liver, raw (third-party nutrition site; credits the Canadian Nutrient File)",
+        "notes": [
+            "Pork Liver — vitamin K: 88 µg per 100 g (0.88 µg/g). DUBIOUS SOURCING: this is from a third-party nutrition website, not a primary database. It credits the Canadian Nutrient File, but that could not be checked (Health Canada's site didn't respond). USDA and the UK's CoFID both list no vitamin K for pig liver, and 88 µg is high for liver (USDA beef liver: 3.1 µg), so it may include vitamin K2 or be an error. Confidence 1; replace with a primary source if one turns up."
         ]
     }
 ]

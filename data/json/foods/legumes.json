@@ -1346,7 +1346,7 @@
             "soy",
             "processed"
         ],
-        "notes": "Firm tofu, nutrition from USDA. About 5 kg of soybeans make 9 kg of raw tofu (Hartini et al. 2024), so land is soy's yield × 1.8. Crop water is soy's ÷ 1.8, and per-hectare farm values are copied from soy.\n\nEmissions: Poore & Nemecek's own tofu value (3.16 kg CO2e/kg world, including Brazilian land-use change and processing) and a US manufacturer case study (0.98, farm to factory gate). Availability is an upper bound (confidence 1): the 7% of world soy eaten directly × 1.8, which also includes soy milk, edamame and tempeh.",
+        "notes": "Firm tofu, nutrition from USDA. About 5 kg of soybeans make 9 kg of raw tofu (Hartini et al. 2024), so land is soy's yield × 1.8. Crop water is soy's ÷ 1.8, and per-hectare farm values are copied from soy.\n\nEmissions: Poore & Nemecek's own tofu value (3.16 kg CO2e/kg world, including Brazilian land-use change and processing) and a US manufacturer case study (0.98, farm to factory gate). Availability is an upper bound (confidence 1): the 7% of world soy eaten directly × 1.8, which also includes soy milk, edamame and tempeh.\n\nSome vitamins come from a stand-in USDA record (Tofu, raw, regular, prepared with calcium sulfate) because the main record doesn't list them.",
         "land_types": {
             "temperate_grassland": 0.55,
             "tropical_savanna": 0.3,
@@ -1387,6 +1387,20 @@
                     "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/172475/nutrients",
                     "title": "USDA FoodData Central — Tofu, raw, firm, prepared with calcium sulfate (FDC 172475, SR Legacy NDB 16426)",
                     "note": "Tofu — nutrition: FDC 172475 (SR Legacy 16426) per 100 g: 144 kcal, fat 8.72 g, sat fat 1.26 g, protein 17.27 g, fiber 2.3 g, sodium 14 mg, carbs 2.78 g, cholesterol 0, trans fat 0; converted to per gram. Sugars not reported in this record; set to 0 (carbs minus fiber = 0.48 g/100 g upper bound). Vitamins and minerals per 100 g: vitamin A 166 IU (≈ 8.3 µg RAE, using 1 IU plant beta-carotene = 0.05 µg RAE), vitamin C 0.2 mg, vitamin D 0, folate 29 µg DFE, B12 0, B6 0.092 mg, calcium 683 mg (high because it is set with calcium sulfate), iron 2.66 mg, magnesium 58 mg, potassium 237 mg, zinc 1.57 mg, phosphorus 190 mg, selenium 17.4 µg. Vitamins E and K are not reported in this record, so they are left out. Omega-3 from FDC 172475 per 100 g: ALA 0.582 g (USDA's total 18:3, which is almost all ALA); divided by 100 for per-gram values. EPA and DHA not reported, so left out."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.00018947,
+                    "vitamin_k": 0.04547368,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 461,
+                    "url": "https://fdc.nal.usda.gov/food-details/172476/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172476: Tofu, raw, regular, prepared with calcium sulfate",
+                    "note": "Tofu — stand-in vitamins: USDA's firm tofu record (172475) has no vitamin E, K or EPA/DHA, so they come from raw regular tofu (also set with calcium sulfate), scaled up by calories (144 ÷ 76 kcal) because firm tofu has less water. Per 100 g after scaling: vitamin e 0.0189 mg, vitamin k 4.55 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],

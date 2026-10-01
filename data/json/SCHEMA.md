@@ -242,6 +242,9 @@ plant-specific or animal-specific fields depending on `type`.
 
         // Vitamins, minerals and omega-3 — all optional. Leave a key out when the source doesn't
         // report it (it then adds nothing to the nutrition score). Use 0 only for a reported 0.
+        // When the main source is missing some of these, add a second, lower-confidence
+        // nutrition entry holding only the missing keys from a stand-in record (e.g. a close
+        // species). Each field is averaged only over the entries that have it.
         "vitamin_a":   <number>,  // µg RAE / g food
         "vitamin_c":   <number>,  // mg / g food
         "vitamin_d":   <number>,  // µg / g food

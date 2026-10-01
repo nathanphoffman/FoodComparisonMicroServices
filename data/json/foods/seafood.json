@@ -29,14 +29,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.63,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.58,
+                    "vitamin_c": 0.039,
+                    "vitamin_d": 0.11,
+                    "vitamin_e": 0.0355,
+                    "vitamin_k": 0.005,
+                    "folate": 0.26,
+                    "vitamin_b12": 0.0323,
+                    "vitamin_b6": 0.00636,
+                    "calcium": 0.09,
+                    "iron": 0.0034,
+                    "magnesium": 0.27,
+                    "potassium": 3.63,
+                    "zinc": 0.0036,
+                    "phosphorus": 2.4,
+                    "selenium": 0.24,
+                    "ala": 0.00148,
+                    "epa_dha": 19.66
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175167 'Fish, salmon, Atlantic, farmed, raw' per 100 g: vitamin a 58 µg RAE, vitamin c 3.9 mg, vitamin d 11 µg, vitamin e 3.55 mg, vitamin k 0.5 µg, folate 26 µg DFE, vitamin b12 3.23 µg, vitamin b6 0.636 mg, calcium 9 mg, iron 0.34 mg, magnesium 27 mg, potassium 363 mg, zinc 0.36 mg, phosphorus 240 mg, selenium 24 µg, ALA 0.148 g, EPA + DHA 1966 mg (EPA 862 + DHA 1104); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -272,14 +289,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.49,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.18,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.017,
+                    "vitamin_e": 0.0024,
+                    "vitamin_k": 0.001,
+                    "folate": 0.02,
+                    "vitamin_b12": 0.0208,
+                    "vitamin_b6": 0.00933,
+                    "calcium": 0.04,
+                    "iron": 0.0077,
+                    "magnesium": 0.35,
+                    "potassium": 4.41,
+                    "zinc": 0.0037,
+                    "phosphorus": 2.78,
+                    "selenium": 0.906,
+                    "ala": 2e-05,
+                    "epa_dha": 1.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175159 'Fish, tuna, fresh, yellowfin, raw' per 100 g: vitamin a 18 µg RAE, vitamin c 0 mg, vitamin d 1.7 µg, vitamin e 0.24 mg, vitamin k 0.1 µg, folate 2 µg DFE, vitamin b12 2.08 µg, vitamin b6 0.933 mg, calcium 4 mg, iron 0.77 mg, magnesium 35 mg, potassium 441 mg, zinc 0.37 mg, phosphorus 278 mg, selenium 90.6 µg, ALA 0.002 g, EPA + DHA 100 mg (EPA 12 + DHA 88); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -417,7 +451,7 @@
             "common",
             "wild"
         ],
-        "notes": "Wild trawl-caught shrimp, nutrition from USDA raw shrimp. It's tagged 'wild' for the Over-Hunting slider.\n\nThe big issue is bycatch. Shrimp trawls catch about 5.7 kg of other sea life per kg of shrimp landed, mostly small fish that are discarded dead (WWF; Henriksson 2015 gives 2–10 kg). Sardines stand in for those discarded fish when counting the deaths. Each shrimp is only ~18 g with 60% meat, so ~90 shrimp die per kg as well.\n\nShrimp neurons are estimated at up to 1 million, a conservative upper end. Emissions are trawler diesel, ~3.2 kg CO2 per kg (Poore & Nemecek, Parker 2018). No land or feed.",
+        "notes": "Wild trawl-caught shrimp, nutrition from USDA raw shrimp. It's tagged 'wild' for the Over-Hunting slider.\n\nThe big issue is bycatch. Shrimp trawls catch about 5.7 kg of other sea life per kg of shrimp landed, mostly small fish that are discarded dead (WWF; Henriksson 2015 gives 2–10 kg). Sardines stand in for those discarded fish when counting the deaths. Each shrimp is only ~18 g with 60% meat, so ~90 shrimp die per kg as well.\n\nShrimp neurons are estimated at up to 1 million, a conservative upper end. Emissions are trawler diesel, ~3.2 kg CO2 per kg (Poore & Nemecek, Parker 2018). No land or feed.\n\nSome vitamins come from a stand-in USDA record (Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)) because the main record doesn't list them.",
         "nutrition": [
             {
                 "value": {
@@ -430,14 +464,42 @@
                     "carbs": 0.002,
                     "sugar": 0,
                     "cholesterol": 1.52,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "calcium": 0.64,
+                    "iron": 0.0052,
+                    "magnesium": 0.35,
+                    "potassium": 2.64,
+                    "zinc": 0.0134,
+                    "phosphorus": 2.14,
+                    "ala": 2e-05,
+                    "epa_dha": 0.61
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Wild shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
+                    "note": "Wild shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram. Vitamins, minerals and omega-3 from FDC 175179 'Crustaceans, shrimp, raw' per 100 g: calcium 64 mg, iron 0.52 mg, magnesium 35 mg, potassium 264 mg, zinc 1.34 mg, phosphorus 214 mg, ALA 0.002 g, EPA + DHA 61 mg (EPA 30 + DHA 31); divided by 100 for per-gram values. Not reported, so left out: vitamin a, vitamin c, vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, selenium."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.54,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0132,
+                    "vitamin_k": 0.003,
+                    "folate": 0.19,
+                    "vitamin_b12": 0.0111,
+                    "vitamin_b6": 0.00161,
+                    "selenium": 0.296
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 458,
+                    "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+                    "note": "Shrimp (Wild) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],
@@ -595,7 +657,7 @@
             "seafood",
             "common"
         ],
-        "notes": "Pond-farmed shrimp (mostly whiteleg shrimp, Penaeus vannamei), nutrition from USDA raw shrimp. Many shrimp ponds in Southeast Asia and Latin America replaced mangrove forest. That land-use change is the biggest single emission source, and it's carried in the large direct-CO2 figure (~18.6 kg per kg) derived from Poore & Nemecek's farmed-prawn total (~26.9).\n\nPonds also give off methane and nitrous oxide from rotting feed and waste (Henriksson 2015). Feed per kg is ~0.75 kg soy, 0.5 kg wheat, 0.34 kg fishmeal and 0.07 kg fish oil. The fishmeal and oil mean wild anchoveta are killed for the feed, counted as a direct kill.\n\nEach shrimp is ~18 g with 60% meat, so ~90 shrimp die per kg. Neurons are estimated at up to 1 million each.",
+        "notes": "Pond-farmed shrimp (mostly whiteleg shrimp, Penaeus vannamei), nutrition from USDA raw shrimp. Many shrimp ponds in Southeast Asia and Latin America replaced mangrove forest. That land-use change is the biggest single emission source, and it's carried in the large direct-CO2 figure (~18.6 kg per kg) derived from Poore & Nemecek's farmed-prawn total (~26.9).\n\nPonds also give off methane and nitrous oxide from rotting feed and waste (Henriksson 2015). Feed per kg is ~0.75 kg soy, 0.5 kg wheat, 0.34 kg fishmeal and 0.07 kg fish oil. The fishmeal and oil mean wild anchoveta are killed for the feed, counted as a direct kill.\n\nEach shrimp is ~18 g with 60% meat, so ~90 shrimp die per kg. Neurons are estimated at up to 1 million each.\n\nSome vitamins come from a stand-in USDA record (Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)) because the main record doesn't list them.",
         "land_types": {
             "wetland": 0.4,
             "tropical_savanna": 0.3,
@@ -615,14 +677,42 @@
                     "carbs": 0.002,
                     "sugar": 0,
                     "cholesterol": 1.52,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "calcium": 0.64,
+                    "iron": 0.0052,
+                    "magnesium": 0.35,
+                    "potassium": 2.64,
+                    "zinc": 0.0134,
+                    "phosphorus": 2.14,
+                    "ala": 2e-05,
+                    "epa_dha": 0.61
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Farmed shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram."
+                    "note": "Farmed shrimp — nutrition: USDA FoodData Central raw shrimp values; wild and farmed shrimp are nutritionally near-identical at the macronutrient level. Values reported per gram. Vitamins, minerals and omega-3 from FDC 175179 'Crustaceans, shrimp, raw' per 100 g: calcium 64 mg, iron 0.52 mg, magnesium 35 mg, potassium 264 mg, zinc 1.34 mg, phosphorus 214 mg, ALA 0.002 g, EPA + DHA 61 mg (EPA 30 + DHA 31); divided by 100 for per-gram values. Not reported, so left out: vitamin a, vitamin c, vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, selenium."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.54,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0132,
+                    "vitamin_k": 0.003,
+                    "folate": 0.19,
+                    "vitamin_b12": 0.0111,
+                    "vitamin_b6": 0.00161,
+                    "selenium": 0.296
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 458,
+                    "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+                    "note": "Shrimp (Farmed) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],
@@ -878,14 +968,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.61,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.32,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.048,
+                    "vitamin_e": 0.0204,
+                    "vitamin_k": 0.026,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.0894,
+                    "vitamin_b6": 0.00167,
+                    "calcium": 3.82,
+                    "iron": 0.0292,
+                    "magnesium": 0.39,
+                    "potassium": 3.97,
+                    "zinc": 0.0131,
+                    "phosphorus": 4.9,
+                    "selenium": 0.527,
+                    "ala": 0.00498,
+                    "epa_dha": 9.82
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175139 'Fish, sardine, Atlantic, canned in oil, drained solids with bone' per 100 g: vitamin a 32 µg RAE, vitamin c 0 mg, vitamin d 4.8 µg, vitamin e 2.04 mg, vitamin k 2.6 µg, folate 10 µg DFE, vitamin b12 8.94 µg, vitamin b6 0.167 mg, calcium 382 mg, iron 2.92 mg, magnesium 39 mg, potassium 397 mg, zinc 1.31 mg, phosphorus 490 mg, selenium 52.7 µg, ALA 0.498 g (USDA's total 18:3), EPA + DHA 982 mg (EPA 473 + DHA 509); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1052,14 +1159,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.5,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.037,
+                    "vitamin_e": 0.0079,
+                    "vitamin_k": 0.009,
+                    "folate": 0.06,
+                    "vitamin_b12": 0.0186,
+                    "vitamin_b6": 0.00123,
+                    "calcium": 0.14,
+                    "iron": 0.0069,
+                    "magnesium": 0.34,
+                    "potassium": 3.8,
+                    "zinc": 0.0041,
+                    "phosphorus": 2.04,
+                    "selenium": 0.544,
+                    "ala": 0.00045,
+                    "epa_dha": 1.35
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Farmed tilapia — nutrition: USDA FoodData Central raw tilapia values (FDC ID 175177, raw tilapia). Values reported per gram of edible flesh."
+                    "note": "Farmed tilapia — nutrition: USDA FoodData Central raw tilapia values (FDC ID 175177, raw tilapia). Values reported per gram of edible flesh. Vitamins, minerals and omega-3 from FDC 175177 'Fish, tilapia, cooked, dry heat' per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 3.7 µg, vitamin e 0.79 mg, vitamin k 0.9 µg, folate 6 µg DFE, vitamin b12 1.86 µg, vitamin b6 0.123 mg, calcium 14 mg, iron 0.69 mg, magnesium 34 mg, potassium 380 mg, zinc 0.41 mg, phosphorus 204 mg, selenium 54.4 µg, ALA 0.045 g, EPA + DHA 135 mg (EPA 5 + DHA 130); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1429,7 +1553,7 @@
             "shellfish",
             "common"
         ],
-        "notes": "Farmed oysters (mostly Pacific cupped oysters), nutrition from USDA Pacific oyster. Like mussels, oysters filter-feed on plankton: no feed, fertilizer or farmland. Emissions are boat fuel and gear. The bivalve LCA median ÷ 10% meat gives 3.9 kg CO2e per kg meat; MacLeod 2020's per-protein figure gives 1.05. The gap comes from the heavy shell.\n\nNeurons are estimated at about 17,000 (no brain, just ganglia). Each oyster gives ~7 g of meat, so ~140 die per kg, fewer than mussels or clams.\n\nBody weight for the intelligence score is standardized across the three bivalves (2026-10-01): meat weight × 6.53, instead of 70 g shell-on, because oyster shells are ~90% of their weight. Open question: the 10% meat yield may be low. A Pacific oyster study reports soft tissue at 14–17% of total weight.",
+        "notes": "Farmed oysters (mostly Pacific cupped oysters), nutrition from USDA Pacific oyster. Like mussels, oysters filter-feed on plankton: no feed, fertilizer or farmland. Emissions are boat fuel and gear. The bivalve LCA median ÷ 10% meat gives 3.9 kg CO2e per kg meat; MacLeod 2020's per-protein figure gives 1.05. The gap comes from the heavy shell.\n\nNeurons are estimated at about 17,000 (no brain, just ganglia). Each oyster gives ~7 g of meat, so ~140 die per kg, fewer than mussels or clams.\n\nBody weight for the intelligence score is standardized across the three bivalves (2026-10-01): meat weight × 6.53, instead of 70 g shell-on, because oyster shells are ~90% of their weight. Open question: the 10% meat yield may be low. A Pacific oyster study reports soft tissue at 14–17% of total weight.\n\nSome vitamins come from a stand-in USDA record (Mollusks, oyster, eastern, wild, raw) because the main record doesn't list them.",
         "nutrition": [
             {
                 "value": {
@@ -1464,6 +1588,20 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Oysters (Farmed) — nutrition: USDA SR Legacy 'Mollusks, oyster, Pacific, raw' (fdcId 174219) per 100 g: 81 kcal, 9.45 g protein, 2.3 g fat, 0.51 g sat fat, 4.95 g carbs, 106 mg sodium, 50 mg cholesterol; converted to per gram. Pacific/cupped oysters are the bulk of world production (eastern farmed oysters, fdcId 175172, are leaner: 59 kcal, 5.22 g protein). Vitamins and minerals from FDC 174219 per 100 g: vitamin a 81 µg RAE, vitamin c 8 mg, folate 10 µg DFE, vitamin b12 16 µg, vitamin b6 0.05 mg, calcium 8 mg, iron 5.11 mg, magnesium 22 mg, potassium 168 mg, zinc 16.62 mg, phosphorus 162 mg, selenium 77 µg; divided by 100 for per-gram values. Not reported, so left out: vitamin d, vitamin e, vitamin k. Omega-3 from FDC 174219 per 100 g: ALA 0.032 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 688 mg (EPA 438 + DHA 250); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0085,
+                    "vitamin_k": 0.01
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 460,
+                    "url": "https://fdc.nal.usda.gov/food-details/171978/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 171978: Mollusks, oyster, eastern, wild, raw",
+                    "note": "Oysters (Farmed) — stand-in vitamins: USDA's Pacific oyster record (174219) has no vitamin D, E or K, so they come from raw wild eastern oyster. Per 100 g: vitamin d 0 µg, vitamin e 0.85 mg, vitamin k 1 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],
@@ -1760,7 +1898,7 @@
             "common",
             "wild"
         ],
-        "notes": "Wild Alaska pollock, the biggest US fishery by volume and the fish in most fish sticks and fast-food fish sandwiches. Nutrition from USDA. Tagged 'wild' for the Over-Hunting slider.\n\nMidwater trawls catch very little else: under 1% bycatch (NOAA). Pacific salmon, the main concern, is the stand-in bycatch species. Emissions are fishing fuel: Parker et al. 2018's North American average (1.7 kg CO2e per kg landed) ÷ 36% fillet yield ≈ 4.7 per kg fillet; an industry LCA gives ~3.7.\n\nFish are ~0.9 kg with 36% fillet (FAO), so about 3 fish die per kg of fillet. Neurons (~62 million) are estimated from body size.",
+        "notes": "Wild Alaska pollock, the biggest US fishery by volume and the fish in most fish sticks and fast-food fish sandwiches. Nutrition from USDA. Tagged 'wild' for the Over-Hunting slider.\n\nMidwater trawls catch very little else: under 1% bycatch (NOAA). Pacific salmon, the main concern, is the stand-in bycatch species. Emissions are fishing fuel: Parker et al. 2018's North American average (1.7 kg CO2e per kg landed) ÷ 36% fillet yield ≈ 4.7 per kg fillet; an industry LCA gives ~3.7.\n\nFish are ~0.9 kg with 36% fillet (FAO), so about 3 fish die per kg of fillet. Neurons (~62 million) are estimated from body size.\n\nSome vitamins come from a stand-in USDA record (Fish, pollock, Atlantic, raw) because the main record doesn't list them.",
         "nutrition": [
             {
                 "value": {
@@ -1773,14 +1911,42 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.61,
-                    "trans_fat": 3e-05
+                    "trans_fat": 3e-05,
+                    "calcium": 0.12,
+                    "iron": 0.0027,
+                    "magnesium": 0.34,
+                    "potassium": 3.31,
+                    "zinc": 0.004,
+                    "phosphorus": 1.9,
+                    "ala": 0.0,
+                    "epa_dha": 2.35
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Pollock (Wild) — nutrition: USDA SR Legacy 'Fish, pollock, Alaska, raw' (fdcId 173725) per 100 g: 76 kcal, 17.17 g protein, 0.82 g fat, 0.148 g sat fat, 0 g carbs, 159 mg sodium, 61 mg cholesterol; converted to per gram."
+                    "note": "Pollock (Wild) — nutrition: USDA SR Legacy 'Fish, pollock, Alaska, raw' (fdcId 173725) per 100 g: 76 kcal, 17.17 g protein, 0.82 g fat, 0.148 g sat fat, 0 g carbs, 159 mg sodium, 61 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 173725 'Fish, pollock, Alaska, raw' per 100 g: calcium 12 mg, iron 0.27 mg, magnesium 34 mg, potassium 331 mg, zinc 0.4 mg, phosphorus 190 mg, ALA 0 g (USDA's total 18:3), EPA + DHA 235 mg (EPA 75 + DHA 160); divided by 100 for per-gram values. Not reported, so left out: vitamin a, vitamin c, vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, selenium."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.14,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.01,
+                    "vitamin_e": 0.0023,
+                    "vitamin_k": 0.001,
+                    "folate": 0.03,
+                    "vitamin_b12": 0.0319,
+                    "vitamin_b6": 0.00287,
+                    "selenium": 0.365
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 459,
+                    "url": "https://fdc.nal.usda.gov/food-details/175129/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 175129: Fish, pollock, Atlantic, raw",
+                    "note": "Pollock (Wild) — stand-in vitamins: USDA's raw Alaska pollock record (173725) lists no vitamins, so they come from raw Atlantic pollock, a close relative. The raw Alaska record that does list vitamins (175130) has added water, which would understate them. Per 100 g: vitamin a 14 µg RAE, vitamin c 0 mg, vitamin d 1 µg, vitamin e 0.23 mg, vitamin k 0.1 µg, folate 3 µg DFE, vitamin b12 3.19 µg, vitamin b6 0.287 mg, selenium 36.5 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],
@@ -1922,14 +2088,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.43,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.12,
+                    "vitamin_c": 0.01,
+                    "vitamin_d": 0.009,
+                    "vitamin_e": 0.0064,
+                    "vitamin_k": 0.001,
+                    "folate": 0.07,
+                    "vitamin_b12": 0.0091,
+                    "vitamin_b6": 0.00245,
+                    "calcium": 0.16,
+                    "iron": 0.0038,
+                    "magnesium": 0.32,
+                    "potassium": 4.13,
+                    "zinc": 0.0045,
+                    "phosphorus": 2.03,
+                    "selenium": 0.331,
+                    "ala": 1e-05,
+                    "epa_dha": 1.84
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Cod (Wild) — nutrition: USDA SR Legacy 'Fish, cod, Atlantic, raw' (fdcId 171955) per 100 g: 82 kcal, 17.81 g protein, 0.67 g fat, 0.131 g sat fat, 0 g carbs, 54 mg sodium, 43 mg cholesterol; converted to per gram."
+                    "note": "Cod (Wild) — nutrition: USDA SR Legacy 'Fish, cod, Atlantic, raw' (fdcId 171955) per 100 g: 82 kcal, 17.81 g protein, 0.67 g fat, 0.131 g sat fat, 0 g carbs, 54 mg sodium, 43 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 171955 'Fish, cod, Atlantic, raw' per 100 g: vitamin a 12 µg RAE, vitamin c 1 mg, vitamin d 0.9 µg, vitamin e 0.64 mg, vitamin k 0.1 µg, folate 7 µg DFE, vitamin b12 0.91 µg, vitamin b6 0.245 mg, calcium 16 mg, iron 0.38 mg, magnesium 32 mg, potassium 413 mg, zinc 0.45 mg, phosphorus 203 mg, selenium 33.1 µg, ALA 0.001 g (USDA's total 18:3), EPA + DHA 184 mg (EPA 64 + DHA 120); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2076,14 +2259,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.66,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.09,
+                    "vitamin_c": 0.016,
+                    "vitamin_d": 0.247,
+                    "vitamin_e": 0.0063,
+                    "vitamin_k": 0.001,
+                    "folate": 0.15,
+                    "vitamin_b12": 0.0153,
+                    "vitamin_b6": 0.0019,
+                    "calcium": 0.41,
+                    "iron": 0.0124,
+                    "magnesium": 0.29,
+                    "potassium": 3.33,
+                    "zinc": 0.0148,
+                    "phosphorus": 4.15,
+                    "selenium": 0.126,
+                    "ala": 0.0027,
+                    "epa_dha": 3.52
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Carp (Farmed) — nutrition: USDA SR Legacy 'Fish, carp, raw' (fdcId 171952) per 100 g: 127 kcal, 17.83 g protein, 5.6 g fat, 1.083 g sat fat, 0 g carbs, 49 mg sodium, 66 mg cholesterol; converted to per gram."
+                    "note": "Carp (Farmed) — nutrition: USDA SR Legacy 'Fish, carp, raw' (fdcId 171952) per 100 g: 127 kcal, 17.83 g protein, 5.6 g fat, 1.083 g sat fat, 0 g carbs, 49 mg sodium, 66 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 171952 'Fish, carp, raw' per 100 g: vitamin a 9 µg RAE, vitamin c 1.6 mg, vitamin d 24.7 µg, vitamin e 0.63 mg, vitamin k 0.1 µg, folate 15 µg DFE, vitamin b12 1.53 µg, vitamin b6 0.19 mg, calcium 41 mg, iron 1.24 mg, magnesium 29 mg, potassium 333 mg, zinc 1.48 mg, phosphorus 415 mg, selenium 12.6 µg, ALA 0.27 g (USDA's total 18:3), EPA + DHA 352 mg (EPA 238 + DHA 114); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2274,14 +2474,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.55,
-                    "trans_fat": 0.00052
+                    "trans_fat": 0.00052,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.002,
+                    "vitamin_e": 0.0081,
+                    "vitamin_k": 0.021,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.0288,
+                    "vitamin_b6": 0.00154,
+                    "calcium": 0.08,
+                    "iron": 0.0023,
+                    "magnesium": 0.19,
+                    "potassium": 3.02,
+                    "zinc": 0.0048,
+                    "phosphorus": 2.04,
+                    "selenium": 0.082,
+                    "ala": 0.00054,
+                    "epa_dha": 0.74
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Catfish (Farmed) — nutrition: USDA SR Legacy 'Fish, catfish, channel, farmed, raw' (fdcId 175165) per 100 g: 119 kcal, 15.23 g protein, 5.94 g fat, 1.31 g sat fat, 0 g carbs, 98 mg sodium, 55 mg cholesterol; converted to per gram."
+                    "note": "Catfish (Farmed) — nutrition: USDA SR Legacy 'Fish, catfish, channel, farmed, raw' (fdcId 175165) per 100 g: 119 kcal, 15.23 g protein, 5.94 g fat, 1.31 g sat fat, 0 g carbs, 98 mg sodium, 55 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 175165 'Fish, catfish, channel, farmed, raw' per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0.2 µg, vitamin e 0.81 mg, vitamin k 2.1 µg, folate 10 µg DFE, vitamin b12 2.88 µg, vitamin b6 0.154 mg, calcium 8 mg, iron 0.23 mg, magnesium 19 mg, potassium 302 mg, zinc 0.48 mg, phosphorus 204 mg, selenium 8.2 µg, ALA 0.054 g, EPA + DHA 74 mg (EPA 17 + DHA 57); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2467,14 +2684,31 @@
                     "carbs": 0.022,
                     "sugar": 0.0,
                     "cholesterol": 0.48,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.45,
+                    "vitamin_c": 0.05,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.012,
+                    "vitamin_k": 0.001,
+                    "folate": 0.16,
+                    "vitamin_b12": 0.2,
+                    "vitamin_b6": 0.0036,
+                    "calcium": 0.53,
+                    "iron": 0.053,
+                    "magnesium": 0.3,
+                    "potassium": 3.5,
+                    "zinc": 0.0168,
+                    "phosphorus": 1.86,
+                    "selenium": 0.448,
+                    "ala": 0.0,
+                    "epa_dha": 1.57
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Octopus (Wild) — FDC 174218 'Mollusks, octopus, common, raw' (SR Legacy 15166), per 100 g: 82 kcal, protein 14.91 g, fat 1.04 g, sat fat 0.227 g, carbs 2.2 g, fiber 0 g, sugars 0 g, sodium 230 mg, cholesterol 48 mg; divided by 100 for per-gram values."
+                    "note": "Octopus (Wild) — FDC 174218 'Mollusks, octopus, common, raw' (SR Legacy 15166), per 100 g: 82 kcal, protein 14.91 g, fat 1.04 g, sat fat 0.227 g, carbs 2.2 g, fiber 0 g, sugars 0 g, sodium 230 mg, cholesterol 48 mg; divided by 100 for per-gram values. Vitamins, minerals and omega-3 from FDC 174218 'Mollusks, octopus, common, raw' per 100 g: vitamin a 45 µg RAE, vitamin c 5 mg, vitamin d 0 µg, vitamin e 1.2 mg, vitamin k 0.1 µg, folate 16 µg DFE, vitamin b12 20 µg, vitamin b6 0.36 mg, calcium 53 mg, iron 5.3 mg, magnesium 30 mg, potassium 350 mg, zinc 1.68 mg, phosphorus 186 mg, selenium 44.8 µg, ALA 0 g (USDA's total 18:3), EPA + DHA 157 mg (EPA 76 + DHA 81); divided by 100 for per-gram values."
                 }
             }
         ],
