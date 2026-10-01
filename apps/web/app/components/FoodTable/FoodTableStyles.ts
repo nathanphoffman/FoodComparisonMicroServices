@@ -1,4 +1,4 @@
-import { ONE_BILLION, ONE_MILLION, ONE_TRILLION } from './FoodTableCalculations';
+import { ONE_TRILLION } from './FoodTableCalculations';
 
 const TEN_TRILLION  = 1e13;
 const ONE_HUNDRED_TRILLION = 1e14;
@@ -43,12 +43,6 @@ export function getIntelligenceColor(value: number): string {
   if (value >= TEN_TRILLION) return 'text-red-600 font-medium';
   if (value >= ONE_TRILLION) return 'text-orange-600 font-medium';
   return 'text-amber-600 font-medium';
-}
-
-export function getNeuronColor(value: number): string {
-  if (value >= ONE_BILLION) return 'text-orange-600';
-  if (value >= ONE_MILLION) return 'text-amber-600';
-  return 'text-yellow-600';
 }
 
 export function getImprovementColor(ratio: number): string {

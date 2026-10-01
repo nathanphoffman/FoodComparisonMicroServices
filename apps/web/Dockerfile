@@ -7,7 +7,7 @@ WORKDIR /src
 COPY services/wasm-calculations ./services/wasm-calculations
 RUN wasm-pack build services/wasm-calculations --target web --release
 
-# 2. Build the SQLite databases (used by the /foods pages and /api routes).
+# 2. Build the SQLite databases (used by the /foods pages).
 FROM python:3.12-slim AS db
 WORKDIR /src
 COPY data ./data
