@@ -1872,6 +1872,28 @@
                     }
                 ]
             }
+        ],
+        "availability_gg": [
+            {
+                "value": 2.7,
+                "confidence": 1,
+                "source": {
+                    "id": 396,
+                    "url": "https://www.fastcompany.com/90214790/impossible-foods-is-making-500000-pounds-of-fake-meat-a-month",
+                    "title": "Fast Company (2018) — Impossible Foods is making 500,000 pounds of fake meat a month",
+                    "note": "Impossible Meat — availability_gg: 2018 Oakland plant output 500,000 lb/month = 6 million lb/yr = 2,722 t = 2.7 Gg (same figure as the Impossible Burger composite). Only reported production volume found; confidence 1. Added 2026-10-01: availability was missing, which the scorer treats as the worst possible value."
+                }
+            },
+            {
+                "value": 5.4,
+                "confidence": 1,
+                "source": {
+                    "id": 453,
+                    "url": "https://www.fooddive.com/news/a-new-impossible-foods-factory-will-produce-1-million-pounds-of-meat-per/439428/",
+                    "title": "Food Dive — A new Impossible Foods factory will produce 1 million pounds of 'meat' per month",
+                    "note": "Impossible Meat — availability_gg: the Oakland plant was built for at least 1 million lb/month = 12 million lb/yr = 5.4 Gg (capacity target, not reported output). Confidence 1."
+                }
+            }
         ]
     },
     {

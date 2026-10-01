@@ -41,13 +41,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": null
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Beef — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -1008,13 +1008,13 @@
         ],
         "neuron_count": [
             {
-                "value": 1200000000,
-                "confidence": 3,
+                "value": 3600000000,
+                "confidence": 2,
                 "source": {
-                    "id": 47,
-                    "url": "https://en.wikipedia.org/wiki/Sheep",
-                    "title": "Wikipedia — Sheep",
-                    "note": "Lamb — neuron_count: Sheep have been estimated at approximately 1.2 billion neurons based on isotropic fractionator data for ovine brain (Herculano-Houzel methodology). Sheep brain mass (~140g) is substantially smaller than cattle (~500g), consistent with the proportionally lower neuron count relative to beef cattle (~3 billion)."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 1.20e+09 (an older projection, not a count). Lamb — neuron_count (ESTIMATE, no direct count for this species): sheep brain ~128 g (median of 10 records: Boddy et al. 2012 database 88.8–145 g, Ballarin 2016 Table 5 125–137 g) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
                 }
             }
         ],
@@ -1273,13 +1273,13 @@
         ],
         "neuron_count": [
             {
-                "value": 1700000000,
+                "value": 5000000000,
                 "confidence": 2,
                 "source": {
-                    "id": 81,
-                    "url": "https://en.wikipedia.org/wiki/White-tailed_deer",
-                    "title": "Wikipedia — White-tailed Deer (Odocoileus virginianus)",
-                    "note": "Venison (Wild) — neuron_count: No direct empirical neuron count for white-tailed deer (Odocoileus virginianus) exists in the peer-reviewed literature via the Herculano-Houzel isotropic fractionator method. Estimate of ~1.7 billion neurons derived from scaling by brain mass: deer brain mass ~130–160 g (similar to sheep at ~140 g, which yields ~1.2 billion neurons). Deer cerebral cortex is relatively more developed than ovine, suggesting a moderately higher neuron density. Value of 1.7 billion applied as a conservative estimate; confidence 2 due to absence of direct measurement."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 1.70e+09 (an older projection, not a count). Venison (Wild) — neuron_count (ESTIMATE, no direct count for this species): white-tailed deer brain ~200 g (Boddy et al. 2012 database: adults 210 g at 65 kg, 160 g at 40 kg; this entry's deer is 70 kg) → 5.0 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
                 }
             }
         ],
@@ -1543,13 +1543,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3060000000,
+                "value": 3600000000,
                 "confidence": 2,
                 "source": {
                     "id": 439,
                     "url": "https://doi.org/10.3389/fnana.2014.00128",
                     "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
-                    "note": "Goat — neuron_count (ESTIMATE, no goat count exists): springbok (Antidorcas marsupialis, 25 kg, 102 g brain), the closest measured bovid in body size, has 3.06 bn whole-brain neurons by isotropic fractionator (Kazu et al. 2014, Table 1). Slaughter goats are ~29 kg. Note: this repo's lamb uses 1.2 bn, which looks low next to these bovid counts."
+                    "note": "CORRECTION 2026-10-01: was 3.06e+09 (an older projection, not a count). Goat — neuron_count (ESTIMATE, no direct count for this species): goat brain ~125 g (median of adult records: 115, 130.6 g in Boddy et al. 2012; 106, 125, 140 g in Ballarin 2016 Table 5) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
                 }
             }
         ],

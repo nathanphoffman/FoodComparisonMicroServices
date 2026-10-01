@@ -1322,7 +1322,8 @@
             "Tea — item 667 'Tea leaves' (fresh leaf) 2020–2024: 5,978 kg/ha world.",
             "Honey — items 1182 'Natural honey' and 1181 'Bees' (hives) 2020–2024: 1,941 kt from 100.4 M hives (19.3 kg/hive); US 61.1 kt / 2.64 M (23.1 kg).",
             "Onion (403), Carrot (426 'Carrots and turnips'), Cassava (125), Grapes (560), Cabbage (358) — yield_kg_ha and availability_gg: World and US 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
-            "Beet sugar (157), sugar cane (156, for molasses), molasses (165), maize (56) and maize oil (60), watermelons (567), pineapples (574), pumpkins/squash (394), eggplants (399), dry beans (176), broad beans (181), rye (71), millet (79), goat meat (1017), duck meat (1069), goat milk (1020) — 2020–2024 means from the same bulk file (downloaded 2026-10-01)."
+            "Beet sugar (157), sugar cane (156, for molasses), molasses (165), maize (56) and maize oil (60), watermelons (567), pineapples (574), pumpkins/squash (394), eggplants (399), dry beans (176), broad beans (181), rye (71), millet (79), goat meat (1017), duck meat (1069), goat milk (1020) — 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
+            "Goat cheese — item 1021 'Cheese from milk of goats', World 2020–2023 mean 461 Gg."
         ]
     },
     {
@@ -1582,7 +1583,8 @@
             "Barley: United States pot barley 70, pearled barley 62 (median pot barley 70 across 41 countries). No hulled-barley factor, so barley was not converted.",
             "Oilseed extraction rates (median across countries, computed from the country tables): oil of sunflower seed 39% of seed (n=71, range 25–47); groundnuts shelled 70% of in-shell (n=62); oil of groundnuts 45% of shelled (n=85, range 30–52); copra 19.5% of coconuts (n=60); oil of copra 63% of copra (n=27, range 55–65). Used for sunflower, peanut and coconut oil yield_kg_ha.",
             "Nut kernel (shelled) extraction rates, median across countries: almonds shelled 35% of in-shell (n=13); walnuts shelled 40% (n=14); cashew nuts shelled 25% (n=7); hazelnuts shelled 50% (n=12). Used to put nut availability_gg on the kernel basis of the nut entries.",
-            "Beet Sugar extraction rate (% of sugar beet weight): median 13 across 38 countries (range 9.5–18); United States 14. Used for beet-sugar yield_kg_ha and availability_gg (all beet land charged to the sugar, as for cane sugar at 11%)."
+            "Beet Sugar extraction rate (% of sugar beet weight): median 13 across 38 countries (range 9.5–18); United States 14. Used for beet-sugar yield_kg_ha and availability_gg (all beet land charged to the sugar, as for cane sugar at 11%).",
+            "'Cheese of Goat Milk' extraction rate (% of goat milk weight): median 17 across 21 countries (range 5–30). Used for goat cheese (5.88 kg milk per kg cheese)."
         ]
     },
     {
@@ -2491,7 +2493,8 @@
         "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
         "notes": [
             "Table 1 (isotropic fractionator, whole brain): domestic pig 57.8 g brain / 2.22 bn neurons; springbok (25 kg) 102.1 g / 3.06 bn; blesbok (60 kg) 155.1 g / 3.90 bn; greater kudu 308.5 g / 6.09 bn; giraffe 528 g / 11.21 bn. Brain mass scales with neurons^1.373 across artiodactyls.",
-            "Goat and Goat Milk — neuron_count: springbok used as the closest measured bovid of similar body size (no goat count exists)."
+            "Goat and Goat Milk — neuron_count: springbok used as the closest measured bovid of similar body size (no goat count exists).",
+            "Power law fitted to the 5 measured species (whole-brain neurons vs brain mass): N = e^18.559 × M^0.712 (M in g), reproduces springbok 3.10 bn vs 3.06 bn measured. Used to predict cattle 480.5 g → 9.3 bn, sheep 128 g → 3.6 bn, goat 125 g → 3.5 bn, white-tailed deer 200 g → 5.0 bn (2026-10-01)."
         ]
     },
     {
@@ -2580,6 +2583,30 @@
         "title": "The Coca-Cola Company (2025) — 2024 Environmental Update",
         "notes": [
             "Coca-Cola system water use ratio 1.78 L of water per L of product in 2023 and 2024 (2015 baseline 1.98)."
+        ]
+    },
+    {
+        "id": 451,
+        "url": "https://doi.org/10.1371/journal.pone.0154580",
+        "title": "Ballarin et al. (2016) — The Brain of the Domestic Bos taurus: Weight, Encephalization and Cerebellar Quotients (PLOS ONE)",
+        "notes": [
+            "Adult domestic cattle: mean brain weight 480.5 g (SEM 3.9), body weight 597.1 kg, n = 150."
+        ]
+    },
+    {
+        "id": 452,
+        "url": "https://zenodo.org/records/5000429",
+        "title": "Boddy et al. (2012) — mammal brain and body mass database (data for 'Comparative analysis of encephalization in mammals', J. Evol. Biol.)",
+        "notes": [
+            "Adult/unspecified brain masses: sheep (Ovis aries) 109 (n=9), 106.5 (n=7), 88.8 (n=5), 125.9, 145.0 g; goat (Capra hircus) adults 115 and 130.6 g; white-tailed deer (Odocoileus virginianus) adults 210 g (65 kg, n=2) and 160 g (40 kg)."
+        ]
+    },
+    {
+        "id": 453,
+        "url": "https://www.fooddive.com/news/a-new-impossible-foods-factory-will-produce-1-million-pounds-of-meat-per/439428/",
+        "title": "Food Dive — A new Impossible Foods factory will produce 1 million pounds of 'meat' per month",
+        "notes": [
+            "Oakland, CA plant (60,000 sq ft) built to produce at least 1 million lb of Impossible Burger per month = 12 million lb/yr = 5.4 Gg/yr (capacity target, not reported output)."
         ]
     }
 ]

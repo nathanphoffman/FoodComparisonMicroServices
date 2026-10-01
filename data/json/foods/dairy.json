@@ -43,13 +43,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -514,13 +514,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Yogurt — same dairy cow (Bos taurus) as milk: ~3 billion neurons. The neuron count reflects the source animal, not the product."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Yogurt — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -944,13 +944,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Butter — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -1428,13 +1428,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Whey Protein — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -1849,13 +1849,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cheddar — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -2271,13 +2271,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Mozzarella — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -2693,13 +2693,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3000000000,
-                "confidence": 3,
+                "value": 9300000000,
+                "confidence": 2,
                 "source": {
-                    "id": 17,
-                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
-                    "title": "Wikipedia — List of Animals by Number of Neurons",
-                    "note": "Dairy cow (Bos taurus) — estimated ~3 billion neurons based on Herculano-Houzel isotropic fractionator methodology for cattle brain."
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Parmesan — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
                 }
             }
         ],
@@ -3089,7 +3089,7 @@
             "temperate_forest": 0.2
         },
         "land_types_note": "Mostly grazing and crop stubble in semi-arid India, Pakistan, Sudan and the Sahel; plus Mediterranean and western European dairy goats (France, Spain, Netherlands, Greece).",
-        "sentient_harm_explanation": "Each dairy goat must give birth about once a year to keep producing milk, and is killed once her yield drops, after roughly five years of milking. Only about one of her kids is kept to replace her; the others are raised for meat and killed at around a year old. Per goat we count her own death plus about four kids. The neuron count is an estimate from a similar-sized antelope, as no goat brain has been counted.",
+        "sentient_harm_explanation": "Each dairy goat must give birth about once a year to keep producing milk, and is killed once her yield drops, after roughly five years of milking. Only about one of her kids is kept to replace her; the others are raised for meat and killed at around a year old. Per goat we count her own death plus about four kids. No goat brain has been counted, so the neuron count is estimated from goat brain size using counts from related hoofed animals.",
         "nutrition": [
             {
                 "value": {
@@ -3115,13 +3115,13 @@
         ],
         "neuron_count": [
             {
-                "value": 3060000000,
+                "value": 3600000000,
                 "confidence": 2,
                 "source": {
                     "id": 439,
                     "url": "https://doi.org/10.3389/fnana.2014.00128",
                     "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
-                    "note": "Goat Milk — neuron_count (ESTIMATE, no goat count exists): springbok (25 kg, 102 g brain) 3.06 bn whole-brain neurons, Kazu et al. 2014 Table 1, the closest measured bovid in size."
+                    "note": "CORRECTION 2026-10-01: was 3.06e+09 (an older projection, not a count). Goat Milk — neuron_count (ESTIMATE, no direct count for this species): goat brain ~125 g (median of adult records: 115, 130.6 g in Boddy et al. 2012; 106, 125, 140 g in Ballarin 2016 Table 5) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
                 }
             }
         ],
@@ -3356,6 +3356,283 @@
                     "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
                     "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
                     "note": "Goat Milk — availability_gg (US): FAOSTAT QCL item 1020 'Raw milk of goats', production 2020, 2021, 2022, 2023, 2024 = 0.03, 0.03, 0.03, 0.03, 0.03 Mt; mean 26 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 123,
+        "slug": "goat-cheese",
+        "name": "Goat Cheese",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "cheese"
+        ],
+        "land_types": {
+            "dry": 0.45,
+            "tropical_savanna": 0.35,
+            "temperate_forest": 0.2
+        },
+        "land_types_note": "Same land as goat milk: grazing and crop stubble in semi-arid South Asia, NE Africa and the Sahel, plus Mediterranean and western European dairy goats (France is the largest goat cheese maker).",
+        "sentient_harm_explanation": "Goat cheese is made from goat milk, so it carries the same animal deaths as goat milk. It takes about 6 kg of goat milk to make 1 kg of soft goat cheese; the whey is sold too, so goat cheese is charged about 5.6 kg of milk per kg. Each dairy goat must give birth about once a year to keep producing milk and is killed once her yield drops; only about one of her kids is kept to replace her and the rest are raised for meat. Per goat we count her own death, about 4.2 kids at roughly 1.3 years old each, and a lifetime share of only about 91 kg of goat cheese, because the world-average milking goat gives little milk. No goat brain has been counted, so the neuron count is estimated from goat brain size using counts from related hoofed animals.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.64,
+                    "fat": 0.2108,
+                    "sat_fat": 0.14575,
+                    "protein": 0.1852,
+                    "fiber": 0,
+                    "sodium": 4.59,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0.46,
+                    "trans_fat": null
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Goat Cheese — nutrition: USDA FDC 173435 (SR Legacy 01159) 'Cheese, goat, soft type' per 100 g: 264 kcal, fat 21.08 g, sat 14.575 g, protein 18.52 g, sodium 459 mg, carbs 0 g, sugars 0 g, cholesterol 46 mg; trans fat not reported. Per gram."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3600000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.06e+09 (an older projection, not a count). Goat Cheese — neuron_count (ESTIMATE, no direct count for this species): goat brain ~125 g (median of adult records: 115, 130.6 g in Boddy et al. 2012; 106, 125, 140 g in Ballarin 2016 Table 5) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — weight_kg: GLEAM Table B4 adult female dairy goat weights (South Asia 32, NENA 37, SSA 29, W. Europe 59, E & SE Asia 44, LAC 35, E. Europe 50, Russia 55 kg) weighted by goat milk output = 37 kg."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 91,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat Cheese — lifetime goat milk per doe 510 kg (goat-milk entry: FAOSTAT 95 kg/yr × 5.3 yr) / 5.6 kg allocated milk per kg cheese = 91 kg. FAO Technical Conversion Factors: 'Cheese of Goat Milk' extraction rate median 17% of milk weight across 21 countries (range 5–30%; e.g. Germany, Austria, Hungary 15, Türkiye 25, Portugal 12) = 5.88 kg goat milk per kg cheese. Economic allocation as for cheddar: the whey co-product takes 4.8% of the cheese plant's milk burden (Bacenetti et al. 2019, source 404), so goat cheese carries 5.88 × 0.952 = 5.6 kg allocated milk per kg. A soft/fresh-type yield (chèvre), matching the soft goat cheese nutrition used here. Confidence 2."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 4.2,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — kids that die per doe: GLEAM Table B4 (weighted by milk output) fertility 84%, adult death rate 5.8%, replacement 18.7%. Kids born per doe over her life = (0.84 × 0.942 + 0.187) / 0.187 = 5.2; minus 1 kept as her replacement = 4.2. Counts one kid per kidding, so twins are missed (likely an underestimate)."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.3,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — years those kids live: GLEAM age at slaughter ≈ age at first kidding × (slaughter − birth weight) / (adult − birth weight), e.g. South Asia 1.8 × (25 − 2.7) / (32 − 2.7) = 1.37 yr, SSA 1.25, NENA 1.37, W. Europe 0.52; weighted ≈ 1.3 yr."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Goat Cheese — yield_fraction 1.0: per-kg-output values are already per kg cheese; the milk-to-cheese factor (5.6 kg allocated milk) is in the lifetime, GHG, land and feed values, not here."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.008848,
+                "confidence": 2,
+                "source": {
+                    "id": 441,
+                    "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+                    "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+                    "note": "Goat Cheese — goat-milk grazing land 0.00158 ha/kg × 5.6 kg allocated milk per kg cheese. FAO Technical Conversion Factors: 'Cheese of Goat Milk' extraction rate median 17% of milk weight across 21 countries (range 5–30%; e.g. Germany, Austria, Hungary 15, Türkiye 25, Portugal 12) = 5.88 kg goat milk per kg cheese. Economic allocation as for cheddar: the whey co-product takes 4.8% of the cheese plant's milk burden (Bacenetti et al. 2019, source 404), so goat cheese carries 5.88 × 0.952 = 5.6 kg allocated milk per kg. A soft/fresh-type yield (chèvre), matching the soft goat cheese nutrition used here. Confidence 2."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            },
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.85,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Goat Milk — native_fraction: reused from this repo's lamb entry; most milking goats graze native rangeland. "
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.6888,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Cheese — goat-milk CH4 0.123 kg/kg (GLEAM 2013) × 5.6. FAO Technical Conversion Factors: 'Cheese of Goat Milk' extraction rate median 17% of milk weight across 21 countries (range 5–30%; e.g. Germany, Austria, Hungary 15, Türkiye 25, Portugal 12) = 5.88 kg goat milk per kg cheese. Economic allocation as for cheddar: the whey co-product takes 4.8% of the cheese plant's milk burden (Bacenetti et al. 2019, source 404), so goat cheese carries 5.88 × 0.952 = 5.6 kg allocated milk per kg. A soft/fresh-type yield (chèvre), matching the soft goat cheese nutrition used here. Confidence 2."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.01904,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Cheese — goat-milk manure N2O 0.0034 kg/kg (GLEAM 2013) × 5.6."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.84,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Goat Cheese — goat-milk on-farm energy 0.083 kg CO2/kg (GLEAM 2013: 1.6% × 5.2) × 5.6 = 0.46, plus cheese post-farm stages 1.38 kg CO2e/kg from Poore & Nemecek 2018 via OWID cheese row (processing 0.740 + transport 0.139 + retail 0.333 + packaging 0.172; losses left out), same method as cheddar. Milk's own post-farm stages are NOT multiplied. Total 1.84."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 3.472,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Cheese — goat-milk feed 0.62 kg grass-hay/kg milk × 5.6 kg allocated milk per kg cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.448,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Cheese — goat-milk feed 0.08 kg alfalfa/kg milk × 5.6 kg allocated milk per kg cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.568,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Cheese — goat-milk feed 0.28 kg soy/kg milk × 5.6 kg allocated milk per kg cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.28,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Cheese — goat-milk feed 0.05 kg corn/kg milk × 5.6 kg allocated milk per kg cheese."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 461,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat Cheese — availability_gg (world): FAOSTAT QCL item 1021 'Cheese from milk of goats, fresh or processed', World production 2020–2023 = 475.1, 460.8, 452.3, 456.7 kt (FAO estimates); mean 461 Gg. France ~90 kt/yr is the largest single producer. 2024 not yet reported."
                 }
             }
         ]
