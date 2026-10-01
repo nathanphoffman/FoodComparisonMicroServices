@@ -1951,5 +1951,1121 @@
                 }
             }
         ]
+    },
+    {
+        "id": 124,
+        "slug": "beef-liver",
+        "name": "Beef Liver",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw beef liver, nutrition from USDA (FDC 169451). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from beef: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of beef meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Beef's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): beef meat production × about 0.026 kg of liver per kg of meat.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Mostly grassland pasture and feed crops, but cattle ranching drives most Amazon deforestation and much Cerrado clearing.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.35,
+                    "fat": 0.0363,
+                    "sat_fat": 0.01233,
+                    "protein": 0.2036,
+                    "fiber": 0.0,
+                    "sodium": 0.69,
+                    "carbs": 0.0389,
+                    "sugar": 0.0,
+                    "cholesterol": 2.75,
+                    "trans_fat": 0.0017,
+                    "vitamin_a": 49.68,
+                    "vitamin_c": 0.013,
+                    "vitamin_d": 0.012,
+                    "vitamin_e": 0.0038,
+                    "vitamin_k": 0.031,
+                    "folate": 2.9,
+                    "vitamin_b12": 0.593,
+                    "vitamin_b6": 0.01083,
+                    "calcium": 0.05,
+                    "iron": 0.049,
+                    "magnesium": 0.18,
+                    "potassium": 3.13,
+                    "zinc": 0.04,
+                    "phosphorus": 3.87,
+                    "selenium": 0.397
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 454,
+                    "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
+                    "note": "Beef Liver — nutrition: FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 135 kcal, fat 3.63 g, sat fat 1.233 g, protein 20.36 g, fiber 0, sodium 69 mg, carbs 3.89 g, cholesterol 275 mg, sugars 0 g, trans fat 0.17 g. Vitamins and minerals: vitamin a 4968 µg RAE, vitamin c 1.3 mg, vitamin d 1.2 µg, vitamin e 0.38 mg, vitamin k 3.1 µg, folate 290 µg DFE, vitamin b12 59.3 µg, vitamin b6 1.083 mg, calcium 5 mg, iron 4.9 mg, magnesium 18 mg, potassium 313 mg, zinc 4 mg, phosphorus 387 mg, selenium 39.7 µg. Divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Beef — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 500,
+                "confidence": 4,
+                "source": {
+                    "id": 18,
+                    "url": "https://beef.unl.edu/beefwatch/2020/how-many-pounds-meat-can-we-expect-beef-animal/",
+                    "title": "UNL BeefWatch — Pounds of Meat from a Beef Animal",
+                    "note": null
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.015,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            },
+            {
+                "value": 0.037,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 202,
+                    "url": "https://www.pnas.org/doi/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, GHG, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS)",
+                    "note": "Beef — pasture_ha_per_kg_output (US): Eshel et al. 2014 (USDA data 2000–2010) put total US land for animal-based food at ~3.7 million km2, with beef pasture ~79% of that (~2.92 million km2 = ~292 Mha). Divided by US beef production ~26 billion lb carcass weight/yr (~11.8 Mt CW, USDA 2000–2010 average) = ~0.0247 ha/kg CW. Converted to boneless retail basis (same as existing world entry; yield_fraction 0.43 of live weight) with CW-to-retail factor 0.67 (Rotz et al. 2019: ~33% fat, bone and shrink loss): 0.0247 / 0.67 ≈ 0.037 ha/kg. Cross-check: USDA ERS Major Land Uses 2017 grassland pasture+range (~265 Mha) plus grazed forest (~53 Mha) ≈ 318 Mha, ~90% beef-grazed, over ~11.9 Mt CW gives ~0.024 ha/kg CW, consistent. US value exceeds the world entry because much US beef grazing is on low-productivity arid western rangeland. US."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": null
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": null
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.65,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 1.9,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef (multiply by GWP100=28 for CO2e). P&N 2018 global median ~99 CO2e/kg; enteric fermentation (~51%) + manure CH4 (~8%) = ~59% of total = ~50.6 CO2e after subtracting feed (13.17). 50.6 / 28 ≈ 1.81 kg CH4/kg raw; rounded to 1.90 as the upper half of the global mixed (feedlot+pasture) range. Previous value of 8.7 was incorrectly stored as CO2e not raw kg CH4."
+                }
+            },
+            {
+                "value": 1.85,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg × GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
+                }
+            },
+            {
+                "value": 0.72,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — ch4_kg_per_kg_output (US): Rotz et al. 2019 Table 2, US beef-breed production systems (2013–2017, ~150 simulated operations, cow-calf + stocker + feedlot): 482 g CH4/kg carcass weight (enteric + manure; feed-crop production and land use not included in this gas total). Converted to boneless retail basis (same as world entries) with CW-to-retail factor 0.67 (~33% fat/bone/shrink loss, per Rotz et al.): 0.482 / 0.67 ≈ 0.72 kg CH4/kg. Cross-check with US EPA GHG Inventory 2024 (year 2022): beef cattle enteric 4,891 kt + manure 154 kt = 5,045 kt CH4 over ~11.96 Mt CW (28.3 billion lb commercial beef minus ~0.9 Mt from 3.05 M dairy cull cows, whose emissions EPA books under dairy) = 0.42 kg/kg CW = 0.63 kg/kg retail; agrees within ~15%. US."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.068,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef (multiply by GWP100=265 for CO2e). P&N 2018 global median; manure management N2O (~14%) + field N2O from manure application (~4%) = ~18% of total 99 CO2e = ~17.8 CO2e. 17.8 / 265 ≈ 0.067 kg N2O/kg beef raw, rounded to 0.068. Previous value of 0.11 was incorrectly stored as CO2e not raw kg N2O."
+                }
+            },
+            {
+                "value": 0.065,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 × 265 = 17.2 kg CO2e, representing the manure-system N2O component."
+                }
+            },
+            {
+                "value": 0.0085,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 201,
+                    "url": "https://www.epa.gov/system/files/documents/2024-04/us-ghg-inventory-2024-chapter-5-agriculture.pdf",
+                    "title": "US EPA (2024) — Inventory of U.S. Greenhouse Gas Emissions and Sinks 1990–2022, Ch. 5 Agriculture",
+                    "note": "Beef — n2o_kg_per_kg_output (US): US EPA GHG Inventory 2024, year 2022. Manure management N2O for beef cattle (direct + indirect, Table 5-7) = 24 kt. Plus direct N2O from manure/urine deposited on pasture, range and paddock (PRP, Table 5-17): 13.8 MMT CO2e / 265 = 52.1 kt N2O for all grazing species; beef share assumed ~85% (beef cattle not on feed are by far the dominant PRP animals; dairy mostly confined; sheep/horses/goats/bison minor) = 44.3 kt. Total ≈ 68.3 kt N2O. Excludes feed-crop fertilizer N2O and managed manure applied to cropland. Divided by ~11.96 Mt CW from beef-category cattle (28.3 billion lb commercial beef 2022 minus ~0.9 Mt dairy cull cows) = 5.7 g N2O/kg CW; converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al. 2019) = 8.5 g ≈ 0.0085 kg N2O/kg. Sanity check: Rotz et al. 2019 total beef N2O is 19.9 g/kg CW but that includes feed-crop fertilizer N2O. Confidence 2 because the PRP beef share is an assumption. US."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 14.6,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — co2_kg_per_kg_output: P&N 2018 global median ~99 kg CO2e/kg beef. Field stores direct CO2 only (energy, processing, transport, LUC not captured by the feed/pasture join). Derived as: 99 total − 13.17 feed − 53.2 CH4 CO2e (1.90×28) − 18.0 N2O CO2e (0.068×265) ≈ 14.6 kg CO2/kg. Represents machinery fuel, slaughter, cold-chain, and net LUC excluding manure-field N2O."
+                }
+            },
+            {
+                "value": 14.2,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14–18 kg CO2e/kg for global-average beef."
+                }
+            },
+            {
+                "value": 1.36,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — co2_kg_per_kg_output (US): Rotz et al. 2019 Table 2 US beef-breed farm-gate energy use per kg carcass weight: fuel 0.25 L × ~2.7 kg CO2/L (EPA diesel factor) = 0.675; natural gas 0.03 m3 × ~1.94 kg CO2/m3 = 0.058; electricity 0.41 kWh × ~0.43 kg CO2/kWh (EPA eGRID US average, ~2018) = 0.176; total ≈ 0.91 kg CO2/kg CW. Converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al.): 0.91 / 0.67 ≈ 1.36 kg CO2/kg. Cross-check: Rotz Fig. 3a puts fuel-combustion + lime CO2 at ~4% of 21.3 kg CO2e/kg CW ≈ 0.85 kg/kg CW, consistent. Scope caveats: farm-gate only (excludes packing, cold chain and retail transport, which would add a little), and on-farm fuel includes some machinery for home-grown feed that Rotz does not separate. Excludes land-use change (the world entries include an LUC residual, so the large gap is partly a scope difference). US."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 5.71,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.76,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.14,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.29,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 9,
+                "food_slug": "sorghum",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.48,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1704,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Beef Liver — availability_gg: rough estimate, not a published figure. Beef meat production (66,624 Gg) × liver per kg of meat. A cow's liver is roughly 1.1% of its live weight (a typical textbook ballpark, not from a specific source), and meat is 0.43 of live weight, so about 0.026 kg of liver per kg of meat."
+                }
+            }
+        ]
+    },
+    {
+        "id": 125,
+        "slug": "chicken-liver",
+        "name": "Chicken Liver",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw chicken liver, nutrition from USDA (FDC 171060). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from chicken: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of chicken meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Chicken's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): chicken meat production × about 0.027 kg of liver per kg of meat.",
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.19,
+                    "fat": 0.0483,
+                    "sat_fat": 0.01563,
+                    "protein": 0.1692,
+                    "fiber": 0.0,
+                    "sodium": 0.71,
+                    "carbs": 0.0073,
+                    "sugar": 0.0,
+                    "cholesterol": 3.45,
+                    "trans_fat": 0.00065,
+                    "vitamin_a": 32.96,
+                    "vitamin_c": 0.179,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.007,
+                    "vitamin_k": 0.0,
+                    "folate": 5.88,
+                    "vitamin_b12": 0.1658,
+                    "vitamin_b6": 0.00853,
+                    "calcium": 0.08,
+                    "iron": 0.0899,
+                    "magnesium": 0.19,
+                    "potassium": 2.3,
+                    "zinc": 0.0267,
+                    "phosphorus": 2.97,
+                    "selenium": 0.546
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 455,
+                    "url": "https://fdc.nal.usda.gov/food-details/171060/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 171060: Chicken, liver, all classes, raw",
+                    "note": "Chicken Liver — nutrition: FDC 171060 'Chicken, liver, all classes, raw' (SR Legacy) per 100 g: 119 kcal, fat 4.83 g, sat fat 1.563 g, protein 16.92 g, fiber 0, sodium 71 mg, carbs 0.73 g, cholesterol 345 mg, sugars 0 g, trans fat 0.065 g. Vitamins and minerals: vitamin a 3296 µg RAE, vitamin c 17.9 mg, vitamin d 0 µg, vitamin e 0.7 mg, vitamin k 0 µg, folate 588 µg DFE, vitamin b12 16.58 µg, vitamin b6 0.853 mg, calcium 8 mg, iron 8.99 mg, magnesium 19 mg, potassium 230 mg, zinc 2.67 mg, phosphorus 297 mg, selenium 54.6 µg. Divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 221000000,
+                "confidence": 5,
+                "source": {
+                    "id": 19,
+                    "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.1048261/full",
+                    "title": "Frontiers in Neuroanatomy — Chicken Neuron Count",
+                    "note": "Chicken — neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 2.5,
+                "confidence": 5,
+                "source": {
+                    "id": 19,
+                    "url": "https://www.frontiersin.org/journals/neuroanatomy/articles/10.3389/fnana.2022.1048261/full",
+                    "title": "Frontiers in Neuroanatomy — Chicken Neuron Count",
+                    "note": "Chicken — neuron_count: Peer-reviewed source confirming 221 million neurons in domestic chicken (Red Junglefowl)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.75,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.04,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chicken — ch4_kg_per_kg_output: On-farm CH4 only (manure management; broiler chickens produce negligible enteric CH4 as monogastrics). System boundary is on-farm only; feed production and land use change are excluded. 0.04 kg CH4/kg × GWP100=28 = 1.12 kg CO2e/kg. P&N 2018 global median for poultry meat; consistent with GLEAM v3 broiler estimate."
+                }
+            },
+            {
+                "value": 0.035,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Chicken — ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for broiler chickens (manure management only; no enteric CH4 for poultry). System boundary is on-farm only; feed production and land use change are excluded. 0.035 kg CH4/kg × GWP100=28 = 0.98 kg CO2e/kg. Global production-weighted average across confined broiler systems."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 6.8e-05,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Chicken — n2o_kg_per_kg_output: On-farm N2O only (manure management in confined broiler houses). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000068 × 265 = 0.018 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.018 was stored in kg CO2e rather than raw kg N2O — same error pattern as eggs.json (corrected 0.012 → 0.00011). Derived as 0.018 CO2e / 265 = 0.000068 kg raw N2O/kg chicken. N2O from feed crop fertilizer is tracked in the feed fields, not here."
+                }
+            },
+            {
+                "value": 6e-05,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Chicken — n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for broiler chickens (manure management in confined housing; low-moisture litter produces relatively little N2O). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000060 × 265 = 0.016 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.016 was stored in kg CO2e rather than raw kg N2O. Derived as 0.016 CO2e / 265 = 0.000060 kg raw N2O/kg chicken. System boundary is on-farm only; feed and land use N2O are excluded. Consistent with P&N 2018 corrected estimate."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.427,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.45 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.45 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.45 + 2.977 = 3.427. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
+                }
+            },
+            {
+                "value": 3.397,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "CORRECTION 2026-09-26: replaced 0.42 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.42 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.42 + 2.977 = 3.397. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.22,
+                        "confidence": 3,
+                        "source": {
+                            "id": 22,
+                            "url": "https://en.wikipedia.org/wiki/Feed_conversion_ratio",
+                            "title": "Wikipedia — Feed Conversion Ratio",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.57,
+                        "confidence": 3,
+                        "source": {
+                            "id": 22,
+                            "url": "https://en.wikipedia.org/wiki/Feed_conversion_ratio",
+                            "title": "Wikipedia — Feed Conversion Ratio",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 9,
+                "food_slug": "sorghum",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.09,
+                        "confidence": 3,
+                        "source": {
+                            "id": 26,
+                            "url": "https://www.feedstrategy.com/animal-feed-formulations-library/traditional-us-broiler-feed-formulations",
+                            "title": "Feed Strategy — Traditional US Broiler Feed Formulations",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.24,
+                        "confidence": 3,
+                        "source": {
+                            "id": 68,
+                            "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                            "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                            "note": "Chicken — wheat kg_feed_per_kg_output: Global broiler FCR ~1.8 kg/kg live weight; dressing ~75% (source 54); feed/kg chicken = 2.40 kg. Wheat fraction ~10% of global average diet; wheat feed = 2.40 × 0.10 = 0.24 kg/kg chicken. Confidence 3 — wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas/Asia) and wheat-significant (EU) systems."
+                        }
+                    },
+                    {
+                        "value": 0.24,
+                        "confidence": 3,
+                        "source": {
+                            "id": 69,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
+                            "title": "Leinonen et al. (2012) — Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 3273,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Chicken Liver — availability_gg: rough estimate, not a published figure. Chicken meat production (122,746 Gg) × liver per kg of meat. A chicken's liver is roughly 2% of its live weight (a typical textbook ballpark, not from a specific source), and meat is 0.75 of live weight, so about 0.027 kg of liver per kg of meat."
+                }
+            }
+        ]
+    },
+    {
+        "id": 126,
+        "slug": "pork-liver",
+        "name": "Pork Liver",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw pork liver, nutrition from USDA (FDC 167862). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from pork: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of pork meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Pork's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): pork meat production × about 0.023 kg of liver per kg of meat.",
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.34,
+                    "fat": 0.0365,
+                    "sat_fat": 0.0117,
+                    "protein": 0.2139,
+                    "fiber": 0.0,
+                    "sodium": 0.87,
+                    "carbs": 0.0247,
+                    "sugar": null,
+                    "cholesterol": 3.01,
+                    "trans_fat": null,
+                    "vitamin_a": 65.02,
+                    "vitamin_c": 0.253,
+                    "folate": 2.12,
+                    "vitamin_b12": 0.26,
+                    "vitamin_b6": 0.0069,
+                    "calcium": 0.09,
+                    "iron": 0.233,
+                    "magnesium": 0.18,
+                    "potassium": 2.73,
+                    "zinc": 0.0576,
+                    "phosphorus": 2.88,
+                    "selenium": 0.527
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 456,
+                    "url": "https://fdc.nal.usda.gov/food-details/167862/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 167862: Pork, fresh, variety meats and by-products, liver, raw",
+                    "note": "Pork Liver — nutrition: FDC 167862 'Pork, fresh, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 134 kcal, fat 3.65 g, sat fat 1.17 g, protein 21.39 g, fiber 0, sodium 87 mg, carbs 2.47 g, cholesterol 301 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 6502 µg RAE, vitamin c 25.3 mg, folate 212 µg DFE, vitamin b12 26 µg, vitamin b6 0.69 mg, calcium 9 mg, iron 23.3 mg, magnesium 18 mg, potassium 273 mg, zinc 5.76 mg, phosphorus 288 mg, selenium 52.7 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 2230000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": null
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 90,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": null
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.7,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.066,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.22 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
+                }
+            },
+            {
+                "value": 0.074,
+                "confidence": 3,
+                "source": {
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.2. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0024,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.025 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
+                }
+            },
+            {
+                "value": 0.0022,
+                "confidence": 3,
+                "source": {
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.022. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.836,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.55 — it covered on-farm energy only, so every stage after the farm gate was missing and pork was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.55 on-farm + Poore & Nemecek post-farm stages for 'Pig Meat' (OWID supply-chain grapher, source 72): processing 0.416 + transport 0.501 + retail 0.278 + packaging 0.432 + supply-chain losses 1.659 = 3.286 kg CO2e/kg; 0.55 + 3.286 = 3.836. Post-farm stages are stored here as CO2e."
+                }
+            },
+            {
+                "value": 3.786,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "CORRECTION 2026-09-26: replaced 0.5 — it covered on-farm energy only, so every stage after the farm gate was missing and pork was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.5 on-farm + Poore & Nemecek post-farm stages for 'Pig Meat' (OWID supply-chain grapher, source 72): processing 0.416 + transport 0.501 + retail 0.278 + packaging 0.432 + supply-chain losses 1.659 = 3.286 kg CO2e/kg; 0.5 + 3.286 = 3.786. Post-farm stages are stored here as CO2e."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 31,
+                            "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.77,
+                        "confidence": 3,
+                        "source": {
+                            "id": 31,
+                            "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.46,
+                        "confidence": 3,
+                        "source": {
+                            "id": 68,
+                            "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                            "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                            "note": "Pork — wheat kg_feed_per_kg_output: Global swine FCR ~2.8 kg/kg live weight (consistent with source 31); dressing ~73%; feed/kg pork = 3.836 kg. Wheat fraction ~12% of global average diet (higher in EU ~35–45%, lower in US/Brazil <5%); wheat feed = 3.836 × 0.12 = 0.46 kg/kg pork. Confidence 3 — wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas) and wheat-dominant (EU) systems."
+                        }
+                    },
+                    {
+                        "value": 0.46,
+                        "confidence": 3,
+                        "source": {
+                            "id": 69,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
+                            "title": "Leinonen et al. (2012) — Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2756,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pork Liver — availability_gg: rough estimate, not a published figure. Pork meat production (120,570 Gg) × liver per kg of meat. A pig's liver is roughly 1.6% of its live weight (a typical textbook ballpark, not from a specific source), and meat is 0.7 of live weight, so about 0.023 kg of liver per kg of meat."
+                }
+            }
+        ]
+    },
+    {
+        "id": 127,
+        "slug": "lamb-liver",
+        "name": "Lamb Liver",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw lamb liver, nutrition from USDA (FDC 172531). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from lamb: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of lamb meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Lamb's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): lamb meat production × about 0.031 kg of liver per kg of meat.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "dry": 0.3,
+            "temperate_forest": 0.1
+        },
+        "land_types_note": "Grassland pasture in NZ, UK and China, plus dry Australian rangeland.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.39,
+                    "fat": 0.0502,
+                    "sat_fat": 0.0194,
+                    "protein": 0.2038,
+                    "fiber": 0.0,
+                    "sodium": 0.7,
+                    "carbs": 0.0178,
+                    "sugar": null,
+                    "cholesterol": 3.71,
+                    "trans_fat": null,
+                    "vitamin_a": 73.91,
+                    "vitamin_c": 0.04,
+                    "folate": 2.3,
+                    "vitamin_b12": 0.9005,
+                    "vitamin_b6": 0.009,
+                    "calcium": 0.07,
+                    "iron": 0.0737,
+                    "magnesium": 0.19,
+                    "potassium": 3.13,
+                    "zinc": 0.0466,
+                    "phosphorus": 3.64,
+                    "selenium": 0.824
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 457,
+                    "url": "https://fdc.nal.usda.gov/food-details/172531/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172531: Lamb, variety meats and by-products, liver, raw",
+                    "note": "Lamb Liver — nutrition: FDC 172531 'Lamb, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 139 kcal, fat 5.02 g, sat fat 1.94 g, protein 20.38 g, fiber 0, sodium 70 mg, carbs 1.78 g, cholesterol 371 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 7391 µg RAE, vitamin c 4 mg, folate 230 µg DFE, vitamin b12 90.05 µg, vitamin b6 0.9 mg, calcium 7 mg, iron 7.37 mg, magnesium 19 mg, potassium 313 mg, zinc 4.66 mg, phosphorus 364 mg, selenium 82.4 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3600000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 1.20e+09 (an older projection, not a count). Lamb — neuron_count (ESTIMATE, no direct count for this species): sheep brain ~128 g (median of 10 records: Boddy et al. 2012 database 88.8–145 g, Ballarin 2016 Table 5 125–137 g) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 45,
+                "confidence": 4,
+                "source": {
+                    "id": 47,
+                    "url": "https://en.wikipedia.org/wiki/Sheep",
+                    "title": "Wikipedia — Sheep",
+                    "note": "Lamb — weight_kg: Commercial lambs are typically slaughtered at 40–55 kg live weight; a value of 45 kg is used."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.45,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.02,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": null
+                }
+            },
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": null
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.85,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.562,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — ch4_kg_per_kg_output: Raw kg CH4 per kg lamb (multiply by GWP100=28 for CO2e). P&N 2018 global median ~39.7 CO2e/kg; enteric fermentation + manure CH4 ≈ 40% of (39.7 − 12.58 feed) = 10.85, plus additional to reach ~15.74 CO2e allocation = 0.562 kg CH4/kg raw. Previous value of 7.0 was incorrectly stored as CO2e not raw kg CH4."
+                }
+            },
+            {
+                "value": 0.54,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — ch4_kg_per_kg_output: Raw kg CH4 per kg lamb. FAO GLEAM v3 for sheep (mutton and lamb) confirms enteric fermentation as the dominant GHG source. 0.540 × 28 = 15.1 kg CO2e. Consistent with P&N 2018 ruminant CH4 fraction."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0225,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — n2o_kg_per_kg_output: Raw kg N2O per kg lamb (multiply by GWP100=265 for CO2e). P&N 2018 global median; N2O from manure management ≈ 15% of (39.7 − 12.58) = 4.07 CO2e + field N2O ≈ 5.96 total CO2e → 5.96 / 265 = 0.0225 kg N2O/kg raw. Previous value of 0.13 was incorrectly stored as CO2e not raw kg N2O."
+                }
+            },
+            {
+                "value": 0.0215,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — n2o_kg_per_kg_output: Raw kg N2O per kg lamb. FAO GLEAM v3 small ruminant N2O from manure and field applications. 0.0215 × 265 = 5.7 kg CO2e. Consistent with P&N 2018 decomposition."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 5.42,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lamb — co2_kg_per_kg_output: P&N 2018 global median ~39.7 kg CO2e/kg lamb. Direct CO2 = 39.7 total − 12.58 feed − 15.74 CH4 CO2e (0.562×28) − 5.96 N2O CO2e (0.0225×265) ≈ 5.42 kg CO2/kg. Represents energy, slaughter, cold-chain, and LUC not captured by pasture/feed join."
+                }
+            },
+            {
+                "value": 5.2,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Lamb — co2_kg_per_kg_output: FAO GLEAM v3 global average for small ruminants (sheep). Direct CO2 consistent with P&N 2018 decomposition; ~5.2 kg CO2/kg for energy, processing, and LUC residual."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 4.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 48,
+                            "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.2,
+                        "confidence": 3,
+                        "source": {
+                            "id": 48,
+                            "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.8,
+                        "confidence": 3,
+                        "source": {
+                            "id": 48,
+                            "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 48,
+                            "url": "https://www.mla.com.au/research-and-development/sheep/sheep-feed-and-nutrition/",
+                            "title": "MLA — Sheep Feed and Nutrition",
+                            "note": "Lamb — FCR: Commercial lambs on feedlot finishing achieve ~4.5–5.5 kg feed per kg live weight gain; value of 5.0 used for feedlot lamb."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 346,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Lamb Liver — availability_gg: rough estimate, not a published figure. Lamb meat production (11,123 Gg) × liver per kg of meat. A sheep's liver is roughly 1.4% of its live weight (a typical textbook ballpark, not from a specific source), and meat is 0.45 of live weight, so about 0.031 kg of liver per kg of meat."
+                }
+            }
+        ]
     }
 ]

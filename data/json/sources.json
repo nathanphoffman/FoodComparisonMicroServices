@@ -11,7 +11,9 @@
             "Honey — FDC 169640 (SR 19296).",
             "Onion FDC 170000 (SR 11282), Carrot FDC 170393 (SR 11124), Cassava FDC 169985 (SR 11134), Grapes FDC 174683 (SR 09132), Cabbage FDC 169975 (SR 11109).",
             "Beet sugar FDC 169655, Molasses 168820, Corn oil 171029, Watermelon 167765, Pineapple 169124, Pumpkin 168448, Eggplant 169228, Kidney beans cooked 173740, Fava beans cooked 173753, Rye grain 168884, Millet raw 169702, Goat roasted 175304, Duck meat only roasted 172411, Goat milk 171278, Octopus raw 174218.",
-            "Legumes — vitamins and minerals (cooked, boiled, without salt): soybeans FDC 174271, lentils 172421, chickpeas 173757, black beans 173735, split peas 172429, kidney beans 173740, fava beans 173753."
+            "Legumes — vitamins and minerals (cooked, boiled, without salt): soybeans FDC 174271, lentils 172421, chickpeas 173757, black beans 173735, split peas 172429, kidney beans 173740, fava beans 173753.",
+            "Spinach — vitamins and minerals: FDC 168462 (Spinach, raw).",
+            "Bivalves — vitamins and minerals (raw): blue mussel FDC 174216, Pacific oyster 174219, mixed-species clam 174214."
         ]
     },
     {
@@ -2609,6 +2611,38 @@
         "title": "Food Dive — A new Impossible Foods factory will produce 1 million pounds of 'meat' per month",
         "notes": [
             "Oakland, CA plant (60,000 sq ft) built to produce at least 1 million lb of Impossible Burger per month = 12 million lb/yr = 5.4 Gg/yr (capacity target, not reported output)."
+        ]
+    },
+    {
+        "id": 454,
+        "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
+        "notes": [
+            "Beef Liver — nutrition: FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 135 kcal, fat 3.63 g, sat fat 1.233 g, protein 20.36 g, fiber 0, sodium 69 mg, carbs 3.89 g, cholesterol 275 mg, sugars 0 g, trans fat 0.17 g. Vitamins and minerals: vitamin a 4968 µg RAE, vitamin c 1.3 mg, vitamin d 1.2 µg, vitamin e 0.38 mg, vitamin k 3.1 µg, folate 290 µg DFE, vitamin b12 59.3 µg, vitamin b6 1.083 mg, calcium 5 mg, iron 4.9 mg, magnesium 18 mg, potassium 313 mg, zinc 4 mg, phosphorus 387 mg, selenium 39.7 µg. Divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 455,
+        "url": "https://fdc.nal.usda.gov/food-details/171060/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 171060: Chicken, liver, all classes, raw",
+        "notes": [
+            "Chicken Liver — nutrition: FDC 171060 'Chicken, liver, all classes, raw' (SR Legacy) per 100 g: 119 kcal, fat 4.83 g, sat fat 1.563 g, protein 16.92 g, fiber 0, sodium 71 mg, carbs 0.73 g, cholesterol 345 mg, sugars 0 g, trans fat 0.065 g. Vitamins and minerals: vitamin a 3296 µg RAE, vitamin c 17.9 mg, vitamin d 0 µg, vitamin e 0.7 mg, vitamin k 0 µg, folate 588 µg DFE, vitamin b12 16.58 µg, vitamin b6 0.853 mg, calcium 8 mg, iron 8.99 mg, magnesium 19 mg, potassium 230 mg, zinc 2.67 mg, phosphorus 297 mg, selenium 54.6 µg. Divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 456,
+        "url": "https://fdc.nal.usda.gov/food-details/167862/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 167862: Pork, fresh, variety meats and by-products, liver, raw",
+        "notes": [
+            "Pork Liver — nutrition: FDC 167862 'Pork, fresh, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 134 kcal, fat 3.65 g, sat fat 1.17 g, protein 21.39 g, fiber 0, sodium 87 mg, carbs 2.47 g, cholesterol 301 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 6502 µg RAE, vitamin c 25.3 mg, folate 212 µg DFE, vitamin b12 26 µg, vitamin b6 0.69 mg, calcium 9 mg, iron 23.3 mg, magnesium 18 mg, potassium 273 mg, zinc 5.76 mg, phosphorus 288 mg, selenium 52.7 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 457,
+        "url": "https://fdc.nal.usda.gov/food-details/172531/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172531: Lamb, variety meats and by-products, liver, raw",
+        "notes": [
+            "Lamb Liver — nutrition: FDC 172531 'Lamb, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 139 kcal, fat 5.02 g, sat fat 1.94 g, protein 20.38 g, fiber 0, sodium 70 mg, carbs 1.78 g, cholesterol 371 mg, sugars not reported (left blank), trans fat not reported (left blank). Vitamins and minerals: vitamin a 7391 µg RAE, vitamin c 4 mg, folate 230 µg DFE, vitamin b12 90.05 µg, vitamin b6 0.9 mg, calcium 7 mg, iron 7.37 mg, magnesium 19 mg, potassium 313 mg, zinc 4.66 mg, phosphorus 364 mg, selenium 82.4 µg. Not reported, so left out: vitamin d, vitamin e, vitamin k. Divided by 100 for per-gram values."
         ]
     }
 ]

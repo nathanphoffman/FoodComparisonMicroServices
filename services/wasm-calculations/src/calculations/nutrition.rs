@@ -9,6 +9,8 @@ const SUGAR_FIBER_ALLOWANCE: f64 = 5.0;
 const FREE_SUGAR_SCORE_PENALTY: f64 = 0.25;
 /// Milligrams of sodium (per 100 kcal, like the rest of the score) that cost one point.
 const SODIUM_MG_PER_SCORE_POINT: f64 = 50.0;
+/// Points per full daily value of each vitamin/mineral, per 100 kcal. Linear, no cap.
+const MICRONUTRIENT_SCORE_WEIGHT: f64 = 1.0;
 
 /// Nutrition score per 100 kcal. None for foods with no calories.
 pub(super) fn compute_nutrition_score(food: &FoodRow) -> Option<f64> {
@@ -21,8 +23,7 @@ pub(super) fn compute_nutrition_score(food: &FoodRow) -> Option<f64> {
         - FREE_SUGAR_SCORE_PENALTY * free_sugar
         // sodium is mg per gram, the rest g per gram — scaled the same way below
         - food.sodium.unwrap_or(0.0) / SODIUM_MG_PER_SCORE_POINT
-        // one point per full daily value of each vitamin/mineral (per 100 kcal after scaling)
-        + food.micronutrients.as_ref().map_or(0.0, |m| m.daily_value_fraction());
+        + MICRONUTRIENT_SCORE_WEIGHT * food.micronutrients.as_ref().map_or(0.0, |m| m.daily_value_fraction());
 
     // nutrition score should be flat, not weighted by a divisor it is absolute
     Some(raw * 100.0 / food.calories)

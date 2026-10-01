@@ -1275,14 +1275,29 @@
                     "carbs": 0.037,
                     "sugar": 0,
                     "cholesterol": 0.28,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.48,
+                    "vitamin_c": 0.08,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0055,
+                    "vitamin_k": 0.001,
+                    "folate": 0.42,
+                    "vitamin_b12": 0.12,
+                    "vitamin_b6": 0.0005,
+                    "calcium": 0.26,
+                    "iron": 0.0395,
+                    "magnesium": 0.34,
+                    "potassium": 3.2,
+                    "zinc": 0.016,
+                    "phosphorus": 1.97,
+                    "selenium": 0.448
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Mussels (Farmed) — nutrition: USDA FoodData Central raw blue mussel (Mytilus edulis) values (FDC ID 175180). Values reported per gram of edible mussel meat. Sodium is notably high (286 mg/100g) reflecting the marine origin of mussels. Cholesterol 28 mg/100g. Carbohydrates 3.7 g/100g (mussels contain small amounts of glycogen as energy storage)."
+                    "note": "Mussels (Farmed) — nutrition: USDA FoodData Central 'Mollusks, mussel, blue, raw' (Mytilus edulis) values (FDC ID 174216; previously mis-cited as 175180, which is cooked shrimp). Values reported per gram of edible mussel meat. Sodium is notably high (286 mg/100g) reflecting the marine origin of mussels. Cholesterol 28 mg/100g. Carbohydrates 3.7 g/100g (mussels contain small amounts of glycogen as energy storage). Vitamins and minerals from FDC 174216 per 100 g: vitamin a 48 µg RAE, vitamin c 8 mg, vitamin d 0 µg, vitamin e 0.55 mg, vitamin k 0.1 µg, folate 42 µg DFE, vitamin b12 12 µg, vitamin b6 0.05 mg, calcium 26 mg, iron 3.95 mg, magnesium 34 mg, potassium 320 mg, zinc 1.6 mg, phosphorus 197 mg, selenium 44.8 µg; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1425,14 +1440,26 @@
                     "carbs": 0.0495,
                     "sugar": 0,
                     "cholesterol": 0.5,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.81,
+                    "vitamin_c": 0.08,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.16,
+                    "vitamin_b6": 0.0005,
+                    "calcium": 0.08,
+                    "iron": 0.0511,
+                    "magnesium": 0.22,
+                    "potassium": 1.68,
+                    "zinc": 0.1662,
+                    "phosphorus": 1.62,
+                    "selenium": 0.77
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Oysters (Farmed) — nutrition: USDA SR Legacy 'Mollusks, oyster, Pacific, raw' (fdcId 174219) per 100 g: 81 kcal, 9.45 g protein, 2.3 g fat, 0.51 g sat fat, 4.95 g carbs, 106 mg sodium, 50 mg cholesterol; converted to per gram. Pacific/cupped oysters are the bulk of world production (eastern farmed oysters, fdcId 175172, are leaner: 59 kcal, 5.22 g protein)."
+                    "note": "Oysters (Farmed) — nutrition: USDA SR Legacy 'Mollusks, oyster, Pacific, raw' (fdcId 174219) per 100 g: 81 kcal, 9.45 g protein, 2.3 g fat, 0.51 g sat fat, 4.95 g carbs, 106 mg sodium, 50 mg cholesterol; converted to per gram. Pacific/cupped oysters are the bulk of world production (eastern farmed oysters, fdcId 175172, are leaner: 59 kcal, 5.22 g protein). Vitamins and minerals from FDC 174219 per 100 g: vitamin a 81 µg RAE, vitamin c 8 mg, folate 10 µg DFE, vitamin b12 16 µg, vitamin b6 0.05 mg, calcium 8 mg, iron 5.11 mg, magnesium 22 mg, potassium 168 mg, zinc 16.62 mg, phosphorus 162 mg, selenium 77 µg; divided by 100 for per-gram values. Not reported, so left out: vitamin d, vitamin e, vitamin k."
                 }
             }
         ],
@@ -1575,14 +1602,29 @@
                     "carbs": 0.0357,
                     "sugar": 0,
                     "cholesterol": 0.3,
-                    "trans_fat": 0.00015
+                    "trans_fat": 0.00015,
+                    "vitamin_a": 0.9,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0068,
+                    "vitamin_k": 0.002,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.1128,
+                    "vitamin_b6": 0.0001,
+                    "calcium": 0.39,
+                    "iron": 0.0162,
+                    "magnesium": 0.19,
+                    "potassium": 0.46,
+                    "zinc": 0.0051,
+                    "phosphorus": 1.98,
+                    "selenium": 0.306
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Clams (Farmed) — nutrition: USDA SR Legacy 'Mollusks, clam, mixed species, raw' (fdcId 174214) per 100 g: 86 kcal (FDC's 360 figure is kJ), 14.7 g protein, 0.96 g fat, 0.187 g sat fat, 3.57 g carbs, 601 mg sodium, 30 mg cholesterol; converted to per gram."
+                    "note": "Clams (Farmed) — nutrition: USDA SR Legacy 'Mollusks, clam, mixed species, raw' (fdcId 174214) per 100 g: 86 kcal (FDC's 360 figure is kJ), 14.7 g protein, 0.96 g fat, 0.187 g sat fat, 3.57 g carbs, 601 mg sodium, 30 mg cholesterol; converted to per gram. Vitamins and minerals from FDC 174214 per 100 g: vitamin a 90 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.68 mg, vitamin k 0.2 µg, folate 5 µg DFE, vitamin b12 11.28 µg, vitamin b6 0.01 mg, calcium 39 mg, iron 1.62 mg, magnesium 19 mg, potassium 46 mg, zinc 0.51 mg, phosphorus 198 mg, selenium 30.6 µg; divided by 100 for per-gram values."
                 }
             }
         ],

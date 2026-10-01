@@ -22,7 +22,11 @@
         "venison",
         "wild-squirrel",
         "goat",
-        "duck"
+        "duck",
+        "beef-liver",
+        "chicken-liver",
+        "pork-liver",
+        "lamb-liver"
     ],
     "grains": [
         "wheat",
