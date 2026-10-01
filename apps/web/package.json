@@ -3,8 +3,8 @@
     "private": true,
     "version": "0.0.1",
     "scripts": {
-        "dev": "next dev",
-        "build": "next build",
+        "dev": "node scripts/ensure-wasm-signal.mjs && next dev",
+        "build": "node scripts/ensure-wasm-signal.mjs && next build",
         "start": "next start",
         "lint": "next lint"
     },

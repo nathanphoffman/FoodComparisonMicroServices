@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
-// service dependency. See apps/web/app/_wasm-signal.ts for full explanation.
+// service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../_wasm-signal';
 import type { RawFood, LandTypes } from './FoodTableTypes';
 import type { ScoredRow } from './FoodTableSort';

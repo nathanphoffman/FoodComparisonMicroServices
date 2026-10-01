@@ -35,3 +35,4 @@ services/wasm-calculations/pkg/
 
 # Dev-only WASM binary copy (synced by scripts/wasm-notify.mjs, not committed)
 apps/web/public/wasm_calculations_bg.wasm
+apps/web/app/_wasm-signal.ts
