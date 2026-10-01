@@ -100,7 +100,7 @@ export function FoodTable() {
 
     const headers = activeCols.map(column => ({
         label: DYNAMIC_LABELS[column.key] ?? column.label,
-        ...(column.sortKey ? columnSortProps(column.sortKey) : {}),
+        ...columnSortProps(column.key),
     }));
 
     if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;

@@ -151,9 +151,7 @@ export type LandTypes = {
 
 // ── Inputs (columns, data region, sliders) ────────────────────────────────────
 
-export type ColumnKey = SortKey;
-
-export type ColConfig = { key: ColumnKey; label: string; sortKey?: SortKey; defaultVisible: boolean; mobileVisible: boolean };
+export type ColConfig = { key: SortKey; label: string; defaultVisible: boolean; mobileVisible: boolean };
 
 export type DataRegion = 'world' | 'us' | 'avg';
 

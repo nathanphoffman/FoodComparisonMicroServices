@@ -9,16 +9,16 @@ import { DEFAULT_OVER_GATHERING } from './Sliders/OverGatheringSlider';
 // ── Column config ─────────────────────────────────────────────────────────────
 
 export const COLUMN_CONFIG: ColConfig[] = [
-    { key: 'name',           label: 'Food',              sortKey: 'name',           defaultVisible: true,  mobileVisible: true  },
-    { key: 'nutritionScore', label: 'Nutrition Score',   sortKey: 'nutritionScore', defaultVisible: true,  mobileVisible: true  },
-    { key: 'emissions',      label: 'CO₂e (kg / kg)',    sortKey: 'emissions',      defaultVisible: true,  mobileVisible: false },
-    { key: 'landUse',        label: 'Land Use (m² / kg)', sortKey: 'landUse',       defaultVisible: true,  mobileVisible: false },
-    { key: 'directKill',     label: 'Direct Kill',        sortKey: 'directKill',    defaultVisible: true,  mobileVisible: false },
-    { key: 'water',          label: 'Water (L / kg)',     sortKey: 'water',          defaultVisible: true,  mobileVisible: false },
-    { key: 'captiveSentience', label: 'Captive Sentience Cost', sortKey: 'captiveSentience', defaultVisible: true, mobileVisible: false },
-    { key: 'sentientHarm',   label: 'Sentient Harm',      sortKey: 'sentientHarm',   defaultVisible: true,  mobileVisible: false },
-    { key: 'availability',   label: 'Availability (Gg)',  sortKey: 'availability',   defaultVisible: true,  mobileVisible: false },
-    { key: 'finalScore',     label: 'Improvement',        sortKey: 'finalScore',     defaultVisible: true,  mobileVisible: true  },
+    { key: 'name',             label: 'Food',                   defaultVisible: true,  mobileVisible: true  },
+    { key: 'nutritionScore',   label: 'Nutrition Score',        defaultVisible: true,  mobileVisible: true  },
+    { key: 'emissions',        label: 'CO₂e (kg / kg)',         defaultVisible: true,  mobileVisible: false },
+    { key: 'landUse',          label: 'Land Use (m² / kg)',     defaultVisible: true,  mobileVisible: false },
+    { key: 'directKill',       label: 'Direct Kill',            defaultVisible: true,  mobileVisible: false },
+    { key: 'water',            label: 'Water (L / kg)',         defaultVisible: true,  mobileVisible: false },
+    { key: 'captiveSentience', label: 'Captive Sentience Cost', defaultVisible: true,  mobileVisible: false },
+    { key: 'sentientHarm',     label: 'Sentient Harm',          defaultVisible: true,  mobileVisible: false },
+    { key: 'availability',     label: 'Availability (Gg)',      defaultVisible: true,  mobileVisible: false },
+    { key: 'finalScore',       label: 'Improvement',            defaultVisible: true,  mobileVisible: true  },
 ];
 
 // ── Data region ───────────────────────────────────────────────────────────────

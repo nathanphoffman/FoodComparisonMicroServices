@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import type { ColumnKey, DataRegion } from './FoodTableTypes';
+import type { DataRegion } from './FoodTableTypes';
+import type { SortKey } from './FoodTableSort';
 import { COLUMN_CONFIG, DATA_REGION_OPTIONS } from './FoodTableDefaults';
 
 type Props = {
@@ -10,8 +11,8 @@ type Props = {
     referenceSlug: string;
     onReferenceSlugChange: (slug: string) => void;
     foods: { slug: string; name: string }[];
-    visibleColumns: Set<ColumnKey>;
-    onToggleColumn: (key: ColumnKey) => void;
+    visibleColumns: Set<SortKey>;
+    onToggleColumn: (key: SortKey) => void;
 };
 
 export function FoodTableToolbar({

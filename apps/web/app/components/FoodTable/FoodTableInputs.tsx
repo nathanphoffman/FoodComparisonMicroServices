@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { MealBuilder } from './MealBuilder';
-import type { ColConfig, ColumnKey, DataRegion, SliderValues } from './FoodTableTypes';
+import type { ColConfig, DataRegion, SliderValues } from './FoodTableTypes';
+import type { SortKey } from './FoodTableSort';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
@@ -30,7 +31,7 @@ export function FoodTableInputs({
     onDataRegionChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
-    const [visibleColumns, setVisible]    = useState<Set<ColumnKey>>(
+    const [visibleColumns, setVisible]    = useState<Set<SortKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
     const [showControls, setShowControls] = useState(false);
@@ -74,7 +75,7 @@ export function FoodTableInputs({
         commitManual({ ...sliderValues, [key]: value });
     }
 
-    function handleToggle(key: ColumnKey) {
+    function handleToggle(key: SortKey) {
         const next = new Set(visibleColumns);
         next.has(key) ? next.delete(key) : next.add(key);
         setVisible(next);
