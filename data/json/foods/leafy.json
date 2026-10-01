@@ -817,5 +817,313 @@
                 }
             }
         ]
+    },
+    {
+        "id": 106,
+        "slug": "cabbage",
+        "name": "Cabbage",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "tropical_savanna": 0.2,
+            "temperate_grassland": 0.1
+        },
+        "land_types_note": "China grows about half the world's cabbage; India, Russia, Korea, Ukraine and Eastern Europe make up most of the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.25,
+                    "fat": 0.001,
+                    "sat_fat": 0.00034,
+                    "protein": 0.0128,
+                    "fiber": 0.025,
+                    "sodium": 0.18,
+                    "carbs": 0.058,
+                    "sugar": 0.032,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cabbage — FDC 169975 'Cabbage, raw' (SR Legacy 11109), per 100 g: 25 kcal, protein 1.28 g, fat 0.1 g, sat fat 0.034 g, trans 0 g, carbs 5.8 g, fiber 2.5 g, sugars 3.2 g, sodium 18 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Cabbage — yield_fraction: SR28 FOOD_DES NDB 11109 'Cabbage, raw': refuse 20% (outer leaves and core), so edible fraction = 0.80."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 30600,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cabbage — yield_kg_ha (world): FAOSTAT QCL item 358 'Cabbages', World yield 2020–2024 = 30,704 (E); 30,586 (E); 30,531 (E); 30,613 (E); 30,574 (E) kg/ha; 5-year mean 30,602 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 45100,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cabbage — yield_kg_ha (US): FAOSTAT QCL item 358 'Cabbages', United States of America yield 2020–2024 = 45,543; 42,315; 46,883; 45,232; 45,564 kg/ha; 5-year mean 45,107 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 280,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Cabbage — water_per_kg: 280 L/kg global average = green 181 + blue 26 + grey 73. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas (HS 070490), 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 181,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cabbage — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas (HS 070490), 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cabbage — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas (HS 070490), 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 73,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cabbage — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas (HS 070490), 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 5.6,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Cabbage — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (rate x %treated)): 2020 283,000 lb / 50,831 ac = 6.2 kg/ha (one compound); 2022 212,600 lb / 48,758 ac = 4.9 kg/ha. Mean 5.6 kg/ha (2024 skipped: no compound disclosed enough to back-calculate area). No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 141,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Cabbage — fertilizer_kg_ha (US): NASS Agricultural Chemical Use 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 78 on 76%, P2O5 38 on 66%, K2O 71 on 58% = 141 kg/ha. 2020 and 2024 surveys did not publish fertilizer for cabbage. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Cabbage — emissions_per_kg (world): Poore & Nemecek (2018) 'Brassicas' global mean, 0.51 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools cabbage with similar crops; no cabbage-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0904,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — glyphosate iso. salt: 2020 1.401 lb/ac on 3%, 2022 0.993 on 12% (2024 withheld); mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0155,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — permethrin: 2020 0.179 lb/ac on 7%, 2022 0.194 on 8%, 2024 0.192 on 7%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0611,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — imidacloprid: 2020 0.224 lb/ac on 20%, 2022 0.302 on 36%, 2024 0.202 on 5%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.017,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — thiamethoxam: 2020 0.115 lb/ac on 8%, 2022 0.074 on 27%, 2024 0.117 on 14%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3297,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — mancozeb: 2020 3.248 lb/ac on 2%, 2022 3.418 on 23%, 2024 1.571 on 2%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.196,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — S-metolachlor: 2020 1.054 lb/ac on 25%, 2022 0.621 on 29%, 2024 1.014 on 8%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0195,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Cabbage — carbaryl: 2020 0.849 lb/ac on 2%, 2024 1.786 on 1% (2022 % treated withheld); mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 74986,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cabbage — availability_gg (world): FAOSTAT QCL item 358 'Cabbages', World production 2020–2024 = 74.79 (E), 74.59 (E), 75.09 (E), 74.97 (E), 75.48 (E) Mt; mean 74,986 Gg."
+                }
+            },
+            {
+                "value": 967,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cabbage — availability_gg (US): FAOSTAT QCL item 358 'Cabbages', United States of America production 2020–2024 = 1.07, 0.93, 1.00, 0.91, 0.94 Mt; mean 967 Gg."
+                }
+            }
+        ]
     }
 ]

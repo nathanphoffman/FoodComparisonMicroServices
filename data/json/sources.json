@@ -8,7 +8,9 @@
             "Cheese nutrition: cheddar FDC 173414 (SR 1009), mozzarella low-moisture part-skim FDC 171244 (SR 1029), parmesan hard FDC 170848 (SR 1033).",
             "Rice Starch — nutrition stand-in: FDC 169698 'Cornstarch' (SR 20027).",
             "Tea — brewed black tea FDC 173227 (SR 14355), brewed green tea FDC 171917 (SR 14278, also used for white tea).",
-            "Honey — FDC 169640 (SR 19296)."
+            "Honey — FDC 169640 (SR 19296).",
+            "Onion FDC 170000 (SR 11282), Carrot FDC 170393 (SR 11124), Cassava FDC 169985 (SR 11134), Grapes FDC 174683 (SR 09132), Cabbage FDC 169975 (SR 11109).",
+            "Beet sugar FDC 169655, Molasses 168820, Corn oil 171029, Watermelon 167765, Pineapple 169124, Pumpkin 168448, Eggplant 169228, Kidney beans cooked 173740, Fava beans cooked 173753, Rye grain 168884, Millet raw 169702, Goat roasted 175304, Duck meat only roasted 172411, Goat milk 171278, Octopus raw 174218."
         ]
     },
     {
@@ -146,7 +148,8 @@
             "Beef cattle — neuron_count: ~3 billion neurons, based on Herculano-Houzel isotropic fractionator methodology.",
             "Broiler chicken and layer hen — neuron_count: ~221 million neurons in domestic chicken.",
             "Pig — neuron_count: ~2.23 billion neurons.",
-            "Tuna — neuron_count: ~30 million neurons."
+            "Tuna — neuron_count: ~30 million neurons.",
+            "Mallard (Anas platyrhynchos) whole brain 367 million neurons (Kverková et al. 2022), used for duck."
         ]
     },
     {
@@ -277,7 +280,9 @@
             "Garlic — water_per_kg: 656 L/kg (global average; irrigated production in China, India, US).",
             "Kale — water_per_kg: 237 L/kg (global average; cool-season leafy brassica, lower water demand than most crops).",
             "Olive oil — water_per_kg: 14,430 L/kg (global average for olive oil; raw olives ~3,025 L/kg with ~5× oil extraction factor; high due to Mediterranean rain-fed vs irrigated production mix).",
-            "Coconut — water_per_kg: 2,500 L/kg (estimate; limited direct data in Report 47; derived from coconut palm water use literature and tropical plantation studies; confidence 2)."
+            "Coconut — water_per_kg: 2,500 L/kg (estimate; limited direct data in Report 47; derived from coconut palm water use literature and tropical plantation studies; confidence 2).",
+            "Onion 345 (192/88/65), Carrot 195 (106/28/61), Cassava 563 (550/0/13), Grapes 609 (425/97/87), Cabbage 280 (181/26/73) L/kg — Vol. 1 global averages.",
+            "Beet sugar 864, Molasses 527, Corn oil 2,576, Watermelon 235, Pineapple 255, Pumpkin 336, Eggplant 362, Kidney beans 5,053, Fava beans 2,018, Rye 1,543, Millet 4,478 L/kg — Vol. 1 global averages."
         ]
     },
     {
@@ -887,7 +892,9 @@
             "Kale — emissions_per_kg: 0.51 kg CO2e/kg from OWID 'Brassicas' category (P&N 2018 data); closely corroborates the P&N 2018 direct value of 0.49 kg CO2e/kg for kale as a leafy brassica; within the known-correct brassica range of 0.4–0.9 kg CO2e/kg.",
             "Tofu — emissions_per_kg (world): OWID tofu line item 3.16 kg CO2e/kg used directly for the tofu entry in legumes.json.",
             "Peas — emissions_per_kg: OWID 'Peas' category 0.98 kg CO2e/kg used directly for the peas entry.",
-            "Coffee — 28.53 kg CO2e/kg (green-bean equivalent) used x 0.073 for brewed coffee."
+            "Coffee — 28.53 kg CO2e/kg (green-bean equivalent) used x 0.073 for brewed coffee.",
+            "Onion 0.5 (Onions & Leeks), Carrot 0.43 (Root Vegetables), Cassava 1.32, Grapes 1.53 (Berries & Grapes), Cabbage 0.51 (Brassicas) kg CO2e/kg.",
+            "Beet Sugar 1.81; Other Fruit 1.05 (watermelon, pineapple); Other Vegetables 0.53 (pumpkin, eggplant); Other Pulses 1.79 (kidney, fava); Wheat & Rye 1.57 (rye, and millet as a proxy)."
         ]
     },
     {
@@ -899,7 +906,8 @@
             "Eggs — full supply chain breakdown (kg CO2e per kg eggs): land use change 0.710, animal feed 2.205, farm (on-farm) 1.320, processing 0.000, transport 0.084, retail 0.036, packaging 0.161, losses 0.153. Total: ~4.67 kg CO2e/kg eggs. Cross-checks against ghg-per-kg-poore CSV value of 4.67 kg CO2e/kg (source 71).",
             "Eggs — on-farm component interpretation: The 'farm' stage value of 1.32 kg CO2e/kg covers on-farm CH4 (manure management, dominant emission for layer hens as monogastrics) plus negligible on-farm N2O and direct CO2. Feed crop GHG (2.21 kg CO2e/kg) and land use change (0.71 kg CO2e/kg) are upstream of the farm gate and are tracked in the feed fields.",
             "Milk — full supply chain breakdown (kg CO2e per kg milk, OWID CSV downloaded 2026-09-24): land use change 0.512, farm 1.509, animal feed 0.244, processing 0.154, transport 0.093, retail 0.265, packaging 0.100, losses 0.274. Total 3.15. Used in dairy.json for milk co2_kg_per_kg_output (on-farm energy + post-farm stages 0.886 incl. losses), for P&N-consistent bounds on milk CH4 (~0.038) and manure N2O (~0.0006) from the 1.51 farm stage (P&N GWP CH4=34, N2O=298), and for butter emissions_per_kg (farm-gate stages 2.26 x 8.2 + 1.6).",
-            "Cheese — supply-chain breakdown (OWID CSV 2026-09-28): land use change 4.467, farm 13.096, animal feed 2.353, processing 0.740, transport 0.139, retail 0.333, packaging 0.172, losses 2.577. Post-farm stages excl. losses (1.38) used for cheddar, mozzarella and parmesan co2_kg_per_kg_output."
+            "Cheese — supply-chain breakdown (OWID CSV 2026-09-28): land use change 4.467, farm 13.096, animal feed 2.353, processing 0.740, transport 0.139, retail 0.333, packaging 0.172, losses 2.577. Post-farm stages excl. losses (1.38) used for cheddar, mozzarella and parmesan co2_kg_per_kg_output.",
+            "Post-farm stages (processing + transport + retail + packaging + losses) used: Lamb & Mutton 8.77 (goat), Milk 0.89 (goat milk), Sunflower Oil 1.50 (corn oil)."
         ]
     },
     {
@@ -1312,7 +1320,9 @@
             "Peas — yield_kg_ha 1,897 and availability_gg 13,869: item 187 'Peas, dry', World, 2020–2024 (same bulk file).",
             "Coffee — item 656 'Coffee, green' 2020–2024: yield 900 kg/ha, production 11,035 Gg (converted to brewed coffee).",
             "Tea — item 667 'Tea leaves' (fresh leaf) 2020–2024: 5,978 kg/ha world.",
-            "Honey — items 1182 'Natural honey' and 1181 'Bees' (hives) 2020–2024: 1,941 kt from 100.4 M hives (19.3 kg/hive); US 61.1 kt / 2.64 M (23.1 kg)."
+            "Honey — items 1182 'Natural honey' and 1181 'Bees' (hives) 2020–2024: 1,941 kt from 100.4 M hives (19.3 kg/hive); US 61.1 kt / 2.64 M (23.1 kg).",
+            "Onion (403), Carrot (426 'Carrots and turnips'), Cassava (125), Grapes (560), Cabbage (358) — yield_kg_ha and availability_gg: World and US 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
+            "Beet sugar (157), sugar cane (156, for molasses), molasses (165), maize (56) and maize oil (60), watermelons (567), pineapples (574), pumpkins/squash (394), eggplants (399), dry beans (176), broad beans (181), rye (71), millet (79), goat meat (1017), duck meat (1069), goat milk (1020) — 2020–2024 means from the same bulk file (downloaded 2026-10-01)."
         ]
     },
     {
@@ -1321,7 +1331,9 @@
         "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
         "notes": [
             "Strawberries — yield_fraction: NDB 09316 refuse 6% (caps and stems) -> 0.94.",
-            "Blueberries — yield_fraction: NDB 09050 refuse 5% (stems and green or spoiled berries) -> 0.95."
+            "Blueberries — yield_fraction: NDB 09050 refuse 5% (stems and green or spoiled berries) -> 0.95.",
+            "Onion NDB 11282 refuse 10%; Carrot 11124 refuse 11%; Cassava 11134 refuse 16%; Grapes 09132 refuse 4%; Cabbage 11109 refuse 20%.",
+            "Watermelon 09326 refuse 48%; Pineapple 09266 refuse 49%; Pumpkin 11422 refuse 30%; Eggplant 11209 refuse 19%; kidney beans 16027/16028 and fava beans 16052/16053 water content used for cooked_weight_ratio."
         ]
     },
     {
@@ -1347,7 +1359,9 @@
         "notes": [
             "Strawberries — pesticide_kg_ha (US) ~267 kg a.i./ha per bearing ha (2021/2023/2025 PROGRAM STATES CA+FL; 70–85% is soil fumigants chloropicrin and 1,3-D) and per-compound rates for captan, pendimethalin, thiamethoxam, imidacloprid, diazinon; fertilizer_kg_ha (US) N+P2O5+K2O 2018/2019/2023 mean 269 kg/ha.",
             "Blueberries — pesticide_kg_ha (US) 14.6 kg a.i./ha per bearing ha (2021/2023/2025 PROGRAM STATES GA, MI, NJ, NC, OR, WA) and per-compound rates for 12 compounds; fertilizer_kg_ha (US) N+P2O5+K2O 2019/2023 mean 179 kg/ha.",
-            "Method: bearing acres back-calculated from captan (lb / (lb/acre/yr x % treated)); per-compound kg/ha = lb/acre/yr x % treated x 1.12085."
+            "Method: bearing acres back-calculated from captan (lb / (lb/acre/yr x % treated)); per-compound kg/ha = lb/acre/yr x % treated x 1.12085.",
+            "Onion, Carrot, Cabbage (vegetable surveys 2020/2022/2024) and table Grapes (fruit surveys 2021/2023/2025) pesticide and fertilizer rates were taken from the 2026-10-01 snapshot of this file (qs.environmental_20261001.txt.gz); the 20260924 URL no longer resolves.",
+            "Watermelon and pumpkin (vegetable surveys 2020/2022/2024) pesticide and fertilizer rates from the 2026-10-01 snapshot."
         ]
     },
     {
@@ -1447,7 +1461,8 @@
             "Cow milk — gas shares (global dairy, Figure 5 and text p.23): CH4 50% (enteric 46.5%, enteric >92% of CH4), N2O ~29% (applied & deposited manure ~17%, rest manure storage and fertiliser/crop residues), CO2 ~20% (feed, soybean LUC, energy, post-farm 0.7%). -> CH4 0.056 kg/kg FPCM; manure-only N2O ~0.0019 kg/kg FPCM (pie labels are hard to match exactly).",
             "Allocation between milk and dairy-herd meat (Table B22, protein basis): 0.90-0.96 to milk by region (N. America 0.94, W. Europe 0.95, South Asia 0.90).",
             "Dairy cattle ration by region (Table B7, % DM): e.g. N. America fresh grass 14.4, hay 17.0, legumes & silage 30.6, bran 4.4, oilseed meals 6.4, wet distillers grain 4.3, grains 22.8. Used with approximate 2023 FAOSTAT regional shares for world milk feed ratios.",
-            "Direct on-farm energy for milk (Table E9): ~0.02-0.03 kg CO2/kg milk in developing regions, 0.05-0.07 OECD (USA ~0.07); world ~0.05 used."
+            "Direct on-farm energy for milk (Table E9): ~0.02-0.03 kg CO2/kg milk in developing regions, 0.05-0.07 OECD (USA ~0.07); world ~0.05 used.",
+            "Goat meat 23.5 and goat milk 5.2 kg CO2e/kg (Table 6) with the Fig. 17 small-ruminant breakdown; Tables B4 (goat herd), B11/B12 (small-ruminant rations) and B21 (dressing %) used for goat and goat milk."
         ]
     },
     {
@@ -1491,7 +1506,8 @@
         "url": "https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch10_Livestock.pdf",
         "title": "IPCC (2019) — 2019 Refinement to the 2006 IPCC Guidelines, Vol. 4 Ch. 10: Emissions from Livestock and Manure Management",
         "notes": [
-            "Table 10.12 methane yield: dairy cows high-producing (>8,500 kg/yr) 19.0-20.0 g CH4/kg DMI (Ym 5.7-6.0%), medium (5,000-8,500) 21.0 (6.3%), low (<5,000) 21.4 (6.5%); non-dairy cattle mixed rations 21.0. Used to back out milk-allocated feed intake from enteric CH4 (world ~2.43, US ~0.71 kg DM per kg milk)."
+            "Table 10.12 methane yield: dairy cows high-producing (>8,500 kg/yr) 19.0-20.0 g CH4/kg DMI (Ym 5.7-6.0%), medium (5,000-8,500) 21.0 (6.3%), low (<5,000) 21.4 (6.5%); non-dairy cattle mixed rations 21.0. Used to back out milk-allocated feed intake from enteric CH4 (world ~2.43, US ~0.71 kg DM per kg milk).",
+            "Goats — enteric methane conversion factor Ym 5.5% of gross energy (Table 10.13); 55.65 MJ per kg CH4; feed gross energy ~18.45 MJ per kg DM. Used to back-calculate goat and goat-milk feed intake from GLEAM enteric CH4."
         ]
     },
     {
@@ -1565,7 +1581,8 @@
             "'Oats, Rolled' extraction rate: median 55 across 35 countries (range 45–73); United States 58. Used to convert oat yield and water from oat grain to rolled-oat basis (x0.55 / ÷0.55).",
             "Barley: United States pot barley 70, pearled barley 62 (median pot barley 70 across 41 countries). No hulled-barley factor, so barley was not converted.",
             "Oilseed extraction rates (median across countries, computed from the country tables): oil of sunflower seed 39% of seed (n=71, range 25–47); groundnuts shelled 70% of in-shell (n=62); oil of groundnuts 45% of shelled (n=85, range 30–52); copra 19.5% of coconuts (n=60); oil of copra 63% of copra (n=27, range 55–65). Used for sunflower, peanut and coconut oil yield_kg_ha.",
-            "Nut kernel (shelled) extraction rates, median across countries: almonds shelled 35% of in-shell (n=13); walnuts shelled 40% (n=14); cashew nuts shelled 25% (n=7); hazelnuts shelled 50% (n=12). Used to put nut availability_gg on the kernel basis of the nut entries."
+            "Nut kernel (shelled) extraction rates, median across countries: almonds shelled 35% of in-shell (n=13); walnuts shelled 40% (n=14); cashew nuts shelled 25% (n=7); hazelnuts shelled 50% (n=12). Used to put nut availability_gg on the kernel basis of the nut entries.",
+            "Beet Sugar extraction rate (% of sugar beet weight): median 13 across 38 countries (range 9.5–18); United States 14. Used for beet-sugar yield_kg_ha and availability_gg (all beet land charged to the sugar, as for cane sugar at 11%)."
         ]
     },
     {
@@ -1837,7 +1854,8 @@
         "notes": [
             "World production, tonnes live weight, 2019–2023 mean. Aquaculture = freshwater + brackishwater + marine; capture = capture production.",
             "Atlantic salmon (SAL) aquaculture 2.67 Mt; principal market tunas capture (skipjack, yellowfin, bigeye, albacore, Atlantic/Pacific/southern bluefin) 5.24 Mt; ISSCAAP Shrimps, prawns — capture 3.12 Mt, aquaculture 7.45 Mt; all species named sardine/pilchard/sardinella, capture 5.61 Mt; ISSCAAP Tilapias and other cichlids aquaculture 6.43 Mt; ISSCAAP Mussels aquaculture 1.97 Mt; Oysters aquaculture 6.73 Mt; Clams, cockles, arkshells aquaculture 5.76 Mt.",
-            "Alaska pollock capture 3.49 Mt; Atlantic cod capture 1.08 Mt (aquaculture 0.004 Mt); ISSCAAP Carps, barbels and other cyprinids aquaculture 31.41 Mt; all catfish species (incl. Pangas NEI) aquaculture 6.42 Mt."
+            "Alaska pollock capture 3.49 Mt; Atlantic cod capture 1.08 Mt (aquaculture 0.004 Mt); ISSCAAP Carps, barbels and other cyprinids aquaculture 31.41 Mt; all catfish species (incl. Pangas NEI) aquaculture 6.42 Mt.",
+            "Octopus — all octopus species capture 2019–2023 mean 377 kt live weight."
         ]
     },
     {
@@ -2465,6 +2483,103 @@
         "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
         "notes": [
             "Follow Your Heart Parmesan (composite) — nutrition and ingredient list used for the recipe estimate."
+        ]
+    },
+    {
+        "id": 439,
+        "url": "https://doi.org/10.3389/fnana.2014.00128",
+        "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+        "notes": [
+            "Table 1 (isotropic fractionator, whole brain): domestic pig 57.8 g brain / 2.22 bn neurons; springbok (25 kg) 102.1 g / 3.06 bn; blesbok (60 kg) 155.1 g / 3.90 bn; greater kudu 308.5 g / 6.09 bn; giraffe 528 g / 11.21 bn. Brain mass scales with neurons^1.373 across artiodactyls.",
+            "Goat and Goat Milk — neuron_count: springbok used as the closest measured bovid of similar body size (no goat count exists)."
+        ]
+    },
+    {
+        "id": 440,
+        "url": "https://doi.org/10.1016/j.gfs.2017.01.001",
+        "title": "Mottet et al. (2017) — Livestock: On our plates or eating at our table? A new analysis of the feed/food debate (Global Food Security)",
+        "notes": [
+            "Global livestock ate ~6.0 bn t feed DM in 2010; grass and leaves 46% (~2.76 bn t); livestock use ~2 bn ha of grassland. Implies ~1,380 kg grazed DM per ha of grassland per year, used to turn grazed DM into pasture area for goat meat and goat milk."
+        ]
+    },
+    {
+        "id": 441,
+        "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+        "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+        "notes": [
+            "2,380 Pekin ducks, 5 breeds, research station, 3-phase diet: 3.055 kg live at 36 days; 3.6 kg and feed conversion 2.03 kg/kg at 42 days; slaughter yield 68.6% (36 d) / 69.9% (40 d) / 70.6% (42 d)."
+        ]
+    },
+    {
+        "id": 442,
+        "url": "https://doi.org/10.1007/s11367-022-02072-7",
+        "title": "Almeida et al. (2022) — Environmental assessment of common octopus (Octopus vulgaris) from a small-scale fishery in Algarve, Portugal (Int. J. Life Cycle Assess.)",
+        "notes": [
+            "Cradle-to-landing, 22 vessels, pots and traps: 3.1 kg CO2e per kg octopus, fuel 0.9 L/kg; 'less than half compared to octopus caught with trawling'."
+        ]
+    },
+    {
+        "id": 443,
+        "url": "https://doi.org/10.1111/j.1469-7998.1963.tb01862.x",
+        "title": "Young (1963) — The number and sizes of nerve cells in Octopus (Proceedings of the Zoological Society of London 140)",
+        "notes": [
+            "Octopus vulgaris: ~5 x 10^8 neurons in total, about two-thirds of them in the arms."
+        ]
+    },
+    {
+        "id": 444,
+        "url": "https://doi.org/10.1002/fft2.226",
+        "title": "Zamuz et al. (2023) — Assessing the quality of octopus: From sea to table (Food Frontiers)",
+        "notes": [
+            "Octopus edible yield 80–85% of whole weight (mantle and arms; viscera removed), vs 40–45% for crustaceans and 40–75% for fish."
+        ]
+    },
+    {
+        "id": 445,
+        "url": "https://en.wikipedia.org/wiki/Common_octopus",
+        "title": "Wikipedia — Common octopus",
+        "notes": [
+            "Common octopus commonly up to ~3 kg (max ~10 kg); minimum legal landing size ~750 g in some fisheries; ranched octopus are grown from ~750 g to 2.5–3.5 kg commercial size."
+        ]
+    },
+    {
+        "id": 446,
+        "url": "https://www.fao.org/4/y4351e/y4351e09.htm",
+        "title": "FAO — Non-wood forest products, Chapter 5: Sap and resin (maple syrup and related products)",
+        "notes": [
+            "'Sugar bushes are generally found on privately owned woodlots and consist of maple stands of natural origin' — mostly second- or third-growth forest, or sugar maple that seeded naturally on abandoned farmland."
+        ]
+    },
+    {
+        "id": 447,
+        "url": "https://vtdigger.org/2014/01/27/uvm-discovery-boost-maple-syrup-production/",
+        "title": "VTDigger (2014) — Syrup from saplings may substitute for sugarbush production (University of Vermont)",
+        "notes": [
+            "Planted high-density 'maple orchard' sapling method (~6,000 saplings/acre, ~400 gal/acre) described as a new experimental complement to natural sugarbushes, not current practice."
+        ]
+    },
+    {
+        "id": 448,
+        "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+        "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+        "notes": [
+            "Per 12 fl oz (355 mL) can: 140 kcal, 0 g fat, 45 mg sodium, 39 g total carbohydrate, 39 g total sugars (all added), 0 g protein. US product is sweetened with high fructose corn syrup; most other countries use cane or beet sugar."
+        ]
+    },
+    {
+        "id": 449,
+        "url": "https://www.talkingretail.com/products-news/coca-cola-announces-the-carbon-footprint-of-some-of-its-top-sellers-10-03-2009/",
+        "title": "Talking Retail (2009) — Coca-Cola announces the carbon footprint of some of its top-sellers (Carbon Trust certified, Great Britain)",
+        "notes": [
+            "Full life cycle (ingredients, manufacture and packaging, distribution and retail, consumer use, disposal), Great Britain: 330 mL can Coca-Cola 170 g CO2e; 330 mL can Diet Coke / Coke Zero 150 g; 330 mL glass bottle Coca-Cola 360 g. Packaging is 30–70% of the footprint."
+        ]
+    },
+    {
+        "id": 450,
+        "url": "https://www.coca-colacompany.com/content/dam/corporate/us/en/reports/2024-environmental-update/2024-environmental-update.pdf",
+        "title": "The Coca-Cola Company (2025) — 2024 Environmental Update",
+        "notes": [
+            "Coca-Cola system water use ratio 1.78 L of water per L of product in 2023 and 2024 (2015 baseline 1.98)."
         ]
     }
 ]

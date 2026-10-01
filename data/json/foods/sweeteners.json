@@ -6,11 +6,9 @@
         "type": "plant",
         "category": "sweeteners",
         "human_food": 1,
-        "tags": [],
-        "land_types": {
-            "temperate_forest": 1.0
-        },
-        "land_types_note": "Tapped from standing sugar maple forest (Quebec, Ontario, New Brunswick, US Northeast). The forest is kept, not cleared, but is managed for maple.",
+        "tags": [
+            "wild"
+        ],
         "nutrition": [
             {
                 "value": {
@@ -46,18 +44,7 @@
                 }
             }
         ],
-        "yield_kg_ha": [
-            {
-                "value": 425,
-                "confidence": 3,
-                "source": {
-                    "id": 379,
-                    "url": "https://www.themaplenews.com/stories/season-summaries/2/all/",
-                    "title": "The Maple News — Season summaries (Quebec Maple Syrup Producers harvest reports)",
-                    "note": "Maple Syrup — yield_kg_ha: Quebec average yield 3.76 lb/tap (mean of 2020 and 2022–2025 QMSP harvests) = 1.71 kg/tap × 250 taps/ha (Perennia: 200–300 taps/ha in good sugar woods) = 425 kg syrup/ha/yr."
-                }
-            }
-        ],
+        "yield_kg_ha": [],
         "water_per_kg": [],
         "green_water_per_kg": [],
         "blue_water_per_kg": [],
@@ -628,6 +615,504 @@
                     "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
                     "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
                     "note": "Honey — availability_gg (US): FAOSTAT US honey production 2020–2024 mean = 61.1 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "slug": "beet-sugar",
+        "name": "Beet Sugar",
+        "type": "plant",
+        "category": "sweeteners",
+        "human_food": 1,
+        "tags": [],
+        "land_types": {
+            "temperate_forest": 0.55,
+            "temperate_grassland": 0.45
+        },
+        "land_types_note": "Sugar beet is grown in cool temperate cropland: Russia, France, Germany, the US (Red River Valley, Idaho, Michigan), Türkiye, Poland and Ukraine.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.87,
+                    "fat": 0.0,
+                    "sat_fat": 0.0,
+                    "protein": 0.0,
+                    "fiber": 0.0,
+                    "sodium": 0.01,
+                    "carbs": 0.9998,
+                    "sugar": 0.998,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beet Sugar — FDC 169655 'Sugars, granulated' (SR Legacy 19335), per 100 g: 387 kcal, protein 0 g, fat 0 g, sat fat 0 g, carbs 99.98 g, fiber 0 g, sugars 99.8 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Beet Sugar — yield_fraction: yield_kg_ha is already kg of sugar, so nothing further is discarded."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 7900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "CORRECTION 2026-10-01: was beet yield × 132/865 (a value split taken from Mekonnen & Hoekstra). Changed so all the beet field is charged to the sugar, the same rule as cane sugar and the oils. Beet Sugar — yield_kg_ha (world): FAOSTAT QCL item 157 'Sugar beet', World yield 2020–2024 = 2020: 57,752; 2021: 60,764; 2022: 60,486; 2023: 62,445; 2024: 63,090 (E) kg/ha; mean 60,907 kg/ha × 13% beet-sugar extraction (FAO Technical Conversion Factors, median of 38 countries, range 9.5–18%) = 7,918 kg sugar/ha, rounded."
+                }
+            },
+            {
+                "value": 9700,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "CORRECTION 2026-10-01: was beet yield × 132/865 (a value split taken from Mekonnen & Hoekstra). Changed so all the beet field is charged to the sugar, the same rule as cane sugar and the oils. Beet Sugar — yield_kg_ha (US): FAOSTAT QCL item 157 'Sugar beet', United States yield 2020–2024 = 2020: 65,985; 2021: 74,361; 2022: 64,332; 2023: 70,048; 2024: 72,853 kg/ha; mean 69,516 kg/ha × 14% (FAO Technical Conversion Factors, United States beet-sugar extraction rate) = 9,732 kg sugar/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 864,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Beet Sugar — water_per_kg: 864 L/kg = green 535 + blue 167 + grey 162. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 157 Sugar beet → Raw sugar, beet, 1996–2005: green 535 / blue 167 / grey 162 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 535,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Beet Sugar — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 157 Sugar beet → Raw sugar, beet, 1996–2005: green 535 / blue 167 / grey 162 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 167,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Beet Sugar — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 157 Sugar beet → Raw sugar, beet, 1996–2005: green 535 / blue 167 / grey 162 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 162,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Beet Sugar — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 157 Sugar beet → Raw sugar, beet, 1996–2005: green 535 / blue 167 / grey 162 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 10.1,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Beet Sugar — pesticide_kg_ha (US, per ha of sugar beet): NASS class TOTAL rows 2000 (fungicide 8,141,000 + herbicide 1,386,000 + insecticide 1,741,000 + other 2,748,000 lb) ÷ planted acres back-calculated from disclosed compounds (median 1,555,888 ac) × 1.12085 = 10.1 kg/ha. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2. No world figure; world falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 234,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Beet Sugar — fertilizer_kg_ha (US, per ha of sugar beet): N 109 lb/ac on 98% + P2O5 70 on 92% + K2O 75 on 50%, × 1.12085 = 234 kg/ha. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.81,
+                "confidence": 4,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Beet Sugar — emissions_per_kg (world): Poore & Nemecek (2018) 'Beet Sugar' global mean, 1.81 kg CO2e/kg (cradle to retail, incl. land-use change)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0627,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Beet Sugar — glyphosate: 2000 0.43 lb/ac on 13%. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.1493,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Beet Sugar — chlorpyrifos: 2000 1.11 lb/ac on 12%. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.0686,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Beet Sugar — mancozeb: 2000 1.53 lb/ac on 4%. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.0399,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Beet Sugar — diazinon: 2000 1.78 lb/ac on 2%. NASS Agricultural Chemical Use, 2000 field crops survey (the latest sugarbeet survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old data, so confidence 2."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 35261,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "CORRECTION 2026-10-01: was beet yield × 132/865 (a value split taken from Mekonnen & Hoekstra). Changed so all the beet field is charged to the sugar, the same rule as cane sugar and the oils. Beet Sugar — availability_gg (world): FAOSTAT world sugar beet production 2020–2024 mean 271,238 Gg × 13% extraction (FAO TCF median) = 35,261 Gg. FAOSTAT reports cane and beet sugar together, so beet sugar is estimated from beet tonnage (~20% of the ~180 Mt world sugar total)."
+                }
+            },
+            {
+                "value": 4408,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Beet Sugar — availability_gg (US): FAOSTAT US sugar beet production 2020–2024 mean 31,484 Gg × 14% (FAO TCF US) = 4,408 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 108,
+        "slug": "molasses",
+        "name": "Molasses",
+        "type": "plant",
+        "category": "sweeteners",
+        "human_food": 1,
+        "tags": [],
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "tropical_forest": 0.3,
+            "dry": 0.2
+        },
+        "land_types_note": "Cane molasses is a by-product of cane sugar, so it comes from the same Brazilian, Indian, Thai and Chinese cane fields.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.9,
+                    "fat": 0.001,
+                    "sat_fat": 0.00018,
+                    "protein": 0.0,
+                    "fiber": 0.0,
+                    "sodium": 0.37,
+                    "carbs": 0.7473,
+                    "sugar": 0.7472,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Molasses — FDC 168820 'Molasses' (SR Legacy 19304), per 100 g: 290 kcal, protein 0 g, fat 0.1 g, sat fat 0.018 g, carbs 74.73 g, fiber 0 g, sugars 74.72 g, sodium 37 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Molasses — yield_fraction: sold and eaten as produced; nothing is discarded."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 29100,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Molasses — yield_kg_ha (world): FAOSTAT QCL item 156 'Sugar cane', World yield 2020–2024 = 2020: 72,082; 2021: 72,100; 2022: 73,566; 2023: 75,101; 2024: 72,532 kg/ha; mean 73,076 kg/ha × 210/527 (Mekonnen & Hoekstra cane WF ÷ cane molasses WF, i.e. their product fraction ÷ value fraction) = 29,120 kg/ha, rounded. Allocation-based: molasses only carries its economic share of the cane field."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 527,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Molasses — water_per_kg: 527 L/kg = green 350 + blue 144 + grey 33. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 156 Sugar cane → Cane molasses, 1996–2005: green 350 / blue 144 / grey 33 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 350,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Molasses — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 156 Sugar cane → Cane molasses, 1996–2005: green 350 / blue 144 / grey 33 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 144,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Molasses — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 156 Sugar cane → Cane molasses, 1996–2005: green 350 / blue 144 / grey 33 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 33,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Molasses — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 156 Sugar cane → Cane molasses, 1996–2005: green 350 / blue 144 / grey 33 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 7.2,
+                "confidence": 3,
+                "source": {
+                    "id": 388,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2666683922000359",
+                    "title": "Soil erosion on the Brazilian sugarcane cropping system: An overview (Geography and Sustainability, 2022)",
+                    "note": "Molasses — soil_erosion: reused from this repo's cane-sugar entry (same crop / same field; per-hectare value unchanged). Cane Sugar — soil_erosion: median of 43 soil-loss outcomes from 18 Brazilian studies under conventional tillage = 7.2 t/ha/yr (range by method 2–28)."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 5.0,
+                "confidence": 3,
+                "source": {
+                    "id": 387,
+                    "url": "https://www.scielo.br/j/pd/a/8T9J5VphBk7P9XzzBYJSLZQ/?format=html&lang=en",
+                    "title": "Reis, Victória Filho, Andrade & Barroso (2019) — Use of Herbicides in Sugarcane in the São Paulo State (Planta Daninha)",
+                    "note": "Molasses — pesticide_kg_ha: reused from this repo's cane-sugar entry (same crop / same field; per-hectare value unchanged). Cane Sugar — pesticide_kg_ha: herbicide use on São Paulo sugarcane rose from 3.68 kg/ha (2010) to 5.00 kg/ha (2014). Insecticides (e.g. fipronil) add a little on top and are not counted."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 220,
+                "confidence": 2,
+                "source": {
+                    "id": 389,
+                    "url": "https://doi.org/10.3390/agronomy15082004",
+                    "title": "Effect of Organic and Mineral Phosphate Fertilization of the Plant Cane and First Ratoon on the Second Ratoon in the Brazilian Cerrado (Agronomy, 2025)",
+                    "note": "Molasses — fertilizer_kg_ha: reused from this repo's cane-sugar entry (same crop / same field; per-hectare value unchanged). Cane Sugar — fertilizer_kg_ha: Brazilian plant cane and ratoon get ~90 kg N + 80 kg K2O per cycle, plus ~50 kg P2O5 (study range 0–110) ≈ 220 kg/ha/yr."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.95,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Molasses — emissions_per_kg (world): no Poore & Nemecek value. Derived from P&N cane sugar 3.2 kg CO2e/kg × (cane molasses WF 527 ÷ refined cane sugar WF 1,782, Mekonnen & Hoekstra) = 0.95, i.e. the same economic allocation applied to emissions. Rough: confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 388,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S2666683922000359",
+                    "title": "Soil erosion on the Brazilian sugarcane cropping system: An overview (Geography and Sustainability, 2022)",
+                    "note": "Molasses — tillage_events_per_year: reused from this repo's cane-sugar entry (same crop / same field; per-hectare value unchanged). Cane Sugar — tillage_events_per_year: the field is subsoiled, plowed and harrowed (~3 passes) only when cane is replanted, about every 6 years; ratoon years are not tilled. 3 ÷ 6 ≈ 0.5."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 387,
+                            "url": "https://www.scielo.br/j/pd/a/8T9J5VphBk7P9XzzBYJSLZQ/?format=html&lang=en",
+                            "title": "Reis, Victória Filho, Andrade & Barroso (2019) — Use of Herbicides in Sugarcane in the São Paulo State (Planta Daninha)",
+                            "note": "Molasses — Glyphosate: reused from this repo's cane-sugar entry (same crop, per-hectare rate). Cane Sugar — glyphosate kg_ha: ~20% of sugarcane herbicide use in São Paulo × 5.0 kg/ha total ≈ 1.0 kg/ha. Used for burndown before replanting."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 2,
+                "name": "Atrazine",
+                "kg_ha": [
+                    {
+                        "value": 0.73,
+                        "confidence": 2,
+                        "source": {
+                            "id": 387,
+                            "url": "https://www.scielo.br/j/pd/a/8T9J5VphBk7P9XzzBYJSLZQ/?format=html&lang=en",
+                            "title": "Reis, Victória Filho, Andrade & Barroso (2019) — Use of Herbicides in Sugarcane in the São Paulo State (Planta Daninha)",
+                            "note": "Molasses — Atrazine: reused from this repo's cane-sugar entry (same crop, per-hectare rate). Cane Sugar — atrazine kg_ha: ~14.5% of sugarcane herbicide use in São Paulo × 5.0 kg/ha total ≈ 0.73 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.53,
+                        "confidence": 2,
+                        "source": {
+                            "id": 387,
+                            "url": "https://www.scielo.br/j/pd/a/8T9J5VphBk7P9XzzBYJSLZQ/?format=html&lang=en",
+                            "title": "Reis, Victória Filho, Andrade & Barroso (2019) — Use of Herbicides in Sugarcane in the São Paulo State (Planta Daninha)",
+                            "note": "Molasses — 2,4-D: reused from this repo's cane-sugar entry (same crop, per-hectare rate). Cane Sugar — 2,4-D kg_ha: ~10.6% of sugarcane herbicide use in São Paulo × 5.0 kg/ha total ≈ 0.53 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 66636,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Molasses — availability_gg (world): FAOSTAT QCL item 165 'Molasses', production 2020, 2021, 2022, 2023 = 61.92, 60.83, 70.51, 73.29 Mt; mean 66,636 Gg. Cane and beet molasses together (2024 not yet reported)."
+                }
+            },
+            {
+                "value": 3265,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Molasses — availability_gg (US): FAOSTAT QCL item 165 'Molasses', production 2020, 2021, 2022, 2023 = 1.94, 2.32, 4.42, 4.38 Mt; mean 3,265 Gg."
                 }
             }
         ]

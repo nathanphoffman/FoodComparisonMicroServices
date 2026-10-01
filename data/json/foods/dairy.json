@@ -8,7 +8,8 @@
         "human_food": 1,
         "tags": [
             "dairy",
-            "milk"
+            "milk",
+            "beverage"
         ],
         "land_types": {
             "temperate_grassland": 0.6,
@@ -3066,6 +3067,295 @@
                     "url": "https://esmis.nal.usda.gov/sites/default/release-files/jm214p131/r781zd41r/4b29d481c/daryan25.pdf",
                     "title": "USDA NASS — Dairy Products 2024 Summary (April 2025)",
                     "note": "Parmesan — availability_gg (US): 447,731 thousand lb in 2024 = 203 Gg (US 'Parmesan', mostly domestic, not PDO Parmigiano Reggiano). US production (NASS Dairy Products 2024 Summary, 2024 annual total). FAOSTAT only reports all cheese together, so there is no world figure by type; the pipeline uses this US value for every region."
+                }
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "slug": "goat-milk",
+        "name": "Goat Milk",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "milk",
+            "beverage"
+        ],
+        "land_types": {
+            "dry": 0.45,
+            "tropical_savanna": 0.35,
+            "temperate_forest": 0.2
+        },
+        "land_types_note": "Mostly grazing and crop stubble in semi-arid India, Pakistan, Sudan and the Sahel; plus Mediterranean and western European dairy goats (France, Spain, Netherlands, Greece).",
+        "sentient_harm_explanation": "Each dairy goat must give birth about once a year to keep producing milk, and is killed once her yield drops, after roughly five years of milking. Only about one of her kids is kept to replace her; the others are raised for meat and killed at around a year old. Per goat we count her own death plus about four kids. The neuron count is an estimate from a similar-sized antelope, as no goat brain has been counted.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.69,
+                    "fat": 0.0414,
+                    "sat_fat": 0.02667,
+                    "protein": 0.0356,
+                    "fiber": 0.0,
+                    "sodium": 0.5,
+                    "carbs": 0.0445,
+                    "sugar": 0.0445,
+                    "cholesterol": 0.11,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Goat Milk — FDC 171278 'Milk, goat, fluid, with added vitamin D' (SR Legacy 01106), per 100 g: 69 kcal, protein 3.56 g, fat 4.14 g, sat fat 2.667 g, carbs 4.45 g, fiber 0 g, sugars 4.45 g, sodium 50 mg, cholesterol 11 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3060000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "Goat Milk — neuron_count (ESTIMATE, no goat count exists): springbok (25 kg, 102 g brain) 3.06 bn whole-brain neurons, Kazu et al. 2014 Table 1, the closest measured bovid in size."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — weight_kg: GLEAM Table B4 adult female dairy goat weights (South Asia 32, NENA 37, SSA 29, W. Europe 59, E & SE Asia 44, LAC 35, E. Europe 50, Russia 55 kg) weighted by goat milk output = 37 kg."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 510,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat Milk — lifetime milk per doe: FAOSTAT world goat milk yield 2020–2024 = 94, 94, 96, 97, 94 kg per milk animal per year (mean 95) × productive life 5.3 yr (1 / 18.7% replacement rate, GLEAM Table B4 weighted by milk output) = 510 kg. Low because most of the world's milking goats are small multi-purpose animals."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 4.2,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — kids that die per doe: GLEAM Table B4 (weighted by milk output) fertility 84%, adult death rate 5.8%, replacement 18.7%. Kids born per doe over her life = (0.84 × 0.942 + 0.187) / 0.187 = 5.2; minus 1 kept as her replacement = 4.2. Counts one kid per kidding, so twins are missed (likely an underestimate)."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.3,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — years those kids live: GLEAM age at slaughter ≈ age at first kidding × (slaughter − birth weight) / (adult − birth weight), e.g. South Asia 1.8 × (25 − 2.7) / (32 − 2.7) = 1.37 yr, SSA 1.25, NENA 1.37, W. Europe 0.52; weighted ≈ 1.3 yr."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Goat Milk — yield_fraction 1.0: milk is drunk as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00158,
+                "confidence": 2,
+                "source": {
+                    "id": 440,
+                    "url": "https://doi.org/10.1016/j.gfs.2017.01.001",
+                    "title": "Mottet et al. (2017) — Livestock: On our plates or eating at our table? A new analysis of the feed/food debate (Global Food Security)",
+                    "note": "Goat Milk — pasture_ha_per_kg_output: grazed fresh grass 33.5% × 6.5 kg DM = 2.18 kg grazed DM per kg milk ÷ ~1,380 kg grazed DM per ha per year (Mottet 2017) = 0.00158 ha/kg. GLEAM Table B11 small-ruminant milk ration, weighted by FAOSTAT 2020–2024 goat milk output by region (South Asia 52%, NENA 14%, SSA 12%, W. Europe 12%, LAC 4%, E & SE Asia 3%, E. Europe + Russia 4%): fresh grass 33.5%, hay 9.5%, legumes & silage 1.2%, crop residues 40.5%, bran 5.4%, oilseed meals 4.3%, grains 0.8%, pulp 1.6%. Total intake 6.5 kg DM per kg milk, back-calculated from GLEAM goat-milk enteric CH4 (57.2% × 5.2 / 25 = 0.119 kg CH4/kg) with IPCC 2019 Ym 5.5% for goats and 18.45 MJ GE per kg DM: 0.119 × 55.65 / 0.055 / 18.45."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            },
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.85,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Goat Milk — native_fraction: reused from this repo's lamb entry; most milking goats graze native rangeland. "
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.123,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — ch4_kg_per_kg_output: (enteric 57.2% + manure 1.9%) × 5.2 / 25 = 0.123 kg CH4 per kg FPCM (≈ per kg goat milk). FAO (2013) GLEAM ruminant LCA: goat milk 5.2 kg CO2e per kg FPCM (Table 6; GWP CH4 25, N2O 298). Small-ruminant milk breakdown (Fig. 17): enteric CH4 57.2%, manure-management CH4 1.9%, applied & deposited manure N2O 15.6%, manure-management N2O 3.8%, fertilizer & crop-residue N2O 7.3%, feed CO2 12.3%, energy CO2 1.6%, post-farm CO2 0.3%."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0034,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — n2o_kg_per_kg_output: (applied & deposited manure 15.6% + manure management 3.8%) × 5.2 / 298 = 0.0034 kg N2O per kg. Fertilizer & crop-residue N2O (7.3%) is left to the feed rows. FAO (2013) GLEAM ruminant LCA: goat milk 5.2 kg CO2e per kg FPCM (Table 6; GWP CH4 25, N2O 298). Small-ruminant milk breakdown (Fig. 17): enteric CH4 57.2%, manure-management CH4 1.9%, applied & deposited manure N2O 15.6%, manure-management N2O 3.8%, fertilizer & crop-residue N2O 7.3%, feed CO2 12.3%, energy CO2 1.6%, post-farm CO2 0.3%."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 0.97,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Goat Milk — co2_kg_per_kg_output: GLEAM on-farm energy 1.6% × 5.2 = 0.08, plus Poore & Nemecek post-farm stages for cow 'Milk' (OWID: processing 0.15 + transport 0.09 + retail 0.27 + packaging 0.10 + losses 0.27 = 0.89), same method as this repo's cow milk. Total 0.97 kg CO2 per kg."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.62,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Milk — grass-hay: hay 9.5% × 6.5 kg DM = 0.62 kg per kg milk. GLEAM Table B11 small-ruminant milk ration, weighted by FAOSTAT 2020–2024 goat milk output by region (South Asia 52%, NENA 14%, SSA 12%, W. Europe 12%, LAC 4%, E & SE Asia 3%, E. Europe + Russia 4%): fresh grass 33.5%, hay 9.5%, legumes & silage 1.2%, crop residues 40.5%, bran 5.4%, oilseed meals 4.3%, grains 0.8%, pulp 1.6%. Total intake 6.5 kg DM per kg milk, back-calculated from GLEAM goat-milk enteric CH4 (57.2% × 5.2 / 25 = 0.119 kg CH4/kg) with IPCC 2019 Ym 5.5% for goats and 18.45 MJ GE per kg DM: 0.119 × 55.65 / 0.055 / 18.45. Crop residues (40.5%) carry no crop footprint; bran and pulp (by-products, 7%) are left out."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.08,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Milk — alfalfa: legumes & silage 1.2% × 6.5 kg DM = 0.08 kg per kg milk."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.28,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Milk — soy: oilseed meals 4.3% × 6.5 kg DM = 0.28 kg per kg milk, counted as soy."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat Milk — corn: grains 0.8% × 6.5 kg DM = 0.05 kg per kg milk."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 20058,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat Milk — availability_gg (world): FAOSTAT QCL item 1020 'Raw milk of goats', production 2020, 2021, 2022, 2023, 2024 = 19.09, 19.43, 20.50, 20.84, 20.43 Mt; mean 20,058 Gg."
+                }
+            },
+            {
+                "value": 26,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat Milk — availability_gg (US): FAOSTAT QCL item 1020 'Raw milk of goats', production 2020, 2021, 2022, 2023, 2024 = 0.03, 0.03, 0.03, 0.03, 0.03 Mt; mean 26 Gg."
                 }
             }
         ]

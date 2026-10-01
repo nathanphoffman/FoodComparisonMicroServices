@@ -2344,5 +2344,142 @@
                 }
             }
         ]
+    },
+    {
+        "id": 121,
+        "slug": "octopus",
+        "name": "Octopus (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "common",
+            "wild"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.82,
+                    "fat": 0.0104,
+                    "sat_fat": 0.00227,
+                    "protein": 0.1491,
+                    "fiber": 0.0,
+                    "sodium": 2.3,
+                    "carbs": 0.022,
+                    "sugar": 0.0,
+                    "cholesterol": 0.48,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Octopus (Wild) — FDC 174218 'Mollusks, octopus, common, raw' (SR Legacy 15166), per 100 g: 82 kcal, protein 14.91 g, fat 1.04 g, sat fat 0.227 g, carbs 2.2 g, fiber 0 g, sugars 0 g, sodium 230 mg, cholesterol 48 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 500000000,
+                "confidence": 4,
+                "source": {
+                    "id": 443,
+                    "url": "https://doi.org/10.1111/j.1469-7998.1963.tb01862.x",
+                    "title": "Young (1963) — The number and sizes of nerve cells in Octopus (Proceedings of the Zoological Society of London 140)",
+                    "note": "Octopus (Wild) — neuron_count: Young (1963) counted ~500 million neurons in Octopus vulgaris, about two-thirds of them in the arms. All are counted here."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 2.0,
+                "confidence": 2,
+                "source": {
+                    "id": 445,
+                    "url": "https://en.wikipedia.org/wiki/Common_octopus",
+                    "title": "Wikipedia — Common octopus",
+                    "note": "Octopus (Wild) — weight_kg: common octopus is commonly up to ~3 kg, with a ~750 g minimum landing size in some fisheries; 2 kg is used as a typical landed animal."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 3,
+                "source": {
+                    "id": 444,
+                    "url": "https://doi.org/10.1002/fft2.226",
+                    "title": "Zamuz et al. (2023) — Assessing the quality of octopus: From sea to table (Food Frontiers)",
+                    "note": "Octopus (Wild) — yield_fraction: edible mantle and arms are 80–85% of whole weight (Zamuz et al. 2023); 0.80 used."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 442,
+                    "url": "https://doi.org/10.1007/s11367-022-02072-7",
+                    "title": "Almeida et al. (2022) — Environmental assessment of common octopus (Octopus vulgaris) from a small-scale fishery in Algarve, Portugal (Int. J. Life Cycle Assess.)",
+                    "note": "Octopus (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no biological methane; fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 442,
+                    "url": "https://doi.org/10.1007/s11367-022-02072-7",
+                    "title": "Almeida et al. (2022) — Environmental assessment of common octopus (Octopus vulgaris) from a small-scale fishery in Algarve, Portugal (Int. J. Life Cycle Assess.)",
+                    "note": "Octopus (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.88,
+                "confidence": 3,
+                "source": {
+                    "id": 442,
+                    "url": "https://doi.org/10.1007/s11367-022-02072-7",
+                    "title": "Almeida et al. (2022) — Environmental assessment of common octopus (Octopus vulgaris) from a small-scale fishery in Algarve, Portugal (Int. J. Life Cycle Assess.)",
+                    "note": "Octopus (Wild) — co2_kg_per_kg_output (stored as total CO2e): Almeida et al. 2022, Algarve pot fishery, 3.1 kg CO2e per kg whole octopus landed ÷ edible yield 0.80 = 3.88 kg per kg edible. Fishing stage only; pots are the low-fuel gear."
+                }
+            },
+            {
+                "value": 7.75,
+                "confidence": 2,
+                "source": {
+                    "id": 442,
+                    "url": "https://doi.org/10.1007/s11367-022-02072-7",
+                    "title": "Almeida et al. (2022) — Environmental assessment of common octopus (Octopus vulgaris) from a small-scale fishery in Algarve, Portugal (Int. J. Life Cycle Assess.)",
+                    "note": "Octopus (Wild) — co2_kg_per_kg_output (stored as total CO2e): trawl-caught octopus. Almeida et al. 2022 report pots at 'less than half' of trawled octopus, so trawl ≥ 6.2 kg CO2e per kg landed ÷ 0.80 = 7.75 per kg edible (a lower bound). Much of the world catch (NW Africa, Asia) is trawled."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 301,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Octopus (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat capture of all octopus species 2019–2023 = 381, 355, 389, 390, 369 kt live weight; mean 377 kt × yield_fraction 0.80 = 301 Gg. Aquaculture is negligible."
+                }
+            }
+        ]
     }
 ]

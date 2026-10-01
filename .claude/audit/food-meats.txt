@@ -6,3 +6,6 @@
 2026-09-24 13:16:41 | beef n2o_kg_per_kg_output: added US entry 0.0085 kg N2O/kg retail (EPA GHGI 2024 beef manure mgmt + ~85% of PRP N2O, 2022; source 201; conf 2)
 2026-09-24 13:16:41 | beef co2_kg_per_kg_output: added US entry 1.36 kg CO2/kg retail (Rotz et al. 2019 Table 2 farm-gate fuel/gas/electricity; source 200; conf 2; excludes packing/transport and LUC)
 2026-09-24 13:16:41 | sources.json: added ids 200 (Rotz 2019), 201 (EPA GHGI 2024 Ch.5), 202 (Eshel 2014)
+2026-10-01 09:39:03 | Added Goat (118): GLEAM 2013 gases (CH4 0.535, N2O 0.0155, CO2 9.17 incl. P&N post-farm), feed from GLEAM rations × intake back-calculated from enteric CH4, pasture via Mottet 2017; neurons 3.06 bn (springbok proxy, Kazu 2014)
+2026-10-01 09:39:03 | Added Duck (119): 367M neurons (mallard, Kverková 2022), Lohmann 2019 FCR 2.03 / yield 0.70, feed split like chicken; gases reused from chicken as poultry proxy (conf 2)
+2026-10-01 09:39:03 | ERROR: lamb neuron_count 1.2 bn looks low next to Kazu 2014 bovid counts (springbok 3.06 bn) — not changed

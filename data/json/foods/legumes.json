@@ -2353,5 +2353,495 @@
                 }
             }
         ]
+    },
+    {
+        "id": 114,
+        "slug": "kidney-beans",
+        "name": "Kidney Beans",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume",
+            "common"
+        ],
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "temperate_grassland": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Dry beans: India, Brazil, Myanmar, Tanzania, Mexico, China and the US (Great Plains, Michigan).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.27,
+                    "fat": 0.005,
+                    "sat_fat": 0.00073,
+                    "protein": 0.0867,
+                    "fiber": 0.064,
+                    "sodium": 0.01,
+                    "carbs": 0.228,
+                    "sugar": 0.0032,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Kidney Beans — FDC 173740 'Beans, kidney, all types, mature seeds, cooked, boiled, without salt' (SR Legacy 16028), per 100 g: 127 kcal, protein 8.67 g, fat 0.5 g, sat fat 0.073 g, carbs 22.8 g, fiber 6.4 g, sugars 0.32 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Kidney Beans — yield_fraction: SR28 NDB 16027 dry kidney beans: refuse 0%. Yield and environment are per kg dry bean; cooked_weight_ratio converts to cooked."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.67,
+                "confidence": 4,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Kidney Beans — cooked_weight_ratio: dry-matter ratio from SR28 water content, raw NDB 16027 11.75% water vs cooked NDB 16028 66.94% water: (100 − 11.75) / (100 − 66.94) = 2.67 g cooked per g dry."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Kidney Beans — yield_kg_ha (world): FAOSTAT QCL item 176 'Beans, dry', World yield 2020–2024 = 2020: 877; 2021: 845; 2022: 898; 2023: 910; 2024: 898 (E) kg/ha; mean 886 kg/ha, rounded."
+                }
+            },
+            {
+                "value": 2200,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Kidney Beans — yield_kg_ha (US): FAOSTAT QCL item 176 'Beans, dry', United States of America yield 2020–2024 = 2020: 2,201; 2021: 1,902; 2022: 2,371; 2023: 2,325; 2024: 2,316 kg/ha; mean 2,223 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 5053,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Kidney Beans — water_per_kg: 5053 L/kg = green 3945 + blue 125 + grey 983. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry (HS 071333 kidney beans), 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3945,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Kidney Beans — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry (HS 071333 kidney beans), 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 125,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Kidney Beans — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry (HS 071333 kidney beans), 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 983,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Kidney Beans — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry (HS 071333 kidney beans), 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 1,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Kidney Beans — soil_erosion: reused from this repo's black-beans entry (same crop / same field; per-hectare value unchanged). "
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Kidney Beans — pesticide_kg_ha: reused from this repo's black-beans entry (same crop / same field; per-hectare value unchanged). "
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 30,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Kidney Beans — fertilizer_kg_ha: reused from this repo's black-beans entry (same crop / same field; per-hectare value unchanged). "
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.79,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Kidney Beans — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Pulses' global mean, 1.79 kg CO2e per kg dry pulses (cradle to retail). The pipeline divides by cooked_weight_ratio."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 2,
+                "confidence": 3,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Kidney Beans — tillage_events_per_year: reused from this repo's black-beans entry (same crop / same field; per-hectare value unchanged). "
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 2000,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Kidney Beans — co2_capture_kg_ha_yr: reused from this repo's black-beans entry (same crop / same field; per-hectare value unchanged). "
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kidney Beans — Pendimethalin: reused from this repo's black-beans entry (same crop, per-hectare rate). Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey (Michigan, Nebraska, and North Dakota production). Pendimethalin is the primary pre-emergent herbicide for grass and broadleaf weed management in dry bean production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kidney Beans — Malathion: reused from this repo's black-beans entry (same crop, per-hectare rate). Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey. Malathion used for bean leaf beetle (Cerotoma trifurcata), aphid, and leafhoppper control in dry bean production."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Kidney Beans — Chlorpyrifos: reused from this repo's black-beans entry (same crop, per-hectare rate). Black beans — pendimethalin: 0.22 kg/ha; malathion: 0.06 kg/ha; chlorpyrifos: 0.08 kg/ha. USDA NASS 2019 Dry Beans Chemical Use survey. Chlorpyrifos used for bean stem maggot (beanfly) and soil insect control; confidence 2 as US chlorpyrifos registrations have been progressively restricted."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 29760,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Kidney Beans — availability_gg (world): FAOSTAT QCL item 176 'Beans, dry', production 2020, 2021, 2022, 2023, 2024 = 29.43, 29.31, 30.06, 29.73, 30.28 Mt; mean 29,760 Gg. All dry beans (FAOSTAT does not split kidney beans out); same basis as black beans."
+                }
+            },
+            {
+                "value": 1222,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Kidney Beans — availability_gg (US): FAOSTAT QCL item 176 'Beans, dry', production 2020, 2021, 2022, 2023, 2024 = 1.47, 1.01, 1.16, 1.07, 1.41 Mt; mean 1,222 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "slug": "fava-beans",
+        "name": "Fava Beans",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [
+            "legume"
+        ],
+        "land_types": {
+            "temperate_forest": 0.5,
+            "tropical_savanna": 0.25,
+            "dry": 0.25
+        },
+        "land_types_note": "China and Ethiopia grow about half the world's dry fava beans; the UK, France, Australia, Egypt and Morocco most of the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.1,
+                    "fat": 0.004,
+                    "sat_fat": 0.00066,
+                    "protein": 0.076,
+                    "fiber": 0.054,
+                    "sodium": 0.05,
+                    "carbs": 0.1965,
+                    "sugar": 0.0182,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Fava Beans — FDC 173753 'Broadbeans (fava beans), mature seeds, cooked, boiled, without salt' (SR Legacy 16053), per 100 g: 110 kcal, protein 7.6 g, fat 0.4 g, sat fat 0.066 g, carbs 19.65 g, fiber 5.4 g, sugars 1.82 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Fava Beans — yield_fraction: SR28 NDB 16052 dry fava beans: refuse 0%. Yield and environment are per kg dry bean; cooked_weight_ratio converts to cooked."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 3.13,
+                "confidence": 4,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Fava Beans — cooked_weight_ratio: dry-matter ratio from SR28 water content, raw NDB 16052 10.98% water vs cooked NDB 16053 71.54% water: (100 − 10.98) / (100 − 71.54) = 3.13 g cooked per g dry."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 2200,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Fava Beans — yield_kg_ha (world): FAOSTAT QCL item 181 'Broad beans and horse beans, dry', World yield 2020–2024 = 2020: 2,142 (E); 2021: 2,226 (E); 2022: 2,252 (E); 2023: 2,236 (E); 2024: 2,255 (E) kg/ha; mean 2,222 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2018,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Fava Beans — water_per_kg: 2018 L/kg = green 1317 + blue 205 + grey 496. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 181 Broad beans, horse beans, dry (HS 071350), 1996–2005: green 1317 / blue 205 / grey 496 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1317,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Fava Beans — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 181 Broad beans, horse beans, dry (HS 071350), 1996–2005: green 1317 / blue 205 / grey 496 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 205,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Fava Beans — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 181 Broad beans, horse beans, dry (HS 071350), 1996–2005: green 1317 / blue 205 / grey 496 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 496,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Fava Beans — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 181 Broad beans, horse beans, dry (HS 071350), 1996–2005: green 1317 / blue 205 / grey 496 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Fava Beans — pesticide_kg_ha: no crop-specific data found; reused from this repo's peas entry as a proxy (both are cool-season pulses). Peas — pesticide_kg_ha: copied from the lentils entry (0.5, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 0,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Fava Beans — fertilizer_kg_ha: no crop-specific data found; reused from this repo's peas entry as a proxy (both are cool-season pulses). Peas — fertilizer_kg_ha: copied from the lentils entry (0, source 33): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.79,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Fava Beans — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Pulses' global mean, 1.79 kg CO2e per kg dry pulses (cradle to retail). Fava beans fix more nitrogen than most pulses, so this is probably on the high side. The pipeline divides by cooked_weight_ratio."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Fava Beans — Pendimethalin: proxy from this repo's peas entry (both are cool-season pulses). Peas — pesticides.Pendimethalin.kg_ha: copied from the lentils entry (0.22, source 52): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.04,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Fava Beans — Malathion: proxy from this repo's peas entry (both are cool-season pulses). Peas — pesticides.Malathion.kg_ha: copied from the lentils entry (0.04, source 52): dry peas are the closest crop in the dataset — a dryland, nitrogen-fixing pulse grown in the same regions (Canadian prairies, Russia, northern plains). Confidence lowered to 2 because it is a proxy, not pea-specific data."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 6133,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Fava Beans — availability_gg (world): FAOSTAT QCL item 181 'Broad beans and horse beans, dry', production 2020, 2021, 2022, 2023, 2024 = 5.71, 6.21, 6.18, 6.31, 6.26 Mt; mean 6,133 Gg."
+                }
+            }
+        ]
     }
 ]

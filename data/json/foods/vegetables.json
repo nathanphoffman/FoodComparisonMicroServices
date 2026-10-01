@@ -2507,5 +2507,1308 @@
                 }
             }
         ]
+    },
+    {
+        "id": 102,
+        "slug": "onion",
+        "name": "Onion",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "tropical_savanna": 0.35,
+            "temperate_forest": 0.35,
+            "dry": 0.3
+        },
+        "land_types_note": "India (Maharashtra, Karnataka) and China grow half the world's onions; Egypt, Pakistan, Turkey and the irrigated US West add a large dry-land share.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.4,
+                    "fat": 0.001,
+                    "sat_fat": 0.00042,
+                    "protein": 0.011,
+                    "fiber": 0.017,
+                    "sodium": 0.04,
+                    "carbs": 0.0934,
+                    "sugar": 0.0424,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Onion — FDC 170000 'Onions, raw' (SR Legacy 11282), per 100 g: 40 kcal, protein 1.1 g, fat 0.1 g, sat fat 0.042 g, trans 0 g, carbs 9.34 g, fiber 1.7 g, sugars 4.24 g, sodium 4 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.9,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Onion — yield_fraction: SR28 FOOD_DES NDB 11282 'Onions, raw': refuse 10% (stem ends, sprouts and defects), so edible fraction = 0.90."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 18900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Onion — yield_kg_ha (world): FAOSTAT QCL item 403 'Onions and shallots, dry', World yield 2020–2024 = 19,142; 18,835; 18,529 (E); 19,076 (E); 18,928 (E) kg/ha; 5-year mean 18,902 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 60700,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Onion — yield_kg_ha (US): FAOSTAT QCL item 403 'Onions and shallots, dry', United States of America yield 2020–2024 = 62,899; 56,662; 58,177; 61,480; 64,093 kg/ha; 5-year mean 60,662 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 345,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Onion — water_per_kg: 345 L/kg global average = green 192 + blue 88 + grey 65. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 403 Onions, dry (HS 070310), 1996–2005: green 192 / blue 88 / grey 65 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 192,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Onion — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 403 Onions, dry (HS 070310), 1996–2005: green 192 / blue 88 / grey 65 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 88,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Onion — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 403 Onions, dry (HS 070310), 1996–2005: green 192 / blue 88 / grey 65 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 65,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Onion — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 403 Onions, dry (HS 070310), 1996–2005: green 192 / blue 88 / grey 65 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 45.8,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Onion — pesticide_kg_ha (US, dry bulb): total active ingredient per planted ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by planted acres back-calculated from each disclosed compound (lb / (rate x %treated)), median per year: 2020 5,262,700 lb / 113,080 ac = 52.2 kg/ha; 2022 5,247,600 lb / 110,413 ac = 53.3; 2024 3,319,200 lb / 116,169 ac = 32.0. Mean 45.8 kg/ha. Most of the 'other' class is soil fumigant (metam-potassium / metam-sodium), which is not in pesticides.json; mancozeb and chlorothalonil are the biggest fungicides. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 339,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Onion — fertilizer_kg_ha (US, dry bulb): NASS Agricultural Chemical Use 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 136 on 91%, P2O5 187 on 54%, K2O 161 on 48% = 339 kg/ha. 2020 and 2024 surveys did not publish fertilizer for onions. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Onion — emissions_per_kg (world): Poore & Nemecek (2018) 'Onions & Leeks' global mean, 0.5 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools onion with similar crops; no onion-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.2415,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — glyphosate (salts summed per year): 2020 pot. salt 1.662 lb/ac on 19% + iso. salt 0.422 on 30%; 2022 pot. salt 1.163 on 8%; 2024 iso. salt 0.616 on 18%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.093,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — chlorpyrifos: 2020 0.83 lb/ac on 10% (2022 withheld; food tolerances revoked 2022)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0857,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — permethrin: 2020 0.765 lb/ac on 10% (2022 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0131,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — cypermethrin: 2024 0.234 lb/ac on 5% (2020, 2022 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 2.5926,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — mancozeb: 2020 3.969 lb/ac on 100%, 2022 2.942 on 54%, 2024 4.063 on 34%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.0726,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — S-metolachlor: 2024 1.08 lb/ac on 6% (2020, 2022 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.3264,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — pendimethalin: 2020 1.526 lb/ac on 12%, 2022 1.046 on 66%, 2024 1.714 on 0% (<0.5%); 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.0193,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — propiconazole: 2020 0.255 lb/ac on 6%, 2024 0.318 on 6%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.3846,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Onion — diazinon: 2022 1.806 lb/ac on 19% (2020, 2024 withheld)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 108949,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Onion — availability_gg (world): FAOSTAT QCL item 403 'Onions and shallots, dry', World production 2020–2024 = 105.25, 108.03, 111.84, 111.36 (E), 108.26 (E) Mt; mean 108,949 Gg."
+                }
+            },
+            {
+                "value": 3332,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Onion — availability_gg (US): FAOSTAT QCL item 403 'Onions and shallots, dry', United States of America production 2020–2024 = 3.35, 3.30, 3.18, 3.34, 3.50 Mt; mean 3,332 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "slug": "carrot",
+        "name": "Carrot",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.7,
+            "dry": 0.2,
+            "temperate_grassland": 0.1
+        },
+        "land_types_note": "China grows ~40% of the world's carrots; the rest is mostly Europe, Russia, the US (irrigated California) and Central Asia (Uzbekistan).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.41,
+                    "fat": 0.0024,
+                    "sat_fat": 0.00037,
+                    "protein": 0.0093,
+                    "fiber": 0.028,
+                    "sodium": 0.69,
+                    "carbs": 0.0958,
+                    "sugar": 0.0474,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Carrot — FDC 170393 'Carrots, raw' (SR Legacy 11124), per 100 g: 41 kcal, protein 0.93 g, fat 0.24 g, sat fat 0.037 g, trans 0 g, carbs 9.58 g, fiber 2.8 g, sugars 4.74 g, sodium 69 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.89,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Carrot — yield_fraction: SR28 FOOD_DES NDB 11124 'Carrots, raw': refuse 11% (crown, tops and scrapings), so edible fraction = 0.89."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 35300,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Carrot — yield_kg_ha (world): FAOSTAT QCL item 426 'Carrots and turnips', World yield 2020–2024 = 34,385 (E); 35,588 (E); 35,168 (E); 35,608 (E); 35,622 (E) kg/ha; 5-year mean 35,274 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 48600,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Carrot — yield_kg_ha (US): FAOSTAT QCL item 426 'Carrots and turnips', United States of America yield 2020–2024 = 49,813; 49,995; 48,254; 50,499; 44,412 kg/ha; 5-year mean 48,595 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 195,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Carrot — water_per_kg: 195 L/kg global average = green 106 + blue 28 + grey 61. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (HS 070610), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 106,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Carrot — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (HS 070610), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 28,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Carrot — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (HS 070610), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 61,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Carrot — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (HS 070610), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 115.2,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Carrot — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (rate x %treated)), median per year: 2022 4,171,900 lb / 57,391 ac = 81.5 kg/ha; 2024 6,850,500 lb / 51,568 ac = 148.9 kg/ha. Mean 115.2 kg/ha (2020 skipped: 'other' total withheld). About 65–95% is soil fumigant in the 'other' class (1,3-dichloropropene, metam), which is not in pesticides.json; excluding it the rate is ~16–27 kg/ha, mostly sulfur and other fungicides. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 86,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Carrot — fertilizer_kg_ha (US): NASS Agricultural Chemical Use 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 58 on 77%, P2O5 58 on 36%, K2O 34 on 32% = 86 kg/ha. 2020 and 2024 surveys did not publish fertilizer for carrots. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Carrot — emissions_per_kg (world): Poore & Nemecek (2018) 'Root Vegetables' global mean, 0.43 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools carrot with similar crops; no carrot-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.6419,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (fall-2025 file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Carrot — pendimethalin: 2022 1.22 lb/ac on 37%, 2024 1.285 on 54% (2020 withheld); mean. Glyphosate, imidacloprid, S-metolachlor and propiconazole are reported as used but withheld every year."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 44259,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Carrot — availability_gg (world): FAOSTAT QCL item 426 'Carrots and turnips', World production 2020–2024 = 42.90 (E), 44.22 (E), 44.73 (E), 44.30 (E), 45.15 (E) Mt; mean 44,259 Gg."
+                }
+            },
+            {
+                "value": 1314,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Carrot — availability_gg (US): FAOSTAT QCL item 426 'Carrots and turnips', United States of America production 2020–2024 = 1.40, 1.29, 1.45, 1.31, 1.12 Mt; mean 1,314 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "slug": "cassava",
+        "name": "Cassava",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "tropical_savanna": 0.6,
+            "tropical_forest": 0.4
+        },
+        "land_types_note": "Grown across the humid and sub-humid tropics: Nigeria, DR Congo, Ghana and Tanzania (savanna and cleared forest), plus Thailand, Indonesia and Brazil.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.6,
+                    "fat": 0.0028,
+                    "sat_fat": 0.00074,
+                    "protein": 0.0136,
+                    "fiber": 0.018,
+                    "sodium": 0.14,
+                    "carbs": 0.3806,
+                    "sugar": 0.017,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cassava — FDC 169985 'Cassava, raw' (SR Legacy 11134), per 100 g: 160 kcal, protein 1.36 g, fat 0.28 g, sat fat 0.074 g, trans 0 g, carbs 38.06 g, fiber 1.8 g, sugars 1.7 g, sodium 14 mg, cholesterol 0 mg; divided by 100 for per-gram values. Raw values; cassava must be cooked before eating, but boiling changes its weight little (FDC has no SR Legacy cooked cassava), so no cooked_weight_ratio is set."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.84,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Cassava — yield_fraction: SR28 FOOD_DES NDB 11134 'Cassava, raw': refuse 16% (skin), so edible fraction = 0.84."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 10200,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cassava — yield_kg_ha (world): FAOSTAT QCL item 125 'Cassava, fresh', World yield 2020–2024 = 10,211 (E); 10,213 (E); 10,256 (E); 10,265 (E); 10,186 (E) kg/ha; 5-year mean 10,226 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 563,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Cassava — water_per_kg: 563 L/kg global average = green 550 + blue 0 + grey 13. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 125 Manioc (cassava) (HS 071410), 1996–2005: green 550 / blue 0 / grey 13 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 550,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cassava — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 125 Manioc (cassava) (HS 071410), 1996–2005: green 550 / blue 0 / grey 13 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cassava — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 125 Manioc (cassava) (HS 071410), 1996–2005: green 550 / blue 0 / grey 13 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 13,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cassava — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 125 Manioc (cassava) (HS 071410), 1996–2005: green 550 / blue 0 / grey 13 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Cassava — pesticide_kg_ha: no crop-specific data found; reused from this repo's sweet-potato entry as a proxy (both are low-input tropical root crops grown mostly by smallholders). "
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Cassava — fertilizer_kg_ha: no crop-specific data found; reused from this repo's sweet-potato entry as a proxy (both are low-input tropical root crops grown mostly by smallholders). "
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.32,
+                "confidence": 4,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Cassava — emissions_per_kg (world): Poore & Nemecek (2018) 'Cassava' global mean, 1.32 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 86,
+                            "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000352-00518-20110601.pdf",
+                            "title": "EPA SLN Labels — Dual Magnum (S-metolachlor) Sweet Potato Use (AR-110004, TX-070003, GA-060006)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Cassava — Imidacloprid: proxy from this repo's sweet-potato entry (both are low-input tropical root crops grown mostly by smallholders). Sweet potato — imidacloprid: 0.05 kg/ha; verified against Pacific Northwest Pest Management Handbook (pnwhandbooks.org) at 0.044 lb ai/acre ≈ 0.05 kg ai/ha for sweet potato aphid and whitefly control."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 86,
+                            "url": "https://www3.epa.gov/pesticides/chem_search/ppls/000352-00518-20110601.pdf",
+                            "title": "EPA SLN Labels — Dual Magnum (S-metolachlor) Sweet Potato Use (AR-110004, TX-070003, GA-060006)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Cassava — Metolachlor: proxy from this repo's sweet-potato entry (both are low-input tropical root crops grown mostly by smallholders). Sweet potato — metolachlor (S-metolachlor / Dual Magnum): 1.1 kg ai/ha; based on Arkansas SLN AR-110004 and Texas SLN TX-070003 registered rates of 0.95–1.27 lb ai/acre (midpoint 1.11 lb ai/acre = 1.24 kg/ha); conservative midpoint 1.1 kg ai/ha used. Previous value of 0.12 kg/ha was incorrect (used USDA NASS which does not survey sweet potatoes). Chlorpyrifos removed — EPA cancelled all food-crop uses in August 2021."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 329813,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cassava — availability_gg (world): FAOSTAT QCL item 125 'Cassava, fresh', World production 2020–2024 = 309.87, 324.67, 333.09 (E), 339.52 (E), 341.91 (E) Mt; mean 329,813 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "slug": "pumpkin",
+        "name": "Pumpkin & Squash",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.5,
+            "tropical_savanna": 0.3,
+            "temperate_grassland": 0.2
+        },
+        "land_types_note": "China and India grow about 40% of the world's pumpkins and squash; Ukraine, Russia, the US and Egypt grow most of the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.26,
+                    "fat": 0.001,
+                    "sat_fat": 0.00052,
+                    "protein": 0.01,
+                    "fiber": 0.005,
+                    "sodium": 0.01,
+                    "carbs": 0.065,
+                    "sugar": 0.0276,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pumpkin & Squash — FDC 168448 'Pumpkin, raw' (SR Legacy 11422), per 100 g: 26 kcal, protein 1 g, fat 0.1 g, sat fat 0.052 g, carbs 6.5 g, fiber 0.5 g, sugars 2.76 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.7,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Pumpkin & Squash — yield_fraction: SR28 FOOD_DES NDB 11422 'Pumpkin, raw': refuse 30% (seeds, rind and stem), so edible fraction = 0.70."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15300,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pumpkin & Squash — yield_kg_ha (world): FAOSTAT QCL item 394 'Pumpkins, squash and gourds', World yield 2020–2024 = 2020: 15,091 (E); 2021: 15,252 (E); 2022: 15,267 (E); 2023: 15,543 (E); 2024: 15,385 (E) kg/ha; mean 15,308 kg/ha, rounded."
+                }
+            },
+            {
+                "value": 22600,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pumpkin & Squash — yield_kg_ha (US): FAOSTAT QCL item 394 'Pumpkins, squash and gourds', United States of America yield 2020–2024 = 2020: 20,901; 2021: 23,404; 2022: 23,585; 2023: 23,622; 2024: 21,692 kg/ha; mean 22,641 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 336,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pumpkin & Squash — water_per_kg: 336 L/kg = green 228 + blue 24 + grey 84. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds (HS 070990), 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 228,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pumpkin & Squash — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds (HS 070990), 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 24,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pumpkin & Squash — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds (HS 070990), 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 84,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pumpkin & Squash — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds (HS 070990), 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 9.5,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Pumpkin & Squash — pesticide_kg_ha (US, pumpkins): total active ingredient per planted ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (rate x %treated)), median per year: 2020 540,100 lb / 59,622 ac = 10.2 kg/ha; 2022 385,100 lb / 52,805 ac = 8.2; 2024 431,000 lb / 48,458 ac = 10.0. Mean 9.5 kg/ha. Pumpkin survey only (NASS surveys squash separately). No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 135,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Pumpkin & Squash — fertilizer_kg_ha (US, pumpkins): NASS 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 65 on 65%, P2O5 61 on 51%, K2O 90 on 52% = 135 kg/ha. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pumpkin & Squash — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg (cradle to retail, incl. land-use change)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.8217,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — glyphosate (salts summed per year): 2020 pot. salt 2.208 lb/ac on 71% + iso. salt 1.159 on 29%; 2022 pot. salt 1.152 on 13%; 2024 acid 2.655 on 1% + pot. salt 1.49 on 8%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.1314,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — malathion: 2020 17.774 lb/ac on 1%, 2022 5.368 on 1%, 2024 1.718 on 7%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.1031,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — permethrin: 2020 0.23 lb/ac on 93%, 2022 0.329 on 3%, 2024 1.044 on 5%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0046,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — imidacloprid: 2020 0.433 lb/ac on 2%, 2022 on <0.5%, 2024 0.125 on 3%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0072,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — thiamethoxam: 2020 0.143 lb/ac on 5%, 2022 0.105 on 1%, 2024 0.138 on 8%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3191,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — mancozeb: 2020 on <0.5%, 2022 4.38 lb/ac on 13%; mean. 2024 (9.812 lb/ac on 100%) excluded: it would be more mancozeb than the whole 2024 fungicide total."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.0325,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — metolachlor + S-metolachlor: 2020 1.633 lb/ac on 4%, 2022 2.17 on 1%, 2024 <0.5%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.0071,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — propiconazole: 2022 0.211 lb/ac on 3% (2020, 2024 withheld)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.036,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — paraquat: 2020 0.393 lb/ac on 3%, 2024 0.583 on 9% (2022 withheld); mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.6995,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Pumpkin & Squash — carbaryl: 2020 1.194 lb/ac on 39%, 2022 2.384 on 59%, 2024 on <0.5%; 3-survey mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 32496,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pumpkin & Squash — availability_gg (world): FAOSTAT QCL item 394 'Pumpkins, squash and gourds', production 2020, 2021, 2022, 2023, 2024 = 31.24, 31.79, 31.88, 32.98, 34.58 Mt; mean 32,496 Gg."
+                }
+            },
+            {
+                "value": 999,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pumpkin & Squash — availability_gg (US): FAOSTAT QCL item 394 'Pumpkins, squash and gourds', production 2020, 2021, 2022, 2023, 2024 = 0.90, 1.07, 1.09, 1.00, 0.93 Mt; mean 999 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "slug": "eggplant",
+        "name": "Eggplant",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.6,
+            "tropical_savanna": 0.4
+        },
+        "land_types_note": "China grows about two-thirds of the world's eggplant and India about a quarter; Egypt, Türkiye and Indonesia most of the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.25,
+                    "fat": 0.0018,
+                    "sat_fat": 0.00034,
+                    "protein": 0.0098,
+                    "fiber": 0.03,
+                    "sodium": 0.02,
+                    "carbs": 0.0588,
+                    "sugar": 0.0353,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Eggplant — FDC 169228 'Eggplant, raw' (SR Legacy 11209), per 100 g: 25 kcal, protein 0.98 g, fat 0.18 g, sat fat 0.034 g, carbs 5.88 g, fiber 3 g, sugars 3.53 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.81,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Eggplant — yield_fraction: SR28 FOOD_DES NDB 11209 'Eggplant, raw': refuse 19% (ends, parings and trimmings), so edible fraction = 0.81."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 28800,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Eggplant — yield_kg_ha (world): FAOSTAT QCL item 399 'Eggplants (aubergines)', World yield 2020–2024 = 2020: 28,221 (E); 2021: 28,311 (E); 2022: 29,149 (E); 2023: 29,188 (E); 2024: 29,337 (E) kg/ha; mean 28,841 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 362,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Eggplant — water_per_kg: 362 L/kg = green 234 + blue 33 + grey 95. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 399 Eggplants (HS 070930), 1996–2005: green 234 / blue 33 / grey 95 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 234,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Eggplant — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 399 Eggplants (HS 070930), 1996–2005: green 234 / blue 33 / grey 95 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 33,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Eggplant — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 399 Eggplants (HS 070930), 1996–2005: green 234 / blue 33 / grey 95 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 95,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Eggplant — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 399 Eggplants (HS 070930), 1996–2005: green 234 / blue 33 / grey 95 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 5.2,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Eggplant — pesticide_kg_ha (US): NASS class TOTAL rows 2010 (fungicide 3,100 + herbicide 500 + insecticide 600 lb; 'other' withheld) ÷ planted acres back-calculated from disclosed compounds (median 900 ac) × 1.12085 = 5.2 kg/ha. NASS Agricultural Chemical Use, 2010 vegetable survey (the latest eggplant survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate (~900 planted acres). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old, small US sample; South Asian eggplant is sprayed far more heavily. Confidence 2. No world figure; world falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 354,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Eggplant — fertilizer_kg_ha (US): N 144 lb/ac on 81% + P2O5 88 on 67% + K2O 173 on 81%, × 1.12085 = 354 kg/ha. NASS Agricultural Chemical Use, 2010 vegetable survey (the latest eggplant survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate (~900 planted acres). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old, small US sample; South Asian eggplant is sprayed far more heavily. Confidence 2."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Eggplant — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg (cradle to retail, incl. land-use change)."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0288,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Eggplant — imidacloprid: 2010 0.214 lb/ac on 12%. NASS Agricultural Chemical Use, 2010 vegetable survey (the latest eggplant survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate (~900 planted acres). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old, small US sample; South Asian eggplant is sprayed far more heavily. Confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.0566,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Eggplant — mancozeb: 2010 2.526 lb/ac on 2%. NASS Agricultural Chemical Use, 2010 vegetable survey (the latest eggplant survey; file snapshot qs.environmental_20261001), PROGRAM STATES aggregate (~900 planted acres). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085. Old, small US sample; South Asian eggplant is sprayed far more heavily. Confidence 2."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 57118,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Eggplant — availability_gg (world): FAOSTAT QCL item 399 'Eggplants (aubergines)', production 2020, 2021, 2022, 2023, 2024 = 56.22, 57.08, 57.48, 57.27, 57.54 Mt; mean 57,118 Gg."
+                }
+            }
+        ]
     }
 ]

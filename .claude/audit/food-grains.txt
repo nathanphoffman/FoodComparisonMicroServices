@@ -25,3 +25,5 @@
 2026-09-24 18:53:21 | ERROR: open items — oats milling factor uncertain (FAO 0.55 vs P&N-implied 0.73); barley hull basis not converted; quinoa world yield 1700 kg/ha looks high vs FAOSTAT, unverified
 2026-09-28 13:11:36 | rice-starch: added new food id 94 (plant, grains). Derived from rice with 1.25 kg milled rice/kg starch (BENEO composition, src 425; rice-protein co-product not credited); emissions = rice x 1.25 + 0.18 starch processing (src 416); nutrition uses cornstarch FDC 169698 as stand-in (no rice starch label found); availability ~410 Gg from market value / assumed price (confidence 1)
 2026-09-28 13:11:36 | rice-protein: added new food id 95 (plant, grains). Derived from rice with 1.8 kg milled rice/kg protein (CarbonCloud 8.58 kg CO2e/kg, 47% agriculture / 2.20 milled rice, src 424); nutrition 3 labels (src 421-423); availability 150 Gg (market report, confidence 1)
+2026-10-01 09:39:03 | Added Rye (116) and Millet (117): FDC raw grain nutrition, FAOSTAT, M&H water; rye P&N 'Wheat & Rye' 1.57
+2026-10-01 09:39:03 | ERROR: millet emissions is a cereal proxy (1.57, conf 1) — no millet LCA found; no per-ha data for either

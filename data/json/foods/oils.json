@@ -1830,5 +1830,317 @@
         }
       }
     ]
+  },
+  {
+    "id": 109,
+    "slug": "corn-oil",
+    "name": "Corn Oil",
+    "type": "plant",
+    "category": "oils",
+    "human_food": 1,
+    "tags": [
+      "common"
+    ],
+    "land_types": {
+      "temperate_grassland": 0.75,
+      "tropical_savanna": 0.15,
+      "tropical_forest": 0.1
+    },
+    "land_types_note": "Same land as corn grain: mostly US Corn Belt prairie, plus Brazil and China.",
+    "nutrition": [
+      {
+        "value": {
+          "calories": 9.0,
+          "fat": 1.0,
+          "sat_fat": 0.12948,
+          "protein": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "carbs": 0.0,
+          "sugar": 0.0,
+          "cholesterol": 0.0,
+          "trans_fat": 0.0
+        },
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Corn Oil — FDC 171029 'Oil, corn, industrial and retail, all purpose salad or cooking' (SR Legacy 04518), per 100 g: 900 kcal, protein 0 g, fat 100 g, sat fat 12.948 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+        }
+      }
+    ],
+    "yield_fraction": [
+      {
+        "value": 1,
+        "confidence": 5,
+        "source": {
+          "id": 1,
+          "url": "https://fdc.nal.usda.gov/",
+          "title": "USDA FoodData Central",
+          "note": "Corn Oil — yield_fraction: already measured in edible oil form; nothing further is discarded."
+        }
+      }
+    ],
+    "yield_kg_ha": [
+      {
+        "value": 2700,
+        "confidence": 3,
+        "source": {
+          "id": 263,
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+          "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+          "note": "Corn Oil — yield_kg_ha (world): FAOSTAT QCL item 56 'Maize (corn)', World yield 2020–2024 = 2020: 5,762; 2021: 5,830; 2022: 5,666; 2023: 5,867; 2024: 5,802 kg/ha; mean 5,786 kg/ha of maize grain × 1,222/2,575 (Mekonnen & Hoekstra maize WF ÷ maize oil WF, i.e. their product fraction ÷ value fraction). Corn oil is a small, high-value by-product of milling (~3% of grain mass), so land is allocated by value, the same way as its water = 2,746 kg/ha, rounded."
+        }
+      },
+      {
+        "value": 5200,
+        "confidence": 3,
+        "region": "US",
+        "source": {
+          "id": 263,
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+          "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+          "note": "Corn Oil — yield_kg_ha (US): FAOSTAT QCL item 56 'Maize (corn)', United States of America yield 2020–2024 = 2020: 10,760; 2021: 11,091; 2022: 10,886; 2023: 11,131; 2024: 11,257 kg/ha; mean 11,025 kg/ha of maize grain × 1,222/2,575 (same allocation as world) = 5,232 kg/ha, rounded."
+        }
+      }
+    ],
+    "water_per_kg": [
+      {
+        "value": 2576,
+        "confidence": 4,
+        "source": {
+          "id": 30,
+          "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+          "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+          "note": "Corn Oil — water_per_kg: 2576 L/kg = green 1996 + blue 171 + grey 409. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 56 Maize → Maize (corn) oil, 1996–2005: green 1996 / blue 171 / grey 409 m³/t = L/kg."
+        }
+      }
+    ],
+    "green_water_per_kg": [
+      {
+        "value": 1996,
+        "confidence": 3,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": "Corn Oil — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 56 Maize → Maize (corn) oil, 1996–2005: green 1996 / blue 171 / grey 409 m³/t = L/kg."
+        }
+      }
+    ],
+    "blue_water_per_kg": [
+      {
+        "value": 171,
+        "confidence": 3,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": "Corn Oil — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 56 Maize → Maize (corn) oil, 1996–2005: green 1996 / blue 171 / grey 409 m³/t = L/kg."
+        }
+      }
+    ],
+    "grey_water_per_kg": [
+      {
+        "value": 409,
+        "confidence": 3,
+        "source": {
+          "id": 67,
+          "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+          "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+          "note": "Corn Oil — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 56 Maize → Maize (corn) oil, 1996–2005: green 1996 / blue 171 / grey 409 m³/t = L/kg."
+        }
+      }
+    ],
+    "soil_erosion": [
+      {
+        "value": 6.7,
+        "confidence": 4,
+        "source": {
+          "id": 11,
+          "url": "https://ourworldindata.org/grapher/maize-yields",
+          "title": "Our World in Data — Corn (Maize) Yields",
+          "note": "Corn Oil — soil_erosion: reused from this repo's corn entry (same crop / same field; per-hectare value unchanged). Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+        }
+      }
+    ],
+    "pesticide_kg_ha": [
+      {
+        "value": 2.3,
+        "confidence": 4,
+        "region": "US",
+        "source": {
+          "id": 12,
+          "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
+          "title": "USDA ERS — Feed Grains Sector at a Glance",
+          "note": "Corn Oil — pesticide_kg_ha: reused from this repo's corn entry (same crop / same field; per-hectare value unchanged). Corn — pesticide_kg_ha and fertilizer_kg_ha: Used for US corn agricultural statistics including pesticide and fertilizer application rates."
+        }
+      }
+    ],
+    "fertilizer_kg_ha": [
+      {
+        "value": 160,
+        "confidence": 4,
+        "region": "US",
+        "source": {
+          "id": 12,
+          "url": "https://www.ers.usda.gov/topics/crops/corn-and-other-feed-grains/feed-grains-sector-at-a-glance",
+          "title": "USDA ERS — Feed Grains Sector at a Glance",
+          "note": "Corn Oil — fertilizer_kg_ha: reused from this repo's corn entry (same crop / same field; per-hectare value unchanged). Corn — pesticide_kg_ha and fertilizer_kg_ha: Used for US corn agricultural statistics including pesticide and fertilizer application rates."
+        }
+      }
+    ],
+    "emissions_per_kg": [
+      {
+        "value": 3.17,
+        "confidence": 2,
+        "source": {
+          "id": 72,
+          "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+          "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+          "note": "Corn Oil — emissions_per_kg (world): no Poore & Nemecek corn-oil row. Farm stage = this repo's corn farm_gate_emissions_per_kg 0.79 × 2,575/1,222 (same value allocation as yield and water) = 1.66; plus P&N 'Sunflower Oil' post-farm stages from OWID (processing 0.21 + transport 0.18 + retail 0.04 + packaging 0.78 + losses 0.28 = 1.50) as a stand-in for refining and distribution. Total 3.17 kg CO2e/kg. Confidence 2."
+        }
+      }
+    ],
+    "tillage_events_per_year": [
+      {
+        "value": 2,
+        "confidence": 4,
+        "source": {
+          "id": 11,
+          "url": "https://ourworldindata.org/grapher/maize-yields",
+          "title": "Our World in Data — Corn (Maize) Yields",
+          "note": "Corn Oil — tillage_events_per_year: reused from this repo's corn entry (same crop / same field; per-hectare value unchanged). Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+        }
+      }
+    ],
+    "co2_capture_kg_ha_yr": [
+      {
+        "value": 3000,
+        "confidence": 4,
+        "source": {
+          "id": 11,
+          "url": "https://ourworldindata.org/grapher/maize-yields",
+          "title": "Our World in Data — Corn (Maize) Yields",
+          "note": "Corn Oil — co2_capture_kg_ha_yr: reused from this repo's corn entry (same crop / same field; per-hectare value unchanged). Corn — yield_kg_ha: Source for world average of ~5,600 kg/ha."
+        }
+      }
+    ],
+    "pesticides": [
+      {
+        "pesticide_id": 2,
+        "name": "Atrazine",
+        "kg_ha": [
+          {
+            "value": 1.12,
+            "confidence": 5,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Corn Oil — Atrazine: reused from this repo's corn entry (same crop, per-hectare rate). Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 1,
+        "name": "Glyphosate",
+        "kg_ha": [
+          {
+            "value": 0.91,
+            "confidence": 5,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Corn Oil — Glyphosate: reused from this repo's corn entry (same crop, per-hectare rate). Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 11,
+        "name": "Metolachlor",
+        "kg_ha": [
+          {
+            "value": 0.68,
+            "confidence": 5,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Corn Oil — Metolachlor: reused from this repo's corn entry (same crop, per-hectare rate). Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 13,
+        "name": "Pendimethalin",
+        "kg_ha": [
+          {
+            "value": 0.05,
+            "confidence": 3,
+            "source": {
+              "id": 52,
+              "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+              "title": "USDA NASS — Agricultural Chemical Use Survey",
+              "note": "Corn Oil — Pendimethalin: reused from this repo's corn entry (same crop, per-hectare rate). Corn — atrazine: 1.12 kg/ha; glyphosate: 0.91 kg/ha; metolachlor: 0.68 kg/ha; pendimethalin: 0.05 kg/ha (minor use)."
+            }
+          }
+        ]
+      },
+      {
+        "pesticide_id": 8,
+        "name": "Thiamethoxam",
+        "kg_ha": [
+          {
+            "value": 0.04,
+            "confidence": 3,
+            "source": {
+              "id": 343,
+              "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0173836",
+              "title": "Alford & Krupke (2017) — Translocation of the neonicotinoid seed treatment clothianidin in maize (PLOS ONE)",
+              "note": "Corn Oil — Thiamethoxam: reused from this repo's corn entry (same crop, per-hectare rate). Corn — thiamethoxam (id 8) stands in for the neonicotinoid seed treatment (clothianidin or thiamethoxam; clothianidin is not in pesticides.json and is thiamethoxam's main metabolite). Label rates 0.25–1.25 mg a.i./kernel × ~79,000 kernels/ha = 0.02–0.10 kg/ha; ~0.05 kg/ha on treated seed (mostly low/mid rates) × ~80% of acres treated ≈ 0.04 kg/ha averaged over all corn. Added 2026-09-26: corn previously listed no insecticide, understating its insect/bee harm."
+            }
+          },
+          {
+            "value": 0.04,
+            "confidence": 3,
+            "source": {
+              "id": 344,
+              "url": "https://www.sciencedaily.com/releases/2015/04/150402092123.htm",
+              "title": "Douglas & Tooker (2015) — Rapid increase in neonicotinoid insecticides driven by seed treatments (Environmental Science & Technology; ScienceDaily summary)",
+              "note": "Corn Oil — Thiamethoxam: reused from this repo's corn entry (same crop, per-hectare rate). Corn — thiamethoxam (id 8) stands in for the neonicotinoid seed treatment (clothianidin or thiamethoxam; clothianidin is not in pesticides.json and is thiamethoxam's main metabolite). Label rates 0.25–1.25 mg a.i./kernel × ~79,000 kernels/ha = 0.02–0.10 kg/ha; ~0.05 kg/ha on treated seed (mostly low/mid rates) × ~80% of acres treated ≈ 0.04 kg/ha averaged over all corn. Added 2026-09-26: corn previously listed no insecticide, understating its insect/bee harm."
+            }
+          }
+        ]
+      }
+    ],
+    "availability_gg": [
+      {
+        "value": 3054,
+        "confidence": 4,
+        "source": {
+          "id": 263,
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+          "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+          "note": "Corn Oil — availability_gg (world): FAOSTAT QCL item 60 'Oil of maize', production 2020, 2021, 2022, 2023 = 2.99, 3.09, 3.05, 3.08 Mt; mean 3,054 Gg. 2024 not yet reported."
+        }
+      },
+      {
+        "value": 1123,
+        "confidence": 3,
+        "region": "US",
+        "source": {
+          "id": 263,
+          "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+          "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+          "note": "Corn Oil — availability_gg (US): FAOSTAT QCL item 60 'Oil of maize', production 2020, 2021, 2022, 2023 = 1.17, 1.19, 1.06, 1.06 Mt; mean 1,123 Gg."
+        }
+      }
+    ]
   }
 ]

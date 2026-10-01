@@ -2511,5 +2511,763 @@
                 }
             }
         ]
+    },
+    {
+        "id": 105,
+        "slug": "grapes",
+        "name": "Grapes",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "dry": 0.55,
+            "temperate_forest": 0.45
+        },
+        "land_types_note": "Mediterranean-climate vineyards (Spain, Italy, France, Turkey, California, Chile) count as dry land; China and the rest of temperate Europe make up the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.69,
+                    "fat": 0.0016,
+                    "sat_fat": 0.00054,
+                    "protein": 0.0072,
+                    "fiber": 0.009,
+                    "sodium": 0.02,
+                    "carbs": 0.181,
+                    "sugar": 0.1548,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Grapes — FDC 174683 'Grapes, red or green (European type, such as Thompson seedless), raw' (SR Legacy 09132), per 100 g: 69 kcal, protein 0.72 g, fat 0.16 g, sat fat 0.054 g, trans 0 g, carbs 18.1 g, fiber 0.9 g, sugars 15.48 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.96,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Grapes — yield_fraction: SR28 FOOD_DES NDB 09132 'Grapes, red or green (European type, such as Thompson seedless), raw': refuse 4% (stems), so edible fraction = 0.96."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 11400,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Grapes — yield_kg_ha (world): FAOSTAT QCL item 560 'Grapes', World yield 2020–2024 = 11,242; 11,411; 11,685; 11,241; 11,286 (E) kg/ha; 5-year mean 11,373 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 14500,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Grapes — yield_kg_ha (US): FAOSTAT QCL item 560 'Grapes', United States of America yield 2020–2024 = 14,638; 14,979; 14,868; 14,843; 13,124 kg/ha; 5-year mean 14,490 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 609,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Grapes — water_per_kg: 609 L/kg global average = green 425 + blue 97 + grey 87. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 560 Grapes (HS 080610), 1996–2005: green 425 / blue 97 / grey 87 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 425,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Grapes — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 560 Grapes (HS 080610), 1996–2005: green 425 / blue 97 / grey 87 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 97,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Grapes — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 560 Grapes (HS 080610), 1996–2005: green 425 / blue 97 / grey 87 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 87,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Grapes — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 560 Grapes (HS 080610), 1996–2005: green 425 / blue 97 / grey 87 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 95.1,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Grapes — pesticide_kg_ha (US, table grapes): total active ingredient per bearing ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by bearing acres back-calculated from disclosed compounds (lb / (rate x %treated)), median per year: 2021 13,400,400 lb / 118,393 ac = 126.9 kg/ha; 2023 11,810,100 lb / 120,321 ac = 110.0; 2025 4,966,000 lb / 114,812 ac = 48.5. Mean 95.1 kg/ha. Mostly elemental sulfur and calcium polysulfide fungicides (low toxicity, not in pesticides.json). Table type is used because that is the grape people eat fresh; wine grapes are about half of world tonnage. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 83,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Grapes — fertilizer_kg_ha (US, table grapes): NASS Agricultural Chemical Use 2023 fruit survey, PROGRAM STATES, N + P2O5 + K2O per bearing acre (lb/acre/yr x % treated x 1.12085): N 52 on 51%, P2O5 32 on 43%, K2O 67 on 51% = 83 kg/ha. 2021 and 2025 surveys did not publish fertilizer for table grapes. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Grapes — emissions_per_kg (world): Poore & Nemecek (2018) 'Berries & Grapes' global mean, 1.53 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools grapes with similar crops; no grapes-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.5475,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys 2021/2023/2025 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate, class 'GRAPES, TABLE TYPE'. Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Grapes — glyphosate (salts summed per year): 2021 pot. salt 2.638 lb/ac on 22%; 2023 iso. salt 1.168 on 33% + pot. salt 1.481 on 17%; 2025 acid 1.614 on 4% + iso. salt 2.037 on 9%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.3353,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys 2021/2023/2025 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate, class 'GRAPES, TABLE TYPE'. Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Grapes — imidacloprid: 2021 0.379 lb/ac on 51%, 2023 0.729 on 35%, 2025 2.994 on 15%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.9535,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, fruit surveys 2021/2023/2025 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate, class 'GRAPES, TABLE TYPE'. Per-bearing-hectare rate = avg lb/acre/yr on treated acres x % of bearing area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Grapes — pendimethalin: 2021 2.756 lb/ac on 28%, 2023 3.943 on 39%, 2025 3.466 on 7%; 3-survey mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 76973,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Grapes — availability_gg (world): FAOSTAT QCL item 560 'Grapes', World production 2020–2024 = 76.90, 77.73, 78.89, 75.44, 75.90 (E) Mt; mean 76,973 Gg."
+                }
+            },
+            {
+                "value": 5323,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Grapes — availability_gg (US): FAOSTAT QCL item 560 'Grapes', United States of America production 2020–2024 = 5.48, 5.47, 5.41, 5.35, 4.90 Mt; mean 5,323 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "slug": "watermelon",
+        "name": "Watermelon",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.6,
+            "dry": 0.25,
+            "tropical_savanna": 0.15
+        },
+        "land_types_note": "China grows about 60% of the world's watermelons; Türkiye, India, Iran, Algeria and Brazil make up most of the rest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.3,
+                    "fat": 0.0015,
+                    "sat_fat": 0.00016,
+                    "protein": 0.0061,
+                    "fiber": 0.004,
+                    "sodium": 0.01,
+                    "carbs": 0.0755,
+                    "sugar": 0.062,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Watermelon — FDC 167765 'Watermelon, raw' (SR Legacy 09326), per 100 g: 30 kcal, protein 0.61 g, fat 0.15 g, sat fat 0.016 g, carbs 7.55 g, fiber 0.4 g, sugars 6.2 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.52,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Watermelon — yield_fraction: SR28 FOOD_DES NDB 09326 'Watermelon, raw': refuse 48% (rind, seeds and cutting loss), so edible fraction = 0.52."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 33700,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Watermelon — yield_kg_ha (world): FAOSTAT QCL item 567 'Watermelons', World yield 2020–2024 = 2020: 32,995; 2021: 33,301; 2022: 33,869; 2023: 33,999 (E); 2024: 34,377 (E) kg/ha; mean 33,708 kg/ha, rounded."
+                }
+            },
+            {
+                "value": 39400,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Watermelon — yield_kg_ha (US): FAOSTAT QCL item 567 'Watermelons', United States of America yield 2020–2024 = 2020: 40,795; 2021: 37,891; 2022: 38,737; 2023: 41,449; 2024: 38,032 kg/ha; mean 39,381 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 235,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Watermelon — water_per_kg: 235 L/kg = green 147 + blue 25 + grey 63. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 567 Watermelons (HS 080710), 1996–2005: green 147 / blue 25 / grey 63 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 147,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Watermelon — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 567 Watermelons (HS 080710), 1996–2005: green 147 / blue 25 / grey 63 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 25,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Watermelon — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 567 Watermelons (HS 080710), 1996–2005: green 147 / blue 25 / grey 63 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 63,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Watermelon — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 567 Watermelons (HS 080710), 1996–2005: green 147 / blue 25 / grey 63 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 12.3,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Watermelon — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (fungicide + herbicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (rate x %treated)), median per year: 2020 1,514,400 lb / 98,755 ac = 17.2 kg/ha; 2022 689,800 lb / 88,119 ac = 8.8; 2024 991,100 lb / 102,439 ac = 10.8 (one compound). Mean 12.3 kg/ha. Mancozeb and chlorothalonil are the biggest fungicides. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 248,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 267,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                    "note": "Watermelon — fertilizer_kg_ha (US): NASS 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 105 on 80%, P2O5 67 on 78%, K2O 113 on 75% = 248 kg/ha. Single survey year, so confidence 2. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.05,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Watermelon — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Fruit' global mean, 1.05 kg CO2e/kg (cradle to retail, incl. land-use change). No watermelon-specific global figure; 'Other Fruit' pools many fruits."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.583,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — glyphosate (salts summed per year): 2020 iso. salt 0.634 lb/ac on 4% + pot. salt 3.482 on 35%; 2022 iso. salt 1.597 on 1%; 2024 pot. salt 4.197 on 3% + iso. salt 2.494 on 7%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.2767,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — permethrin: 2020 1.582 lb/ac on 31%, 2024 0.319 on 1% (2022 withheld); mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0313,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — imidacloprid: 2020 0.313 lb/ac on 10%, 2022 0.35 on 7% (2024 withheld); mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.5516,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — mancozeb: 2020 10.971 lb/ac on 21%, 2022 4.118 on 33%, 2024 3.267 on 15%; 3-survey mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.0298,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — S-metolachlor: 2020 1.131 lb/ac on 3%, 2022 1.929 on 1% (2024 withheld); mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0374,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 267,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20260924.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable survey 2018)",
+                            "note": "NASS Agricultural Chemical Use, vegetable surveys 2020/2022/2024 (file snapshot qs.environmental_20261001), PROGRAM STATES aggregate. Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of planted area treated x 1.12085; mean of the surveys that report the compound (years marked (D) are withheld and skipped). Watermelon — carbaryl: 2020 2.369 lb/ac on 1%, 2024 2.151 on 2% (2022 % treated withheld); mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 103920,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Watermelon — availability_gg (world): FAOSTAT QCL item 567 'Watermelons', production 2020, 2021, 2022, 2023, 2024 = 104.35, 102.70, 103.18, 104.41, 104.96 Mt; mean 103,920 Gg."
+                }
+            },
+            {
+                "value": 1626,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Watermelon — availability_gg (US): FAOSTAT QCL item 567 'Watermelons', production 2020, 2021, 2022, 2023, 2024 = 1.56, 1.61, 1.62, 1.67, 1.68 Mt; mean 1,626 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "slug": "pineapple",
+        "name": "Pineapple",
+        "type": "plant",
+        "category": "fruits",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "land_types": {
+            "tropical_forest": 0.5,
+            "tropical_savanna": 0.5
+        },
+        "land_types_note": "Grown in the humid tropics: the Philippines, Costa Rica, Indonesia, Brazil, India, Thailand and Nigeria, often on cleared lowland forest.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.5,
+                    "fat": 0.0012,
+                    "sat_fat": 9e-05,
+                    "protein": 0.0054,
+                    "fiber": 0.014,
+                    "sodium": 0.01,
+                    "carbs": 0.1312,
+                    "sugar": 0.0985,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pineapple — FDC 169124 'Pineapple, raw, all varieties' (SR Legacy 09266), per 100 g: 50 kcal, protein 0.54 g, fat 0.12 g, sat fat 0.009 g, carbs 13.12 g, fiber 1.4 g, sugars 9.85 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.51,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Pineapple — yield_fraction: SR28 FOOD_DES NDB 09266 'Pineapple, raw, all varieties': refuse 49% (8% core, 16% crown, 26% parings), so edible fraction = 0.51."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 27600,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pineapple — yield_kg_ha (world): FAOSTAT QCL item 574 'Pineapples', World yield 2020–2024 = 2020: 26,568 (E); 2021: 27,385 (E); 2022: 27,809 (E); 2023: 28,189 (E); 2024: 27,812 (E) kg/ha; mean 27,552 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 255,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pineapple — water_per_kg: 255 L/kg = green 215 + blue 9 + grey 31. Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 574 Pineapples (HS 080430), 1996–2005: green 215 / blue 9 / grey 31 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 215,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pineapple — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 574 Pineapples (HS 080430), 1996–2005: green 215 / blue 9 / grey 31 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 9,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pineapple — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 574 Pineapples (HS 080430), 1996–2005: green 215 / blue 9 / grey 31 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 31,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pineapple — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 574 Pineapples (HS 080430), 1996–2005: green 215 / blue 9 / grey 31 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 7,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — pesticide_kg_ha: no crop-specific data found; reused from this repo's banana entry as a proxy (both are tropical plantation fruits). Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 200,
+                "confidence": 2,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — fertilizer_kg_ha: no crop-specific data found; reused from this repo's banana entry as a proxy (both are tropical plantation fruits). Banana — yield_kg_ha: FAO global average used for yield value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.05,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pineapple — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Fruit' global mean, 1.05 kg CO2e/kg (cradle to retail, incl. land-use change). No pineapple-specific global figure; 'Other Fruit' pools many fruits."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — Chlorpyrifos: proxy from this repo's banana entry (both are tropical plantation fruits). Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 1.5,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — Paraquat: proxy from this repo's banana entry (both are tropical plantation fruits). Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.8,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — Mancozeb: proxy from this repo's banana entry (both are tropical plantation fruits). Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "CORRECTION 2026-10-01: was empty, which the scorer treated as zero pesticide use (no insect/bee/worm deaths), making this crop look far better than any sprayed crop. Pineapple — Imidacloprid: proxy from this repo's banana entry (both are tropical plantation fruits). Banana — chlorpyrifos: 0.5 kg/ha; paraquat: 1.5 kg/ha; mancozeb: 1.8 kg/ha; imidacloprid: 0.15 kg/ha."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 29073,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pineapple — availability_gg (world): FAOSTAT QCL item 574 'Pineapples', production 2020, 2021, 2022, 2023, 2024 = 27.61, 28.93, 29.66, 29.79, 29.37 Mt; mean 29,073 Gg."
+                }
+            }
+        ]
     }
 ]

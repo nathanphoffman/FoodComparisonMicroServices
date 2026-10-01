@@ -1499,5 +1499,448 @@
                 }
             }
         ]
+    },
+    {
+        "id": 118,
+        "slug": "goat",
+        "name": "Goat",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "common"
+        ],
+        "land_types": {
+            "dry": 0.4,
+            "tropical_savanna": 0.3,
+            "temperate_grassland": 0.2,
+            "temperate_forest": 0.1
+        },
+        "land_types_note": "Mostly grazed rangeland and crop stubble: northern China and Mongolia grassland, semi-arid India and Pakistan, and the Sahel.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.43,
+                    "fat": 0.0303,
+                    "sat_fat": 0.0093,
+                    "protein": 0.271,
+                    "fiber": 0.0,
+                    "sodium": 0.86,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.75,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Goat — FDC 175304 'Game meat, goat, cooked, roasted' (SR Legacy 17169), per 100 g: 143 kcal, protein 27.1 g, fat 3.03 g, sat fat 0.93 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 86 mg, cholesterol 75 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3060000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "Goat — neuron_count (ESTIMATE, no goat count exists): springbok (Antidorcas marsupialis, 25 kg, 102 g brain), the closest measured bovid in body size, has 3.06 bn whole-brain neurons by isotropic fractionator (Kazu et al. 2014, Table 1). Slaughter goats are ~29 kg. Note: this repo's lamb uses 1.2 bn, which looks low next to these bovid counts."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 29,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat — weight_kg: FAOSTAT world goat carcass weight 2020–2024 = 13, 13, 13, 14, 14 kg (mean 13.4) ÷ GLEAM dressing 0.46 = 29 kg live weight at slaughter."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.46,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat — yield_fraction: GLEAM Table B21 goat dressing percentages (E & SE Asia 48, South Asia 43, SSA 48, NENA 44, LAC 44), weighted by FAOSTAT goat meat output by region = 0.46. Output is carcass weight, matching availability_gg and the GLEAM emission basis."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.0059,
+                "confidence": 2,
+                "source": {
+                    "id": 440,
+                    "url": "https://doi.org/10.1016/j.gfs.2017.01.001",
+                    "title": "Mottet et al. (2017) — Livestock: On our plates or eating at our table? A new analysis of the feed/food debate (Global Food Security)",
+                    "note": "Goat — pasture_ha_per_kg_output: grazed fresh grass 28.8% × 28.3 kg DM = 8.15 kg grazed DM per kg carcass ÷ ~1,380 kg grazed DM per ha per year (Mottet 2017: 2.76 bn t grass and leaves from ~2 bn ha grassland) = 0.0059 ha/kg. GLEAM Table B12 small-ruminant meat ration, weighted by FAOSTAT 2020–2024 goat meat output by region (E & SE Asia 42%, South Asia 36%, SSA 14%, NENA 7%, LAC 1%): fresh grass 28.8%, hay 19.1%, crop residues 43.2%, bran 2.5%, oilseed meals 2.5%, rest sugarcane tops/leaves. Total intake 28.3 kg DM per kg carcass, back-calculated from GLEAM goat-meat enteric CH4 (54.9% × 23.5 / 25 = 0.516 kg CH4/kg CW) with IPCC 2019 Ym 5.5% for goats and 18.45 MJ GE per kg DM: 0.516 × 55.65 / 0.055 / 18.45. Goats graze poorer land than average, so this is likely an underestimate."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Goat — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            },
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Goat — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.85,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Goat — native_fraction: reused from this repo's lamb entry; goats mostly graze native rangeland and browse. "
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.535,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat — ch4_kg_per_kg_output: (enteric 54.9% + manure 2.0%) × 23.5 / 25 = 0.535 kg CH4 per kg carcass. FAO (2013) GLEAM ruminant LCA: goat meat 23.5 kg CO2e per kg carcass weight (Table 6; GWP CH4 25, N2O 298). Small-ruminant meat breakdown (Fig. 17): enteric CH4 54.9%, manure-management CH4 2.0%, applied & deposited manure N2O 17.6%, manure-management N2O 2.0%, fertilizer & crop-residue N2O 8.8%, feed CO2 11.1%, energy CO2 ~1.7%, post-farm CO2 ~1.8%."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0155,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat — n2o_kg_per_kg_output: (applied & deposited manure 17.6% + manure management 2.0%) × 23.5 / 298 = 0.0155 kg N2O per kg carcass. Fertilizer & crop-residue N2O (8.8%) is left to the feed rows. FAO (2013) GLEAM ruminant LCA: goat meat 23.5 kg CO2e per kg carcass weight (Table 6; GWP CH4 25, N2O 298). Small-ruminant meat breakdown (Fig. 17): enteric CH4 54.9%, manure-management CH4 2.0%, applied & deposited manure N2O 17.6%, manure-management N2O 2.0%, fertilizer & crop-residue N2O 8.8%, feed CO2 11.1%, energy CO2 ~1.7%, post-farm CO2 ~1.8%."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 9.17,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Goat — co2_kg_per_kg_output: GLEAM on-farm energy 1.7% × 23.5 = 0.40, plus Poore & Nemecek post-farm stages for 'Lamb & Mutton' (OWID: processing 1.54 + transport 0.68 + retail 0.30 + packaging 0.35 + losses 5.90 = 8.77), same method as this repo's chicken/milk. Total 9.17 kg CO2 per kg. Feed CO2 (11.1%) is left to the feed rows."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 5.41,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat — grass-hay: hay 19.1% × 28.3 kg DM = 5.41 kg DM per kg carcass. GLEAM Table B12 small-ruminant meat ration, weighted by FAOSTAT 2020–2024 goat meat output by region (E & SE Asia 42%, South Asia 36%, SSA 14%, NENA 7%, LAC 1%): fresh grass 28.8%, hay 19.1%, crop residues 43.2%, bran 2.5%, oilseed meals 2.5%, rest sugarcane tops/leaves. Total intake 28.3 kg DM per kg carcass, back-calculated from GLEAM goat-meat enteric CH4 (54.9% × 23.5 / 25 = 0.516 kg CH4/kg CW) with IPCC 2019 Ym 5.5% for goats and 18.45 MJ GE per kg DM: 0.516 × 55.65 / 0.055 / 18.45. Crop residues (43%) carry no crop footprint; bran (2.5%) is a milling by-product and is left out."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.71,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Goat — soy: oilseed meals 2.5% × 28.3 kg DM = 0.71 kg per kg carcass, counted as soy. GLEAM Table B12 small-ruminant meat ration, weighted by FAOSTAT 2020–2024 goat meat output by region (E & SE Asia 42%, South Asia 36%, SSA 14%, NENA 7%, LAC 1%): fresh grass 28.8%, hay 19.1%, crop residues 43.2%, bran 2.5%, oilseed meals 2.5%, rest sugarcane tops/leaves."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 7325,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat — availability_gg (world): FAOSTAT QCL item 1017 'Meat of goat, fresh or chilled', production 2020, 2021, 2022, 2023, 2024 = 6.86, 7.03, 7.34, 7.65, 7.74 Mt; mean 7,325 Gg. Carcass weight."
+                }
+            },
+            {
+                "value": 9,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Goat — availability_gg (US): FAOSTAT QCL item 1017 'Meat of goat, fresh or chilled', production 2020, 2021, 2022, 2023, 2024 = 0.01, 0.01, 0.01, 0.01, 0.01 Mt; mean 9 Gg. Carcass weight."
+                }
+            }
+        ]
+    },
+    {
+        "id": 119,
+        "slug": "duck",
+        "name": "Duck",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "common"
+        ],
+        "land_types": {
+            "temperate_forest": 0.6,
+            "temperate_grassland": 0.2,
+            "tropical_savanna": 0.1,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "China produces about 80% of the world's duck meat; the land is its corn/soy feed: northeast China cropland plus imported Brazilian and US soy.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.01,
+                    "fat": 0.112,
+                    "sat_fat": 0.03951,
+                    "protein": 0.2348,
+                    "fiber": 0.0,
+                    "sodium": 0.65,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.89,
+                    "trans_fat": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Duck — FDC 172411 'Duck, domesticated, meat only, cooked, roasted' (SR Legacy 05142), per 100 g: 201 kcal, protein 23.48 g, fat 11.2 g, sat fat 3.951 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 65 mg, cholesterol 89 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 367000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Duck — neuron_count: mallard (Anas platyrhynchos, the wild ancestor of domestic ducks) whole brain 367 million neurons by isotropic fractionator, Kverková et al. 2022 (PNAS 119:e2121624119) as listed on this Wikipedia page. Domestic Pekin ducks are heavier, so this may be slightly low."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 2.4,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Duck — weight_kg: FAOSTAT world duck carcass weight 2020–2024 = 1.71, 1.64, 1.62, 1.69, 1.74 kg (mean 1.68) ÷ slaughter yield 0.70 (Wild et al. 2019) = 2.4 kg live weight. Commercial European Pekins reach ~3.0–3.6 kg."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.7,
+                "confidence": 4,
+                "source": {
+                    "id": 441,
+                    "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+                    "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+                    "note": "Duck — yield_fraction: Wild et al. 2019 Pekin slaughter yield 68.6% / 69.9% / 70.6% at 36 / 40 / 42 days; 0.70 used."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.04,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Duck — ch4_kg_per_kg_output: chicken value reused as a poultry proxy (no global duck GHG breakdown found). Chicken — ch4_kg_per_kg_output: On-farm CH4 only (manure management; broiler chickens produce negligible enteric CH4 as monogastrics). System boundary is on-farm only; feed production and land use change are excluded. 0.04 kg CH4/kg × GWP100=28 = 1.12 kg CO2e/kg. P&N 2018 global median for poultry meat; consistent with GLEAM v3 broiler estimate."
+                }
+            },
+            {
+                "value": 0.035,
+                "confidence": 2,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Duck — ch4_kg_per_kg_output: chicken value reused as a poultry proxy (no global duck GHG breakdown found). Chicken — ch4_kg_per_kg_output: GLEAM v3 on-farm CH4 for broiler chickens (manure management only; no enteric CH4 for poultry). System boundary is on-farm only; feed production and land use change are excluded. 0.035 kg CH4/kg × GWP100=28 = 0.98 kg CO2e/kg. Global production-weighted average across confined broiler systems."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 6.8e-05,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Duck — n2o_kg_per_kg_output: chicken value reused as a poultry proxy. Chicken — n2o_kg_per_kg_output: On-farm N2O only (manure management in confined broiler houses). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000068 × 265 = 0.018 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.018 was stored in kg CO2e rather than raw kg N2O — same error pattern as eggs.json (corrected 0.012 → 0.00011). Derived as 0.018 CO2e / 265 = 0.000068 kg raw N2O/kg chicken. N2O from feed crop fertilizer is tracked in the feed fields, not here."
+                }
+            },
+            {
+                "value": 6e-05,
+                "confidence": 2,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Duck — n2o_kg_per_kg_output: chicken value reused as a poultry proxy. Chicken — n2o_kg_per_kg_output: GLEAM v3 on-farm N2O for broiler chickens (manure management in confined housing; low-moisture litter produces relatively little N2O). Raw kg N2O per kg chicken output; multiply by GWP100=265 for CO2e (0.000060 × 265 = 0.016 kg CO2e/kg). Unit correction applied 2026-06-04: previous value of 0.016 was stored in kg CO2e rather than raw kg N2O. Derived as 0.016 CO2e / 265 = 0.000060 kg raw N2O/kg chicken. System boundary is on-farm only; feed and land use N2O are excluded. Consistent with P&N 2018 corrected estimate."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.427,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Duck — co2_kg_per_kg_output: chicken value (on-farm + P&N 'Poultry Meat' post-farm stages) reused as a poultry proxy. CORRECTION 2026-09-26: replaced 0.45 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.45 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.45 + 2.977 = 3.427. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: On-farm direct CO2 only (energy use for ventilation, lighting, heating, and cooling in confined broiler houses). System boundary is on-farm only; feed-related CO2 (land use change and feed crop production) is tracked in the feed fields, not here. P&N 2018 global median for poultry meat on-farm energy component. Consistent with GLEAM v3 broiler on-farm CO2 estimate."
+                }
+            },
+            {
+                "value": 3.397,
+                "confidence": 2,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Duck — co2_kg_per_kg_output: chicken value (on-farm + P&N 'Poultry Meat' post-farm stages) reused as a poultry proxy. CORRECTION 2026-09-26: replaced 0.42 — it covered on-farm energy only, so every stage after the farm gate was missing and chicken was not comparable to other foods' cradle-to-retail totals (same fix as milk, 2026-09-24). New value = 0.42 on-farm + Poore & Nemecek post-farm stages for 'Poultry Meat' (OWID supply-chain grapher, source 72): processing 0.607 + transport 0.381 + retail 0.244 + packaging 0.293 + supply-chain losses 1.452 = 2.977 kg CO2e/kg; 0.42 + 2.977 = 3.397. Post-farm stages are stored here as CO2e. Previous note: Chicken — co2_kg_per_kg_output: GLEAM v3 on-farm direct CO2 for broiler chickens (fuel and electricity for housing and manure handling). System boundary is on-farm only; feed production and transport CO2 are excluded. Global production-weighted average for confined broiler systems. Consistent with P&N 2018 on-farm CO2 estimate."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.78,
+                        "confidence": 2,
+                        "source": {
+                            "id": 441,
+                            "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+                            "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+                            "note": "Duck — corn: feed conversion 2.03 kg feed per kg live weight (Wild et al. 2019, 42 days) ÷ slaughter yield 0.706 = 2.88 kg feed per kg carcass; split like this repo's chicken ration (corn + sorghum 62%, soy 27%, wheat 11%): corn 1.78. Research-station birds; Asian systems are likely less efficient."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.78,
+                        "confidence": 2,
+                        "source": {
+                            "id": 441,
+                            "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+                            "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+                            "note": "Duck — soy: 2.88 kg feed per kg carcass × 27% (chicken ration split) = 0.78."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.32,
+                        "confidence": 2,
+                        "source": {
+                            "id": 441,
+                            "url": "https://lohmann-breeders.com/media/2020/08/04_Christian_Wild.pdf",
+                            "title": "Wild et al. (2019) — Performance of current Peking duck breeds (Lohmann Information 53(2))",
+                            "note": "Duck — wheat: 2.88 kg feed per kg carcass × 11% (chicken ration split) = 0.32."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 6684,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Duck — availability_gg (world): FAOSTAT QCL item 1069 'Meat of ducks, fresh or chilled', production 2020, 2021, 2022, 2023, 2024 = 6.15, 6.22, 6.67, 7.04, 7.33 Mt; mean 6,684 Gg. Carcass weight."
+                }
+            },
+            {
+                "value": 58,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Duck — availability_gg (US): FAOSTAT QCL item 1069 'Meat of ducks, fresh or chilled', production 2020, 2021, 2022, 2023, 2024 = 0.05, 0.06, 0.06, 0.07, 0.06 Mt; mean 58 Gg. Carcass weight."
+                }
+            }
+        ]
     }
 ]

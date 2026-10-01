@@ -6,6 +6,77 @@ still open. Per-value details live in the `note` of each SourcedValue (search fo
 
 ---
 
+## 2026-10-01 — Maple syrup: no land use (tapped native forest)
+
+### What was wrong
+
+Maple syrup had yield_kg_ha 425 (Quebec 1.71 kg syrup/tap × 250 taps/ha). The app turns any
+yield into land use (~24 m²/kg, ~19× cane sugar) and into wildlife deaths from clearing that land,
+but sugarbushes are not cleared or planted: FAO describes them as "maple stands of natural origin"
+(second/third-growth forest, or maple that seeded itself on abandoned farmland). Planted maple
+orchards exist only as an experimental method (University of Vermont, 2014).
+
+### What changed
+
+`yield_kg_ha` → `[]` and `land_types` removed (sweeteners.json; sources 446–447 added), the
+same wild-harvest convention as Brazil nuts. Land use and clearing deaths are now zero.
+Also tagged `wild`, so the Over-Gathering penalty applies (as for Brazil nuts).
+
+### Still open
+
+- Sugarbush management (thinning other species to favour maple, tubing, roads) is not counted.
+- The app treats zero land use as "perfect", so maple syrup gets the zero-land bonus, as Brazil nuts do.
+- Old yield basis kept here for reference: 1.71 kg/tap × 250 taps/ha = 425 kg/ha (sources 378–379).
+
+---
+
+## 2026-10-01 — Beet sugar land switched to the main-product rule
+
+Beet sugar yield was beet yield × 132/865 (a value split from Mekonnen & Hoekstra), unlike cane
+sugar and the oils, which charge the whole field to the main product. Now beet yield × FAO
+extraction rate: world 13% (median of 38 countries) → 7,900 kg/ha (was 9,300); US 14% → 9,700
+(was 10,600). Availability 41,391 → 35,261 Gg. Score 5.86 → 4.87 (default sliders). Water and
+emissions unchanged (same basis as cane sugar). By-products (molasses, corn oil, rice protein,
+pea protein) keep their value split.
+
+---
+
+## 2026-10-01 — Seven new crops had no pesticide data, scored as zero pesticide deaths
+
+### What was wrong
+
+Beet sugar, cassava, eggplant, fava beans, millet, pineapple and rye were added with empty
+`pesticides` / `pesticide_kg_ha`. The scorer treats missing pesticide fractions as 0, so these
+crops got no insect, bee or worm deaths, only habitat loss: their Sentient Harm was ~2,000×
+lower than corn's. With six equally weighted measures that one huge "win" pushed beet sugar
+(24.5) and cassava (16.1) above corn (11.4) even though corn beats them on most other measures.
+
+### What changed (notes start `CORRECTION 2026-10-01`)
+
+| Food | Pesticide data now from |
+|---|---|
+| beet-sugar | NASS 2000 sugarbeet survey (latest): 10.1 kg/ha, 4 compounds; fertilizer 234 kg/ha |
+| eggplant | NASS 2010 eggplant survey (latest): 5.2 kg/ha, 2 compounds; fertilizer 354 kg/ha |
+| cassava / rye / millet / fava-beans / pineapple | proxies, confidence 2: sweet-potato / wheat / sorghum / peas / banana |
+
+New build warning `check_plant_pesticides.py`: any plant with cropland but no pesticide data (and
+not explicitly `pesticide_kg_ha` = 0) is flagged.
+
+### Result (default sliders, avg region, reference chicken)
+
+| | Before | After |
+|---|---|---|
+| corn | 11.37 (#4) | 11.37 (#1) |
+| beet-sugar | 24.47 (#1) | 5.86 |
+| cassava | 16.14 (#2) | 4.40 |
+
+### Still open
+
+- Cassava, rye, millet, fava and pineapple use another crop's pesticide profile.
+- Beet sugar and eggplant data are old, US-only surveys.
+
+---
+
 ## 2026-09-24 — Grains: cooked nutrition compared with dry / paddy / wrong-product environment data
 
 ### What was wrong

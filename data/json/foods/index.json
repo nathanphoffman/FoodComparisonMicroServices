@@ -20,7 +20,9 @@
         "turkey",
         "lamb",
         "venison",
-        "wild-squirrel"
+        "wild-squirrel",
+        "goat",
+        "duck"
     ],
     "grains": [
         "wheat",
@@ -32,7 +34,9 @@
         "barley",
         "oat-milk",
         "rice-starch",
-        "rice-protein"
+        "rice-protein",
+        "rye",
+        "millet"
     ],
     "legumes": [
         "soy",
@@ -42,7 +46,9 @@
         "tofu",
         "impossible-meat",
         "peas",
-        "pea-protein"
+        "pea-protein",
+        "kidney-beans",
+        "fava-beans"
     ],
     "feeds": [
         "alfalfa",
@@ -56,12 +62,18 @@
         "sweet-potato",
         "garlic",
         "bell-pepper",
-        "potato-starch"
+        "potato-starch",
+        "onion",
+        "carrot",
+        "cassava",
+        "pumpkin",
+        "eggplant"
     ],
     "leafy": [
         "lettuce",
         "spinach",
-        "kale"
+        "kale",
+        "cabbage"
     ],
     "seafood": [
         "salmon",
@@ -73,7 +85,8 @@
         "pollock",
         "cod",
         "carp-farmed",
-        "catfish-farmed"
+        "catfish-farmed",
+        "octopus"
     ],
     "eggs": [
         "egg"
@@ -86,7 +99,10 @@
         "mango",
         "orange",
         "strawberries",
-        "blueberries"
+        "blueberries",
+        "grapes",
+        "watermelon",
+        "pineapple"
     ],
     "dairy": [
         "milk",
@@ -95,7 +111,8 @@
         "whey-protein",
         "cheddar",
         "mozzarella",
-        "parmesan"
+        "parmesan",
+        "goat-milk"
     ],
     "oils": [
         "olive-oil",
@@ -104,7 +121,8 @@
         "palm-oil",
         "sunflower-oil",
         "coconut-oil",
-        "peanut-oil"
+        "peanut-oil",
+        "corn-oil"
     ],
     "seeds": [
         "flaxseed"
@@ -112,13 +130,16 @@
     "sweeteners": [
         "maple-syrup",
         "cane-sugar",
-        "honey"
+        "honey",
+        "beet-sugar",
+        "molasses"
     ],
     "composites": [
         "impossible-burger",
         "beyond-burger",
         "violife-parmesan",
-        "follow-your-heart-parmesan"
+        "follow-your-heart-parmesan",
+        "coca-cola"
     ],
     "beverages": [
         "coffee",

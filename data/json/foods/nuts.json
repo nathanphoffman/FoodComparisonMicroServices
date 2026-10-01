@@ -2752,7 +2752,8 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [
-            "milk"
+            "milk",
+            "beverage"
         ],
         "land_types": {
             "dry": 1.0

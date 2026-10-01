@@ -20,3 +20,5 @@
 2026-09-24 13:15:28 | lettuce blue_water_per_kg: added US entry 42 L/kg (Report 47 Vol 2 US), source 121, confidence 3
 2026-09-24 13:15:28 | lettuce grey_water_per_kg: added US entry 41 L/kg (Report 47 Vol 2 US), source 121, confidence 3
 2026-09-24 13:15:28 | ERROR: lettuce world water entries are internally inconsistent (130 total vs 118+7+37=162; Report 47 global is 133/28/77=237). Not changed; flagged for cleanup-food-auditor
+2026-10-01 09:11:33 | Added Cabbage (id 106) to leafy.json: FDC 169975 nutrition, refuse 20%, FAOSTAT yield world 30,600 / US 45,100, water 280 L/kg, emissions 0.51 (P&N Brassicas), NASS pesticide 5.6 and fertilizer 141 kg/ha (US)
+2026-10-01 09:11:33 | ERROR: soil_erosion, tillage_events_per_year, co2_capture_kg_ha_yr left [] for cabbage (no source); no US water values

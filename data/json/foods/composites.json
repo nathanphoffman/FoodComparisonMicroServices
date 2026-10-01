@@ -675,5 +675,114 @@
                 }
             }
         ]
+    },
+    {
+        "id": 122,
+        "slug": "coca-cola",
+        "name": "Coca-Cola (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "soda"
+        ],
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.3792,
+                    "fat": 0,
+                    "sat_fat": 0,
+                    "protein": 0,
+                    "fiber": 0,
+                    "sodium": 0.1219,
+                    "carbs": 0.1056,
+                    "sugar": 0.1056,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 448,
+                    "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                    "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                    "note": "Coca-Cola — nutrition per gram: 140 kcal, 39 g sugar (= carbs), 45 mg sodium, 0 fat/protein per can ÷ 369 g. Label per 355 mL can × ~1.04 g/mL (a ~10.5% sugar solution) = 369 g per can. USDA generic regular cola (SR 14148, FDC 174852) is similar: 42 kcal, 9.94 g sugar, 3 mg sodium per 100 g."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.0898,
+                        "confidence": 3,
+                        "source": {
+                            "id": 448,
+                            "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                            "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                            "note": "Coca-Cola — cane sugar share: total sugar 39 g / 369 g = 0.1056 kg/kg, split by world sugar supply 85% cane / 15% beet (Wilmar 2024, ~152 of ~180 Mt). The US version uses high fructose corn syrup, which is not modelled."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "beet-sugar",
+                "fraction": [
+                    {
+                        "value": 0.0158,
+                        "confidence": 3,
+                        "source": {
+                            "id": 448,
+                            "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                            "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                            "note": "Coca-Cola — beet sugar share: 15% of the 0.1056 kg sugar per kg (world supply split). British Coca-Cola is largely beet-sweetened."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "carbonated water, caramel color, phosphoric acid, natural flavors, caffeine",
+                "fraction": [
+                    {
+                        "value": 0.8944,
+                        "confidence": 3,
+                        "source": {
+                            "id": 448,
+                            "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                            "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                            "note": "Coca-Cola — everything except sugar: carbonated water plus caramel color, phosphoric acid, flavors and caffeine (~34 mg per can). No crop footprint modelled; their emissions are inside processing_emissions_per_kg."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.44,
+                "confidence": 3,
+                "source": {
+                    "id": 449,
+                    "url": "https://www.talkingretail.com/products-news/coca-cola-announces-the-carbon-footprint-of-some-of-its-top-sellers-10-03-2009/",
+                    "title": "Talking Retail (2009) — Coca-Cola announces the carbon footprint of some of its top-sellers (Carbon Trust certified, Great Britain)",
+                    "note": "Coca-Cola — processing emissions: Diet Coke 330 mL can = 150 g CO2e full life cycle (Carbon Trust certified, GB 2009). Diet Coke is the same drink without sugar, so 150 g covers water, flavors, can, manufacture, distribution, retail, chilling and disposal but not the sugar crop. ÷ (330 mL × 1.04 g/mL = 343 g) = 0.44 kg CO2e/kg. Cross-check: regular Coca-Cola can 170 g, the 20 g difference ≈ 35 g sugar × ~0.6 kg CO2e/kg beet sugar. Cans; a glass bottle was 360 g (more than double)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 1.71,
+                "confidence": 3,
+                "source": {
+                    "id": 450,
+                    "url": "https://www.coca-colacompany.com/content/dam/corporate/us/en/reports/2024-environmental-update/2024-environmental-update.pdf",
+                    "title": "The Coca-Cola Company (2025) — 2024 Environmental Update",
+                    "note": "Coca-Cola — processing water: Coca-Cola system water use ratio 1.78 L water per L of product (2023 and 2024) ÷ 1.04 kg/L = 1.71 L/kg. Includes the water that ends up in the drink. Added as blue water on top of the sugar crops' water."
+                }
+            }
+        ]
     }
 ]
