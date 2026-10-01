@@ -2,20 +2,16 @@
 
 import { WeightSliders }                    from "./Sliders/WeightSliders";
 import { ScorePrioritySliders }             from "./Sliders/ScorePrioritySliders";
-import { GreenWaterSlider }                 from "./Sliders/GreenWaterSlider";
-import { GreyWaterSlider }                  from "./Sliders/GreyWaterSlider";
-import { PhilosophicalKillSlider }          from "./Sliders/PhilosophicalKillSlider";
-import { CaptivitySlider }                  from "./Sliders/CaptivitySlider";
-import { NeuronExponentSlider }             from "./Sliders/NeuronExponentSlider";
-import { WeightExponentSlider }             from "./Sliders/WeightExponentSlider";
-import { FinalIntelligenceExponentSlider }  from "./Sliders/FinalIntelligenceExponentSlider";
-import { ZeroBetterMultiplierSlider }       from "./Sliders/ZeroBetterMultiplierSlider";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
-import { WinDampeningSlider }               from "./Sliders/WinDampeningSlider";
-import { OverHuntingSlider }                from "./Sliders/OverHuntingSlider";
-import { OverGatheringSlider }              from "./Sliders/OverGatheringSlider";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
+import { ValueSlider }                      from "./Sliders/ValueSlider";
+import * as SLIDERS                         from "./Sliders/ValueSliderSettings";
+import {
+    DEFAULT_GREEN_WATER, DEFAULT_GREY_WATER, DEFAULT_NEURON_EXPONENT, DEFAULT_WEIGHT_EXPONENT,
+    DEFAULT_FINAL_INTELLIGENCE_EXPONENT, DEFAULT_ZERO_BETTER_MULTIPLIER, DEFAULT_WIN_DAMPENING,
+    DEFAULT_OVER_GATHERING,
+} from "./FoodTableDefaults";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
 import type { LandTypes } from "./FoodTableTypes";
 
@@ -86,27 +82,27 @@ export function FoodTableSliders({
                         finalIntelligenceExponent={finalIntelligenceExponent}
                     />
                     <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-                        <NeuronExponentSlider key={`NeuronExponentSlider-${resetKey}`} onChange={onNeuronExponentChange} />
-                        <WeightExponentSlider key={`WeightExponentSlider-${resetKey}`} onChange={onWeightExponentChange} />
-                        <FinalIntelligenceExponentSlider key={`FinalIntelligenceExponentSlider-${resetKey}`} onChange={onFinalIntelligenceExponentChange} />
-                        <PhilosophicalKillSlider key={`PhilosophicalKillSlider-${resetKey}`} onChange={onPhilosophicalKillChange} initialValue={killMultiplier} />
-                        <CaptivitySlider key={`CaptivitySlider-${resetKey}`} onChange={onCaptivityChange} initialValue={captivityMultiplier} />
-                        <ZeroBetterMultiplierSlider key={`ZeroBetterMultiplierSlider-${resetKey}`} onChange={onZeroBetterMultiplierChange} />
+                        <ValueSlider key={`NEURON_EXPONENT-${resetKey}`} {...SLIDERS.NEURON_EXPONENT} initialValue={DEFAULT_NEURON_EXPONENT} onChange={onNeuronExponentChange} />
+                        <ValueSlider key={`WEIGHT_EXPONENT-${resetKey}`} {...SLIDERS.WEIGHT_EXPONENT} initialValue={DEFAULT_WEIGHT_EXPONENT} onChange={onWeightExponentChange} />
+                        <ValueSlider key={`FINAL_INTELLIGENCE_EXPONENT-${resetKey}`} {...SLIDERS.FINAL_INTELLIGENCE_EXPONENT} initialValue={DEFAULT_FINAL_INTELLIGENCE_EXPONENT} onChange={onFinalIntelligenceExponentChange} />
+                        <ValueSlider key={`PHILOSOPHICAL_KILL-${resetKey}`} {...SLIDERS.PHILOSOPHICAL_KILL} initialValue={killMultiplier} onChange={onPhilosophicalKillChange} />
+                        <ValueSlider key={`CAPTIVITY-${resetKey}`} {...SLIDERS.CAPTIVITY} initialValue={captivityMultiplier} onChange={onCaptivityChange} />
+                        <ValueSlider key={`ZERO_BETTER_MULTIPLIER-${resetKey}`} {...SLIDERS.ZERO_BETTER_MULTIPLIER} initialValue={DEFAULT_ZERO_BETTER_MULTIPLIER} onChange={onZeroBetterMultiplierChange} />
                     </div>
                 </div>
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Water">
-                <GreyWaterSlider key={`GreyWaterSlider-${resetKey}`} onChange={onGreyWaterChange} />
-                <GreenWaterSlider key={`GreenWaterSlider-${resetKey}`} onChange={onGreenWaterChange} />
+                <ValueSlider key={`GREY_WATER-${resetKey}`} {...SLIDERS.GREY_WATER} initialValue={DEFAULT_GREY_WATER} onChange={onGreyWaterChange} />
+                <ValueSlider key={`GREEN_WATER-${resetKey}`} {...SLIDERS.GREEN_WATER} initialValue={DEFAULT_GREEN_WATER} onChange={onGreenWaterChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Land Use">
                 <LandTypeSliders key={`LandTypeSliders-${resetKey}`} onChange={onLandTypeWeightsChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Opinionated">
                 <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
-                    <WinDampeningSlider key={`WinDampeningSlider-${resetKey}`} onChange={onWinDampeningChange} />
-                    <OverHuntingSlider key={`OverHuntingSlider-${resetKey}`} onChange={onOverHuntingChange} initialValue={overHuntingFactor} />
-                    <OverGatheringSlider key={`OverGatheringSlider-${resetKey}`} onChange={onOverGatheringChange} />
+                    <ValueSlider key={`WIN_DAMPENING-${resetKey}`} {...SLIDERS.WIN_DAMPENING} initialValue={DEFAULT_WIN_DAMPENING} onChange={onWinDampeningChange} />
+                    <ValueSlider key={`OVER_HUNTING-${resetKey}`} {...SLIDERS.OVER_HUNTING} initialValue={overHuntingFactor} onChange={onOverHuntingChange} />
+                    <ValueSlider key={`OVER_GATHERING-${resetKey}`} {...SLIDERS.OVER_GATHERING} initialValue={DEFAULT_OVER_GATHERING} onChange={onOverGatheringChange} />
                 </div>
             </ExpandableSliderGroup>
         </div>
