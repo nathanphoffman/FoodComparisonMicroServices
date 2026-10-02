@@ -22,7 +22,8 @@
             "Nuts and seeds — vitamins, minerals and omega-3 (raw or dried): almonds FDC 170567, English walnuts 170187, cashews raw 170162, pistachios raw 170184, pecans 170182, hazelnuts 170581, macadamia raw 170178, Brazil nuts dried 170569, peanuts all types raw 172430, pine nuts dried 170591, sunflower seed kernels dried 170562.",
             "Fruits — vitamins, minerals and omega-3 (raw): apple with skin FDC 171688, banana 173944, avocado all varieties 171705, coconut meat 170169, mango 169910, orange all varieties 169097, strawberries 167762, blueberries 171711, grapes 174683, watermelon 167765, pineapple 169124.",
             "Dairy — vitamins, minerals and omega-3: whole milk with added vitamin D FDC 171265, plain whole-milk yogurt 171284, salted butter 173410, cheddar 173414, part-skim mozzarella 171244, hard parmesan 170848, goat milk 171278, soft goat cheese 173435.",
-            "Meats — vitamins, minerals and omega-3: beef ground 80/20 raw FDC 174036, chicken breast roasted 171477, pork ground raw 167902, turkey whole meat and skin roasted 171479, lamb composite cuts cooked 172480, deer roasted 175085, squirrel raw 172523, goat roasted 175304, duck meat only roasted 172411. Beef, pork and turkey records were picked as the closest USDA match to the existing calories, protein and fat."
+            "Meats — vitamins, minerals and omega-3: beef ground 80/20 raw FDC 174036, chicken breast roasted 171477, pork ground raw 167902, turkey whole meat and skin roasted 171479, lamb composite cuts cooked 172480, deer roasted 175085, squirrel raw 172523, goat roasted 175304, duck meat only roasted 172411. Beef, pork and turkey records were picked as the closest USDA match to the existing calories, protein and fat.",
+            "Beverages, eggs, leafy greens, sweeteners and flaxseed — vitamins, minerals and omega-3: brewed coffee FDC 171890, brewed black tea 173227, brewed green tea 171917 (also used for white tea), whole raw egg 171287, romaine lettuce 169247, kale raw 168421, cabbage raw 169975, maple syrup 169661, granulated sugar 169655 (cane and beet), honey 169640, molasses 168820, flaxseed 169414."
         ]
     },
     {
@@ -2155,7 +2156,8 @@
         "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
         "notes": [
             "Impossible Meat — nutrition per 100 g raw from the branded label record (113 g serving).",
-            "Impossible Burger (composite) — ingredient weight fractions estimated from the label's protein, fat and saturated fat and the ingredient order."
+            "Impossible Burger (composite) — ingredient weight fractions estimated from the label's protein, fat and saturated fat and the ingredient order.",
+            "Impossible Burger (Composite) — Vitamins and minerals from the Impossible Foods label (FDC 2664240; folate as printed on the label, which US labels give in µg DFE; B12, zinc and iron are added) per 100 g: vitamin d 0 µg, folate 71 µg DFE, vitamin b6 0.354 mg, vitamin b12 6.9 µg, calcium 159 mg, iron 3.72 mg, potassium 619 mg, zinc 6.64 mg, phosphorus 133 mg; others not on the label, so left out; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2211,7 +2213,8 @@
         "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
         "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
         "notes": [
-            "Beyond Burger (composite) — nutrition and ingredient-share estimates from the label."
+            "Beyond Burger (composite) — nutrition and ingredient-share estimates from the label.",
+            "Beyond Burger (Composite) — Vitamins and minerals from the Beyond Meat label (FDC 2367272; B12 and zinc are added) per 100 g: vitamin d 0 µg, vitamin b6 0.265 mg, vitamin b12 2.12 µg, calcium 88 mg, iron 3.54 mg, potassium 292 mg, zinc 4.07 mg; others not on the label, so left out; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2309,7 +2312,8 @@
         "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
         "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
         "notes": [
-            "Violife Parmesan (composite) — nutrition and ingredient list (US label)."
+            "Violife Parmesan (composite) — nutrition and ingredient list (US label).",
+            "Violife Just Like Parmesan (Composite) — Vitamins and minerals from the Violife label via Open Food Facts (B12 is added; Open Food Facts lists no other vitamins or minerals for this product) per 100 g: vitamin b12 2.5 µg; others not on the label, so left out; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2501,7 +2505,8 @@
         "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
         "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
         "notes": [
-            "Follow Your Heart Parmesan (composite) — nutrition and ingredient list used for the recipe estimate."
+            "Follow Your Heart Parmesan (composite) — nutrition and ingredient list used for the recipe estimate.",
+            "Follow Your Heart Parmesan Grated (Composite) — Vitamins and minerals from the Follow Your Heart label, given per 5 g serving as % Daily Value (vitamin D 0%, calcium 4% of 1,300 mg = 52 mg, iron 0%, potassium 0%) and scaled up; 4% is rounded so calcium could be ~45–58 mg per serving per 100 g: vitamin d 0 µg, calcium 1040 mg, iron 0 mg, potassium 0 mg; others not on the label, so left out; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2729,6 +2734,63 @@
         "title": "USDA FoodData Central — SR Legacy 173180: Beverages, Protein powder whey based",
         "notes": [
             "Whey Protein — stand-in vitamins and minerals: the branded whey labels list only a few minerals, so they come from USDA's generic whey-based protein powder record. Vitamins and minerals from USDA FDC 173180 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 33 µg DFE, vitamin b12 2.45 µg, vitamin b6 0.607 mg, calcium 469 mg, iron 1.13 mg, magnesium 195 mg, potassium 500 mg, zinc 6.18 mg, phosphorus 1321 mg, selenium 26.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 173180 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 467,
+        "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
+        "notes": [
+            "Fish Oil — stand-in vitamins and omega-3: the FAO feed source has no vitamins, so they come from USDA's sardine oil, a pelagic fish oil like the anchovy/sardine/herring blends used in feed. Vitamins and minerals from USDA FDC 173578 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 8.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 173578 per 100 g: ALA 1.327 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20793 mg (EPA 10.137 + DHA 10.656); divided by 100 for per-gram values. Only fills values missing from the main entry.",
+            "Fishmeal — GUESS for omega-3. Neither USDA nor the feed table gives fishmeal's fatty acids, so they are estimated as this entry's fat (10%) times the omega-3 share of USDA sardine oil (FDC 173578, a pelagic fish oil like anchoveta), assuming the fat left in fishmeal is like the oil pressed out of it. Sardine oil per 100 g: EPA + DHA 20.79 g, ALA 1.33 g. Fishmeal per gram: EPA + DHA 20.8 mg, ALA 0.0013 g. Fat in fishmeal oxidises during drying and storage, so the real figure may be lower."
+        ]
+    },
+    {
+        "id": 468,
+        "url": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 174852: Beverages, carbonated, cola, regular",
+        "notes": [
+            "Coca-Cola — stand-in vitamins and minerals: the Coca-Cola label lists none, so they come from USDA's generic regular cola. Vitamins and minerals from USDA FDC 174852 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, potassium 5 mg, zinc 0.09 mg, phosphorus 9 mg, selenium 0.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 174852 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entry."
+        ]
+    },
+    {
+        "id": 469,
+        "url": "https://www.feedipedia.org/node/11743",
+        "title": "Feedipedia — Alfalfa hay (INRAE, CIRAD, AFZ and FAO feed tables)",
+        "notes": [
+            "Alfalfa — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for alfalfa hay (searched the full downloads), because USDA only covers foods people eat. Only alfalfa sprouts are listed. So minerals come from Feedipedia's alfalfa hay feed table (averages of many lab samples), converted from per-kg dry matter to as-fed using its average dry matter of 89.4%. Per kg dry matter: calcium 16.8 g, phosphorus 2.6 g, potassium 24.6 g, magnesium 2.3 g, zinc 27 mg, iron 587 mg (iron is a single sample and hay iron often includes soil, so it is especially rough). As-fed per gram: calcium 15.02 mg, phosphorus 2.32 mg, potassium 21.99 mg, magnesium 2.06 mg, zinc 0.024 mg, iron 0.52 mg. Vitamins and selenium are left out: Feedipedia gives no vitamin values, vitamin levels in hay drop a lot during drying and storage (vitamin C is mostly destroyed), and selenium depends on the soil, so any number would be a guess. Mineral content also varies with cutting stage and soil."
+        ]
+    },
+    {
+        "id": 470,
+        "url": "https://fdc.nal.usda.gov/food-details/553707/nutrients",
+        "title": "Plain brown rice protein labels — USDA Branded (NutriBiotic, Growing Naturals, First International Health, Nubeleaf) and Open Food Facts (Naked Rice, Jarrow)",
+        "notes": [
+            "Rice Protein — ESTIMATE from plain rice protein labels. USDA FoodData Central has no measured (SR Legacy or Foundation) record for rice protein, only brand labels, and the three labels this food's macros come from (Bulk, Body & Fit, Superfruit) list no vitamins or minerals. So values are averaged over other plain brown rice protein labels that do list them: USDA Branded records NutriBiotic raw organic (FDC 553707), NutriBiotic rice protein (553760), Growing Naturals (554843), First International Health sprouted brown rice protein (705504), Nubeleaf (1834205); and Open Food Facts labels Naked Rice (0850000628557) and Jarrow Formulas (0790011218043). Per 100 g: calcium 163 mg (Naked 240, Jarrow 294, Growing Naturals 0, First International 42, Nubeleaf 240), iron 13.9 mg (Naked 13.3, Jarrow 15.9, NutriBiotic 13.3 and 12.5, Growing Naturals 8.7, First International 7.7, Nubeleaf 25.9), phosphorus 517 mg (NutriBiotic 533 and 500), potassium 39 mg (Naked 66.7, First International 12), magnesium 160 mg (Naked only), vitamin D 0 µg (Naked, First International). Brands and processes differ and US label rounding is coarse, so these are rough. Divided by 100 for per-gram values. Other vitamins are left out because no label lists them."
+        ]
+    },
+    {
+        "id": 471,
+        "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
+        "notes": [
+            "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil."
+        ]
+    },
+    {
+        "id": 472,
+        "url": "https://www.feedipedia.org/node/16888",
+        "title": "Feedipedia — Timothy (Phleum pratense), hay (INRAE, CIRAD, AFZ and FAO feed tables)",
+        "notes": [
+            "Grass Hay — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's timothy hay feed table, used as a stand-in for temperate grass hay (its protein, 9.1% of dry matter, matches this entry's 8.8% as fed). Converted from per-kg dry matter to as-fed with its average dry matter of 88%. Per kg dry matter: calcium 3.3 g, phosphorus 2.1 g, potassium 20.2 g, magnesium 1.5 g, zinc 26 mg, iron 92 mg (only 2 samples). As-fed per gram: calcium 2.90 mg, phosphorus 1.85 mg, potassium 17.78 mg, magnesium 1.32 mg, zinc 0.023 mg, iron 0.081 mg. Samples are few (4–7 for most minerals) and grass hay varies a lot with species, cutting stage and soil. Vitamins and selenium are left out: the feed table has none, hay loses most of its vitamins while drying and in storage, and selenium depends on the soil."
+        ]
+    },
+    {
+        "id": 473,
+        "url": "https://www.feedipedia.org/node/11687",
+        "title": "Feedipedia — Fish meal, type 65 protein (INRAE, CIRAD, AFZ and FAO feed tables)",
+        "notes": [
+            "Fishmeal — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's 'Fish meal, type 65 protein' feed table (70.7% protein in dry matter = 65% as fed, matching this entry), converted to as-fed with its average dry matter of 92.1%. Per kg dry matter: calcium 44.8 g, phosphorus 28.6 g, potassium 8.5 g, magnesium 2.4 g, zinc 107 mg, iron 382 mg, selenium 0.4 mg (selenium from only 3 samples). As-fed per gram: calcium 41.26 mg, phosphorus 26.34 mg, potassium 7.83 mg, magnesium 2.21 mg, zinc 0.099 mg, iron 0.35 mg, selenium 0.37 µg. Calcium and phosphorus are high because fishmeal includes ground bone. Vitamins are left out: the feed table lists none, and fishmeal vitamins vary with fish species and drying heat."
         ]
     }
 ]

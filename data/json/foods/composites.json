@@ -26,14 +26,23 @@
                     "carbs": 0.0796,
                     "sugar": 0.0088,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_d": 0.0,
+                    "folate": 0.71,
+                    "vitamin_b6": 0.00354,
+                    "vitamin_b12": 0.069,
+                    "calcium": 1.59,
+                    "iron": 0.0372,
+                    "potassium": 6.19,
+                    "zinc": 0.0664,
+                    "phosphorus": 1.33
                 },
                 "confidence": 5,
                 "source": {
                     "id": 395,
                     "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2664240/nutrients",
                     "title": "USDA FoodData Central — Impossible Foods, Burger Patties Made From Plants (Branded, FDC 2664240, 2023)",
-                    "note": "Impossible Meat — nutrition: FDC 2664240 (Impossible Foods label, 2023 recipe) per 100 g raw: 204 kcal, fat 11.5 g, sat fat 5.31 g, protein 16.81 g, fiber 4.4 g, sodium 327 mg, carbs 7.96 g, sugars 0.88 g, cholesterol 0, trans fat 0; converted to per gram. Raw (as purchased) values."
+                    "note": "Impossible Meat — nutrition: FDC 2664240 (Impossible Foods label, 2023 recipe) per 100 g raw: 204 kcal, fat 11.5 g, sat fat 5.31 g, protein 16.81 g, fiber 4.4 g, sodium 327 mg, carbs 7.96 g, sugars 0.88 g, cholesterol 0, trans fat 0; converted to per gram. Raw (as purchased) values. Vitamins and minerals from the Impossible Foods label (FDC 2664240; folate as printed on the label, which US labels give in µg DFE; B12, zinc and iron are added) per 100 g: vitamin d 0 µg, folate 71 µg DFE, vitamin b6 0.354 mg, vitamin b12 6.9 µg, calcium 159 mg, iron 3.72 mg, potassium 619 mg, zinc 6.64 mg, phosphorus 133 mg; others not on the label, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -191,14 +200,21 @@
                     "carbs": 0.0619,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b6": 0.00265,
+                    "vitamin_b12": 0.0212,
+                    "calcium": 0.88,
+                    "iron": 0.0354,
+                    "potassium": 2.92,
+                    "zinc": 0.0407
                 },
                 "confidence": 5,
                 "source": {
                     "id": 402,
                     "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2367272/nutrients",
                     "title": "USDA FoodData Central — Beyond Meat, Beyond Burger Plant-Based Patties (Branded, FDC 2367272, 2022)",
-                    "note": "Beyond Burger — nutrition: FDC 2367272 (Beyond Meat label) per 100 g raw: 204 kcal, fat 12.4 g, sat fat 4.42 g, protein 17.7 g, fiber 1.8 g, sodium 345 mg, carbs 6.19 g, sugars 0, cholesterol 0, trans fat 0; converted to per gram. Same values as Beyond Beef ground (FDC 2663629, 2023)."
+                    "note": "Beyond Burger — nutrition: FDC 2367272 (Beyond Meat label) per 100 g raw: 204 kcal, fat 12.4 g, sat fat 4.42 g, protein 17.7 g, fiber 1.8 g, sodium 345 mg, carbs 6.19 g, sugars 0, cholesterol 0, trans fat 0; converted to per gram. Same values as Beyond Beef ground (FDC 2663629, 2023). Vitamins and minerals from the Beyond Meat label (FDC 2367272; B12 and zinc are added) per 100 g: vitamin d 0 µg, vitamin b6 0.265 mg, vitamin b12 2.12 µg, calcium 88 mg, iron 3.54 mg, potassium 292 mg, zinc 4.07 mg; others not on the label, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -359,14 +375,15 @@
                     "carbs": 0.2857,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_b12": 0.025
                 },
                 "confidence": 4,
                 "source": {
                     "id": 414,
                     "url": "https://world.openfoodfacts.org/product/0810934030116/just-like-parmesan-violife",
                     "title": "Open Food Facts — Violife Just Like Parmesan wedge, 5.29 oz, US (barcode 0810934030116)",
-                    "note": "Violife Just Like Parmesan — nutrition: US label via Open Food Facts, per 100 g: 285.7 kcal, fat 17.86 g, sat 16.07 g, protein 3.57 g, fiber 0, sodium 1,393 mg (salt 3.48 g), carbs 28.57 g, sugars 0, no cholesterol; per gram. US labels round per 28 g serving (e.g. protein 1 g), so small values are approximate; confidence 4."
+                    "note": "Violife Just Like Parmesan — nutrition: US label via Open Food Facts, per 100 g: 285.7 kcal, fat 17.86 g, sat 16.07 g, protein 3.57 g, fiber 0, sodium 1,393 mg (salt 3.48 g), carbs 28.57 g, sugars 0, no cholesterol; per gram. US labels round per 28 g serving (e.g. protein 1 g), so small values are approximate; confidence 4. Vitamins and minerals from the Violife label via Open Food Facts (B12 is added; Open Food Facts lists no other vitamins or minerals for this product) per 100 g: vitamin b12 2.5 µg; others not on the label, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -532,14 +549,18 @@
                     "carbs": 0.4,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_d": 0.0,
+                    "calcium": 10.4,
+                    "iron": 0.0,
+                    "potassium": 0.0
                 },
                 "confidence": 3,
                 "source": {
                     "id": 438,
                     "url": "https://www.followyourheart.com/vegan-foods/dairy-free-cheese/dairy-free-parmesan-style-grated/",
                     "title": "Follow Your Heart — Dairy-Free Parmesan Style Grated: nutrition facts and ingredients (official product page)",
-                    "note": "Follow Your Heart Parmesan Grated — nutrition: official label per 5 g serving (20 kcal, fat 1.5 g, sat fat 0.5 g, sodium 85 mg, carbs 2 g, fiber 0, sugars 0, protein 0) scaled to per gram. US rounding on a 5 g serving is coarse (e.g. sat fat 0.5 g could be 0.25–0.75 g), so confidence 3."
+                    "note": "Follow Your Heart Parmesan Grated — nutrition: official label per 5 g serving (20 kcal, fat 1.5 g, sat fat 0.5 g, sodium 85 mg, carbs 2 g, fiber 0, sugars 0, protein 0) scaled to per gram. US rounding on a 5 g serving is coarse (e.g. sat fat 0.5 g could be 0.25–0.75 g), so confidence 3. Vitamins and minerals from the Follow Your Heart label, given per 5 g serving as % Daily Value (vitamin D 0%, calcium 4% of 1,300 mg = 52 mg, iron 0%, potassium 0%) and scaled up; 4% is rounded so calcium could be ~45–58 mg per serving per 100 g: vitamin d 0 µg, calcium 1040 mg, iron 0 mg, potassium 0 mg; others not on the label, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -693,7 +714,7 @@
             "beverage",
             "soda"
         ],
-        "notes": "Regular Coca-Cola, modelled from its ingredients: 10.6% sugar by weight (39 g per 355 mL can), split 85% cane / 15% beet like world sugar supply. The rest is carbonated water, caramel colour, phosphoric acid, flavours and caffeine, which have no crop footprint. The US version uses high fructose corn syrup, which isn't modelled.\n\nNutrition is from Coke's own label. It's pure sugar calories and has the worst nutrition score in the dataset.\n\nFactory, can, distribution, chilling and disposal emissions (0.44 kg CO2e/kg) come from the Carbon Trust–certified footprint of a Diet Coke can (150 g CO2e, GB 2009). Diet Coke is the same drink without sugar, so this covers everything except the sugar crop. A glass bottle has more than double the footprint of a can. Factory water is Coca-Cola's reported 1.78 L per L of drink.",
+        "notes": "Regular Coca-Cola, modelled from its ingredients: 10.6% sugar by weight (39 g per 355 mL can), split 85% cane / 15% beet like world sugar supply. The rest is carbonated water, caramel colour, phosphoric acid, flavours and caffeine, which have no crop footprint. The US version uses high fructose corn syrup, which isn't modelled.\n\nNutrition is from Coke's own label. It's pure sugar calories and has the worst nutrition score in the dataset.\n\nFactory, can, distribution, chilling and disposal emissions (0.44 kg CO2e/kg) come from the Carbon Trust–certified footprint of a Diet Coke can (150 g CO2e, GB 2009). Diet Coke is the same drink without sugar, so this covers everything except the sugar crop. A glass bottle has more than double the footprint of a can. Factory water is Coca-Cola's reported 1.78 L per L of drink.\n\nVitamins and minerals come from a stand-in USDA record (generic regular cola) because the label doesn't list them.",
         "nutrition": [
             {
                 "value": {
@@ -714,6 +735,34 @@
                     "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
                     "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
                     "note": "Coca-Cola — nutrition per gram: 140 kcal, 39 g sugar (= carbs), 45 mg sodium, 0 fat/protein per can ÷ 369 g. Label per 355 mL can × ~1.04 g/mL (a ~10.5% sugar solution) = 369 g per can. USDA generic regular cola (SR 14148, FDC 174852) is similar: 42 kcal, 9.94 g sugar, 3 mg sodium per 100 g."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.01,
+                    "iron": 0.0002,
+                    "magnesium": 0.0,
+                    "potassium": 0.05,
+                    "zinc": 0.0009,
+                    "phosphorus": 0.09,
+                    "selenium": 0.001,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 468,
+                    "url": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174852: Beverages, carbonated, cola, regular",
+                    "note": "Coca-Cola — stand-in vitamins and minerals: the Coca-Cola label lists none, so they come from USDA's generic regular cola. Vitamins and minerals from USDA FDC 174852 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, potassium 5 mg, zinc 0.09 mg, phosphorus 9 mg, selenium 0.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 174852 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],

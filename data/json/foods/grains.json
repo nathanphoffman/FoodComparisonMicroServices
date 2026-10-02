@@ -2832,7 +2832,7 @@
         "tags": [
             "processed"
         ],
-        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).",
+        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).\n\nVitamins and minerals are estimates. USDA has no measured rice protein record and the three labels used for its macros list none, so minerals are averaged from other plain rice protein labels (USDA Branded and Open Food Facts), and zinc and selenium are a guess scaled up from brown rice by protein content. Most vitamins are left out.",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -2900,6 +2900,36 @@
                     "url": "https://world.openfoodfacts.org/product/7350039930735",
                     "title": "Open Food Facts — Superfruit rice protein powder (7350039930735)",
                     "note": "Rice Protein — nutrition: Superfruit rice protein powder label per 100 g: 406 kcal, fat 3.8 g, sat 1 g, protein 80 g, fibre 3.7 g, sodium 39 mg, carbs 11 g; per gram."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "calcium": 1.632,
+                    "iron": 0.1391,
+                    "magnesium": 1.6,
+                    "potassium": 0.3935,
+                    "phosphorus": 5.165
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 470,
+                    "url": "https://fdc.nal.usda.gov/food-details/553707/nutrients",
+                    "title": "Plain brown rice protein labels — USDA Branded (NutriBiotic, Growing Naturals, First International Health, Nubeleaf) and Open Food Facts (Naked Rice, Jarrow)",
+                    "note": "Rice Protein — ESTIMATE from plain rice protein labels. USDA FoodData Central has no measured (SR Legacy or Foundation) record for rice protein, only brand labels, and the three labels this food's macros come from (Bulk, Body & Fit, Superfruit) list no vitamins or minerals. So values are averaged over other plain brown rice protein labels that do list them: USDA Branded records NutriBiotic raw organic (FDC 553707), NutriBiotic rice protein (553760), Growing Naturals (554843), First International Health sprouted brown rice protein (705504), Nubeleaf (1834205); and Open Food Facts labels Naked Rice (0850000628557) and Jarrow Formulas (0790011218043). Per 100 g: calcium 163 mg (Naked 240, Jarrow 294, Growing Naturals 0, First International 42, Nubeleaf 240), iron 13.9 mg (Naked 13.3, Jarrow 15.9, NutriBiotic 13.3 and 12.5, Growing Naturals 8.7, First International 7.7, Nubeleaf 25.9), phosphorus 517 mg (NutriBiotic 533 and 500), potassium 39 mg (Naked 66.7, First International 12), magnesium 160 mg (Naked only), vitamin D 0 µg (Naked, First International). Brands and processes differ and US label rounding is coarse, so these are rough. Divided by 100 for per-gram values. Other vitamins are left out because no label lists them."
+                }
+            },
+            {
+                "value": {
+                    "zinc": 0.225995,
+                    "selenium": 1.814324
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 471,
+                    "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
+                    "note": "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil."
                 }
             }
         ],

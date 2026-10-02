@@ -28,14 +28,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0001,
+                    "vitamin_k": 0.001,
+                    "folate": 0.02,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 1e-05,
+                    "calcium": 0.02,
+                    "iron": 0.0001,
+                    "magnesium": 0.03,
+                    "potassium": 0.49,
+                    "zinc": 0.0002,
+                    "phosphorus": 0.03,
+                    "selenium": 0.0,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Coffee — nutrition: USDA FDC 171890 (SR Legacy 14209) 'Beverages, coffee, brewed, prepared with tap water' per 100 g: 1 kcal, fat 0.02 g, sat 0.002 g, protein 0.12 g, sodium 2 mg, carbs 0, caffeine 40 mg; per gram. Black, no milk or sugar."
+                    "note": "Coffee — nutrition: USDA FDC 171890 (SR Legacy 14209) 'Beverages, coffee, brewed, prepared with tap water' per 100 g: 1 kcal, fat 0.02 g, sat 0.002 g, protein 0.12 g, sodium 2 mg, carbs 0, caffeine 40 mg; per gram. Black, no milk or sugar. Vitamins and minerals from USDA FDC 171890 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.01 mg, vitamin k 0.1 µg, folate 2 µg DFE, vitamin b12 0 µg, vitamin b6 0.001 mg, calcium 2 mg, iron 0.01 mg, magnesium 3 mg, potassium 49 mg, zinc 0.02 mg, phosphorus 3 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171890 per 100 g: ALA 0 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -260,14 +277,31 @@
                     "carbs": 0.003,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.0,
+                    "iron": 0.0002,
+                    "magnesium": 0.03,
+                    "potassium": 0.37,
+                    "zinc": 0.0002,
+                    "phosphorus": 0.01,
+                    "selenium": 0.0,
+                    "ala": 3e-05,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Black Tea — nutrition: USDA FDC 173227 (SR Legacy 14355) 'Beverages, tea, black, brewed, prepared with tap water' per 100 g: 1 kcal, sat fat 0.002 g, carbs 0.3 g, sodium 3 mg, caffeine 20 mg; per gram. Plain, no milk or sugar."
+                    "note": "Black Tea — nutrition: USDA FDC 173227 (SR Legacy 14355) 'Beverages, tea, black, brewed, prepared with tap water' per 100 g: 1 kcal, sat fat 0.002 g, carbs 0.3 g, sodium 3 mg, caffeine 20 mg; per gram. Plain, no milk or sugar. Vitamins and minerals from USDA FDC 173227 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.02 mg, magnesium 3 mg, potassium 37 mg, zinc 0.02 mg, phosphorus 1 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 173227 per 100 g: ALA 0.003 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -492,14 +526,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 5e-05,
+                    "calcium": 0.0,
+                    "iron": 0.0002,
+                    "magnesium": 0.01,
+                    "potassium": 0.08,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.0,
+                    "selenium": 0.0,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Green Tea — nutrition: USDA FDC 171917 (SR Legacy 14278) 'Beverages, tea, green, brewed, regular' per 100 g: 1 kcal, protein 0.22 g, sodium 1 mg, caffeine 12 mg; per gram."
+                    "note": "Green Tea — nutrition: USDA FDC 171917 (SR Legacy 14278) 'Beverages, tea, green, brewed, regular' per 100 g: 1 kcal, protein 0.22 g, sodium 1 mg, caffeine 12 mg; per gram. Vitamins and minerals from USDA FDC 171917 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0.005 mg, calcium 0 mg, iron 0.02 mg, magnesium 1 mg, potassium 8 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171917 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -723,14 +774,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 5e-05,
+                    "calcium": 0.0,
+                    "iron": 0.0002,
+                    "magnesium": 0.01,
+                    "potassium": 0.08,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.0,
+                    "selenium": 0.0,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 3,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "White Tea — nutrition: USDA has no white tea record, so brewed green tea (FDC 171917, SR 14278: 1 kcal, protein 0.22 g, sodium 1 mg per 100 g) is used as a stand-in — both are unoxidised Camellia sinensis infusions with ~0 calories. Confidence 3."
+                    "note": "White Tea — nutrition: USDA has no white tea record, so brewed green tea (FDC 171917, SR 14278: 1 kcal, protein 0.22 g, sodium 1 mg per 100 g) is used as a stand-in — both are unoxidised Camellia sinensis infusions with ~0 calories. Confidence 3. Vitamins and minerals from USDA FDC 171917 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0.005 mg, calcium 0 mg, iron 0.02 mg, magnesium 1 mg, potassium 8 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171917 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

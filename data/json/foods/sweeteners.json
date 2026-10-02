@@ -22,14 +22,31 @@
                     "carbs": 0.6704,
                     "sugar": 0.6046,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 2e-05,
+                    "calcium": 1.02,
+                    "iron": 0.0011,
+                    "magnesium": 0.21,
+                    "potassium": 2.12,
+                    "zinc": 0.0147,
+                    "phosphorus": 0.02,
+                    "selenium": 0.006,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Maple Syrup — nutrition: USDA SR Legacy 'Syrups, maple' (fdcId 169661) per 100 g: 260 kcal, 0.04 g protein, 0.06 g fat, 0.007 g sat fat, 67.04 g carbs, 60.46 g sugars, 12 mg sodium, 32.39 g water; converted to per gram."
+                    "note": "Maple Syrup — nutrition: USDA SR Legacy 'Syrups, maple' (fdcId 169661) per 100 g: 260 kcal, 0.04 g protein, 0.06 g fat, 0.007 g sat fat, 67.04 g carbs, 60.46 g sugars, 12 mg sodium, 32.39 g water; converted to per gram. Vitamins and minerals from USDA FDC 169661 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0.002 mg, calcium 102 mg, iron 0.11 mg, magnesium 21 mg, potassium 212 mg, zinc 1.47 mg, phosphorus 2 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169661 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -175,14 +192,31 @@
                     "carbs": 0.9998,
                     "sugar": 0.998,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.01,
+                    "iron": 0.0005,
+                    "magnesium": 0.0,
+                    "potassium": 0.02,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.0,
+                    "selenium": 0.006,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Cane Sugar — nutrition: USDA SR Legacy 'Sugars, granulated' (fdcId 169655) per 100 g: 387 kcal, 0 g protein, 0 g fat, 99.98 g carbs, 99.8 g sugars, 1 mg sodium; converted to per gram."
+                    "note": "Cane Sugar — nutrition: USDA SR Legacy 'Sugars, granulated' (fdcId 169655) per 100 g: 387 kcal, 0 g protein, 0 g fat, 99.98 g carbs, 99.8 g sugars, 1 mg sodium; converted to per gram. Vitamins and minerals from USDA FDC 169655 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.05 mg, magnesium 0 mg, potassium 2 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169655 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -411,14 +445,31 @@
                     "carbs": 0.824,
                     "sugar": 0.8212,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.005,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.02,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00024,
+                    "calcium": 0.06,
+                    "iron": 0.0042,
+                    "magnesium": 0.02,
+                    "potassium": 0.52,
+                    "zinc": 0.0022,
+                    "phosphorus": 0.04,
+                    "selenium": 0.008,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Honey — nutrition: USDA FDC 169640 (SR Legacy 19296) 'Honey' per 100 g: 304 kcal, protein 0.3 g, fiber 0.2 g, sodium 4 mg, carbs 82.4 g, sugars 82.12 g; per gram."
+                    "note": "Honey — nutrition: USDA FDC 169640 (SR Legacy 19296) 'Honey' per 100 g: 304 kcal, protein 0.3 g, fiber 0.2 g, sodium 4 mg, carbs 82.4 g, sugars 82.12 g; per gram. Vitamins and minerals from USDA FDC 169640 per 100 g: vitamin a 0 µg RAE, vitamin c 0.5 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 2 µg DFE, vitamin b12 0 µg, vitamin b6 0.024 mg, calcium 6 mg, iron 0.42 mg, magnesium 2 mg, potassium 52 mg, zinc 0.22 mg, phosphorus 4 mg, selenium 0.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 169640 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -648,14 +699,31 @@
                     "carbs": 0.9998,
                     "sugar": 0.998,
                     "cholesterol": 0.0,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.01,
+                    "iron": 0.0005,
+                    "magnesium": 0.0,
+                    "potassium": 0.02,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.0,
+                    "selenium": 0.006,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Beet Sugar — FDC 169655 'Sugars, granulated' (SR Legacy 19335), per 100 g: 387 kcal, protein 0 g, fat 0 g, sat fat 0 g, carbs 99.98 g, fiber 0 g, sugars 99.8 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                    "note": "Beet Sugar — FDC 169655 'Sugars, granulated' (SR Legacy 19335), per 100 g: 387 kcal, protein 0 g, fat 0 g, sat fat 0 g, carbs 99.98 g, fiber 0 g, sugars 99.8 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169655 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.05 mg, magnesium 0 mg, potassium 2 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169655 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -904,14 +972,31 @@
                     "carbs": 0.7473,
                     "sugar": 0.7472,
                     "cholesterol": 0.0,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0067,
+                    "calcium": 2.05,
+                    "iron": 0.0472,
+                    "magnesium": 2.42,
+                    "potassium": 14.64,
+                    "zinc": 0.0029,
+                    "phosphorus": 0.31,
+                    "selenium": 0.178,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Molasses — FDC 168820 'Molasses' (SR Legacy 19304), per 100 g: 290 kcal, protein 0 g, fat 0.1 g, sat fat 0.018 g, carbs 74.73 g, fiber 0 g, sugars 74.72 g, sodium 37 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+                    "note": "Molasses — FDC 168820 'Molasses' (SR Legacy 19304), per 100 g: 290 kcal, protein 0 g, fat 0.1 g, sat fat 0.018 g, carbs 74.73 g, fiber 0 g, sugars 74.72 g, sodium 37 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168820 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0.67 mg, calcium 205 mg, iron 4.72 mg, magnesium 242 mg, potassium 1464 mg, zinc 0.29 mg, phosphorus 31 mg, selenium 17.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168820 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

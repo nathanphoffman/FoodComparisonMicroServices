@@ -7,7 +7,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.",
+        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.",
         "nutrition": [
             {
                 "value": {
@@ -28,6 +28,23 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            },
+            {
+                "value": {
+                    "calcium": 15.0192,
+                    "phosphorus": 2.3244,
+                    "potassium": 21.9924,
+                    "magnesium": 2.0562,
+                    "zinc": 0.024138,
+                    "iron": 0.524778
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 469,
+                    "url": "https://www.feedipedia.org/node/11743",
+                    "title": "Feedipedia — Alfalfa hay (INRAE, CIRAD, AFZ and FAO feed tables)",
+                    "note": "Alfalfa — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for alfalfa hay (searched the full downloads), because USDA only covers foods people eat. Only alfalfa sprouts are listed. So minerals come from Feedipedia's alfalfa hay feed table (averages of many lab samples), converted from per-kg dry matter to as-fed using its average dry matter of 89.4%. Per kg dry matter: calcium 16.8 g, phosphorus 2.6 g, potassium 24.6 g, magnesium 2.3 g, zinc 27 mg, iron 587 mg (iron is a single sample and hay iron often includes soil, so it is especially rough). As-fed per gram: calcium 15.02 mg, phosphorus 2.32 mg, potassium 21.99 mg, magnesium 2.06 mg, zinc 0.024 mg, iron 0.52 mg. Vitamins and selenium are left out: Feedipedia gives no vitamin values, vitamin levels in hay drop a lot during drying and storage (vitamin C is mostly destroyed), and selenium depends on the soil, so any number would be a guess. Mineral content also varies with cutting stage and soil."
                 }
             }
         ],
@@ -278,7 +295,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.",
+        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.",
         "nutrition": [
             {
                 "value": {
@@ -299,6 +316,23 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                }
+            },
+            {
+                "value": {
+                    "calcium": 2.904,
+                    "phosphorus": 1.848,
+                    "potassium": 17.776,
+                    "magnesium": 1.32,
+                    "zinc": 0.02288,
+                    "iron": 0.08096
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 472,
+                    "url": "https://www.feedipedia.org/node/16888",
+                    "title": "Feedipedia — Timothy (Phleum pratense), hay (INRAE, CIRAD, AFZ and FAO feed tables)",
+                    "note": "Grass Hay — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's timothy hay feed table, used as a stand-in for temperate grass hay (its protein, 9.1% of dry matter, matches this entry's 8.8% as fed). Converted from per-kg dry matter to as-fed with its average dry matter of 88%. Per kg dry matter: calcium 3.3 g, phosphorus 2.1 g, potassium 20.2 g, magnesium 1.5 g, zinc 26 mg, iron 92 mg (only 2 samples). As-fed per gram: calcium 2.90 mg, phosphorus 1.85 mg, potassium 17.78 mg, magnesium 1.32 mg, zinc 0.023 mg, iron 0.081 mg. Samples are few (4–7 for most minerals) and grass hay varies a lot with species, cutting stage and soil. Vitamins and selenium are left out: the feed table has none, hay loses most of its vitamins while drying and in storage, and selenium depends on the soil."
                 }
             }
         ],
@@ -517,7 +551,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.",
+        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, fish meal 65% protein), because USDA has no record for fishmeal as it isn't a human food. Omega-3 is a guess from the fat content and sardine oil's fatty acids. Vitamins are left out.",
         "nutrition": [
             {
                 "value": {
@@ -538,6 +572,37 @@
                     "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
                     "title": "FAO (2014) — Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
                     "note": "Fishmeal — nutrition: Feed-grade fishmeal (low-temperature/steam-dried) proximate composition per gram: protein 0.60–0.70, fat 0.08–0.12, ash 0.15–0.20, moisture ~0.10. Human nutritional database values are not applicable (feed ingredient); macros derived from standard fishmeal product specifications reported in the FAO aquaculture sector documentation."
+                }
+            },
+            {
+                "value": {
+                    "calcium": 41.2608,
+                    "phosphorus": 26.3406,
+                    "potassium": 7.8285,
+                    "magnesium": 2.2104,
+                    "zinc": 0.098547,
+                    "iron": 0.351822,
+                    "selenium": 0.3684
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 473,
+                    "url": "https://www.feedipedia.org/node/11687",
+                    "title": "Feedipedia — Fish meal, type 65 protein (INRAE, CIRAD, AFZ and FAO feed tables)",
+                    "note": "Fishmeal — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's 'Fish meal, type 65 protein' feed table (70.7% protein in dry matter = 65% as fed, matching this entry), converted to as-fed with its average dry matter of 92.1%. Per kg dry matter: calcium 44.8 g, phosphorus 28.6 g, potassium 8.5 g, magnesium 2.4 g, zinc 107 mg, iron 382 mg, selenium 0.4 mg (selenium from only 3 samples). As-fed per gram: calcium 41.26 mg, phosphorus 26.34 mg, potassium 7.83 mg, magnesium 2.21 mg, zinc 0.099 mg, iron 0.35 mg, selenium 0.37 µg. Calcium and phosphorus are high because fishmeal includes ground bone. Vitamins are left out: the feed table lists none, and fishmeal vitamins vary with fish species and drying heat."
+                }
+            },
+            {
+                "value": {
+                    "epa_dha": 20.79,
+                    "ala": 0.00133
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 467,
+                    "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
+                    "note": "Fishmeal — GUESS for omega-3. Neither USDA nor the feed table gives fishmeal's fatty acids, so they are estimated as this entry's fat (10%) times the omega-3 share of USDA sardine oil (FDC 173578, a pelagic fish oil like anchoveta), assuming the fat left in fishmeal is like the oil pressed out of it. Sardine oil per 100 g: EPA + DHA 20.79 g, ALA 1.33 g. Fishmeal per gram: EPA + DHA 20.8 mg, ALA 0.0013 g. Fat in fishmeal oxidises during drying and storage, so the real figure may be lower."
                 }
             }
         ],
@@ -656,7 +721,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "Oil pressed from reduction fish (mostly anchoveta) during fishmeal production, fed mainly to farmed salmon. It's not eaten as food here.\n\nWild fish killed: each kg of meal or oil takes about 3.6 kg of fish. About half of fish oil comes from trimmings, so 1.78 kg of fish are killed per kg of fish oil.\n\nEmissions are much higher per kg than fishmeal (~4.4 kg CO2e/kg in the Peruvian LCA), because fish yield little oil relative to meal. The split between meal and oil depends on the allocation method, which is why confidence is 2.",
+        "notes": "Oil pressed from reduction fish (mostly anchoveta) during fishmeal production, fed mainly to farmed salmon. It's not eaten as food here.\n\nWild fish killed: each kg of meal or oil takes about 3.6 kg of fish. About half of fish oil comes from trimmings, so 1.78 kg of fish are killed per kg of fish oil.\n\nEmissions are much higher per kg than fishmeal (~4.4 kg CO2e/kg in the Peruvian LCA), because fish yield little oil relative to meal. The split between meal and oil depends on the allocation method, which is why confidence is 2.\n\nVitamins and omega-3 come from a stand-in USDA record (sardine oil) because the feed source doesn't list them.",
         "nutrition": [
             {
                 "value": {
@@ -677,6 +742,32 @@
                     "url": "https://www.fao.org/3/i3765e/i3765e.pdf",
                     "title": "FAO (2014) — Greenhouse Gas Emissions from the Fisheries and Aquaculture Sectors",
                     "note": "Fish oil — nutrition: Feed-grade fish oil is 100% lipid with no protein, fiber, or carbohydrate. Caloric density ~9.0 kcal/g (lipid energy standard). Saturated fat fraction approximately 27% of total fat for pelagic fish oil blends (anchovy/sardine/herring); EPA+DHA make up 25–35% of total fatty acids. Human nutritional database values are not applicable (feed ingredient); macros derived from standard fish oil product specifications in FAO aquaculture sector documentation."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.083,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.0,
+                    "iron": 0.0,
+                    "magnesium": 0.0,
+                    "potassium": 0.0,
+                    "zinc": 0.0,
+                    "phosphorus": 0.0,
+                    "selenium": 0.0,
+                    "ala": 0.01327,
+                    "epa_dha": 207.93
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 467,
+                    "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
+                    "note": "Fish Oil — stand-in vitamins and omega-3: the FAO feed source has no vitamins, so they come from USDA's sardine oil, a pelagic fish oil like the anchovy/sardine/herring blends used in feed. Vitamins and minerals from USDA FDC 173578 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 8.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 173578 per 100 g: ALA 1.327 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20793 mg (EPA 10.137 + DHA 10.656); divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
             }
         ],
