@@ -951,5 +951,137 @@
                 }
             }
         ]
+    },
+    {
+        "id": 128,
+        "slug": "coke-zero",
+        "name": "Coke Zero (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "soda",
+            "diet"
+        ],
+        "notes": "Coca-Cola Zero Sugar, modelled from its ingredients. It has no sugar: it's carbonated water, caramel colour, phosphoric acid, flavours, caffeine and the sweeteners aspartame and acesulfame potassium. It has no modelled crop footprint (no land, pesticides or farm emissions). The sweeteners aren't added as ingredients because: acesulfame potassium is made from petroleum-based chemicals, not a crop; aspartame is made by fermenting sugar or corn, but a can has only ~0.1–0.2 g of sweetener in 355 g, so the footprint would barely change; and adding them would wrongly make Coke Zero look scarce, because availability averages the ingredients' world supply (only tens of Gg for these sweeteners) rather than how much drink that supply could make.\n\nNutrition is from Coke's own label: zero calories, a little sodium and potassium.\n\nFactory, can, distribution, chilling and disposal emissions (0.45 kg CO2e/kg) come from the Carbon Trust–certified footprint of a Diet Coke / Coke Zero can (150 g CO2e, GB 2009). A glass bottle has more than double the footprint of a can. Factory water is Coca-Cola's reported 1.78 L per L of drink.\n\nVitamins and minerals not on the label are a guess copied from USDA's generic regular cola, which has the same base.\n\nAvailability is copied from the Coca-Cola entry. With no crop ingredients the math has no base to work from, so Coke's number is used. In theory it could be far higher, since a little sweetener makes a lot of drink.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0,
+                    "fat": 0,
+                    "sat_fat": 0,
+                    "protein": 0,
+                    "fiber": 0,
+                    "sodium": 0.1127,
+                    "potassium": 0.169,
+                    "carbs": 0,
+                    "sugar": 0,
+                    "cholesterol": 0,
+                    "trans_fat": 0
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 499,
+                    "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/zero",
+                    "title": "Coca-Cola US — Coca-Cola Zero Sugar nutrition facts and ingredients",
+                    "note": "Coke Zero — nutrition per gram: 0 kcal, 40 mg sodium, 60 mg potassium, 0 fat/carbs/sugar/protein per can ÷ 355 g. Label per 355 mL can × ~1.00 g/mL (no sugar, so about the density of water) = 355 g per can."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.01,
+                    "iron": 0.0002,
+                    "magnesium": 0.0,
+                    "zinc": 0.0009,
+                    "phosphorus": 0.09,
+                    "selenium": 0.001,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 468,
+                    "url": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174852: Beverages, carbonated, cola, regular",
+                    "note": "Coke Zero — GUESS for vitamins and minerals: the label lists only sodium and potassium, so the rest copy USDA's generic regular cola (FDC 174852), which has the same water, caramel colour and phosphoric acid base; sugar adds almost nothing to these. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, zinc 0.09 mg, phosphorus 9 mg (from phosphoric acid), selenium 0.1 µg, ALA 0 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": null,
+                "label": "carbonated water, caramel color, phosphoric acid, sweeteners (aspartame, acesulfame potassium), potassium benzoate, potassium citrate, natural flavors, caffeine",
+                "fraction": [
+                    {
+                        "value": 1.0,
+                        "confidence": 4,
+                        "source": {
+                            "id": 499,
+                            "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/zero",
+                            "title": "Coca-Cola US — Coca-Cola Zero Sugar nutrition facts and ingredients",
+                            "note": "Coke Zero — whole drink: carbonated water, caramel color, phosphoric acid, aspartame, potassium benzoate, natural flavors, potassium citrate, acesulfame potassium, caffeine. No sugar. The sweeteners are well under 0.1% by weight (they are ~200x sweeter than sugar), so no crop footprint is modelled; their emissions are inside processing_emissions_per_kg."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.45,
+                "confidence": 3,
+                "source": {
+                    "id": 449,
+                    "url": "https://www.talkingretail.com/products-news/coca-cola-announces-the-carbon-footprint-of-some-of-its-top-sellers-10-03-2009/",
+                    "title": "Talking Retail (2009) — Coca-Cola announces the carbon footprint of some of its top-sellers (Carbon Trust certified, Great Britain)",
+                    "note": "Coke Zero — processing emissions: Diet Coke / Coke Zero 330 mL can = 150 g CO2e full life cycle (Carbon Trust certified, GB 2009), covering water, flavors, sweeteners, can, manufacture, distribution, retail, chilling and disposal. ÷ (330 mL × 1.00 g/mL = 330 g) = 0.45 kg CO2e/kg. Cans; a glass bottle would be more than double."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 1.78,
+                "confidence": 3,
+                "source": {
+                    "id": 450,
+                    "url": "https://www.coca-colacompany.com/content/dam/corporate/us/en/reports/2024-environmental-update/2024-environmental-update.pdf",
+                    "title": "The Coca-Cola Company (2025) — 2024 Environmental Update",
+                    "note": "Coke Zero — processing water: Coca-Cola system water use ratio 1.78 L water per L of product (2023 and 2024) ÷ 1.00 kg/L = 1.78 L/kg. Includes the water that ends up in the drink. Counted as blue water."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 134533,
+                "confidence": 1,
+                "source": {
+                    "id": 448,
+                    "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                    "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                    "note": "Coke Zero — availability_gg copied from this dataset's Coca-Cola (Composite) entry (world build v213: 134,533 Gg, which is the world supply of its cane and beet sugar). Coke Zero has no crop ingredients, so the pipeline has nothing to work out availability from. Coke's number is used as a stand-in base; the real limit could be far higher because a little sweetener goes a very long way. Update by hand if Coca-Cola's ingredients change."
+                }
+            },
+            {
+                "value": 129917,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 448,
+                    "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
+                    "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
+                    "note": "Coke Zero — availability_gg (US) copied from this dataset's Coca-Cola (Composite) entry (US build v213: 129,917 Gg). See the world value's note."
+                }
+            }
+        ]
     }
 ]

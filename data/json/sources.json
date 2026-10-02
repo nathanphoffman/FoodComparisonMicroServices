@@ -2594,7 +2594,9 @@
         "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/original",
         "title": "Coca-Cola US — Coca-Cola Original nutrition facts and ingredients",
         "notes": [
-            "Per 12 fl oz (355 mL) can: 140 kcal, 0 g fat, 45 mg sodium, 39 g total carbohydrate, 39 g total sugars (all added), 0 g protein. US product is sweetened with high fructose corn syrup; most other countries use cane or beet sugar."
+            "Per 12 fl oz (355 mL) can: 140 kcal, 0 g fat, 45 mg sodium, 39 g total carbohydrate, 39 g total sugars (all added), 0 g protein. US product is sweetened with high fructose corn syrup; most other countries use cane or beet sugar.",
+            "Coke Zero — availability_gg copied from this dataset's Coca-Cola (Composite) entry (world build v213: 134,533 Gg, which is the world supply of its cane and beet sugar). Coke Zero has no crop ingredients, so the pipeline has nothing to work out availability from. Coke's number is used as a stand-in base; the real limit could be far higher because a little sweetener goes a very long way. Update by hand if Coca-Cola's ingredients change.",
+            "Coke Zero — availability_gg (US) copied from this dataset's Coca-Cola (Composite) entry (US build v213: 129,917 Gg). See the world value's note."
         ]
     },
     {
@@ -2602,7 +2604,8 @@
         "url": "https://www.talkingretail.com/products-news/coca-cola-announces-the-carbon-footprint-of-some-of-its-top-sellers-10-03-2009/",
         "title": "Talking Retail (2009) — Coca-Cola announces the carbon footprint of some of its top-sellers (Carbon Trust certified, Great Britain)",
         "notes": [
-            "Full life cycle (ingredients, manufacture and packaging, distribution and retail, consumer use, disposal), Great Britain: 330 mL can Coca-Cola 170 g CO2e; 330 mL can Diet Coke / Coke Zero 150 g; 330 mL glass bottle Coca-Cola 360 g. Packaging is 30–70% of the footprint."
+            "Full life cycle (ingredients, manufacture and packaging, distribution and retail, consumer use, disposal), Great Britain: 330 mL can Coca-Cola 170 g CO2e; 330 mL can Diet Coke / Coke Zero 150 g; 330 mL glass bottle Coca-Cola 360 g. Packaging is 30–70% of the footprint.",
+            "Coke Zero — processing emissions: Diet Coke / Coke Zero 330 mL can = 150 g CO2e full life cycle (Carbon Trust certified, GB 2009), covering water, flavors, sweeteners, can, manufacture, distribution, retail, chilling and disposal. ÷ (330 mL × 1.00 g/mL = 330 g) = 0.45 kg CO2e/kg. Cans; a glass bottle would be more than double."
         ]
     },
     {
@@ -2610,7 +2613,8 @@
         "url": "https://www.coca-colacompany.com/content/dam/corporate/us/en/reports/2024-environmental-update/2024-environmental-update.pdf",
         "title": "The Coca-Cola Company (2025) — 2024 Environmental Update",
         "notes": [
-            "Coca-Cola system water use ratio 1.78 L of water per L of product in 2023 and 2024 (2015 baseline 1.98)."
+            "Coca-Cola system water use ratio 1.78 L of water per L of product in 2023 and 2024 (2015 baseline 1.98).",
+            "Coke Zero — processing water: Coca-Cola system water use ratio 1.78 L water per L of product (2023 and 2024) ÷ 1.00 kg/L = 1.78 L/kg. Includes the water that ends up in the drink. Counted as blue water."
         ]
     },
     {
@@ -2756,7 +2760,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
         "title": "USDA FoodData Central — SR Legacy 174852: Beverages, carbonated, cola, regular",
         "notes": [
-            "Coca-Cola — stand-in vitamins and minerals: the Coca-Cola label lists none, so they come from USDA's generic regular cola. Vitamins and minerals from USDA FDC 174852 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, potassium 5 mg, zinc 0.09 mg, phosphorus 9 mg, selenium 0.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 174852 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entry."
+            "Coca-Cola — stand-in vitamins and minerals: the Coca-Cola label lists none, so they come from USDA's generic regular cola. Vitamins and minerals from USDA FDC 174852 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, potassium 5 mg, zinc 0.09 mg, phosphorus 9 mg, selenium 0.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 174852 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entry.",
+            "Coke Zero — GUESS for vitamins and minerals: the label lists only sodium and potassium, so the rest copy USDA's generic regular cola (FDC 174852), which has the same water, caramel colour and phosphoric acid base; sugar adds almost nothing to these. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.02 mg, magnesium 0 mg, zinc 0.09 mg, phosphorus 9 mg (from phosphoric acid), selenium 0.1 µg, ALA 0 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
         ]
     },
     {
@@ -3001,6 +3006,16 @@
         "title": "Mad Barn equine feed database — Pea protein isolate",
         "notes": [
             "Pea Protein — ESTIMATE from a feed-industry analysis. No human-food source lists these for pea protein isolate, so they come from Mad Barn's analysed pea protein isolate (93.8% dry matter): magnesium 0.16 g and phosphorus 0.38 g per 100 g as fed; vitamin E 23.1 IU/kg dry matter (× 0.67 mg per IU for natural vitamin E), vitamin B6 2.2 mg/kg and folate 0.4 mg/kg dry matter, converted to as fed. Per 100 g: magnesium 160 mg, phosphorus 380 mg, vitamin e 1.452 mg, vitamin b6 0.2064 mg, folate 37.52 µg DFE; divided by 100 for per-gram values. Mad Barn's sample is only ~58% protein, so it is a less refined product than this ~78% isolate; a purer isolate is probably lower in magnesium and phosphorus. Some of Mad Barn's values are marked as estimates."
+        ]
+    },
+    {
+        "id": 499,
+        "url": "https://www.coca-cola.com/us/en/brands/coca-cola/products/zero",
+        "title": "Coca-Cola US — Coca-Cola Zero Sugar nutrition facts and ingredients",
+        "notes": [
+            "Per 12 fl oz (355 mL) can: 0 kcal, 0 g fat, 40 mg sodium, 60 mg potassium, 0 g total carbohydrate, 0 g sugars, 0 g protein, 34 mg caffeine. Ingredients: carbonated water, caramel color, phosphoric acid, aspartame, potassium benzoate, natural flavors, potassium citrate, acesulfame potassium, caffeine.",
+            "Coke Zero — nutrition per gram: 0 kcal, 40 mg sodium, 60 mg potassium, 0 fat/carbs/sugar/protein per can ÷ 355 g. Label per 355 mL can × ~1.00 g/mL (no sugar, so about the density of water) = 355 g per can.",
+            "Coke Zero — whole drink: carbonated water, caramel color, phosphoric acid, aspartame, potassium benzoate, natural flavors, potassium citrate, acesulfame potassium, caffeine. No sugar. The sweeteners are well under 0.1% by weight (they are ~200x sweeter than sugar), so no crop footprint is modelled; their emissions are inside processing_emissions_per_kg."
         ]
     }
 ]

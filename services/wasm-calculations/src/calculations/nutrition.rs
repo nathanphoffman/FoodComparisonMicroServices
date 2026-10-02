@@ -12,10 +12,11 @@ const SODIUM_MG_PER_SCORE_POINT: f64 = 50.0;
 /// Points per full daily value of each vitamin/mineral, per 100 kcal. Linear, no cap.
 const MICRONUTRIENT_SCORE_WEIGHT: f64 = 1.0;
 
-/// Nutrition score per 100 kcal. None for foods with no calories.
+/// Nutrition score per 100 kcal. Foods with no calories (diet soda, water) score 0 —
+/// they add nothing good or bad.
 pub(super) fn compute_nutrition_score(food: &FoodRow) -> Option<f64> {
     if food.calories <= 0.0 {
-        return None;
+        return Some(0.0);
     }
     let free_sugar = (food.sugar.unwrap_or(0.0) - SUGAR_FIBER_ALLOWANCE * food.fiber).max(0.0);
     let raw = food.protein + FIBER_SCORE_WEIGHT * food.fiber
