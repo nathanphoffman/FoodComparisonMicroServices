@@ -1,12 +1,14 @@
 mod food_row;
 mod land_types;
 mod micronutrients;
+mod nutrition_weights;
 mod slider_query;
 
 use serde::Deserialize;
 
 pub use food_row::FoodRow;
 pub use land_types::LandTypes;
+pub use nutrition_weights::NutritionWeights;
 pub use slider_query::{MealIngredient, SliderQuery};
 
 /// Single input object bundling all foods + slider state into one WASM call.

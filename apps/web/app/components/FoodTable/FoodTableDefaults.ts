@@ -1,4 +1,4 @@
-import type { ColConfig, DataRegion, FoodWeights, LandTypes, ScorePriorities, SliderValues } from './FoodTableTypes';
+import type { ColConfig, DataRegion, FoodWeights, LandTypes, NutritionWeights, ScorePriorities, SliderValues } from './FoodTableTypes';
 import { DEFAULT_LEVEL, toShares } from './Sliders/PercentSliders';
 
 // ── Column config ─────────────────────────────────────────────────────────────
@@ -75,6 +75,17 @@ export const DEFAULT_LAND_TYPE_WEIGHTS: LandTypes = {
     temperate_grassland: 0.45,  // biome 8
 };
 
+// Keep in sync with NutritionWeights::default() in Rust (nutrition_weights.rs).
+export const DEFAULT_NUTRITION_WEIGHTS: NutritionWeights = {
+    protein:        1,
+    fiber:          2,
+    micronutrients: 2,
+    satFat:         2,
+    freeSugar:      0.25,
+    sugarAllowance: 5,
+    sodium:         2,
+};
+
 // ── Slider values ─────────────────────────────────────────────────────────────
 
 export const DEFAULT_SLIDER_VALUES: SliderValues = {
@@ -89,6 +100,7 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     finalIntelligenceExponent:  DEFAULT_FINAL_INTELLIGENCE_EXPONENT,
     zeroBetterMultiplier:       DEFAULT_ZERO_BETTER_MULTIPLIER,
     landTypeWeights:            DEFAULT_LAND_TYPE_WEIGHTS,
+    nutritionWeights:           DEFAULT_NUTRITION_WEIGHTS,
     winDampening:               DEFAULT_WIN_DAMPENING,
     overHuntingFactor:          DEFAULT_OVER_HUNTING,
     overGatheringFactor:        DEFAULT_OVER_GATHERING,

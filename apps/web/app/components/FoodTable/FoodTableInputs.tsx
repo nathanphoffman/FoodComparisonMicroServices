@@ -105,6 +105,7 @@ export function FoodTableInputs({
                     onFinalIntelligenceExponentChange={value => update('finalIntelligenceExponent', value)}
                     onZeroBetterMultiplierChange={value => update('zeroBetterMultiplier', value)}
                     onLandTypeWeightsChange={value => update('landTypeWeights', value)}
+                    onNutritionWeightsChange={value => update('nutritionWeights', value)}
                     onWinDampeningChange={value => update('winDampening', value)}
                     onOverHuntingChange={value => update('overHuntingFactor', value)}
                     onOverGatheringChange={value => update('overGatheringFactor', value)}

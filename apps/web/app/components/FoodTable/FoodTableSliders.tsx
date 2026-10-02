@@ -4,6 +4,7 @@ import { WeightSliders }                    from "./Sliders/WeightSliders";
 import { ScorePrioritySliders }             from "./Sliders/ScorePrioritySliders";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
+import { NutritionSliders }                 from "./Sliders/NutritionSliders";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
 import { ValueSlider }                      from "./Sliders/ValueSlider";
 import * as SLIDERS                         from "./Sliders/ValueSliderSettings";
@@ -13,7 +14,7 @@ import {
     DEFAULT_OVER_GATHERING,
 } from "./FoodTableDefaults";
 import type { FoodWeights, ScorePriorities } from "./FoodTableTypes";
-import type { LandTypes } from "./FoodTableTypes";
+import type { LandTypes, NutritionWeights } from "./FoodTableTypes";
 
 export type { FoodWeights };
 
@@ -29,6 +30,7 @@ export function FoodTableSliders({
     onFinalIntelligenceExponentChange,
     onZeroBetterMultiplierChange,
     onLandTypeWeightsChange,
+    onNutritionWeightsChange,
     onWinDampeningChange,
     onOverHuntingChange,
     onOverGatheringChange,
@@ -52,6 +54,7 @@ export function FoodTableSliders({
     onFinalIntelligenceExponentChange?: (v: number) => void;
     onZeroBetterMultiplierChange?: (v: number) => void;
     onLandTypeWeightsChange?: (w: LandTypes) => void;
+    onNutritionWeightsChange?: (w: NutritionWeights) => void;
     onWinDampeningChange?: (v: number) => void;
     onOverHuntingChange?: (v: number) => void;
     onOverGatheringChange?: (v: number) => void;
@@ -73,6 +76,9 @@ export function FoodTableSliders({
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Score Priorities">
                 <ScorePrioritySliders key={`ScorePrioritySliders-${resetKey}`} onChange={onScorePrioritiesChange} defaultLevels={scorePriorityLevels} />
+            </ExpandableSliderGroup>
+            <ExpandableSliderGroup label="Nutrition">
+                <NutritionSliders key={`NutritionSliders-${resetKey}`} onChange={onNutritionWeightsChange} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <div className="flex flex-col gap-3 w-full">

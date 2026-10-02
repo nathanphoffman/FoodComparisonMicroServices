@@ -11,7 +11,7 @@ pub(super) fn compute_row(food: &FoodRow, query: &SliderQuery, norms: &NormFacto
     let divisor = compute_divisor(food, query, norms);
     let per_unit = |raw: f64| divisor.map(|d| raw / d);
 
-    let nutrition_score = compute_nutrition_score(food);
+    let nutrition_score = compute_nutrition_score(food, &query.nutrition_weights);
 
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
     // land_use_raw is physical area (used for availability); land_use_weighted is

@@ -1,6 +1,7 @@
 use serde::Deserialize;
 
 use super::land_types::LandTypes;
+use super::nutrition_weights::NutritionWeights;
 
 /// Slider state sent from the Next.js FoodTable component.
 #[derive(Debug, Clone, Deserialize)]
@@ -54,6 +55,10 @@ pub struct SliderQuery {
     // score. Doesn't affect land-driven deaths or availability, which use raw area.
     #[serde(default = "default_land_type_weights")]
     pub land_type_weights: LandTypes,
+
+    // Nutrition sliders: points per nutrient in the Nutrition score.
+    #[serde(default)]
+    pub nutrition_weights: NutritionWeights,
 
     // How much a big win in one measure is dampened when combining measures into
     // the Improvement score: 0 = linear (arithmetic mean), 1 = geometric mean

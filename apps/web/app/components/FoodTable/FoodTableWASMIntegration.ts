@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../_wasm-signal';
-import type { RawFood, LandTypes } from './FoodTableTypes';
+import type { RawFood, LandTypes, NutritionWeights } from './FoodTableTypes';
 import type { ScoredRow } from './FoodTableSort';
 import type { SliderValues } from './FoodTableTypes';
 
@@ -31,6 +31,7 @@ type SliderQuery = {
     landUsePriority:            number;
     availabilityPriority:       number;
     landTypeWeights:            LandTypes;
+    nutritionWeights:           NutritionWeights;
     winDampening:               number;
     overHuntingFactor:          number;
     overGatheringFactor:        number;
@@ -98,7 +99,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
 
         const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
                 neuronExponent, weightExponent, finalIntelligenceExponent,
-                zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, winDampening,
+                zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, nutritionWeights, winDampening,
                 overHuntingFactor, overGatheringFactor } = sliderValues;
 
         const input: ScoreInput = {
@@ -125,6 +126,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 landUsePriority:           scorePriorities.landUse,
                 availabilityPriority:      scorePriorities.availability,
                 landTypeWeights:           landTypeWeights,
+                nutritionWeights:          nutritionWeights,
                 winDampening:              winDampening,
                 overHuntingFactor:         overHuntingFactor,
                 overGatheringFactor:       overGatheringFactor,

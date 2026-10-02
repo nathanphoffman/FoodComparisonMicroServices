@@ -179,6 +179,18 @@ export type LandTypes = {
   wetland:             number;
 };
 
+// Nutrition sliders: points each nutrient adds to (or takes from) the Nutrition score.
+// Matches the Rust NutritionWeights.
+export type NutritionWeights = {
+  protein:        number;  // per g (helps)
+  fiber:          number;  // per g (helps)
+  micronutrients: number;  // per full daily value of a vitamin/mineral (helps)
+  satFat:         number;  // per g (harms)
+  freeSugar:      number;  // per g of sugar beyond the fiber allowance (harms)
+  sugarAllowance: number;  // g of sugar per g of fiber not counted as free sugar
+  sodium:         number;  // per 100 mg (harms)
+};
+
 // ── Inputs (columns, data region, sliders) ────────────────────────────────────
 
 export type ColConfig = { key: SortKey; label: string; defaultVisible: boolean; mobileVisible: boolean };
@@ -197,6 +209,7 @@ export type SliderValues = {
     finalIntelligenceExponent:  number;
     zeroBetterMultiplier:       number;
     landTypeWeights:            LandTypes;
+    nutritionWeights:           NutritionWeights;
     winDampening:               number;
     overHuntingFactor:          number;
     overGatheringFactor:        number;
