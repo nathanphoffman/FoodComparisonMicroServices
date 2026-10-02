@@ -1946,7 +1946,7 @@
             "legume",
             "processed"
         ],
-        "notes": "Pea protein isolate powder (used in Beyond Burger), nutrition from Bob's Red Mill pea protein. About 3 kg of dry peas make 1 kg of isolate under economic allocation (Früh et al. 2026). The isolate is 27% of the pea dry matter by weight but carries 72% of the burden, because starch and fibre co-products are worth less. Land and crop water are peas × 3.0, and per-hectare farm values are copied from peas.\n\nEmissions: Früh et al. 2026 (4.74 kg CO2e/kg, Germany, economic allocation) and CarbonCloud's French isolate (4.04). About half is the wet-processing energy. The high sodium (963 mg per 100 g) comes from pH adjustment during processing.",
+        "notes": "Pea protein isolate powder (used in Beyond Burger), nutrition from Bob's Red Mill pea protein. About 3 kg of dry peas make 1 kg of isolate under economic allocation (Früh et al. 2026). The isolate is 27% of the pea dry matter by weight but carries 72% of the burden, because starch and fibre co-products are worth less. Land and crop water are peas × 3.0, and per-hectare farm values are copied from peas.\n\nEmissions: Früh et al. 2026 (4.74 kg CO2e/kg, Germany, economic allocation) and CarbonCloud's French isolate (4.04). About half is the wet-processing energy. The high sodium (963 mg per 100 g) comes from pH adjustment during processing.\n\nPotassium and vitamin D come from other brands' labels.\n\nZinc, selenium, B12 and omega-3 are a guess from split peas. Magnesium, phosphorus, vitamins E and K, folate and B6 are left out because processing washes out an unknown share.",
         "land_types": {
             "temperate_grassland": 0.8,
             "dry": 0.2
@@ -1976,6 +1976,35 @@
                     "url": "https://fdc.nal.usda.gov/fdc-app.html#/food-details/2477360/nutrients",
                     "title": "USDA FoodData Central — Bob's Red Mill Unsweetened Pea Protein Powder (Branded, FDC 2477360, 2023; ingredient: pea protein isolate)",
                     "note": "Pea Protein — nutrition: FDC 2477360 (Bob's Red Mill Unsweetened Pea Protein Powder; single ingredient, pea protein isolate) per 100 g: 370 kcal, fat 5.56 g, sat fat 0 (label rounding), protein 77.8 g, fiber 3.7 g, sodium 963 mg (from pH adjustment in wet processing), carbs 7.41 g, sugars 0; converted to per gram. Single branded product, so confidence 4. Vitamins and minerals from USDA FDC 2477360 per 100 g (branded label, so only a few are listed): vitamin a 0 µg RAE (label: 0 IU), vitamin c 0 mg, calcium 74 mg, iron 23.33 mg; divided by 100 for per-gram values. Not reported, so left out: vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, magnesium, potassium, zinc, phosphorus, selenium."
+                }
+            },
+            {
+                "value": {
+                    "potassium": 1.49333333,
+                    "vitamin_d": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 488,
+                    "url": "https://fdc.nal.usda.gov/food-details/2586352/nutrients",
+                    "title": "Plain pea protein isolate labels — USDA Branded: NOW Foods pea protein (FDC 2586352), NOW Foods organic pea protein (1162800), Luchi Organics (2608970)",
+                    "note": "Pea Protein — ESTIMATE from other brands' labels. The Bob's Red Mill label this food comes from lists only calcium and iron, and USDA has no measured pea protein record, so potassium and vitamin D come from other plain pea protein isolate labels in USDA's Branded data: potassium 252 (NOW), 105 (NOW organic), 91 (Luchi) mg, averaged; vitamin D 0 on all three. Per 100 g: potassium 149.3 mg, vitamin d 0 µg; divided by 100 for per-gram values. Potassium varies a lot by maker because it is mostly washed out during processing. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "zinc": 0.11744031,
+                    "selenium": 0.36006055,
+                    "vitamin_b12": 0.0,
+                    "epa_dha": 0.0,
+                    "ala": 0.00232977
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 489,
+                    "url": "https://fdc.nal.usda.gov/food-details/172428/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172428: Peas, green, split, mature seeds, raw (scaled estimate for pea protein)",
+                    "note": "Pea Protein — GUESS from split peas, using the same method as rice protein. No pea protein label or database lists zinc or selenium, so they are scaled up from raw split peas by protein (77.8 ÷ 23.12 g = 3.37×), assuming they stay with the protein. Vitamin B12 is 0 (peas don't make it; USDA split peas report 0) and EPA/DHA is 0. ALA is the label fat (5.56 g) times the share of split pea fat that is ALA (0.163 of 3.89 g). Per 100 g: zinc 11.74 mg, selenium 36.01 µg, vitamin b12 0 µg, epa dha 0 mg, ala 0.233 g; divided by 100 for per-gram values. The same scaling would predict iron of ~16 mg; labels say 23–25, so treat this as rough. Magnesium, phosphorus, vitamins E and K, folate and B6 are left out: processing washes out an unknown share (potassium, for example, ends up ~20× lower than this scaling predicts). Only fills values missing from the main entries."
                 }
             }
         ],

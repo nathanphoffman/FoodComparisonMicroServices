@@ -23,7 +23,11 @@
             "Fruits — vitamins, minerals and omega-3 (raw): apple with skin FDC 171688, banana 173944, avocado all varieties 171705, coconut meat 170169, mango 169910, orange all varieties 169097, strawberries 167762, blueberries 171711, grapes 174683, watermelon 167765, pineapple 169124.",
             "Dairy — vitamins, minerals and omega-3: whole milk with added vitamin D FDC 171265, plain whole-milk yogurt 171284, salted butter 173410, cheddar 173414, part-skim mozzarella 171244, hard parmesan 170848, goat milk 171278, soft goat cheese 173435.",
             "Meats — vitamins, minerals and omega-3: beef ground 80/20 raw FDC 174036, chicken breast roasted 171477, pork ground raw 167902, turkey whole meat and skin roasted 171479, lamb composite cuts cooked 172480, deer roasted 175085, squirrel raw 172523, goat roasted 175304, duck meat only roasted 172411. Beef, pork and turkey records were picked as the closest USDA match to the existing calories, protein and fat.",
-            "Beverages, eggs, leafy greens, sweeteners and flaxseed — vitamins, minerals and omega-3: brewed coffee FDC 171890, brewed black tea 173227, brewed green tea 171917 (also used for white tea), whole raw egg 171287, romaine lettuce 169247, kale raw 168421, cabbage raw 169975, maple syrup 169661, granulated sugar 169655 (cane and beet), honey 169640, molasses 168820, flaxseed 169414."
+            "Beverages, eggs, leafy greens, sweeteners and flaxseed — vitamins, minerals and omega-3: brewed coffee FDC 171890, brewed black tea 173227, brewed green tea 171917 (also used for white tea), whole raw egg 171287, romaine lettuce 169247, kale raw 168421, cabbage raw 169975, maple syrup 169661, granulated sugar 169655 (cane and beet), honey 169640, molasses 168820, flaxseed 169414.",
+            "Impossible Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Soy 0.22, Sunflower Oil 0.055, Coconut Oil 0.055). Water, salt and the minor ingredients (other minor ingredients (flavors, methylcellulose, starch, dextrose, yeast extract, heme, salt); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0.374 mg, vitamin e 2.342 mg, vitamin k 4.554 µg, magnesium 18.92 mg, selenium 1.606 µg, ala 0.1326 g, epa dha 0 mg; divided by 100 for per-gram values. The soy share uses this dataset's cooked soybean values; the real ingredient is soy protein concentrate, which has less water, so magnesium and selenium are probably too low. Only fills values missing from the main entry.",
+            "Beyond Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03). Water, salt and the minor ingredients (other minor ingredients (flavors, dried yeast, cocoa butter, methylcellulose, potato starch, salt, fruit extracts); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, selenium 12.28 µg, ala 0.6858 g, epa dha 0 mg; divided by 100 for per-gram values. Pea and rice protein are themselves partly estimated. Left out because an ingredient has no value: vitamin e, vitamin k, folate, magnesium, phosphorus. Only fills values missing from the main entry.",
+            "Violife Just Like Parmesan (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03). Water, salt and the minor ingredients (salt; other minor ingredients (flavor, olive extract, beta carotene, vitamin B12); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, calcium 5.751 mg, iron 0.5858 mg, magnesium 5.82 mg, potassium 2.2 mg, zinc 0.7019 mg, phosphorus 19.91 mg, selenium 6.395 µg, ala 0.004576 g, epa dha 0 mg; divided by 100 for per-gram values. Beta-carotene is added as a colour but the amount isn't given, so vitamin A is probably too low. Left out because an ingredient has no value: vitamin e, vitamin k, folate, vitamin b6. Only fills values missing from the main entry.",
+            "Follow Your Heart Parmesan Grated (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Potato Starch 0.4, Palm Oil 0.184, Canola Oil 0.116). Water, salt and the minor ingredients (cellulose; maltodextrin; other minor ingredients (flavors, yeast, glycerin, salt, phosphates, carrageenan, miso, lecithin, annatto); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin e 4.958 mg, vitamin k 9.743 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, magnesium 1.2 mg, zinc 0.024 mg, phosphorus 5.2 mg, selenium 1.12 µg, ala 1.097 g, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
         ]
     },
     {
@@ -2636,7 +2640,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
         "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
         "notes": [
-            "Beef Liver — nutrition: FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 135 kcal, fat 3.63 g, sat fat 1.233 g, protein 20.36 g, fiber 0, sodium 69 mg, carbs 3.89 g, cholesterol 275 mg, sugars 0 g, trans fat 0.17 g. Vitamins and minerals: vitamin a 4968 µg RAE, vitamin c 1.3 mg, vitamin d 1.2 µg, vitamin e 0.38 mg, vitamin k 3.1 µg, folate 290 µg DFE, vitamin b12 59.3 µg, vitamin b6 1.083 mg, calcium 5 mg, iron 4.9 mg, magnesium 18 mg, potassium 313 mg, zinc 4 mg, phosphorus 387 mg, selenium 39.7 µg. Divided by 100 for per-gram values."
+            "Beef Liver — nutrition: FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 135 kcal, fat 3.63 g, sat fat 1.233 g, protein 20.36 g, fiber 0, sodium 69 mg, carbs 3.89 g, cholesterol 275 mg, sugars 0 g, trans fat 0.17 g. Vitamins and minerals: vitamin a 4968 µg RAE, vitamin c 1.3 mg, vitamin d 1.2 µg, vitamin e 0.38 mg, vitamin k 3.1 µg, folate 290 µg DFE, vitamin b12 59.3 µg, vitamin b6 1.083 mg, calcium 5 mg, iron 4.9 mg, magnesium 18 mg, potassium 313 mg, zinc 4 mg, phosphorus 387 mg, selenium 39.7 µg. Divided by 100 for per-gram values.",
+            "Lamb Liver — stand-in values: USDA's lamb liver record doesn't report vitamin K, so it comes from raw beef liver, the closest liver USDA measures. Per 100 g: vitamin k 3.1 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
         ]
     },
     {
@@ -2774,7 +2779,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
         "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
         "notes": [
-            "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil."
+            "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil.",
+            "Rice Protein — GUESS from brown rice. USDA brown rice reports 0 vitamin A, 0 vitamin C and 0 vitamin B12, and concentrating it can't create them, so they are 0 here. EPA/DHA is 0 because rice doesn't make them. ALA is the label fat (average 4.17 g per 100 g) times the share of brown rice fat that is ALA (0.032 of 3.2 g). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin b12 0 µg, epa dha 0 mg, ala 0.0417 g; divided by 100 for per-gram values. Vitamins E and K, folate and B6 are left out: they can't be estimated this way because an unknown share is washed out with the starch. Only fills values missing from the main entries."
         ]
     },
     {
@@ -2791,6 +2797,135 @@
         "title": "Feedipedia — Fish meal, type 65 protein (INRAE, CIRAD, AFZ and FAO feed tables)",
         "notes": [
             "Fishmeal — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's 'Fish meal, type 65 protein' feed table (70.7% protein in dry matter = 65% as fed, matching this entry), converted to as-fed with its average dry matter of 92.1%. Per kg dry matter: calcium 44.8 g, phosphorus 28.6 g, potassium 8.5 g, magnesium 2.4 g, zinc 107 mg, iron 382 mg, selenium 0.4 mg (selenium from only 3 samples). As-fed per gram: calcium 41.26 mg, phosphorus 26.34 mg, potassium 7.83 mg, magnesium 2.21 mg, zinc 0.099 mg, iron 0.35 mg, selenium 0.37 µg. Calcium and phosphorus are high because fishmeal includes ground bone. Vitamins are left out: the feed table lists none, and fishmeal vitamins vary with fish species and drying heat."
+        ]
+    },
+    {
+        "id": 474,
+        "url": "https://fdc.nal.usda.gov/food-details/170290/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 170290: Corn flour, whole-grain, yellow",
+        "notes": [
+            "Corn — stand-in values: USDA's corn grain record (170288) doesn't report EPA/DHA, so it comes from whole-grain yellow corn flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 475,
+        "url": "https://fdc.nal.usda.gov/food-details/168943/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 168943: Sorghum flour, whole-grain",
+        "notes": [
+            "Sorghum — stand-in values: USDA's sorghum grain record (169716) doesn't report these, so they come from whole-grain sorghum flour (the same grain, milled). Per 100 g: vitamin k 6.4 µg, epa dha 1 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 476,
+        "url": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 173904: Cereals, oats, regular and quick, not fortified, dry",
+        "notes": [
+            "Oats — stand-in values: USDA's oats record (169705) doesn't report these, so they come from dry regular/quick oats (not fortified). Per 100 g: vitamin e 0.42 mg, vitamin k 2 µg, selenium 28.9 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 477,
+        "url": "https://fdc.nal.usda.gov/food-details/172023/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172023: Millet flour",
+        "notes": [
+            "Millet — stand-in values: USDA's raw millet record (169702) doesn't report EPA/DHA, so it comes from millet flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 478,
+        "url": "https://fdc.nal.usda.gov/food-details/170185/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 170185: Nuts, pistachio nuts, dry roasted, without salt added",
+        "notes": [
+            "Pistachios — stand-in values: USDA's raw pistachio record (170184) doesn't report vitamin K, so it comes from dry-roasted unsalted pistachios (roasting removes a little water, so this may be slightly high). Per 100 g: vitamin k 13.2 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 479,
+        "url": "https://fdc.nal.usda.gov/food-details/170179/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 170179: Nuts, macadamia nuts, dry roasted, without salt added",
+        "notes": [
+            "Macadamia Nuts — stand-in values: USDA's raw macadamia record (170178) doesn't report vitamin K, so it comes from dry-roasted unsalted macadamias. Per 100 g: vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 480,
+        "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 170567: Nuts, almonds",
+        "notes": [
+            "Almond Milk (Unsweetened) — stand-in values: USDA's almond milk record (1999631) doesn't report vitamins C or K. Almond milk is mostly water with ~2–3% almonds, and USDA reports 0 vitamin C and 0 vitamin K for almonds themselves, so both are taken as 0. Per 100 g: vitamin c 0 mg, vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 481,
+        "url": "https://fdc.nal.usda.gov/food-details/171412/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 171412: Oil, coconut",
+        "notes": [
+            "Palm Oil — stand-in values: USDA's palm oil record doesn't report vitamin D. Plants don't make vitamin D, and USDA reports 0 for the other plant oils, so it uses coconut oil's reported 0. Per 100 g: vitamin d 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 482,
+        "url": "https://fdc.nal.usda.gov/food-details/167903/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 167903: Pork, fresh, ground, cooked",
+        "notes": [
+            "Pork — stand-in values: USDA's raw ground pork record (167902) doesn't report these, so they come from cooked ground pork, scaled down to raw by protein (16.88 ÷ 25.69 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0.3285 µg, vitamin e 0.138 mg, vitamin k 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 483,
+        "url": "https://fdc.nal.usda.gov/food-details/172604/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172604: Game meat, deer, loin, separable lean only, 1\" steak, cooked, broiled",
+        "notes": [
+            "Venison (Wild) — stand-in values: USDA's roasted deer record (175085) doesn't report these, so they come from broiled deer loin (lean, also cooked). Per 100 g: vitamin d 0 µg, vitamin e 0.62 mg, vitamin k 1.2 µg, folate 9 µg DFE, vitamin b12 1.83 µg, vitamin b6 0.756 mg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 484,
+        "url": "https://fdc.nal.usda.gov/food-details/172524/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172524: Game meat, squirrel, cooked, roasted",
+        "notes": [
+            "Wild Squirrel — stand-in values: USDA's raw squirrel record (172523) doesn't report these, so they come from its roasted squirrel record, scaled down to raw by protein (21.23 ÷ 30.77 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0 µg, vitamin e 0.276 mg, vitamin k 0.9659 µg, folate 6.21 µg DFE, vitamin b12 4.492 µg, vitamin b6 0.2553 mg, zinc 1.228 mg, epa dha 75.21 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 485,
+        "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 168384: Alfalfa seeds, sprouted, raw",
+        "notes": [
+            "Alfalfa — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries.",
+            "Grass Hay — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 486,
+        "url": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 174182: Fish, anchovy, european, raw",
+        "notes": [
+            "Fishmeal — GUESS for vitamins. Neither USDA nor the feed table gives fishmeal vitamins, so they are scaled up from raw European anchovy (a close relative of the Peruvian anchoveta fishmeal is made from): B12, B6 and folate by protein (65 ÷ 20.35 g = 3.19×), vitamins A, E and K by fat (10 ÷ 4.84 g = 2.07×), vitamin C as anchovy's reported value. Per 100 g: vitamin b12 1.98 µg, vitamin b6 0.4568 mg, folate 28.75 µg DFE, vitamin a 30.99 µg RAE, vitamin e 1.178 mg, vitamin k 0.2066 µg, vitamin c 0 mg; divided by 100 for per-gram values. Fishmeal is cooked and dried at high heat, which destroys part of the B6, folate and vitamin A, so these are likely too high. Vitamin D is left out because USDA's raw anchovy doesn't report it. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 487,
+        "url": "https://fdc.nal.usda.gov/food-details/172336/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172336: Oil, canola (used to estimate oat milk's vitamin E and ALA)",
+        "notes": [
+            "Oat Milk (Unsweetened) — GUESS. USDA's oat milk record (2257046) doesn't report vitamins C or E or any omega-3. Most of oat milk's fat (2.749 g per 100 g) is added rapeseed (canola) oil, so vitamin E and ALA are that fat times USDA canola oil's values (17.46 mg vitamin E and 9.137 g ALA per 100 g oil). EPA/DHA is 0 because no ingredient is from fish or algae. Vitamin C is 0 because oats have none (USDA oats 169705) and none is added. Per 100 g: vitamin e 0.48 mg, ala 0.2512 g, epa dha 0 mg, vitamin c 0 mg; divided by 100 for per-gram values. Some oat milks use sunflower oil instead, which has more vitamin E and almost no ALA. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 488,
+        "url": "https://fdc.nal.usda.gov/food-details/2586352/nutrients",
+        "title": "Plain pea protein isolate labels — USDA Branded: NOW Foods pea protein (FDC 2586352), NOW Foods organic pea protein (1162800), Luchi Organics (2608970)",
+        "notes": [
+            "Pea Protein — ESTIMATE from other brands' labels. The Bob's Red Mill label this food comes from lists only calcium and iron, and USDA has no measured pea protein record, so potassium and vitamin D come from other plain pea protein isolate labels in USDA's Branded data: potassium 252 (NOW), 105 (NOW organic), 91 (Luchi) mg, averaged; vitamin D 0 on all three. Per 100 g: potassium 149.3 mg, vitamin d 0 µg; divided by 100 for per-gram values. Potassium varies a lot by maker because it is mostly washed out during processing. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 489,
+        "url": "https://fdc.nal.usda.gov/food-details/172428/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 172428: Peas, green, split, mature seeds, raw (scaled estimate for pea protein)",
+        "notes": [
+            "Pea Protein — GUESS from split peas, using the same method as rice protein. No pea protein label or database lists zinc or selenium, so they are scaled up from raw split peas by protein (77.8 ÷ 23.12 g = 3.37×), assuming they stay with the protein. Vitamin B12 is 0 (peas don't make it; USDA split peas report 0) and EPA/DHA is 0. ALA is the label fat (5.56 g) times the share of split pea fat that is ALA (0.163 of 3.89 g). Per 100 g: zinc 11.74 mg, selenium 36.01 µg, vitamin b12 0 µg, epa dha 0 mg, ala 0.233 g; divided by 100 for per-gram values. The same scaling would predict iron of ~16 mg; labels say 23–25, so treat this as rough. Magnesium, phosphorus, vitamins E and K, folate and B6 are left out: processing washes out an unknown share (potassium, for example, ends up ~20× lower than this scaling predicts). Only fills values missing from the main entries."
         ]
     }
 ]

@@ -863,7 +863,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
-        "notes": "Pistachio kernels, nutrition from USDA. Grown in dry, irrigated regions of Iran, California and Türkiye. Yield (~1.2 t/ha) is industry data.\n\nWater averages Mekonnen & Hoekstra (10,697 L/kg) and a tree-nut study (11,356). Emissions (~2.8 kg CO2e/kg) are slightly above other tree nuts because of irrigation pumping in arid regions. Per-hectare pesticide and fertilizer notes were copied from the water note. Availability is FAOSTAT in-shell production × ~49% kernel.",
+        "notes": "Pistachio kernels, nutrition from USDA. Grown in dry, irrigated regions of Iran, California and Türkiye. Yield (~1.2 t/ha) is industry data.\n\nWater averages Mekonnen & Hoekstra (10,697 L/kg) and a tree-nut study (11,356). Emissions (~2.8 kg CO2e/kg) are slightly above other tree nuts because of irrigation pumping in arid regions. Per-hectare pesticide and fertilizer notes were copied from the water note. Availability is FAOSTAT in-shell production × ~49% kernel.\n\nVitamin K comes from a stand-in USDA record (dry-roasted pistachios).",
         "land_types": {
             "dry": 1.0
         },
@@ -904,6 +904,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170184 per 100 g: vitamin a 26 µg RAE, vitamin c 5.6 mg, vitamin d 0 µg, vitamin e 2.86 mg, folate 51 µg DFE, vitamin b12 0 µg, vitamin b6 1.7 mg, calcium 105 mg, iron 3.92 mg, magnesium 121 mg, potassium 1025 mg, zinc 2.2 mg, phosphorus 490 mg, selenium 7 µg; not reported, so left out: vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 170184 per 100 g: ALA 0.289 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_k": 0.132
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 478,
+                    "url": "https://fdc.nal.usda.gov/food-details/170185/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 170185: Nuts, pistachio nuts, dry roasted, without salt added",
+                    "note": "Pistachios — stand-in values: USDA's raw pistachio record (170184) doesn't report vitamin K, so it comes from dry-roasted unsalted pistachios (roasting removes a little water, so this may be slightly high). Per 100 g: vitamin k 13.2 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -1677,7 +1689,7 @@
         "category": "nuts",
         "human_food": 1,
         "tags": [],
-        "notes": "Macadamia kernels, nutrition from USDA. Grown in South Africa, Kenya, Australia and Hawaii. Yield (~2.5 t/ha), water, pesticide and fertilizer values have no documented derivation.\n\nEmissions (~3.5 kg CO2e/kg) are at the top of Poore & Nemecek's tree-nut range, because the very hard shell needs energy-intensive cracking. Availability is the International Nut Council's 2024 world kernel production (~89 kt, a single year).",
+        "notes": "Macadamia kernels, nutrition from USDA. Grown in South Africa, Kenya, Australia and Hawaii. Yield (~2.5 t/ha), water, pesticide and fertilizer values have no documented derivation.\n\nEmissions (~3.5 kg CO2e/kg) are at the top of Poore & Nemecek's tree-nut range, because the very hard shell needs energy-intensive cracking. Availability is the International Nut Council's 2024 world kernel production (~89 kt, a single year).\n\nVitamin K comes from a stand-in USDA record (dry-roasted macadamias).",
         "land_types": {
             "tropical_forest": 0.5,
             "tropical_savanna": 0.5
@@ -1719,6 +1731,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170178 per 100 g: vitamin a 0 µg RAE, vitamin c 1.2 mg, vitamin d 0 µg, vitamin e 0.54 mg, folate 11 µg DFE, vitamin b12 0 µg, vitamin b6 0.275 mg, calcium 85 mg, iron 3.69 mg, magnesium 130 mg, potassium 368 mg, zinc 1.3 mg, phosphorus 188 mg, selenium 3.6 µg; not reported, so left out: vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 170178 per 100 g: ALA 0.206 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_k": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 479,
+                    "url": "https://fdc.nal.usda.gov/food-details/170179/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 170179: Nuts, macadamia nuts, dry roasted, without salt added",
+                    "note": "Macadamia Nuts — stand-in values: USDA's raw macadamia record (170178) doesn't report vitamin K, so it comes from dry-roasted unsalted macadamias. Per 100 g: vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -2951,7 +2975,7 @@
             "milk",
             "beverage"
         ],
-        "notes": "Unsweetened almond milk, nutrition from USDA (FDC Foundation Foods). It's only about 2.5% almonds, judging by its calories, protein and water. So land is the almond yield ÷ 2.5% ≈ 120,000 kg of almond milk per ha. That was corrected on 2026-09-26: the earlier Poore & Nemecek almond-milk land figure implied ~15% almonds and overstated land about 6×.\n\nWater (368 L/kg) and emissions (0.70 kg CO2e/kg, cradle to retail) are Poore & Nemecek's own almond-milk values. The US water value is almonds' California water × 2.5%. Per-hectare pesticide and fertilizer are copied from almonds.\n\nAlmond orchards depend on trucked-in honeybee colonies; that indirect bee harm is described but not scored. Availability (~4.2 Mt) is a rough estimate from global market value ÷ an assumed retail price (confidence 1).",
+        "notes": "Unsweetened almond milk, nutrition from USDA (FDC Foundation Foods). It's only about 2.5% almonds, judging by its calories, protein and water. So land is the almond yield ÷ 2.5% ≈ 120,000 kg of almond milk per ha. That was corrected on 2026-09-26: the earlier Poore & Nemecek almond-milk land figure implied ~15% almonds and overstated land about 6×.\n\nWater (368 L/kg) and emissions (0.70 kg CO2e/kg, cradle to retail) are Poore & Nemecek's own almond-milk values. The US water value is almonds' California water × 2.5%. Per-hectare pesticide and fertilizer are copied from almonds.\n\nAlmond orchards depend on trucked-in honeybee colonies; that indirect bee harm is described but not scored. Availability (~4.2 Mt) is a rough estimate from global market value ÷ an assumed retail price (confidence 1).\n\nVitamins C and K are taken as 0 from USDA's almonds record, since almond milk is mostly water and almonds have none.",
         "land_types": {
             "dry": 1.0
         },
@@ -2992,6 +3016,19 @@
                     "url": "https://fdc.nal.usda.gov/food-details/1999631/nutrients",
                     "title": "USDA FoodData Central — Almond Milk, Unsweetened, Plain, Shelf Stable (Foundation Foods)",
                     "note": "Unsweetened almond milk (id 69) — USDA FDC Foundation Foods fdcId 1999631, per-100g analytical values converted to per-gram: 14.56 kcal, 1.221 g fat, 0.104 g sat fat, 0.555 g protein, 0 g fiber, 59.58 mg sodium, 0.337 g carbs, 0 g sugar, 0 cholesterol/trans fat. Values reflect the fortified, ready-to-drink product as purchased (calcium carbonate, vitamin D/E, sunflower lecithin, gellan/locust bean gum added; no added sugar). Vitamins and minerals from USDA FDC 1999631 per 100 g: vitamin a 41 µg RAE, vitamin d 0.93 µg, vitamin e 3.32 mg, folate 0 µg DFE, vitamin b12 0.34 µg, vitamin b6 0 mg, calcium 173 mg, iron 0.29 mg, magnesium 6.8 mg, potassium 31 mg, zinc 0.17 mg, phosphorus 30 mg, selenium 0 µg; not reported, so left out: vitamin c, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 1999631 per 100 g: ALA 0.001 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_c": 0.0,
+                    "vitamin_k": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 480,
+                    "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 170567: Nuts, almonds",
+                    "note": "Almond Milk (Unsweetened) — stand-in values: USDA's almond milk record (1999631) doesn't report vitamins C or K. Almond milk is mostly water with ~2–3% almonds, and USDA reports 0 vitamin C and 0 vitamin K for almonds themselves, so both are taken as 0. Per 100 g: vitamin c 0 mg, vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],

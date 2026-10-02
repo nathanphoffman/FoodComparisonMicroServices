@@ -917,7 +917,7 @@
     "tags": [
       "common"
     ],
-    "notes": "Crude palm oil, nutrition from USDA (about half saturated fat). Palm is by far the highest-yielding oil crop: ~3.5 t of oil per ha (fresh fruit bunch yield × ~20% oil extraction), so it needs the least land per kg of any oil.\n\nBut much of that land was tropical rainforest and peat swamp in Indonesia and Malaysia, which the Land Use sliders weigh 10× heavier than temperate land. Emissions are Poore & Nemecek's palm oil value (7.39 kg CO2e/kg), the highest of the major oils, mostly land-use change and peat drainage. Wildlife lost to clearing (orangutans, tigers, elephants) is described but isn't modelled beyond the generic land-clearing deaths. Pesticide use (~1 kg/ha) is an estimate (confidence 2).",
+    "notes": "Crude palm oil, nutrition from USDA (about half saturated fat). Palm is by far the highest-yielding oil crop: ~3.5 t of oil per ha (fresh fruit bunch yield × ~20% oil extraction), so it needs the least land per kg of any oil.\n\nBut much of that land was tropical rainforest and peat swamp in Indonesia and Malaysia, which the Land Use sliders weigh 10× heavier than temperate land. Emissions are Poore & Nemecek's palm oil value (7.39 kg CO2e/kg), the highest of the major oils, mostly land-use change and peat drainage. Wildlife lost to clearing (orangutans, tigers, elephants) is described but isn't modelled beyond the generic land-clearing deaths. Pesticide use (~1 kg/ha) is an estimate (confidence 2).\n\nVitamin D is taken as 0 from USDA's coconut oil record, since plant oils have none.",
     "land_types": {
       "tropical_forest": 0.85,
       "wetland": 0.15
@@ -960,6 +960,18 @@
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
           "note": "Palm oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, palm', reported per gram (884 kcal, 100 g fat, ~49.7 g sat fat per 100 g — roughly half saturated, unusually high for a vegetable oil). Vitamins and minerals from USDA FDC 171015 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin e 15.94 mg, vitamin k 8 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.01 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin d; divided by 100 for per-gram values. Omega-3 from FDC 171015 per 100 g: ALA 0.2 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+        }
+      },
+      {
+        "value": {
+          "vitamin_d": 0.0
+        },
+        "confidence": 2,
+        "source": {
+          "id": 481,
+          "url": "https://fdc.nal.usda.gov/food-details/171412/nutrients",
+          "title": "USDA FoodData Central — SR Legacy 171412: Oil, coconut",
+          "note": "Palm Oil — stand-in values: USDA's palm oil record doesn't report vitamin D. Plants don't make vitamin D, and USDA reports 0 for the other plant oils, so it uses coconut oil's reported 0. Per 100 g: vitamin d 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
         }
       }
     ],

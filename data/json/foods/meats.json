@@ -612,7 +612,7 @@
         "tags": [
             "meat"
         ],
-        "notes": "Pork, nutrition from USDA. Pig neuron count is a measured value (~2.2 billion, Kazu et al. 2014), one of the few direct counts. The pig in that study was young; neuron numbers are mostly set early in life, so it's used for market pigs (~90 kg at slaughter, 70% meat yield).\n\nFeed is corn, soy and wheat. Emissions: on-farm methane and nitrous oxide come from Poore & Nemecek's farm stage, split using GLEAM's pig shares (mostly manure methane). That was fixed on 2026-09-26: before, they added up to ~5× Poore & Nemecek's farm total. Post-farm stages (processing, transport, retail, packaging, losses) were added the same day.\n\nNo pasture, since most pigs are housed.",
+        "notes": "Pork, nutrition from USDA. Pig neuron count is a measured value (~2.2 billion, Kazu et al. 2014), one of the few direct counts. The pig in that study was young; neuron numbers are mostly set early in life, so it's used for market pigs (~90 kg at slaughter, 70% meat yield).\n\nFeed is corn, soy and wheat. Emissions: on-farm methane and nitrous oxide come from Poore & Nemecek's farm stage, split using GLEAM's pig shares (mostly manure methane). That was fixed on 2026-09-26: before, they added up to ~5× Poore & Nemecek's farm total. Post-farm stages (processing, transport, retail, packaging, losses) were added the same day.\n\nNo pasture, since most pigs are housed.\n\nSome vitamins come from a stand-in USDA record (cooked ground pork), scaled to raw.",
         "land_types": {
             "temperate_grassland": 0.7,
             "tropical_savanna": 0.2,
@@ -652,6 +652,21 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 167902 per 100 g: vitamin a 2 µg RAE, vitamin c 0.7 mg, folate 5 µg DFE, vitamin b12 0.7 µg, vitamin b6 0.383 mg, calcium 14 mg, iron 0.88 mg, magnesium 19 mg, potassium 287 mg, zinc 2.2 mg, phosphorus 175 mg, selenium 24.6 µg; not reported, so left out: vitamin d, vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 167902 per 100 g: ALA 0.07 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.00328533,
+                    "vitamin_e": 0.00137984,
+                    "vitamin_k": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 482,
+                    "url": "https://fdc.nal.usda.gov/food-details/167903/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 167903: Pork, fresh, ground, cooked",
+                    "note": "Pork — stand-in values: USDA's raw ground pork record (167902) doesn't report these, so they come from cooked ground pork, scaled down to raw by protein (16.88 ÷ 25.69 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0.3285 µg, vitamin e 0.138 mg, vitamin k 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -1334,7 +1349,7 @@
             "game",
             "wild"
         ],
-        "notes": "Wild white-tailed deer, as hunted in North America. Nutrition from USDA raw venison: very lean.\n\nThere's no farmland, feed or pasture, because the deer live on land that exists anyway. Land use is zero, and the scorer treats zero as a perfect score on that measure. It's tagged 'wild', so the Over-Hunting slider divides its score, to account for limited wild supply. Methane is the deer's own digestion (~3.5 kg per deer per year, Felton 2014). CO2 is mostly hunters driving to and from the hunt.\n\nNo deer brain has been counted. The 5.0 billion neurons are estimated from a ~200 g brain using counts from related hoofed animals (raised from 1.7 billion on 2026-10-01). Deer are ~70 kg live with ~50% boneless meat. Availability is FAOSTAT 'game meat' (all species, so an upper bound for venison).",
+        "notes": "Wild white-tailed deer, as hunted in North America. Nutrition from USDA raw venison: very lean.\n\nThere's no farmland, feed or pasture, because the deer live on land that exists anyway. Land use is zero, and the scorer treats zero as a perfect score on that measure. It's tagged 'wild', so the Over-Hunting slider divides its score, to account for limited wild supply. Methane is the deer's own digestion (~3.5 kg per deer per year, Felton 2014). CO2 is mostly hunters driving to and from the hunt.\n\nNo deer brain has been counted. The 5.0 billion neurons are estimated from a ~200 g brain using counts from related hoofed animals (raised from 1.7 billion on 2026-10-01). Deer are ~70 kg live with ~50% boneless meat. Availability is FAOSTAT 'game meat' (all species, so an upper bound for venison).\n\nSome vitamins come from a stand-in USDA record (broiled deer loin).",
         "nutrition": [
             {
                 "value": {
@@ -1365,6 +1380,24 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Venison (Wild) — nutrition: USDA FDC entry for raw game meat, deer (NDB No. 17162 / FDC ID 174491). Values reported per gram of raw edible meat. Protein ~30.2 g/100g, fat ~3.1 g/100g, sat fat ~1.2 g/100g, calories ~158 kcal/100g, cholesterol ~112 mg/100g, sodium ~54 mg/100g. Venison is notably lean relative to other red meats with very low saturated fat. Vitamins and minerals from USDA FDC 175085 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, calcium 7 mg, iron 4.47 mg, magnesium 24 mg, potassium 335 mg, zinc 2.75 mg, phosphorus 226 mg, selenium 12.9 µg; not reported, so left out: vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6; divided by 100 for per-gram values. Omega-3 from FDC 175085 per 100 g: ALA 0.09 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0062,
+                    "vitamin_k": 0.012,
+                    "folate": 0.09,
+                    "vitamin_b12": 0.0183,
+                    "vitamin_b6": 0.00756,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 483,
+                    "url": "https://fdc.nal.usda.gov/food-details/172604/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172604: Game meat, deer, loin, separable lean only, 1\" steak, cooked, broiled",
+                    "note": "Venison (Wild) — stand-in values: USDA's roasted deer record (175085) doesn't report these, so they come from broiled deer loin (lean, also cooked). Per 100 g: vitamin d 0 µg, vitamin e 0.62 mg, vitamin k 1.2 µg, folate 9 µg DFE, vitamin b12 1.83 µg, vitamin b6 0.756 mg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -1482,7 +1515,7 @@
             "game",
             "wild"
         ],
-        "notes": "Wild eastern grey squirrel, as hunted in North America. Nutrition from USDA raw squirrel.\n\nLike venison, there's no farmland, feed or pasture, so land use is zero. It's tagged 'wild' for the Over-Hunting slider. A squirrel weighs ~0.5 kg with ~40% meat, so about 5 squirrels die per kg of meat. Its estimated 450 million neurons (rodent brain-size scaling; no direct count) make it the highest sentient harm per kg of any land animal here. That's why it ranks near the bottom.\n\nCO2 is mostly hunter driving, spread over very little meat per trip. Availability (5 Gg) is a placeholder guess with no data behind it (confidence 1). It should be replaced if a real figure turns up.",
+        "notes": "Wild eastern grey squirrel, as hunted in North America. Nutrition from USDA raw squirrel.\n\nLike venison, there's no farmland, feed or pasture, so land use is zero. It's tagged 'wild' for the Over-Hunting slider. A squirrel weighs ~0.5 kg with ~40% meat, so about 5 squirrels die per kg of meat. Its estimated 450 million neurons (rodent brain-size scaling; no direct count) make it the highest sentient harm per kg of any land animal here. That's why it ranks near the bottom.\n\nCO2 is mostly hunter driving, spread over very little meat per trip. Availability (5 Gg) is a placeholder guess with no data behind it (confidence 1). It should be replaced if a real figure turns up.\n\nSome vitamins and zinc come from a stand-in USDA record (roasted squirrel), scaled to raw.",
         "nutrition": [
             {
                 "value": {
@@ -1512,6 +1545,25 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Wild Squirrel — nutrition: USDA FDC entry for game meat, squirrel, raw (FDC ID 174489). Values reported per gram of raw edible meat. Protein ~21.4 g/100g, fat ~3.21 g/100g, sat fat ~0.92 g/100g, calories ~120 kcal/100g, cholesterol ~83 mg/100g, sodium ~101 mg/100g. Squirrel is a very lean game meat, lower in calories and fat than most domestic meats. Vitamins and minerals from USDA FDC 172523 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, calcium 2 mg, iron 4.7 mg, magnesium 24 mg, potassium 304 mg, phosphorus 172 mg, selenium 9.3 µg; not reported, so left out: vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, zinc; divided by 100 for per-gram values. Omega-3 from FDC 172523 per 100 g: ALA 0.02 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.00275983,
+                    "vitamin_k": 0.00965941,
+                    "folate": 0.0620962,
+                    "vitamin_b12": 0.04491625,
+                    "vitamin_b6": 0.00255284,
+                    "zinc": 0.01228125,
+                    "epa_dha": 0.75205395
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 484,
+                    "url": "https://fdc.nal.usda.gov/food-details/172524/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172524: Game meat, squirrel, cooked, roasted",
+                    "note": "Wild Squirrel — stand-in values: USDA's raw squirrel record (172523) doesn't report these, so they come from its roasted squirrel record, scaled down to raw by protein (21.23 ÷ 30.77 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0 µg, vitamin e 0.276 mg, vitamin k 0.9659 µg, folate 6.21 µg DFE, vitamin b12 4.492 µg, vitamin b6 0.2553 mg, zinc 1.228 mg, epa dha 75.21 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -2961,7 +3013,7 @@
             "meat",
             "organ"
         ],
-        "notes": "Raw lamb liver, nutrition from USDA (FDC 172531). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from lamb: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of lamb meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Lamb's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): lamb meat production × about 0.031 kg of liver per kg of meat.\n\nSome vitamins come from a stand-in USDA record (Lamb, New Zealand, imported, liver, raw) because the main record doesn't list them.",
+        "notes": "Raw lamb liver, nutrition from USDA (FDC 172531). Liver is very high in vitamin A and B12, which gives it a very high nutrition score.\n\nEverything else is copied from lamb: emissions, land, water, feed and the animal figures. That treats a kg of liver as having the same footprint and animal harm as a kg of lamb meat, rather than giving it a smaller share because it is a low-value byproduct of the same animal. See Lamb's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): lamb meat production × about 0.031 kg of liver per kg of meat.\n\nSome vitamins come from a stand-in USDA record (Lamb, New Zealand, imported, liver, raw) because the main record doesn't list them.\n\nVitamin K comes from a stand-in USDA record (raw beef liver).",
         "land_types": {
             "temperate_grassland": 0.6,
             "dry": 0.3,
@@ -3015,6 +3067,18 @@
                     "url": "https://fdc.nal.usda.gov/food-details/172615/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 172615: Lamb, New Zealand, imported, liver, raw",
                     "note": "Lamb Liver — stand-in vitamins: USDA's lamb liver record (172531) has no vitamin D, E or EPA/DHA, so they come from raw New Zealand lamb liver. Per 100 g: vitamin d 0 µg, vitamin e 0.86 mg, epa dha 292 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_k": 0.031
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 454,
+                    "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
+                    "note": "Lamb Liver — stand-in values: USDA's lamb liver record doesn't report vitamin K, so it comes from raw beef liver, the closest liver USDA measures. Per 100 g: vitamin k 3.1 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],

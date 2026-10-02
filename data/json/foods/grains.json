@@ -375,7 +375,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
-        "notes": "Corn (maize) grain, nutrition from USDA (raw grain). World yield ~5.6 t/ha; the US gets ~10.9 t/ha (Corn Belt). Water is Mekonnen & Hoekstra (much lower per kg in the US). FAOSTAT production includes corn grown for animal feed and ethanol.\n\nEmissions for eating corn are 1.13 kg CO2e per kg of grain. That was corrected on 2026-09-24 from 1.7, which was Poore & Nemecek's figure per kg of maize meal, not grain. As animal feed, corn uses a farm-gate value (0.79 world, including land-use change; ~0.2–0.33 US). Pesticides (atrazine, glyphosate, metolachlor, ~2.3 kg/ha) are US data that stands in for the world.\n\nCorn oil borrows corn's per-hectare data.",
+        "notes": "Corn (maize) grain, nutrition from USDA (raw grain). World yield ~5.6 t/ha; the US gets ~10.9 t/ha (Corn Belt). Water is Mekonnen & Hoekstra (much lower per kg in the US). FAOSTAT production includes corn grown for animal feed and ethanol.\n\nEmissions for eating corn are 1.13 kg CO2e per kg of grain. That was corrected on 2026-09-24 from 1.7, which was Poore & Nemecek's figure per kg of maize meal, not grain. As animal feed, corn uses a farm-gate value (0.79 world, including land-use change; ~0.2–0.33 US). Pesticides (atrazine, glyphosate, metolachlor, ~2.3 kg/ha) are US data that stands in for the world.\n\nCorn oil borrows corn's per-hectare data.\n\nEPA/DHA comes from a stand-in USDA record (whole-grain corn flour).",
         "land_types": {
             "temperate_grassland": 0.75,
             "tropical_savanna": 0.15,
@@ -418,6 +418,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170288 per 100 g: vitamin a 11 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.49 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 0 µg, vitamin b6 0.622 mg, calcium 7 mg, iron 2.71 mg, magnesium 127 mg, potassium 287 mg, zinc 2.21 mg, phosphorus 210 mg, selenium 15.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 170288 per 100 g: ALA 0.065 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 474,
+                    "url": "https://fdc.nal.usda.gov/food-details/170290/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 170290: Corn flour, whole-grain, yellow",
+                    "note": "Corn — stand-in values: USDA's corn grain record (170288) doesn't report EPA/DHA, so it comes from whole-grain yellow corn flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -779,7 +791,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
-        "notes": "Sorghum grain, nutrition from USDA. Yield (4.2 t/ha) is US data used for every region, which likely overstates world yields; African and Indian sorghum yields are much lower. Water (2,830 L/kg) and per-hectare values have no documented derivation.\n\nEmissions (1.4 kg CO2e/kg) can't be verified: Poore & Nemecek have no sorghum row (flagged 2026-09-24, confidence 2). As animal feed, a farm-gate proxy is used (0.91 world from Poore & Nemecek's 'misc. cereals' row; 0.25 US from a 300-grower survey). Millet borrows sorghum's pesticide profile.",
+        "notes": "Sorghum grain, nutrition from USDA. Yield (4.2 t/ha) is US data used for every region, which likely overstates world yields; African and Indian sorghum yields are much lower. Water (2,830 L/kg) and per-hectare values have no documented derivation.\n\nEmissions (1.4 kg CO2e/kg) can't be verified: Poore & Nemecek have no sorghum row (flagged 2026-09-24, confidence 2). As animal feed, a farm-gate proxy is used (0.91 world from Poore & Nemecek's 'misc. cereals' row; 0.25 US from a 300-grower survey). Millet borrows sorghum's pesticide profile.\n\nSome values come from a stand-in USDA record (whole-grain sorghum flour).",
         "land_types": {
             "tropical_savanna": 0.6,
             "temperate_grassland": 0.4
@@ -820,6 +832,19 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 169716 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.5 mg, folate 20 µg DFE, vitamin b12 0 µg, vitamin b6 0.443 mg, calcium 13 mg, iron 3.36 mg, magnesium 165 mg, potassium 363 mg, zinc 1.67 mg, phosphorus 289 mg, selenium 12.2 µg; not reported, so left out: vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 169716 per 100 g: ALA 0.065 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_k": 0.064,
+                    "epa_dha": 0.01
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 475,
+                    "url": "https://fdc.nal.usda.gov/food-details/168943/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168943: Sorghum flour, whole-grain",
+                    "note": "Sorghum — stand-in values: USDA's sorghum grain record (169716) doesn't report these, so they come from whole-grain sorghum flour (the same grain, milled). Per 100 g: vitamin k 6.4 µg, epa dha 1 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -1407,7 +1432,7 @@
         "category": "grains",
         "human_food": 1,
         "tags": [],
-        "notes": "Rolled oats (oatmeal), nutrition from USDA. Fixed on 2026-09-24: yield and water were per kg of oat grain including the hull, but nutrition is dehulled rolled oats. So yield is now FAO grain yield × 55% (FAO rolled-oat extraction) ≈ 1.4 t/ha, and water was raised to match.\n\nEmissions (2.48 kg CO2e/kg) are Poore & Nemecek's oatmeal value per kg of oatmeal. The earlier 1.58 was per kg of grain. Still open: FAO's 55% conversion and Poore & Nemecek's implied conversion (~73%) disagree. Per-hectare pesticide and fertilizer values are older estimates without a documented derivation. Oat milk is built on this entry.",
+        "notes": "Rolled oats (oatmeal), nutrition from USDA. Fixed on 2026-09-24: yield and water were per kg of oat grain including the hull, but nutrition is dehulled rolled oats. So yield is now FAO grain yield × 55% (FAO rolled-oat extraction) ≈ 1.4 t/ha, and water was raised to match.\n\nEmissions (2.48 kg CO2e/kg) are Poore & Nemecek's oatmeal value per kg of oatmeal. The earlier 1.58 was per kg of grain. Still open: FAO's 55% conversion and Poore & Nemecek's implied conversion (~73%) disagree. Per-hectare pesticide and fertilizer values are older estimates without a documented derivation. Oat milk is built on this entry.\n\nSome values come from a stand-in USDA record (dry rolled oats, not fortified).",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.4
@@ -1446,6 +1471,21 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 169705 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, folate 56 µg DFE, vitamin b12 0 µg, vitamin b6 0.119 mg, calcium 54 mg, iron 4.72 mg, magnesium 177 mg, potassium 429 mg, zinc 3.97 mg, phosphorus 523 mg; not reported, so left out: vitamin e, vitamin k, selenium; divided by 100 for per-gram values. Omega-3 from FDC 169705 per 100 g: ALA 0.111 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.0042,
+                    "vitamin_k": 0.02,
+                    "selenium": 0.289,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 476,
+                    "url": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 173904: Cereals, oats, regular and quick, not fortified, dry",
+                    "note": "Oats — stand-in values: USDA's oats record (169705) doesn't report these, so they come from dry regular/quick oats (not fortified). Per 100 g: vitamin e 0.42 mg, vitamin k 2 µg, selenium 28.9 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -2248,7 +2288,7 @@
             "milk",
             "beverage"
         ],
-        "notes": "Unsweetened oat milk, nutrition from USDA (FDC Foundation Foods). It's about 10% oats (Oatly recipe), so land is the oats entry's yield ÷ 10% ≈ 13,750 kg of oat milk per ha. That matches Poore & Nemecek's own oat-milk land figure within a few percent.\n\nEmissions (0.88 kg CO2e/kg) and water come straight from Poore & Nemecek's oat-milk value, covering farming, processing, packaging and retail. Per-hectare pesticide and fertilizer are copied from oats. Availability (~1.5 Mt/yr) is a rough market-based estimate (confidence 1).",
+        "notes": "Unsweetened oat milk, nutrition from USDA (FDC Foundation Foods). It's about 10% oats (Oatly recipe), so land is the oats entry's yield ÷ 10% ≈ 13,750 kg of oat milk per ha. That matches Poore & Nemecek's own oat-milk land figure within a few percent.\n\nEmissions (0.88 kg CO2e/kg) and water come straight from Poore & Nemecek's oat-milk value, covering farming, processing, packaging and retail. Per-hectare pesticide and fertilizer are copied from oats. Availability (~1.5 Mt/yr) is a rough market-based estimate (confidence 1).\n\nVitamins C and E and omega-3 are a guess from its rapeseed oil and oats.",
         "land_types": {
             "temperate_grassland": 0.6,
             "temperate_forest": 0.4
@@ -2287,6 +2327,21 @@
                     "url": "https://fdc.nal.usda.gov/food-details/2257046/nutrients",
                     "title": "USDA FoodData Central — Foundation Foods: Oat milk, unsweetened, plain, refrigerated (fdcId 2257046)",
                     "note": "Unsweetened oat milk — USDA FDC Foundation Foods fdcId 2257046, per 100 g converted to per gram: 48.33 kcal, 2.749 g fat, 0.797 g protein, 0 g fiber, 5.10 g carbs, 2.32 g sugars, 41.98 mg sodium. sat_fat not reported by FDC: estimated 0.3 g/100 g (~11% of fat; most fat is added rapeseed oil at ~7% saturated plus oat lipids at ~18%; Oatly labels show 0.2 g saturates per 1.5 g fat). Vitamins and minerals from USDA FDC 2257046 per 100 g: vitamin a 85 µg RAE, vitamin d 1.7 µg, vitamin k 0.4 µg, folate 0 µg DFE, vitamin b12 0.51 µg, vitamin b6 0.006 mg, calcium 148 mg, iron 0.26 mg, magnesium 5.9 mg, potassium 148 mg, zinc 0.09 mg, phosphorus 89 mg, selenium 0 µg; not reported, so left out: vitamin c, vitamin e; divided by 100 for per-gram values. Omega-3 not reported, so left out."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.00479975,
+                    "ala": 0.00251176,
+                    "epa_dha": 0.0,
+                    "vitamin_c": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 487,
+                    "url": "https://fdc.nal.usda.gov/food-details/172336/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172336: Oil, canola (used to estimate oat milk's vitamin E and ALA)",
+                    "note": "Oat Milk (Unsweetened) — GUESS. USDA's oat milk record (2257046) doesn't report vitamins C or E or any omega-3. Most of oat milk's fat (2.749 g per 100 g) is added rapeseed (canola) oil, so vitamin E and ALA are that fat times USDA canola oil's values (17.46 mg vitamin E and 9.137 g ALA per 100 g oil). EPA/DHA is 0 because no ingredient is from fish or algae. Vitamin C is 0 because oats have none (USDA oats 169705) and none is added. Per 100 g: vitamin e 0.48 mg, ala 0.2512 g, epa dha 0 mg, vitamin c 0 mg; divided by 100 for per-gram values. Some oat milks use sunflower oil instead, which has more vitamin E and almost no ALA. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -2832,7 +2887,7 @@
         "tags": [
             "processed"
         ],
-        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).\n\nVitamins and minerals are estimates. USDA has no measured rice protein record and the three labels used for its macros list none, so minerals are averaged from other plain rice protein labels (USDA Branded and Open Food Facts), and zinc and selenium are a guess scaled up from brown rice by protein content. Most vitamins are left out.",
+        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).\n\nVitamins and minerals are estimates. USDA has no measured rice protein record and the three labels used for its macros list none, so minerals are averaged from other plain rice protein labels (USDA Branded and Open Food Facts), and zinc and selenium are a guess scaled up from brown rice by protein content. Most vitamins are left out.\n\nVitamins A, C and B12 and omega-3 are a guess from brown rice. Vitamins E and K, folate and B6 are left out: rice protein is made by washing away the starch, which removes an unknown share of them.",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -2930,6 +2985,22 @@
                     "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
                     "note": "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_b12": 0.0,
+                    "epa_dha": 0.0,
+                    "ala": 0.000417
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 471,
+                    "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
+                    "note": "Rice Protein — GUESS from brown rice. USDA brown rice reports 0 vitamin A, 0 vitamin C and 0 vitamin B12, and concentrating it can't create them, so they are 0 here. EPA/DHA is 0 because rice doesn't make them. ALA is the label fat (average 4.17 g per 100 g) times the share of brown rice fat that is ALA (0.032 of 3.2 g). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin b12 0 µg, epa dha 0 mg, ala 0.0417 g; divided by 100 for per-gram values. Vitamins E and K, folate and B6 are left out: they can't be estimated this way because an unknown share is washed out with the starch. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -3474,7 +3545,7 @@
         "tags": [
             "grain"
         ],
-        "notes": "Millet grain (mostly pearl millet), nutrition from USDA raw millet. Grown in the semi-arid tropics (India, Niger, Nigeria, Mali, Sudan) at ~1 t/ha (FAOSTAT), one of the lowest-yielding grains, so it needs a lot of land per kg. Water is Mekonnen & Hoekstra (4,478 L/kg, almost all rain).\n\nWeak spots: no millet emissions study was found, so emissions use Poore & Nemecek's 'Wheat & Rye' value (1.57) as a cereal proxy, at confidence 1. Real millet could be higher (very low yields) or lower (little fertilizer). Pesticide and fertilizer are borrowed from sorghum (another low-input dryland cereal; confidence 2), added 2026-10-01 after missing data had been scored as zero.",
+        "notes": "Millet grain (mostly pearl millet), nutrition from USDA raw millet. Grown in the semi-arid tropics (India, Niger, Nigeria, Mali, Sudan) at ~1 t/ha (FAOSTAT), one of the lowest-yielding grains, so it needs a lot of land per kg. Water is Mekonnen & Hoekstra (4,478 L/kg, almost all rain).\n\nWeak spots: no millet emissions study was found, so emissions use Poore & Nemecek's 'Wheat & Rye' value (1.57) as a cereal proxy, at confidence 1. Real millet could be higher (very low yields) or lower (little fertilizer). Pesticide and fertilizer are borrowed from sorghum (another low-input dryland cereal; confidence 2), added 2026-10-01 after missing data had been scored as zero.\n\nEPA/DHA comes from a stand-in USDA record (millet flour).",
         "land_types": {
             "dry": 0.5,
             "tropical_savanna": 0.5
@@ -3516,6 +3587,18 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Millet — FDC 169702 'Millet, raw' (SR Legacy 20031), per 100 g: 378 kcal, protein 11.02 g, fat 4.22 g, sat fat 0.723 g, carbs 72.85 g, fiber 8.5 g, sugars 0 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169702 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.05 mg, vitamin k 0.9 µg, folate 85 µg DFE, vitamin b12 0 µg, vitamin b6 0.384 mg, calcium 8 mg, iron 3.01 mg, magnesium 114 mg, potassium 195 mg, zinc 1.68 mg, phosphorus 285 mg, selenium 2.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 169702 per 100 g: ALA 0.118 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 477,
+                    "url": "https://fdc.nal.usda.gov/food-details/172023/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172023: Millet flour",
+                    "note": "Millet — stand-in values: USDA's raw millet record (169702) doesn't report EPA/DHA, so it comes from millet flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],

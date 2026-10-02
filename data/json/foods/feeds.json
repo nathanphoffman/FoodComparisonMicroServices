@@ -7,7 +7,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.",
+        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).",
         "nutrition": [
             {
                 "value": {
@@ -45,6 +45,19 @@
                     "url": "https://www.feedipedia.org/node/11743",
                     "title": "Feedipedia — Alfalfa hay (INRAE, CIRAD, AFZ and FAO feed tables)",
                     "note": "Alfalfa — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for alfalfa hay (searched the full downloads), because USDA only covers foods people eat. Only alfalfa sprouts are listed. So minerals come from Feedipedia's alfalfa hay feed table (averages of many lab samples), converted from per-kg dry matter to as-fed using its average dry matter of 89.4%. Per kg dry matter: calcium 16.8 g, phosphorus 2.6 g, potassium 24.6 g, magnesium 2.3 g, zinc 27 mg, iron 587 mg (iron is a single sample and hay iron often includes soil, so it is especially rough). As-fed per gram: calcium 15.02 mg, phosphorus 2.32 mg, potassium 21.99 mg, magnesium 2.06 mg, zinc 0.024 mg, iron 0.52 mg. Vitamins and selenium are left out: Feedipedia gives no vitamin values, vitamin levels in hay drop a lot during drying and storage (vitamin C is mostly destroyed), and selenium depends on the soil, so any number would be a guess. Mineral content also varies with cutting stage and soil."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_b12": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 485,
+                    "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168384: Alfalfa seeds, sprouted, raw",
+                    "note": "Alfalfa — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -295,7 +308,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.",
+        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).",
         "nutrition": [
             {
                 "value": {
@@ -333,6 +346,19 @@
                     "url": "https://www.feedipedia.org/node/16888",
                     "title": "Feedipedia — Timothy (Phleum pratense), hay (INRAE, CIRAD, AFZ and FAO feed tables)",
                     "note": "Grass Hay — ESTIMATE, not a human-food measurement. Checked 2026-10-02: USDA FoodData Central's SR Legacy, Foundation and Branded datasets have no record for it (searched the full downloads), because USDA only covers foods people eat. Minerals come from Feedipedia's timothy hay feed table, used as a stand-in for temperate grass hay (its protein, 9.1% of dry matter, matches this entry's 8.8% as fed). Converted from per-kg dry matter to as-fed with its average dry matter of 88%. Per kg dry matter: calcium 3.3 g, phosphorus 2.1 g, potassium 20.2 g, magnesium 1.5 g, zinc 26 mg, iron 92 mg (only 2 samples). As-fed per gram: calcium 2.90 mg, phosphorus 1.85 mg, potassium 17.78 mg, magnesium 1.32 mg, zinc 0.023 mg, iron 0.081 mg. Samples are few (4–7 for most minerals) and grass hay varies a lot with species, cutting stage and soil. Vitamins and selenium are left out: the feed table has none, hay loses most of its vitamins while drying and in storage, and selenium depends on the soil."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_b12": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 485,
+                    "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 168384: Alfalfa seeds, sprouted, raw",
+                    "note": "Grass Hay — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
             }
         ],
@@ -551,7 +577,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, fish meal 65% protein), because USDA has no record for fishmeal as it isn't a human food. Omega-3 is a guess from the fat content and sardine oil's fatty acids. Vitamins are left out.",
+        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, fish meal 65% protein), because USDA has no record for fishmeal as it isn't a human food. Omega-3 is a guess from the fat content and sardine oil's fatty acids. Vitamins are left out.\n\nVitamins are a guess scaled up from raw anchovy. Drying heat destroys some of them, so real values are probably lower.",
         "nutrition": [
             {
                 "value": {
@@ -603,6 +629,24 @@
                     "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
                     "note": "Fishmeal — GUESS for omega-3. Neither USDA nor the feed table gives fishmeal's fatty acids, so they are estimated as this entry's fat (10%) times the omega-3 share of USDA sardine oil (FDC 173578, a pelagic fish oil like anchoveta), assuming the fat left in fishmeal is like the oil pressed out of it. Sardine oil per 100 g: EPA + DHA 20.79 g, ALA 1.33 g. Fishmeal per gram: EPA + DHA 20.8 mg, ALA 0.0013 g. Fat in fishmeal oxidises during drying and storage, so the real figure may be lower."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_b12": 0.01980344,
+                    "vitamin_b6": 0.00456757,
+                    "folate": 0.28746929,
+                    "vitamin_a": 0.30991736,
+                    "vitamin_e": 0.01177686,
+                    "vitamin_k": 0.00206612,
+                    "vitamin_c": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 486,
+                    "url": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174182: Fish, anchovy, european, raw",
+                    "note": "Fishmeal — GUESS for vitamins. Neither USDA nor the feed table gives fishmeal vitamins, so they are scaled up from raw European anchovy (a close relative of the Peruvian anchoveta fishmeal is made from): B12, B6 and folate by protein (65 ÷ 20.35 g = 3.19×), vitamins A, E and K by fat (10 ÷ 4.84 g = 2.07×), vitamin C as anchovy's reported value. Per 100 g: vitamin b12 1.98 µg, vitamin b6 0.4568 mg, folate 28.75 µg DFE, vitamin a 30.99 µg RAE, vitamin e 1.178 mg, vitamin k 0.2066 µg, vitamin c 0 mg; divided by 100 for per-gram values. Fishmeal is cooked and dried at high heat, which destroys part of the B6, folate and vitamin A, so these are likely too high. Vitamin D is left out because USDA's raw anchovy doesn't report it. Only fills values missing from the main entries."
                 }
             }
         ],
