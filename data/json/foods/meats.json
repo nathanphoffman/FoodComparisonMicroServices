@@ -29,14 +29,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.72,
-                    "trans_fat": 0.007
+                    "trans_fat": 0.007,
+                    "vitamin_a": 0.04,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0017,
+                    "vitamin_k": 0.018,
+                    "folate": 0.07,
+                    "vitamin_b12": 0.0214,
+                    "vitamin_b6": 0.00323,
+                    "calcium": 0.18,
+                    "iron": 0.0194,
+                    "magnesium": 0.17,
+                    "potassium": 2.7,
+                    "zinc": 0.0418,
+                    "phosphorus": 1.58,
+                    "selenium": 0.15,
+                    "ala": 0.00051,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 174036 per 100 g: vitamin a 4 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.17 mg, vitamin k 1.8 µg, folate 7 µg DFE, vitamin b12 2.14 µg, vitamin b6 0.323 mg, calcium 18 mg, iron 1.94 mg, magnesium 17 mg, potassium 270 mg, zinc 4.18 mg, phosphorus 158 mg, selenium 15 µg; divided by 100 for per-gram values. Omega-3 from FDC 174036 per 100 g: ALA 0.051 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -360,14 +377,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.85,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.06,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0027,
+                    "vitamin_k": 0.003,
+                    "folate": 0.04,
+                    "vitamin_b12": 0.0034,
+                    "vitamin_b6": 0.006,
+                    "calcium": 0.15,
+                    "iron": 0.0104,
+                    "magnesium": 0.29,
+                    "potassium": 2.56,
+                    "zinc": 0.01,
+                    "phosphorus": 2.28,
+                    "selenium": 0.276,
+                    "ala": 0.0003,
+                    "epa_dha": 0.3
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171477 per 100 g: vitamin a 6 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.27 mg, vitamin k 0.3 µg, folate 4 µg DFE, vitamin b12 0.34 µg, vitamin b6 0.6 mg, calcium 15 mg, iron 1.04 mg, magnesium 29 mg, potassium 256 mg, zinc 1 mg, phosphorus 228 mg, selenium 27.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 171477 per 100 g: ALA 0.03 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 30 mg (EPA 0.01 + DHA 0.02); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -597,14 +631,27 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.8,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.02,
+                    "vitamin_c": 0.007,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.007,
+                    "vitamin_b6": 0.00383,
+                    "calcium": 0.14,
+                    "iron": 0.0088,
+                    "magnesium": 0.19,
+                    "potassium": 2.87,
+                    "zinc": 0.022,
+                    "phosphorus": 1.75,
+                    "selenium": 0.246,
+                    "ala": 0.0007
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 167902 per 100 g: vitamin a 2 µg RAE, vitamin c 0.7 mg, folate 5 µg DFE, vitamin b12 0.7 µg, vitamin b6 0.383 mg, calcium 14 mg, iron 0.88 mg, magnesium 19 mg, potassium 287 mg, zinc 2.2 mg, phosphorus 175 mg, selenium 24.6 µg; not reported, so left out: vitamin d, vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 167902 per 100 g: ALA 0.07 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -819,14 +866,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 1.09,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.12,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.004,
+                    "vitamin_e": 0.0007,
+                    "vitamin_k": 0.0,
+                    "folate": 0.09,
+                    "vitamin_b12": 0.0102,
+                    "vitamin_b6": 0.00616,
+                    "calcium": 0.14,
+                    "iron": 0.0109,
+                    "magnesium": 0.3,
+                    "potassium": 2.39,
+                    "zinc": 0.0248,
+                    "phosphorus": 2.23,
+                    "selenium": 0.298,
+                    "ala": 0.00105,
+                    "epa_dha": 0.13
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171479 per 100 g: vitamin a 12 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.07 mg, vitamin k 0 µg, folate 9 µg DFE, vitamin b12 1.02 µg, vitamin b6 0.616 mg, calcium 14 mg, iron 1.09 mg, magnesium 30 mg, potassium 239 mg, zinc 2.48 mg, phosphorus 223 mg, selenium 29.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 171479 per 100 g: ALA 0.105 g, EPA + DHA 13 mg (EPA 0.008 + DHA 0.005); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1000,14 +1064,31 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.97,
-                    "trans_fat": 0.009
+                    "trans_fat": 0.009,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0014,
+                    "vitamin_k": 0.046,
+                    "folate": 0.18,
+                    "vitamin_b12": 0.0255,
+                    "vitamin_b6": 0.0013,
+                    "calcium": 0.17,
+                    "iron": 0.0188,
+                    "magnesium": 0.23,
+                    "potassium": 3.1,
+                    "zinc": 0.0446,
+                    "phosphorus": 1.88,
+                    "selenium": 0.264,
+                    "ala": 0.003,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172480 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.14 mg, vitamin k 4.6 µg, folate 18 µg DFE, vitamin b12 2.55 µg, vitamin b6 0.13 mg, calcium 17 mg, iron 1.88 mg, magnesium 23 mg, potassium 310 mg, zinc 4.46 mg, phosphorus 188 mg, selenium 26.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 172480 per 100 g: ALA 0.3 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1266,14 +1347,24 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 1.12,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "calcium": 0.07,
+                    "iron": 0.0447,
+                    "magnesium": 0.24,
+                    "potassium": 3.35,
+                    "zinc": 0.0275,
+                    "phosphorus": 2.26,
+                    "selenium": 0.129,
+                    "ala": 0.0009
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Venison (Wild) — nutrition: USDA FDC entry for raw game meat, deer (NDB No. 17162 / FDC ID 174491). Values reported per gram of raw edible meat. Protein ~30.2 g/100g, fat ~3.1 g/100g, sat fat ~1.2 g/100g, calories ~158 kcal/100g, cholesterol ~112 mg/100g, sodium ~54 mg/100g. Venison is notably lean relative to other red meats with very low saturated fat."
+                    "note": "Venison (Wild) — nutrition: USDA FDC entry for raw game meat, deer (NDB No. 17162 / FDC ID 174491). Values reported per gram of raw edible meat. Protein ~30.2 g/100g, fat ~3.1 g/100g, sat fat ~1.2 g/100g, calories ~158 kcal/100g, cholesterol ~112 mg/100g, sodium ~54 mg/100g. Venison is notably lean relative to other red meats with very low saturated fat. Vitamins and minerals from USDA FDC 175085 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, calcium 7 mg, iron 4.47 mg, magnesium 24 mg, potassium 335 mg, zinc 2.75 mg, phosphorus 226 mg, selenium 12.9 µg; not reported, so left out: vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6; divided by 100 for per-gram values. Omega-3 from FDC 175085 per 100 g: ALA 0.09 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1404,14 +1495,23 @@
                     "carbs": 0,
                     "sugar": 0,
                     "cholesterol": 0.83,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "calcium": 0.02,
+                    "iron": 0.047,
+                    "magnesium": 0.24,
+                    "potassium": 3.04,
+                    "phosphorus": 1.72,
+                    "selenium": 0.093,
+                    "ala": 0.0002
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Wild Squirrel — nutrition: USDA FDC entry for game meat, squirrel, raw (FDC ID 174489). Values reported per gram of raw edible meat. Protein ~21.4 g/100g, fat ~3.21 g/100g, sat fat ~0.92 g/100g, calories ~120 kcal/100g, cholesterol ~83 mg/100g, sodium ~101 mg/100g. Squirrel is a very lean game meat, lower in calories and fat than most domestic meats."
+                    "note": "Wild Squirrel — nutrition: USDA FDC entry for game meat, squirrel, raw (FDC ID 174489). Values reported per gram of raw edible meat. Protein ~21.4 g/100g, fat ~3.21 g/100g, sat fat ~0.92 g/100g, calories ~120 kcal/100g, cholesterol ~83 mg/100g, sodium ~101 mg/100g. Squirrel is a very lean game meat, lower in calories and fat than most domestic meats. Vitamins and minerals from USDA FDC 172523 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, calcium 2 mg, iron 4.7 mg, magnesium 24 mg, potassium 304 mg, phosphorus 172 mg, selenium 9.3 µg; not reported, so left out: vitamin d, vitamin e, vitamin k, folate, vitamin b12, vitamin b6, zinc; divided by 100 for per-gram values. Omega-3 from FDC 172523 per 100 g: ALA 0.02 g (USDA's total 18:3, which is almost all ALA); EPA and DHA not reported, so left out; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1538,14 +1638,31 @@
                     "carbs": 0.0,
                     "sugar": 0.0,
                     "cholesterol": 0.75,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0034,
+                    "vitamin_k": 0.012,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.0119,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.17,
+                    "iron": 0.0373,
+                    "magnesium": 0.0,
+                    "potassium": 4.05,
+                    "zinc": 0.0527,
+                    "phosphorus": 2.01,
+                    "selenium": 0.118,
+                    "ala": 0.0002,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Goat — FDC 175304 'Game meat, goat, cooked, roasted' (SR Legacy 17169), per 100 g: 143 kcal, protein 27.1 g, fat 3.03 g, sat fat 0.93 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 86 mg, cholesterol 75 mg; divided by 100 for per-gram values."
+                    "note": "Goat — FDC 175304 'Game meat, goat, cooked, roasted' (SR Legacy 17169), per 100 g: 143 kcal, protein 27.1 g, fat 3.03 g, sat fat 0.93 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 86 mg, cholesterol 75 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175304 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.34 mg, vitamin k 1.2 µg, folate 5 µg DFE, vitamin b12 1.19 µg, vitamin b6 0 mg, calcium 17 mg, iron 3.73 mg, magnesium 0 mg, potassium 405 mg, zinc 5.27 mg, phosphorus 201 mg, selenium 11.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 175304 per 100 g: ALA 0.02 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1759,14 +1876,31 @@
                     "carbs": 0.0,
                     "sugar": 0.0,
                     "cholesterol": 0.89,
-                    "trans_fat": 0.0
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.23,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.007,
+                    "vitamin_k": 0.038,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.004,
+                    "vitamin_b6": 0.0025,
+                    "calcium": 0.12,
+                    "iron": 0.027,
+                    "magnesium": 0.2,
+                    "potassium": 2.52,
+                    "zinc": 0.026,
+                    "phosphorus": 2.03,
+                    "selenium": 0.224,
+                    "ala": 0.00146,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "Duck — FDC 172411 'Duck, domesticated, meat only, cooked, roasted' (SR Legacy 05142), per 100 g: 201 kcal, protein 23.48 g, fat 11.2 g, sat fat 3.951 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 65 mg, cholesterol 89 mg; divided by 100 for per-gram values."
+                    "note": "Duck — FDC 172411 'Duck, domesticated, meat only, cooked, roasted' (SR Legacy 05142), per 100 g: 201 kcal, protein 23.48 g, fat 11.2 g, sat fat 3.951 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 65 mg, cholesterol 89 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172411 per 100 g: vitamin a 23 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.7 mg, vitamin k 3.8 µg, folate 10 µg DFE, vitamin b12 0.4 µg, vitamin b6 0.25 mg, calcium 12 mg, iron 2.7 mg, magnesium 20 mg, potassium 252 mg, zinc 2.6 mg, phosphorus 203 mg, selenium 22.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 172411 per 100 g: ALA 0.146 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

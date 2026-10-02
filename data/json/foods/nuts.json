@@ -24,14 +24,31 @@
                     "carbs": 0.216,
                     "sugar": 0.048,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.2563,
+                    "vitamin_k": 0.0,
+                    "folate": 0.44,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00137,
+                    "calcium": 2.69,
+                    "iron": 0.0371,
+                    "magnesium": 2.7,
+                    "potassium": 7.33,
+                    "zinc": 0.0312,
+                    "phosphorus": 4.81,
+                    "selenium": 0.041,
+                    "ala": 3e-05,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170567 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 25.63 mg, vitamin k 0 µg, folate 44 µg DFE, vitamin b12 0 µg, vitamin b6 0.137 mg, calcium 269 mg, iron 3.71 mg, magnesium 270 mg, potassium 733 mg, zinc 3.12 mg, phosphorus 481 mg, selenium 4.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 170567 per 100 g: ALA 0.003 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -328,14 +345,31 @@
                     "carbs": 0.138,
                     "sugar": 0.027,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.01,
+                    "vitamin_c": 0.013,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.007,
+                    "vitamin_k": 0.027,
+                    "folate": 0.98,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00537,
+                    "calcium": 0.98,
+                    "iron": 0.0291,
+                    "magnesium": 1.58,
+                    "potassium": 4.41,
+                    "zinc": 0.0309,
+                    "phosphorus": 3.46,
+                    "selenium": 0.049,
+                    "ala": 0.0908,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170187 per 100 g: vitamin a 1 µg RAE, vitamin c 1.3 mg, vitamin d 0 µg, vitamin e 0.7 mg, vitamin k 2.7 µg, folate 98 µg DFE, vitamin b12 0 µg, vitamin b6 0.537 mg, calcium 98 mg, iron 2.91 mg, magnesium 158 mg, potassium 441 mg, zinc 3.09 mg, phosphorus 346 mg, selenium 4.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 170187 per 100 g: ALA 9.08 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -592,14 +626,31 @@
                     "carbs": 0.304,
                     "sugar": 0.056,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.005,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.009,
+                    "vitamin_k": 0.341,
+                    "folate": 0.25,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00417,
+                    "calcium": 0.37,
+                    "iron": 0.0668,
+                    "magnesium": 2.92,
+                    "potassium": 6.6,
+                    "zinc": 0.0578,
+                    "phosphorus": 5.93,
+                    "selenium": 0.199,
+                    "ala": 0.00062,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170162 per 100 g: vitamin a 0 µg RAE, vitamin c 0.5 mg, vitamin d 0 µg, vitamin e 0.9 mg, vitamin k 34.1 µg, folate 25 µg DFE, vitamin b12 0 µg, vitamin b6 0.417 mg, calcium 37 mg, iron 6.68 mg, magnesium 292 mg, potassium 660 mg, zinc 5.78 mg, phosphorus 593 mg, selenium 19.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 170162 per 100 g: ALA 0.062 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -829,14 +880,30 @@
                     "carbs": 0.278,
                     "sugar": 0.078,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.26,
+                    "vitamin_c": 0.056,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0286,
+                    "folate": 0.51,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.017,
+                    "calcium": 1.05,
+                    "iron": 0.0392,
+                    "magnesium": 1.21,
+                    "potassium": 10.25,
+                    "zinc": 0.022,
+                    "phosphorus": 4.9,
+                    "selenium": 0.07,
+                    "ala": 0.00289,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170184 per 100 g: vitamin a 26 µg RAE, vitamin c 5.6 mg, vitamin d 0 µg, vitamin e 2.86 mg, folate 51 µg DFE, vitamin b12 0 µg, vitamin b6 1.7 mg, calcium 105 mg, iron 3.92 mg, magnesium 121 mg, potassium 1025 mg, zinc 2.2 mg, phosphorus 490 mg, selenium 7 µg; not reported, so left out: vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 170184 per 100 g: ALA 0.289 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1093,14 +1160,31 @@
                     "carbs": 0.139,
                     "sugar": 0.04,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.03,
+                    "vitamin_c": 0.011,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.014,
+                    "vitamin_k": 0.035,
+                    "folate": 0.22,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0021,
+                    "calcium": 0.7,
+                    "iron": 0.0253,
+                    "magnesium": 1.21,
+                    "potassium": 4.1,
+                    "zinc": 0.0453,
+                    "phosphorus": 2.77,
+                    "selenium": 0.038,
+                    "ala": 0.00986,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170182 per 100 g: vitamin a 3 µg RAE, vitamin c 1.1 mg, vitamin d 0 µg, vitamin e 1.4 mg, vitamin k 3.5 µg, folate 22 µg DFE, vitamin b12 0 µg, vitamin b6 0.21 mg, calcium 70 mg, iron 2.53 mg, magnesium 121 mg, potassium 410 mg, zinc 4.53 mg, phosphorus 277 mg, selenium 3.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 170182 per 100 g: ALA 0.986 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1346,14 +1430,31 @@
                     "carbs": 0.168,
                     "sugar": 0.044,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.01,
+                    "vitamin_c": 0.063,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.1503,
+                    "vitamin_k": 0.142,
+                    "folate": 1.13,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00563,
+                    "calcium": 1.14,
+                    "iron": 0.047,
+                    "magnesium": 1.63,
+                    "potassium": 6.8,
+                    "zinc": 0.0245,
+                    "phosphorus": 2.9,
+                    "selenium": 0.024,
+                    "ala": 0.00087,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170581 per 100 g: vitamin a 1 µg RAE, vitamin c 6.3 mg, vitamin d 0 µg, vitamin e 15.03 mg, vitamin k 14.2 µg, folate 113 µg DFE, vitamin b12 0 µg, vitamin b6 0.563 mg, calcium 114 mg, iron 4.7 mg, magnesium 163 mg, potassium 680 mg, zinc 2.45 mg, phosphorus 290 mg, selenium 2.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170581 per 100 g: ALA 0.087 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1594,14 +1695,30 @@
                     "carbs": 0.138,
                     "sugar": 0.047,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.012,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0054,
+                    "folate": 0.11,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00275,
+                    "calcium": 0.85,
+                    "iron": 0.0369,
+                    "magnesium": 1.3,
+                    "potassium": 3.68,
+                    "zinc": 0.013,
+                    "phosphorus": 1.88,
+                    "selenium": 0.036,
+                    "ala": 0.00206,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170178 per 100 g: vitamin a 0 µg RAE, vitamin c 1.2 mg, vitamin d 0 µg, vitamin e 0.54 mg, folate 11 µg DFE, vitamin b12 0 µg, vitamin b6 0.275 mg, calcium 85 mg, iron 3.69 mg, magnesium 130 mg, potassium 368 mg, zinc 1.3 mg, phosphorus 188 mg, selenium 3.6 µg; not reported, so left out: vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 170178 per 100 g: ALA 0.206 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1845,14 +1962,31 @@
                     "carbs": 0.121,
                     "sugar": 0.023,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.007,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0565,
+                    "vitamin_k": 0.0,
+                    "folate": 0.22,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00101,
+                    "calcium": 1.6,
+                    "iron": 0.0243,
+                    "magnesium": 3.76,
+                    "potassium": 6.59,
+                    "zinc": 0.0406,
+                    "phosphorus": 7.25,
+                    "selenium": 19.17,
+                    "ala": 0.00018,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170569 per 100 g: vitamin a 0 µg RAE, vitamin c 0.7 mg, vitamin d 0 µg, vitamin e 5.65 mg, vitamin k 0 µg, folate 22 µg DFE, vitamin b12 0 µg, vitamin b6 0.101 mg, calcium 160 mg, iron 2.43 mg, magnesium 376 mg, potassium 659 mg, zinc 4.06 mg, phosphorus 725 mg, selenium 1917 µg; divided by 100 for per-gram values. Omega-3 from FDC 170569 per 100 g: ALA 0.018 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1996,14 +2130,31 @@
                     "carbs": 0.161,
                     "sugar": 0.04,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0833,
+                    "vitamin_k": 0.0,
+                    "folate": 2.4,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00348,
+                    "calcium": 0.92,
+                    "iron": 0.0458,
+                    "magnesium": 1.68,
+                    "potassium": 7.05,
+                    "zinc": 0.0327,
+                    "phosphorus": 3.76,
+                    "selenium": 0.072,
+                    "ala": 3e-05,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172430 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 8.33 mg, vitamin k 0 µg, folate 240 µg DFE, vitamin b12 0 µg, vitamin b6 0.348 mg, calcium 92 mg, iron 4.58 mg, magnesium 168 mg, potassium 705 mg, zinc 3.27 mg, phosphorus 376 mg, selenium 7.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 172430 per 100 g: ALA 0.003 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2306,14 +2457,31 @@
                     "carbs": 0.188,
                     "sugar": 0.037,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.01,
+                    "vitamin_c": 0.008,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0933,
+                    "vitamin_k": 0.539,
+                    "folate": 0.34,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00094,
+                    "calcium": 0.16,
+                    "iron": 0.0553,
+                    "magnesium": 2.51,
+                    "potassium": 5.97,
+                    "zinc": 0.0645,
+                    "phosphorus": 5.75,
+                    "selenium": 0.007,
+                    "ala": 0.00112,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170591 per 100 g: vitamin a 1 µg RAE, vitamin c 0.8 mg, vitamin d 0 µg, vitamin e 9.33 mg, vitamin k 53.9 µg, folate 34 µg DFE, vitamin b12 0 µg, vitamin b6 0.094 mg, calcium 16 mg, iron 5.53 mg, magnesium 251 mg, potassium 597 mg, zinc 6.45 mg, phosphorus 575 mg, selenium 0.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 170591 per 100 g: ALA 0.112 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2527,14 +2695,31 @@
                     "carbs": 0.2,
                     "sugar": 0.027,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.03,
+                    "vitamin_c": 0.014,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.3517,
+                    "vitamin_k": 0.0,
+                    "folate": 2.27,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.01345,
+                    "calcium": 0.78,
+                    "iron": 0.0525,
+                    "magnesium": 3.25,
+                    "potassium": 6.45,
+                    "zinc": 0.05,
+                    "phosphorus": 6.6,
+                    "selenium": 0.53,
+                    "ala": 0.0006,
+                    "epa_dha": 0.14
                 },
                 "confidence": 5,
                 "source": {
                     "id": 1,
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
-                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+                    "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170562 per 100 g: vitamin a 3 µg RAE, vitamin c 1.4 mg, vitamin d 0 µg, vitamin e 35.17 mg, vitamin k 0 µg, folate 227 µg DFE, vitamin b12 0 µg, vitamin b6 1.345 mg, calcium 78 mg, iron 5.25 mg, magnesium 325 mg, potassium 645 mg, zinc 5 mg, phosphorus 660 mg, selenium 53 µg; divided by 100 for per-gram values. Omega-3 from FDC 170562 per 100 g: ALA 0.06 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 14 mg (EPA 0.014 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2784,14 +2969,29 @@
                     "carbs": 0.00337,
                     "sugar": 0,
                     "cholesterol": 0,
-                    "trans_fat": 0
+                    "trans_fat": 0,
+                    "vitamin_a": 0.41,
+                    "vitamin_d": 0.0093,
+                    "vitamin_e": 0.0332,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0034,
+                    "vitamin_b6": 0.0,
+                    "calcium": 1.73,
+                    "iron": 0.0029,
+                    "magnesium": 0.068,
+                    "potassium": 0.31,
+                    "zinc": 0.0017,
+                    "phosphorus": 0.3,
+                    "selenium": 0.0,
+                    "ala": 1e-05,
+                    "epa_dha": 0.0
                 },
                 "confidence": 5,
                 "source": {
                     "id": 340,
                     "url": "https://fdc.nal.usda.gov/food-details/1999631/nutrients",
                     "title": "USDA FoodData Central — Almond Milk, Unsweetened, Plain, Shelf Stable (Foundation Foods)",
-                    "note": "Unsweetened almond milk (id 69) — USDA FDC Foundation Foods fdcId 1999631, per-100g analytical values converted to per-gram: 14.56 kcal, 1.221 g fat, 0.104 g sat fat, 0.555 g protein, 0 g fiber, 59.58 mg sodium, 0.337 g carbs, 0 g sugar, 0 cholesterol/trans fat. Values reflect the fortified, ready-to-drink product as purchased (calcium carbonate, vitamin D/E, sunflower lecithin, gellan/locust bean gum added; no added sugar)."
+                    "note": "Unsweetened almond milk (id 69) — USDA FDC Foundation Foods fdcId 1999631, per-100g analytical values converted to per-gram: 14.56 kcal, 1.221 g fat, 0.104 g sat fat, 0.555 g protein, 0 g fiber, 59.58 mg sodium, 0.337 g carbs, 0 g sugar, 0 cholesterol/trans fat. Values reflect the fortified, ready-to-drink product as purchased (calcium carbonate, vitamin D/E, sunflower lecithin, gellan/locust bean gum added; no added sugar). Vitamins and minerals from USDA FDC 1999631 per 100 g: vitamin a 41 µg RAE, vitamin d 0.93 µg, vitamin e 3.32 mg, folate 0 µg DFE, vitamin b12 0.34 µg, vitamin b6 0 mg, calcium 173 mg, iron 0.29 mg, magnesium 6.8 mg, potassium 31 mg, zinc 0.17 mg, phosphorus 30 mg, selenium 0 µg; not reported, so left out: vitamin c, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 1999631 per 100 g: ALA 0.001 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
             }
         ],

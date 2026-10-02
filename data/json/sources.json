@@ -18,7 +18,11 @@
             "Fish and other seafood — vitamins, minerals and omega-3: salmon (Atlantic, farmed, raw) FDC 175167, yellowfin tuna raw 175159, shrimp raw 175179, sardines (Atlantic, canned in oil, with bone) 175139, tilapia (cooked, dry heat) 175177, Alaska pollock raw 173725, Atlantic cod raw 171955, carp raw 171952, farmed channel catfish raw 175165, octopus raw 174218.",
             "Oils — vitamins, minerals and omega-3: olive FDC 171413, canola 172336, soybean 171411, palm 171015, sunflower (linoleic ~65%) 171025, coconut 171412, peanut 171410, corn 171029.",
             "Vegetables — vitamins, minerals and omega-3 (raw): tomato FDC 170457, cucumber with peel 168409, potato flesh and skin 170026, broccoli 170379, sweet potato 168482, garlic 169230, green bell pepper 170427, red bell pepper 170108, onion 170000, carrot 170393, cassava 169985, pumpkin 168448, eggplant 169228.",
-            "Grains — vitamins, minerals and omega-3: whole-grain wheat flour FDC 168893, yellow corn grain 170288, sorghum grain 169716, oats 169705, hulled barley 170283, rye grain 168884, millet raw 169702, and cornstarch 169698 for rice starch. Cooked rice and quinoa, and oat milk, are under their own source entries."
+            "Grains — vitamins, minerals and omega-3: whole-grain wheat flour FDC 168893, yellow corn grain 170288, sorghum grain 169716, oats 169705, hulled barley 170283, rye grain 168884, millet raw 169702, and cornstarch 169698 for rice starch. Cooked rice and quinoa, and oat milk, are under their own source entries.",
+            "Nuts and seeds — vitamins, minerals and omega-3 (raw or dried): almonds FDC 170567, English walnuts 170187, cashews raw 170162, pistachios raw 170184, pecans 170182, hazelnuts 170581, macadamia raw 170178, Brazil nuts dried 170569, peanuts all types raw 172430, pine nuts dried 170591, sunflower seed kernels dried 170562.",
+            "Fruits — vitamins, minerals and omega-3 (raw): apple with skin FDC 171688, banana 173944, avocado all varieties 171705, coconut meat 170169, mango 169910, orange all varieties 169097, strawberries 167762, blueberries 171711, grapes 174683, watermelon 167765, pineapple 169124.",
+            "Dairy — vitamins, minerals and omega-3: whole milk with added vitamin D FDC 171265, plain whole-milk yogurt 171284, salted butter 173410, cheddar 173414, part-skim mozzarella 171244, hard parmesan 170848, goat milk 171278, soft goat cheese 173435.",
+            "Meats — vitamins, minerals and omega-3: beef ground 80/20 raw FDC 174036, chicken breast roasted 171477, pork ground raw 167902, turkey whole meat and skin roasted 171479, lamb composite cuts cooked 172480, deer roasted 175085, squirrel raw 172523, goat roasted 175304, duck meat only roasted 172411. Beef, pork and turkey records were picked as the closest USDA match to the existing calories, protein and fat."
         ]
     },
     {
@@ -1692,7 +1696,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/1999631/nutrients",
         "title": "USDA FoodData Central — Almond Milk, Unsweetened, Plain, Shelf Stable (Foundation Foods)",
         "notes": [
-            "fdcId 1999631, Foundation Foods (analytical, dataPoints=8 composite). Per 100g: 14.56 kcal, 1.221 g fat (0.104 g saturated, 0 g trans), 0.555 g protein, 0 g fiber, 59.58 mg sodium, 0.337 g carbohydrate, 0 g sugar, 172.7 mg calcium (calcium-carbonate fortified). Used as the primary nutrition source for the almond-milk entry (id 69, slug almond-milk)."
+            "fdcId 1999631, Foundation Foods (analytical, dataPoints=8 composite). Per 100g: 14.56 kcal, 1.221 g fat (0.104 g saturated, 0 g trans), 0.555 g protein, 0 g fiber, 59.58 mg sodium, 0.337 g carbohydrate, 0 g sugar, 172.7 mg calcium (calcium-carbonate fortified). Used as the primary nutrition source for the almond-milk entry (id 69, slug almond-milk).",
+            "Almond Milk (Unsweetened) — Vitamins and minerals from USDA FDC 1999631 per 100 g: vitamin a 41 µg RAE, vitamin d 0.93 µg, vitamin e 3.32 mg, folate 0 µg DFE, vitamin b12 0.34 µg, vitamin b6 0 mg, calcium 173 mg, iron 0.29 mg, magnesium 6.8 mg, potassium 31 mg, zinc 0.17 mg, phosphorus 30 mg, selenium 0 µg; not reported, so left out: vitamin c, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 1999631 per 100 g: ALA 0.001 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         ]
     },
     {
@@ -2716,6 +2721,14 @@
         "title": "USDA FoodData Central — SR Legacy 169698: Cornstarch",
         "notes": [
             "Potato Starch — stand-in vitamins and minerals: the potato starch labels don't list them and USDA has no potato starch record, so they come from cornstarch, which is also near-pure starch. Vitamins and minerals from USDA FDC 169698 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 2 mg, iron 0.47 mg, magnesium 3 mg, potassium 3 mg, zinc 0.06 mg, phosphorus 13 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 169698 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entries."
+        ]
+    },
+    {
+        "id": 466,
+        "url": "https://fdc.nal.usda.gov/food-details/173180/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 173180: Beverages, Protein powder whey based",
+        "notes": [
+            "Whey Protein — stand-in vitamins and minerals: the branded whey labels list only a few minerals, so they come from USDA's generic whey-based protein powder record. Vitamins and minerals from USDA FDC 173180 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 33 µg DFE, vitamin b12 2.45 µg, vitamin b6 0.607 mg, calcium 469 mg, iron 1.13 mg, magnesium 195 mg, potassium 500 mg, zinc 6.18 mg, phosphorus 1321 mg, selenium 26.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 173180 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entries."
         ]
     }
 ]
