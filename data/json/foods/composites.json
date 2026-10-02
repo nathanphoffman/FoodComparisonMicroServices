@@ -251,6 +251,22 @@
                     "title": "USDA FoodData Central",
                     "note": "Beyond Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03). Water, salt and the minor ingredients (other minor ingredients (flavors, dried yeast, cocoa butter, methylcellulose, potato starch, salt, fruit extracts); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, selenium 12.28 µg, ala 0.6858 g, epa dha 0 mg; divided by 100 for per-gram values. Pea and rice protein are themselves partly estimated. Left out because an ingredient has no value: vitamin e, vitamin k, folate, magnesium, phosphorus. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.01525777,
+                    "vitamin_k": 0.080534,
+                    "folate": 0.078188,
+                    "magnesium": 0.352,
+                    "phosphorus": 0.87695
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beyond Burger (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 1.526 mg, vitamin k 8.053 µg, folate 7.819 µg DFE, magnesium 35.2 mg, phosphorus 87.7 mg; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -442,6 +458,21 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Violife Just Like Parmesan (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03). Water, salt and the minor ingredients (salt; other minor ingredients (flavor, olive extract, beta carotene, vitamin B12); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, calcium 5.751 mg, iron 0.5858 mg, magnesium 5.82 mg, potassium 2.2 mg, zinc 0.7019 mg, phosphorus 19.91 mg, selenium 6.395 µg, ala 0.004576 g, epa dha 0 mg; divided by 100 for per-gram values. Beta-carotene is added as a colour but the amount isn't given, so vitamin A is probably too low. Left out because an ingredient has no value: vitamin e, vitamin k, folate, vitamin b6. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.00042706,
+                    "vitamin_k": 0.00123,
+                    "folate": 0.0069,
+                    "vitamin_b6": 0.0001431
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Violife Just Like Parmesan (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 0.04271 mg, vitamin k 0.123 µg, folate 0.69 µg DFE, vitamin b6 0.01431 mg; divided by 100 for per-gram values."
                 }
             }
         ],

@@ -7,7 +7,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).",
+        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from the INRAE-CIRAD-AFZ feed table for dehydrated alfalfa, cut down for losses in sun-cured hay, plus hay vitamin D from a 1948 study. See the source note for each step.",
         "nutrition": [
             {
                 "value": {
@@ -58,6 +58,26 @@
                     "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 168384: Alfalfa seeds, sprouted, raw",
                     "note": "Alfalfa — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_a": 2.29583333,
+                    "vitamin_e": 0.0492,
+                    "vitamin_k": 20.0,
+                    "folate": 1.5,
+                    "selenium": 0.1,
+                    "ala": 0.004,
+                    "vitamin_d": 0.02235,
+                    "vitamin_c": 0.0,
+                    "vitamin_b6": 0.00423343
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 492,
+                    "url": "https://www.feedtables.com/content/alfalfa-dehydrated-protein-16-18-dry-matter",
+                    "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Alfalfa, dehydrated, protein 16-18% dry matter",
+                    "note": "Alfalfa — ESTIMATE from feed tables, adjusted for haymaking. No human-food database covers alfalfa hay. Values start from the INRAE-CIRAD-AFZ feed table for dehydrated alfalfa (16–18% protein, as fed): vitamin A 55,100 IU/kg, vitamin E 123 mg/kg, vitamin K 20 mg/kg, folic acid 1.5 mg/kg, selenium 0.1 mg/kg, C18:3 4 g/kg. Dehydrated alfalfa is machine-dried fast; sun-cured hay loses much more: up to 80% of beta-carotene during curing and ~60% of vitamin E (thehorse.com), so vitamin A is cut by 80% and vitamin E by 60%. Vitamin A is converted assuming the feed table's IU are 400 IU per mg beta-carotene (the usual cattle convention) and 12 µg beta-carotene = 1 µg RAE for people. Vitamin D: dehydrated alfalfa has none, but sun-cured hay gains vitamin D2: ~2,000 IU/kg dry matter when fresh, falling to ~39% after a year of storage (Newlander 1948, via VitaminDWiki); ~1,000 IU/kg dry matter (25 µg) is used. Vitamin B6: the feed table's 286 mg/kg is ~50× higher than any other forage and looks like an error, so B6 is instead USDA alfalfa sprouts (0.034 mg per 100 g at 7.2% dry matter) scaled to hay's 89.4% dry matter. Vitamin C is taken as 0: drying destroys it and the feed table lists none. Per 100 g: vitamin a 229.6 µg RAE, vitamin e 4.92 mg, vitamin k 2000 µg, folate 150 µg DFE, selenium 10 µg, ala 0.4 g, vitamin d 2.235 µg, vitamin c 0 mg, vitamin b6 0.4233 mg; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -308,7 +328,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).",
+        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from feed tables and hay studies, with alfalfa used as the analog for vitamin K and folate. See the source note.",
         "nutrition": [
             {
                 "value": {
@@ -359,6 +379,26 @@
                     "url": "https://fdc.nal.usda.gov/food-details/168384/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 168384: Alfalfa seeds, sprouted, raw",
                     "note": "Grass Hay — stand-in values: plants don't make vitamin B12 or EPA/DHA, and USDA reports 0 for both in alfalfa sprouts (the only alfalfa record), so both are taken as 0. Per 100 g: vitamin b12 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.044,
+                    "vitamin_b6": 0.0089,
+                    "selenium": 0.07,
+                    "ala": 0.0062,
+                    "vitamin_a": 1.46666667,
+                    "vitamin_d": 0.022,
+                    "vitamin_k": 20.0,
+                    "folate": 1.5,
+                    "vitamin_c": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 493,
+                    "url": "https://www.feedtables.com/content/grass-dehydrated",
+                    "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Grass, dehydrated",
+                    "note": "Grass Hay — ESTIMATE from feed tables and hay studies. No human-food database covers grass hay. Vitamin E, B6, selenium and ALA start from the INRAE-CIRAD-AFZ feed table for dehydrated grass (as fed, 90% dry matter): vitamin E 110 mg/kg, B6 8.9 mg/kg, selenium 0.07 mg/kg, C18:3 6.2 g/kg; vitamin E is cut by 60% for sun-curing (thehorse.com). Vitamin A: timothy hay has ~20 mg beta-carotene/kg dry matter (dvm360), × 88% dry matter ÷ 12 for RAE. Vitamin D: ~1,000 IU/kg dry matter for sun-cured hay (Newlander 1948, via VitaminDWiki), × 88%. Vitamin K and folate: no grass hay figure was found, so alfalfa's feed-table values (20 mg/kg and 1.5 mg/kg as fed) are used as a leafy-forage analog. Vitamin C is taken as 0: drying destroys it. Per 100 g: vitamin e 4.4 mg, vitamin b6 0.89 mg, selenium 7 µg, ala 0.62 g, vitamin a 146.7 µg RAE, vitamin d 2.2 µg, vitamin k 2000 µg, folate 150 µg DFE, vitamin c 0 mg; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -577,7 +617,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, fish meal 65% protein), because USDA has no record for fishmeal as it isn't a human food. Omega-3 is a guess from the fat content and sardine oil's fatty acids. Vitamins are left out.\n\nVitamins are a guess scaled up from raw anchovy. Drying heat destroys some of them, so real values are probably lower.",
+        "notes": "Ground, dried fish (mostly Peruvian anchoveta) fed to farmed salmon, shrimp, pigs and chickens. It's not eaten by people. It's here so those animals are charged for it.\n\nThe key number is wild fish killed: about 3.6 kg of whole fish makes 1 kg of fishmeal plus fish oil. About 30% of fishmeal comes from trimmings of fish already caught for food, so 2.55 kg of fish are killed per kg of fishmeal. Each anchoveta (~18 g, ~15.6 million neurons, estimated from brain-scaling rules) counts as a direct kill for whatever animal eats the feed.\n\nEmissions for feed use are from a 2025 Peruvian LCA: ~0.32 kg CO2e/kg, covering fishing, reduction and export. The older 6–6.5 retail-style figures are kept for reference only. Fishmeal has no land or crop water.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, fish meal 65% protein), because USDA has no record for fishmeal as it isn't a human food. Vitamins and omega-3 come from the INRAE-CIRAD-AFZ feed tables (fish meal 65% protein), and vitamin K is a guess from raw anchovy.",
         "nutrition": [
             {
                 "value": {
@@ -620,33 +660,34 @@
             },
             {
                 "value": {
-                    "epa_dha": 20.79,
-                    "ala": 0.00133
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.05,
+                    "vitamin_e": 0.0052,
+                    "folate": 0.3,
+                    "vitamin_b12": 0.311,
+                    "vitamin_b6": 0.0042,
+                    "ala": 0.0012,
+                    "epa_dha": 10.4
                 },
-                "confidence": 1,
+                "confidence": 2,
                 "source": {
-                    "id": 467,
-                    "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
-                    "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
-                    "note": "Fishmeal — GUESS for omega-3. Neither USDA nor the feed table gives fishmeal's fatty acids, so they are estimated as this entry's fat (10%) times the omega-3 share of USDA sardine oil (FDC 173578, a pelagic fish oil like anchoveta), assuming the fat left in fishmeal is like the oil pressed out of it. Sardine oil per 100 g: EPA + DHA 20.79 g, ALA 1.33 g. Fishmeal per gram: EPA + DHA 20.8 mg, ALA 0.0013 g. Fat in fishmeal oxidises during drying and storage, so the real figure may be lower."
+                    "id": 491,
+                    "url": "https://www.feedtables.com/content/fish-meal-protein-65",
+                    "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Fish meal, protein 65%",
+                    "note": "Fishmeal — measured feed-table values (not a human-food database; USDA has no fishmeal record). As fed (92.1% dry matter): vitamin A 0, vitamin D 2,000 IU/kg (= 50 µg/kg), vitamin E 5.2 mg/kg, vitamin B6 4.2 mg/kg, vitamin B12 311 µg/kg, folic acid 0.3 mg/kg, vitamin C 0, C18:3 1.2 g/kg, EPA (C20:5) 6.0 g/kg + DHA (C22:6) 4.4 g/kg. Folic acid is counted as µg DFE 1:1 (natural folate). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 5 µg, vitamin e 0.52 mg, folate 30 µg DFE, vitamin b12 31.1 µg, vitamin b6 0.42 mg, ala 0.12 g, epa dha 1040 mg; divided by 100 for per-gram values. This replaces earlier guesses: the omega-3 guess from sardine oil (20.8 mg/g) was about twice the measured 10.4 mg/g, because fishmeal's fat oxidises."
                 }
             },
             {
                 "value": {
-                    "vitamin_b12": 0.01980344,
-                    "vitamin_b6": 0.00456757,
-                    "folate": 0.28746929,
-                    "vitamin_a": 0.30991736,
-                    "vitamin_e": 0.01177686,
-                    "vitamin_k": 0.00206612,
-                    "vitamin_c": 0.0
+                    "vitamin_k": 0.00206612
                 },
                 "confidence": 1,
                 "source": {
                     "id": 486,
                     "url": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 174182: Fish, anchovy, european, raw",
-                    "note": "Fishmeal — GUESS for vitamins. Neither USDA nor the feed table gives fishmeal vitamins, so they are scaled up from raw European anchovy (a close relative of the Peruvian anchoveta fishmeal is made from): B12, B6 and folate by protein (65 ÷ 20.35 g = 3.19×), vitamins A, E and K by fat (10 ÷ 4.84 g = 2.07×), vitamin C as anchovy's reported value. Per 100 g: vitamin b12 1.98 µg, vitamin b6 0.4568 mg, folate 28.75 µg DFE, vitamin a 30.99 µg RAE, vitamin e 1.178 mg, vitamin k 0.2066 µg, vitamin c 0 mg; divided by 100 for per-gram values. Fishmeal is cooked and dried at high heat, which destroys part of the B6, folate and vitamin A, so these are likely too high. Vitamin D is left out because USDA's raw anchovy doesn't report it. Only fills values missing from the main entries."
+                    "note": "Fishmeal — GUESS for vitamin K only. The feed tables don't give fishmeal vitamin K, so it is raw European anchovy's vitamin K (0.1 µg per 100 g) scaled by fat (fishmeal 10 g ÷ anchovy 4.84 g), since vitamin K is fat-soluble. Per 100 g: vitamin k 0.2066 µg; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -765,7 +806,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "Oil pressed from reduction fish (mostly anchoveta) during fishmeal production, fed mainly to farmed salmon. It's not eaten as food here.\n\nWild fish killed: each kg of meal or oil takes about 3.6 kg of fish. About half of fish oil comes from trimmings, so 1.78 kg of fish are killed per kg of fish oil.\n\nEmissions are much higher per kg than fishmeal (~4.4 kg CO2e/kg in the Peruvian LCA), because fish yield little oil relative to meal. The split between meal and oil depends on the allocation method, which is why confidence is 2.\n\nVitamins and omega-3 come from a stand-in USDA record (sardine oil) because the feed source doesn't list them.",
+        "notes": "Oil pressed from reduction fish (mostly anchoveta) during fishmeal production, fed mainly to farmed salmon. It's not eaten as food here.\n\nWild fish killed: each kg of meal or oil takes about 3.6 kg of fish. About half of fish oil comes from trimmings, so 1.78 kg of fish are killed per kg of fish oil.\n\nEmissions are much higher per kg than fishmeal (~4.4 kg CO2e/kg in the Peruvian LCA), because fish yield little oil relative to meal. The split between meal and oil depends on the allocation method, which is why confidence is 2.\n\nVitamins and omega-3 come from a stand-in USDA record (sardine oil) because the feed source doesn't list them.\n\nVitamins E and K come from the INRAE-CIRAD-AFZ feed tables (anchovy fish oil).",
         "nutrition": [
             {
                 "value": {
@@ -812,6 +853,19 @@
                     "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
                     "note": "Fish Oil — stand-in vitamins and omega-3: the FAO feed source has no vitamins, so they come from USDA's sardine oil, a pelagic fish oil like the anchovy/sardine/herring blends used in feed. Vitamins and minerals from USDA FDC 173578 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 8.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 173578 per 100 g: ALA 1.327 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20793 mg (EPA 10.137 + DHA 10.656); divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.219,
+                    "vitamin_k": 1.5
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 490,
+                    "url": "https://www.feedtables.com/content/fish-oil-anchovy",
+                    "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Fish oil, anchovy",
+                    "note": "Fish Oil — measured feed-table values. USDA's fish oil records don't report vitamins E or K; the INRAE-CIRAD-AFZ feed tables give anchovy fish oil (as fed) vitamin E 219 mg/kg and vitamin K 1.5 mg/kg (the same values are listed for sardine, herring, menhaden and salmon oils, so they are table averages rather than per-species measurements). Per 100 g: vitamin e 21.9 mg, vitamin k 150 µg; divided by 100 for per-gram values. Feed fish oils usually have antioxidants added, which can raise vitamin E."
                 }
             }
         ],

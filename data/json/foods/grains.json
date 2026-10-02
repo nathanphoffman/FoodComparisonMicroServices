@@ -2887,7 +2887,7 @@
         "tags": [
             "processed"
         ],
-        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).\n\nVitamins and minerals are estimates. USDA has no measured rice protein record and the three labels used for its macros list none, so minerals are averaged from other plain rice protein labels (USDA Branded and Open Food Facts), and zinc and selenium are a guess scaled up from brown rice by protein content. Most vitamins are left out.\n\nVitamins A, C and B12 and omega-3 are a guess from brown rice. Vitamins E and K, folate and B6 are left out: rice protein is made by washing away the starch, which removes an unknown share of them.",
+        "notes": "Rice protein powder (used in vegan burgers and cheeses), nutrition averaged from three product labels (~80% protein). It's a by-product of rice starch-making, so it carries a value-based share of the rice: 1.8 kg of milled rice per kg of protein. That ratio is backed out from CarbonCloud's verified rice-protein footprint, whose farming stage is 1.8× its milled-rice benchmark. Land and crop water are rice × 1.8, and per-hectare farm values are copied from rice.\n\nEmissions are CarbonCloud's figure for Chinese rice protein: 8.58 kg CO2e/kg, about half farming and half processing. Availability (~150 kt) is from a market report (confidence 1).\n\nVitamins and minerals are estimates. USDA has no measured rice protein record and the three labels used for its macros list none, so minerals are averaged from other plain rice protein labels (USDA Branded and Open Food Facts), and zinc and selenium are a guess scaled up from brown rice by protein content. Most vitamins are left out.\n\nVitamins A, C and B12 and omega-3 are a guess from brown rice. Vitamins E and K, folate and B6 are left out: rice protein is made by washing away the starch, which removes an unknown share of them.\n\nVitamins E and K, folate and B6 are a rough guess from brown rice, by analogy with pea protein.",
         "land_types": {
             "wetland": 0.9,
             "tropical_forest": 0.1
@@ -3001,6 +3001,21 @@
                     "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
                     "note": "Rice Protein — GUESS from brown rice. USDA brown rice reports 0 vitamin A, 0 vitamin C and 0 vitamin B12, and concentrating it can't create them, so they are 0 here. EPA/DHA is 0 because rice doesn't make them. ALA is the label fat (average 4.17 g per 100 g) times the share of brown rice fat that is ALA (0.032 of 3.2 g). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin b12 0 µg, epa dha 0 mg, ala 0.0417 g; divided by 100 for per-gram values. Vitamins E and K, folate and B6 are left out: they can't be estimated this way because an unknown share is washed out with the starch. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_b6": 0.00477,
+                    "folate": 0.23,
+                    "vitamin_k": 0.006,
+                    "vitamin_e": 0.00781875
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 471,
+                    "url": "https://fdc.nal.usda.gov/food-details/169703/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
+                    "note": "Rice Protein — GUESS by analogy with pea protein. No source gives these for rice protein. Analysed pea protein isolate keeps B6 and folate at about the same level as or above whole peas (Mad Barn vs USDA split peas), so rice protein is given brown rice's own B6 (0.477 mg), folate (23 µg DFE) and vitamin K (0.6 µg) per 100 g, unscaled. Vitamin E is fat-soluble, so it is brown rice's 0.6 mg scaled by fat (label average 4.17 g ÷ 3.2 g). Per 100 g: vitamin b6 0.477 mg, folate 23 µg DFE, vitamin k 0.6 µg, vitamin e 0.7819 mg; divided by 100 for per-gram values."
                 }
             }
         ],

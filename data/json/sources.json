@@ -27,7 +27,9 @@
             "Impossible Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Soy 0.22, Sunflower Oil 0.055, Coconut Oil 0.055). Water, salt and the minor ingredients (other minor ingredients (flavors, methylcellulose, starch, dextrose, yeast extract, heme, salt); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0.374 mg, vitamin e 2.342 mg, vitamin k 4.554 µg, magnesium 18.92 mg, selenium 1.606 µg, ala 0.1326 g, epa dha 0 mg; divided by 100 for per-gram values. The soy share uses this dataset's cooked soybean values; the real ingredient is soy protein concentrate, which has less water, so magnesium and selenium are probably too low. Only fills values missing from the main entry.",
             "Beyond Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03). Water, salt and the minor ingredients (other minor ingredients (flavors, dried yeast, cocoa butter, methylcellulose, potato starch, salt, fruit extracts); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, selenium 12.28 µg, ala 0.6858 g, epa dha 0 mg; divided by 100 for per-gram values. Pea and rice protein are themselves partly estimated. Left out because an ingredient has no value: vitamin e, vitamin k, folate, magnesium, phosphorus. Only fills values missing from the main entry.",
             "Violife Just Like Parmesan (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03). Water, salt and the minor ingredients (salt; other minor ingredients (flavor, olive extract, beta carotene, vitamin B12); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, calcium 5.751 mg, iron 0.5858 mg, magnesium 5.82 mg, potassium 2.2 mg, zinc 0.7019 mg, phosphorus 19.91 mg, selenium 6.395 µg, ala 0.004576 g, epa dha 0 mg; divided by 100 for per-gram values. Beta-carotene is added as a colour but the amount isn't given, so vitamin A is probably too low. Left out because an ingredient has no value: vitamin e, vitamin k, folate, vitamin b6. Only fills values missing from the main entry.",
-            "Follow Your Heart Parmesan Grated (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Potato Starch 0.4, Palm Oil 0.184, Canola Oil 0.116). Water, salt and the minor ingredients (cellulose; maltodextrin; other minor ingredients (flavors, yeast, glycerin, salt, phosphates, carrageenan, miso, lecithin, annatto); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin e 4.958 mg, vitamin k 9.743 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, magnesium 1.2 mg, zinc 0.024 mg, phosphorus 5.2 mg, selenium 1.12 µg, ala 1.097 g, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+            "Follow Your Heart Parmesan Grated (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Potato Starch 0.4, Palm Oil 0.184, Canola Oil 0.116). Water, salt and the minor ingredients (cellulose; maltodextrin; other minor ingredients (flavors, yeast, glycerin, salt, phosphates, carrageenan, miso, lecithin, annatto); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin e 4.958 mg, vitamin k 9.743 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, magnesium 1.2 mg, zinc 0.024 mg, phosphorus 5.2 mg, selenium 1.12 µg, ala 1.097 g, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry.",
+            "Beyond Burger (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 1.526 mg, vitamin k 8.053 µg, folate 7.819 µg DFE, magnesium 35.2 mg, phosphorus 87.7 mg; divided by 100 for per-gram values.",
+            "Violife Just Like Parmesan (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 0.04271 mg, vitamin k 0.123 µg, folate 0.69 µg DFE, vitamin b6 0.01431 mg; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2746,8 +2748,7 @@
         "url": "https://fdc.nal.usda.gov/food-details/173578/nutrients",
         "title": "USDA FoodData Central — SR Legacy 173578: Fish oil, sardine",
         "notes": [
-            "Fish Oil — stand-in vitamins and omega-3: the FAO feed source has no vitamins, so they come from USDA's sardine oil, a pelagic fish oil like the anchovy/sardine/herring blends used in feed. Vitamins and minerals from USDA FDC 173578 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 8.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 173578 per 100 g: ALA 1.327 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20793 mg (EPA 10.137 + DHA 10.656); divided by 100 for per-gram values. Only fills values missing from the main entry.",
-            "Fishmeal — GUESS for omega-3. Neither USDA nor the feed table gives fishmeal's fatty acids, so they are estimated as this entry's fat (10%) times the omega-3 share of USDA sardine oil (FDC 173578, a pelagic fish oil like anchoveta), assuming the fat left in fishmeal is like the oil pressed out of it. Sardine oil per 100 g: EPA + DHA 20.79 g, ALA 1.33 g. Fishmeal per gram: EPA + DHA 20.8 mg, ALA 0.0013 g. Fat in fishmeal oxidises during drying and storage, so the real figure may be lower."
+            "Fish Oil — stand-in vitamins and omega-3: the FAO feed source has no vitamins, so they come from USDA's sardine oil, a pelagic fish oil like the anchovy/sardine/herring blends used in feed. Vitamins and minerals from USDA FDC 173578 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 8.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin e, vitamin k; divided by 100 for per-gram values. Omega-3 from FDC 173578 per 100 g: ALA 1.327 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 20793 mg (EPA 10.137 + DHA 10.656); divided by 100 for per-gram values. Only fills values missing from the main entry."
         ]
     },
     {
@@ -2780,7 +2781,8 @@
         "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
         "notes": [
             "Rice Protein — GUESS for zinc and selenium. No rice protein label (USDA Branded or Open Food Facts) or database lists them, so they are scaled up from USDA brown rice (FDC 169703, per 100 g: protein 7.54 g, zinc 2.13 mg, selenium 17.1 µg) by the protein ratio 80 ÷ 7.54 = 10.6, assuming they stay with the protein when the starch is removed. Zinc and selenium are largely bound to protein in rice, and the same scaling gives iron 13.7 mg/100 g, which matches the labels (13–16 mg). Magnesium and phosphorus don't follow it (labels are ~10× lower than the scaling predicts), so treat this as a rough guess. Per 100 g: zinc 22.6 mg, selenium 181 µg; divided by 100 for per-gram values. Selenium in rice also varies a lot with soil.",
-            "Rice Protein — GUESS from brown rice. USDA brown rice reports 0 vitamin A, 0 vitamin C and 0 vitamin B12, and concentrating it can't create them, so they are 0 here. EPA/DHA is 0 because rice doesn't make them. ALA is the label fat (average 4.17 g per 100 g) times the share of brown rice fat that is ALA (0.032 of 3.2 g). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin b12 0 µg, epa dha 0 mg, ala 0.0417 g; divided by 100 for per-gram values. Vitamins E and K, folate and B6 are left out: they can't be estimated this way because an unknown share is washed out with the starch. Only fills values missing from the main entries."
+            "Rice Protein — GUESS from brown rice. USDA brown rice reports 0 vitamin A, 0 vitamin C and 0 vitamin B12, and concentrating it can't create them, so they are 0 here. EPA/DHA is 0 because rice doesn't make them. ALA is the label fat (average 4.17 g per 100 g) times the share of brown rice fat that is ALA (0.032 of 3.2 g). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin b12 0 µg, epa dha 0 mg, ala 0.0417 g; divided by 100 for per-gram values. Vitamins E and K, folate and B6 are left out: they can't be estimated this way because an unknown share is washed out with the starch. Only fills values missing from the main entries.",
+            "Rice Protein — GUESS by analogy with pea protein. No source gives these for rice protein. Analysed pea protein isolate keeps B6 and folate at about the same level as or above whole peas (Mad Barn vs USDA split peas), so rice protein is given brown rice's own B6 (0.477 mg), folate (23 µg DFE) and vitamin K (0.6 µg) per 100 g, unscaled. Vitamin E is fat-soluble, so it is brown rice's 0.6 mg scaled by fat (label average 4.17 g ÷ 3.2 g). Per 100 g: vitamin b6 0.477 mg, folate 23 µg DFE, vitamin k 0.6 µg, vitamin e 0.7819 mg; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2901,7 +2903,7 @@
         "url": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
         "title": "USDA FoodData Central — SR Legacy 174182: Fish, anchovy, european, raw",
         "notes": [
-            "Fishmeal — GUESS for vitamins. Neither USDA nor the feed table gives fishmeal vitamins, so they are scaled up from raw European anchovy (a close relative of the Peruvian anchoveta fishmeal is made from): B12, B6 and folate by protein (65 ÷ 20.35 g = 3.19×), vitamins A, E and K by fat (10 ÷ 4.84 g = 2.07×), vitamin C as anchovy's reported value. Per 100 g: vitamin b12 1.98 µg, vitamin b6 0.4568 mg, folate 28.75 µg DFE, vitamin a 30.99 µg RAE, vitamin e 1.178 mg, vitamin k 0.2066 µg, vitamin c 0 mg; divided by 100 for per-gram values. Fishmeal is cooked and dried at high heat, which destroys part of the B6, folate and vitamin A, so these are likely too high. Vitamin D is left out because USDA's raw anchovy doesn't report it. Only fills values missing from the main entries."
+            "Fishmeal — GUESS for vitamin K only. The feed tables don't give fishmeal vitamin K, so it is raw European anchovy's vitamin K (0.1 µg per 100 g) scaled by fat (fishmeal 10 g ÷ anchovy 4.84 g), since vitamin K is fat-soluble. Per 100 g: vitamin k 0.2066 µg; divided by 100 for per-gram values."
         ]
     },
     {
@@ -2917,7 +2919,7 @@
         "url": "https://fdc.nal.usda.gov/food-details/2586352/nutrients",
         "title": "Plain pea protein isolate labels — USDA Branded: NOW Foods pea protein (FDC 2586352), NOW Foods organic pea protein (1162800), Luchi Organics (2608970)",
         "notes": [
-            "Pea Protein — ESTIMATE from other brands' labels. The Bob's Red Mill label this food comes from lists only calcium and iron, and USDA has no measured pea protein record, so potassium and vitamin D come from other plain pea protein isolate labels in USDA's Branded data: potassium 252 (NOW), 105 (NOW organic), 91 (Luchi) mg, averaged; vitamin D 0 on all three. Per 100 g: potassium 149.3 mg, vitamin d 0 µg; divided by 100 for per-gram values. Potassium varies a lot by maker because it is mostly washed out during processing. Only fills values missing from the main entries."
+            "Pea Protein — ESTIMATE from other brands' labels. The Bob's Red Mill label this food comes from lists only calcium and iron, and USDA has no measured pea protein record, so potassium and vitamin D come from other plain pea protein isolate labels in USDA's Branded data: potassium 252 (NOW), 105 (NOW organic), 91 (Luchi) mg, plus 300 mg from Roquette's Nutralys pea protein isolate spec (FDA GRAS notice GRN 883, Table 2), averaged = 187 mg; vitamin D 0 on all three. Per 100 g: potassium 187.3 mg, vitamin d 0 µg; divided by 100 for per-gram values. Potassium varies a lot by maker because it is mostly washed out during processing. Only fills values missing from the main entries."
         ]
     },
     {
@@ -2925,7 +2927,80 @@
         "url": "https://fdc.nal.usda.gov/food-details/172428/nutrients",
         "title": "USDA FoodData Central — SR Legacy 172428: Peas, green, split, mature seeds, raw (scaled estimate for pea protein)",
         "notes": [
-            "Pea Protein — GUESS from split peas, using the same method as rice protein. No pea protein label or database lists zinc or selenium, so they are scaled up from raw split peas by protein (77.8 ÷ 23.12 g = 3.37×), assuming they stay with the protein. Vitamin B12 is 0 (peas don't make it; USDA split peas report 0) and EPA/DHA is 0. ALA is the label fat (5.56 g) times the share of split pea fat that is ALA (0.163 of 3.89 g). Per 100 g: zinc 11.74 mg, selenium 36.01 µg, vitamin b12 0 µg, epa dha 0 mg, ala 0.233 g; divided by 100 for per-gram values. The same scaling would predict iron of ~16 mg; labels say 23–25, so treat this as rough. Magnesium, phosphorus, vitamins E and K, folate and B6 are left out: processing washes out an unknown share (potassium, for example, ends up ~20× lower than this scaling predicts). Only fills values missing from the main entries."
+            "Pea Protein — GUESS from split peas, using the same method as rice protein. No pea protein label or database lists zinc or selenium, so they are scaled up from raw split peas by protein (77.8 ÷ 23.12 g = 3.37×), assuming they stay with the protein. Vitamin B12 is 0 (peas don't make it; USDA split peas report 0) and EPA/DHA is 0. ALA is the label fat (5.56 g) times the share of split pea fat that is ALA (0.163 of 3.89 g). Per 100 g: zinc 11.74 mg, selenium 36.01 µg, vitamin b12 0 µg, epa dha 0 mg, ala 0.233 g; divided by 100 for per-gram values. The same scaling would predict iron of ~16 mg; labels say 23–25, so treat this as rough. Magnesium, phosphorus, vitamins E and K, folate and B6 are left out: processing washes out an unknown share (potassium, for example, ends up ~20× lower than this scaling predicts). Only fills values missing from the main entries.",
+            "Pea Protein — GUESS for vitamin K. No source gives vitamin K for pea protein isolate (Mad Barn lists only synthetic K3), so it is raw split peas' 15.9 µg per 100 g, unscaled, assuming vitamin K neither concentrates nor washes out. Per 100 g: vitamin k 15.9 µg; divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 490,
+        "url": "https://www.feedtables.com/content/fish-oil-anchovy",
+        "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Fish oil, anchovy",
+        "notes": [
+            "Fish Oil — measured feed-table values. USDA's fish oil records don't report vitamins E or K; the INRAE-CIRAD-AFZ feed tables give anchovy fish oil (as fed) vitamin E 219 mg/kg and vitamin K 1.5 mg/kg (the same values are listed for sardine, herring, menhaden and salmon oils, so they are table averages rather than per-species measurements). Per 100 g: vitamin e 21.9 mg, vitamin k 150 µg; divided by 100 for per-gram values. Feed fish oils usually have antioxidants added, which can raise vitamin E."
+        ]
+    },
+    {
+        "id": 491,
+        "url": "https://www.feedtables.com/content/fish-meal-protein-65",
+        "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Fish meal, protein 65%",
+        "notes": [
+            "Fishmeal — measured feed-table values (not a human-food database; USDA has no fishmeal record). As fed (92.1% dry matter): vitamin A 0, vitamin D 2,000 IU/kg (= 50 µg/kg), vitamin E 5.2 mg/kg, vitamin B6 4.2 mg/kg, vitamin B12 311 µg/kg, folic acid 0.3 mg/kg, vitamin C 0, C18:3 1.2 g/kg, EPA (C20:5) 6.0 g/kg + DHA (C22:6) 4.4 g/kg. Folic acid is counted as µg DFE 1:1 (natural folate). Per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 5 µg, vitamin e 0.52 mg, folate 30 µg DFE, vitamin b12 31.1 µg, vitamin b6 0.42 mg, ala 0.12 g, epa dha 1040 mg; divided by 100 for per-gram values. This replaces earlier guesses: the omega-3 guess from sardine oil (20.8 mg/g) was about twice the measured 10.4 mg/g, because fishmeal's fat oxidises."
+        ]
+    },
+    {
+        "id": 492,
+        "url": "https://www.feedtables.com/content/alfalfa-dehydrated-protein-16-18-dry-matter",
+        "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Alfalfa, dehydrated, protein 16-18% dry matter",
+        "notes": [
+            "Alfalfa — ESTIMATE from feed tables, adjusted for haymaking. No human-food database covers alfalfa hay. Values start from the INRAE-CIRAD-AFZ feed table for dehydrated alfalfa (16–18% protein, as fed): vitamin A 55,100 IU/kg, vitamin E 123 mg/kg, vitamin K 20 mg/kg, folic acid 1.5 mg/kg, selenium 0.1 mg/kg, C18:3 4 g/kg. Dehydrated alfalfa is machine-dried fast; sun-cured hay loses much more: up to 80% of beta-carotene during curing and ~60% of vitamin E (thehorse.com), so vitamin A is cut by 80% and vitamin E by 60%. Vitamin A is converted assuming the feed table's IU are 400 IU per mg beta-carotene (the usual cattle convention) and 12 µg beta-carotene = 1 µg RAE for people. Vitamin D: dehydrated alfalfa has none, but sun-cured hay gains vitamin D2: ~2,000 IU/kg dry matter when fresh, falling to ~39% after a year of storage (Newlander 1948, via VitaminDWiki); ~1,000 IU/kg dry matter (25 µg) is used. Vitamin B6: the feed table's 286 mg/kg is ~50× higher than any other forage and looks like an error, so B6 is instead USDA alfalfa sprouts (0.034 mg per 100 g at 7.2% dry matter) scaled to hay's 89.4% dry matter. Vitamin C is taken as 0: drying destroys it and the feed table lists none. Per 100 g: vitamin a 229.6 µg RAE, vitamin e 4.92 mg, vitamin k 2000 µg, folate 150 µg DFE, selenium 10 µg, ala 0.4 g, vitamin d 2.235 µg, vitamin c 0 mg, vitamin b6 0.4233 mg; divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 493,
+        "url": "https://www.feedtables.com/content/grass-dehydrated",
+        "title": "Feedtables (INRAE-CIRAD-AFZ feed tables) — Grass, dehydrated",
+        "notes": [
+            "Grass Hay — ESTIMATE from feed tables and hay studies. No human-food database covers grass hay. Vitamin E, B6, selenium and ALA start from the INRAE-CIRAD-AFZ feed table for dehydrated grass (as fed, 90% dry matter): vitamin E 110 mg/kg, B6 8.9 mg/kg, selenium 0.07 mg/kg, C18:3 6.2 g/kg; vitamin E is cut by 60% for sun-curing (thehorse.com). Vitamin A: timothy hay has ~20 mg beta-carotene/kg dry matter (dvm360), × 88% dry matter ÷ 12 for RAE. Vitamin D: ~1,000 IU/kg dry matter for sun-cured hay (Newlander 1948, via VitaminDWiki), × 88%. Vitamin K and folate: no grass hay figure was found, so alfalfa's feed-table values (20 mg/kg and 1.5 mg/kg as fed) are used as a leafy-forage analog. Vitamin C is taken as 0: drying destroys it. Per 100 g: vitamin e 4.4 mg, vitamin b6 0.89 mg, selenium 7 µg, ala 0.62 g, vitamin a 146.7 µg RAE, vitamin d 2.2 µg, vitamin k 2000 µg, folate 150 µg DFE, vitamin c 0 mg; divided by 100 for per-gram values."
+        ]
+    },
+    {
+        "id": 494,
+        "url": "https://thehorse.com/19685/nutrition-loss-in-stored-hay/",
+        "title": "thehorse.com — Nutrition Loss in Stored Hay",
+        "notes": [
+            "Used for hay curing losses: up to 80% of beta-carotene lost during curing, and timothy hay losing up to 60% of vitamin E when cured in swaths (applied to the Alfalfa and Grass Hay estimates)."
+        ]
+    },
+    {
+        "id": 495,
+        "url": "https://vitamindwiki.com/Sun-cured+hay+often+has+2000+IU+of+vitamin+D+per+kilogram",
+        "title": "Newlander (1948) — Vitamin D content of roughages, Journal of Dairy Science (via VitaminDWiki summary)",
+        "notes": [
+            "Sun-cured hay ~2,000 IU vitamin D per kg dry matter when fresh, ~39% left after a year of storage. ~1,000 IU/kg dry matter used for the Alfalfa and Grass Hay estimates."
+        ]
+    },
+    {
+        "id": 496,
+        "url": "https://www.dvm360.com/view/beta-carotene-essential-nutrient",
+        "title": "dvm360 — Is beta-carotene an essential nutrient?",
+        "notes": [
+            "Timothy hay (US 1) ~20 mg beta-carotene per kg dry matter, vs 400–600 in fresh grass. Used for the Grass Hay vitamin A estimate."
+        ]
+    },
+    {
+        "id": 497,
+        "url": "https://www.fda.gov/media/134207/download",
+        "title": "FDA GRAS notification — Roquette Frères pea protein isolate (Nutralys)",
+        "notes": [
+            "Pea Protein — potassium 300 mg/100 g from Table 2 (Nutralys S85Plus), added to the label average. The table gives no other minerals or vitamins."
+        ]
+    },
+    {
+        "id": 498,
+        "url": "https://madbarn.com/feeds/pea-protein-isolate/",
+        "title": "Mad Barn equine feed database — Pea protein isolate",
+        "notes": [
+            "Pea Protein — ESTIMATE from a feed-industry analysis. No human-food source lists these for pea protein isolate, so they come from Mad Barn's analysed pea protein isolate (93.8% dry matter): magnesium 0.16 g and phosphorus 0.38 g per 100 g as fed; vitamin E 23.1 IU/kg dry matter (× 0.67 mg per IU for natural vitamin E), vitamin B6 2.2 mg/kg and folate 0.4 mg/kg dry matter, converted to as fed. Per 100 g: magnesium 160 mg, phosphorus 380 mg, vitamin e 1.452 mg, vitamin b6 0.2064 mg, folate 37.52 µg DFE; divided by 100 for per-gram values. Mad Barn's sample is only ~58% protein, so it is a less refined product than this ~78% isolate; a purer isolate is probably lower in magnesium and phosphorus. Some of Mad Barn's values are marked as estimates."
         ]
     }
 ]
