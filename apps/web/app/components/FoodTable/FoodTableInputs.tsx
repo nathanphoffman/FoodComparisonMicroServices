@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { MealBuilder } from './MealBuilder';
 import type { ColConfig, DataRegion, SliderValues } from './FoodTableTypes';
@@ -21,7 +21,8 @@ type Props = {
     onDataRegionChange: (region: DataRegion) => void;
 };
 
-export function FoodTableInputs({
+// Memoized so opening/closing the food detail modal doesn't re-render all the sliders
+export const FoodTableInputs = memo(function FoodTableInputs({
     onSliderValuesChange,
     scoringError,
     onDismissScoringError,
@@ -148,4 +149,4 @@ export function FoodTableInputs({
             />
         </>
     );
-}
+});

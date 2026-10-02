@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Table } from '../Table/Table';
 import { Row } from '../Table/Row';
 import { NameCell } from './Cells/NameCell';
@@ -45,6 +45,7 @@ export function FoodTable() {
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
+    const dismissScoringError = useCallback(() => setScoringError(null), [setScoringError]);
 
     // Sort state
     const { columnSortProps, sortRows } = useFoodTableSort();
@@ -84,14 +85,43 @@ export function FoodTable() {
 
     // Filtering only hides rows; every food is still scored so scores don't shift
     // with the filter. The custom meal row always stays visible.
-    const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, foodFilter));
-    const foodsToSort = scored.has('your-meal') ? [...visibleFoods, MEAL_STUB] : visibleFoods;
-    const displayRows = sortRows(foodsToSort, scored);
+    const displayRows = useMemo(() => {
+        const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, foodFilter));
+        const foodsToSort = scored.has('your-meal') ? [...visibleFoods, MEAL_STUB] : visibleFoods;
+        return sortRows(foodsToSort, scored);
+    }, [rawFoods, foodFilter, scored, sortRows]);
 
     // ── Render ────────────────────────────────────────────────────────────────
 
     const { weights, greenWaterWeight, greyWaterWeight } = sliderValues;
     const unit = getUnitLabel(weights);
+
+    // Memoized so opening/closing the detail modal (or other unrelated state changes)
+    // doesn't re-render every row and its tooltips.
+    const tableRows = useMemo(() => (
+        displayRows.map(food => {
+            const scoredRow = scored.get(food.slug);
+            const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
+            return (
+                <Row key={food.slug} className={food.slug === 'your-meal' ? 'bg-yellow-50' : undefined}>
+                    {activeCols.map(column => {
+                        switch (column.key) {
+                            case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
+                            case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
+                            case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
+                            case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
+                            case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;
+                            case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={scoredRow?.divisor ?? 1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
+                            case 'captiveSentience': return <CaptiveSentienceCell key="captiveSentience" value={scoredRow?.captive_sentience ?? null} killDetail={scoredRow?.kill_detail} captivityMultiplier={sliderValues.captivityMultiplier} explanation={food.sentient_harm_explanation} />;
+                            case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} killMultiplier={sliderValues.killMultiplier} explanation={food.sentient_harm_explanation} />;
+                            case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
+                            case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
+                        }
+                    })}
+                </Row>
+            );
+        })
+    ), [displayRows, scored, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
     const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:    `CO₂e (kg / ${unit})`,
@@ -122,7 +152,7 @@ export function FoodTable() {
             <FoodTableInputs
                 onSliderValuesChange={setSliderValues}
                 scoringError={scoringError}
-                onDismissScoringError={() => setScoringError(null)}
+                onDismissScoringError={dismissScoringError}
                 onActiveColsChange={setActiveCols}
                 foods={rawFoods}
                 dataRegion={dataRegion}
@@ -132,28 +162,7 @@ export function FoodTable() {
             <FoodTableFilters selected={foodFilter} onChange={setFoodFilter} />
 
             <Table headers={headers}>
-                {displayRows.map(food => {
-                    const scoredRow = scored.get(food.slug);
-                    const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
-                    return (
-                        <Row key={food.slug} className={food.slug === 'your-meal' ? 'bg-yellow-50' : undefined}>
-                            {activeCols.map(column => {
-                                switch (column.key) {
-                                    case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
-                                    case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
-                                    case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
-                                    case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
-                                    case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;
-                                    case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={scoredRow?.divisor ?? 1} unit={unit} greenWaterWeight={greenWaterWeight} greyWaterWeight={greyWaterWeight} />;
-                                    case 'captiveSentience': return <CaptiveSentienceCell key="captiveSentience" value={scoredRow?.captive_sentience ?? null} killDetail={scoredRow?.kill_detail} captivityMultiplier={sliderValues.captivityMultiplier} explanation={food.sentient_harm_explanation} />;
-                                    case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={scoredRow?.divisor ?? 1} killMultiplier={sliderValues.killMultiplier} explanation={food.sentient_harm_explanation} />;
-                                    case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
-                                    case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
-                                }
-                            })}
-                        </Row>
-                    );
-                })}
+                {tableRows}
             </Table>
 
             {selectedFood && (

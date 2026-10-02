@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import type { RawFood } from './FoodTableTypes';
 import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail, ImprovementDetail } from './FoodTableTypes';
 
@@ -72,7 +72,8 @@ export function useFoodTableSort() {
         return { sorted: sortKey === key ? sortDir : undefined, onSort: () => handleSort(key) };
     }
 
-    function sortRows(foods: RawFood[], scored: Map<string, ScoredRow>): RawFood[] {
+    // Stable between renders unless the sort changes, so the table can be memoized on it
+    const sortRows = useCallback((foods: RawFood[], scored: Map<string, ScoredRow>): RawFood[] => {
         if (!sortKey) return foods;
 
         return [...foods].sort((a, b) => {
@@ -115,7 +116,7 @@ export function useFoodTableSort() {
             const cmp = va < vb ? -1 : 1;
             return sortDir === 'asc' ? cmp : -cmp;
         });
-    }
+    }, [sortKey, sortDir]);
 
     return { sortKey, sortDir, handleSort, columnSortProps, sortRows };
 }

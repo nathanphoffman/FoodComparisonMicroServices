@@ -39,14 +39,19 @@ export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose 
   }, [food.slug]);
 
   // Escape closes; the page behind doesn't scroll while the modal is open.
+  // The body is padded by the scrollbar's width so hiding the scrollbar doesn't change
+  // the page width, which would force the browser to re-layout the whole food table.
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
     document.addEventListener('keydown', onKey);
-    const previousOverflow = document.body.style.overflow;
+    const { overflow: previousOverflow, paddingRight: previousPadding } = document.body.style;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = previousOverflow;
+      document.body.style.paddingRight = previousPadding;
     };
   }, [onClose]);
 
@@ -121,11 +126,20 @@ export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose 
 
           <div className="mt-5 text-sm leading-relaxed text-neutral-700">
             {loadError && <p className="text-red-600">Couldn't load notes and sources: {loadError}</p>}
-            {!loadError && !details && <p className="text-neutral-400">Loading…</p>}
+            {!loadError && !details && <LoadingNotes />}
             {details && <Notes notes={details.notes} />}
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function LoadingNotes() {
+  return (
+    <div className="flex items-center gap-2 text-neutral-400" role="status">
+      <span className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-200 border-t-neutral-500" aria-hidden="true" />
+      Loading notes…
     </div>
   );
 }
