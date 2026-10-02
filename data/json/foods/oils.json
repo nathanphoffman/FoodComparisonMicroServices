@@ -26,14 +26,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.1435,
+          "vitamin_k": 0.602,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.01,
+          "iron": 0.0056,
+          "magnesium": 0.0,
+          "potassium": 0.01,
+          "zinc": 0.0,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.00761,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram."
+          "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171413 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 14.35 mg, vitamin k 60.2 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.56 mg, magnesium 0 mg, potassium 1 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171413 per 100 g: ALA 0.761 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -309,14 +326,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.1746,
+          "vitamin_k": 0.713,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.09137,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Canola oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, canola', reported per gram (884 kcal, 100 g fat, 7.4 g sat fat per 100 g)."
+          "note": "Canola oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, canola', reported per gram (884 kcal, 100 g fat, 7.4 g sat fat per 100 g). Vitamins and minerals from USDA FDC 172336 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 17.46 mg, vitamin k 71.3 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 172336 per 100 g: ALA 9.137 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -562,14 +596,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.0818,
+          "vitamin_k": 1.839,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0005,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0001,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.06789,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Soybean oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, soybean, salad or cooking', reported per gram (884 kcal, 100 g fat, 15.6 g sat fat per 100 g)."
+          "note": "Soybean oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, soybean, salad or cooking', reported per gram (884 kcal, 100 g fat, 15.6 g sat fat per 100 g). Vitamins and minerals from USDA FDC 171411 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 8.18 mg, vitamin k 183.9 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.05 mg, magnesium 0 mg, potassium 0 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171411 per 100 g: ALA 6.789 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -885,14 +936,30 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_e": 0.1594,
+          "vitamin_k": 0.08,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0001,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.002,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Palm oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, palm', reported per gram (884 kcal, 100 g fat, ~49.7 g sat fat per 100 g — roughly half saturated, unusually high for a vegetable oil)."
+          "note": "Palm oil — calories, fat, sat_fat: USDA FoodData Central 'Oil, palm', reported per gram (884 kcal, 100 g fat, ~49.7 g sat fat per 100 g — roughly half saturated, unusually high for a vegetable oil). Vitamins and minerals from USDA FDC 171015 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin e 15.94 mg, vitamin k 8 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.01 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; not reported, so left out: vitamin d; divided by 100 for per-gram values. Omega-3 from FDC 171015 per 100 g: ALA 0.2 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -1141,14 +1208,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.4108,
+          "vitamin_k": 0.054,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.0,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Sunflower oil — USDA SR Legacy 'Oil, sunflower, linoleic (approx. 65%)' (fdcId 171025): 884 kcal, 100 g fat, 10.3 g sat fat per 100 g; per gram."
+          "note": "Sunflower oil — USDA SR Legacy 'Oil, sunflower, linoleic (approx. 65%)' (fdcId 171025): 884 kcal, 100 g fat, 10.3 g sat fat per 100 g; per gram. Vitamins and minerals from USDA FDC 171025 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 41.08 mg, vitamin k 5.4 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171025 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -1388,14 +1472,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0.00028
+          "trans_fat": 0.00028,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.0011,
+          "vitamin_k": 0.006,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.01,
+          "iron": 0.0005,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0002,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.00019,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Coconut oil — USDA SR Legacy 'Oil, coconut' (fdcId 171412): 892 kcal, 99.1 g fat, 82.5 g sat fat, 0.028 g trans fat per 100 g; per gram."
+          "note": "Coconut oil — USDA SR Legacy 'Oil, coconut' (fdcId 171412): 892 kcal, 99.1 g fat, 82.5 g sat fat, 0.028 g trans fat per 100 g; per gram. Vitamins and minerals from USDA FDC 171412 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.11 mg, vitamin k 0.6 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 1 mg, iron 0.05 mg, magnesium 0 mg, potassium 0 mg, zinc 0.02 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171412 per 100 g: ALA 0.019 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -1620,14 +1721,31 @@
           "carbs": 0,
           "sugar": 0,
           "cholesterol": 0,
-          "trans_fat": 0
+          "trans_fat": 0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.1569,
+          "vitamin_k": 0.007,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0003,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0001,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.0,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Peanut oil — USDA SR Legacy 'Oil, peanut, salad or cooking' (fdcId 171410): 884 kcal, 100 g fat, 16.9 g sat fat per 100 g; per gram."
+          "note": "Peanut oil — USDA SR Legacy 'Oil, peanut, salad or cooking' (fdcId 171410): 884 kcal, 100 g fat, 16.9 g sat fat per 100 g; per gram. Vitamins and minerals from USDA FDC 171410 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 15.69 mg, vitamin k 0.7 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.03 mg, magnesium 0 mg, potassium 0 mg, zinc 0.01 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171410 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],
@@ -1867,14 +1985,31 @@
           "carbs": 0.0,
           "sugar": 0.0,
           "cholesterol": 0.0,
-          "trans_fat": 0.0
+          "trans_fat": 0.0,
+          "vitamin_a": 0.0,
+          "vitamin_c": 0.0,
+          "vitamin_d": 0.0,
+          "vitamin_e": 0.143,
+          "vitamin_k": 0.019,
+          "folate": 0.0,
+          "vitamin_b12": 0.0,
+          "vitamin_b6": 0.0,
+          "calcium": 0.0,
+          "iron": 0.0,
+          "magnesium": 0.0,
+          "potassium": 0.0,
+          "zinc": 0.0,
+          "phosphorus": 0.0,
+          "selenium": 0.0,
+          "ala": 0.01161,
+          "epa_dha": 0.0
         },
         "confidence": 5,
         "source": {
           "id": 1,
           "url": "https://fdc.nal.usda.gov/",
           "title": "USDA FoodData Central",
-          "note": "Corn Oil — FDC 171029 'Oil, corn, industrial and retail, all purpose salad or cooking' (SR Legacy 04518), per 100 g: 900 kcal, protein 0 g, fat 100 g, sat fat 12.948 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values."
+          "note": "Corn Oil — FDC 171029 'Oil, corn, industrial and retail, all purpose salad or cooking' (SR Legacy 04518), per 100 g: 900 kcal, protein 0 g, fat 100 g, sat fat 12.948 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171029 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 14.3 mg, vitamin k 1.9 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0 mg, magnesium 0 mg, potassium 0 mg, zinc 0 mg, phosphorus 0 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171029 per 100 g: ALA 1.161 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         }
       }
     ],

@@ -15,7 +15,10 @@
             "Spinach — vitamins and minerals: FDC 168462 (Spinach, raw).",
             "Bivalves — vitamins and minerals (raw): blue mussel FDC 174216, Pacific oyster 174219, mixed-species clam 174214.",
             "Omega-3 (ALA = 18:3 n-3, or total 18:3 when not split out; EPA + DHA = 20:5 n-3 + 22:6 n-3) for the legumes, spinach, livers and bivalves comes from the same FDC records as their vitamins and minerals.",
-            "Fish and other seafood — vitamins, minerals and omega-3: salmon (Atlantic, farmed, raw) FDC 175167, yellowfin tuna raw 175159, shrimp raw 175179, sardines (Atlantic, canned in oil, with bone) 175139, tilapia (cooked, dry heat) 175177, Alaska pollock raw 173725, Atlantic cod raw 171955, carp raw 171952, farmed channel catfish raw 175165, octopus raw 174218."
+            "Fish and other seafood — vitamins, minerals and omega-3: salmon (Atlantic, farmed, raw) FDC 175167, yellowfin tuna raw 175159, shrimp raw 175179, sardines (Atlantic, canned in oil, with bone) 175139, tilapia (cooked, dry heat) 175177, Alaska pollock raw 173725, Atlantic cod raw 171955, carp raw 171952, farmed channel catfish raw 175165, octopus raw 174218.",
+            "Oils — vitamins, minerals and omega-3: olive FDC 171413, canola 172336, soybean 171411, palm 171015, sunflower (linoleic ~65%) 171025, coconut 171412, peanut 171410, corn 171029.",
+            "Vegetables — vitamins, minerals and omega-3 (raw): tomato FDC 170457, cucumber with peel 168409, potato flesh and skin 170026, broccoli 170379, sweet potato 168482, garlic 169230, green bell pepper 170427, red bell pepper 170108, onion 170000, carrot 170393, cassava 169985, pumpkin 168448, eggplant 169228.",
+            "Grains — vitamins, minerals and omega-3: whole-grain wheat flour FDC 168893, yellow corn grain 170288, sorghum grain 169716, oats 169705, hulled barley 170283, rye grain 168884, millet raw 169702, and cornstarch 169698 for rice starch. Cooked rice and quinoa, and oat milk, are under their own source entries."
         ]
     },
     {
@@ -1552,7 +1555,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/168878/nutrients",
         "title": "USDA FoodData Central — SR Legacy 168878: Rice, white, long-grain, regular, enriched, cooked",
         "notes": [
-            "Per 100 g: energy 130 kcal, water 68.4 g, protein 2.69 g, fat 0.28 g, sat fat 0.077 g, carbs 28.2 g, fiber 0.4 g, sugars 0.05 g, sodium 1 mg, cholesterol 0. Used for rice nutrition (cooked basis) and, with 169756, the rice cooked_weight_ratio. Retrieved via FDC API 2026-09-24."
+            "Per 100 g: energy 130 kcal, water 68.4 g, protein 2.69 g, fat 0.28 g, sat fat 0.077 g, carbs 28.2 g, fiber 0.4 g, sugars 0.05 g, sodium 1 mg, cholesterol 0. Used for rice nutrition (cooked basis) and, with 169756, the rice cooked_weight_ratio. Retrieved via FDC API 2026-09-24.",
+            "Rice — Vitamins and minerals from USDA FDC 168878 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.04 mg, vitamin k 0 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.093 mg, calcium 10 mg, iron 1.2 mg, magnesium 12 mg, potassium 35 mg, zinc 0.49 mg, phosphorus 43 mg, selenium 7.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 168878 per 100 g: ALA 0.013 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
         ]
     },
     {
@@ -1568,7 +1572,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/168917/nutrients",
         "title": "USDA FoodData Central — SR Legacy 168917: Quinoa, cooked",
         "notes": [
-            "Per 100 g: energy 120 kcal, water 71.6 g, protein 4.4 g, fat 1.92 g, sat fat 0.231 g, carbs 21.3 g, fiber 2.8 g, sugars 0.87 g, sodium 7 mg, cholesterol 0. Used for quinoa nutrition (cooked basis). Retrieved via FDC API 2026-09-24."
+            "Per 100 g: energy 120 kcal, water 71.6 g, protein 4.4 g, fat 1.92 g, sat fat 0.231 g, carbs 21.3 g, fiber 2.8 g, sugars 0.87 g, sodium 7 mg, cholesterol 0. Used for quinoa nutrition (cooked basis). Retrieved via FDC API 2026-09-24.",
+            "Quinoa — Vitamins and minerals from USDA FDC 168917 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.63 mg, vitamin k 0 µg, folate 42 µg DFE, vitamin b12 0 µg, vitamin b6 0.123 mg, calcium 17 mg, iron 1.49 mg, magnesium 64 mg, potassium 172 mg, zinc 1.09 mg, phosphorus 152 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168917 per 100 g: ALA 0.085 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 15 mg (EPA 0 + DHA 0.015); divided by 100 for per-gram values."
         ]
     },
     {
@@ -1756,7 +1761,8 @@
         "url": "https://fdc.nal.usda.gov/food-details/2257046/nutrients",
         "title": "USDA FoodData Central — Foundation Foods: Oat milk, unsweetened, plain, refrigerated (fdcId 2257046)",
         "notes": [
-            "Per 100 g: 48.33 kcal (Atwater general), 0.797 g protein, 2.749 g fat, 5.100 g carbohydrate (by difference), 2.322 g total sugars, 0.0 g fiber, 41.98 mg sodium, 90.6 g water. Saturated fat not reported. Read via FDC API 2026-09-26."
+            "Per 100 g: 48.33 kcal (Atwater general), 0.797 g protein, 2.749 g fat, 5.100 g carbohydrate (by difference), 2.322 g total sugars, 0.0 g fiber, 41.98 mg sodium, 90.6 g water. Saturated fat not reported. Read via FDC API 2026-09-26.",
+            "Oat Milk (Unsweetened) — Vitamins and minerals from USDA FDC 2257046 per 100 g: vitamin a 85 µg RAE, vitamin d 1.7 µg, vitamin k 0.4 µg, folate 0 µg DFE, vitamin b12 0.51 µg, vitamin b6 0.006 mg, calcium 148 mg, iron 0.26 mg, magnesium 5.9 mg, potassium 148 mg, zinc 0.09 mg, phosphorus 89 mg, selenium 0 µg; not reported, so left out: vitamin c, vitamin e; divided by 100 for per-gram values. Omega-3 not reported, so left out."
         ]
     },
     {
@@ -2702,6 +2708,14 @@
         "title": "foodintake.space — Pork, liver, raw (third-party nutrition site; credits the Canadian Nutrient File)",
         "notes": [
             "Pork Liver — vitamin K: 88 µg per 100 g (0.88 µg/g). DUBIOUS SOURCING: this is from a third-party nutrition website, not a primary database. It credits the Canadian Nutrient File, but that could not be checked (Health Canada's site didn't respond). USDA and the UK's CoFID both list no vitamin K for pig liver, and 88 µg is high for liver (USDA beef liver: 3.1 µg), so it may include vitamin K2 or be an error. Confidence 1; replace with a primary source if one turns up."
+        ]
+    },
+    {
+        "id": 465,
+        "url": "https://fdc.nal.usda.gov/food-details/169698/nutrients",
+        "title": "USDA FoodData Central — SR Legacy 169698: Cornstarch",
+        "notes": [
+            "Potato Starch — stand-in vitamins and minerals: the potato starch labels don't list them and USDA has no potato starch record, so they come from cornstarch, which is also near-pure starch. Vitamins and minerals from USDA FDC 169698 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 2 mg, iron 0.47 mg, magnesium 3 mg, potassium 3 mg, zinc 0.06 mg, phosphorus 13 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 169698 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entries."
         ]
     }
 ]
