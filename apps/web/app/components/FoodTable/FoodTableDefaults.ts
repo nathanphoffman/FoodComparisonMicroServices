@@ -50,7 +50,7 @@ export const DEFAULT_GREY_WATER                  = 25;
 export const DEFAULT_PHILOSOPHICAL_KILL          = 500;
 export const DEFAULT_CAPTIVITY_MULTIPLIER        = 1;
 export const DEFAULT_NEURON_EXPONENT             = 1.5;
-export const DEFAULT_WEIGHT_EXPONENT             = 0.70;
+export const DEFAULT_WEIGHT_EXPONENT             = 0.75;
 export const DEFAULT_FINAL_INTELLIGENCE_EXPONENT = 1.15;
 export const DEFAULT_ZERO_BETTER_MULTIPLIER      = 1.5;
 

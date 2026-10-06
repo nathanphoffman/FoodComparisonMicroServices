@@ -73,7 +73,8 @@
         "eggplant"
     ],
     "leafy": [
-        "lettuce",
+        "romaine-lettuce",
+        "iceberg-lettuce",
         "spinach",
         "kale",
         "cabbage"
@@ -144,7 +145,8 @@
         "violife-parmesan",
         "follow-your-heart-parmesan",
         "coca-cola",
-        "coke-zero"
+        "coke-zero",
+        "soy-milk"
     ],
     "beverages": [
         "coffee",

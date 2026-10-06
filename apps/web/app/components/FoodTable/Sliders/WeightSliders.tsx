@@ -31,14 +31,14 @@ const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => voi
     wetMass:  WetMassWeightModal,
 };
 
-export function WeightSliders({ onChange }: { onChange?: (w: FoodWeights) => void }) {
+export function WeightSliders({ onChange, defaultLevels = DEFAULT_FOOD_WEIGHT_LEVELS }: { onChange?: (w: FoodWeights) => void; defaultLevels?: FoodWeights }) {
     return (
         <PercentSliders
             keys={KEYS}
             labels={LABELS}
             descriptions={DESCRIPTIONS}
             modals={MODALS}
-            defaultLevels={DEFAULT_FOOD_WEIGHT_LEVELS}
+            defaultLevels={defaultLevels}
             onChange={onChange}
         />
     );

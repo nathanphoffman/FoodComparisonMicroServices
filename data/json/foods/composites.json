@@ -1083,5 +1083,129 @@
                 }
             }
         ]
+    },
+    {
+        "id": 130,
+        "slug": "soy-milk",
+        "name": "Soy Milk (Composite)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "plant-milk"
+        ],
+        "notes": "Unsweetened soy milk, modelled as water plus soybeans: ~10% dry beans by weight (soy protein is 36% of the bean and soy milk has 2.9% protein, plus losses to the okara). The beans are charged at the soy entry's land, water and emissions, converted from dry to its cooked basis (×2.2).\n\nNutrition is typical unsweetened fortified soy milk from USDA; calcium and vitamins vary by brand.\n\nProcessing emissions (0.65 kg CO2e/kg) are Poore & Nemecek's soy milk total (0.98 kg CO2e/L, ≈0.95/kg) minus the ~0.30 from the beans, leaving factory, packaging and distribution. Processing water (4 L/kg) is a rough guess. Availability is not set, so it comes from soy's.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.33,
+                    "fat": 0.0161,
+                    "sat_fat": 0.002,
+                    "protein": 0.0286,
+                    "fiber": 0.004,
+                    "sodium": 0.12,
+                    "carbs": 0.0174,
+                    "sugar": 0.005,
+                    "cholesterol": 0,
+                    "trans_fat": 0,
+                    "vitamin_a": 0.54,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.011,
+                    "vitamin_e": 0.0011,
+                    "vitamin_k": 0.03,
+                    "folate": 0.18,
+                    "vitamin_b12": 0.0045,
+                    "vitamin_b6": 0.0004,
+                    "calcium": 1.23,
+                    "iron": 0.0064,
+                    "magnesium": 0.25,
+                    "potassium": 1.18,
+                    "zinc": 0.0023,
+                    "phosphorus": 0.49,
+                    "selenium": 0.001,
+                    "ala": 0.0011,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 500,
+                    "url": "https://fdc.nal.usda.gov/food-search?query=soymilk+unsweetened",
+                    "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
+                    "note": "Soy milk — nutrition per 100 g, typical unsweetened fortified soy milk: 33 kcal, fat 1.61 g, sat fat 0.2 g, protein 2.86 g, fiber 0.4 g, carbs 1.74 g, sugar 0.5 g, sodium 12 mg, vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 1.1 µg, vitamin e 0.11 mg, vitamin k 3 µg, folate 18 µg DFE, vitamin b12 0.45 µg, vitamin b6 0.04 mg, calcium 123 mg (fortified), iron 0.64 mg, magnesium 25 mg, potassium 118 mg, zinc 0.23 mg, phosphorus 49 mg, selenium 0.1 µg, ALA 0.11 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Vitamins and calcium vary by brand fortification."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "soy",
+                "fraction": [
+                    {
+                        "value": 0.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 500,
+                            "url": "https://fdc.nal.usda.gov/food-search?query=soymilk+unsweetened",
+                            "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
+                            "note": "Soy milk — soybean share: dry soybeans are ~36% protein and soy milk is 2.9% protein, so the minimum is ~8% dry beans by weight; extraction leaves some protein in the okara, so ~10% beans per kg of milk is used. The rest is water."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 2.2,
+                        "confidence": 3,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Soy milk — 2.2 kg of the soy entry (cooked basis) per kg of dry soybeans, the entry's cooked_weight_ratio."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.9,
+                        "confidence": 2,
+                        "source": {
+                            "id": 500,
+                            "url": "https://fdc.nal.usda.gov/food-search?query=soymilk+unsweetened",
+                            "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
+                            "note": "Soy milk — soybean share: dry soybeans are ~36% protein and soy milk is 2.9% protein, so the minimum is ~8% dry beans by weight; extraction leaves some protein in the okara, so ~10% beans per kg of milk is used. The rest is water."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.65,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Soy milk — processing_emissions_per_kg: P&N soy milk 0.98 kg CO2e/L (cradle to retail) ÷ ~1.03 kg/L ≈ 0.95 kg CO2e/kg, minus ~0.30 from the soybeans (10% dry beans × 3.0 kg CO2e/kg) = ~0.65 for processing, packaging and distribution."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 4,
+                "confidence": 1,
+                "source": {
+                    "id": 500,
+                    "url": "https://fdc.nal.usda.gov/food-search?query=soymilk+unsweetened",
+                    "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
+                    "note": "Soy milk — processing water: ~4 L/kg for plant cleaning, grinding and bottling. A rough guess, not a published figure."
+                }
+            }
+        ]
     }
 ]

@@ -35,6 +35,8 @@ export function FoodTableSliders({
     onOverHuntingChange,
     onOverGatheringChange,
     resetKey,
+    foodWeightLevels,
+    nutritionWeights,
     scorePriorityLevels,
     killMultiplier,
     captivityMultiplier,
@@ -61,6 +63,8 @@ export function FoodTableSliders({
     // Changing resetKey remounts every slider so it picks up its starting value
     // again (used by presets). Sliders not listed here start at their defaults.
     resetKey: number;
+    foodWeightLevels: FoodWeights;
+    nutritionWeights: NutritionWeights;
     scorePriorityLevels: ScorePriorities;
     killMultiplier: number;
     captivityMultiplier: number;
@@ -72,13 +76,13 @@ export function FoodTableSliders({
     return (
         <div className="flex flex-col gap-3 mb-4">
             <ExpandableSliderGroup label="Compare By">
-                <WeightSliders key={`WeightSliders-${resetKey}`} onChange={onChange} />
+                <WeightSliders key={`WeightSliders-${resetKey}`} onChange={onChange} defaultLevels={foodWeightLevels} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Score Priorities">
                 <ScorePrioritySliders key={`ScorePrioritySliders-${resetKey}`} onChange={onScorePrioritiesChange} defaultLevels={scorePriorityLevels} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Nutrition">
-                <NutritionSliders key={`NutritionSliders-${resetKey}`} onChange={onNutritionWeightsChange} />
+                <NutritionSliders key={`NutritionSliders-${resetKey}`} onChange={onNutritionWeightsChange} initialWeights={nutritionWeights} />
             </ExpandableSliderGroup>
             <ExpandableSliderGroup label="Intelligence">
                 <div className="flex flex-col gap-3 w-full">

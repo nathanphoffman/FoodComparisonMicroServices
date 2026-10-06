@@ -55,6 +55,10 @@ export const FoodTableInputs = memo(function FoodTableInputs({
         () => PRESETS.find(preset => preset.key === DEFAULT_PRESET_KEY)!.scorePriorityLevels
     );
 
+    const [foodWeightLevels, setFoodWeightLevels] = useState(
+        () => PRESETS.find(preset => preset.key === DEFAULT_PRESET_KEY)!.foodWeightLevels
+    );
+
     function commit(next: SliderValues) {
         setSliderValues(next);
         onSliderValuesChange(next);
@@ -67,6 +71,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
         // Keep the custom meal; everything else goes back to defaults first.
         commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes, mealIngredients: sliderValues.mealIngredients });
         setScorePriorityLevels(preset.scorePriorityLevels);
+        setFoodWeightLevels(preset.foodWeightLevels);
         setSliderResetKey(key => key + 1);
         setActivePreset(preset.key);
     }
@@ -111,6 +116,8 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                     onOverHuntingChange={value => update('overHuntingFactor', value)}
                     onOverGatheringChange={value => update('overGatheringFactor', value)}
                     resetKey={sliderResetKey}
+                    foodWeightLevels={foodWeightLevels}
+                    nutritionWeights={sliderValues.nutritionWeights}
                     scorePriorityLevels={scorePriorityLevels}
                     killMultiplier={sliderValues.killMultiplier}
                     captivityMultiplier={sliderValues.captivityMultiplier}

@@ -1,13 +1,13 @@
 [
     {
         "id": 12,
-        "slug": "lettuce",
-        "name": "Lettuce",
+        "slug": "romaine-lettuce",
+        "name": "Romaine Lettuce",
         "type": "plant",
         "category": "leafy",
         "human_food": 1,
         "tags": [],
-        "notes": "Lettuce, nutrition from USDA. 96% is edible. World yield ~25 t/ha (FAO); US ~34 t/ha (USDA, all fresh-market types, 2021–2024). FAOSTAT pools lettuce with chicory for production.\n\nWater is 130 L/kg from the Water Footprint Network's online calculator. Mekonnen & Hoekstra's own figure is 237; the two methods differ. The US value (113) is Mekonnen & Hoekstra's US average. Emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53), for field-grown lettuce.\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year.",
+        "notes": "Romaine lettuce, nutrition from USDA. 96% is edible. World yield ~25 t/ha (FAO, all lettuce; FAOSTAT pools lettuce with chicory); US romaine ~34.9 t/ha (USDA, 2022–2024).\n\nThis entry used to be a single 'Lettuce' entry (all types). It was split into romaine and iceberg; the nutrition in it was already USDA's romaine record. Water, emissions, pesticides, fertilizer and tillage are not type-specific, so both entries share the same lettuce-wide values: water is 130 L/kg from the Water Footprint Network's online calculator (Mekonnen & Hoekstra's own figure is 237; the US value, 113, is their US average), and emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53).\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year. Availability is the world lettuce-and-chicory total, shared by both entries.",
         "land_types": {
             "dry": 0.6,
             "temperate_forest": 0.4
@@ -73,18 +73,18 @@
                     "id": 33,
                     "url": "https://ourworldindata.org/crop-yields",
                     "title": "Our World in Data — Crop Yields",
-                    "note": "Lettuce — yield_kg_ha: FAO global average used for yield value."
+                    "note": "Romaine lettuce — yield_kg_ha: FAO global average used for yield value."
                 }
             },
             {
-                "value": 33900,
+                "value": 34900,
                 "confidence": 5,
                 "region": "US",
                 "source": {
                     "id": 220,
                     "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/vegean25.pdf",
                     "title": "USDA NASS — Vegetables 2024 Summary (February 2025)",
-                    "note": "Lettuce — yield_kg_ha: 33,900 kg/ha US national average, 2021–2024. All fresh-market lettuce (head + leaf + romaine) combined by production weight: total production 396.54 million cwt / 1,309,300 harvested acres = 302.9 cwt/acre; × 45.359 kg/cwt ÷ 0.40469 ha/acre (= ×112.085) = 33,946 kg/ha, rounded to 33,900. Yearly: 2021 286.5 cwt/ac, 2022 289.2, 2023 316.9, 2024 321.8. 2022–2024 from Vegetables 2024 Summary (Feb 2025); 2021 revised figures from Vegetables 2023 Summary (Feb 2024, https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf). 2019–2020 not used because NASS revised the lettuce series upward from 2021 and older years are on the unrevised basis. Fresh harvested weight, same basis as the FAO world value."
+                    "note": "Romaine lettuce — yield_kg_ha: 34,900 kg/ha US national average, 2022–2024. Fresh-market romaine only: production 36,070 + 41,733 + 39,061 thousand cwt = 116,864 thousand cwt over 127,000 + 131,300 + 116,600 = 374,900 harvested acres = 311.7 cwt/acre; × 112.085 = 34,940 kg/ha, rounded to 34,900. Yearly: 2022 284.0 cwt/ac, 2023 317.8, 2024 335.0. Fresh harvested weight, same basis as the FAO world value."
                 }
             }
         ],
@@ -96,7 +96,7 @@
                     "id": 30,
                     "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
                     "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
-                    "note": "Lettuce — water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected — difference is within methodological range."
+                    "note": "Romaine lettuce — water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected — difference is within methodological range."
                 }
             },
             {
@@ -107,7 +107,7 @@
                     "id": 121,
                     "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
-                    "note": "Lettuce — water_per_kg: 113 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Total includes grey water (green+blue+grey), per SCHEMA definition and Report 47 totals. Note: the existing world entry (130) is described as green+blue only, so it is not on the same basis; if matched to green+blue, the US value would be 72 L/kg. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                    "note": "Romaine lettuce — water_per_kg: 113 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Total includes grey water (green+blue+grey), per SCHEMA definition and Report 47 totals. Note: the existing world entry (130) is described as green+blue only, so it is not on the same basis; if matched to green+blue, the US value would be 72 L/kg. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],
@@ -130,7 +130,7 @@
                     "id": 121,
                     "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
-                    "note": "Lettuce — green_water_per_kg: 30 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                    "note": "Romaine lettuce — green_water_per_kg: 30 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],
@@ -153,7 +153,7 @@
                     "id": 121,
                     "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
-                    "note": "Lettuce — blue_water_per_kg: 42 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. US lettuce is mostly irrigated (California/Arizona), so blue is far above the global share. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                    "note": "Romaine lettuce — blue_water_per_kg: 42 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. US lettuce is mostly irrigated (California/Arizona), so blue is far above the global share. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],
@@ -176,7 +176,7 @@
                     "id": 121,
                     "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
                     "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
-                    "note": "Lettuce — grey_water_per_kg: 41 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                    "note": "Romaine lettuce — grey_water_per_kg: 41 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
                 }
             }
         ],
@@ -188,7 +188,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lettuce — soil_erosion: ~3 t/ha/yr estimated for intensive lettuce production; short growing cycle with frequent tillage increases erosion risk; value consistent with P&N 2018 LCA boundary data for salad crops."
+                    "note": "Romaine lettuce — soil_erosion: ~3 t/ha/yr estimated for intensive lettuce production; short growing cycle with frequent tillage increases erosion risk; value consistent with P&N 2018 LCA boundary data for salad crops."
                 }
             }
         ],
@@ -201,7 +201,7 @@
                     "id": 52,
                     "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                     "title": "USDA NASS — Agricultural Chemical Use Survey",
-                    "note": "Lettuce — pesticide_kg_ha: 1.4 kg/ha (USDA NASS Vegetables Chemical Use Survey; weighted average of active ingredient applications across California and Arizona lettuce production; 2018–2022 average)."
+                    "note": "Romaine lettuce — pesticide_kg_ha: 1.4 kg/ha (USDA NASS Vegetables Chemical Use Survey; weighted average of active ingredient applications across California and Arizona lettuce production; 2018–2022 average)."
                 }
             }
         ],
@@ -213,7 +213,7 @@
                     "id": 62,
                     "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
                     "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": "Lettuce — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
+                    "note": "Romaine lettuce — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
                 }
             }
         ],
@@ -225,7 +225,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lettuce — emissions_per_kg: ~0.5 kg CO2e/kg (field-grown; P&N 2018 'other vegetables' global median covers leafy salad crops; value covers farm-gate GHG including fertilizer N2O, farm energy, and minor land use component)."
+                    "note": "Romaine lettuce — emissions_per_kg: ~0.5 kg CO2e/kg (field-grown; P&N 2018 'other vegetables' global median covers leafy salad crops; value covers farm-gate GHG including fertilizer N2O, farm energy, and minor land use component)."
                 }
             },
             {
@@ -235,7 +235,7 @@
                     "id": 71,
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
-                    "note": "Lettuce — emissions_per_kg: 0.53 kg CO2e/kg, from OWID chart 'Other Vegetables' category sourcing P&N 2018; consistent with multi-study LCA range of 0.4–0.6 kg CO2e/kg for field-grown lettuce."
+                    "note": "Romaine lettuce — emissions_per_kg: 0.53 kg CO2e/kg, from OWID chart 'Other Vegetables' category sourcing P&N 2018; consistent with multi-study LCA range of 0.4–0.6 kg CO2e/kg for field-grown lettuce."
                 }
             }
         ],
@@ -247,7 +247,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lettuce — tillage_events_per_year: ~3 per year (multiple lettuce crops per year common in California and Arizona; each cycle requires full bed preparation including discing and listing; P&N 2018 LCA boundary data)."
+                    "note": "Romaine lettuce — tillage_events_per_year: ~3 per year (multiple lettuce crops per year common in California and Arizona; each cycle requires full bed preparation including discing and listing; P&N 2018 LCA boundary data)."
                 }
             }
         ],
@@ -259,7 +259,7 @@
                     "id": 55,
                     "url": "https://science.sciencemag.org/content/360/6392/987",
                     "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
-                    "note": "Lettuce — co2_capture_kg_ha_yr: ~800 kg CO2/ha/yr; short-season crop with low biomass accumulation; estimate based on above-ground carbon fixation for salad crops (P&N 2018 LCA framework)."
+                    "note": "Romaine lettuce — co2_capture_kg_ha_yr: ~800 kg CO2/ha/yr; short-season crop with low biomass accumulation; estimate based on above-ground carbon fixation for salad crops (P&N 2018 LCA framework)."
                 }
             }
         ],
@@ -275,7 +275,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Romaine lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -291,7 +291,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Romaine lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -307,7 +307,7 @@
                             "id": 52,
                             "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
                             "title": "USDA NASS — Agricultural Chemical Use Survey",
-                            "note": "Lettuce — pendimethalin: 0.18 kg/ha; pre-emergent herbicide widely used on head and leaf lettuce for broadleaf and grass weed control; USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                            "note": "Romaine lettuce — pendimethalin: 0.18 kg/ha; pre-emergent herbicide widely used on head and leaf lettuce for broadleaf and grass weed control; USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
                         }
                     }
                 ]
@@ -316,7 +316,334 @@
         "availability_gg": [
             {
                 "value": 28147,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "availability_gg: FAOSTAT world production 2020–2024 mean, 'Lettuce and chicory' = 28,147 Gg. Includes chicory."
+                }
+            }
+        ]
+    },
+    {
+        "id": 129,
+        "slug": "iceberg-lettuce",
+        "name": "Iceberg Lettuce",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Iceberg lettuce, nutrition from USDA (FDC 169248). ~95% is edible. World yield ~25 t/ha (FAO, all lettuce; FAOSTAT pools lettuce with chicory); US head lettuce ~39.9 t/ha (USDA, 2022–2024). Iceberg is the main head lettuce type, so USDA's 'head lettuce' series is used.\n\nSplit out of the old single 'Lettuce' entry. Water, emissions, pesticides, fertilizer and tillage are not type-specific, so both lettuce entries share the same lettuce-wide values: water is 130 L/kg from the Water Footprint Network's online calculator (Mekonnen & Hoekstra's own figure is 237; the US value, 113, is their US average), and emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53).\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year. Availability is the world lettuce-and-chicory total, shared by both entries.",
+        "land_types": {
+            "dry": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Irrigated California/Arizona and Mediterranean Spain, plus temperate China and Europe.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.14,
+                    "fat": 0.0014,
+                    "sat_fat": 0.0002,
+                    "protein": 0.009,
+                    "fiber": 0.012,
+                    "sodium": 0.1,
+                    "carbs": 0.0297,
+                    "sugar": 0.0197,
+                    "cholesterol": 0,
+                    "trans_fat": 0,
+                    "vitamin_a": 0.25,
+                    "vitamin_c": 0.028,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0018,
+                    "vitamin_k": 0.241,
+                    "folate": 0.29,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00042,
+                    "calcium": 0.18,
+                    "iron": 0.0041,
+                    "magnesium": 0.07,
+                    "potassium": 1.41,
+                    "zinc": 0.0015,
+                    "phosphorus": 0.2,
+                    "selenium": 0.001,
+                    "ala": 0.00026,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Iceberg lettuce — nutrition from USDA FDC 169248 per 100 g: 14 kcal, fat 0.14 g, sat fat 0.019 g, protein 0.9 g, fiber 1.2 g, carbs 2.97 g, sugar 1.97 g, sodium 10 mg, vitamin a 25 µg RAE, vitamin c 2.8 mg, vitamin d 0 µg, vitamin e 0.18 mg, vitamin k 24.1 µg, folate 29 µg DFE, vitamin b12 0 µg, vitamin b6 0.042 mg, calcium 18 mg, iron 0.41 mg, magnesium 7 mg, potassium 141 mg, zinc 0.15 mg, phosphorus 20 mg, selenium 0.1 µg, ALA 0.026 g, EPA + DHA 0 mg; divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.95,
                 "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Iceberg lettuce — yield_fraction: ~95% edible (USDA FDC 169248 refuse is the core and outer leaves, ~5%)."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 25000,
+                "confidence": 4,
+                "source": {
+                    "id": 33,
+                    "url": "https://ourworldindata.org/crop-yields",
+                    "title": "Our World in Data — Crop Yields",
+                    "note": "Iceberg lettuce — yield_kg_ha: FAO global average used for yield value."
+                }
+            },
+            {
+                "value": 39900,
+                "confidence": 5,
+                "region": "US",
+                "source": {
+                    "id": 220,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/vegean25.pdf",
+                    "title": "USDA NASS — Vegetables 2024 Summary (February 2025)",
+                    "note": "Iceberg lettuce — yield_kg_ha: 39,900 kg/ha US national average, 2022–2024. Fresh-market head lettuce (iceberg is the main head type): production 44,276.5 + 43,652.0 + 41,770.0 thousand cwt = 129,698.5 thousand cwt over 133,500 + 121,700 + 109,600 = 364,800 harvested acres = 355.5 cwt/acre; × 112.085 = 39,850 kg/ha, rounded to 39,900. Yearly: 2022 331.7 cwt/ac, 2023 358.7, 2024 381.1. Fresh harvested weight, same basis as the FAO world value."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 130,
+                "confidence": 5,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Iceberg lettuce — water_per_kg: 130 L/kg used (sourced from WFN online crop database). Report 47 Table A1 reports 237 L/kg. The discrepancy reflects different methodologies: Report 47 uses a global production-weighted virtual water model; the WFN online calculator (130 L/kg) applies simplified blue+green accounting. Neither is clearly wrong; the lower figure may reflect the dominant role of intensive irrigation-efficient greenhouse production (particularly in China). Value flagged but not corrected — difference is within methodological range."
+                }
+            },
+            {
+                "value": 113,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Iceberg lettuce — water_per_kg: 113 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Total includes grey water (green+blue+grey), per SCHEMA definition and Report 47 totals. Note: the existing world entry (130) is described as green+blue only, so it is not on the same basis; if matched to green+blue, the US value would be 72 L/kg. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 118,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            },
+            {
+                "value": 30,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Iceberg lettuce — green_water_per_kg: 30 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 7,
+                "confidence": 2,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            },
+            {
+                "value": 42,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Iceberg lettuce — blue_water_per_kg: 42 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. US lettuce is mostly irrigated (California/Arizona), so blue is far above the global share. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": null
+                }
+            },
+            {
+                "value": 41,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 121,
+                    "url": "https://ayhoekstra.nl/pubs/Report47-WaterFootprintCrops-Vol2.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — Water Footprint of Crops, Report 47 Vol. 2 (national appendices)",
+                    "note": "Iceberg lettuce — grey_water_per_kg: 41 L/kg (m3/ton) US national average (Appendix II 'CNTRY-average' column for United States of America, product 070511 lettuce, 1996–2005). US lettuce WF = green 30 + blue 42 + grey 41 = 113 L/kg. Cross-checked against Appendix IV US lettuce volumes (green 128.45, blue 184.44, grey 177.87, total 490.75 Mm3/yr), which divided by ~4.35 Mt/yr US production give the same per-ton values. Same source/basis as the global Report 47 figures (global lettuce: green 133, blue 28, grey 77, total 237 L/kg)."
+                }
+            }
+        ],
+        "soil_erosion": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Iceberg lettuce — soil_erosion: ~3 t/ha/yr estimated for intensive lettuce production; short growing cycle with frequent tillage increases erosion risk; value consistent with P&N 2018 LCA boundary data for salad crops."
+                }
+            }
+        ],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.4,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Iceberg lettuce — pesticide_kg_ha: 1.4 kg/ha (USDA NASS Vegetables Chemical Use Survey; weighted average of active ingredient applications across California and Arizona lettuce production; 2018–2022 average)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 4,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Iceberg lettuce — fertilizer_kg_ha: ~120 kg/ha (intensive leafy vegetable; high nitrogen demand for rapid leaf growth)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Iceberg lettuce — emissions_per_kg: ~0.5 kg CO2e/kg (field-grown; P&N 2018 'other vegetables' global median covers leafy salad crops; value covers farm-gate GHG including fertilizer N2O, farm energy, and minor land use component)."
+                }
+            },
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Iceberg lettuce — emissions_per_kg: 0.53 kg CO2e/kg, from OWID chart 'Other Vegetables' category sourcing P&N 2018; consistent with multi-study LCA range of 0.4–0.6 kg CO2e/kg for field-grown lettuce."
+                }
+            }
+        ],
+        "tillage_events_per_year": [
+            {
+                "value": 3,
+                "confidence": 4,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Iceberg lettuce — tillage_events_per_year: ~3 per year (multiple lettuce crops per year common in California and Arizona; each cycle requires full bed preparation including discing and listing; P&N 2018 LCA boundary data)."
+                }
+            }
+        ],
+        "co2_capture_kg_ha_yr": [
+            {
+                "value": 800,
+                "confidence": 4,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Iceberg lettuce — co2_capture_kg_ha_yr: ~800 kg CO2/ha/yr; short-season crop with low biomass accumulation; estimate based on above-ground carbon fixation for salad crops (P&N 2018 LCA framework)."
+                }
+            }
+        ],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.05,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Iceberg lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.07,
+                        "confidence": 4,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Iceberg lettuce — imidacloprid: 0.05 kg/ha; permethrin: 0.07 kg/ha; pendimethalin: 0.18 kg/ha. Values from USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.18,
+                        "confidence": 3,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Iceberg lettuce — pendimethalin: 0.18 kg/ha; pre-emergent herbicide widely used on head and leaf lettuce for broadleaf and grass weed control; USDA NASS Vegetables Chemical Use Survey (2018–2022 average)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 28147,
+                "confidence": 2,
                 "source": {
                     "id": 263,
                     "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",

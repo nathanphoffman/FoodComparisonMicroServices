@@ -3017,5 +3017,15 @@
             "Coke Zero — nutrition per gram: 0 kcal, 40 mg sodium, 60 mg potassium, 0 fat/carbs/sugar/protein per can ÷ 355 g. Label per 355 mL can × ~1.00 g/mL (no sugar, so about the density of water) = 355 g per can.",
             "Coke Zero — whole drink: carbonated water, caramel color, phosphoric acid, aspartame, potassium benzoate, natural flavors, potassium citrate, acesulfame potassium, caffeine. No sugar. The sweeteners are well under 0.1% by weight (they are ~200x sweeter than sugar), so no crop footprint is modelled; their emissions are inside processing_emissions_per_kg."
         ]
+    },
+    {
+        "id": 500,
+        "url": "https://fdc.nal.usda.gov/food-search?query=soymilk+unsweetened",
+        "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
+        "notes": [
+            "Soy milk — nutrition per 100 g, typical unsweetened fortified soy milk: 33 kcal, fat 1.61 g, sat fat 0.2 g, protein 2.86 g, fiber 0.4 g, carbs 1.74 g, sugar 0.5 g, sodium 12 mg, vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 1.1 µg, vitamin e 0.11 mg, vitamin k 3 µg, folate 18 µg DFE, vitamin b12 0.45 µg, vitamin b6 0.04 mg, calcium 123 mg (fortified), iron 0.64 mg, magnesium 25 mg, potassium 118 mg, zinc 0.23 mg, phosphorus 49 mg, selenium 0.1 µg, ALA 0.11 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Vitamins and calcium vary by brand fortification.",
+            "Soy milk — soybean share: dry soybeans are ~36% protein and soy milk is 2.9% protein, so the minimum is ~8% dry beans by weight; extraction leaves some protein in the okara, so ~10% beans per kg of milk is used. The rest is water.",
+            "Soy milk — processing water: ~4 L/kg for plant cleaning, grinding and bottling. A rough guess, not a published figure."
+        ]
     }
 ]

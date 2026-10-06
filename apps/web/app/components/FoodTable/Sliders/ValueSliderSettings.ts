@@ -42,7 +42,7 @@ export const GREEN_WATER: ValueSliderSettings = {
 export const NEURON_EXPONENT: ValueSliderSettings = {
     label:       'Neuron Exponent',
     description: 'exponent applied to neuron count in intelligence calc',
-    min: 0.5, max: 2, step: 0.05,
+    min: 1, max: 2, step: 0.05,
     format: twoDecimal,
     Modal:  NeuronExponentModal,
 };
