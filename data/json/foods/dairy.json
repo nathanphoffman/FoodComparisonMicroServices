@@ -6680,5 +6680,1255 @@
                 }
             }
         ]
+    },
+    {
+        "id": 212,
+        "slug": "swiss-cheese",
+        "name": "Swiss Cheese",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "cheese"
+        ],
+        "notes": "Swiss cheese (Emmental type), nutrition from USDA. Every per-kg impact is cow milk × 10.4 kg of milk per kg of cheese. The milk-equivalent comes from cheese's protein (26.96 g per 100 g) ÷ (milk protein 3.3 g × 75% recovered into the curd) = 10.9, × 0.952 because the whey that cheese-making throws off is sold and takes ~4.8% of the burden (the same adjustment the Cheddar entry uses: 9.2 → 8.8). That method gives 9.3 for Cheddar, matching USDA's 9.2. It carries the same animal deaths as the milk.\n\nCO2 adds 1.38 kg CO2e/kg for cheese-making, ageing and packaging, the same Poore & Nemecek processing figure as Cheddar. The world emissions benchmark is Poore & Nemecek's all-cheese average (23.88, built on ~8.8 kg of milk per kg) scaled to this cheese's milk need: 28.3 (confidence 1). Availability is USDA's US Swiss cheese output annualised from October 2024, plus a confidence-1 world guess (~5% of world cow-milk cheese).",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Swiss Cheese is made from cow's milk (about 10.4 kg of milk per kg of swiss cheese), so it carries the same animal deaths as the milk. Each dairy cow must give birth roughly every year to keep producing milk; the offspring not kept as replacements are killed young or raised and killed for meat. Per animal we count its own death, its offspring and a lifetime output of about 1,276 kg of swiss cheese worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.93,
+                    "fat": 0.3099,
+                    "sat_fat": 0.18227,
+                    "protein": 0.2696,
+                    "fiber": 0.0,
+                    "sodium": 1.87,
+                    "carbs": 0.0144,
+                    "sugar": 0.0,
+                    "cholesterol": 0.93,
+                    "trans_fat": 0.00987,
+                    "vitamin_a": 2.88,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.006,
+                    "vitamin_k": 0.014,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.0306,
+                    "vitamin_b6": 0.00071,
+                    "calcium": 8.9,
+                    "iron": 0.0013,
+                    "magnesium": 0.33,
+                    "potassium": 0.72,
+                    "zinc": 0.0437,
+                    "phosphorus": 5.74,
+                    "selenium": 0.3,
+                    "ala": 0.00125,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Swiss Cheese — FDC 171251 'Cheese, swiss' (SR Legacy 01040), per 100 g: 393 kcal, protein 26.96 g, fat 30.99 g, sat fat 18.227 g, carbs 1.44 g, fiber 0 g, sugars 0 g, sodium 187 mg, cholesterol 93 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171251 per 100 g: vitamin a 288 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.6 mg, vitamin k 1.4 µg, folate 10 µg DFE, vitamin b12 3.06 µg, vitamin b6 0.071 mg, calcium 890 mg, iron 0.13 mg, magnesium 33 mg, potassium 72 mg, zinc 4.37 mg, phosphorus 574 mg, selenium 30 µg; divided by 100 for per-gram values. Omega-3 from FDC 171251 per 100 g: ALA 0.125 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 1276.47,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Swiss Cheese — lifetime_output_kg: base milk lifetime output 13300 kg ÷ 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 3004.03,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Swiss Cheese — lifetime_output_kg: base milk lifetime output 31300 kg ÷ 10.42 kg milk per kg swiss cheese."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 28.3,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Cheese — emissions_per_kg (world): Poore & Nemecek's all-cheese global mean is 23.88 kg CO2e/kg (the figure the Cheddar entry uses; Cheddar takes 8.8 kg of milk per kg). Swiss Cheese takes 10.4 kg of milk per kg, so the all-cheese average is scaled by 10.4 / 8.8 = 28.3. This is a benchmark for the build check, not a published value."
+                }
+            },
+            {
+                "value": 19.3,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Cheese — emissions_per_kg (US): the base milk's US footprint (1.72 kg CO2e/kg) x 10.4 kg of milk per kg + 1.38 for cheese-making and packaging = 19.3."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00687675,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Swiss Cheese — pasture_ha_per_kg_output: base milk value 0.00066 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.00208386,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Swiss Cheese — pasture_ha_per_kg_output: base milk value 0.0002 x 10.42 kg milk per kg swiss cheese."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.583482,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Swiss Cheese — ch4_kg_per_kg_output: base milk value 0.056 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.520966,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Swiss Cheese — ch4_kg_per_kg_output: base milk value 0.05 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.395934,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Swiss Cheese — ch4_kg_per_kg_output: base milk value 0.038 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.218806,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Swiss Cheese — ch4_kg_per_kg_output: base milk value 0.021 x 10.42 kg milk per kg swiss cheese."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0197967,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Swiss Cheese — n2o_kg_per_kg_output: base milk value 0.0019 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.00625159,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Swiss Cheese — n2o_kg_per_kg_output: base milk value 0.0006 x 10.42 kg milk per kg swiss cheese."
+                }
+            },
+            {
+                "value": 0.00270902,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Swiss Cheese — n2o_kg_per_kg_output: base milk value 0.00026 x 10.42 kg milk per kg swiss cheese."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 11.1742,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Swiss Cheese — co2_kg_per_kg_output: base milk value 0.94 x 10.42 kg milk per kg swiss cheese + 1.38 for cheese-making. The added 1.38 kg CO2e/kg is cheese-making and packaging, taken from the Cheddar entry (Poore & Nemecek's cheese processing, 1.38)."
+                }
+            },
+            {
+                "value": 7.00643,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Swiss Cheese — co2_kg_per_kg_output: base milk value 0.54 x 10.42 kg milk per kg swiss cheese + 1.38 for cheese-making. The added 1.38 kg CO2e/kg is cheese-making and packaging, taken from the Cheddar entry (Poore & Nemecek's cheese processing, 1.38)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 3.54257,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (corn): base milk value 0.34 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    },
+                    {
+                        "value": 3.0216,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (corn): base milk value 0.29 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.14613,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (alfalfa): base milk value 0.11 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    },
+                    {
+                        "value": 1.77129,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (alfalfa): base milk value 0.17 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.66709,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (soy): base milk value 0.16 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    },
+                    {
+                        "value": 0.520966,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (soy): base milk value 0.05 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 5.93901,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (grass-hay): base milk value 0.57 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    },
+                    {
+                        "value": 0.520966,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Swiss Cheese — kg_feed_per_kg_output (grass-hay): base milk value 0.05 x 10.42 kg milk per kg swiss cheese."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 145,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Swiss Cheese — availability_gg (US): USDA NASS Dairy Products, October 2024 Swiss cheese production 26,602 thousand lb x 12 x 0.4536 = 145 Gg (annualised from one month)."
+                }
+            },
+            {
+                "value": 1150,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Cheese — availability_gg (world): no world statistic for Swiss-type cheese. FAOSTAT cheese from whole cow milk is ~22,979 Gg; Emmental, Gruyère, Jarlsberg, Maasdam and other Swiss-type cheeses are very roughly 5% of that, ~1,150 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 213,
+        "slug": "brie",
+        "name": "Brie",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Brie (soft-ripened cheese), nutrition from USDA. Every per-kg impact is cow milk × 8.0 kg of milk per kg of cheese. The milk-equivalent comes from cheese's protein (20.75 g per 100 g) ÷ (milk protein 3.3 g × 75% recovered into the curd) = 8.4, × 0.952 because the whey that cheese-making throws off is sold and takes ~4.8% of the burden (the same adjustment the Cheddar entry uses: 9.2 → 8.8). That method gives 9.3 for Cheddar, matching USDA's 9.2. It carries the same animal deaths as the milk.\n\nCO2 adds 1.38 kg CO2e/kg for cheese-making, ageing and packaging, the same Poore & Nemecek processing figure as Cheddar. The world emissions benchmark is Poore & Nemecek's all-cheese average (23.88, built on ~8.8 kg of milk per kg) scaled to this cheese's milk need: 21.8 (confidence 1). Availability is a confidence-1 guess (~300 Gg worldwide).",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Brie is made from cow's milk (about 8.0 kg of milk per kg of brie), so it carries the same animal deaths as the milk. Each dairy cow must give birth roughly every year to keep producing milk; the offspring not kept as replacements are killed young or raised and killed for meat. Per animal we count its own death, its offspring and a lifetime output of about 1,658 kg of brie worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.34,
+                    "fat": 0.2768,
+                    "sat_fat": 0.1741,
+                    "protein": 0.2075,
+                    "fiber": 0.0,
+                    "sodium": 6.29,
+                    "carbs": 0.0045,
+                    "sugar": 0.0045,
+                    "cholesterol": 1.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 1.74,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.005,
+                    "vitamin_e": 0.0024,
+                    "vitamin_k": 0.023,
+                    "folate": 0.65,
+                    "vitamin_b12": 0.0165,
+                    "vitamin_b6": 0.00235,
+                    "calcium": 1.84,
+                    "iron": 0.005,
+                    "magnesium": 0.2,
+                    "potassium": 1.52,
+                    "zinc": 0.0238,
+                    "phosphorus": 1.88,
+                    "selenium": 0.145,
+                    "ala": 0.00313,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Brie — FDC 172177 'Cheese, brie' (SR Legacy 01006), per 100 g: 334 kcal, protein 20.75 g, fat 27.68 g, sat fat 17.41 g, carbs 0.45 g, fiber 0 g, sugars 0.45 g, sodium 629 mg, cholesterol 100 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172177 per 100 g: vitamin a 174 µg RAE, vitamin c 0 mg, vitamin d 0.5 µg, vitamin e 0.24 mg, vitamin k 2.3 µg, folate 65 µg DFE, vitamin b12 1.65 µg, vitamin b6 0.235 mg, calcium 184 mg, iron 0.5 mg, magnesium 20 mg, potassium 152 mg, zinc 2.38 mg, phosphorus 188 mg, selenium 14.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 172177 per 100 g: ALA 0.313 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 1658.49,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Brie — lifetime_output_kg: base milk lifetime output 13300 kg ÷ 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 3903.07,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Brie — lifetime_output_kg: base milk lifetime output 31300 kg ÷ 8.02 kg milk per kg brie."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 21.8,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brie — emissions_per_kg (world): Poore & Nemecek's all-cheese global mean is 23.88 kg CO2e/kg (the figure the Cheddar entry uses; Cheddar takes 8.8 kg of milk per kg). Brie takes 8.0 kg of milk per kg, so the all-cheese average is scaled by 8.0 / 8.8 = 21.8. This is a benchmark for the build check, not a published value."
+                }
+            },
+            {
+                "value": 15.2,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brie — emissions_per_kg (US): the base milk's US footprint (1.72 kg CO2e/kg) x 8.0 kg of milk per kg + 1.38 for cheese-making and packaging = 15.2."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00529275,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Brie — pasture_ha_per_kg_output: base milk value 0.00066 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.00160386,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Brie — pasture_ha_per_kg_output: base milk value 0.0002 x 8.02 kg milk per kg brie."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.449082,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Brie — ch4_kg_per_kg_output: base milk value 0.056 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.400966,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Brie — ch4_kg_per_kg_output: base milk value 0.05 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.304734,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Brie — ch4_kg_per_kg_output: base milk value 0.038 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.168406,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Brie — ch4_kg_per_kg_output: base milk value 0.021 x 8.02 kg milk per kg brie."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0152367,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Brie — n2o_kg_per_kg_output: base milk value 0.0019 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.00481159,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Brie — n2o_kg_per_kg_output: base milk value 0.0006 x 8.02 kg milk per kg brie."
+                }
+            },
+            {
+                "value": 0.00208502,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Brie — n2o_kg_per_kg_output: base milk value 0.00026 x 8.02 kg milk per kg brie."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 8.91816,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Brie — co2_kg_per_kg_output: base milk value 0.94 x 8.02 kg milk per kg brie + 1.38 for cheese-making. The added 1.38 kg CO2e/kg is cheese-making and packaging, taken from the Cheddar entry (Poore & Nemecek's cheese processing, 1.38)."
+                }
+            },
+            {
+                "value": 5.71043,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Brie — co2_kg_per_kg_output: base milk value 0.54 x 8.02 kg milk per kg brie + 1.38 for cheese-making. The added 1.38 kg CO2e/kg is cheese-making and packaging, taken from the Cheddar entry (Poore & Nemecek's cheese processing, 1.38)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.72657,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Brie — kg_feed_per_kg_output (corn): base milk value 0.34 x 8.02 kg milk per kg brie."
+                        }
+                    },
+                    {
+                        "value": 2.3256,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Brie — kg_feed_per_kg_output (corn): base milk value 0.29 x 8.02 kg milk per kg brie."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.882126,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Brie — kg_feed_per_kg_output (alfalfa): base milk value 0.11 x 8.02 kg milk per kg brie."
+                        }
+                    },
+                    {
+                        "value": 1.36329,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Brie — kg_feed_per_kg_output (alfalfa): base milk value 0.17 x 8.02 kg milk per kg brie."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.28309,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Brie — kg_feed_per_kg_output (soy): base milk value 0.16 x 8.02 kg milk per kg brie."
+                        }
+                    },
+                    {
+                        "value": 0.400966,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Brie — kg_feed_per_kg_output (soy): base milk value 0.05 x 8.02 kg milk per kg brie."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 4.57101,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Brie — kg_feed_per_kg_output (grass-hay): base milk value 0.57 x 8.02 kg milk per kg brie."
+                        }
+                    },
+                    {
+                        "value": 0.400966,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Brie — kg_feed_per_kg_output (grass-hay): base milk value 0.05 x 8.02 kg milk per kg brie."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 300,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brie — availability_gg (world): no statistic exists (USDA does not list brie separately and FAOSTAT lumps all cheese). France, Germany and the US make most brie and other soft-ripened cheeses; ~300 Gg is a rough guess, about 1.3% of world cow-milk cheese (~22,979 Gg)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 214,
+        "slug": "feta",
+        "name": "Feta",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Feta, nutrition from USDA. Every per-kg impact is goat milk × 5.5 kg of milk per kg of cheese. The milk-equivalent comes from cheese's protein (14.21 g per 100 g) ÷ (milk protein 3.3 g × 75% recovered into the curd) = 5.7, × 0.952 because the whey that cheese-making throws off is sold and takes ~4.8% of the burden (the same adjustment the Cheddar entry uses: 9.2 → 8.8). That method gives 9.3 for Cheddar, matching USDA's 9.2. It carries the same animal deaths as the milk.\n\nCO2 adds 1.38 kg CO2e/kg for cheese-making, ageing and packaging, the same Poore & Nemecek processing figure as Cheddar. There is no published emissions benchmark for feta or goat's-milk cheese (the goat milk and goat cheese entries have none either), so emissions are built only from the gas and feed rows. Traditional feta is made from sheep's milk (often mixed with goat's milk), and the dataset has no sheep entry, so this one is built on the goat milk entry (a rough stand-in; US feta is often made from cow's milk). Availability is USDA's US feta output annualised from October 2024, plus a confidence-1 world guess.",
+        "land_types": {
+            "dry": 0.45,
+            "tropical_savanna": 0.35,
+            "temperate_forest": 0.2
+        },
+        "land_types_note": "Mostly grazing and crop stubble in semi-arid India, Pakistan, Sudan and the Sahel; plus Mediterranean and western European dairy goats (France, Spain, Netherlands, Greece).",
+        "sentient_harm_explanation": "Feta is made from goat's milk (about 5.5 kg of milk per kg of feta), so it carries the same animal deaths as the milk. Each dairy goat must give birth roughly every year to keep producing milk; the offspring not kept as replacements are killed young or raised and killed for meat. Per animal we count its own death, its offspring and a lifetime output of about 93 kg of feta worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.64,
+                    "fat": 0.2128,
+                    "sat_fat": 0.14946,
+                    "protein": 0.1421,
+                    "fiber": 0.0,
+                    "sodium": 9.17,
+                    "carbs": 0.0409,
+                    "sugar": 0.0409,
+                    "cholesterol": 0.89,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 1.25,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.004,
+                    "vitamin_e": 0.0018,
+                    "vitamin_k": 0.018,
+                    "folate": 0.32,
+                    "vitamin_b12": 0.0169,
+                    "vitamin_b6": 0.00424,
+                    "calcium": 4.93,
+                    "iron": 0.0065,
+                    "magnesium": 0.19,
+                    "potassium": 0.62,
+                    "zinc": 0.0288,
+                    "phosphorus": 3.37,
+                    "selenium": 0.15,
+                    "ala": 0.00265,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Feta — FDC 173420 'Cheese, feta' (SR Legacy 01019), per 100 g: 264 kcal, protein 14.21 g, fat 21.28 g, sat fat 14.946 g, carbs 4.09 g, fiber 0 g, sugars 4.09 g, sodium 917 mg, cholesterol 89 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173420 per 100 g: vitamin a 125 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.18 mg, vitamin k 1.8 µg, folate 32 µg DFE, vitamin b12 1.69 µg, vitamin b6 0.424 mg, calcium 493 mg, iron 0.65 mg, magnesium 19 mg, potassium 62 mg, zinc 2.88 mg, phosphorus 337 mg, selenium 15 µg; divided by 100 for per-gram values. Omega-3 from FDC 173420 per 100 g: ALA 0.265 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 3600000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.06e+09 (an older projection, not a count). Goat Milk — neuron_count (ESTIMATE, no direct count for this species): goat brain ~125 g (median of adult records: 115, 130.6 g in Boddy et al. 2012; 106, 125, 140 g in Ballarin 2016 Table 5) → 3.6 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 452."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 37,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — weight_kg: GLEAM Table B4 adult female dairy goat weights (South Asia 32, NENA 37, SSA 29, W. Europe 59, E & SE Asia 44, LAC 35, E. Europe 50, Russia 55 kg) weighted by goat milk output = 37 kg."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 4.2,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — kids that die per doe: GLEAM Table B4 (weighted by milk output) fertility 84%, adult death rate 5.8%, replacement 18.7%. Kids born per doe over her life = (0.84 × 0.942 + 0.187) / 0.187 = 5.2; minus 1 kept as her replacement = 4.2. Counts one kid per kidding, so twins are missed (likely an underestimate)."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.3,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Goat Milk — years those kids live: GLEAM age at slaughter ≈ age at first kidding × (slaughter − birth weight) / (adult − birth weight), e.g. South Asia 1.8 × (25 − 2.7) / (32 − 2.7) = 1.37 yr, SSA 1.25, NENA 1.37, W. Europe 0.52; weighted ≈ 1.3 yr."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Goat Milk — yield_fraction 1.0: milk is drunk as produced."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            },
+            {
+                "value": 5500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Goat Milk — pasture_green_water_l_per_ha: reused from this repo's lamb entry (small-ruminant pasture). "
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.85,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Goat Milk — native_fraction: reused from this repo's lamb entry; most milking goats graze native rangeland. "
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 92.8659,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Feta — lifetime_output_kg: base milk lifetime output 510 kg ÷ 5.49 kg milk per kg feta."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00867702,
+                "confidence": 2,
+                "source": {
+                    "id": 440,
+                    "url": "https://doi.org/10.1016/j.gfs.2017.01.001",
+                    "title": "Mottet et al. (2017) — Livestock: On our plates or eating at our table? A new analysis of the feed/food debate (Global Food Security)",
+                    "note": "Feta — pasture_ha_per_kg_output: base milk value 0.00158 x 5.49 kg milk per kg feta."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.67549,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Feta — ch4_kg_per_kg_output: base milk value 0.123 x 5.49 kg milk per kg feta."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0186721,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Feta — n2o_kg_per_kg_output: base milk value 0.0034 x 5.49 kg milk per kg feta."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 6.70703,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Feta — co2_kg_per_kg_output: base milk value 0.97 x 5.49 kg milk per kg feta + 1.38 for cheese-making. The added 1.38 kg CO2e/kg is cheese-making and packaging, taken from the Cheddar entry (Poore & Nemecek's cheese processing, 1.38)."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 3.40491,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Feta — kg_feed_per_kg_output (grass-hay): base milk value 0.62 x 5.49 kg milk per kg feta."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.439343,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Feta — kg_feed_per_kg_output (alfalfa): base milk value 0.08 x 5.49 kg milk per kg feta."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.5377,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Feta — kg_feed_per_kg_output (soy): base milk value 0.28 x 5.49 kg milk per kg feta."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.274589,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Feta — kg_feed_per_kg_output (corn): base milk value 0.05 x 5.49 kg milk per kg feta."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 74,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Feta — availability_gg (US): USDA NASS Dairy Products, October 2024 feta production 13,585 thousand lb x 12 x 0.4536 = 74 Gg (annualised from one month)."
+                }
+            },
+            {
+                "value": 650,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Feta — availability_gg (world): no world statistic for feta (FAOSTAT does not separate it). Greece makes ~120–130 Gg, and Denmark, Bulgaria, Germany, France, Egypt and Türkiye make more brined white cheese; ~650 Gg is a rough guess, with the US figure (~74 Gg) as a floor."
+                }
+            }
+        ]
     }
 ]

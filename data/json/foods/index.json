@@ -89,7 +89,8 @@
         "beets",
         "brussels-sprouts",
         "chili-pepper",
-        "zucchini"
+        "zucchini",
+        "kelp"
     ],
     "leafy": [
         "romaine-lettuce",
@@ -167,7 +168,10 @@
         "cream-cheese",
         "cottage-cheese",
         "ice-cream",
-        "kefir"
+        "kefir",
+        "swiss-cheese",
+        "brie",
+        "feta"
     ],
     "oils": [
         "olive-oil",
@@ -189,7 +193,8 @@
         "sesame-seeds",
         "hemp-seeds",
         "chia-seeds",
-        "pumpkin-seeds"
+        "pumpkin-seeds",
+        "cocoa-mass"
     ],
     "sweeteners": [
         "maple-syrup",
@@ -215,7 +220,17 @@
         "peanut-butter",
         "hummus",
         "brown-sugar",
-        "corn-syrup"
+        "corn-syrup",
+        "whole-wheat-bread",
+        "oat-cereal",
+        "rice-cakes",
+        "corn-tortillas",
+        "dark-chocolate",
+        "nutritional-yeast",
+        "orange-juice",
+        "beer",
+        "wine",
+        "coconut-milk"
     ],
     "beverages": [
         "coffee",

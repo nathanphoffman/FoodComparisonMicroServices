@@ -1331,7 +1331,7 @@
             "grain-product",
             "vegan"
         ],
-        "notes": "Commercial white sandwich bread, modelled from its ingredients: ~52% wheat flour (1.35 kg of wheat per kg of flour), ~3% sugar, ~2% soybean oil, ~3% salt, yeast and minor ingredients, ~40% water. The recipe shares are confidence 2 (estimates from typical formulations and USDA's nutrition). Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses covering baking and distribution. Availability comes from the ingredients' supply.",
+        "notes": "Commercial white sandwich bread, modelled from its ingredients: ~65% wheat flour (1.35 kg of wheat per kg of flour), ~3% sugar, ~2% soybean oil, ~3% salt, yeast and minor ingredients, ~27% water. The recipe shares are confidence 2 and were corrected on 2026-10-06: the first version had only 52% flour, which understated the wheat by about a fifth (it gave 2.06 kcal/g of ingredients against USDA's 2.66). Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses covering baking and distribution. Availability comes from the ingredients' supply.",
         "nutrition": [
             {
                 "value": {
@@ -1377,13 +1377,13 @@
                 "food_slug": "wheat",
                 "fraction": [
                     {
-                        "value": 0.52,
+                        "value": 0.65,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "White Bread — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Wheat flour ~52% of the loaf, i.e. 0.52 kg of flour per kg of bread (sandwich bread is ~55% flour, ~38% water), converted to wheat at 1.35×."
+                            "note": "White Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Wheat flour ~65% of the loaf, i.e. 0.65 kg of flour per kg of bread (a 2026-10-06 correction: an earlier 52% gave only 2.06 kcal/g of ingredients against USDA's 2.66, and too little protein; 65% matches both), converted to wheat at 1.35×."
                         }
                     }
                 ],
@@ -1410,7 +1410,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "White Bread — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Sugar ~3% (USDA reports ~5 g sugars per 100 g, part of it from the flour)."
+                            "note": "White Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Sugar ~3% (USDA reports ~5 g sugars per 100 g, part of it from the flour)."
                         }
                     }
                 ]
@@ -1425,7 +1425,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "White Bread — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Soybean oil / shortening ~2% (USDA fat is ~3.2 g per 100 g)."
+                            "note": "White Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Soybean oil / shortening ~2% (USDA fat is ~3.3 g per 100 g)."
                         }
                     }
                 ]
@@ -1441,7 +1441,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "White Bread — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Salt, yeast, dough conditioners and preservatives ~3%."
+                            "note": "White Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt, yeast, dough conditioners and preservatives ~3%."
                         }
                     }
                 ]
@@ -1451,13 +1451,13 @@
                 "label": "water",
                 "fraction": [
                     {
-                        "value": 0.4,
+                        "value": 0.27,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "White Bread — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Water ~40% (USDA moisture is ~36%; some is lost in baking)."
+                            "note": "White Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Added water ~27% (the flour's own moisture brings the loaf to USDA's ~36%)."
                         }
                     }
                 ]
@@ -1625,7 +1625,7 @@
             "grain-product",
             "vegan"
         ],
-        "notes": "Shelf-stable flour tortillas, modelled from their ingredients: ~62% wheat flour (1.35 kg of wheat per kg of flour), ~6% soybean oil (assumed; recipes also use lard or palm shortening), ~3% salt and minor ingredients, ~29% water. The shares are confidence-2 estimates from USDA's nutrition and typical recipes. Corn tortillas aren't covered.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "notes": "Shelf-stable flour tortillas, modelled from their ingredients: ~68% wheat flour (1.35 kg of wheat per kg of flour), ~6% soybean oil (assumed; recipes also use lard or palm shortening), ~3% salt and minor ingredients, ~23% water. The shares are confidence-2 estimates, corrected on 2026-10-06 (flour raised from 62% to 68% after a calories check). Corn tortillas are a separate entry.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
             {
                 "value": {
@@ -1671,13 +1671,13 @@
                 "food_slug": "wheat",
                 "fraction": [
                     {
-                        "value": 0.62,
+                        "value": 0.68,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Flour Tortillas — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Wheat flour ~62% (USDA carbohydrate is ~48 g per 100 g, flour is ~76% carbohydrate, so ~0.63 kg of flour per kg), converted to wheat at 1.35×."
+                            "note": "Flour Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Wheat flour ~68% (a 2026-10-06 correction from 62%: calories and protein of the ingredient mix now come within ~5% of USDA's record), converted to wheat at 1.35×."
                         }
                     }
                 ],
@@ -1704,7 +1704,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Flour Tortillas — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Vegetable shortening/oil ~6% (USDA fat is ~8 g per 100 g; I assumed soybean oil, though many recipes use lard or palm shortening)."
+                            "note": "Flour Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Vegetable shortening/oil ~6% (USDA fat is ~7.6 g per 100 g; I assumed soybean oil, though many recipes use lard or palm shortening)."
                         }
                     }
                 ]
@@ -1720,7 +1720,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Flour Tortillas — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Salt, leavening and preservatives ~3%."
+                            "note": "Flour Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt, leavening and preservatives ~3%."
                         }
                     }
                 ]
@@ -1730,13 +1730,13 @@
                 "label": "water",
                 "fraction": [
                     {
-                        "value": 0.29,
+                        "value": 0.23,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Flour Tortillas — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Water ~29% (USDA moisture is ~30%)."
+                            "note": "Flour Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Added water ~23% (the flour's own moisture brings the tortilla to USDA's ~30%)."
                         }
                     }
                 ]
@@ -2076,7 +2076,7 @@
             "legume-product",
             "vegan"
         ],
-        "notes": "Commercial hummus, modelled from its ingredients: ~50% cooked chickpeas, ~12% tahini (sesame), ~8% olive oil, ~5% lemon juice, ~1% garlic, ~1% salt, ~23% water. The shares are confidence-2 estimates from typical recipes and USDA's nutrition (protein and fat roughly cross-check). Crop impacts come from the chickpea, sesame, olive oil, lemon and garlic entries.\n\nProcessing emissions (0.3 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "notes": "Commercial hummus, modelled from its ingredients: ~55% cooked chickpeas, ~7% tahini (sesame), ~4% olive oil, ~4% lemon juice, ~1% garlic, ~1% salt, ~28% water. The shares are confidence-2 estimates and were corrected on 2026-10-06: the first version had 12% tahini and 8% olive oil, which gave 2.24 kcal/g of ingredients against USDA's 1.66; the new mix gives ~1.65. Crop impacts come from the chickpea, sesame, olive oil, lemon and garlic entries.\n\nProcessing emissions (0.3 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
             {
                 "value": {
@@ -2119,13 +2119,13 @@
                 "food_slug": "chickpeas",
                 "fraction": [
                     {
-                        "value": 0.5,
+                        "value": 0.55,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Cooked chickpeas ~50% by weight; the chickpea entry is on a cooked basis, so no conversion."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Cooked chickpeas ~55% by weight (a 2026-10-06 correction from 50%); the chickpea entry is on a cooked basis, so no conversion."
                         }
                     }
                 ]
@@ -2134,13 +2134,13 @@
                 "food_slug": "sesame-seeds",
                 "fraction": [
                     {
-                        "value": 0.12,
+                        "value": 0.07,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Tahini (ground sesame) ~12% (USDA lists ~17 g of protein per 100 g of tahini; the hummus protein of ~8 g is consistent with ~50% chickpeas and ~12% tahini). Sesame seeds are used at 1:1 for tahini."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Tahini (ground sesame) ~7% (a 2026-10-06 correction from 12%: at 12% the ingredients gave 2.24 kcal/g against USDA's 1.66). Sesame seeds are used 1:1 for tahini."
                         }
                     }
                 ]
@@ -2149,13 +2149,13 @@
                 "food_slug": "olive-oil",
                 "fraction": [
                     {
-                        "value": 0.08,
+                        "value": 0.04,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Olive oil ~8% (USDA fat is ~18 g per 100 g, most of it from tahini and oil; many brands use cheaper oils)."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Olive oil ~4% (corrected from 8%; USDA fat is ~9.6 g per 100 g, much of it from the tahini and chickpeas; many brands use cheaper oils)."
                         }
                     }
                 ]
@@ -2164,13 +2164,13 @@
                 "food_slug": "lemon",
                 "fraction": [
                     {
-                        "value": 0.05,
+                        "value": 0.04,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Lemon juice ~5%, taken as 1 kg of the lemon entry per kg of juice (juice is only about 40% of a lemon's weight, so this understates the lemon needed)."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Lemon juice ~4%, taken as 1 kg of the lemon entry per kg of juice (juice is only about 40% of a lemon's weight, so this understates the lemon needed)."
                         }
                     }
                 ]
@@ -2185,7 +2185,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Garlic ~1%."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Garlic ~1%."
                         }
                     }
                 ]
@@ -2201,7 +2201,7 @@
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Salt ~1%."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt ~1%."
                         }
                     }
                 ]
@@ -2211,13 +2211,13 @@
                 "label": "water",
                 "fraction": [
                     {
-                        "value": 0.23,
+                        "value": 0.28,
                         "confidence": 2,
                         "source": {
                             "id": 1,
                             "url": "https://fdc.nal.usda.gov/",
                             "title": "USDA FoodData Central",
-                            "note": "Hummus — recipe: typical commercial recipe, cross-checked against USDA's nutrition record for the product; the shares are estimates (labels give ingredient order, not amounts). Water ~23% (USDA moisture is ~65%; the remaining water is already inside the cooked chickpeas)."
+                            "note": "Hummus — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Added water ~28% (the cooked chickpeas already hold much of the moisture)."
                         }
                     }
                 ]
@@ -2479,6 +2479,1310 @@
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
                     "note": "EDUCATED GUESS (confidence 1, not a measured value): Corn Syrup (HFCS) — processing_water_per_kg: ~5 L/kg of process water for steeping, washing and evaporation is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 200,
+        "slug": "whole-wheat-bread",
+        "name": "Whole-Wheat Bread",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "grain-product",
+            "vegan"
+        ],
+        "notes": "Commercial whole-wheat sandwich bread, modelled from its ingredients: ~60% whole-wheat flour (1.0 kg of wheat per kg of flour, since the bran is kept), ~4% sugar, ~2% soybean oil, ~3% salt, yeast and gluten, ~31% water. The shares are confidence-2 estimates, checked against USDA's calories and protein. Because the bran stays in, whole-wheat bread needs less wheat per kg than white bread. Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.52,
+                    "fat": 0.035,
+                    "sat_fat": 0.00722,
+                    "protein": 0.1245,
+                    "fiber": 0.06,
+                    "sodium": 4.55,
+                    "carbs": 0.4271,
+                    "sugar": 0.0434,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0002,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0266,
+                    "vitamin_k": 0.078,
+                    "folate": 0.42,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00215,
+                    "calcium": 1.61,
+                    "iron": 0.0247,
+                    "magnesium": 0.75,
+                    "potassium": 2.54,
+                    "zinc": 0.0177,
+                    "phosphorus": 2.12,
+                    "selenium": 0.257,
+                    "ala": 0.00137,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Whole-Wheat Bread — FDC 172688 'Bread, whole-wheat, commercially prepared' (SR Legacy 18075), per 100 g: 252 kcal, protein 12.45 g, fat 3.5 g, sat fat 0.722 g, carbs 42.71 g, fiber 6 g, sugars 4.34 g, sodium 455 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172688 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 2.66 mg, vitamin k 7.8 µg, folate 42 µg DFE, vitamin b12 0 µg, vitamin b6 0.215 mg, calcium 161 mg, iron 2.47 mg, magnesium 75 mg, potassium 254 mg, zinc 1.77 mg, phosphorus 212 mg, selenium 25.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172688 per 100 g: ALA 0.137 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "wheat",
+                "fraction": [
+                    {
+                        "value": 0.6,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Whole-wheat flour ~60% of the loaf (calories and protein of the mix match USDA), converted to wheat at 1.0× because the bran stays in."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — Whole-wheat flour keeps nearly the whole kernel (~98% of the grain by weight), so 1 kg of flour takes ~1.0 kg of wheat; an educated estimate, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.04,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Sugar/honey ~4% (USDA reports ~5–6 g sugars per 100 g; many brands also use honey, taken as sugar)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "soybean-oil",
+                "fraction": [
+                    {
+                        "value": 0.02,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Soybean oil ~2% (USDA fat is ~3.5 g per 100 g)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "salt, yeast and minor ingredients",
+                "fraction": [
+                    {
+                        "value": 0.03,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt, yeast, vital wheat gluten and preservatives ~3%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.31,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Whole-Wheat Bread — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Added water ~31%."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Whole-Wheat Bread — processing_emissions_per_kg: baking, slicing, bagging and distribution; no published figure for the processing stage alone was found, so ~0.5 kg CO2e/kg is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 3.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Whole-Wheat Bread — processing_water_per_kg: ~3 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 201,
+        "slug": "oat-cereal",
+        "name": "Oat Cereal (Cheerios-style)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "grain-product",
+            "vegan"
+        ],
+        "notes": "Plain oat cereal (Cheerios-style rings), modelled from its ingredients: ~80% whole-grain oats and oat flour, ~10% modified corn starch, ~3.5% sugar, ~3% salt, minerals and vitamins, ~3.5% moisture. The shares are confidence-2 estimates from the ingredient order on the box and USDA's nutrition for General Mills Cheerios. Crop impacts come from the oats, corn and cane sugar entries.\n\nProcessing emissions (1.0 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.76,
+                    "fat": 0.0673,
+                    "sat_fat": 0.015,
+                    "protein": 0.1209,
+                    "fiber": 0.094,
+                    "sodium": 4.97,
+                    "carbs": 0.7323,
+                    "sugar": 0.0436,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0002,
+                    "vitamin_a": 9.9,
+                    "vitamin_c": 0.216,
+                    "vitamin_d": 0.034,
+                    "vitamin_e": 0.0065,
+                    "vitamin_k": 0.018,
+                    "folate": 12.01,
+                    "vitamin_b12": 0.0677,
+                    "vitamin_b6": 0.0239,
+                    "calcium": 4.01,
+                    "iron": 0.3317,
+                    "magnesium": 1.14,
+                    "potassium": 6.41,
+                    "zinc": 0.1673,
+                    "phosphorus": 4.81,
+                    "selenium": 0.249,
+                    "ala": 0.00068,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Oat Cereal (Cheerios-style) — FDC 173884 'Cereals ready-to-eat, GENERAL MILLS, CHEERIOS' (SR Legacy 08013), per 100 g: 376 kcal, protein 12.09 g, fat 6.73 g, sat fat 1.5 g, carbs 73.23 g, fiber 9.4 g, sugars 4.36 g, sodium 497 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173884 per 100 g: vitamin a 990 µg RAE, vitamin c 21.6 mg, vitamin d 3.4 µg, vitamin e 0.65 mg, vitamin k 1.8 µg, folate 1201 µg DFE, vitamin b12 6.77 µg, vitamin b6 2.39 mg, calcium 401 mg, iron 33.17 mg, magnesium 114 mg, potassium 641 mg, zinc 16.73 mg, phosphorus 481 mg, selenium 24.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 173884 per 100 g: ALA 0.068 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "oats",
+                "fraction": [
+                    {
+                        "value": 0.8,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Whole-grain oats and oat flour ~80% (Cheerios lists whole grain oats first). The oats entry is already on a rolled-oat basis (its yield includes the hull and rolling losses), so no further conversion."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — 1.0 kg of the oats entry per kg of oats in the cereal: the entry's yield already accounts for hull removal (55% extraction)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "corn",
+                "fraction": [
+                    {
+                        "value": 0.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Modified corn starch ~10% (the second ingredient on the box, used as a binder and for puffing)."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.37,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — 1.37 kg of corn per kg of corn starch: Mekonnen & Hoekstra's maize starch water is 1,671 L/kg against 1,222 for maize (1.37×), which already includes the value split with corn oil, gluten and feed. Confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.035,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Sugar ~3.5% (USDA reports ~4.4 g sugars per 100 g)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "salt, minerals and added vitamins",
+                "fraction": [
+                    {
+                        "value": 0.03,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt, calcium carbonate, tripotassium phosphate, vitamins and minerals ~3%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "moisture",
+                "fraction": [
+                    {
+                        "value": 0.035,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Cereal — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Residual moisture ~3–4%."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 1.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Cereal (Cheerios-style) — processing_emissions_per_kg: cooking, extruding, puffing, drying and packaging in a box; no published figure for the processing stage alone was found. Cereal life-cycle studies are around 1–2 kg CO2e/kg in total, so ~1.0 for the factory and distribution is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 4.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Cereal (Cheerios-style) — processing_water_per_kg: ~4 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 202,
+        "slug": "rice-cakes",
+        "name": "Rice Cakes",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "grain-product",
+            "vegan"
+        ],
+        "notes": "Plain brown-rice cakes, modelled as ~94% brown rice (puffed), ~1% salt and ~5% moisture. Rice is entered through the rice entry's cooked basis (2.8 kg per kg of dry rice), so a kg of cakes carries about 2.6 kg of cooked-rice footprint; that high number is real because rice is a high-emission crop and a rice cake is nearly all dry grain. The rice entry is white milled rice, so brown rice is slightly understated.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (1 L/kg) are confidence-1 guesses. Availability comes from rice's supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.87,
+                    "fat": 0.028,
+                    "sat_fat": 0.0057,
+                    "protein": 0.082,
+                    "fiber": 0.042,
+                    "sodium": 0.26,
+                    "carbs": 0.815,
+                    "sugar": 0.0088,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0124,
+                    "vitamin_k": 0.019,
+                    "folate": 0.21,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0015,
+                    "calcium": 0.11,
+                    "iron": 0.0149,
+                    "magnesium": 1.31,
+                    "potassium": 2.9,
+                    "zinc": 0.03,
+                    "phosphorus": 3.6,
+                    "selenium": 0.246,
+                    "ala": 0.0001,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Rice Cakes — FDC 170250 'Snacks, rice cakes, brown rice, plain, unsalted' (SR Legacy 19816), per 100 g: 387 kcal, protein 8.2 g, fat 2.8 g, sat fat 0.57 g, carbs 81.5 g, fiber 4.2 g, sugars 0.88 g, sodium 26 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170250 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 1.24 mg, vitamin k 1.9 µg, folate 21 µg DFE, vitamin b12 0 µg, vitamin b6 0.15 mg, calcium 11 mg, iron 1.49 mg, magnesium 131 mg, potassium 290 mg, zinc 3 mg, phosphorus 360 mg, selenium 24.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 170250 per 100 g: ALA 0.01 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "rice",
+                "fraction": [
+                    {
+                        "value": 0.94,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Rice Cakes — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Whole-grain brown rice ~94% of the cake by weight (puffed rice cakes are essentially just puffed grain). The rice entry is on a cooked-rice basis (cooked weight ratio 2.8), so each kg of dry rice counts as 2.8 kg of the entry."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 2.8,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Rice Cakes — 2.8 kg of the rice entry (cooked-white-rice basis) per kg of dry rice, the entry's own cooked weight ratio. The rice entry is milled white rice; brown rice keeps the bran and needs ~10% more paddy per kg, so this slightly understates the footprint. Confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "salt and minor ingredients",
+                "fraction": [
+                    {
+                        "value": 0.01,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Rice Cakes — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Salt or oil ~1% (plain, unsalted cakes have almost none)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "moisture",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Rice Cakes — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Residual moisture ~5% (USDA ~6%)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rice Cakes — processing_emissions_per_kg: puffing the grain under heat and pressure, then packing; no published figure was found, so ~0.5 kg CO2e/kg is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 1.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rice Cakes — processing_water_per_kg: ~1 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 203,
+        "slug": "corn-tortillas",
+        "name": "Corn Tortillas",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "grain-product",
+            "vegan"
+        ],
+        "notes": "Corn tortillas (ready-to-bake or -fry), modelled from their ingredients: ~50% corn solids (1.1 kg of corn per kg of masa, after nixtamalisation losses), ~47% water, ~3% lime, salt and preservatives. The shares are confidence-2 estimates. Crop impacts come from the corn entry. Flour tortillas are a separate entry.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (5 L/kg) are confidence-1 guesses. Availability comes from corn's supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.18,
+                    "fat": 0.0285,
+                    "sat_fat": 0.00453,
+                    "protein": 0.057,
+                    "fiber": 0.063,
+                    "sodium": 0.45,
+                    "carbs": 0.4464,
+                    "sugar": 0.0088,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0028,
+                    "vitamin_k": 0.0,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00219,
+                    "calcium": 0.81,
+                    "iron": 0.0123,
+                    "magnesium": 0.72,
+                    "potassium": 1.86,
+                    "zinc": 0.0131,
+                    "phosphorus": 3.14,
+                    "selenium": 0.061,
+                    "ala": 0.00034,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Corn Tortillas — FDC 175036 'Tortillas, ready-to-bake or -fry, corn' (SR Legacy 18363), per 100 g: 218 kcal, protein 5.7 g, fat 2.85 g, sat fat 0.453 g, carbs 44.64 g, fiber 6.3 g, sugars 0.88 g, sodium 45 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175036 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.28 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 0 µg, vitamin b6 0.219 mg, calcium 81 mg, iron 1.23 mg, magnesium 72 mg, potassium 186 mg, zinc 1.31 mg, phosphorus 314 mg, selenium 6.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 175036 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "corn",
+                "fraction": [
+                    {
+                        "value": 0.5,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Corn (as nixtamalised masa, dry-matter basis) ~50% of the tortilla; USDA's corn tortilla has ~44–45% moisture and nearly all the rest is corn solids."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Tortillas — nixtamalisation (cooking in lime) loses ~10% of the corn's dry matter to the cooking liquid and the hulls, so each kg of masa solids takes ~1.1 kg of corn. An estimate, confidence 2. It's field corn, not sweet corn."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.47,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Water ~47% (masa is about half water)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "lime, salt and preservatives",
+                "fraction": [
+                    {
+                        "value": 0.03,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Tortillas — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Lime (calcium hydroxide), salt and preservatives ~3%."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.4,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Corn Tortillas — processing_emissions_per_kg: grinding the masa, pressing, baking and packing, plus the nixtamalisation wastewater; no published figure was found, so ~0.4 kg CO2e/kg is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 5.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Corn Tortillas — processing_water_per_kg: ~5 L/kg of factory water, mostly for cooking and rinsing the corn in the nixtamal step, is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 205,
+        "slug": "dark-chocolate",
+        "name": "Dark Chocolate (70–85%)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "vegan"
+        ],
+        "notes": "Dark chocolate (70–85% cacao), modelled as ~70% cocoa mass (nibs and cocoa butter), ~28% sugar and ~2% lecithin and vanilla. Cocoa mass emissions (~63.2 kg CO2e/kg) were derived from Poore & Nemecek's dark chocolate value (46.65), so this entry reproduces that figure by construction; it is mostly land-use change from cocoa grown on cleared forest. Water and land come from the cocoa mass and cane sugar entries.\n\nMilk chocolate isn't modelled, because composites can't include animal ingredients. Processing emissions (1.5 kg CO2e/kg) and water (10 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.98,
+                    "fat": 0.4263,
+                    "sat_fat": 0.24489,
+                    "protein": 0.0779,
+                    "fiber": 0.109,
+                    "sodium": 0.2,
+                    "carbs": 0.459,
+                    "sugar": 0.2399,
+                    "cholesterol": 0.03,
+                    "trans_fat": 0.0003,
+                    "vitamin_a": 0.02,
+                    "vitamin_e": 0.0059,
+                    "vitamin_k": 0.073,
+                    "vitamin_b12": 0.0028,
+                    "vitamin_b6": 0.00038,
+                    "calcium": 0.73,
+                    "iron": 0.119,
+                    "magnesium": 2.28,
+                    "potassium": 7.15,
+                    "zinc": 0.0331,
+                    "phosphorus": 3.08,
+                    "selenium": 0.068,
+                    "ala": 0.00034,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Dark Chocolate (70–85%) — FDC 170273 'Chocolate, dark, 70-85% cacao solids' (SR Legacy 19904), per 100 g: 598 kcal, protein 7.79 g, fat 42.63 g, sat fat 24.489 g, carbs 45.9 g, fiber 10.9 g, sugars 23.99 g, sodium 20 mg, cholesterol 3 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170273 per 100 g: vitamin a 2 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.59 mg, vitamin k 7.3 µg, folate 0 µg DFE, vitamin b12 0.28 µg, vitamin b6 0.038 mg, calcium 73 mg, iron 11.9 mg, magnesium 228 mg, potassium 715 mg, zinc 3.31 mg, phosphorus 308 mg, selenium 6.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 170273 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "cocoa-mass",
+                "fraction": [
+                    {
+                        "value": 0.7,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Dark Chocolate — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Cocoa solids ~70% (the low end of USDA's 70–85% cacao record), counted as cocoa mass (nibs plus cocoa butter); the cocoa entry is on a mass basis, so no conversion."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.28,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Dark Chocolate — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Sugar ~28% (USDA's 70–85% dark chocolate has ~24 g sugars per 100 g, plus slack for the cocoa's own sugars)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "lecithin and vanilla",
+                "fraction": [
+                    {
+                        "value": 0.02,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Dark Chocolate — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Soy lecithin and vanilla ~2%."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 1.5,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Dark Chocolate (70–85%) — processing_emissions_per_kg: roasting, grinding, refining, conching, tempering and packaging; Poore & Nemecek don't split out their processing, so ~1.5 kg CO2e/kg is an educated guess (confidence 1). It is the figure used to back out the cocoa mass emissions from their 46.65 for dark chocolate, so the two are consistent."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 10.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Dark Chocolate (70–85%) — processing_water_per_kg: ~10 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 206,
+        "slug": "nutritional-yeast",
+        "name": "Nutritional Yeast",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "vegan"
+        ],
+        "notes": "Nutritional yeast flakes, modelled as molasses-grown yeast: ~3.8 kg of cane molasses per kg of dry yeast (educated guess). Molasses is a by-product that carries only a value share of the cane field, so the crop footprint is small; most of the footprint is the fermentation and drying energy (~3 kg CO2e/kg, a confidence-1 guess). Nutrition is the Bob's Red Mill large-flake label (fortified with B vitamins); other brands differ.\n\nWater and emissions are confidence-1 guesses, and urea, phosphate and vitamin inputs are ignored. Availability comes from molasses supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 4.0,
+                    "fat": 0.0333333,
+                    "sat_fat": 0.0,
+                    "protein": 0.533333,
+                    "fiber": 0.2,
+                    "sodium": 1.66667,
+                    "carbs": 0.333333,
+                    "sugar": 0.0,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_b12": 0.1168,
+                    "calcium": 0.4,
+                    "iron": 0.0666667,
+                    "potassium": 17.6
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 540,
+                    "url": "https://www.myfooddiary.com/foods/7260005/bobs-red-mill-large-flake-nutritional-yeast",
+                    "title": "Bob's Red Mill Large Flake Nutritional Yeast — Nutrition Facts label (per 15 g)",
+                    "note": "Nutritional Yeast — nutrition: Bob's Red Mill Large Flake Nutritional Yeast label (FDC branded record 2596118, 400 kcal and 53.3 g protein per 100 g), per 15 g (1/4 cup): 60 kcal, fat 0.5 g, sat fat 0 g, trans fat 0 g, cholesterol 0 mg, sodium 25 mg, carbs 5 g, fiber 3 g, sugars 0 g, protein 8 g, calcium 6 mg, iron 1 mg, potassium 264 mg, vitamins A, C and D 0, vitamin B12 73% of the 2.4 µg daily value (1.75 µg); divided by 15 for per-gram values. Fortified with B vitamins (folic acid and others listed on the label but without amounts in the source I could read, so left out). Label values are rounded, confidence 3."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "molasses",
+                "fraction": [
+                    {
+                        "value": 1.0,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Nutritional Yeast — recipe: nutritional yeast is Saccharomyces grown on cane or beet molasses (plus small amounts of urea, phosphate and vitamins), then killed, washed, dried and flaked. The molasses is the only farm input counted, taken at 3.8 kg of molasses per kg of dried yeast: yeast makes about 0.5 kg of dry cells per kg of sugar, molasses is ~50% fermentable sugar, and the flakes are ~5% moisture (0.95 / 0.5 / 0.5). An educated estimate, confidence 1."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 3.8,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Nutritional Yeast — 3.8 kg of molasses per kg of dried yeast (see the recipe note): biomass yield ~0.5 g per g of sugar x 50% sugar in molasses, 5% moisture in the product. A rough estimate (confidence 1); searches found no published figure."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 3.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Nutritional Yeast — processing_emissions_per_kg: aerated fermentation, centrifuging, pasteurising, drum-drying and fortifying; baker's-yeast production is energy-intensive and I found no published figure, so ~3 kg CO2e/kg is an educated guess (confidence 1). Nitrogen, phosphate and vitamin inputs are not counted."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 30.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Nutritional Yeast — processing_water_per_kg: ~30 L/kg of process water for fermentation and washing is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 207,
+        "slug": "orange-juice",
+        "name": "Orange Juice",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "vegan"
+        ],
+        "notes": "Not-from-concentrate orange juice, modelled as 2.2 kg of oranges per kg of juice (juice is ~45% of the fruit's weight; educated estimate). All of the fruit's land, water, pesticides and emissions come from the orange entry; the by-product peel and pulp aren't given a share, which slightly overstates the juice. Nutrition is USDA raw orange juice.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (1.5 L/kg) are confidence-1 guesses. Availability comes from oranges' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.45,
+                    "fat": 0.002,
+                    "sat_fat": 0.00024,
+                    "protein": 0.007,
+                    "fiber": 0.002,
+                    "sodium": 0.01,
+                    "carbs": 0.104,
+                    "sugar": 0.084,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.1,
+                    "vitamin_c": 0.5,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0004,
+                    "vitamin_k": 0.001,
+                    "folate": 0.3,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0004,
+                    "calcium": 0.11,
+                    "iron": 0.002,
+                    "magnesium": 0.11,
+                    "potassium": 2.0,
+                    "zinc": 0.0005,
+                    "phosphorus": 0.17,
+                    "selenium": 0.001,
+                    "ala": 0.00011,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Orange Juice — FDC 169098 'Orange juice, raw' (SR Legacy 09206), per 100 g: 45 kcal, protein 0.7 g, fat 0.2 g, sat fat 0.024 g, carbs 10.4 g, fiber 0.2 g, sugars 8.4 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169098 per 100 g: vitamin a 10 µg RAE, vitamin c 50 mg, vitamin d 0 µg, vitamin e 0.04 mg, vitamin k 0.1 µg, folate 30 µg DFE, vitamin b12 0 µg, vitamin b6 0.04 mg, calcium 11 mg, iron 0.2 mg, magnesium 11 mg, potassium 200 mg, zinc 0.05 mg, phosphorus 17 mg, selenium 0.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 169098 per 100 g: ALA 0.011 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "orange",
+                "fraction": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Orange Juice — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). The juice comes entirely from oranges (not-from-concentrate juice has nothing else in it)."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 2.2,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Orange Juice — ~2.2 kg of whole oranges per kg of juice: commercial juice recovery is ~45–50% of the fruit's weight (the peel, pulp and seeds are by-products). An educated estimate, confidence 2; the peel and pulp go to feed and pectin and could take a small value share, which is ignored."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.4,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Orange Juice — processing_emissions_per_kg: squeezing, pasteurising, packing in cartons and chilled distribution; no published figure for this stage alone was found, so ~0.4 kg CO2e/kg is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 1.5,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Orange Juice — processing_water_per_kg: ~1.5 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 208,
+        "slug": "beer",
+        "name": "Beer",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "alcohol",
+            "vegan"
+        ],
+        "notes": "Regular beer (~4.5% alcohol), modelled as ~15% malted barley (1.2 kg of barley per kg of malt) plus water. Crop impacts come from the barley entry. Hops, yeast and the glass or can are ignored apart from the packaging in the processing figure. Mekonnen & Hoekstra's own figure for beer is 298 L/kg of water, close to what this builds up to. Nutrition is USDA regular beer.\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from barley's supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.43,
+                    "fat": 0.0,
+                    "sat_fat": 0.0,
+                    "protein": 0.0046,
+                    "fiber": 0.0,
+                    "sodium": 0.04,
+                    "carbs": 0.0355,
+                    "sugar": 0.0,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.06,
+                    "vitamin_b12": 0.0002,
+                    "vitamin_b6": 0.00046,
+                    "calcium": 0.04,
+                    "iron": 0.0002,
+                    "magnesium": 0.06,
+                    "potassium": 0.27,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.14,
+                    "selenium": 0.006,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beer — FDC 168746 'Alcoholic beverage, beer, regular, all' (SR Legacy 14003), per 100 g: 43 kcal, protein 0.46 g, fat 0 g, sat fat 0 g, carbs 3.55 g, fiber 0 g, sugars 0 g, sodium 4 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168746 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 6 µg DFE, vitamin b12 0.02 µg, vitamin b6 0.046 mg, calcium 4 mg, iron 0.02 mg, magnesium 6 mg, potassium 27 mg, zinc 0.01 mg, phosphorus 14 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 168746 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "barley",
+                "fraction": [
+                    {
+                        "value": 0.15,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Beer — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Malted barley ~15% by weight (about 150 g of malt per litre; typical lager recipes use 140–200 g/L, including cereal adjuncts, which are treated as barley here). Hops and yeast are negligible by weight and ignored."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.2,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Beer — ~1.2 kg of barley per kg of malt: malting loses ~15–20% of the grain's weight (rootlets and respiration) and the barley entry's yield is hulled-grain weight. An estimate, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.85,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Beer — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Water ~85% (the rest of the 5% ABV beer is alcohol made from the malt sugars)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.6,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beer — processing_emissions_per_kg: brewing, fermentation, packaging (glass bottles or cans) and chilled distribution; beer life-cycle studies put the whole beer at ~0.7–1.2 kg CO2e/kg, of which the barley is ~0.25, so ~0.6 for the rest is an educated guess (confidence 1)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 4.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beer — processing_water_per_kg: ~4 L/kg of brewery water (cleaning, cooling, packaging) is a rough guess, in line with common industry figures of 3–6 L per litre (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 209,
+        "slug": "wine",
+        "name": "Wine (Red)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "alcohol",
+            "vegan"
+        ],
+        "notes": "Red table wine, modelled as 1.4 kg of grapes per kg of wine. Crop impacts come from the grapes entry, which is for table grapes: its US spray rate (~95 kg/ha) is dominated by fumigants and sulphur, and wine grapes differ, so treat the pesticide side as rough. Nutrition is USDA red table wine (about 12–13% alcohol).\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from grapes' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.85,
+                    "fat": 0.0,
+                    "sat_fat": 0.0,
+                    "protein": 0.0007,
+                    "fiber": 0.0,
+                    "sodium": 0.04,
+                    "carbs": 0.0261,
+                    "sugar": 0.0062,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.004,
+                    "folate": 0.01,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00057,
+                    "calcium": 0.08,
+                    "iron": 0.0046,
+                    "magnesium": 0.12,
+                    "potassium": 1.27,
+                    "zinc": 0.0014,
+                    "phosphorus": 0.23,
+                    "selenium": 0.002,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Wine (Red) — FDC 173190 'Alcoholic beverage, wine, table, red' (SR Legacy 14096), per 100 g: 85 kcal, protein 0.07 g, fat 0 g, sat fat 0 g, carbs 2.61 g, fiber 0 g, sugars 0.62 g, sodium 4 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173190 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0.4 µg, folate 1 µg DFE, vitamin b12 0 µg, vitamin b6 0.057 mg, calcium 8 mg, iron 0.46 mg, magnesium 12 mg, potassium 127 mg, zinc 0.14 mg, phosphorus 23 mg, selenium 0.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 173190 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "grapes",
+                "fraction": [
+                    {
+                        "value": 1.0,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Wine — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Wine is only grape juice fermented, so the grapes are the whole recipe (sulphites and fining agents are negligible)."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.4,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Wine — ~1.4 kg of grapes per kg of wine (a tonne of grapes makes ~700 L of wine and some is lost to stems and pomace, so 1.3–1.5 kg per kg). An estimate, confidence 2. The grapes entry is for table grapes (it pools all FAOSTAT grapes); wine grapes are grown differently and usually yield less."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.6,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Wine (Red) — processing_emissions_per_kg: crushing, fermenting, ageing, bottling in glass and distribution; Poore & Nemecek's wine value is 1.79 kg CO2e/kg in total, so ~0.6 for the non-farm part is an educated guess (confidence 1), mostly the glass bottle."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 4.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Wine (Red) — processing_water_per_kg: ~4 L/kg of winery water for cleaning and cooling is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 210,
+        "slug": "coconut-milk",
+        "name": "Coconut Milk (Canned)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "milk",
+            "vegan"
+        ],
+        "notes": "Canned coconut milk (the thick cooking kind, ~21% fat), modelled as ~62% coconut meat plus water. The coconut meat entry carries the land, water and emissions (its own water and emissions are weak, confidence 2). The recipe is a confidence-2 estimate from USDA's fat, calorie and protein figures. The thinner carton 'coconut milk beverage' is a different product (about 2% fat) and isn't modelled.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from coconut's supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.97,
+                    "fat": 0.2133,
+                    "sat_fat": 0.18915,
+                    "protein": 0.0202,
+                    "fiber": 0.0,
+                    "sodium": 0.13,
+                    "carbs": 0.0281,
+                    "sugar": 0.0,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.01,
+                    "vitamin_d": 0.0,
+                    "folate": 0.14,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00028,
+                    "calcium": 0.18,
+                    "iron": 0.033,
+                    "magnesium": 0.46,
+                    "potassium": 2.2,
+                    "zinc": 0.0056,
+                    "phosphorus": 0.96,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Coconut Milk (Canned) — FDC 170173 'Nuts, coconut milk, canned (liquid expressed from grated meat and water)' (SR Legacy 12118), per 100 g: 197 kcal, protein 2.02 g, fat 21.33 g, sat fat 18.915 g, carbs 2.81 g, fiber 0 g, sugars 0 g, sodium 13 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170173 per 100 g: vitamin a 0 µg RAE, vitamin c 1 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 14 µg DFE, vitamin b12 0 µg, vitamin b6 0.028 mg, calcium 18 mg, iron 3.3 mg, magnesium 46 mg, potassium 220 mg, zinc 0.56 mg, phosphorus 96 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 170173 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar or fiber value; stored as 0."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "coconut",
+                "fraction": [
+                    {
+                        "value": 0.62,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Coconut Milk — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Coconut meat ~62% of the can: the milk is 21% fat while coconut meat is 33.5% fat, so fat alone implies ~0.64 kg of meat per kg (at full extraction); calories (197 vs 354) imply 0.56 and protein 0.69; 0.62 is the middle. The coconut entry is on a coconut-meat basis."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.38,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Coconut Milk — recipe: typical commercial recipe, checked against USDA's nutrition record for the product (calories and protein of the ingredient mix compared with the product); the shares are estimates (labels give ingredient order, not amounts). Water ~38% (squeezed out and added back, with a little guar gum)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.4,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Coconut Milk (Canned) — processing_emissions_per_kg: grating or pressing the meat, pasteurising and canning; no published figure for this stage was found, so ~0.4 kg CO2e/kg is an educated guess (confidence 1; the steel can adds some)."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 2.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Coconut Milk (Canned) — processing_water_per_kg: ~2 L/kg of factory water is a rough guess (confidence 1)."
                 }
             }
         ]

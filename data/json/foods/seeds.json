@@ -1274,5 +1274,217 @@
                 }
             }
         ]
+    },
+    {
+        "id": 204,
+        "slug": "cocoa-mass",
+        "name": "Cocoa (Unsweetened Baking Chocolate)",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Unsweetened cocoa mass (baking chocolate, ground roasted cocoa nibs including their cocoa butter), nutrition from USDA. FAOSTAT's cocoa bean yield (~480 kg/ha) is converted to cocoa mass at 0.8 kg per kg of dry beans (shell and moisture lost in roasting and winnowing; educated estimate), ≈ 380 kg/ha. Côte d'Ivoire and Ghana grow about 60% of the world's cocoa, much of it on land cleared from tropical forest.\n\nWater is Mekonnen & Hoekstra's cocoa paste figure (24,238 L/kg). Poore & Nemecek only publish dark chocolate (46.65 kg CO2e/kg, mostly land-use change), so the cocoa mass emissions (~63.2) are derived from it: (46.65 − 28% sugar × 3.2 − 1.5 processing) ÷ 70% cocoa, confidence 2. Fertilizer (~15 kg/ha) reflects the very low use in West Africa. Pesticide (~2.5 kg/ha) and the compounds are confidence-1 guesses; the usual copper fungicides aren't in the toxicity table. Availability is FAOSTAT cocoa bean production × 0.8.",
+        "land_types": {
+            "tropical_forest": 0.9,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Côte d'Ivoire and Ghana (~60%), Indonesia, Ecuador, Cameroon, Nigeria and Brazil, mostly smallholder plots in humid tropical forest zones.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 6.42,
+                    "fat": 0.5231,
+                    "sat_fat": 0.32277,
+                    "protein": 0.1432,
+                    "fiber": 0.166,
+                    "sodium": 0.24,
+                    "carbs": 0.2842,
+                    "sugar": 0.0091,
+                    "cholesterol": 0.02,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.004,
+                    "vitamin_k": 0.097,
+                    "folate": 0.28,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00027,
+                    "calcium": 1.01,
+                    "iron": 0.174,
+                    "magnesium": 3.27,
+                    "potassium": 8.3,
+                    "zinc": 0.0963,
+                    "phosphorus": 4.0,
+                    "selenium": 0.081,
+                    "ala": 0.00117,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cocoa (Unsweetened Baking Chocolate) — FDC 167568 'Baking chocolate, unsweetened, squares' (SR Legacy 19078), per 100 g: 642 kcal, protein 14.32 g, fat 52.31 g, sat fat 32.277 g, carbs 28.42 g, fiber 16.6 g, sugars 0.91 g, sodium 24 mg, cholesterol 2 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 167568 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.4 mg, vitamin k 9.7 µg, folate 28 µg DFE, vitamin b12 0 µg, vitamin b6 0.027 mg, calcium 101 mg, iron 17.4 mg, magnesium 327 mg, potassium 830 mg, zinc 9.63 mg, phosphorus 400 mg, selenium 8.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 167568 per 100 g: ALA 0.117 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cocoa mass — yield_fraction: USDA 'Baking chocolate, unsweetened, squares' is entirely edible, so the edible fraction is 1."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 380,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cocoa mass — yield_kg_ha (world): FAOSTAT QCL item 661 'Cocoa beans', World yield 2020–2024 = 486; 483; 480; 476; 475 kg/ha; mean 480 kg/ha of dry beans x 0.8 cocoa mass per kg of beans = 380 kg/ha. The 0.8 (shell ~12–15% plus moisture loss) is my estimate, so confidence 3."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 24238,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Cocoa mass — water_per_kg: 24,238 L/kg (green 24,015 + blue 5 + grey 218). Mekonnen & Hoekstra Report 47 Vol. 1, global average, 'Cocoa paste' under product 661, 1996–2005: green 24,015 / blue 5 / grey 218 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 24015,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cocoa mass — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, 'Cocoa paste' under product 661, 1996–2005: green 24,015 / blue 5 / grey 218 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 5,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cocoa mass — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, 'Cocoa paste' under product 661, 1996–2005: green 24,015 / blue 5 / grey 218 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 218,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cocoa mass — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, 'Cocoa paste' under product 661, 1996–2005: green 24,015 / blue 5 / grey 218 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.5,
+                "confidence": 1,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cocoa mass — pesticide_kg_ha: no survey was found (searches found no per-hectare dosage figures). Smallholders typically spray copper-based fungicides against black pod and an insecticide or two against mirids; ~2.5 kg a.i./ha a year is my estimate. Copper compounds aren't in pesticides.json."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 15,
+                "confidence": 2,
+                "source": {
+                    "id": 538,
+                    "url": "https://www.fertilizer.org/wp-content/uploads/2023/01/2012_doha_africa_gockowski_slides.pdf",
+                    "title": "Gockowski (IITA) — West African cocoa fertilizer use (Ghana ~12–15 kg/ha, Côte d'Ivoire ~15–20 kg/ha, as reported in a web search summary)",
+                    "note": "Cocoa mass — fertilizer_kg_ha: Ghana averages ~12–15 kg/ha and Côte d'Ivoire ~15–20 kg/ha of fertilizer (as reported in search-result summaries of IITA/IFA material), among the lowest rates of any perennial crop. ~15 kg/ha is used as the world figure."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 63.2,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Cocoa mass — emissions_per_kg: Poore & Nemecek's 'Dark Chocolate' is 46.65 kg CO2e/kg (cradle to retail, dominated by land-use change). Taking dark chocolate as 70% cocoa mass + 28% sugar (3.2 kg CO2e/kg) + 1.5 for processing, cocoa mass carries (46.65 − 0.28×3.2 − 1.5) ÷ 0.7 = 63.2 kg CO2e/kg. Derived, not published; confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Cocoa mass — imidacloprid: neonicotinoids are among the insecticides used on mirids and capsids in West African cocoa; ~0.15 kg a.i./ha a year is my estimate (part of the ~2.5 kg/ha total)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.1,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Cocoa mass — cypermethrin: pyrethroids are also used on cocoa pests; ~0.1 kg a.i./ha a year is my estimate (part of the ~2.5 kg/ha total)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 4390,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cocoa mass — availability_gg (world): FAOSTAT QCL item 661 'Cocoa beans', World production 2020–2024 = 5,684; 5,771; 5,623; 5,123; 5,233 Gg; mean 5,487 Gg of beans x 0.8 cocoa mass per kg of beans = 4,390 Gg."
+                }
+            }
+        ]
     }
 ]
