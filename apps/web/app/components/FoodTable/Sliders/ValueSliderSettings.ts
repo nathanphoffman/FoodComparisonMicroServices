@@ -95,20 +95,11 @@ export const CAPTIVITY: ValueSliderSettings = {
     divider: true,
 };
 
-export const ZERO_BETTER_MULTIPLIER: ValueSliderSettings = {
-    label:       'Zero Bonus',
-    description: 'how many times better a zero-impact score is vs. the next best',
-    min: 1, max: 4, step: 0.1,
-    format:  times1dp,
-    Modal:   ZeroBetterMultiplierModal,
-    divider: true,
-};
-
 // ── Opinionated ───────────────────────────────────────────────────────────────
 
 function describeWinDampening(value: number): string {
     if (value === 0) return 'linear';
-    if (value === 1) return 'default';
+    if (value === 1) return 'geometric mean';
     return value < 1 ? 'weaker' : 'stronger';
 }
 
@@ -137,5 +128,14 @@ export const OVER_GATHERING: ValueSliderSettings = {
     min: 1, max: 5, step: 0.5,
     format:  times1dp,
     Modal:   OverGatheringModal,
+    divider: true,
+};
+
+export const ZERO_BETTER_MULTIPLIER: ValueSliderSettings = {
+    label:       'Zero Bonus',
+    description: 'how many times better a zero-impact score is vs. the next best',
+    min: 1, max: 4, step: 0.1,
+    format:  times1dp,
+    Modal:   ZeroBetterMultiplierModal,
     divider: true,
 };

@@ -97,7 +97,6 @@ export function FoodTableSliders({
                         <ValueSlider key={`FINAL_INTELLIGENCE_EXPONENT-${resetKey}`} {...SLIDERS.FINAL_INTELLIGENCE_EXPONENT} initialValue={DEFAULT_FINAL_INTELLIGENCE_EXPONENT} onChange={onFinalIntelligenceExponentChange} />
                         <ValueSlider key={`PHILOSOPHICAL_KILL-${resetKey}`} {...SLIDERS.PHILOSOPHICAL_KILL} initialValue={killMultiplier} onChange={onPhilosophicalKillChange} />
                         <ValueSlider key={`CAPTIVITY-${resetKey}`} {...SLIDERS.CAPTIVITY} initialValue={captivityMultiplier} onChange={onCaptivityChange} />
-                        <ValueSlider key={`ZERO_BETTER_MULTIPLIER-${resetKey}`} {...SLIDERS.ZERO_BETTER_MULTIPLIER} initialValue={DEFAULT_ZERO_BETTER_MULTIPLIER} onChange={onZeroBetterMultiplierChange} />
                     </div>
                 </div>
             </ExpandableSliderGroup>
@@ -113,6 +112,7 @@ export function FoodTableSliders({
                     <ValueSlider key={`WIN_DAMPENING-${resetKey}`} {...SLIDERS.WIN_DAMPENING} initialValue={DEFAULT_WIN_DAMPENING} onChange={onWinDampeningChange} />
                     <ValueSlider key={`OVER_HUNTING-${resetKey}`} {...SLIDERS.OVER_HUNTING} initialValue={overHuntingFactor} onChange={onOverHuntingChange} />
                     <ValueSlider key={`OVER_GATHERING-${resetKey}`} {...SLIDERS.OVER_GATHERING} initialValue={DEFAULT_OVER_GATHERING} onChange={onOverGatheringChange} />
+                    <ValueSlider key={`ZERO_BETTER_MULTIPLIER-${resetKey}`} {...SLIDERS.ZERO_BETTER_MULTIPLIER} initialValue={DEFAULT_ZERO_BETTER_MULTIPLIER} onChange={onZeroBetterMultiplierChange} />
                 </div>
             </ExpandableSliderGroup>
         </div>
