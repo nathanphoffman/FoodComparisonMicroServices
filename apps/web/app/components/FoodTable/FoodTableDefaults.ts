@@ -5,6 +5,7 @@ import { DEFAULT_LEVEL, toShares } from './Sliders/PercentSliders';
 
 export const COLUMN_CONFIG: ColConfig[] = [
     { key: 'name',             label: 'Food',                   defaultVisible: true,  mobileVisible: true  },
+    { key: 'rank',             label: 'Rank',                   defaultVisible: false, mobileVisible: false },
     { key: 'nutritionScore',   label: 'Nutrition Score',        defaultVisible: true,  mobileVisible: true  },
     { key: 'emissions',        label: 'CO₂e (kg / kg)',         defaultVisible: true,  mobileVisible: false },
     { key: 'landUse',          label: 'Land Use (m² / kg)',     defaultVisible: true,  mobileVisible: false },

@@ -7,7 +7,7 @@ import {
   getNutritionScoreTone, getSentientHarmTone, getWaterTone,
 } from '../FoodTableStyles';
 
-export type FigureKey = Exclude<ColConfig['key'], 'name'>;
+export type FigureKey = Exclude<ColConfig['key'], 'name' | 'rank'>;
 
 type Figure = {
   key: FigureKey;

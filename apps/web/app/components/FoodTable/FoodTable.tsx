@@ -12,6 +12,7 @@ import { WaterCell } from './Cells/WaterCell';
 import { SentientHarmCell } from './Cells/SentientHarmCell';
 import { CaptiveSentienceCell } from './Cells/CaptiveSentienceCell';
 import { FinalScoreCell } from './Cells/FinalScoreCell';
+import { RankCell } from './Cells/RankCell';
 import { AvailabilityCell } from './Cells/AvailabilityCell';
 import { getUnitLabel, toNutritionDetail, blendNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from './FoodTableTypes';
@@ -106,6 +107,17 @@ export function FoodTable() {
         return sortRows(foodsToSort, scored);
     }, [rawFoods, foodFilter, scored, sortRows]);
 
+    // Rank by Improvement (1 = best) among the rows on screen, whatever the table is sorted by.
+    // Rows without an Improvement score get no rank; tied scores share a rank.
+    const { ranks, rankedCount } = useMemo(() => {
+        const scores = displayRows.flatMap(food => {
+            const score = scored.get(food.slug)?.final_score;
+            return score == null ? [] : [{ slug: food.slug, score }];
+        });
+        const ranks = new Map(scores.map(({ slug, score }) => [slug, 1 + scores.filter(other => other.score > score).length]));
+        return { ranks, rankedCount: scores.length };
+    }, [displayRows, scored]);
+
     // ── Render ────────────────────────────────────────────────────────────────
 
     const { weights, greenWaterWeight, greyWaterWeight } = sliderValues;
@@ -122,6 +134,7 @@ export function FoodTable() {
                     {activeCols.map(column => {
                         switch (column.key) {
                             case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
+                            case 'rank':           return <RankCell           key="rank"           rank={ranks.get(food.slug) ?? null} total={rankedCount} />;
                             case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} />;
                             case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
                             case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
@@ -136,7 +149,7 @@ export function FoodTable() {
                 </Row>
             );
         })
-    ), [displayRows, scored, customNutrition, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
+    ), [displayRows, scored, ranks, rankedCount, customNutrition, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
     const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:    `CO₂e (kg / ${unit})`,
@@ -150,13 +163,14 @@ export function FoodTable() {
 
     // Every column's label, for the detail modal's tiles (it shows all figures, not only visible columns)
     const figureLabels = Object.fromEntries(
-        COLUMN_CONFIG.filter(column => column.key !== 'name').map(column => [column.key, DYNAMIC_LABELS[column.key] ?? column.label]),
+        COLUMN_CONFIG.filter(column => column.key !== 'name' && column.key !== 'rank').map(column => [column.key, DYNAMIC_LABELS[column.key] ?? column.label]),
     ) as Record<FigureKey, string>;
     const selectedFood = selectedSlug ? rawFoods.find(food => food.slug === selectedSlug) : undefined;
 
     const headers = activeCols.map(column => ({
         label: DYNAMIC_LABELS[column.key] ?? column.label,
-        ...columnSortProps(column.key),
+        // Rank follows the Improvement score, so it isn't a sort column of its own.
+        ...(column.key === 'rank' ? {} : columnSortProps(column.key)),
     }));
 
     if (error)   return <p className="mt-6 text-red-600">Failed to load data: {error}</p>;

@@ -6,6 +6,7 @@ import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail
 
 export type SortKey =
     | 'name'
+    | 'rank'
     | 'nutritionScore'
     | 'emissions'
     | 'landUse'
