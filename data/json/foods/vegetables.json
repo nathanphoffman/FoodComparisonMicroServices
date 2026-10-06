@@ -1954,7 +1954,7 @@
         "tags": [
             "common"
         ],
-        "notes": "Bell peppers, nutrition averaged from USDA green and red peppers. Yield is FAOSTAT 'Chillies and peppers, green' (~15.7 t/ha world, ~31.9 US). That item also includes fresh chillies, which yield less, so bell pepper yield is probably a bit understated.\n\nWater is Mekonnen & Hoekstra (379 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). Heated Dutch greenhouse peppers are much higher (~1.3 at the farm alone).\n\nUS peppers are heavily treated: ~94.5 kg/ha of active ingredient, about 80% of it soil fumigants that aren't in the pesticide toxicity table (16.8 kg/ha without them). That figure stands in for the world too.",
+        "notes": "Bell peppers, nutrition averaged from USDA green and red peppers. Yield is FAOSTAT 'Chillies and peppers, green' (~15.7 t/ha world, ~31.9 US). That item also includes fresh chillies, which yield less, so bell pepper yield is probably a bit understated.\n\nWater is Mekonnen & Hoekstra (379 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). Heated Dutch greenhouse peppers are much higher (~1.3 at the farm alone).\n\nUS peppers are heavily treated: ~94.5 kg/ha of active ingredient, about 80% of it soil fumigants that aren't in the pesticide toxicity table (16.8 kg/ha without them). That figure stands in for the world too.\n\nFertilizer (87 kg/ha) is from the 2022 USDA NASS vegetable chemical-use survey (single year, confidence 2); it was missing before 2026-10-06.",
         "land_types": {
             "temperate_forest": 0.4,
             "dry": 0.25,
@@ -2287,6 +2287,19 @@
                     "url": "https://data.un.org/Data.aspx?d=FAO&f=itemCode:401",
                     "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Chillies and peppers, green (item 401), 2020–2024",
                     "note": "Bell pepper — availability_gg: FAOSTAT item 401 world production 2020–2024 mean 43.51 Mt = 43,510 Gg. Includes fresh chillies (bell/sweet peppers are the majority by weight but FAO does not split them)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 87,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Bell Pepper — fertilizer_kg_ha (US): NASS Agricultural Chemical Use 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 46 lb/ac on 85% = 43.8, P2O5 18 lb/ac on 59% = 11.9, K2O 34 lb/ac on 83% = 31.6, total 87 kg/ha. The 2018, 2020 and 2024 surveys did not publish all three nutrients. Single survey year, so confidence 2. No world figure found; world falls back to this US value (2026-10-06 file snapshot)."
                 }
             }
         ]
@@ -6387,7 +6400,7 @@
         "tags": [
             "common"
         ],
-        "notes": "Hot chili peppers (green), nutrition from USDA. 73% is edible (stem ends, seeds and core removed). China grows ~40% of the world's chilies and green peppers, then India, Mexico, Türkiye and Indonesia. The FAOSTAT and water figures cover chilies and sweet peppers together, so yield and water are identical to Bell Pepper; the US yield is USDA's chile-specific figure (~21 t/ha).\n\nEmissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53). Pesticide, fertilizer and compound rates are copied from Bell Pepper at confidence 2 (USDA doesn't survey chile spraying); world availability is a confidence-1 guess of half the pooled FAOSTAT total. Fertilizer is a confidence-1 guess because the bell pepper entry has none.",
+        "notes": "Hot chili peppers (green), nutrition from USDA. 73% is edible (stem ends, seeds and core removed). China grows ~40% of the world's chilies and green peppers, then India, Mexico, Türkiye and Indonesia. The FAOSTAT and water figures cover chilies and sweet peppers together, so yield and water are identical to Bell Pepper; the US yield is USDA's chile-specific figure (~21 t/ha).\n\nEmissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53). Pesticide, fertilizer (87 kg/ha, from NASS bell pepper surveys) and compound rates are copied from Bell Pepper at confidence 2 (USDA doesn't survey chile spraying); world availability is a confidence-1 guess of half the pooled FAOSTAT total.",
         "land_types": {
             "temperate_forest": 0.4,
             "dry": 0.25,
@@ -6534,13 +6547,14 @@
         ],
         "fertilizer_kg_ha": [
             {
-                "value": 150,
-                "confidence": 1,
+                "value": 87,
+                "confidence": 2,
+                "region": "US",
                 "source": {
-                    "id": 62,
-                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
-                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
-                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chili Pepper — fertilizer_kg_ha: no survey and the bell-pepper entry has none; typical vegetable fertilizer ~150 kg/ha (between this repo's cabbage 141 and spinach 120/kale 100 figures)."
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Chili Pepper — fertilizer_kg_ha (US): NASS does not survey chile peppers' chemical use, so this copies the NASS-based Bell Pepper figure (same genus). Bell Pepper — fertilizer_kg_ha (US): NASS Agricultural Chemical Use 2022 vegetable survey, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085): N 46 lb/ac on 85% = 43.8, P2O5 18 lb/ac on 59% = 11.9, K2O 34 lb/ac on 83% = 31.6, total 87 kg/ha. The 2018, 2020 and 2024 surveys did not publish all three nutrients. Single survey year, so confidence 2. No world figure found; world falls back to this US value (2026-10-06 file snapshot)."
                 }
             }
         ],

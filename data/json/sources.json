@@ -3252,5 +3252,21 @@
         "notes": [
             "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
         ]
+    },
+    {
+        "id": 528,
+        "url": "https://www.imarcgroup.com/global-alfalfa-hay-market",
+        "title": "IMARC Group — Global alfalfa hay market (volume, million metric tons)",
+        "notes": [
+            "Alfalfa — availability_gg (world): market-research estimate of global alfalfa hay volume, 297.3 Mt in 2025 (271.7 Mt in 2023 in another snippet). Not an official statistic, so confidence 2."
+        ]
+    },
+    {
+        "id": 529,
+        "url": "https://nass.usda.gov/Statistics_by_State/West_Virginia/Publications/Current_News_Release/2025%20releases/CropProdAnn25.pdf",
+        "title": "USDA NASS — Crop Production 2024 Summary, Hay (US alfalfa and other hay production)",
+        "notes": [
+            "Alfalfa and Grass Hay — availability_gg (US): 2024 US alfalfa hay production 49.8 million tons and all other hay 72.6 million tons (short tons, converted x 0.9072 to tonnes)."
+        ]
     }
 ]

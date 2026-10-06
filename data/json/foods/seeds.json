@@ -515,6 +515,19 @@
                     "title": "USDA FoodData Central",
                     "note": "Hemp Seeds — FDC 170148 'Seeds, hemp seed, hulled' (SR Legacy 12012), per 100 g: 553 kcal, protein 31.56 g, fat 48.75 g, sat fat 4.6 g, carbs 8.67 g, fiber 4 g, sugars 1.5 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170148 per 100 g: vitamin a 1 µg RAE, vitamin c 0.5 mg, vitamin d 0 µg, vitamin e 0.8 mg, vitamin k 0 µg, folate 110 µg DFE, vitamin b12 0 µg, vitamin b6 0.6 mg, calcium 70 mg, iron 7.95 mg, magnesium 700 mg, potassium 1200 mg, zinc 9.9 mg, phosphorus 1650 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 170148 per 100 g: ALA 8.684 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0,
+                    "vitamin_b12": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — vitamin_d and vitamin_b12: USDA's SR record 'Seeds, hemp seed, hulled' (FDC 170148) reports neither. Plants do not make vitamin D or B12 (apart from trace D from fungi/algae), so I assumed 0. Vitamin K and selenium are still unknown and are left out rather than assumed."
+                }
             }
         ],
         "yield_fraction": [
@@ -724,6 +737,30 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Chia Seeds — FDC 170554 'Seeds, chia seeds, dried' (SR Legacy 12006), per 100 g: 486 kcal, protein 16.54 g, fat 30.74 g, sat fat 3.33 g, carbs 42.12 g, fiber 34.4 g, sugars 0 g, sodium 16 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170554 per 100 g: vitamin a 0 µg RAE, vitamin c 1.6 mg, vitamin d 0 µg, vitamin e 0.5 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 631 mg, iron 7.72 mg, magnesium 335 mg, potassium 407 mg, zinc 4.58 mg, phosphorus 860 mg, selenium 55.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 170554 per 100 g: ALA 17.83 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_b6": 0.002024
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Chia Seeds — vitamin_b6: USDA FDC 2710819 'Chia seeds, dry, raw' (Foundation foods), 0.2024 mg per 100 g; divided by 100 for per-gram values. The SR Legacy chia record used for the other values (FDC 170554) lacks it."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chia Seeds — vitamin_d: neither USDA chia record reports it. Plants do not make vitamin D, so I assumed 0. Vitamin A, K and folate are still unknown and are left out rather than assumed."
                 }
             }
         ],

@@ -7,7 +7,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from the INRAE-CIRAD-AFZ feed table for dehydrated alfalfa, cut down for losses in sun-cured hay, plus hay vitamin D from a 1948 study. See the source note for each step.",
+        "notes": "A feed crop, not eaten by people. It's in the dataset so animal foods can charge for the alfalfa they eat (mainly dairy and lamb).\n\nYield (~8.5 t/ha) and water come from general agronomic sources, and its pesticide profile is insecticides (malathion, carbaryl, diazinon). Alfalfa fixes its own nitrogen, so it needs no nitrogen fertilizer, and as a perennial it is rarely tilled.\n\nWhen alfalfa is fed to animals, the farm-gate emission figure is used (crop production only, ~0.35–0.4 kg CO2e/kg world, 0.15 US). Retail stages aren't charged, because feed never goes through a shop. That was added on 2026-09-24. The world emission values are not from a verified source (confidence 2); the US value is from Adom et al. 2012.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, alfalfa hay), because USDA has no record for alfalfa as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from the INRAE-CIRAD-AFZ feed table for dehydrated alfalfa, cut down for losses in sun-cured hay, plus hay vitamin D from a 1948 study. See the source note for each step.\n\nAvailability (added 2026-10-06): ~297,000 Gg world (market-research estimate, confidence 2) and ~45,000 Gg US (USDA NASS 2024).",
         "nutrition": [
             {
                 "value": {
@@ -318,7 +318,29 @@
                 ]
             }
         ],
-        "availability_gg": null
+        "availability_gg": [
+            {
+                "value": 297300,
+                "confidence": 2,
+                "source": {
+                    "id": 528,
+                    "url": "https://www.imarcgroup.com/global-alfalfa-hay-market",
+                    "title": "IMARC Group — Global alfalfa hay market (volume, million metric tons)",
+                    "note": "Alfalfa — availability_gg (world): IMARC Group estimates global alfalfa hay at 297.3 Mt (2025), i.e. 297,300 Gg. A market-research estimate, not an official statistic; at this entry's 8.5 t/ha yield it implies ~35 million ha of alfalfa."
+                }
+            },
+            {
+                "value": 45179,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 529,
+                    "url": "https://nass.usda.gov/Statistics_by_State/West_Virginia/Publications/Current_News_Release/2025%20releases/CropProdAnn25.pdf",
+                    "title": "USDA NASS — Crop Production 2024 Summary, Hay (US alfalfa and other hay production)",
+                    "note": "Alfalfa — availability_gg (US): USDA NASS 2024 US alfalfa and alfalfa-mixture hay production 49.8 million short tons x 0.9072 = 45,179 Gg."
+                }
+            }
+        ]
     },
     {
         "id": 8,
@@ -328,7 +350,7 @@
         "category": "feeds",
         "human_food": 0,
         "tags": [],
-        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from feed tables and hay studies, with alfalfa used as the analog for vitamin K and folate. See the source note.",
+        "notes": "A feed crop for cattle, sheep and goats. Not eaten by people.\n\nYield (~5.5 t/ha), water, fertilizer and pesticide values are general agronomic estimates. Emissions are low, because it's a perennial grass with little tillage and modest fertilizer. Animal foods use the farm-gate figure (0.25–0.3 world, 0.14 US from Adom et al. 2012), so retail stages are not charged to feed.\n\nGrass grazed directly on pasture is NOT counted here. It's counted through each animal's pasture area. Grass hay only covers hay that's cut and fed.\n\nMinerals are an estimate from a livestock feed table (Feedipedia, timothy hay), because USDA has no record for hay as it isn't a human food. Vitamins and selenium are left out.\n\nVitamin B12 and EPA/DHA are taken as 0 (plants don't make them).\n\nVitamins, selenium and ALA are estimates from feed tables and hay studies, with alfalfa used as the analog for vitamin K and folate. See the source note.\n\nAvailability (added 2026-10-06): US ~65,900 Gg is USDA NASS 2024 'all other hay'; the world figure (~433,000 Gg) is a confidence-1 guess that assumes the US share of grass hay matches its share of alfalfa.",
         "nutrition": [
             {
                 "value": {
@@ -607,7 +629,29 @@
                 ]
             }
         ],
-        "availability_gg": null
+        "availability_gg": [
+            {
+                "value": 433000.0,
+                "confidence": 1,
+                "source": {
+                    "id": 529,
+                    "url": "https://nass.usda.gov/Statistics_by_State/West_Virginia/Publications/Current_News_Release/2025%20releases/CropProdAnn25.pdf",
+                    "title": "USDA NASS — Crop Production 2024 Summary, Hay (US alfalfa and other hay production)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Grass Hay — availability_gg (world): no world statistic exists for grass hay. The US makes 65,863 Gg of non-alfalfa hay (NASS 2024: 72.6 million short tons x 0.9072). The US makes 15.2% of the world's alfalfa hay (45,179 of 297,300 Gg); assuming the same US share for grass hay gives 65,863 / 0.152 ≈ 433,000 Gg. Very rough: other major hay makers (EU, China, Russia, Australia) may differ."
+                }
+            },
+            {
+                "value": 65863,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 529,
+                    "url": "https://nass.usda.gov/Statistics_by_State/West_Virginia/Publications/Current_News_Release/2025%20releases/CropProdAnn25.pdf",
+                    "title": "USDA NASS — Crop Production 2024 Summary, Hay (US alfalfa and other hay production)",
+                    "note": "Grass Hay — availability_gg (US): USDA NASS 2024 US all-other-hay production 72.6 million short tons x 0.9072 = 65,863 Gg. 'All other hay' includes grass, legume-grass mixes and other non-alfalfa hay."
+                }
+            }
+        ]
     },
     {
         "id": 54,
