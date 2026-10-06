@@ -1095,7 +1095,9 @@
             "composite",
             "processed",
             "beverage",
-            "plant-milk"
+            "milk",
+            "soy",
+            "vegan"
         ],
         "notes": "Unsweetened soy milk, modelled as water plus soybeans: ~10% dry beans by weight (soy protein is 36% of the bean and soy milk has 2.9% protein, plus losses to the okara). The beans are charged at the soy entry's land, water and emissions, converted from dry to its cooked basis (×2.2).\n\nNutrition is typical unsweetened fortified soy milk from USDA; calcium and vitamins vary by brand.\n\nProcessing emissions (0.65 kg CO2e/kg) are Poore & Nemecek's soy milk total (0.98 kg CO2e/L, ≈0.95/kg) minus the ~0.30 from the beans, leaving factory, packaging and distribution. Processing water (4 L/kg) is a rough guess. Availability is not set, so it comes from soy's.",
         "nutrition": [

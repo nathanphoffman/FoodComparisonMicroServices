@@ -6,7 +6,9 @@
         "type": "plant",
         "category": "leafy",
         "human_food": 1,
-        "tags": [],
+        "tags": [
+            "common"
+        ],
         "notes": "Romaine lettuce, nutrition from USDA. 96% is edible. World yield ~25 t/ha (FAO, all lettuce; FAOSTAT pools lettuce with chicory); US romaine ~34.9 t/ha (USDA, 2022–2024).\n\nThis entry used to be a single 'Lettuce' entry (all types). It was split into romaine and iceberg; the nutrition in it was already USDA's romaine record. Water, emissions, pesticides, fertilizer and tillage are not type-specific, so both entries share the same lettuce-wide values: water is 130 L/kg from the Water Footprint Network's online calculator (Mekonnen & Hoekstra's own figure is 237; the US value, 113, is their US average), and emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53).\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year. Availability is the world lettuce-and-chicory total, shared by both entries.",
         "land_types": {
             "dry": 0.6,
@@ -333,7 +335,9 @@
         "type": "plant",
         "category": "leafy",
         "human_food": 1,
-        "tags": [],
+        "tags": [
+            "common"
+        ],
         "notes": "Iceberg lettuce, nutrition from USDA (FDC 169248). ~95% is edible. World yield ~25 t/ha (FAO, all lettuce; FAOSTAT pools lettuce with chicory); US head lettuce ~39.9 t/ha (USDA, 2022–2024). Iceberg is the main head lettuce type, so USDA's 'head lettuce' series is used.\n\nSplit out of the old single 'Lettuce' entry. Water, emissions, pesticides, fertilizer and tillage are not type-specific, so both lettuce entries share the same lettuce-wide values: water is 130 L/kg from the Water Footprint Network's online calculator (Mekonnen & Hoekstra's own figure is 237; the US value, 113, is their US average), and emissions use Poore & Nemecek's 'Other Vegetables' (0.5–0.53).\n\nPesticides (~1.4 kg/ha) are from USDA surveys of California and Arizona. Lettuce is grown in several short crops a year, so the field is tilled ~3 times a year. Availability is the world lettuce-and-chicory total, shared by both entries.",
         "land_types": {
             "dry": 0.6,

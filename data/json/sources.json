@@ -168,7 +168,8 @@
             "Broiler chicken and layer hen — neuron_count: ~221 million neurons in domestic chicken.",
             "Pig — neuron_count: ~2.23 billion neurons.",
             "Tuna — neuron_count: ~30 million neurons.",
-            "Mallard (Anas platyrhynchos) whole brain 367 million neurons (Kverková et al. 2022), used for duck."
+            "Mallard (Anas platyrhynchos) whole brain 367 million neurons (Kverková et al. 2022), used for duck.",
+            "Octopus 500,000,000 (Young 1963); bigfin reef squid 500,000,000 (Chung, Kurniawan & Marshall 2020, iScience 23:100816, MRI-based squid brain connectome); coconut crab ~1,000,000 (olfactory interneurons alone); cockroach 1,000,000."
         ]
     },
     {
@@ -1881,7 +1882,8 @@
             "World production, tonnes live weight, 2019–2023 mean. Aquaculture = freshwater + brackishwater + marine; capture = capture production.",
             "Atlantic salmon (SAL) aquaculture 2.67 Mt; principal market tunas capture (skipjack, yellowfin, bigeye, albacore, Atlantic/Pacific/southern bluefin) 5.24 Mt; ISSCAAP Shrimps, prawns — capture 3.12 Mt, aquaculture 7.45 Mt; all species named sardine/pilchard/sardinella, capture 5.61 Mt; ISSCAAP Tilapias and other cichlids aquaculture 6.43 Mt; ISSCAAP Mussels aquaculture 1.97 Mt; Oysters aquaculture 6.73 Mt; Clams, cockles, arkshells aquaculture 5.76 Mt.",
             "Alaska pollock capture 3.49 Mt; Atlantic cod capture 1.08 Mt (aquaculture 0.004 Mt); ISSCAAP Carps, barbels and other cyprinids aquaculture 31.41 Mt; all catfish species (incl. Pangas NEI) aquaculture 6.42 Mt.",
-            "Octopus — all octopus species capture 2019–2023 mean 377 kt live weight."
+            "Octopus — all octopus species capture 2019–2023 mean 377 kt live weight.",
+            "FAO capture production 2019–2023 means, tonnes live weight (capture only): swordfish 105.7 kt; Atlantic + Pacific halibut 27.6 kt; common + pompano dolphinfish 120.1 kt; haddock 320.2 kt; Atlantic + Pacific herring 2,103.5 kt; all anchovies (Engraulidae and species named anchovy/anchoveta, mostly Peruvian anchoveta for fishmeal) 7,229.6 kt; Scomber mackerels (Atlantic, chub, blue, Atlantic chub) 3,031.1 kt; all species with 'squid' in the name (includes bobtail squids and cuttlefish NEI) 3,041.9 kt; ISSCAAP crabs 1,542.5 kt; ISSCAAP lobsters and spiny-rock lobsters 297.8 kt. Aquaculture is negligible for all of these."
         ]
     },
     {
@@ -1921,7 +1923,8 @@
         "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
         "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
         "notes": [
-            "Yield as a proportion of whole fish weight — skinless fillets / total edible flesh: Atlantic cod 34% / 47%; Alaska pollack 36% / 41%; common carp 36% / 54%. Skinless fillet yields used for yield_fraction (nutrition is raw fillet)."
+            "Yield as a proportion of whole fish weight — skinless fillets / total edible flesh: Atlantic cod 34% / 47%; Alaska pollack 36% / 41%; common carp 36% / 54%. Skinless fillet yields used for yield_fraction (nutrition is raw fillet).",
+            "Yield as a proportion of whole fish weight — skinless fillets / total edible flesh: haddock 35% / 48%; Atlantic herring 46% / 61%; Atlantic mackerel 54% / 61%; anchovies (estimated) 51% / 62%; Greenland halibut 34% / 49%; squids nei 67% (edible, no fillet); bigeye tuna and other tunas 58% (edible flesh); Japanese amberjack 46% (est.) / 53%."
         ]
     },
     {
@@ -3026,6 +3029,94 @@
             "Soy milk — nutrition per 100 g, typical unsweetened fortified soy milk: 33 kcal, fat 1.61 g, sat fat 0.2 g, protein 2.86 g, fiber 0.4 g, carbs 1.74 g, sugar 0.5 g, sodium 12 mg, vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 1.1 µg, vitamin e 0.11 mg, vitamin k 3 µg, folate 18 µg DFE, vitamin b12 0.45 µg, vitamin b6 0.04 mg, calcium 123 mg (fortified), iron 0.64 mg, magnesium 25 mg, potassium 118 mg, zinc 0.23 mg, phosphorus 49 mg, selenium 0.1 µg, ALA 0.11 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Vitamins and calcium vary by brand fortification.",
             "Soy milk — soybean share: dry soybeans are ~36% protein and soy milk is 2.9% protein, so the minimum is ~8% dry beans by weight; extraction leaves some protein in the okara, so ~10% beans per kg of milk is used. The rest is water.",
             "Soy milk — processing water: ~4 L/kg for plant cleaning, grinding and bottling. A rough guess, not a published figure."
+        ]
+    },
+    {
+        "id": 501,
+        "url": "https://www.fisheries.noaa.gov/species/pacific-halibut",
+        "title": "NOAA Fisheries — Pacific Halibut species page",
+        "notes": [
+            "Pacific halibut: weight up to 500 lb, length up to 8 ft, lifespan up to 55 years; threat is bycatch."
+        ]
+    },
+    {
+        "id": 502,
+        "url": "https://www.fisheries.noaa.gov/species/atlantic-halibut",
+        "title": "NOAA Fisheries — Atlantic Halibut species page",
+        "notes": [
+            "Atlantic halibut: largest recorded 615 lb eviscerated; females average 100–150 lb; lives up to 50 years."
+        ]
+    },
+    {
+        "id": 503,
+        "url": "https://www.fisheries.noaa.gov/species/haddock",
+        "title": "NOAA Fisheries — Haddock species page",
+        "notes": [
+            "Haddock: typically weigh 2–7 pounds (3–7 years old), 1–3 feet long at maturity; lifespan 10 or more years."
+        ]
+    },
+    {
+        "id": 504,
+        "url": "https://www.fisheries.noaa.gov/species/atlantic-herring",
+        "title": "NOAA Fisheries — Atlantic Herring species page",
+        "notes": [
+            "Atlantic herring: grow quickly, up to 14 inches; live up to 15 years."
+        ]
+    },
+    {
+        "id": 505,
+        "url": "https://www.fisheries.noaa.gov/species/atlantic-mackerel",
+        "title": "NOAA Fisheries — Atlantic Mackerel species page",
+        "notes": [
+            "Atlantic mackerel: grow fast, up to 16½ inches and 2.2 pounds; live up to 20 years."
+        ]
+    },
+    {
+        "id": 506,
+        "url": "https://www.fisheries.noaa.gov/species/northern-anchovy",
+        "title": "NOAA Fisheries — Northern Anchovy species page",
+        "notes": [
+            "Northern anchovy: grow quickly, up to about 7 inches; rarely live longer than 4 years."
+        ]
+    },
+    {
+        "id": 507,
+        "url": "https://www.fisheries.noaa.gov/species/blue-crab",
+        "title": "NOAA Fisheries — Blue Crab species page",
+        "notes": [
+            "Blue crab: weight approx. ⅓ pound at maturity; up to 9 inches across the carapace; lifespan 3 to 4 years; largest Chesapeake blue crab 1.1 lb."
+        ]
+    },
+    {
+        "id": 508,
+        "url": "https://www.fisheries.noaa.gov/species/american-lobster",
+        "title": "NOAA Fisheries — American Lobster species page",
+        "notes": [
+            "American lobster: may live to ~100 years; can weigh up to 44 pounds; trap fishery."
+        ]
+    },
+    {
+        "id": 510,
+        "url": "https://en.wikipedia.org/wiki/Swordfish",
+        "title": "Wikipedia — Swordfish",
+        "notes": [
+            "Swordfish commonly reach 3 m in length; maximum reported 4.55 m and 650 kg. No typical landed weight is given."
+        ]
+    },
+    {
+        "id": 511,
+        "url": "https://en.wikipedia.org/wiki/Mahi-mahi",
+        "title": "Wikipedia — Mahi-mahi",
+        "notes": [
+            "Mahi-mahi catches typically are 7 to 13 kg and about a meter long; they rarely exceed 15 kg. Spawn by age 4–5 months."
+        ]
+    },
+    {
+        "id": 512,
+        "url": "https://en.wikipedia.org/wiki/Todarodes_pacificus",
+        "title": "Wikipedia — Japanese flying squid (Todarodes pacificus)",
+        "notes": [
+            "Japanese flying squid weigh up to 0.5 kg, mantle up to 50 cm in females; live about a year."
         ]
     }
 ]

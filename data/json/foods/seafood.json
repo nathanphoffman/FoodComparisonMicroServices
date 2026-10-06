@@ -2813,5 +2813,1604 @@
                 }
             }
         ]
+    },
+    {
+        "id": 131,
+        "slug": "swordfish",
+        "name": "Swordfish (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild swordfish, nutrition from USDA. Tagged 'wild' for the Over-Hunting slider.\n\nSwordfish are caught mainly on pelagic longlines. No swordfish-specific emissions figure was found, so the large-pelagic longline value used for tuna (3.9 kg CO2e/kg) is used, cross-checked against Parker et al. 2018's pelagic-fish average. Longline bycatch (sharks, turtles, seabirds) is real but isn't modelled here, same as tuna.\n\nA landed fish is assumed ~50 kg (an estimate; the maximum is 650 kg). Edible yield (58%) is borrowed from the tunas in FAO TP 309; no swordfish figure exists there. Neurons (~257 million) are estimated from body size. USDA swordfish has noticeable mercury.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.44,
+                    "fat": 0.0665,
+                    "sat_fat": 0.01614,
+                    "protein": 0.1966,
+                    "fiber": 0,
+                    "sodium": 0.81,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.66,
+                    "trans_fat": 0.00047,
+                    "vitamin_a": 0.36,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.139,
+                    "vitamin_e": 0.0202,
+                    "vitamin_k": 0.001,
+                    "folate": 0.02,
+                    "vitamin_b12": 0.017,
+                    "vitamin_b6": 0.00543,
+                    "calcium": 0.05,
+                    "iron": 0.0038,
+                    "magnesium": 0.29,
+                    "potassium": 4.18,
+                    "zinc": 0.0066,
+                    "phosphorus": 2.55,
+                    "selenium": 0.574,
+                    "ala": 0.00027,
+                    "epa_dha": 7.56
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Swordfish (Wild) — nutrition: USDA SR Legacy 'Fish, swordfish, raw' (FDC 173703) per 100 g: 144 kcal, protein 19.66 g, fat 6.65 g, sat fat 1.614 g, carbs 0 g, sodium 81 mg, cholesterol 66 mg, vitamin a 36 µg RAE, vitamin c 0 mg, vitamin d 13.9 µg, vitamin e 2.02 mg, vitamin k 0.1 µg, folate 2 µg DFE, vitamin b12 1.7 µg, vitamin b6 0.543 mg, calcium 5 mg, iron 0.38 mg, magnesium 29 mg, potassium 418 mg, zinc 0.66 mg, phosphorus 255 mg, selenium 57.4 µg, ALA 0.027 g (18:3 n-3), EPA + DHA 756 mg (EPA 108 + DHA 648); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 257400000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Swordfish (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 50,000 g body → 354.73 × (50,000/177.15)^0.5 = 5,960 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 5,960^0.706 = 772.2 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 257.4 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 50,
+                "confidence": 1,
+                "source": {
+                    "id": 510,
+                    "url": "https://en.wikipedia.org/wiki/Swordfish",
+                    "title": "Wikipedia — Swordfish",
+                    "note": "Swordfish (Wild) — weight_kg: ESTIMATE, 50 kg as a typical landed fish. Wikipedia gives only the maximum (650 kg) and common length (3 m); no typical landed weight is published in a source checked."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.58,
+                "confidence": 2,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Swordfish (Wild) — yield_fraction: ESTIMATE. FAO TP 309 has no swordfish row; the tunas' edible flesh (58%) is used as the closest large pelagic."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": [],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Swordfish (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Swordfish (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.9,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Swordfish (Wild) — co2_kg_per_kg_output: no species-specific figure; the same large-pelagic longline value used for tuna (P&N 2018 wild fish 3.0–5.4 kg CO2e/kg, ~4.2 for large pelagic longline, less N2O)."
+                }
+            },
+            {
+                "value": 3.28,
+                "confidence": 2,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Swordfish (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 pelagic fish average 1.9 kg CO2e per kg landed ÷ edible yield 0.58 (tuna stand-in) = 3.28 kg CO2e per kg edible. Fishing stage only."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 61.3,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Swordfish (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 105.7 kt live weight × yield_fraction 0.58 = 61.3 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 132,
+        "slug": "halibut",
+        "name": "Halibut (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild Atlantic and Pacific halibut, nutrition from USDA. Tagged 'wild' for the Over-Hunting slider. Most halibut is Pacific, caught on bottom longlines.\n\nEmissions use Parker et al. 2018's demersal-fish average (2.4 kg CO2e per kg landed) ÷ 34% fillet yield ≈ 7 kg per kg fillet. That's a trawl-weighted average, so longline halibut are probably lower. The 34% yield is Greenland halibut's, the only halibut in FAO TP 309. Discards use the same 9.6% demersal rate as cod, an upper bound for longlines.\n\nLanded fish are assumed ~15 kg (an estimate; Pacific halibut reach 500 lb). Halibut live 50+ years, so each death counts against a long life. Neurons (~168 million) are estimated from body size.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.91,
+                    "fat": 0.0133,
+                    "sat_fat": 0.00292,
+                    "protein": 0.1856,
+                    "fiber": 0,
+                    "sodium": 0.68,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.49,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.2,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.047,
+                    "vitamin_e": 0.0061,
+                    "vitamin_k": 0.0,
+                    "folate": 0.12,
+                    "vitamin_b12": 0.011,
+                    "vitamin_b6": 0.00548,
+                    "calcium": 0.07,
+                    "iron": 0.0016,
+                    "magnesium": 0.23,
+                    "potassium": 4.35,
+                    "zinc": 0.0036,
+                    "phosphorus": 2.36,
+                    "selenium": 0.456,
+                    "ala": 0.00011,
+                    "epa_dha": 1.94
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Halibut (Wild) — nutrition: USDA SR Legacy 'Fish, halibut, Atlantic and Pacific, raw' (FDC 174200) per 100 g: 91 kcal, protein 18.56 g, fat 1.33 g, sat fat 0.292 g, carbs 0 g, sodium 68 mg, cholesterol 49 mg, vitamin a 20 µg RAE, vitamin c 0 mg, vitamin d 4.7 µg, vitamin e 0.61 mg, vitamin k 0 µg, folate 12 µg DFE, vitamin b12 1.1 µg, vitamin b6 0.548 mg, calcium 7 mg, iron 0.16 mg, magnesium 23 mg, potassium 435 mg, zinc 0.36 mg, phosphorus 236 mg, selenium 45.6 µg, ALA 0.011 g (18:3 n-3), EPA + DHA 194 mg (EPA 66 + DHA 128); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 168300000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Halibut (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 15,000 g body → 354.73 × (15,000/177.15)^0.5 = 3,264 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 3,264^0.706 = 504.9 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 168.3 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 15,
+                "confidence": 1,
+                "source": {
+                    "id": 501,
+                    "url": "https://www.fisheries.noaa.gov/species/pacific-halibut",
+                    "title": "NOAA Fisheries — Pacific Halibut species page",
+                    "note": "Halibut (Wild) — weight_kg: ESTIMATE, 15 kg as a typical landed fish. NOAA gives only the maximum for Pacific halibut (up to 500 lb, 8 ft); Atlantic halibut females average 100–150 lb at full size, but commercial catch skews smaller and younger."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.34,
+                "confidence": 2,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Halibut (Wild) — yield_fraction: FAO TP 309 — Greenland halibut skinless fillets 34% of whole fish (total edible flesh 49%), used for Atlantic and Pacific halibut, which aren't listed."
+                }
+            }
+        ],
+        "bycatch_food_id": 36,
+        "bycatch_food_slug": "sardines",
+        "bycatch_amount": [
+            {
+                "value": 0.096,
+                "confidence": 2,
+                "source": {
+                    "id": 374,
+                    "url": "https://www.fao.org/4/y5936e/y5936e0a.htm",
+                    "title": "Kelleher (2005) — Discards in the world's marine fisheries: an update (FAO Fisheries Technical Paper 470)",
+                    "note": "Halibut (Wild) — bycatch_amount: Kelleher 2005 — trawlers targeting demersal finfish discard 9.6% of catch. Sardines are the proxy for discarded small finfish, as for cod and wild shrimp. Per kg landed."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Halibut (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Halibut (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 7.06,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Halibut (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 demersal fish average 2.4 kg CO2e per kg landed ÷ edible yield 0.34 (Greenland halibut fillet) = 7.06 kg CO2e per kg edible. Fishing stage only."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 9.4,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Halibut (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 27.6 kt live weight × yield_fraction 0.34 = 9.4 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 133,
+        "slug": "mahi-mahi",
+        "name": "Mahi-Mahi (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild mahi-mahi (common dolphinfish), nutrition from USDA. Tagged 'wild' for the Over-Hunting slider. Caught on longlines, with troll and purse seine gear too.\n\nNo species-specific emissions figure exists, so the tuna longline value (3.9 kg CO2e/kg) and Parker et al. 2018's pelagic average (1.9 ÷ 46% yield = 4.1) are both used. Bycatch isn't modelled. Edible yield (46%) borrows Japanese amberjack's estimate from FAO TP 309.\n\nA catch is typically 7–13 kg (Wikipedia), so 10 kg is used. Mahi-mahi mature in months and live only ~4 years. Neurons (~146 million) are estimated from body size. USDA doesn't report vitamins D, E and K for mahi-mahi; those are guesses copied from haddock.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.85,
+                    "fat": 0.007,
+                    "sat_fat": 0.00188,
+                    "protein": 0.185,
+                    "fiber": 0,
+                    "sodium": 0.88,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.73,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.54,
+                    "vitamin_c": 0.0,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.006,
+                    "vitamin_b6": 0.004,
+                    "calcium": 0.15,
+                    "iron": 0.0113,
+                    "magnesium": 0.3,
+                    "potassium": 4.16,
+                    "zinc": 0.0046,
+                    "phosphorus": 1.43,
+                    "selenium": 0.365,
+                    "ala": 5e-05,
+                    "epa_dha": 1.08
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Mahi-Mahi (Wild) — nutrition: USDA SR Legacy 'Fish, mahimahi, raw' (FDC 171959) per 100 g: 85 kcal, protein 18.5 g, fat 0.7 g, sat fat 0.188 g, carbs 0 g, sodium 88 mg, cholesterol 73 mg, vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 0.6 µg, vitamin b6 0.4 mg, calcium 15 mg, iron 1.13 mg, magnesium 30 mg, potassium 416 mg, zinc 0.46 mg, phosphorus 143 mg, selenium 36.5 µg, ALA 0.005 g (18:3 n-3), EPA + DHA 108 mg (EPA 20 + DHA 88); divided by 100 for per-gram values. Not reported by USDA, so left out of this record: vitamin d, vitamin e, vitamin k."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.005,
+                    "vitamin_e": 0.0045,
+                    "vitamin_k": 0.001
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Mahi-Mahi (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw mahi-mahi record does not report them, so they are copied from USDA's raw haddock (FDC 171964), another lean white-fleshed fish: vitamin d 0.5 µg, vitamin e 0.45 mg, vitamin k 0.1 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 145800000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Mahi-Mahi (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 10,000 g body → 354.73 × (10,000/177.15)^0.5 = 2,665 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 2,665^0.706 = 437.5 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 145.8 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 10,
+                "confidence": 3,
+                "source": {
+                    "id": 511,
+                    "url": "https://en.wikipedia.org/wiki/Mahi-mahi",
+                    "title": "Wikipedia — Mahi-mahi",
+                    "note": "Mahi-Mahi (Wild) — weight_kg: Wikipedia — catches typically 7 to 13 kg, rarely above 15 kg; 10 kg used."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.46,
+                "confidence": 2,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Mahi-Mahi (Wild) — yield_fraction: ESTIMATE. FAO TP 309 has no dolphinfish row; Japanese amberjack's estimated skinless fillet yield (46%), a similar mid-sized pelagic, is used."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": [],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Mahi-Mahi (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Mahi-Mahi (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.9,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Mahi-Mahi (Wild) — co2_kg_per_kg_output: no species-specific figure; the same large-pelagic longline value used for tuna (P&N 2018 wild fish 3.0–5.4 kg CO2e/kg, ~4.2 for large pelagic longline, less N2O)."
+                }
+            },
+            {
+                "value": 4.13,
+                "confidence": 2,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Mahi-Mahi (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 pelagic fish average 1.9 kg CO2e per kg landed ÷ edible yield 0.46 (amberjack stand-in) = 4.13 kg CO2e per kg edible. Fishing stage only."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 55.2,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Mahi-Mahi (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 120.1 kt live weight × yield_fraction 0.46 = 55.2 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 134,
+        "slug": "haddock",
+        "name": "Haddock (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild haddock, nutrition from USDA. Tagged 'wild' for the Over-Hunting slider. Caught mainly by bottom trawl, like cod.\n\nEmissions use Parker et al. 2018's demersal-fish average (2.4 kg CO2e per kg landed) ÷ 35% fillet yield (FAO TP 309) ≈ 6.9 kg per kg fillet. Bottom trawls discard ~9.6% of catch (Kelleher 2005), counted with sardines as the stand-in species.\n\nLanded haddock are 2–7 lb (NOAA), so 2 kg is used. Neurons (~83 million) are estimated from body size; no haddock count exists.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.74,
+                    "fat": 0.0045,
+                    "sat_fat": 0.00091,
+                    "protein": 0.1632,
+                    "fiber": 0,
+                    "sodium": 2.13,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.54,
+                    "trans_fat": 4e-05,
+                    "vitamin_a": 0.17,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.005,
+                    "vitamin_e": 0.0045,
+                    "vitamin_k": 0.001,
+                    "folate": 0.12,
+                    "vitamin_b12": 0.0183,
+                    "vitamin_b6": 0.00281,
+                    "calcium": 0.11,
+                    "iron": 0.0017,
+                    "magnesium": 0.21,
+                    "potassium": 2.86,
+                    "zinc": 0.0032,
+                    "phosphorus": 2.27,
+                    "selenium": 0.259,
+                    "ala": 2e-05,
+                    "epa_dha": 1.31
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Haddock (Wild) — nutrition: USDA SR Legacy 'Fish, haddock, raw' (FDC 171964) per 100 g: 74 kcal, protein 16.32 g, fat 0.45 g, sat fat 0.091 g, carbs 0 g, sodium 213 mg, cholesterol 54 mg, vitamin a 17 µg RAE, vitamin c 0 mg, vitamin d 0.5 µg, vitamin e 0.45 mg, vitamin k 0.1 µg, folate 12 µg DFE, vitamin b12 1.83 µg, vitamin b6 0.281 mg, calcium 11 mg, iron 0.17 mg, magnesium 21 mg, potassium 286 mg, zinc 0.32 mg, phosphorus 227 mg, selenium 25.9 µg, ALA 0.002 g (18:3 n-3), EPA + DHA 131 mg (EPA 42 + DHA 89); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 82600000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Haddock (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 2,000 g body → 354.73 × (2,000/177.15)^0.5 = 1,192 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 1,192^0.706 = 247.9 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 82.6 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "source": {
+                    "id": 503,
+                    "url": "https://www.fisheries.noaa.gov/species/haddock",
+                    "title": "NOAA Fisheries — Haddock species page",
+                    "note": "Haddock (Wild) — weight_kg: NOAA — haddock typically weigh between 2 and 7 pounds (0.9–3.2 kg); 2 kg used as a typical landed fish."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.35,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Haddock (Wild) — yield_fraction: FAO TP 309 — haddock skinless fillets 35% of whole fish (total edible flesh 48%)."
+                }
+            }
+        ],
+        "bycatch_food_id": 36,
+        "bycatch_food_slug": "sardines",
+        "bycatch_amount": [
+            {
+                "value": 0.096,
+                "confidence": 2,
+                "source": {
+                    "id": 374,
+                    "url": "https://www.fao.org/4/y5936e/y5936e0a.htm",
+                    "title": "Kelleher (2005) — Discards in the world's marine fisheries: an update (FAO Fisheries Technical Paper 470)",
+                    "note": "Haddock (Wild) — bycatch_amount: Kelleher 2005 — trawlers targeting demersal finfish discard 9.6% of catch. Sardines are the proxy for discarded small finfish, as for cod and wild shrimp. Per kg landed."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Haddock (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Haddock (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 6.86,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Haddock (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 demersal fish average 2.4 kg CO2e per kg landed ÷ edible yield 0.35 (FAO TP 309 fillet) = 6.86 kg CO2e per kg edible. Fishing stage only."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 112,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Haddock (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 320.2 kt live weight × yield_fraction 0.35 = 112.1 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 135,
+        "slug": "herring",
+        "name": "Herring (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild Atlantic and Pacific herring, nutrition from USDA (Atlantic). Tagged 'wild' for the Over-Hunting slider. Caught by purse seine and midwater trawl; one of the world's biggest catches.\n\nEmissions copy the small-pelagic value used for sardines (1.5 kg CO2e/kg), as does the bycatch assumption. Edible yield is the 46% skinless fillet from FAO TP 309.\n\nA herring is ~0.25 kg (an estimate; NOAA gives up to 14 inches, 15 years). Neurons (~40 million) are estimated from body size.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.58,
+                    "fat": 0.0904,
+                    "sat_fat": 0.0204,
+                    "protein": 0.1796,
+                    "fiber": 0,
+                    "sodium": 0.9,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.6,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.28,
+                    "vitamin_c": 0.007,
+                    "vitamin_d": 0.042,
+                    "vitamin_e": 0.0107,
+                    "vitamin_k": 0.001,
+                    "folate": 0.1,
+                    "vitamin_b12": 0.1367,
+                    "vitamin_b6": 0.00302,
+                    "calcium": 0.57,
+                    "iron": 0.011,
+                    "magnesium": 0.32,
+                    "potassium": 3.27,
+                    "zinc": 0.0099,
+                    "phosphorus": 2.36,
+                    "selenium": 0.365,
+                    "ala": 0.00103,
+                    "epa_dha": 15.71
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Herring (Wild) — nutrition: USDA SR Legacy 'Fish, herring, Atlantic, raw' (FDC 175116) per 100 g: 158 kcal, protein 17.96 g, fat 9.04 g, sat fat 2.04 g, carbs 0 g, sodium 90 mg, cholesterol 60 mg, vitamin a 28 µg RAE, vitamin c 0.7 mg, vitamin d 4.2 µg, vitamin e 1.07 mg, vitamin k 0.1 µg, folate 10 µg DFE, vitamin b12 13.67 µg, vitamin b6 0.302 mg, calcium 57 mg, iron 1.1 mg, magnesium 32 mg, potassium 327 mg, zinc 0.99 mg, phosphorus 236 mg, selenium 36.5 µg, ALA 0.103 g (18:3 n-3), EPA + DHA 1571 mg (EPA 709 + DHA 862); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 39700000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Herring (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 250 g body → 354.73 × (250/177.15)^0.5 = 421 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 421^0.706 = 119.0 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 39.7 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.25,
+                "confidence": 1,
+                "source": {
+                    "id": 504,
+                    "url": "https://www.fisheries.noaa.gov/species/atlantic-herring",
+                    "title": "NOAA Fisheries — Atlantic Herring species page",
+                    "note": "Herring (Wild) — weight_kg: ESTIMATE, 0.25 kg for a typical adult. NOAA gives only maximum size (up to 14 inches) and lifespan (up to 15 years)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.46,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Herring (Wild) — yield_fraction: FAO TP 309 — Atlantic herring skinless fillets 46% of whole fish (total edible flesh 61%)."
+                }
+            }
+        ],
+        "bycatch_food_id": 23,
+        "bycatch_food_slug": "tuna",
+        "bycatch_amount": [
+            {
+                "value": 0.1,
+                "confidence": 2,
+                "source": {
+                    "id": 44,
+                    "url": "https://www.worldwildlife.org/threats/bycatch",
+                    "title": "WWF — Bycatch Overview",
+                    "note": "Herring (Wild) — bycatch_amount: same assumption as sardines (0.1 kg bycatch per kg landed, tuna as the stand-in species)."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Herring (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Herring (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Herring (Wild) — co2_kg_per_kg_output: P&N 2018 reports wild-caught small pelagics (sardines, anchovies, herring) at ~1.0–2.5 kg CO2e/kg; the same ~1.5 kg CO2e/kg used for sardines is used here (purse-seine / midwater trawl, low fuel per kg)."
+                }
+            },
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Herring (Wild) — co2_kg_per_kg_output: OWID GHG chart (P&N 2018); small pelagics have notably lower fuel intensity than large pelagics or demersal fish, placing herring in the 1.0–2.5 kg CO2e/kg range; the same value as sardines."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 968,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Herring (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 2,103.5 kt live weight × yield_fraction 0.46 = 967.6 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 136,
+        "slug": "anchovy",
+        "name": "Anchovy (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild anchovies, nutrition from USDA (European anchovy, raw). Tagged 'wild' for the Over-Hunting slider.\n\nAnchovies are the biggest catch in the world by weight (~7 Mt a year), but most of it is Peruvian anchoveta turned into fishmeal and fish oil, not eaten directly. Availability counts the whole catch, so it overstates what's eaten as food.\n\nEmissions copy the small-pelagic value used for sardines (1.5 kg CO2e/kg), as does bycatch. Edible yield is FAO TP 309's 62% total edible flesh (anchovies are eaten whole or canned with bones).\n\nAn anchovy is ~20 g (NOAA: about 7 inches, rarely over 4 years). Neurons (~16 million) are estimated from body size.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.31,
+                    "fat": 0.0484,
+                    "sat_fat": 0.01282,
+                    "protein": 0.2035,
+                    "fiber": 0,
+                    "sodium": 1.04,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.6,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.15,
+                    "vitamin_c": 0.0,
+                    "vitamin_e": 0.0057,
+                    "vitamin_k": 0.001,
+                    "folate": 0.09,
+                    "vitamin_b12": 0.0062,
+                    "vitamin_b6": 0.00143,
+                    "calcium": 1.47,
+                    "iron": 0.0325,
+                    "magnesium": 0.41,
+                    "potassium": 3.83,
+                    "zinc": 0.0172,
+                    "phosphorus": 1.74,
+                    "selenium": 0.365,
+                    "ala": 0.0,
+                    "epa_dha": 14.49
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Anchovy (Wild) — nutrition: USDA SR Legacy 'Fish, anchovy, european, raw' (FDC 174182) per 100 g: 131 kcal, protein 20.35 g, fat 4.84 g, sat fat 1.282 g, carbs 0 g, sodium 104 mg, cholesterol 60 mg, vitamin a 15 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.57 mg, vitamin k 0.1 µg, folate 9 µg DFE, vitamin b12 0.62 µg, vitamin b6 0.143 mg, calcium 147 mg, iron 3.25 mg, magnesium 41 mg, potassium 383 mg, zinc 1.72 mg, phosphorus 174 mg, selenium 36.5 µg, ALA 0 g (18:3 n-3), EPA + DHA 1449 mg (EPA 538 + DHA 911); divided by 100 for per-gram values. Not reported by USDA, so left out of this record: vitamin d."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.042
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Anchovy (Wild) — GUESS for vitamin d: USDA's raw European anchovy record does not report it, so it is copied from USDA's raw Atlantic herring (FDC 175116), another small oily fish: vitamin d 4.2 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 16300000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Anchovy (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 20 g body → 354.73 × (20/177.15)^0.5 = 119 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 119^0.706 = 48.8 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 16.3 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.02,
+                "confidence": 1,
+                "source": {
+                    "id": 506,
+                    "url": "https://www.fisheries.noaa.gov/species/northern-anchovy",
+                    "title": "NOAA Fisheries — Northern Anchovy species page",
+                    "note": "Anchovy (Wild) — weight_kg: ESTIMATE, 20 g for a typical adult. NOAA gives only length (up to about 7 inches) and lifespan (rarely over 4 years)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.62,
+                "confidence": 3,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Anchovy (Wild) — yield_fraction: FAO TP 309 — anchovies total edible flesh 62% of whole fish (skinless fillet 51%, estimated); the larger figure is used because small anchovies are eaten whole or canned with bones."
+                }
+            }
+        ],
+        "bycatch_food_id": 23,
+        "bycatch_food_slug": "tuna",
+        "bycatch_amount": [
+            {
+                "value": 0.1,
+                "confidence": 2,
+                "source": {
+                    "id": 44,
+                    "url": "https://www.worldwildlife.org/threats/bycatch",
+                    "title": "WWF — Bycatch Overview",
+                    "note": "Anchovy (Wild) — bycatch_amount: same assumption as sardines (0.1 kg bycatch per kg landed, tuna as the stand-in species)."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Anchovy (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Anchovy (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Anchovy (Wild) — co2_kg_per_kg_output: P&N 2018 reports wild-caught small pelagics (sardines, anchovies, herring) at ~1.0–2.5 kg CO2e/kg; the same ~1.5 kg CO2e/kg used for sardines is used here (purse-seine / midwater trawl, low fuel per kg)."
+                }
+            },
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Anchovy (Wild) — co2_kg_per_kg_output: OWID GHG chart (P&N 2018); small pelagics have notably lower fuel intensity than large pelagics or demersal fish, placing anchovy in the 1.0–2.5 kg CO2e/kg range; the same value as sardines."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 4482,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Anchovy (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 7,229.6 kt live weight × yield_fraction 0.62 = 4,482.4 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 137,
+        "slug": "mackerel",
+        "name": "Mackerel (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "fish",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild mackerel (Atlantic, chub and blue mackerel), nutrition from USDA (Atlantic mackerel). Tagged 'wild' for the Over-Hunting slider. Caught by purse seine and midwater trawl.\n\nEmissions copy the small-pelagic value used for sardines (1.5 kg CO2e/kg), as does bycatch. Edible yield is the 54% skinless fillet from FAO TP 309.\n\nA mackerel is ~0.5 kg (NOAA: up to 2.2 lb, up to 20 years). Neurons (~51 million) are estimated from body size. Mackerel is oily: high in omega-3 and vitamin B12, but also saturated fat.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.05,
+                    "fat": 0.1389,
+                    "sat_fat": 0.03257,
+                    "protein": 0.186,
+                    "fiber": 0,
+                    "sodium": 0.9,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.7,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.5,
+                    "vitamin_c": 0.004,
+                    "vitamin_d": 0.161,
+                    "vitamin_e": 0.0152,
+                    "vitamin_k": 0.05,
+                    "folate": 0.01,
+                    "vitamin_b12": 0.0871,
+                    "vitamin_b6": 0.00399,
+                    "calcium": 0.12,
+                    "iron": 0.0163,
+                    "magnesium": 0.76,
+                    "potassium": 3.14,
+                    "zinc": 0.0063,
+                    "phosphorus": 2.17,
+                    "selenium": 0.441,
+                    "ala": 0.00159,
+                    "epa_dha": 22.99
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Mackerel (Wild) — nutrition: USDA SR Legacy 'Fish, mackerel, Atlantic, raw' (FDC 175119) per 100 g: 205 kcal, protein 18.6 g, fat 13.89 g, sat fat 3.257 g, carbs 0 g, sodium 90 mg, cholesterol 70 mg, vitamin a 50 µg RAE, vitamin c 0.4 mg, vitamin d 16.1 µg, vitamin e 1.52 mg, vitamin k 5 µg, folate 1 µg DFE, vitamin b12 8.71 µg, vitamin b6 0.399 mg, calcium 12 mg, iron 1.63 mg, magnesium 76 mg, potassium 314 mg, zinc 0.63 mg, phosphorus 217 mg, selenium 44.1 µg, ALA 0.159 g (18:3 n-3), EPA + DHA 2299 mg (EPA 898 + DHA 1401); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 50700000.0,
+                "confidence": 3,
+                "source": {
+                    "id": 384,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10786859/",
+                    "title": "Different ways of evolving tool-using brains in teleosts and amniotes (Communications Biology, 2024; PMC10786859)",
+                    "note": "Mackerel (Wild) — neuron_count (ESTIMATE, no direct count exists for this species). Method: (1) brain mass from body mass using the ray-finned fish scaling brain ∝ body^0.5 (source 384), anchored on brown trout (177.15 g body, 354.73 mg brain): 500 g body → 354.73 × (500/177.15)^0.5 = 596 mg brain. (2) total brain cells from brain mass using a fit to isotropic-fractionator counts in medaka, zebrafish, Astyanax and trout (source 384): 1.669 × 596^0.706 = 152.0 M cells. (3) neurons = 1/3 of cells, from tilapia's measured 2 non-neuronal cells per neuron (source 385): 50.7 M neurons."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 505,
+                    "url": "https://www.fisheries.noaa.gov/species/atlantic-mackerel",
+                    "title": "NOAA Fisheries — Atlantic Mackerel species page",
+                    "note": "Mackerel (Wild) — weight_kg: NOAA — Atlantic mackerel grow up to 16½ inches and 2.2 pounds (1 kg); 0.5 kg used as a typical landed fish."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.54,
+                "confidence": 4,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Mackerel (Wild) — yield_fraction: FAO TP 309 — Atlantic mackerel skinless fillets 54% of whole fish (total edible flesh 61%)."
+                }
+            }
+        ],
+        "bycatch_food_id": 23,
+        "bycatch_food_slug": "tuna",
+        "bycatch_amount": [
+            {
+                "value": 0.1,
+                "confidence": 2,
+                "source": {
+                    "id": 44,
+                    "url": "https://www.worldwildlife.org/threats/bycatch",
+                    "title": "WWF — Bycatch Overview",
+                    "note": "Mackerel (Wild) — bycatch_amount: same assumption as sardines (0.1 kg bycatch per kg landed, tuna as the stand-in species)."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Mackerel (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Mackerel (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Mackerel (Wild) — co2_kg_per_kg_output: P&N 2018 reports wild-caught small pelagics (sardines, anchovies, herring) at ~1.0–2.5 kg CO2e/kg; the same ~1.5 kg CO2e/kg used for sardines is used here (purse-seine / midwater trawl, low fuel per kg)."
+                }
+            },
+            {
+                "value": 1.5,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Mackerel (Wild) — co2_kg_per_kg_output: OWID GHG chart (P&N 2018); small pelagics have notably lower fuel intensity than large pelagics or demersal fish, placing mackerel in the 1.0–2.5 kg CO2e/kg range; the same value as sardines."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 1637,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Mackerel (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 3,031.1 kt live weight × yield_fraction 0.54 = 1,636.8 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 138,
+        "slug": "squid",
+        "name": "Squid (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild squid (calamari), nutrition from USDA mixed species. Tagged 'wild' for the Over-Hunting slider. Caught by jigging and trawl.\n\nSquid are neuron-rich: a bigfin reef squid has ~500 million neurons (Chung et al. 2020), the same as an octopus, and that figure is used for all squid (confidence 2; commercial species differ in size). Squid live about a year.\n\nEdible yield is FAO TP 309's 67% for squids. Emissions are Parker et al. 2018's pelagic average (1.9 kg CO2e per kg landed) ÷ 67% ≈ 2.8; no squid-specific figure was found. Bycatch isn't modelled. Availability uses every FAO species with 'squid' in the name, which includes bobtail squids and cuttlefish.\n\nA squid is ~0.3 kg (Japanese flying squid reach 0.5 kg; this is an estimate).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.92,
+                    "fat": 0.0138,
+                    "sat_fat": 0.00358,
+                    "protein": 0.1558,
+                    "fiber": 0,
+                    "sodium": 0.44,
+                    "carbs": 0.0308,
+                    "sugar": 0.0,
+                    "cholesterol": 2.33,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.1,
+                    "vitamin_c": 0.047,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.012,
+                    "vitamin_k": 0.0,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.013,
+                    "vitamin_b6": 0.00056,
+                    "calcium": 0.32,
+                    "iron": 0.0068,
+                    "magnesium": 0.33,
+                    "potassium": 2.46,
+                    "zinc": 0.0153,
+                    "phosphorus": 2.21,
+                    "selenium": 0.448,
+                    "ala": 4e-05,
+                    "epa_dha": 4.88
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Squid (Wild) — nutrition: USDA SR Legacy 'Mollusks, squid, mixed species, raw' (FDC 174223) per 100 g: 92 kcal, protein 15.58 g, fat 1.38 g, sat fat 0.358 g, carbs 3.08 g, sodium 44 mg, cholesterol 233 mg, vitamin a 10 µg RAE, vitamin c 4.7 mg, vitamin d 0 µg, vitamin e 1.2 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 1.3 µg, vitamin b6 0.056 mg, calcium 32 mg, iron 0.68 mg, magnesium 33 mg, potassium 246 mg, zinc 1.53 mg, phosphorus 221 mg, selenium 44.8 µg, ALA 0.004 g (18:3 n-3), EPA + DHA 488 mg (EPA 146 + DHA 342); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 500000000,
+                "confidence": 2,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Squid (Wild) — neuron_count: bigfin reef squid ~500 million neurons (Chung, Kurniawan & Marshall 2020, iScience 23:100816, via Wikipedia's neuron list). Applied to all squid; commercial species such as flying squid are of similar scale but no direct counts exist. Same as the octopus entry."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.3,
+                "confidence": 1,
+                "source": {
+                    "id": 512,
+                    "url": "https://en.wikipedia.org/wiki/Todarodes_pacificus",
+                    "title": "Wikipedia — Japanese flying squid (Todarodes pacificus)",
+                    "note": "Squid (Wild) — weight_kg: ESTIMATE, 0.3 kg. Japanese flying squid weigh up to 0.5 kg; many commercial squids (longfin, Argentine shortfin) are in the 0.1–0.5 kg range."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.67,
+                "confidence": 3,
+                "source": {
+                    "id": 366,
+                    "url": "https://www.fao.org/4/t0219e/T0219E03.htm",
+                    "title": "FAO Fisheries Technical Paper 309 (1989) — Yield and Nutritional Value of the Commercially More Important Fish Species",
+                    "note": "Squid (Wild) — yield_fraction: FAO TP 309 — squids nei, common squids and Japanese flying squid 67% edible of whole animal."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": [],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Squid (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Squid (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.84,
+                "confidence": 2,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Squid (Wild) — co2_kg_per_kg_output (stored as total CO2e): Parker et al. 2018 pelagic fish average 1.9 kg CO2e per kg landed ÷ edible yield 0.67 (FAO TP 309 squid) = 2.84 kg CO2e per kg edible. Fishing stage only."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 2038,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Squid (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 3,041.9 kt live weight × yield_fraction 0.67 = 2,038.1 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 139,
+        "slug": "crab",
+        "name": "Crab (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild crab, nutrition from USDA (blue crab, raw meat). Tagged 'wild' for the Over-Hunting slider. Most crab is caught in pots and traps.\n\nNo crab count of neurons exists, so ~1 million is used, the upper end of the range assumed for shrimp (crustacean nervous systems are far smaller than fish or octopus). Confidence 1.\n\nEmissions copy wild shrimp's P&N crustacean figure (3.2 kg CO2e/kg); crab pot fisheries probably differ, but no crab figure was found. Bycatch isn't modelled. Edible yield (15%) is an estimate of picked meat per live crab; no source was checked. A blue crab is ~1/3 lb (NOAA).\n\nUSDA doesn't report vitamins D, E and K for crab; those are copied from raw mixed-species shrimp.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.87,
+                    "fat": 0.0108,
+                    "sat_fat": 0.00222,
+                    "protein": 0.1806,
+                    "fiber": 0,
+                    "sodium": 2.93,
+                    "carbs": 0.0004,
+                    "sugar": 0.0,
+                    "cholesterol": 0.78,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.02,
+                    "vitamin_c": 0.03,
+                    "folate": 0.44,
+                    "vitamin_b12": 0.09,
+                    "vitamin_b6": 0.0015,
+                    "calcium": 0.89,
+                    "iron": 0.0074,
+                    "magnesium": 0.34,
+                    "potassium": 3.29,
+                    "zinc": 0.0354,
+                    "phosphorus": 2.29,
+                    "selenium": 0.374,
+                    "ala": 0.0,
+                    "epa_dha": 3.2
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Crab (Wild) — nutrition: USDA SR Legacy 'Crustaceans, crab, blue, raw' (FDC 174204) per 100 g: 87 kcal, protein 18.06 g, fat 1.08 g, sat fat 0.222 g, carbs 0.04 g, sodium 293 mg, cholesterol 78 mg, vitamin a 2 µg RAE, vitamin c 3 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 44 µg DFE, vitamin b12 9 µg, vitamin b6 0.15 mg, calcium 89 mg, iron 0.74 mg, magnesium 34 mg, potassium 329 mg, zinc 3.54 mg, phosphorus 229 mg, selenium 37.4 µg, ALA 0 g (18:3 n-3), EPA + DHA 320 mg (EPA 170 + DHA 150); divided by 100 for per-gram values. Not reported by USDA, so left out of this record: vitamin d, vitamin e, vitamin k."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0132,
+                    "vitamin_k": 0.003
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 458,
+                    "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+                    "note": "Crab (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw blue crab record does not report them, so they come from USDA's raw mixed-species shrimp record (FDC 174210, may contain moisture-retaining additives): vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 1000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Crab (Wild) — neuron_count: no direct count exists. Crustacean nervous systems are estimated at ~100,000–1,000,000 neurons (coconut crab ~1 million just in olfactory interneurons, Wikipedia neuron list); 1,000,000 is used as a conservative upper bound, matching wild shrimp."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.15,
+                "confidence": 3,
+                "source": {
+                    "id": 507,
+                    "url": "https://www.fisheries.noaa.gov/species/blue-crab",
+                    "title": "NOAA Fisheries — Blue Crab species page",
+                    "note": "Crab (Wild) — weight_kg: NOAA — blue crab weigh approx. ⅓ pound at maturity (~0.15 kg); blue crab is the largest crab fishery by volume in the US."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.15,
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Crab (Wild) — yield_fraction: ESTIMATE, ~15% picked meat per whole live crab. No source was checked; USDA's blue crab record is raw picked meat, so this matches the nutrition basis."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": [],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Crab (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Crab (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.2,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Crab (Wild) — co2_kg_per_kg_output: no crab-specific figure; the P&N 2018 wild-caught crustacean value (~3.5 kg CO2e/kg less N2O, 3.2) used for wild shrimp is used here. Pots use less fuel than shrimp trawls, but meat yield is low, so this is a rough middle."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 231,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Crab (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 1,542.5 kt live weight × yield_fraction 0.15 = 231.4 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
+    },
+    {
+        "id": 140,
+        "slug": "lobster",
+        "name": "Lobster (Wild)",
+        "type": "animal",
+        "category": "seafood",
+        "human_food": 1,
+        "tags": [
+            "seafood",
+            "common",
+            "wild"
+        ],
+        "notes": "Wild lobster, nutrition from USDA (spiny lobster, raw meat). Tagged 'wild' for the Over-Hunting slider. Most of the world's catch is spiny lobster; American and European lobster are caught in traps.\n\nNo lobster count of neurons exists, so ~1 million is used, the upper end of the range assumed for shrimp. Confidence 1. Lobsters live a very long time (American lobster possibly ~100 years, NOAA) but each is eaten at 5–10 years.\n\nEmissions copy wild shrimp's P&N crustacean figure (3.2 kg CO2e/kg), which probably understates lobster: lobster pot fisheries are fuel-hungry per kg of meat. Confidence 1. Bycatch isn't modelled. Edible yield (30%) is an estimate; no source was checked. A lobster is ~0.7 kg (NOAA: American lobster up to 44 lb).\n\nUSDA doesn't report vitamins D, E and K for lobster; those are copied from raw mixed-species shrimp.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.12,
+                    "fat": 0.0151,
+                    "sat_fat": 0.00237,
+                    "protein": 0.206,
+                    "fiber": 0,
+                    "sodium": 1.77,
+                    "carbs": 0.0243,
+                    "sugar": 0.0,
+                    "cholesterol": 0.7,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.05,
+                    "vitamin_c": 0.02,
+                    "folate": 0.01,
+                    "vitamin_b12": 0.035,
+                    "vitamin_b6": 0.0015,
+                    "calcium": 0.49,
+                    "iron": 0.0122,
+                    "magnesium": 0.4,
+                    "potassium": 1.8,
+                    "zinc": 0.0567,
+                    "phosphorus": 2.38,
+                    "selenium": 0.462,
+                    "ala": 8e-05,
+                    "epa_dha": 3.73
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Lobster (Wild) — nutrition: USDA SR Legacy 'Crustaceans, spiny lobster, mixed species, raw' (FDC 174211) per 100 g: 112 kcal, protein 20.6 g, fat 1.51 g, sat fat 0.237 g, carbs 2.43 g, sodium 177 mg, cholesterol 70 mg, vitamin a 5 µg RAE, vitamin c 2 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 1 µg DFE, vitamin b12 3.5 µg, vitamin b6 0.15 mg, calcium 49 mg, iron 1.22 mg, magnesium 40 mg, potassium 180 mg, zinc 5.67 mg, phosphorus 238 mg, selenium 46.2 µg, ALA 0.008 g (18:3 n-3), EPA + DHA 373 mg (EPA 265 + DHA 108); divided by 100 for per-gram values. Not reported by USDA, so left out of this record: vitamin d, vitamin e, vitamin k."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0132,
+                    "vitamin_k": 0.003
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 458,
+                    "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
+                    "note": "Lobster (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw spiny lobster record does not report them, so they come from USDA's raw mixed-species shrimp record (FDC 174210, may contain moisture-retaining additives): vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 1000000,
+                "confidence": 1,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Lobster (Wild) — neuron_count: no direct count exists. Crustacean nervous systems are estimated at ~100,000–1,000,000 neurons (Wikipedia neuron list lists coconut crab at ~1 million olfactory interneurons); 1,000,000 is used as a conservative upper bound, matching wild shrimp."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 0.7,
+                "confidence": 1,
+                "source": {
+                    "id": 508,
+                    "url": "https://www.fisheries.noaa.gov/species/american-lobster",
+                    "title": "NOAA Fisheries — American Lobster species page",
+                    "note": "Lobster (Wild) — weight_kg: ESTIMATE, 0.7 kg for a typical commercial lobster (NOAA gives only the maximum, 44 lb, and a minimum legal size)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.3,
+                "confidence": 1,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Lobster (Wild) — yield_fraction: ESTIMATE, ~30% edible meat (tail, claws, knuckles) per whole lobster. No source was checked."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": [],
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Lobster (Wild) — ch4_kg_per_kg_output: set to 0; wild catch has no enteric or pond methane; all fishing emissions are carried as CO2e in co2_kg_per_kg_output."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0,
+                "confidence": 3,
+                "source": {
+                    "id": 367,
+                    "url": "https://www.nature.com/articles/s41558-018-0117-x",
+                    "title": "Parker et al. (2018) — Fuel use and greenhouse gas emissions of world fisheries (Nature Climate Change)",
+                    "note": "Lobster (Wild) — n2o_kg_per_kg_output: set to 0; see co2_kg_per_kg_output, which carries the full CO2e total."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.2,
+                "confidence": 1,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Lobster (Wild) — co2_kg_per_kg_output: no lobster-specific figure; the P&N 2018 wild-caught crustacean value (~3.5 kg CO2e/kg less N2O, 3.2) used for wild shrimp is used here. Lobster fisheries are probably more fuel-intensive per kg, so this is likely an underestimate."
+                }
+            }
+        ],
+        "feed": [],
+        "availability_gg": [
+            {
+                "value": 89.3,
+                "confidence": 3,
+                "source": {
+                    "id": 361,
+                    "url": "https://www.fao.org/fishery/static/Data/GlobalProduction_2025.1.0.zip",
+                    "title": "FAO FishStat — Global fisheries and aquaculture production quantity 1950–2023 (release 2025.1.0)",
+                    "note": "Lobster (Wild) — availability_gg (edible meat, to match this entry's per-kg basis): FAO FishStat 2019–2023 mean capture 297.8 kt live weight × yield_fraction 0.3 = 89.3 Gg. See the FAO source notes for which species are included."
+                }
+            }
+        ]
     }
 ]

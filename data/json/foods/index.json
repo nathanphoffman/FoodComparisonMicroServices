@@ -90,7 +90,17 @@
         "cod",
         "carp-farmed",
         "catfish-farmed",
-        "octopus"
+        "octopus",
+        "swordfish",
+        "halibut",
+        "mahi-mahi",
+        "haddock",
+        "herring",
+        "anchovy",
+        "mackerel",
+        "squid",
+        "crab",
+        "lobster"
     ],
     "eggs": [
         "egg"

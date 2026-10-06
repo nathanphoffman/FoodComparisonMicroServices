@@ -92,6 +92,16 @@ pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
         "salmon" => 6.0,
         "shrimp" => 2.0,
         "sardines" => 4.0,
+        "swordfish" => 15.0,
+        "halibut" => 50.0,       // Atlantic halibut up to 50 years, Pacific up to 55 (NOAA)
+        "mahi-mahi" => 4.0,
+        "haddock" => 10.0,       // NOAA: 10 or more years
+        "herring" => 15.0,       // NOAA: up to 15 years
+        "anchovy" => 4.0,        // NOAA: rarely longer than 4 years
+        "mackerel" => 20.0,      // NOAA: up to 20 years
+        "squid" => 1.0,          // most commercial squid live about a year
+        "crab" => 4.0,           // blue crab 3–4 years (NOAA)
+        "lobster" => 30.0,       // American lobster possibly ~100 years (NOAA); spiny lobsters ~20; 30 is a rough middle
         "honey" => 0.15, // worker honey bee, averaged over summer (~6 weeks) and winter (~6 months) bees
         _ => 10.0,
     }
