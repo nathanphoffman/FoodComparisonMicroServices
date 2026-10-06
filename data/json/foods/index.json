@@ -26,7 +26,12 @@
         "beef-liver",
         "chicken-liver",
         "pork-liver",
-        "lamb-liver"
+        "lamb-liver",
+        "bacon",
+        "beef-heart",
+        "beef-kidney",
+        "bison",
+        "rabbit"
     ],
     "grains": [
         "wheat",
@@ -172,7 +177,12 @@
         "sunflower-oil",
         "coconut-oil",
         "peanut-oil",
-        "corn-oil"
+        "corn-oil",
+        "avocado-oil",
+        "sesame-oil",
+        "lard",
+        "beef-tallow",
+        "ghee"
     ],
     "seeds": [
         "flaxseed",
@@ -186,7 +196,8 @@
         "cane-sugar",
         "honey",
         "beet-sugar",
-        "molasses"
+        "molasses",
+        "agave-syrup"
     ],
     "composites": [
         "impossible-burger",
@@ -202,7 +213,9 @@
         "flour-tortillas",
         "corn-flakes",
         "peanut-butter",
-        "hummus"
+        "hummus",
+        "brown-sugar",
+        "corn-syrup"
     ],
     "beverages": [
         "coffee",

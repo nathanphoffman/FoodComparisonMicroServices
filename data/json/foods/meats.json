@@ -3311,5 +3311,1373 @@
                 }
             }
         ]
+    },
+    {
+        "id": 195,
+        "slug": "bacon",
+        "name": "Bacon",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "processed"
+        ],
+        "notes": "Raw cured bacon (as sold, pork belly), nutrition from USDA 'Pork, cured, bacon, unprepared'. Everything is copied from the Pork entry (feed, land, gases and the pig figures), treating a kg of bacon as a kg of pork meat, the same approach the repo uses for organ meats (see Beef Liver). The cure usually loses a little weight and the belly is only part of the pig, so this is rough. CO2 adds 0.6 kg CO2e/kg for curing, smoking, slicing and chilled packaging (educated guess, confidence 1; no published figure for that stage alone was found).\n\nNutrition is for raw bacon; cooked bacon loses about two thirds of its weight and is far more calorie-dense. Availability is a confidence-1 guess (~4,000 Gg: about 15% of a pig is belly, ~1,900 Gg in the US alone, and bacon is mostly eaten in North America, the UK, Germany and Canada).",
+        "land_types": {
+            "temperate_grassland": 0.7,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 4.17,
+                    "fat": 0.3969,
+                    "sat_fat": 0.13296,
+                    "protein": 0.1262,
+                    "fiber": 0.0,
+                    "sodium": 6.62,
+                    "carbs": 0.0128,
+                    "sugar": 0.01,
+                    "cholesterol": 0.66,
+                    "trans_fat": 0.00133,
+                    "vitamin_a": 0.11,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.004,
+                    "vitamin_e": 0.0043,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.005,
+                    "vitamin_b6": 0.00266,
+                    "calcium": 0.05,
+                    "iron": 0.0041,
+                    "magnesium": 0.12,
+                    "potassium": 1.98,
+                    "zinc": 0.0118,
+                    "phosphorus": 1.44,
+                    "selenium": 0.201,
+                    "ala": 0.00234,
+                    "epa_dha": 0.09
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bacon — FDC 168277 'Pork, cured, bacon, unprepared' (SR Legacy 10123), per 100 g: 417 kcal, protein 12.62 g, fat 39.69 g, sat fat 13.296 g, carbs 1.28 g, fiber 0 g, sugars 1 g, sodium 662 mg, cholesterol 66 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168277 per 100 g: vitamin a 11 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.43 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0.5 µg, vitamin b6 0.266 mg, calcium 5 mg, iron 0.41 mg, magnesium 12 mg, potassium 198 mg, zinc 1.18 mg, phosphorus 144 mg, selenium 20.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 168277 per 100 g: ALA 0.234 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 9 mg (EPA 0.004 + DHA 0.005); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 2230000000,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": null
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 90,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": null
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.7,
+                "confidence": 4,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.066,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.22 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
+                }
+            },
+            {
+                "value": 0.074,
+                "confidence": 3,
+                "source": {
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.2. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.0024,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "CORRECTION 2026-09-26: replaced 0.025 — pork's on-farm CH4 + N2O came to ~12 kg CO2e/kg, ~5x Poore & Nemecek's 'Farm' stage for pig meat (2.48 kg CO2e/kg, OWID supply-chain grapher, source 72). New value splits P&N Farm 2.48 using GLEAM's pig shares (source 68: enteric CH4 3.5% + manure CH4 19.2% vs manure N2O 7.9% of total → CH4 74%, N2O 26%): CH4 = 2.48 × 0.74 / 28 = 0.066 kg/kg; N2O = 2.48 × 0.26 / 265 = 0.0024 kg/kg."
+                }
+            },
+            {
+                "value": 0.0022,
+                "confidence": 3,
+                "source": {
+                    "id": 68,
+                    "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                    "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                    "note": "CORRECTION 2026-09-26: replaced 0.022. FAO (2013) pig report (source 68): global pig meat 6.1 kg CO2e/kg carcass weight; enteric CH4 3.5% + manure CH4 19.2% = 1.38 kg CO2e, manure N2O 7.9% = 0.48 kg CO2e (report uses GWP CH4 25, N2O 298). Per kg carcass: CH4 1.38/25 = 0.055, N2O 0.48/298 = 0.0016; ÷ 0.75 carcass-to-meat → CH4 0.074, N2O 0.0022 kg per kg pork."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 4.436,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Bacon — co2_kg_per_kg_output: curing, smoking, slicing and chilled packaging add 0.6 kg CO2e/kg (educated guess, confidence 1). Pork value 3.836 + 0.6 = 4.436."
+                }
+            },
+            {
+                "value": 4.386,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Bacon — co2_kg_per_kg_output: curing, smoking, slicing and chilled packaging add 0.6 kg CO2e/kg (educated guess, confidence 1). Pork value 3.786 + 0.6 = 4.386."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.5,
+                        "confidence": 3,
+                        "source": {
+                            "id": 31,
+                            "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.77,
+                        "confidence": 3,
+                        "source": {
+                            "id": 31,
+                            "url": "https://www.pig333.com/pig-glossary/F/feed-conversion-ratio-fcr_147/",
+                            "title": "Pig333 — Feed Conversion Ratio in Pigs",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.46,
+                        "confidence": 3,
+                        "source": {
+                            "id": 68,
+                            "url": "https://www.fao.org/3/i3460e/i3460e.pdf",
+                            "title": "FAO (2013) — Greenhouse Gas Emissions from Pig and Chicken Supply Chains",
+                            "note": "Pork — wheat kg_feed_per_kg_output: Global swine FCR ~2.8 kg/kg live weight (consistent with source 31); dressing ~73%; feed/kg pork = 3.836 kg. Wheat fraction ~12% of global average diet (higher in EU ~35–45%, lower in US/Brazil <5%); wheat feed = 3.836 × 0.12 = 0.46 kg/kg pork. Confidence 3 — wheat inclusion varies substantially by region; global average reflects production-weighted blend of corn-dominant (Americas) and wheat-dominant (EU) systems."
+                        }
+                    },
+                    {
+                        "value": 0.46,
+                        "confidence": 3,
+                        "source": {
+                            "id": 69,
+                            "url": "https://www.sciencedirect.com/science/article/pii/S0377840111003823",
+                            "title": "Leinonen et al. (2012) — Predicting the Environmental Impacts of Chicken Production in the EU (Poultry Science)",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 4000,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bacon — availability_gg (world): no statistic found. US pork production is ~12,600 Gg (FAOSTAT), belly is ~15% of the carcass (~1,900 Gg) and bacon is mostly eaten in North America and Europe, so I guessed ~4,000 Gg of bacon worldwide (about 3% of world pork). Could be off by a factor of two."
+                }
+            }
+        ]
+    },
+    {
+        "id": 196,
+        "slug": "beef-heart",
+        "name": "Beef Heart",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw beef heart, nutrition from USDA. Everything else is copied from Beef: emissions, land, water, feed and the animal figures. This treats a kg of heart as having the same footprint and animal harm as a kg of beef meat, rather than giving it a smaller share as a low-value by-product of the same animal (the same approach as Beef Liver). See Beef's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): beef meat production × about 0.0105 kg of heart per kg of meat (a heart is ~2.3 kg on a ~500 kg animal that yields ~215 kg of meat).",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Mostly grassland pasture and feed crops, but cattle ranching drives most Amazon deforestation and much Cerrado clearing.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.12,
+                    "fat": 0.0394,
+                    "sat_fat": 0.01383,
+                    "protein": 0.1772,
+                    "fiber": 0.0,
+                    "sodium": 0.98,
+                    "carbs": 0.0014,
+                    "sugar": 0.0,
+                    "cholesterol": 1.24,
+                    "trans_fat": 0.0018,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.02,
+                    "vitamin_e": 0.0022,
+                    "vitamin_k": 0.0,
+                    "folate": 0.03,
+                    "vitamin_b12": 0.0855,
+                    "vitamin_b6": 0.00279,
+                    "calcium": 0.07,
+                    "iron": 0.0431,
+                    "magnesium": 0.21,
+                    "potassium": 2.87,
+                    "zinc": 0.017,
+                    "phosphorus": 2.12,
+                    "selenium": 0.218,
+                    "ala": 0.00011,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beef Heart — FDC 168625 'Beef, variety meats and by-products, heart, raw' (SR Legacy 13321), per 100 g: 112 kcal, protein 17.72 g, fat 3.94 g, sat fat 1.383 g, carbs 0.14 g, fiber 0 g, sugars 0 g, sodium 98 mg, cholesterol 124 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168625 per 100 g: vitamin a 0 µg RAE, vitamin c 2 mg, vitamin d 0 µg, vitamin e 0.22 mg, vitamin k 0 µg, folate 3 µg DFE, vitamin b12 8.55 µg, vitamin b6 0.279 mg, calcium 7 mg, iron 4.31 mg, magnesium 21 mg, potassium 287 mg, zinc 1.7 mg, phosphorus 212 mg, selenium 21.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168625 per 100 g: ALA 0.011 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Beef — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 500,
+                "confidence": 4,
+                "source": {
+                    "id": 18,
+                    "url": "https://beef.unl.edu/beefwatch/2020/how-many-pounds-meat-can-we-expect-beef-animal/",
+                    "title": "UNL BeefWatch — Pounds of Meat from a Beef Animal",
+                    "note": null
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.015,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            },
+            {
+                "value": 0.037,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 202,
+                    "url": "https://www.pnas.org/doi/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, GHG, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS)",
+                    "note": "Beef — pasture_ha_per_kg_output (US): Eshel et al. 2014 (USDA data 2000–2010) put total US land for animal-based food at ~3.7 million km2, with beef pasture ~79% of that (~2.92 million km2 = ~292 Mha). Divided by US beef production ~26 billion lb carcass weight/yr (~11.8 Mt CW, USDA 2000–2010 average) = ~0.0247 ha/kg CW. Converted to boneless retail basis (same as existing world entry; yield_fraction 0.43 of live weight) with CW-to-retail factor 0.67 (Rotz et al. 2019: ~33% fat, bone and shrink loss): 0.0247 / 0.67 ≈ 0.037 ha/kg. Cross-check: USDA ERS Major Land Uses 2017 grassland pasture+range (~265 Mha) plus grazed forest (~53 Mha) ≈ 318 Mha, ~90% beef-grazed, over ~11.9 Mt CW gives ~0.024 ha/kg CW, consistent. US value exceeds the world entry because much US beef grazing is on low-productivity arid western rangeland. US."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": null
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": null
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.65,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 1.9,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef (multiply by GWP100=28 for CO2e). P&N 2018 global median ~99 CO2e/kg; enteric fermentation (~51%) + manure CH4 (~8%) = ~59% of total = ~50.6 CO2e after subtracting feed (13.17). 50.6 / 28 ≈ 1.81 kg CH4/kg raw; rounded to 1.90 as the upper half of the global mixed (feedlot+pasture) range. Previous value of 8.7 was incorrectly stored as CO2e not raw kg CH4."
+                }
+            },
+            {
+                "value": 1.85,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg × GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
+                }
+            },
+            {
+                "value": 0.72,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — ch4_kg_per_kg_output (US): Rotz et al. 2019 Table 2, US beef-breed production systems (2013–2017, ~150 simulated operations, cow-calf + stocker + feedlot): 482 g CH4/kg carcass weight (enteric + manure; feed-crop production and land use not included in this gas total). Converted to boneless retail basis (same as world entries) with CW-to-retail factor 0.67 (~33% fat/bone/shrink loss, per Rotz et al.): 0.482 / 0.67 ≈ 0.72 kg CH4/kg. Cross-check with US EPA GHG Inventory 2024 (year 2022): beef cattle enteric 4,891 kt + manure 154 kt = 5,045 kt CH4 over ~11.96 Mt CW (28.3 billion lb commercial beef minus ~0.9 Mt from 3.05 M dairy cull cows, whose emissions EPA books under dairy) = 0.42 kg/kg CW = 0.63 kg/kg retail; agrees within ~15%. US."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.068,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef (multiply by GWP100=265 for CO2e). P&N 2018 global median; manure management N2O (~14%) + field N2O from manure application (~4%) = ~18% of total 99 CO2e = ~17.8 CO2e. 17.8 / 265 ≈ 0.067 kg N2O/kg beef raw, rounded to 0.068. Previous value of 0.11 was incorrectly stored as CO2e not raw kg N2O."
+                }
+            },
+            {
+                "value": 0.065,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 × 265 = 17.2 kg CO2e, representing the manure-system N2O component."
+                }
+            },
+            {
+                "value": 0.0085,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 201,
+                    "url": "https://www.epa.gov/system/files/documents/2024-04/us-ghg-inventory-2024-chapter-5-agriculture.pdf",
+                    "title": "US EPA (2024) — Inventory of U.S. Greenhouse Gas Emissions and Sinks 1990–2022, Ch. 5 Agriculture",
+                    "note": "Beef — n2o_kg_per_kg_output (US): US EPA GHG Inventory 2024, year 2022. Manure management N2O for beef cattle (direct + indirect, Table 5-7) = 24 kt. Plus direct N2O from manure/urine deposited on pasture, range and paddock (PRP, Table 5-17): 13.8 MMT CO2e / 265 = 52.1 kt N2O for all grazing species; beef share assumed ~85% (beef cattle not on feed are by far the dominant PRP animals; dairy mostly confined; sheep/horses/goats/bison minor) = 44.3 kt. Total ≈ 68.3 kt N2O. Excludes feed-crop fertilizer N2O and managed manure applied to cropland. Divided by ~11.96 Mt CW from beef-category cattle (28.3 billion lb commercial beef 2022 minus ~0.9 Mt dairy cull cows) = 5.7 g N2O/kg CW; converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al. 2019) = 8.5 g ≈ 0.0085 kg N2O/kg. Sanity check: Rotz et al. 2019 total beef N2O is 19.9 g/kg CW but that includes feed-crop fertilizer N2O. Confidence 2 because the PRP beef share is an assumption. US."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 14.6,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — co2_kg_per_kg_output: P&N 2018 global median ~99 kg CO2e/kg beef. Field stores direct CO2 only (energy, processing, transport, LUC not captured by the feed/pasture join). Derived as: 99 total − 13.17 feed − 53.2 CH4 CO2e (1.90×28) − 18.0 N2O CO2e (0.068×265) ≈ 14.6 kg CO2/kg. Represents machinery fuel, slaughter, cold-chain, and net LUC excluding manure-field N2O."
+                }
+            },
+            {
+                "value": 14.2,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14–18 kg CO2e/kg for global-average beef."
+                }
+            },
+            {
+                "value": 1.36,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — co2_kg_per_kg_output (US): Rotz et al. 2019 Table 2 US beef-breed farm-gate energy use per kg carcass weight: fuel 0.25 L × ~2.7 kg CO2/L (EPA diesel factor) = 0.675; natural gas 0.03 m3 × ~1.94 kg CO2/m3 = 0.058; electricity 0.41 kWh × ~0.43 kg CO2/kWh (EPA eGRID US average, ~2018) = 0.176; total ≈ 0.91 kg CO2/kg CW. Converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al.): 0.91 / 0.67 ≈ 1.36 kg CO2/kg. Cross-check: Rotz Fig. 3a puts fuel-combustion + lime CO2 at ~4% of 21.3 kg CO2e/kg CW ≈ 0.85 kg/kg CW, consistent. Scope caveats: farm-gate only (excludes packing, cold chain and retail transport, which would add a little), and on-farm fuel includes some machinery for home-grown feed that Rotz does not separate. Excludes land-use change (the world entries include an LUC residual, so the large gap is partly a scope difference). US."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 5.71,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.76,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.14,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.29,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 9,
+                "food_slug": "sorghum",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.48,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 700,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beef Heart — availability_gg (world): beef meat production (66,624 Gg, this repo's beef entry) x ~0.0105 kg of heart per kg of meat (a ~2.3 kg heart per ~215 kg of meat) = ~700 Gg. Hearts are often not sold as food, so this may overstate edible supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 197,
+        "slug": "beef-kidney",
+        "name": "Beef Kidney",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "organ"
+        ],
+        "notes": "Raw beef kidney, nutrition from USDA. Everything else is copied from Beef: emissions, land, water, feed and the animal figures. This treats a kg of kidney as having the same footprint and animal harm as a kg of beef meat, rather than giving it a smaller share as a low-value by-product of the same animal (the same approach as Beef Liver). See Beef's notes for where those numbers come from.\n\nAvailability is a rough estimate (confidence 1): beef meat production × about 0.0056 kg of kidney per kg of meat (a pair of kidneys is ~1.2 kg on a ~500 kg animal that yields ~215 kg of meat).",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "Mostly grassland pasture and feed crops, but cattle ranching drives most Amazon deforestation and much Cerrado clearing.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.99,
+                    "fat": 0.0309,
+                    "sat_fat": 0.00868,
+                    "protein": 0.174,
+                    "fiber": 0.0,
+                    "sodium": 1.82,
+                    "carbs": 0.0029,
+                    "sugar": 0.0,
+                    "cholesterol": 4.11,
+                    "trans_fat": 0.001,
+                    "vitamin_a": 4.19,
+                    "vitamin_c": 0.094,
+                    "vitamin_d": 0.011,
+                    "vitamin_e": 0.0022,
+                    "vitamin_k": 0.0,
+                    "folate": 0.98,
+                    "vitamin_b12": 0.275,
+                    "vitamin_b6": 0.00665,
+                    "calcium": 0.13,
+                    "iron": 0.046,
+                    "magnesium": 0.17,
+                    "potassium": 2.62,
+                    "zinc": 0.0192,
+                    "phosphorus": 2.57,
+                    "selenium": 1.41,
+                    "ala": 7e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beef Kidney — FDC 169449 'Beef, variety meats and by-products, kidneys, raw' (SR Legacy 13323), per 100 g: 99 kcal, protein 17.4 g, fat 3.09 g, sat fat 0.868 g, carbs 0.29 g, fiber 0 g, sugars 0 g, sodium 182 mg, cholesterol 411 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169449 per 100 g: vitamin a 419 µg RAE, vitamin c 9.4 mg, vitamin d 1.1 µg, vitamin e 0.22 mg, vitamin k 0 µg, folate 98 µg DFE, vitamin b12 27.5 µg, vitamin b6 0.665 mg, calcium 13 mg, iron 4.6 mg, magnesium 17 mg, potassium 262 mg, zinc 1.92 mg, phosphorus 257 mg, selenium 141 µg; divided by 100 for per-gram values. Omega-3 from FDC 169449 per 100 g: ALA 0.007 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Beef — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 500,
+                "confidence": 4,
+                "source": {
+                    "id": 18,
+                    "url": "https://beef.unl.edu/beefwatch/2020/how-many-pounds-meat-can-we-expect-beef-animal/",
+                    "title": "UNL BeefWatch — Pounds of Meat from a Beef Animal",
+                    "note": null
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": null
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.015,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            },
+            {
+                "value": 0.037,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 202,
+                    "url": "https://www.pnas.org/doi/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, GHG, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS)",
+                    "note": "Beef — pasture_ha_per_kg_output (US): Eshel et al. 2014 (USDA data 2000–2010) put total US land for animal-based food at ~3.7 million km2, with beef pasture ~79% of that (~2.92 million km2 = ~292 Mha). Divided by US beef production ~26 billion lb carcass weight/yr (~11.8 Mt CW, USDA 2000–2010 average) = ~0.0247 ha/kg CW. Converted to boneless retail basis (same as existing world entry; yield_fraction 0.43 of live weight) with CW-to-retail factor 0.67 (Rotz et al. 2019: ~33% fat, bone and shrink loss): 0.0247 / 0.67 ≈ 0.037 ha/kg. Cross-check: USDA ERS Major Land Uses 2017 grassland pasture+range (~265 Mha) plus grazed forest (~53 Mha) ≈ 318 Mha, ~90% beef-grazed, over ~11.9 Mt CW gives ~0.024 ha/kg CW, consistent. US value exceeds the world entry because much US beef grazing is on low-productivity arid western rangeland. US."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": null
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": null
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.65,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": null
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 1.9,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef (multiply by GWP100=28 for CO2e). P&N 2018 global median ~99 CO2e/kg; enteric fermentation (~51%) + manure CH4 (~8%) = ~59% of total = ~50.6 CO2e after subtracting feed (13.17). 50.6 / 28 ≈ 1.81 kg CH4/kg raw; rounded to 1.90 as the upper half of the global mixed (feedlot+pasture) range. Previous value of 8.7 was incorrectly stored as CO2e not raw kg CH4."
+                }
+            },
+            {
+                "value": 1.85,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — ch4_kg_per_kg_output: Raw kg CH4 per kg beef. FAO GLEAM v3 global average; consistent with P&N 2018 CH4 component after removing feed-chain contribution. 1.85 kg CH4/kg × GWP28 = 51.8 kg CO2e, representing enteric fermentation and manure management combined."
+                }
+            },
+            {
+                "value": 0.72,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — ch4_kg_per_kg_output (US): Rotz et al. 2019 Table 2, US beef-breed production systems (2013–2017, ~150 simulated operations, cow-calf + stocker + feedlot): 482 g CH4/kg carcass weight (enteric + manure; feed-crop production and land use not included in this gas total). Converted to boneless retail basis (same as world entries) with CW-to-retail factor 0.67 (~33% fat/bone/shrink loss, per Rotz et al.): 0.482 / 0.67 ≈ 0.72 kg CH4/kg. Cross-check with US EPA GHG Inventory 2024 (year 2022): beef cattle enteric 4,891 kt + manure 154 kt = 5,045 kt CH4 over ~11.96 Mt CW (28.3 billion lb commercial beef minus ~0.9 Mt from 3.05 M dairy cull cows, whose emissions EPA books under dairy) = 0.42 kg/kg CW = 0.63 kg/kg retail; agrees within ~15%. US."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.068,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef (multiply by GWP100=265 for CO2e). P&N 2018 global median; manure management N2O (~14%) + field N2O from manure application (~4%) = ~18% of total 99 CO2e = ~17.8 CO2e. 17.8 / 265 ≈ 0.067 kg N2O/kg beef raw, rounded to 0.068. Previous value of 0.11 was incorrectly stored as CO2e not raw kg N2O."
+                }
+            },
+            {
+                "value": 0.065,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — n2o_kg_per_kg_output: Raw kg N2O per kg beef. FAO GLEAM v3 global average; N2O from direct and indirect manure emissions for beef cattle systems, consistent with P&N 2018 decomposition. 0.065 × 265 = 17.2 kg CO2e, representing the manure-system N2O component."
+                }
+            },
+            {
+                "value": 0.0085,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 201,
+                    "url": "https://www.epa.gov/system/files/documents/2024-04/us-ghg-inventory-2024-chapter-5-agriculture.pdf",
+                    "title": "US EPA (2024) — Inventory of U.S. Greenhouse Gas Emissions and Sinks 1990–2022, Ch. 5 Agriculture",
+                    "note": "Beef — n2o_kg_per_kg_output (US): US EPA GHG Inventory 2024, year 2022. Manure management N2O for beef cattle (direct + indirect, Table 5-7) = 24 kt. Plus direct N2O from manure/urine deposited on pasture, range and paddock (PRP, Table 5-17): 13.8 MMT CO2e / 265 = 52.1 kt N2O for all grazing species; beef share assumed ~85% (beef cattle not on feed are by far the dominant PRP animals; dairy mostly confined; sheep/horses/goats/bison minor) = 44.3 kt. Total ≈ 68.3 kt N2O. Excludes feed-crop fertilizer N2O and managed manure applied to cropland. Divided by ~11.96 Mt CW from beef-category cattle (28.3 billion lb commercial beef 2022 minus ~0.9 Mt dairy cull cows) = 5.7 g N2O/kg CW; converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al. 2019) = 8.5 g ≈ 0.0085 kg N2O/kg. Sanity check: Rotz et al. 2019 total beef N2O is 19.9 g/kg CW but that includes feed-crop fertilizer N2O. Confidence 2 because the PRP beef share is an assumption. US."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 14.6,
+                "confidence": 3,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "P&N 2018 — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Beef — co2_kg_per_kg_output: P&N 2018 global median ~99 kg CO2e/kg beef. Field stores direct CO2 only (energy, processing, transport, LUC not captured by the feed/pasture join). Derived as: 99 total − 13.17 feed − 53.2 CH4 CO2e (1.90×28) − 18.0 N2O CO2e (0.068×265) ≈ 14.6 kg CO2/kg. Represents machinery fuel, slaughter, cold-chain, and net LUC excluding manure-field N2O."
+                }
+            },
+            {
+                "value": 14.2,
+                "confidence": 3,
+                "source": {
+                    "id": 56,
+                    "url": "https://www.fao.org/gleam/en/",
+                    "title": "FAO GLEAM — Global Livestock Environmental Assessment Model",
+                    "note": "Beef — co2_kg_per_kg_output: FAO GLEAM v3 global average for beef cattle (all systems). Consistent with P&N 2018 decomposition; GLEAM confirms direct CO2 (energy + LUC residual) accounts for ~14–18 kg CO2e/kg for global-average beef."
+                }
+            },
+            {
+                "value": 1.36,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 200,
+                    "url": "https://www.sciencedirect.com/science/article/pii/S0308521X18305675",
+                    "title": "Rotz et al. (2019) — Environmental footprints of beef cattle production in the United States (Agricultural Systems)",
+                    "note": "Beef — co2_kg_per_kg_output (US): Rotz et al. 2019 Table 2 US beef-breed farm-gate energy use per kg carcass weight: fuel 0.25 L × ~2.7 kg CO2/L (EPA diesel factor) = 0.675; natural gas 0.03 m3 × ~1.94 kg CO2/m3 = 0.058; electricity 0.41 kWh × ~0.43 kg CO2/kWh (EPA eGRID US average, ~2018) = 0.176; total ≈ 0.91 kg CO2/kg CW. Converted to boneless retail basis with CW-to-retail factor 0.67 (Rotz et al.): 0.91 / 0.67 ≈ 1.36 kg CO2/kg. Cross-check: Rotz Fig. 3a puts fuel-combustion + lime CO2 at ~4% of 21.3 kg CO2e/kg CW ≈ 0.85 kg/kg CW, consistent. Scope caveats: farm-gate only (excludes packing, cold chain and retail transport, which would add a little), and on-farm fuel includes some machinery for home-grown feed that Rotz does not separate. Excludes land-use change (the world entries include an LUC residual, so the large gap is partly a scope difference). US."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 5.71,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.76,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.14,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.29,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 9,
+                "food_slug": "sorghum",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.48,
+                        "confidence": 3,
+                        "source": {
+                            "id": 21,
+                            "url": "https://www.feedlotmagazine.com/news/feedlot_special/what-s-in-a-feedlot-diet/article_ae9ddd94-fc3b-11ee-95ee-376b58f50b56.html",
+                            "title": "Feedlot Magazine — What's In A Feedlot Diet",
+                            "note": null
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 373,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beef Kidney — availability_gg (world): beef meat production (66,624 Gg) x ~0.0056 kg of kidney per kg of meat (~1.2 kg per ~215 kg of meat) = ~373 Gg. Kidneys are often not sold as food, so this may overstate edible supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 198,
+        "slug": "bison",
+        "name": "Bison",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat",
+            "game"
+        ],
+        "notes": "Bison (buffalo), as raised on North American rangeland, nutrition from USDA raw lean bison. Very little is measured, so most of this entry is educated guesses at confidence 1.\n\nA bison is slaughtered at ~520 kg live and ~2.3 years, ~41% boneless meat (~213 kg; 58% dressing × ~70% boneless; estimates). Methane uses eddy-covariance measurements of 52–81 g of CH4 per bison a day (less than cattle); I used 81 g/day = 30 kg a year, over ~3.4 animal-years per slaughtered animal (2.3 years growing plus ~1.1 cow-years of breeding herd), ≈ 0.47 kg CH4 per kg of meat. Nitrous oxide (0.012) and CO2 (1.4) are guesses near US beef's values.\n\nBison graze rangeland that's mostly not cropland, but it takes a lot of it: ~4 ha per animal-year over ~3.4 animal-years is ~0.065 ha per kg of meat (more than beef's 0.015 world and 0.037 US). Some animals are grain-finished, so a little corn and alfalfa feed is charged. The neuron count reuses the cattle estimate (no bison brain mass was found). Availability: ~80,000 US (2023) and ~41,000 Canadian (2024) bison a year ≈ 30 Gg of meat.",
+        "land_types": {
+            "temperate_grassland": 0.9,
+            "dry": 0.1
+        },
+        "land_types_note": "Northern and central Great Plains grassland in the US and the Canadian prairies.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.09,
+                    "fat": 0.0184,
+                    "sat_fat": 0.0069,
+                    "protein": 0.2162,
+                    "fiber": 0.0,
+                    "sodium": 0.54,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.62,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "calcium": 0.06,
+                    "iron": 0.026,
+                    "magnesium": 0.25,
+                    "potassium": 3.43,
+                    "zinc": 0.028,
+                    "phosphorus": 1.87,
+                    "selenium": 0.27,
+                    "ala": 0.0003,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bison — FDC 173851 'Game meat, bison, separable lean only, raw' (SR Legacy 17156), per 100 g: 109 kcal, protein 21.62 g, fat 1.84 g, sat fat 0.69 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 54 mg, cholesterol 62 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173851 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 6 mg, iron 2.6 mg, magnesium 25 mg, potassium 343 mg, zinc 2.8 mg, phosphorus 187 mg, selenium 27 µg; divided by 100 for per-gram values. Omega-3 from FDC 173851 per 100 g: ALA 0.03 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 1,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — neuron_count: no bison count or brain mass was found, so this reuses the cattle estimate (9.3 billion from a 480 g cow brain). Bison brains are somewhat larger, so it may be low."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 520,
+                "confidence": 1,
+                "source": {
+                    "id": 532,
+                    "url": "https://nationalbison.org/?p=45091",
+                    "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — weight_kg: slaughter at ~28–30 months, ~500–545 kg live (steers and heifers); 520 kg is my estimate."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.41,
+                "confidence": 1,
+                "source": {
+                    "id": 532,
+                    "url": "https://nationalbison.org/?p=45091",
+                    "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — yield_fraction: dressing percentage ~58% of live weight, ~70% of the carcass as boneless trimmed meat ≈ 0.41. Both shares are my estimates."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.065,
+                "confidence": 1,
+                "source": {
+                    "id": 532,
+                    "url": "https://nationalbison.org/?p=45091",
+                    "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — pasture_ha_per_kg_output: assumed stocking of ~4 ha per animal-unit-year on northern plains rangeland x ~3.4 animal-years per slaughtered animal (2.3 own + ~1.1 breeding-herd share) = 13.6 ha ÷ 213 kg of meat = 0.064 ha/kg. The stocking rate is my estimate."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 4000000,
+                "confidence": 1,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — pasture_green_water_l_per_ha: ~400 mm of rainfall on the northern plains = 4 million L per hectare per year (beef uses 6.5 million for wetter pasture)."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.9,
+                "confidence": 1,
+                "source": {
+                    "id": 532,
+                    "url": "https://nationalbison.org/?p=45091",
+                    "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — native_fraction: bison are ranched on rangeland that is mostly native prairie, so ~90% (my estimate)."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.47,
+                "confidence": 1,
+                "source": {
+                    "id": 534,
+                    "url": "https://bg.copernicus.org/articles/18/961/2021/bg-18-961-2021.pdf",
+                    "title": "Biogeosciences 18:961 (2021) — bison methane emissions by eddy covariance (52 ± 14 to 81 ± 11.5 g CH4 per bison per day, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — ch4_kg_per_kg_output: eddy-covariance measurements give 52 ± 14 to 81 ± 11.5 g CH4 per bison per day; using 81 g/day = 30 kg a year x 3.4 animal-years per slaughtered animal (101 kg) ÷ 213 kg of meat = 0.47 kg CH4/kg. Measurements were mostly in winter and not annual."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.012,
+                "confidence": 1,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — n2o_kg_per_kg_output: no bison figure. Slightly above US beef's 0.0085 kg N2O/kg (this repo) because bison grow more slowly on range; manure and urine nitrogen on rangeland."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.4,
+                "confidence": 1,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — co2_kg_per_kg_output: no bison figure. Close to US beef's 1.36 kg CO2/kg (this repo) for farm energy, transport and slaughter; bison have no deforestation component."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.0,
+                        "confidence": 1,
+                        "source": {
+                            "id": 532,
+                            "url": "https://nationalbison.org/?p=45091",
+                            "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — corn feed: some animals are grain-finished for a few months; ~1 kg of corn per kg of meat (US beef feedlots use ~5.7). My estimate."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.5,
+                        "confidence": 1,
+                        "source": {
+                            "id": 532,
+                            "url": "https://nationalbison.org/?p=45091",
+                            "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Bison — alfalfa feed: winter supplement; ~0.5 kg of alfalfa per kg of meat (my estimate)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 30,
+                "confidence": 2,
+                "source": {
+                    "id": 532,
+                    "url": "https://nationalbison.org/?p=45091",
+                    "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+                    "note": "Bison — availability_gg (world): ~80,000 US bison harvested in 2023 (National Bison Association) and 41,163 in Canada in 2024 (Canadian Bison Association) = ~121,000 animals x 213 kg of meat = 26 Gg, plus ~15% for other countries = ~30 Gg. Years differ and the meat-per-animal figure is mine."
+                }
+            }
+        ],
+        "lifetime_output_kg": []
+    },
+    {
+        "id": 199,
+        "slug": "rabbit",
+        "name": "Rabbit",
+        "type": "animal",
+        "category": "meats",
+        "human_food": 1,
+        "tags": [
+            "meat"
+        ],
+        "notes": "Farmed rabbit meat (domestic rabbit, raised indoors on pellets), nutrition from USDA raw rabbit. Rabbit is one of the few meats with published life-cycle assessments: 7.6–10.5 kg CO2e per kg of carcass (about 2.6–3.9 per kg live weight), with feed making up ~70%. The benchmark emissions here take the 9.0 midpoint per kg of carcass ÷ 0.8 boneless share = ~11.2 kg CO2e per kg of meat.\n\nA rabbit is slaughtered at ~2.5 kg live and ~11 weeks; the dressed carcass is ~58% and ~80% of that is boneless meat, so ~0.46 of live weight is meat (estimates). Feed is ~9.4 kg per kg of boneless meat (feed conversion of ~3.5 kg per kg of live weight plus the breeding does' feed, roughly 4.4 kg per kg live ÷ 0.46), split over alfalfa, wheat (bran), corn and soy (confidence 1). The methane, nitrous oxide and CO2 figures are back-solved so the on-farm part (~5.6 kg CO2e) plus feed lands near the LCA benchmark; they are not measurements. The neuron count (~1 billion) is a rough estimate from a ~11 g brain at rodent-like neuron densities, since no rabbit count was found. No pasture. Availability is FAOSTAT's rabbit meat.",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "temperate_grassland": 0.4,
+            "dry": 0.1
+        },
+        "land_types_note": "Almost all land is corn/soy feed: mostly temperate grassland farmland, with the soy share partly from Brazil's Cerrado and Amazon edges.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.36,
+                    "fat": 0.0555,
+                    "sat_fat": 0.0166,
+                    "protein": 0.2005,
+                    "fiber": 0.0,
+                    "sodium": 0.41,
+                    "carbs": 0.0,
+                    "sugar": 0.0,
+                    "cholesterol": 0.57,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "folate": 0.08,
+                    "vitamin_b12": 0.0716,
+                    "vitamin_b6": 0.005,
+                    "calcium": 0.13,
+                    "iron": 0.0157,
+                    "magnesium": 0.19,
+                    "potassium": 3.3,
+                    "zinc": 0.0157,
+                    "phosphorus": 2.13,
+                    "selenium": 0.237,
+                    "ala": 0.0022,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Rabbit — FDC 172521 'Game meat, rabbit, domesticated, composite of cuts, raw' (SR Legacy 17177), per 100 g: 136 kcal, protein 20.05 g, fat 5.55 g, sat fat 1.66 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 41 mg, cholesterol 57 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172521 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 8 µg DFE, vitamin b12 7.16 µg, vitamin b6 0.5 mg, calcium 13 mg, iron 1.57 mg, magnesium 19 mg, potassium 330 mg, zinc 1.57 mg, phosphorus 213 mg, selenium 23.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172521 per 100 g: ALA 0.22 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 1000000000,
+                "confidence": 1,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — neuron_count: no direct rabbit neuron count was found. A rabbit brain is ~11 g; rodent brains hold roughly 100 million neurons per gram (rat ≈ 200 million in 2 g), so I estimated ~1 billion. Confidence is low."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 2.5,
+                "confidence": 1,
+                "source": {
+                    "id": 535,
+                    "url": "https://riunet.upv.es/handle/10251/213503",
+                    "title": "Descriptive analysis of the environmental impact of intensive rabbit production (rabbit LCA: ~3.9 kg CO2e/kg live weight; 7.6–10.5 kg CO2e/kg carcass across studies, as reported in web search summaries)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — weight_kg: commercial meat rabbits are slaughtered at ~10–12 weeks and ~2.5 kg live (my estimate)."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.46,
+                "confidence": 1,
+                "source": {
+                    "id": 535,
+                    "url": "https://riunet.upv.es/handle/10251/213503",
+                    "title": "Descriptive analysis of the environmental impact of intensive rabbit production (rabbit LCA: ~3.9 kg CO2e/kg live weight; 7.6–10.5 kg CO2e/kg carcass across studies, as reported in web search summaries)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — yield_fraction: dressed carcass ~58% of live weight x ~80% boneless meat = 0.46. Both shares are my estimates."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "pasture_ha_per_kg_output": null,
+        "pasture_green_water_l_per_ha": null,
+        "native_fraction": null,
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.08,
+                "confidence": 1,
+                "source": {
+                    "id": 536,
+                    "url": "https://air.unimi.it/handle/2434/618965",
+                    "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — ch4_kg_per_kg_output: no published split. Back-solved with the n2o and co2 values so the on-farm emissions (manure methane, manure N2O, farm energy) total ~5.6 kg CO2e per kg of meat, i.e. the LCA benchmark (11.2) minus ~5.6 for feed. 0.08 kg CH4 = 2.2 kg CO2e."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.006,
+                "confidence": 1,
+                "source": {
+                    "id": 536,
+                    "url": "https://air.unimi.it/handle/2434/618965",
+                    "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — n2o_kg_per_kg_output: back-solved (see methane): 0.006 kg N2O = 1.6 kg CO2e, from manure nitrogen."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.8,
+                "confidence": 1,
+                "source": {
+                    "id": 536,
+                    "url": "https://air.unimi.it/handle/2434/618965",
+                    "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — co2_kg_per_kg_output: back-solved (see methane): ~1.8 kg CO2 per kg of meat for heating, ventilation, slaughter and processing."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 3.3,
+                        "confidence": 1,
+                        "source": {
+                            "id": 536,
+                            "url": "https://air.unimi.it/handle/2434/618965",
+                            "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — alfalfa feed: rabbit pellets are ~35% alfalfa; ~3.3 kg per kg of boneless meat out of ~9.4 kg of feed (feed conversion ~3.5 per kg live weight + breeding does, ÷ 0.46)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 3,
+                "food_slug": "wheat",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.8,
+                        "confidence": 1,
+                        "source": {
+                            "id": 536,
+                            "url": "https://air.unimi.it/handle/2434/618965",
+                            "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — wheat feed: wheat and bran are ~30% of pellets; ~2.8 kg per kg of boneless meat."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.8,
+                        "confidence": 1,
+                        "source": {
+                            "id": 536,
+                            "url": "https://air.unimi.it/handle/2434/618965",
+                            "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — corn feed: cereals other than wheat are ~20% of pellets, taken as corn; ~1.8 kg per kg of boneless meat."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.5,
+                        "confidence": 1,
+                        "source": {
+                            "id": 536,
+                            "url": "https://air.unimi.it/handle/2434/618965",
+                            "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Rabbit — soy feed: soybean meal is ~15% of pellets; ~1.5 kg per kg of boneless meat."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 870,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Rabbit — availability_gg (world): FAOSTAT QCL item 1141 'Meat of rabbits and hares', World production 2020–2024 = 912; 850; 873; 866; 847 Gg; mean 870 Gg."
+                }
+            }
+        ],
+        "lifetime_output_kg": [],
+        "emissions_per_kg": [
+            {
+                "value": 11.2,
+                "confidence": 3,
+                "source": {
+                    "id": 535,
+                    "url": "https://riunet.upv.es/handle/10251/213503",
+                    "title": "Descriptive analysis of the environmental impact of intensive rabbit production (rabbit LCA: ~3.9 kg CO2e/kg live weight; 7.6–10.5 kg CO2e/kg carcass across studies, as reported in web search summaries)",
+                    "note": "Rabbit — emissions_per_kg: rabbit life-cycle assessments report 7.6–10.5 kg CO2e per kg of carcass (and 2.6–3.9 per kg live weight); the 9.0 midpoint ÷ 0.8 boneless share of the carcass = 11.2 kg CO2e per kg of boneless meat. LCA studies come from Italy/Spain; boundaries differ."
+                }
+            }
+        ]
     }
 ]

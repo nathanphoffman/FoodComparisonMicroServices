@@ -1206,5 +1206,217 @@
                 }
             }
         ]
+    },
+    {
+        "id": 192,
+        "slug": "agave-syrup",
+        "name": "Agave Syrup",
+        "type": "plant",
+        "category": "sweeteners",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Agave syrup (nectar), nutrition from USDA. Blue agave takes 6–8 years to mature, so the yield is spread over a 7-year cycle: a research planting gave 46.5 t of piñas per hectare, ≈ 6,640 kg/ha a year. The piña is ~27% sugars; at ~80% extraction and ~75% syrup solids that is ~0.3 kg of syrup per kg, which I cut to 0.25 for losses (educated guess, confidence 1), so ≈ 1,660 kg of syrup per hectare a year.\n\nEverything else is confidence-1 guesses: water (~3,012 L/kg) assumes ~500 mm a year of rain-fed evapotranspiration over that yield; emissions (2.9 kg CO2e/kg) assume ~1,500 kg CO2e per hectare of farming plus ~1 for cooking and evaporating and ~1 for packaging and distribution; pesticide (~2 kg/ha), fertilizer (~80 kg/ha) and the compounds are plausible rates for a weeded, fertilized plantation with weevil control. Availability (~50 Gg) is a guess. Most agave is grown in Jalisco, Mexico, mostly for tequila.",
+        "land_types": {
+            "dry": 0.7,
+            "tropical_savanna": 0.3
+        },
+        "land_types_note": "Jalisco's highlands and semi-arid Mexican plateau (blue agave for tequila and syrup).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.1,
+                    "fat": 0.0045,
+                    "sat_fat": 0.0,
+                    "protein": 0.0009,
+                    "fiber": 0.002,
+                    "sodium": 0.04,
+                    "carbs": 0.7637,
+                    "sugar": 0.6803,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.08,
+                    "vitamin_c": 0.17,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0098,
+                    "vitamin_k": 0.225,
+                    "folate": 0.3,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00234,
+                    "calcium": 0.01,
+                    "iron": 0.0009,
+                    "magnesium": 0.01,
+                    "potassium": 0.04,
+                    "zinc": 0.0001,
+                    "phosphorus": 0.01,
+                    "selenium": 0.017,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Agave Syrup — FDC 170277 'Sweetener, syrup, agave' (SR Legacy 19912), per 100 g: 310 kcal, protein 0.09 g, fat 0.45 g, sat fat 0 g, carbs 76.37 g, fiber 0.2 g, sugars 68.03 g, sodium 4 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170277 per 100 g: vitamin a 8 µg RAE, vitamin c 17 mg, vitamin d 0 µg, vitamin e 0.98 mg, vitamin k 22.5 µg, folate 30 µg DFE, vitamin b12 0 µg, vitamin b6 0.234 mg, calcium 1 mg, iron 0.09 mg, magnesium 1 mg, potassium 4 mg, zinc 0.01 mg, phosphorus 1 mg, selenium 1.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 170277 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Agave Syrup — yield_fraction: the syrup is entirely edible, so the edible fraction is 1."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 1660.0,
+                "confidence": 1,
+                "source": {
+                    "id": 537,
+                    "url": "https://biblat.unam.mx/en/revista/revista-mexicana-de-ciencias-agricolas/articulo/caracteristicas-y-productividad-de-una-planta-mac-agave-tequilana-desarrollada-con-fertigacion-en-tamaulipas-mexico",
+                    "title": "Revista Mexicana de Ciencias Agrícolas — Agave tequilana productivity (piña yield 46.5 t/ha, sugars 26.8–29%, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — yield_kg_ha: piña yield 46.5 t/ha per 6–8 year crop cycle (a research planting) ÷ 7 years = 6,640 kg/ha a year; piña sugars are 26.8–29%; assumed 0.25 kg of syrup per kg of piña after extraction and cooking losses (the arithmetic gives ~0.3) = 1,660 kg of syrup per hectare a year."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 3012,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — water_per_kg: no water-footprint figure exists. Assuming ~500 mm of evapotranspiration a year (500 mm x 10,000 L per ha-mm = 5 million L per hectare, mostly rain) over 1,660 kg of syrup per hectare = 3,012 L/kg. Agave is a CAM plant that loses little water, but the 500 mm itself is my estimate."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 2892,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — green_water_per_kg: ~96% of the 3,012 L/kg, since blue agave is mostly rain-fed in Jalisco (guess)."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 30,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — blue_water_per_kg: ~1% of the 3,012 L/kg for a little supplemental irrigation (guess)."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 90,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — grey_water_per_kg: the remaining ~3% of the 3,012 L/kg for fertilizer runoff dilution (guess)."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.0,
+                "confidence": 1,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — pesticide_kg_ha: no survey exists. ~2 kg a.i./ha a year for herbicide weed control plus insecticide for the agave weevil and fungicide for rots is a plausible plantation rate (my estimate)."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — fertilizer_kg_ha: no survey exists. ~80 kg N+P+K per hectare a year is a plausible rate for a fertilized plantation (my estimate; wild and low-input plots use none)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.9,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — emissions_per_kg: no life-cycle figure was found. Farm ~1,500 kg CO2e per ha a year (diesel, fertilizer; my estimate) ÷ 1,660 kg = ~0.9, plus ~1.0 for cooking the piñas and evaporating the juice and ~1.0 for packaging and distribution = 2.9. Cane sugar is 3.2 for comparison."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.0,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — glyphosate: ~1 kg a.i./ha a year for weed control between rows (my estimate; part of the ~2 kg/ha total)."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.1,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — imidacloprid: ~0.1 kg a.i./ha a year as a soil drench against the agave weevil and grubs (my estimate; part of the ~2 kg/ha total)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 50,
+                "confidence": 1,
+                "source": {
+                    "id": 537,
+                    "url": "https://biblat.unam.mx/en/revista/revista-mexicana-de-ciencias-agricolas/articulo/caracteristicas-y-productividad-de-una-planta-mac-agave-tequilana-desarrollada-con-fertigacion-en-tamaulipas-mexico",
+                    "title": "Revista Mexicana de Ciencias Agrícolas — Agave tequilana productivity (piña yield 46.5 t/ha, sugars 26.8–29%, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Agave Syrup — availability_gg (world): no statistic found. Mexico harvests ~2 Mt of piñas a year, mostly for tequila; only a small share is made into syrup. At 0.25 kg per kg, 10% of that would be ~50 Gg of syrup. Could be off by a factor of three."
+                }
+            }
+        ]
     }
 ]

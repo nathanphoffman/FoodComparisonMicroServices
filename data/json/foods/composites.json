@@ -2247,5 +2247,240 @@
                 }
             }
         ]
+    },
+    {
+        "id": 193,
+        "slug": "brown-sugar",
+        "name": "Brown Sugar",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "sweetener",
+            "vegan"
+        ],
+        "notes": "Light brown sugar, modelled as refined white sugar (96.5%) plus molasses (3.5%). Crop impacts come from the cane sugar and molasses entries; molasses is a by-product that carries only a value share of the cane field, so adding it barely changes the footprint. Nutrition is USDA brown sugar.\n\nProcessing emissions (0.05 kg CO2e/kg) and water (0.5 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.8,
+                    "fat": 0.0,
+                    "sat_fat": 0.0,
+                    "protein": 0.0012,
+                    "fiber": 0.0,
+                    "sodium": 0.28,
+                    "carbs": 0.9809,
+                    "sugar": 0.9702,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.01,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00041,
+                    "calcium": 0.83,
+                    "iron": 0.0071,
+                    "magnesium": 0.09,
+                    "potassium": 1.33,
+                    "zinc": 0.0003,
+                    "phosphorus": 0.04,
+                    "selenium": 0.012,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Brown Sugar — FDC 168833 'Sugars, brown' (SR Legacy 19334), per 100 g: 380 kcal, protein 0.12 g, fat 0 g, sat fat 0 g, carbs 98.09 g, fiber 0 g, sugars 97.02 g, sodium 28 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168833 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 1 µg DFE, vitamin b12 0 µg, vitamin b6 0.041 mg, calcium 83 mg, iron 0.71 mg, magnesium 9 mg, potassium 133 mg, zinc 0.03 mg, phosphorus 4 mg, selenium 1.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 168833 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.965,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Brown Sugar — recipe: light brown sugar is refined white sugar with ~3.5% molasses added back (dark brown has ~6.5%); USDA's brown sugar is ~97% sucrose, consistent with that. Estimate, confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "molasses",
+                "fraction": [
+                    {
+                        "value": 0.035,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Brown Sugar — recipe: ~3.5% molasses (light brown sugar). Estimate, confidence 2."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.05,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brown Sugar — processing_emissions_per_kg: mixing molasses into the sugar and packing it; a rough guess (confidence 1) since the energy is small next to growing and refining the cane."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brown Sugar — processing_water_per_kg: ~0.5 L/kg for mixing and cleaning is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 194,
+        "slug": "corn-syrup",
+        "name": "Corn Syrup (HFCS)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "sweetener",
+            "vegan"
+        ],
+        "notes": "High-fructose corn syrup (the common soft-drink and processed-food sweetener), modelled as 71% sugar solids from corn plus 29% water. Each kg of sugar solids takes ~1.23 kg of corn-equivalent: Mekonnen & Hoekstra's starch-to-maize water ratio (1.37), which already includes the value split with corn oil, gluten meal and feed, divided by 1.11 for the weight gained when starch becomes glucose. Crop impacts (land, water, pesticides, farm emissions) come from the corn entry. Nutrition is USDA's high-fructose corn syrup; light and dark corn syrup are different products.\n\nProcessing emissions (0.7 kg CO2e/kg) and water (5 L/kg) are confidence-1 guesses. Availability comes from corn's supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.81,
+                    "fat": 0.0,
+                    "sat_fat": 0.0,
+                    "protein": 0.0,
+                    "fiber": 0.0,
+                    "sodium": 0.02,
+                    "carbs": 0.76,
+                    "sugar": 0.7565,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0,
+                    "vitamin_k": 0.0,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0,
+                    "calcium": 0.0,
+                    "iron": 0.0003,
+                    "magnesium": 0.0,
+                    "potassium": 0.0,
+                    "zinc": 0.0002,
+                    "phosphorus": 0.0,
+                    "selenium": 0.007,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Corn Syrup (HFCS) — FDC 169659 'Syrups, corn, high-fructose' (SR Legacy 19351), per 100 g: 281 kcal, protein 0 g, fat 0 g, sat fat 0 g, carbs 76 g, fiber 0 g, sugars 75.65 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169659 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 0 mg, iron 0.03 mg, magnesium 0 mg, potassium 0 mg, zinc 0.02 mg, phosphorus 0 mg, selenium 0.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 169659 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "corn",
+                "fraction": [
+                    {
+                        "value": 0.71,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Syrup (HFCS) — recipe: high-fructose corn syrup is ~71% sugar solids and ~29% water (USDA: ~76% carbohydrate by weight for HFCS-55 at 77% solids; HFCS-42 is ~71%). The corn entry is charged for the sugar solids only."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.23,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Syrup (HFCS) — corn per kg of sugar solids: wet milling turns corn into starch (Mekonnen & Hoekstra's maize starch water is 1,671 L/kg against 1,222 for maize, a ratio of 1.37 that already includes the by-product value split with corn oil, gluten and feed), and hydrolysis adds ~11% weight (starch to glucose), so 1.37 / 1.11 = 1.23 kg of corn-equivalent per kg of sugar solids. Confidence 2."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.29,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Corn Syrup (HFCS) — recipe: ~29% water in the finished syrup."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.7,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Corn Syrup (HFCS) — processing_emissions_per_kg: wet milling, enzyme conversion, isomerisation and evaporation are energy-intensive; ~0.7 kg CO2e per kg of syrup is an educated guess (confidence 1). The corn's own farm emissions are added from the corn entry."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 5.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Corn Syrup (HFCS) — processing_water_per_kg: ~5 L/kg of process water for steeping, washing and evaporation is a rough guess (confidence 1)."
+                }
+            }
+        ]
     }
 ]

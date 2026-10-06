@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   // webpack can't bundle — load it straight from node_modules instead.
   serverExternalPackages: ['sql.js'],
   env: {
-    DB_VERSION: 'v224',
+    DB_VERSION: 'v225',
   },
 };
 

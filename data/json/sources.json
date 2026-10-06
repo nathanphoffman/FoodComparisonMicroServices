@@ -305,7 +305,8 @@
             "Beet sugar 864, Molasses 527, Corn oil 2,576, Watermelon 235, Pineapple 255, Pumpkin 336, Eggplant 362, Kidney beans 5,053, Fava beans 2,018, Rye 1,543, Millet 4,478 L/kg — Vol. 1 global averages.",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — water_per_kg from Report 47 Vol. 1 global averages (added 2026-10-06).",
             "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — water_per_kg from Report 47 Vol. 1 (some are stand-ins; see each value) (added 2026-10-06).",
-            "water_per_kg for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1; derived estimates for Edamame (added 2026-10-06)."
+            "water_per_kg for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1; derived estimates for Edamame (added 2026-10-06).",
+            "water_per_kg for Sesame Oil from Report 47 Vol. 1; estimates for Avocado Oil and Agave Syrup (added 2026-10-06)."
         ]
     },
     {
@@ -852,7 +853,8 @@
             "Tea — item 667 'Green and black tea' 8,856 m3/t made tea (green 7,232 / blue 898 / grey 726).",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — green/blue/grey split from Report 47 Vol. 1 global averages (added 2026-10-06).",
             "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — green/blue/grey split from Report 47 Vol. 1 (some are stand-ins) (added 2026-10-06).",
-            "green/blue/grey split for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1 (added 2026-10-06)."
+            "green/blue/grey split for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1 (added 2026-10-06).",
+            "green/blue/grey split for Sesame Oil from Report 47 Vol. 1 (added 2026-10-06)."
         ]
     },
     {
@@ -923,7 +925,8 @@
             "Beet Sugar 1.81; Other Fruit 1.05 (watermelon, pineapple); Other Vegetables 0.53 (pumpkin, eggplant); Other Pulses 1.79 (kidney, fava); Wheat & Rye 1.57 (rye, and millet as a proxy).",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — emissions_per_kg from the Poore & Nemecek category value (Citrus Fruit, Brassicas, Berries & Grapes, Other Vegetables or Other Fruit) via the OWID grapher CSV (added 2026-10-06).",
             "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — emissions_per_kg from P&N category values or educated guesses (see each value) (added 2026-10-06).",
-            "emissions benchmarks and processing-emission guesses for the new dairy, composite and legume foods (see each value) (added 2026-10-06)."
+            "emissions benchmarks and processing-emission guesses for the new dairy, composite and legume foods (see each value) (added 2026-10-06).",
+            "emissions benchmarks and processing-emission guesses for Avocado Oil, Sesame Oil, Ghee, Agave Syrup, Brown Sugar, Corn Syrup (added 2026-10-06)."
         ]
     },
     {
@@ -1322,7 +1325,8 @@
         "notes": [
             "Butter — emissions_per_kg: 9.0 kg CO2e/kg (250-g wrap, excl. consumer waste), 9.3 (250-g tub), Danish Arla butter, cradle-to-consumer. Raw milk (0.91 kg CO2e/kg ECM) = 80–85% of CF; raw milk allocated between butter and skim/buttermilk co-products by value-weighted fat:protein (1:1.7). IDF (2010) milk-solids allocation would lower results ~24%.",
             "Butter — allocation factor: 0.825 × 9.0 / 0.91 ≈ 8.2 kg milk-equivalent charged per kg butter; used for all butter per-kg fields (lifetime output, GHG gases, land, feed).",
-            "Heavy Cream, Sour Cream, Cream Cheese, Cottage Cheese, Ice Cream, Kefir — milk-equivalent factors use this study's fat:protein value split (fat 37%, skim side 63%) applied to each product's USDA fat and protein content (added 2026-10-06)."
+            "Heavy Cream, Sour Cream, Cream Cheese, Cottage Cheese, Ice Cream, Kefir — milk-equivalent factors use this study's fat:protein value split (fat 37%, skim side 63%) applied to each product's USDA fat and protein content (added 2026-10-06).",
+            "Ghee — milk-equivalent factor uses this study's fat:protein value split applied to its USDA fat and protein (added 2026-10-06)."
         ]
     },
     {
@@ -1358,7 +1362,8 @@
             "Goat cheese — item 1021 'Cheese from milk of goats', World 2020–2023 mean 461 Gg.",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — yield_kg_ha and availability_gg from FAOSTAT QCL 2020–2024 (added 2026-10-06; file dated 2025-12-23).",
             "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — FAOSTAT-based yield/availability where an item exists (others are educated guesses, see each value) (added 2026-10-06).",
-            "FAOSTAT yield/availability for Buckwheat, Pinto Beans, Navy Beans, Heavy Cream; guesses elsewhere (see each value) (added 2026-10-06)."
+            "FAOSTAT yield/availability for Buckwheat, Pinto Beans, Navy Beans, Heavy Cream; guesses elsewhere (see each value) (added 2026-10-06).",
+            "availability figures for Sesame Oil, Lard, Beef Tallow, Ghee, Rabbit from FAOSTAT; educated guesses elsewhere (see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -3287,6 +3292,54 @@
         "id": 531,
         "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
         "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 532,
+        "url": "https://nationalbison.org/?p=45091",
+        "title": "National Bison Association — bison harvest numbers (~80,000 US bison harvested in 2023, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 533,
+        "url": "https://www.canadianbison.ca/resources/producer-resources/data-and-statistics/slaughter-capacity",
+        "title": "Canadian Bison Association — slaughter numbers (41,163 head in 2024, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 534,
+        "url": "https://bg.copernicus.org/articles/18/961/2021/bg-18-961-2021.pdf",
+        "title": "Biogeosciences 18:961 (2021) — bison methane emissions by eddy covariance (52 ± 14 to 81 ± 11.5 g CH4 per bison per day, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 535,
+        "url": "https://riunet.upv.es/handle/10251/213503",
+        "title": "Descriptive analysis of the environmental impact of intensive rabbit production (rabbit LCA: ~3.9 kg CO2e/kg live weight; 7.6–10.5 kg CO2e/kg carcass across studies, as reported in web search summaries)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 536,
+        "url": "https://air.unimi.it/handle/2434/618965",
+        "title": "University of Milan — life cycle assessment of rabbit production in Italy (~2.6 kg CO2e/kg live weight, feed 68–70% of the footprint, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 537,
+        "url": "https://biblat.unam.mx/en/revista/revista-mexicana-de-ciencias-agricolas/articulo/caracteristicas-y-productividad-de-una-planta-mac-agave-tequilana-desarrollada-con-fertigacion-en-tamaulipas-mexico",
+        "title": "Revista Mexicana de Ciencias Agrícolas — Agave tequilana productivity (piña yield 46.5 t/ha, sugars 26.8–29%, as reported in a web search summary)",
         "notes": [
             "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
         ]
