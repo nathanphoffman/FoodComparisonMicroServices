@@ -40,7 +40,8 @@
         "rice-starch",
         "rice-protein",
         "rye",
-        "millet"
+        "millet",
+        "buckwheat"
     ],
     "legumes": [
         "soy",
@@ -51,7 +52,10 @@
         "peas",
         "pea-protein",
         "kidney-beans",
-        "fava-beans"
+        "fava-beans",
+        "pinto-beans",
+        "navy-beans",
+        "edamame"
     ],
     "feeds": [
         "alfalfa",
@@ -152,7 +156,13 @@
         "mozzarella",
         "parmesan",
         "goat-milk",
-        "goat-cheese"
+        "goat-cheese",
+        "heavy-cream",
+        "sour-cream",
+        "cream-cheese",
+        "cottage-cheese",
+        "ice-cream",
+        "kefir"
     ],
     "oils": [
         "olive-oil",
@@ -185,7 +195,14 @@
         "follow-your-heart-parmesan",
         "coca-cola",
         "coke-zero",
-        "soy-milk"
+        "soy-milk",
+        "white-flour",
+        "white-bread",
+        "pasta",
+        "flour-tortillas",
+        "corn-flakes",
+        "peanut-butter",
+        "hummus"
     ],
     "beverages": [
         "coffee",

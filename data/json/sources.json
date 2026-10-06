@@ -304,7 +304,8 @@
             "Onion 345 (192/88/65), Carrot 195 (106/28/61), Cassava 563 (550/0/13), Grapes 609 (425/97/87), Cabbage 280 (181/26/73) L/kg — Vol. 1 global averages.",
             "Beet sugar 864, Molasses 527, Corn oil 2,576, Watermelon 235, Pineapple 255, Pumpkin 336, Eggplant 362, Kidney beans 5,053, Fava beans 2,018, Rye 1,543, Millet 4,478 L/kg — Vol. 1 global averages.",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — water_per_kg from Report 47 Vol. 1 global averages (added 2026-10-06).",
-            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — water_per_kg from Report 47 Vol. 1 (some are stand-ins; see each value) (added 2026-10-06)."
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — water_per_kg from Report 47 Vol. 1 (some are stand-ins; see each value) (added 2026-10-06).",
+            "water_per_kg for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1; derived estimates for Edamame (added 2026-10-06)."
         ]
     },
     {
@@ -850,7 +851,8 @@
             "Coffee — 'Coffee, green' 15,897 m3/t (green 15,249 / blue 116 / grey 532); roasted 18,925.",
             "Tea — item 667 'Green and black tea' 8,856 m3/t made tea (green 7,232 / blue 898 / grey 726).",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — green/blue/grey split from Report 47 Vol. 1 global averages (added 2026-10-06).",
-            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — green/blue/grey split from Report 47 Vol. 1 (some are stand-ins) (added 2026-10-06)."
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — green/blue/grey split from Report 47 Vol. 1 (some are stand-ins) (added 2026-10-06).",
+            "green/blue/grey split for Buckwheat, Pinto Beans, Navy Beans from Report 47 Vol. 1 (added 2026-10-06)."
         ]
     },
     {
@@ -920,7 +922,8 @@
             "Onion 0.5 (Onions & Leeks), Carrot 0.43 (Root Vegetables), Cassava 1.32, Grapes 1.53 (Berries & Grapes), Cabbage 0.51 (Brassicas) kg CO2e/kg.",
             "Beet Sugar 1.81; Other Fruit 1.05 (watermelon, pineapple); Other Vegetables 0.53 (pumpkin, eggplant); Other Pulses 1.79 (kidney, fava); Wheat & Rye 1.57 (rye, and millet as a proxy).",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — emissions_per_kg from the Poore & Nemecek category value (Citrus Fruit, Brassicas, Berries & Grapes, Other Vegetables or Other Fruit) via the OWID grapher CSV (added 2026-10-06).",
-            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — emissions_per_kg from P&N category values or educated guesses (see each value) (added 2026-10-06)."
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — emissions_per_kg from P&N category values or educated guesses (see each value) (added 2026-10-06).",
+            "emissions benchmarks and processing-emission guesses for the new dairy, composite and legume foods (see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -1318,7 +1321,8 @@
         "title": "Flysjö (2011) — Potential for improving the carbon footprint of butter and blend products (Journal of Dairy Science 94:5833)",
         "notes": [
             "Butter — emissions_per_kg: 9.0 kg CO2e/kg (250-g wrap, excl. consumer waste), 9.3 (250-g tub), Danish Arla butter, cradle-to-consumer. Raw milk (0.91 kg CO2e/kg ECM) = 80–85% of CF; raw milk allocated between butter and skim/buttermilk co-products by value-weighted fat:protein (1:1.7). IDF (2010) milk-solids allocation would lower results ~24%.",
-            "Butter — allocation factor: 0.825 × 9.0 / 0.91 ≈ 8.2 kg milk-equivalent charged per kg butter; used for all butter per-kg fields (lifetime output, GHG gases, land, feed)."
+            "Butter — allocation factor: 0.825 × 9.0 / 0.91 ≈ 8.2 kg milk-equivalent charged per kg butter; used for all butter per-kg fields (lifetime output, GHG gases, land, feed).",
+            "Heavy Cream, Sour Cream, Cream Cheese, Cottage Cheese, Ice Cream, Kefir — milk-equivalent factors use this study's fat:protein value split (fat 37%, skim side 63%) applied to each product's USDA fat and protein content (added 2026-10-06)."
         ]
     },
     {
@@ -1353,7 +1357,8 @@
             "Beet sugar (157), sugar cane (156, for molasses), molasses (165), maize (56) and maize oil (60), watermelons (567), pineapples (574), pumpkins/squash (394), eggplants (399), dry beans (176), broad beans (181), rye (71), millet (79), goat meat (1017), duck meat (1069), goat milk (1020) — 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
             "Goat cheese — item 1021 'Cheese from milk of goats', World 2020–2023 mean 461 Gg.",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — yield_kg_ha and availability_gg from FAOSTAT QCL 2020–2024 (added 2026-10-06; file dated 2025-12-23).",
-            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — FAOSTAT-based yield/availability where an item exists (others are educated guesses, see each value) (added 2026-10-06)."
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — FAOSTAT-based yield/availability where an item exists (others are educated guesses, see each value) (added 2026-10-06).",
+            "FAOSTAT yield/availability for Buckwheat, Pinto Beans, Navy Beans, Heavy Cream; guesses elsewhere (see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -1366,7 +1371,8 @@
             "Onion NDB 11282 refuse 10%; Carrot 11124 refuse 11%; Cassava 11134 refuse 16%; Grapes 09132 refuse 4%; Cabbage 11109 refuse 20%.",
             "Watermelon 09326 refuse 48%; Pineapple 09266 refuse 49%; Pumpkin 11422 refuse 30%; Eggplant 11209 refuse 19%; kidney beans 16027/16028 and fava beans 16052/16053 water content used for cooked_weight_ratio.",
             "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — yield_fraction from SR28 FOOD_DES refuse % (added 2026-10-06).",
-            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — yield_fraction from SR28 FOOD_DES refuse % (added 2026-10-06)."
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — yield_fraction from SR28 FOOD_DES refuse % (added 2026-10-06).",
+            "yield_fraction from SR28 FOOD_DES refuse % (Edamame) (added 2026-10-06)."
         ]
     },
     {
@@ -3267,6 +3273,22 @@
         "title": "USDA NASS — Crop Production 2024 Summary, Hay (US alfalfa and other hay production)",
         "notes": [
             "Alfalfa and Grass Hay — availability_gg (US): 2024 US alfalfa hay production 49.8 million tons and all other hay 72.6 million tons (short tons, converted x 0.9072 to tonnes)."
+        ]
+    },
+    {
+        "id": 530,
+        "url": "https://encyclopedia.pub/entry/history/compare_revision/92983",
+        "title": "Vegetable soybean (edamame) production — China ~2,000,000 t on ~400,000 ha, Japan, Taiwan, Thailand (as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 531,
+        "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+        "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+        "notes": [
+            "Used for educated-guess or derived values (confidence 1–2) on foods added 2026-10-06; see each value's note."
         ]
     }
 ]

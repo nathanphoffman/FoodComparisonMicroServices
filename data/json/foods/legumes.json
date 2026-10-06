@@ -2763,5 +2763,756 @@
                 }
             }
         ]
+    },
+    {
+        "id": 184,
+        "slug": "pinto-beans",
+        "name": "Pinto Beans",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Cooked pinto beans (boiled, no salt), nutrition from USDA. Nutrition is cooked, so a cooked weight ratio of 2.39 (from USDA's raw and cooked water contents: (100-11.33)/(100-62.95)) converts the dry-bean yield, water and emissions to cooked weight. Yield and water are FAOSTAT's and Mekonnen & Hoekstra's figures for all dry beans (~0.9 t/ha world, ~2.2 t/ha US; 5,053 L/kg dry), the same as for Black Beans.\n\nPesticide, fertilizer, emissions and the compound rates are copied from the Black Beans entry (the repo already reuses them for kidney beans), so they carry the same weak documentation; they are lowered to confidence 2. Availability is all dry beans worldwide, of which pinto beans are a subset.",
+        "land_types": {
+            "temperate_grassland": 0.4,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.3
+        },
+        "land_types_note": "Dry beans are grown in India, Myanmar, Brazil, the US, Tanzania and Mexico, mostly rain-fed; pinto and navy beans are mainly US, Mexican and Canadian crops.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.43,
+                    "fat": 0.0065,
+                    "sat_fat": 0.00136,
+                    "protein": 0.0901,
+                    "fiber": 0.09,
+                    "sodium": 0.01,
+                    "carbs": 0.2622,
+                    "sugar": 0.0034,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.008,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0094,
+                    "vitamin_k": 0.035,
+                    "folate": 1.72,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00229,
+                    "calcium": 0.46,
+                    "iron": 0.0209,
+                    "magnesium": 0.5,
+                    "potassium": 4.36,
+                    "zinc": 0.0098,
+                    "phosphorus": 1.47,
+                    "selenium": 0.062,
+                    "ala": 0.00137,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pinto Beans — FDC 175200 'Beans, pinto, mature seeds, cooked, boiled, without salt' (SR Legacy 16043), per 100 g: 143 kcal, protein 9.01 g, fat 0.65 g, sat fat 0.136 g, carbs 26.22 g, fiber 9 g, sugars 0.34 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175200 per 100 g: vitamin a 0 µg RAE, vitamin c 0.8 mg, vitamin d 0 µg, vitamin e 0.94 mg, vitamin k 3.5 µg, folate 172 µg DFE, vitamin b12 0 µg, vitamin b6 0.229 mg, calcium 46 mg, iron 2.09 mg, magnesium 50 mg, potassium 436 mg, zinc 0.98 mg, phosphorus 147 mg, selenium 6.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 175200 per 100 g: ALA 0.137 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pinto Beans — yield_fraction: USDA 'Beans, pinto, mature seeds, cooked, boiled, without salt' is the edible cooked bean, so the edible fraction is 1."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.39,
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pinto Beans — cooked_weight_ratio: USDA SR 16042 raw beans are 11.33% water and SR 16043 cooked beans 62.95% water; solids are conserved, so cooked/dry = (100-11.33)/(100-62.95) = 2.39."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pinto Beans — yield_kg_ha (world): FAOSTAT QCL item 176 'Beans, dry' (all dry beans, not just pinto beans), World yield 2020–2024 = 877, 845, 898, 910, 898 kg/ha; mean 886 kg/ha, rounded."
+                }
+            },
+            {
+                "value": 2200,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pinto Beans — yield_kg_ha (US): FAOSTAT QCL item 176 'Beans, dry', United States yield 2020–2024 = 2,201, 1,902, 2,371, 2,325, 2,316 kg/ha; mean 2,223 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 5053,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Pinto Beans — water_per_kg: 5053 L/kg dry (green 3945 + blue 125 + grey 983). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3945,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pinto Beans — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 125,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pinto Beans — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 983,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Pinto Beans — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Pinto Beans — pesticide_kg_ha: No per-class survey. Copies the Black Beans entry, which the repo already reuses for kidney beans. Copied value: 0.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 30,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Pinto Beans — fertilizer_kg_ha: No per-class survey. Copies the Black Beans entry. Copied value: 30."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pinto Beans — emissions_per_kg: No bean-class-specific figure. Copies the Black Beans entry (Poore & Nemecek's 'Other Pulses' is 1.79). Copied value: 2.0."
+                }
+            },
+            {
+                "value": 2.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Pinto Beans — emissions_per_kg: No bean-class-specific figure. Copies the Black Beans entry (Poore & Nemecek's 'Other Pulses' is 1.79). Copied value: 2.0."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pinto Beans — pendimethalin — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.22."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pinto Beans — malathion — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.06."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pinto Beans — chlorpyrifos — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.08."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 29760,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Pinto Beans — availability_gg: FAOSTAT dry beans (all classes, ~30 Mt); pinto/navy are a subset, as for Black Beans. Copied value: 29760."
+                }
+            }
+        ]
+    },
+    {
+        "id": 185,
+        "slug": "navy-beans",
+        "name": "Navy Beans",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Cooked navy beans (boiled, no salt), nutrition from USDA. Nutrition is cooked, so a cooked weight ratio of 2.43 (from USDA's raw and cooked water contents: (100-12.1)/(100-63.81)) converts the dry-bean yield, water and emissions to cooked weight. Yield and water are FAOSTAT's and Mekonnen & Hoekstra's figures for all dry beans (~0.9 t/ha world, ~2.2 t/ha US; 5,053 L/kg dry), the same as for Black Beans.\n\nPesticide, fertilizer, emissions and the compound rates are copied from the Black Beans entry (the repo already reuses them for kidney beans), so they carry the same weak documentation; they are lowered to confidence 2. Availability is all dry beans worldwide, of which navy beans are a subset.",
+        "land_types": {
+            "temperate_grassland": 0.4,
+            "tropical_savanna": 0.3,
+            "tropical_forest": 0.3
+        },
+        "land_types_note": "Dry beans are grown in India, Myanmar, Brazil, the US, Tanzania and Mexico, mostly rain-fed; pinto and navy beans are mainly US, Mexican and Canadian crops.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.4,
+                    "fat": 0.0062,
+                    "sat_fat": 0.00098,
+                    "protein": 0.0823,
+                    "fiber": 0.105,
+                    "sodium": 0.0,
+                    "carbs": 0.2605,
+                    "sugar": 0.0037,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.009,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0001,
+                    "vitamin_k": 0.006,
+                    "folate": 1.4,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00138,
+                    "calcium": 0.69,
+                    "iron": 0.0236,
+                    "magnesium": 0.53,
+                    "potassium": 3.89,
+                    "zinc": 0.0103,
+                    "phosphorus": 1.44,
+                    "selenium": 0.029,
+                    "ala": 0.00177,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Navy Beans — FDC 173746 'Beans, navy, mature seeds, cooked, boiled, without salt' (SR Legacy 16038), per 100 g: 140 kcal, protein 8.23 g, fat 0.62 g, sat fat 0.098 g, carbs 26.05 g, fiber 10.5 g, sugars 0.37 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173746 per 100 g: vitamin a 0 µg RAE, vitamin c 0.9 mg, vitamin d 0 µg, vitamin e 0.01 mg, vitamin k 0.6 µg, folate 140 µg DFE, vitamin b12 0 µg, vitamin b6 0.138 mg, calcium 69 mg, iron 2.36 mg, magnesium 53 mg, potassium 389 mg, zinc 1.03 mg, phosphorus 144 mg, selenium 2.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 173746 per 100 g: ALA 0.177 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Navy Beans — yield_fraction: USDA 'Beans, navy, mature seeds, cooked, boiled, without salt' is the edible cooked bean, so the edible fraction is 1."
+                }
+            }
+        ],
+        "cooked_weight_ratio": [
+            {
+                "value": 2.43,
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Navy Beans — cooked_weight_ratio: USDA SR 16037 raw beans are 12.1% water and SR 16038 cooked beans 63.81% water; solids are conserved, so cooked/dry = (100-12.1)/(100-63.81) = 2.43."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Navy Beans — yield_kg_ha (world): FAOSTAT QCL item 176 'Beans, dry' (all dry beans, not just navy beans), World yield 2020–2024 = 877, 845, 898, 910, 898 kg/ha; mean 886 kg/ha, rounded."
+                }
+            },
+            {
+                "value": 2200,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Navy Beans — yield_kg_ha (US): FAOSTAT QCL item 176 'Beans, dry', United States yield 2020–2024 = 2,201, 1,902, 2,371, 2,325, 2,316 kg/ha; mean 2,223 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 5053,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Navy Beans — water_per_kg: 5053 L/kg dry (green 3945 + blue 125 + grey 983). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 3945,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Navy Beans — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 125,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Navy Beans — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 983,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Navy Beans — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 176 Beans, dry, 1996–2005: green 3945 / blue 125 / grey 983 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Navy Beans — pesticide_kg_ha: No per-class survey. Copies the Black Beans entry, which the repo already reuses for kidney beans. Copied value: 0.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 30,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Navy Beans — fertilizer_kg_ha: No per-class survey. Copies the Black Beans entry. Copied value: 30."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 2.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Navy Beans — emissions_per_kg: No bean-class-specific figure. Copies the Black Beans entry (Poore & Nemecek's 'Other Pulses' is 1.79). Copied value: 2.0."
+                }
+            },
+            {
+                "value": 2.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Navy Beans — emissions_per_kg: No bean-class-specific figure. Copies the Black Beans entry (Poore & Nemecek's 'Other Pulses' is 1.79). Copied value: 2.0."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.22,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Navy Beans — pendimethalin — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.22."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.06,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Navy Beans — malathion — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.06."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.08,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Navy Beans — chlorpyrifos — value: No per-class survey; copies the Black Beans compound rates. Copied value: 0.08."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 29760,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Navy Beans — availability_gg: FAOSTAT dry beans (all classes, ~30 Mt); pinto/navy are a subset, as for Black Beans. Copied value: 29760."
+                }
+            }
+        ]
+    },
+    {
+        "id": 186,
+        "slug": "edamame",
+        "name": "Edamame",
+        "type": "plant",
+        "category": "legumes",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Edamame (green soybeans), nutrition from USDA 'Soybeans, green, raw'. 53% is edible (the pods are removed). China grows ~90% of the world's vegetable soybeans, then Taiwan, Japan and Thailand. FAOSTAT has no edamame item, so yield (~5 t/ha of pods) and availability (~2,300 Gg) come from reported production and area figures (confidence 2).\n\nWater (~901 L/kg) and emissions (~1.3 kg CO2e/kg) are confidence-1 estimates from the soybean entry's per-hectare footprint: ~75% of a full soybean season, spread over the pod yield. Pesticide, fertilizer and compound rates are copied from the soy entry at confidence 2 (same species).",
+        "land_types": {
+            "temperate_forest": 0.6,
+            "temperate_grassland": 0.2,
+            "tropical_savanna": 0.2
+        },
+        "land_types_note": "China (~90%), Taiwan, Japan and Thailand; a guess at the split.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.47,
+                    "fat": 0.068,
+                    "sat_fat": 0.00786,
+                    "protein": 0.1295,
+                    "fiber": 0.042,
+                    "sodium": 0.15,
+                    "carbs": 0.1105,
+                    "sugar": 0.0,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.09,
+                    "vitamin_c": 0.29,
+                    "vitamin_d": 0.0,
+                    "folate": 1.65,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00065,
+                    "calcium": 1.97,
+                    "iron": 0.0355,
+                    "magnesium": 0.65,
+                    "potassium": 6.2,
+                    "zinc": 0.0099,
+                    "phosphorus": 1.94,
+                    "selenium": 0.015,
+                    "ala": 0.00376,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Edamame — FDC 169282 'Soybeans, green, raw' (SR Legacy 11450), per 100 g: 147 kcal, protein 12.95 g, fat 6.8 g, sat fat 0.786 g, carbs 11.05 g, fiber 4.2 g, sugars 0 g, sodium 15 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169282 per 100 g: vitamin a 9 µg RAE, vitamin c 29 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 165 µg DFE, vitamin b12 0 µg, vitamin b6 0.065 mg, calcium 197 mg, iron 3.55 mg, magnesium 65 mg, potassium 620 mg, zinc 0.99 mg, phosphorus 194 mg, selenium 1.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 169282 per 100 g: ALA 0.376 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.53,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Edamame — yield_fraction: SR28 FOOD_DES NDB 11450 'Soybeans, green, raw': refuse 47% (pods), so edible fraction = 0.53."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 5000,
+                "confidence": 2,
+                "source": {
+                    "id": 530,
+                    "url": "https://encyclopedia.pub/entry/history/compare_revision/92983",
+                    "title": "Vegetable soybean (edamame) production — China ~2,000,000 t on ~400,000 ha, Japan, Taiwan, Thailand (as reported in a web search summary)",
+                    "note": "Edamame — yield_kg_ha (world): FAOSTAT has no vegetable-soybean item. A review reports China (~90% of world production) at ~2,000,000 t from ~400,000 ha, and another figure of 150,000 ha at 5 t/ha, i.e. about 5 t/ha of fresh pods; research trials reach 5.7–14.5 t/ha. Used 5,000 kg of pods per hectare (confidence 2: derived from reported production and area)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 901,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Edamame — water_per_kg: Soybean water per hectare = 2,145 L/kg x 2,800 kg/ha = 6.01 million L/ha (Mekonnen & Hoekstra, FAOSTAT). Edamame is harvested green after about 75% of the soybean season, so I assumed ~75% of that water, 4.50 million L/ha, over 5,000 kg of pods per hectare = 901 L/kg, split in soy's green/blue/grey proportions."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 856,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Edamame — green_water_per_kg: Soybean water per hectare = 2,145 L/kg x 2,800 kg/ha = 6.01 million L/ha (Mekonnen & Hoekstra, FAOSTAT). Edamame is harvested green after about 75% of the soybean season, so I assumed ~75% of that water, 4.50 million L/ha, over 5,000 kg of pods per hectare = 901 L/kg, split in soy's green/blue/grey proportions."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 29,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Edamame — blue_water_per_kg: Soybean water per hectare = 2,145 L/kg x 2,800 kg/ha = 6.01 million L/ha (Mekonnen & Hoekstra, FAOSTAT). Edamame is harvested green after about 75% of the soybean season, so I assumed ~75% of that water, 4.50 million L/ha, over 5,000 kg of pods per hectare = 901 L/kg, split in soy's green/blue/grey proportions."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 16,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Edamame — grey_water_per_kg: Soybean water per hectare = 2,145 L/kg x 2,800 kg/ha = 6.01 million L/ha (Mekonnen & Hoekstra, FAOSTAT). Edamame is harvested green after about 75% of the soybean season, so I assumed ~75% of that water, 4.50 million L/ha, over 5,000 kg of pods per hectare = 901 L/kg, split in soy's green/blue/grey proportions."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.5,
+                "confidence": 2,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Edamame — pesticide_kg_ha: No edamame survey. Copies this repo's soy entry: the same species grown with similar inputs. Copied value: 1.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 80,
+                "confidence": 2,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Edamame — fertilizer_kg_ha: No edamame survey. Copies this repo's soy entry. Copied value: 80."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 1.3,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Edamame — emissions_per_kg: Poore & Nemecek have no edamame figure. The soy entry's 3.0 kg CO2e/kg x 2,800 kg/ha = 8,400 kg CO2e per hectare; ~75% of that for the shorter edamame season is 6,300 kg per hectare, divided by 5,000 kg of pods = 1.3 kg CO2e/kg of pods."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.84,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Edamame — glyphosate — value: No edamame survey; copies the soy compound rates. Copied value: 0.84."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.14,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Edamame — metolachlor — value: No edamame survey; copies the soy compound rates. Copied value: 0.14."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.03,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Edamame — chlorpyrifos — value: No edamame survey; copies the soy compound rates. Copied value: 0.03."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2300,
+                "confidence": 2,
+                "source": {
+                    "id": 530,
+                    "url": "https://encyclopedia.pub/entry/history/compare_revision/92983",
+                    "title": "Vegetable soybean (edamame) production — China ~2,000,000 t on ~400,000 ha, Japan, Taiwan, Thailand (as reported in a web search summary)",
+                    "note": "Edamame — availability_gg (world): China ~2,000,000 t, Taiwan ~84,000 t, Japan ~66,000 t and Thailand ~25,000 t as reported in the same review, plus smaller producers ≈ 2,300 Gg of fresh pods. Reported figures are of varying years and not official statistics (confidence 2)."
+                }
+            }
+        ]
     }
 ]

@@ -3809,5 +3809,2876 @@
                 }
             }
         ]
+    },
+    {
+        "id": 170,
+        "slug": "heavy-cream",
+        "name": "Heavy Cream",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "notes": "Heavy whipping cream (~36% fat), nutrition from USDA. Every per-kg impact is cow milk × 4.2 kg of milk per kg of cream: the milk's fat and protein are charged separately with the same fat:protein value split the butter entry uses (Flysjö 2011: fat takes 37% of a milk's value, the skim side 63%). Cream is 36.08% fat and 2.84% protein, so it needs 36.08/3.7 × 0.373 + 2.84/3.3 × 0.627 = 4.17 kg of milk. It carries the same cow and calf deaths as milk.\n\nCO2 adds 0.3 kg CO2e/kg for separation, pasteurisation and packaging (educated guess, confidence 1; yogurt's processing adds about 0.3 over milk). The emissions benchmark is cow milk × 4.2 + 0.3; no published cream life-cycle figure was found.\n\nAvailability is FAOSTAT's fresh-cream production (about 3.7 Mt), which covers all cream and is under-reported in some countries.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Heavy Cream is made from cow's milk (about 4.2 kg of milk's value per kg of heavy cream), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 7,498 kg of heavy cream in the US or 3,186 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.4,
+                    "fat": 0.3608,
+                    "sat_fat": 0.23032,
+                    "protein": 0.0284,
+                    "fiber": 0.0,
+                    "sodium": 0.27,
+                    "carbs": 0.0274,
+                    "sugar": 0.0292,
+                    "cholesterol": 1.13,
+                    "trans_fat": 0.01236,
+                    "vitamin_a": 4.11,
+                    "vitamin_c": 0.006,
+                    "vitamin_d": 0.016,
+                    "vitamin_e": 0.0092,
+                    "vitamin_k": 0.032,
+                    "folate": 0.04,
+                    "vitamin_b12": 0.0016,
+                    "vitamin_b6": 0.00035,
+                    "calcium": 0.66,
+                    "iron": 0.001,
+                    "magnesium": 0.07,
+                    "potassium": 0.95,
+                    "zinc": 0.0024,
+                    "phosphorus": 0.58,
+                    "selenium": 0.03,
+                    "ala": 0.00122,
+                    "epa_dha": 0.09
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Heavy Cream — FDC 170859 'Cream, fluid, heavy whipping' (SR Legacy 01053), per 100 g: 340 kcal, protein 2.84 g, fat 36.08 g, sat fat 23.032 g, carbs 2.74 g, fiber 0 g, sugars 2.92 g, sodium 27 mg, cholesterol 113 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170859 per 100 g: vitamin a 411 µg RAE, vitamin c 0.6 mg, vitamin d 1.6 µg, vitamin e 0.92 mg, vitamin k 3.2 µg, folate 4 µg DFE, vitamin b12 0.16 µg, vitamin b6 0.035 mg, calcium 66 mg, iron 0.1 mg, magnesium 7 mg, potassium 95 mg, zinc 0.24 mg, phosphorus 58 mg, selenium 3 µg; divided by 100 for per-gram values. Omega-3 from FDC 170859 per 100 g: ALA 0.122 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 9 mg (EPA 0.009 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 3186.06,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Heavy Cream — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 7498.03,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Heavy Cream — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 4.17 kg milk per kg heavy cream."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 13.45,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Heavy Cream — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 4.17 kg milk per kg + 0.3 kg CO2e/kg for separating, pasteurising and packaging cream = 13.45. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 7.48,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Heavy Cream — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 4.17 + 0.3 for separating, pasteurising and packaging cream = 7.48."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00275512,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Heavy Cream — pasture_ha_per_kg_output: cow milk value 0.00066 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.000834886,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Heavy Cream — pasture_ha_per_kg_output: cow milk value 0.0002 x 4.17 kg milk per kg heavy cream."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.233768,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Heavy Cream — ch4_kg_per_kg_output: cow milk value 0.056 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.208721,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Heavy Cream — ch4_kg_per_kg_output: cow milk value 0.05 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.158628,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Heavy Cream — ch4_kg_per_kg_output: cow milk value 0.038 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.087663,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Heavy Cream — ch4_kg_per_kg_output: cow milk value 0.021 x 4.17 kg milk per kg heavy cream."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00793142,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Heavy Cream — n2o_kg_per_kg_output: cow milk value 0.0019 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.00250466,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Heavy Cream — n2o_kg_per_kg_output: cow milk value 0.0006 x 4.17 kg milk per kg heavy cream."
+                }
+            },
+            {
+                "value": 0.00108535,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Heavy Cream — n2o_kg_per_kg_output: cow milk value 0.00026 x 4.17 kg milk per kg heavy cream."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 4.22396,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Heavy Cream — co2_kg_per_kg_output: cow milk value 0.94 x 4.17 kg milk per kg heavy cream + 0.3 for heavy cream processing. The added 0.3 kg CO2e/kg is an educated guess (confidence 1) for separating, pasteurising and packaging cream."
+                }
+            },
+            {
+                "value": 2.55419,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Heavy Cream — co2_kg_per_kg_output: cow milk value 0.54 x 4.17 kg milk per kg heavy cream + 0.3 for heavy cream processing. The added 0.3 kg CO2e/kg is an educated guess (confidence 1) for separating, pasteurising and packaging cream."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.41931,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (corn): cow milk value 0.34 x 4.17 kg milk per kg heavy cream."
+                        }
+                    },
+                    {
+                        "value": 1.21058,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (corn): cow milk value 0.29 x 4.17 kg milk per kg heavy cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.459187,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 4.17 kg milk per kg heavy cream."
+                        }
+                    },
+                    {
+                        "value": 0.709653,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 4.17 kg milk per kg heavy cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.667909,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (soy): cow milk value 0.16 x 4.17 kg milk per kg heavy cream."
+                        }
+                    },
+                    {
+                        "value": 0.208721,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (soy): cow milk value 0.05 x 4.17 kg milk per kg heavy cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.37942,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 4.17 kg milk per kg heavy cream."
+                        }
+                    },
+                    {
+                        "value": 0.208721,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Heavy Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 4.17 kg milk per kg heavy cream."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 3669,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Heavy Cream — availability_gg (world): FAOSTAT QCL item 885 'Cream, fresh', World production 2020–2023 = 3,641; 3,651; 3,666; 3,717 Gg (2024 not reported); mean 3,669 Gg. Includes all fresh cream, not only heavy cream, and some countries under-report it (FAOSTAT shows the US at only ~28 Gg)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 171,
+        "slug": "sour-cream",
+        "name": "Sour Cream",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "notes": "Cultured sour cream (~19% fat), nutrition from USDA. Every per-kg impact is cow milk × 2.4 kg of milk per kg (fat takes 37% and protein 63% of a milk's value, as in the butter entry: 19.35/3.7 × 0.373 + 2.44/3.3 × 0.627). It carries the same cow and calf deaths as milk.\n\nCO2 adds 0.4 kg CO2e/kg for cream separation, culturing and packaging (educated guess, confidence 1). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess scaled by the US share of world milk.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Sour Cream is made from cow's milk (about 2.4 kg of milk's value per kg of sour cream), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 12,971 kg of sour cream in the US or 5,512 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 1.98,
+                    "fat": 0.1935,
+                    "sat_fat": 0.1014,
+                    "protein": 0.0244,
+                    "fiber": 0.0,
+                    "sodium": 0.31,
+                    "carbs": 0.0463,
+                    "sugar": 0.0341,
+                    "cholesterol": 0.59,
+                    "trans_fat": 0.00796,
+                    "vitamin_a": 1.24,
+                    "vitamin_c": 0.009,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0038,
+                    "vitamin_k": 0.015,
+                    "folate": 0.06,
+                    "vitamin_b12": 0.0021,
+                    "vitamin_b6": 0.00041,
+                    "calcium": 1.01,
+                    "iron": 0.0007,
+                    "magnesium": 0.1,
+                    "potassium": 1.25,
+                    "zinc": 0.0033,
+                    "phosphorus": 0.76,
+                    "selenium": 0.037,
+                    "ala": 0.00068,
+                    "epa_dha": 0.07
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Sour Cream — FDC 171257 'Cream, sour, cultured' (SR Legacy 01056), per 100 g: 198 kcal, protein 2.44 g, fat 19.35 g, sat fat 10.14 g, carbs 4.63 g, fiber 0 g, sugars 3.41 g, sodium 31 mg, cholesterol 59 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171257 per 100 g: vitamin a 124 µg RAE, vitamin c 0.9 mg, vitamin d 0 µg, vitamin e 0.38 mg, vitamin k 1.5 µg, folate 6 µg DFE, vitamin b12 0.21 µg, vitamin b6 0.041 mg, calcium 101 mg, iron 0.07 mg, magnesium 10 mg, potassium 125 mg, zinc 0.33 mg, phosphorus 76 mg, selenium 3.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 171257 per 100 g: ALA 0.068 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 7 mg (EPA 0.006 + DHA 0.001); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 5511.66,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Sour Cream — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 12971.1,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Sour Cream — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 2.41 kg milk per kg sour cream."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 8.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Sour Cream — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 2.41 kg milk per kg + 0.4 kg CO2e/kg for cream separation, culturing and packaging = 8.00. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 4.55,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Sour Cream — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 2.41 + 0.4 for cream separation, culturing and packaging = 4.55."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00159262,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Sour Cream — pasture_ha_per_kg_output: cow milk value 0.00066 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.000482613,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Sour Cream — pasture_ha_per_kg_output: cow milk value 0.0002 x 2.41 kg milk per kg sour cream."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.135132,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Sour Cream — ch4_kg_per_kg_output: cow milk value 0.056 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.120653,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Sour Cream — ch4_kg_per_kg_output: cow milk value 0.05 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.0916965,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Sour Cream — ch4_kg_per_kg_output: cow milk value 0.038 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.0506744,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Sour Cream — ch4_kg_per_kg_output: cow milk value 0.021 x 2.41 kg milk per kg sour cream."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00458482,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Sour Cream — n2o_kg_per_kg_output: cow milk value 0.0019 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.00144784,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Sour Cream — n2o_kg_per_kg_output: cow milk value 0.0006 x 2.41 kg milk per kg sour cream."
+                }
+            },
+            {
+                "value": 0.000627397,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Sour Cream — n2o_kg_per_kg_output: cow milk value 0.00026 x 2.41 kg milk per kg sour cream."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.66828,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Sour Cream — co2_kg_per_kg_output: cow milk value 0.94 x 2.41 kg milk per kg sour cream + 0.4 for sour cream processing. The added 0.4 kg CO2e/kg is an educated guess (confidence 1) for cream separation, culturing and packaging."
+                }
+            },
+            {
+                "value": 1.70305,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Sour Cream — co2_kg_per_kg_output: cow milk value 0.54 x 2.41 kg milk per kg sour cream + 0.4 for sour cream processing. The added 0.4 kg CO2e/kg is an educated guess (confidence 1) for cream separation, culturing and packaging."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.820442,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (corn): cow milk value 0.34 x 2.41 kg milk per kg sour cream."
+                        }
+                    },
+                    {
+                        "value": 0.699789,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (corn): cow milk value 0.29 x 2.41 kg milk per kg sour cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.265437,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 2.41 kg milk per kg sour cream."
+                        }
+                    },
+                    {
+                        "value": 0.410221,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 2.41 kg milk per kg sour cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.38609,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (soy): cow milk value 0.16 x 2.41 kg milk per kg sour cream."
+                        }
+                    },
+                    {
+                        "value": 0.120653,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (soy): cow milk value 0.05 x 2.41 kg milk per kg sour cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.37545,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 2.41 kg milk per kg sour cream."
+                        }
+                    },
+                    {
+                        "value": 0.120653,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Sour Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 2.41 kg milk per kg sour cream."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 759,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Sour Cream — availability_gg (US): USDA NASS Dairy Products, October 2024 sour cream production 139,498 thousand lb x 12 months x 0.4536 = 759 Gg. Annualised from a single month, so about ±10% for seasonality."
+                }
+            },
+            {
+                "value": 5910.0,
+                "confidence": 1,
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Sour Cream — availability_gg (world): no world statistic exists. Dividing US production by the US share of world cow milk (12.9%, FAOSTAT 2024) gives ~5,907 Gg. Sour cream is probably more concentrated in North America and Eastern Europe than milk is, so this may overstate the world."
+                }
+            }
+        ]
+    },
+    {
+        "id": 172,
+        "slug": "cream-cheese",
+        "name": "Cream Cheese",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "cheese"
+        ],
+        "notes": "Cream cheese (~34% fat), nutrition from USDA. Every per-kg impact is cow milk × 4.6 kg of milk per kg (value split as in the butter entry: 34.44/3.7 × 0.373 + 6.15/3.3 × 0.627). The whey that cheese-making removes is sold, which is why the protein side is charged by protein rather than by all milk solids. It carries the same cow and calf deaths as milk.\n\nCO2 adds 1.0 kg CO2e/kg for cheese-making and cold-chain packaging (educated guess, confidence 1; Poore & Nemecek's cheese processing is 1.38). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Cream Cheese is made from cow's milk (about 4.6 kg of milk's value per kg of cream cheese), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 6,748 kg of cream cheese in the US or 2,867 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 3.5,
+                    "fat": 0.3444,
+                    "sat_fat": 0.20213,
+                    "protein": 0.0615,
+                    "fiber": 0.0,
+                    "sodium": 3.14,
+                    "carbs": 0.0552,
+                    "sugar": 0.0376,
+                    "cholesterol": 1.01,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 3.08,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0086,
+                    "vitamin_k": 0.021,
+                    "folate": 0.09,
+                    "vitamin_b12": 0.0022,
+                    "vitamin_b6": 0.00056,
+                    "calcium": 0.97,
+                    "iron": 0.0011,
+                    "magnesium": 0.09,
+                    "potassium": 1.32,
+                    "zinc": 0.005,
+                    "phosphorus": 1.07,
+                    "selenium": 0.086,
+                    "ala": 0.00125,
+                    "epa_dha": 0.1
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cream Cheese — FDC 173418 'Cheese, cream' (SR Legacy 01017), per 100 g: 350 kcal, protein 6.15 g, fat 34.44 g, sat fat 20.213 g, carbs 5.52 g, fiber 0 g, sugars 3.76 g, sodium 314 mg, cholesterol 101 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173418 per 100 g: vitamin a 308 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.86 mg, vitamin k 2.1 µg, folate 9 µg DFE, vitamin b12 0.22 µg, vitamin b6 0.056 mg, calcium 97 mg, iron 0.11 mg, magnesium 9 mg, potassium 132 mg, zinc 0.5 mg, phosphorus 107 mg, selenium 8.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 173418 per 100 g: ALA 0.125 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 10 mg (EPA 0.01 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 2867.37,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Cream Cheese — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 6748.03,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Cream Cheese — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 4.64 kg milk per kg cream cheese."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 15.61,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cream Cheese — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 4.64 kg milk per kg + 1.0 kg CO2e/kg for cheese-making, cooling and packaging = 15.61. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 8.98,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cream Cheese — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 4.64 + 1.0 for cheese-making, cooling and packaging = 8.98."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00306134,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Cream Cheese — pasture_ha_per_kg_output: cow milk value 0.00066 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.000927679,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Cream Cheese — pasture_ha_per_kg_output: cow milk value 0.0002 x 4.64 kg milk per kg cream cheese."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.25975,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Cream Cheese — ch4_kg_per_kg_output: cow milk value 0.056 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.23192,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Cream Cheese — ch4_kg_per_kg_output: cow milk value 0.05 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.176259,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cream Cheese — ch4_kg_per_kg_output: cow milk value 0.038 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.0974063,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Cream Cheese — ch4_kg_per_kg_output: cow milk value 0.021 x 4.64 kg milk per kg cream cheese."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00881295,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Cream Cheese — n2o_kg_per_kg_output: cow milk value 0.0019 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.00278304,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cream Cheese — n2o_kg_per_kg_output: cow milk value 0.0006 x 4.64 kg milk per kg cream cheese."
+                }
+            },
+            {
+                "value": 0.00120598,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Cream Cheese — n2o_kg_per_kg_output: cow milk value 0.00026 x 4.64 kg milk per kg cream cheese."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 5.36009,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cream Cheese — co2_kg_per_kg_output: cow milk value 0.94 x 4.64 kg milk per kg cream cheese + 1 for cream cheese processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for cheese-making, cooling and packaging."
+                }
+            },
+            {
+                "value": 3.50473,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Cream Cheese — co2_kg_per_kg_output: cow milk value 0.54 x 4.64 kg milk per kg cream cheese + 1 for cream cheese processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for cheese-making, cooling and packaging."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.57705,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (corn): cow milk value 0.34 x 4.64 kg milk per kg cream cheese."
+                        }
+                    },
+                    {
+                        "value": 1.34513,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (corn): cow milk value 0.29 x 4.64 kg milk per kg cream cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.510223,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 4.64 kg milk per kg cream cheese."
+                        }
+                    },
+                    {
+                        "value": 0.788527,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 4.64 kg milk per kg cream cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.742143,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (soy): cow milk value 0.16 x 4.64 kg milk per kg cream cheese."
+                        }
+                    },
+                    {
+                        "value": 0.23192,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (soy): cow milk value 0.05 x 4.64 kg milk per kg cream cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 2.64388,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 4.64 kg milk per kg cream cheese."
+                        }
+                    },
+                    {
+                        "value": 0.23192,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cream Cheese — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 4.64 kg milk per kg cream cheese."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 574,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Cream Cheese — availability_gg (US): USDA NASS Dairy Products, October 2024 'cream and Neufchatel' cheese production 105,416 thousand lb x 12 x 0.4536 = 574 Gg (annualised from one month)."
+                }
+            },
+            {
+                "value": 4470.0,
+                "confidence": 1,
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cream Cheese — availability_gg (world): no world statistic. US production divided by the US share of world cow milk (12.9%) = ~4,467 Gg. Cream cheese is more North-American than milk, so this probably overstates the world."
+                }
+            }
+        ]
+    },
+    {
+        "id": 173,
+        "slug": "cottage-cheese",
+        "name": "Cottage Cheese",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "cheese"
+        ],
+        "notes": "Creamed cottage cheese (~4% fat), nutrition from USDA. Every per-kg impact is cow milk × 2.5 kg of milk per kg, from the butter entry's value split (4.3/3.7 × 0.373 + 11.12/3.3 × 0.627): cottage cheese is mostly milk protein, so it is charged mostly on the protein side. It carries the same cow and calf deaths as milk.\n\nCO2 adds 1.0 kg CO2e/kg for curd-making and chilled packaging (educated guess, confidence 1). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Cottage Cheese is made from cow's milk (about 2.5 kg of milk's value per kg of cottage cheese), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 12,290 kg of cottage cheese in the US or 5,222 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.98,
+                    "fat": 0.043,
+                    "sat_fat": 0.01718,
+                    "protein": 0.1112,
+                    "fiber": 0.0,
+                    "sodium": 3.64,
+                    "carbs": 0.0338,
+                    "sugar": 0.0267,
+                    "cholesterol": 0.17,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.37,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.001,
+                    "vitamin_e": 0.0008,
+                    "vitamin_k": 0.0,
+                    "folate": 0.12,
+                    "vitamin_b12": 0.0043,
+                    "vitamin_b6": 0.00046,
+                    "calcium": 0.83,
+                    "iron": 0.0007,
+                    "magnesium": 0.08,
+                    "potassium": 1.04,
+                    "zinc": 0.004,
+                    "phosphorus": 1.59,
+                    "selenium": 0.097,
+                    "ala": 0.00017,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cottage Cheese — FDC 172179 'Cheese, cottage, creamed, large or small curd' (SR Legacy 01012), per 100 g: 98 kcal, protein 11.12 g, fat 4.3 g, sat fat 1.718 g, carbs 3.38 g, fiber 0 g, sugars 2.67 g, sodium 364 mg, cholesterol 17 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172179 per 100 g: vitamin a 37 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.08 mg, vitamin k 0 µg, folate 12 µg DFE, vitamin b12 0.43 µg, vitamin b6 0.046 mg, calcium 83 mg, iron 0.07 mg, magnesium 8 mg, potassium 104 mg, zinc 0.4 mg, phosphorus 159 mg, selenium 9.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172179 per 100 g: ALA 0.017 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 5222.06,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Cottage Cheese — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 12289.5,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Cottage Cheese — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 2.55 kg milk per kg cottage cheese."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 9.02,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cottage Cheese — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 2.55 kg milk per kg + 1.0 kg CO2e/kg for curd-making, creaming and packaging = 9.02. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 5.38,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cottage Cheese — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 2.55 + 1.0 for curd-making, creaming and packaging = 5.38."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00168095,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Cottage Cheese — pasture_ha_per_kg_output: cow milk value 0.00066 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.000509378,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Cottage Cheese — pasture_ha_per_kg_output: cow milk value 0.0002 x 2.55 kg milk per kg cottage cheese."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.142626,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Cottage Cheese — ch4_kg_per_kg_output: cow milk value 0.056 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.127344,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Cottage Cheese — ch4_kg_per_kg_output: cow milk value 0.05 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.0967818,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cottage Cheese — ch4_kg_per_kg_output: cow milk value 0.038 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.0534847,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Cottage Cheese — ch4_kg_per_kg_output: cow milk value 0.021 x 2.55 kg milk per kg cottage cheese."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00483909,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Cottage Cheese — n2o_kg_per_kg_output: cow milk value 0.0019 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.00152813,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cottage Cheese — n2o_kg_per_kg_output: cow milk value 0.0006 x 2.55 kg milk per kg cottage cheese."
+                }
+            },
+            {
+                "value": 0.000662191,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Cottage Cheese — n2o_kg_per_kg_output: cow milk value 0.00026 x 2.55 kg milk per kg cottage cheese."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 3.39408,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Cottage Cheese — co2_kg_per_kg_output: cow milk value 0.94 x 2.55 kg milk per kg cottage cheese + 1 for cottage cheese processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for curd-making, creaming and packaging."
+                }
+            },
+            {
+                "value": 2.37532,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Cottage Cheese — co2_kg_per_kg_output: cow milk value 0.54 x 2.55 kg milk per kg cottage cheese + 1 for cottage cheese processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for curd-making, creaming and packaging."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.865942,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (corn): cow milk value 0.34 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    },
+                    {
+                        "value": 0.738598,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (corn): cow milk value 0.29 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.280158,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    },
+                    {
+                        "value": 0.432971,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.407502,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (soy): cow milk value 0.16 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    },
+                    {
+                        "value": 0.127344,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (soy): cow milk value 0.05 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.45173,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    },
+                    {
+                        "value": 0.127344,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Cottage Cheese — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 2.55 kg milk per kg cottage cheese."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 382,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Cottage Cheese — availability_gg (US): USDA NASS Dairy Products, October 2024 creamed (36,667 thousand lb) + lowfat (33,558) cottage cheese = 70,225 thousand lb x 12 x 0.4536 = 382 Gg. (Cottage cheese curd, 40,704, is an intermediate and not counted.) Annualised from one month."
+                }
+            },
+            {
+                "value": 2970.0,
+                "confidence": 1,
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cottage Cheese — availability_gg (world): no world statistic. US production divided by the US share of world cow milk (12.9%) = ~2,973 Gg. Cottage cheese is concentrated in North America and Northern Europe, so this probably overstates the world."
+                }
+            }
+        ]
+    },
+    {
+        "id": 174,
+        "slug": "ice-cream",
+        "name": "Ice Cream",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy"
+        ],
+        "notes": "Regular vanilla ice cream (~11% fat), nutrition from USDA. The milk side is cow milk × 1.8 kg of milk per kg (fat takes 37% and protein 63% of a milk's value, as in the butter entry: 11/3.7 × 0.373 + 3.5/3.3 × 0.627). It carries the same cow and calf deaths as milk.\n\nAdded sugar (~0.15 kg of cane sugar per kg, confidence 1) is charged through the crop-input rows. Eggs, stabilisers and vanilla are ignored. CO2 adds 1.0 kg CO2e/kg for mixing, freezing, hardening and frozen storage (educated guess, confidence 1). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Ice Cream is made from cow's milk (about 1.8 kg of milk's value per kg of ice cream), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 17,650 kg of ice cream in the US or 7,500 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.07,
+                    "fat": 0.11,
+                    "sat_fat": 0.0679,
+                    "protein": 0.035,
+                    "fiber": 0.007,
+                    "sodium": 0.8,
+                    "carbs": 0.236,
+                    "sugar": 0.2122,
+                    "cholesterol": 0.44,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 1.18,
+                    "vitamin_c": 0.006,
+                    "vitamin_d": 0.002,
+                    "vitamin_e": 0.003,
+                    "vitamin_k": 0.003,
+                    "folate": 0.05,
+                    "vitamin_b12": 0.0039,
+                    "vitamin_b6": 0.00048,
+                    "calcium": 1.28,
+                    "iron": 0.0009,
+                    "magnesium": 0.14,
+                    "potassium": 1.99,
+                    "zinc": 0.0069,
+                    "phosphorus": 1.05,
+                    "selenium": 0.018,
+                    "ala": 0.00175,
+                    "epa_dha": 0.03
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Ice Cream — FDC 167575 'Ice creams, vanilla' (SR Legacy 19095), per 100 g: 207 kcal, protein 3.5 g, fat 11 g, sat fat 6.79 g, carbs 23.6 g, fiber 0.7 g, sugars 21.22 g, sodium 80 mg, cholesterol 44 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 167575 per 100 g: vitamin a 118 µg RAE, vitamin c 0.6 mg, vitamin d 0.2 µg, vitamin e 0.3 mg, vitamin k 0.3 µg, folate 5 µg DFE, vitamin b12 0.39 µg, vitamin b6 0.048 mg, calcium 128 mg, iron 0.09 mg, magnesium 14 mg, potassium 199 mg, zinc 0.69 mg, phosphorus 105 mg, selenium 1.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 167575 per 100 g: ALA 0.175 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 3 mg (EPA 0.003 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 7499.73,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Ice Cream — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 17649.7,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Ice Cream — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 1.77 kg milk per kg ice cream."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 6.59,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Ice Cream — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 1.77 kg milk per kg + 1.0 kg CO2e/kg for mixing, freezing, hardening and frozen storage = 6.59. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 4.05,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Ice Cream — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 1.77 + 1.0 for mixing, freezing, hardening and frozen storage = 4.05."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.00117044,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Ice Cream — pasture_ha_per_kg_output: cow milk value 0.00066 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.000354679,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Ice Cream — pasture_ha_per_kg_output: cow milk value 0.0002 x 1.77 kg milk per kg ice cream."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.0993103,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Ice Cream — ch4_kg_per_kg_output: cow milk value 0.056 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.0886699,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Ice Cream — ch4_kg_per_kg_output: cow milk value 0.05 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.0673891,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Ice Cream — ch4_kg_per_kg_output: cow milk value 0.038 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.0372413,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Ice Cream — ch4_kg_per_kg_output: cow milk value 0.021 x 1.77 kg milk per kg ice cream."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00336945,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Ice Cream — n2o_kg_per_kg_output: cow milk value 0.0019 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.00106404,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Ice Cream — n2o_kg_per_kg_output: cow milk value 0.0006 x 1.77 kg milk per kg ice cream."
+                }
+            },
+            {
+                "value": 0.000461083,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Ice Cream — n2o_kg_per_kg_output: cow milk value 0.00026 x 1.77 kg milk per kg ice cream."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 2.66699,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Ice Cream — co2_kg_per_kg_output: cow milk value 0.94 x 1.77 kg milk per kg ice cream + 1 for ice cream processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for mixing, freezing, hardening and frozen storage."
+                }
+            },
+            {
+                "value": 1.95763,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Ice Cream — co2_kg_per_kg_output: cow milk value 0.54 x 1.77 kg milk per kg ice cream + 1 for ice cream processing. The added 1.0 kg CO2e/kg is an educated guess (confidence 1) for mixing, freezing, hardening and frozen storage."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.602955,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (corn): cow milk value 0.34 x 1.77 kg milk per kg ice cream."
+                        }
+                    },
+                    {
+                        "value": 0.514285,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (corn): cow milk value 0.29 x 1.77 kg milk per kg ice cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.195074,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 1.77 kg milk per kg ice cream."
+                        }
+                    },
+                    {
+                        "value": 0.301478,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 1.77 kg milk per kg ice cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.283744,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (soy): cow milk value 0.16 x 1.77 kg milk per kg ice cream."
+                        }
+                    },
+                    {
+                        "value": 0.0886699,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (soy): cow milk value 0.05 x 1.77 kg milk per kg ice cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 1.01084,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 1.77 kg milk per kg ice cream."
+                        }
+                    },
+                    {
+                        "value": 0.0886699,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Ice Cream — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 1.77 kg milk per kg ice cream."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 82,
+                "food_slug": "cane-sugar",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.15,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Ice Cream — kg of cane sugar per kg of ice cream: vanilla ice cream has about 21 g of sugars per 100 g (USDA SR 19095), of which roughly 5 g is lactose from the milk, leaving ~16 g of added sugar; I used 0.15 kg. Sugar is entered through the same crop-input mechanism that feed uses, so its land, water and emissions are charged to the ice cream. Eggs, stabilisers and flavouring are ignored."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2257,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "Ice Cream — availability_gg (US): USDA NASS Dairy Products, October 2024 regular hard ice cream 62.5 million gal + lowfat 31.5 million gal = 94.0 million gal x 12 months x ~2.0 kg per gallon of ice cream (hard ice cream is about 0.53 kg/L) = 2,257 Gg. Annualised from a single month; ice cream is seasonal, so the true figure differs."
+                }
+            },
+            {
+                "value": 17560.0,
+                "confidence": 1,
+                "source": {
+                    "id": 531,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/m326m1757/5425n531n/5d86qt05m/dary1224.txt",
+                    "title": "USDA NASS — Dairy Products (December 2024 release; October 2024 production of cream cheese, cottage cheese, sour cream, ice cream)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Ice Cream — availability_gg (world): no world statistic. US production divided by the US share of world cow milk (12.9%) = ~17,564 Gg. Ice cream is far more popular per person in the US than in most countries, so this probably overstates the world."
+                }
+            }
+        ]
+    },
+    {
+        "id": 175,
+        "slug": "kefir",
+        "name": "Kefir",
+        "type": "animal",
+        "category": "dairy",
+        "human_food": 1,
+        "tags": [
+            "dairy",
+            "beverage"
+        ],
+        "notes": "Lowfat plain kefir, nutrition from USDA (Lifeway, the only kefir record in the USDA tables). Kefir is basically fermented lowfat milk, so every per-kg impact is cow milk × 0.81 kg of milk per kg, using the butter entry's fat/protein value split (0.93/3.7 × 0.373 + 3.79/3.3 × 0.627). It carries the same cow and calf deaths as milk.\n\nCO2 adds 0.3 kg CO2e/kg for fermentation and bottling (educated guess, confidence 1). Availability is a confidence-1 guess of ~3,000 Gg worldwide.",
+        "land_types": {
+            "temperate_grassland": 0.6,
+            "temperate_forest": 0.3,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Pasture and feed crops in the US, Europe and NZ (grassland and long-cleared forest), with some Brazilian soy in feed.",
+        "sentient_harm_explanation": "Kefir is made from cow's milk (about 0.8 kg of milk's value per kg of kefir), so it carries the same animal deaths as milk. Each dairy cow must give birth roughly every year to keep producing milk; only about one of her calves is kept to replace her, and the rest die young or are raised and killed for veal or beef. Per cow we count: her own death (about 5 years old in the US; longer worldwide), about 2.1 calves in the US or 3.5 worldwide at roughly 1.5 years old each, and a lifetime of about 38,447 kg of kefir in the US or 16,337 kg worldwide.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.41,
+                    "fat": 0.0093,
+                    "sat_fat": 0.00658,
+                    "protein": 0.0379,
+                    "fiber": 0.0,
+                    "sodium": 0.4,
+                    "carbs": 0.0448,
+                    "sugar": 0.0461,
+                    "cholesterol": 0.05,
+                    "trans_fat": 0.00037,
+                    "vitamin_a": 1.71,
+                    "vitamin_c": 0.002,
+                    "vitamin_d": 0.01,
+                    "vitamin_e": 0.0002,
+                    "vitamin_k": 0.001,
+                    "folate": 0.13,
+                    "vitamin_b12": 0.0029,
+                    "vitamin_b6": 0.00058,
+                    "calcium": 1.3,
+                    "iron": 0.0004,
+                    "magnesium": 0.12,
+                    "potassium": 1.64,
+                    "zinc": 0.0046,
+                    "phosphorus": 1.05,
+                    "selenium": 0.036,
+                    "ala": 6e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Kefir — FDC 170904 'Kefir, lowfat, plain, LIFEWAY' (SR Legacy 01289), per 100 g: 41 kcal, protein 3.79 g, fat 0.93 g, sat fat 0.658 g, carbs 4.48 g, fiber 0 g, sugars 4.61 g, sodium 40 mg, cholesterol 5 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170904 per 100 g: vitamin a 171 µg RAE, vitamin c 0.2 mg, vitamin d 1 µg, vitamin e 0.02 mg, vitamin k 0.1 µg, folate 13 µg DFE, vitamin b12 0.29 µg, vitamin b6 0.058 mg, calcium 130 mg, iron 0.04 mg, magnesium 12 mg, potassium 164 mg, zinc 0.46 mg, phosphorus 105 mg, selenium 3.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 170904 per 100 g: ALA 0.006 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "neuron_count": [
+            {
+                "value": 9300000000,
+                "confidence": 2,
+                "source": {
+                    "id": 439,
+                    "url": "https://doi.org/10.3389/fnana.2014.00128",
+                    "title": "Kazu et al. (2014) — Cellular scaling rules for the brain of Artiodactyla include a highly folded cortex with few neurons (Frontiers in Neuroanatomy)",
+                    "note": "CORRECTION 2026-10-01: was 3.00e+09 (an older projection, not a count). Cows Milk — neuron_count (ESTIMATE, no direct count for this species): adult cattle brain 480.5 g (Ballarin et al. 2016, n = 150) → 9.3 bn whole-brain neurons. Kazu et al. 2014 (source 439) measured whole-brain neurons by isotropic fractionator in 5 artiodactyls (pig 57.8 g brain / 2.22 bn, springbok 102.1 g / 3.06 bn, blesbok 155.1 g / 3.90 bn, kudu 308.5 g / 6.09 bn, giraffe 528 g / 11.21 bn); fitted power law N = e^18.559 × M^0.712 (reproduces springbok within 1%). Brain mass source id 451."
+                }
+            }
+        ],
+        "weight_kg": [
+            {
+                "value": 680,
+                "confidence": 3,
+                "source": {
+                    "id": 17,
+                    "url": "https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons",
+                    "title": "Wikipedia — List of Animals by Number of Neurons",
+                    "note": "Dairy cow — typical live weight of adult Holstein dairy cow ~680 kg; consistent with USDA breed average for high-producing commercial dairy herds."
+                }
+            }
+        ],
+        "lifetime_output_kg": [
+            {
+                "value": 16337.1,
+                "confidence": 3,
+                "source": {
+                    "id": 226,
+                    "url": "https://www.fao.org/faostat/en/#data/QCL",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL): Raw milk of cattle, 2023",
+                    "note": "Kefir — lifetime_output_kg: cow milk lifetime output 13300 kg ÷ 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 38447.4,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 227,
+                    "url": "https://www.nass.usda.gov/Publications/Todays_Reports/reports/mkpr0225.pdf",
+                    "title": "USDA NASS — Milk Production (February 2025): 2024 annual production per cow",
+                    "note": "Kefir — lifetime_output_kg: cow milk lifetime output 31300 kg ÷ 0.81 kg milk per kg kefir."
+                }
+            }
+        ],
+        "offspring_deaths_per_animal": [
+            {
+                "value": 3.54,
+                "confidence": 3,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (world): GLEAM herd model — calves born per cow-year = fertility × (1 − adult death rate) + replacement rate; over her productive life one calf becomes her herd replacement and the rest die. Per cow = fertility × (1 − adult death) / replacement rate, cow-weighted across GLEAM regions with FAOSTAT 2023 milk-animal counts = 3.54 (NA 2.13, W. Europe 2.57, S. Asia 3.29, Sub-Saharan Africa 6.77). Includes calves that die young on-farm (GLEAM calf death rates 8–50%; ~30% of these offspring deaths worldwide) as well as surplus calves raised and slaughtered for veal/beef. Derived."
+                }
+            },
+            {
+                "value": 2.13,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Calves that die per cow (US): GLEAM 1.0 North America herd parameters — fertility 77%, adult death rate 3%, replacement rate 35%. Calves born per cow over her life = (0.77 × 0.97 + 0.35) / 0.35 = 3.13; minus 1 kept as her replacement = 2.13. Includes the ~8% of calves GLEAM assumes die young on-farm (≈12% of these offspring deaths); the rest are surplus bull and heifer calves sold for veal or dairy-beef. Derived."
+                }
+            }
+        ],
+        "offspring_captivity_years": [
+            {
+                "value": 1.62,
+                "confidence": 2,
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (world): GLEAM age at slaughter for surplus dairy calves = age at first calving × (slaughter weight − birth weight) / (adult weight − birth weight), per region (e.g. NA 1.6–1.7 yr, S. Asia 0.6–1.1 yr, Sub-Saharan Africa 3.3 yr); calves dying young assumed ~0.08 yr (~1 month, assumption). Weighted over all offspring deaths and FAOSTAT cow counts = 1.62 yr. GLEAM assumes surplus calves are mostly fattened for beef rather than killed as very young veal, so this is higher than a veal-only figure (~0.1–0.5 yr). Derived."
+                }
+            },
+            {
+                "value": 1.46,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 225,
+                    "url": "https://www.fao.org/fileadmin/user_upload/gleam/docs/GLEAM_1.0_Model_description.pdf",
+                    "title": "FAO GLEAM 1.0 Model Description — Table 2.3 Herd parameters for dairy cattle, regional averages",
+                    "note": "Years in captivity of those calves (US): GLEAM 1.0 North America — surplus dairy bull calves fattened to 605 kg (≈1.68 yr) and heifers to 564 kg (≈1.56 yr), from age at first calving 2.1 yr × (slaughter − birth weight)/(adult − birth weight); ~8% die young (~0.08 yr, assumed). Weighted = 1.46 yr. Consistent with most US dairy bull calves now going to dairy-beef / beef-on-dairy feedlots rather than veal (US veal is a small share). Derived."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 54,
+                    "url": "https://www.fao.org/uploads/media/bognar_bfe-r-02-03.pdf",
+                    "title": "FAO/BfR — Tables on Weight Yield of Food and Retention Factors",
+                    "note": "Milk — yield_fraction 1.0: Feed conversion ratios for dairy are already expressed per kg milk output; no further live-weight-to-edible conversion is needed. Milk is consumed as produced."
+                }
+            }
+        ],
+        "bycatch_food_id": null,
+        "bycatch_food_slug": null,
+        "bycatch_amount": null,
+        "emissions_per_kg": [
+            {
+                "value": 2.86,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Kefir — emissions_per_kg (world): no published life-cycle figure for this product was found. Cow milk's world footprint (3.15 kg CO2e/kg) x 0.81 kg milk per kg + 0.3 kg CO2e/kg for fermentation, cooling and bottling = 2.86. This sets the benchmark the build check compares the gas-by-gas total against."
+                }
+            },
+            {
+                "value": 1.7,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Kefir — emissions_per_kg (US): cow milk's US footprint (1.72 kg CO2e/kg, mean of the two US milk values) x 0.81 + 0.3 for fermentation, cooling and bottling = 1.70."
+                }
+            }
+        ],
+        "pasture_ha_per_kg_output": [
+            {
+                "value": 0.000537305,
+                "confidence": 3,
+                "source": {
+                    "id": 297,
+                    "url": "https://www.science.org/doi/suppl/10.1126/science.aaq0216/suppl_file/aaq0216_datas2.xls",
+                    "title": "Poore & Nemecek (2018) — Data S2 (aaq0216_DataS2.xls), 'Results - Global Totals' sheet",
+                    "note": "Kefir — pasture_ha_per_kg_output: cow milk value 0.00066 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.00016282,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 298,
+                    "url": "https://doi.org/10.1073/pnas.1402183111",
+                    "title": "Eshel et al. (2014) — Land, irrigation water, greenhouse gas, and reactive nitrogen burdens of meat, eggs, and dairy production in the United States (PNAS 111:11996), SI workbook",
+                    "note": "Kefir — pasture_ha_per_kg_output: cow milk value 0.0002 x 0.81 kg milk per kg kefir."
+                }
+            }
+        ],
+        "pasture_green_water_l_per_ha": [
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 65,
+                    "url": "https://www.waterfootprint.org/resources/Report48-WaterFootprintAnimalProducts-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra (2012) — Water Footprint of Animal Products (Report 48, Vol. 1)",
+                    "note": "Dairy pasture — green water evapotranspiration: global production-weighted average ~6,500,000 L/ha/yr (650 mm/yr) for permanent pasture. Reflects mix of tropical high-ET systems (~800–1,200 mm/yr) and temperate lower-ET systems (~400–700 mm/yr)."
+                }
+            },
+            {
+                "value": 6500000,
+                "confidence": 2,
+                "source": {
+                    "id": 66,
+                    "url": "https://www.fao.org/3/x0490e/x0490e00.htm",
+                    "title": "Allen et al. (1998) — FAO Irrigation and Drainage Paper No. 56: Crop Evapotranspiration",
+                    "note": "Dairy pasture — ET corroboration: FAO-56 Penman-Monteith method yields global area-weighted ET of ~600–700 mm/yr for permanent pasture, consistent with the 650 mm/yr (6,500,000 L/ha/yr) value used for dairy."
+                }
+            }
+        ],
+        "native_fraction": [
+            {
+                "value": 0.8,
+                "confidence": 2,
+                "source": {
+                    "id": 55,
+                    "url": "https://science.sciencemag.org/content/360/6392/987",
+                    "title": "Poore & Nemecek (2018) — Reducing food's environmental impacts through producers and consumers (Science)",
+                    "note": "Milk — native_fraction 0.8: approximately 80% of dairy land is on long-established agricultural land with minimal ongoing ecosystem conversion. Dairy farming is predominantly near infrastructure; less tropical deforestation pressure than beef."
+                }
+            }
+        ],
+        "ch4_kg_per_kg_output": [
+            {
+                "value": 0.0455895,
+                "confidence": 3,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Kefir — ch4_kg_per_kg_output: cow milk value 0.056 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.0407049,
+                "confidence": 3,
+                "source": {
+                    "id": 291,
+                    "url": "https://www.fao.org/4/k7930e/k7930e00.pdf",
+                    "title": "FAO (2010) — Greenhouse Gas Emissions from the Dairy Sector: A Life Cycle Assessment",
+                    "note": "Kefir — ch4_kg_per_kg_output: cow milk value 0.05 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.0309358,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Kefir — ch4_kg_per_kg_output: cow milk value 0.038 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.0170961,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Kefir — ch4_kg_per_kg_output: cow milk value 0.021 x 0.81 kg milk per kg kefir."
+                }
+            }
+        ],
+        "n2o_kg_per_kg_output": [
+            {
+                "value": 0.00154679,
+                "confidence": 2,
+                "source": {
+                    "id": 290,
+                    "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                    "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                    "note": "Kefir — n2o_kg_per_kg_output: cow milk value 0.0019 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.000488459,
+                "confidence": 2,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Kefir — n2o_kg_per_kg_output: cow milk value 0.0006 x 0.81 kg milk per kg kefir."
+                }
+            },
+            {
+                "value": 0.000211666,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 292,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                    "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                    "note": "Kefir — n2o_kg_per_kg_output: cow milk value 0.00026 x 0.81 kg milk per kg kefir."
+                }
+            }
+        ],
+        "co2_kg_per_kg_output": [
+            {
+                "value": 1.06525,
+                "confidence": 3,
+                "source": {
+                    "id": 72,
+                    "url": "https://ourworldindata.org/grapher/food-emissions-supply-chain",
+                    "title": "Our World in Data — Food Greenhouse Gas Emissions Across the Supply Chain (Poore & Nemecek 2018)",
+                    "note": "Kefir — co2_kg_per_kg_output: cow milk value 0.94 x 0.81 kg milk per kg kefir + 0.3 for kefir processing. The added 0.3 kg CO2e/kg is an educated guess (confidence 1) for fermentation, cooling and bottling."
+                }
+            },
+            {
+                "value": 0.739613,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 293,
+                    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13325861/",
+                    "title": "Pelton, Bernal & Kurt (2026) — Spatially Resolved Greenhouse Gas Emissions from U.S. Dairy Products (Environ. Sci. Technol. 60:17810)",
+                    "note": "Kefir — co2_kg_per_kg_output: cow milk value 0.54 x 0.81 kg milk per kg kefir + 0.3 for kefir processing. The added 0.3 kg CO2e/kg is an educated guess (confidence 1) for fermentation, cooling and bottling."
+                }
+            }
+        ],
+        "feed": [
+            {
+                "food_id": 6,
+                "food_slug": "corn",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.276794,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Kefir — kg_feed_per_kg_output (corn): cow milk value 0.34 x 0.81 kg milk per kg kefir."
+                        }
+                    },
+                    {
+                        "value": 0.236089,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Kefir — kg_feed_per_kg_output (corn): cow milk value 0.29 x 0.81 kg milk per kg kefir."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 7,
+                "food_slug": "alfalfa",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.0895509,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Kefir — kg_feed_per_kg_output (alfalfa): cow milk value 0.11 x 0.81 kg milk per kg kefir."
+                        }
+                    },
+                    {
+                        "value": 0.138397,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Kefir — kg_feed_per_kg_output (alfalfa): cow milk value 0.17 x 0.81 kg milk per kg kefir."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 4,
+                "food_slug": "soy",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.130256,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Kefir — kg_feed_per_kg_output (soy): cow milk value 0.16 x 0.81 kg milk per kg kefir."
+                        }
+                    },
+                    {
+                        "value": 0.0407049,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Kefir — kg_feed_per_kg_output (soy): cow milk value 0.05 x 0.81 kg milk per kg kefir."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_id": 8,
+                "food_slug": "grass-hay",
+                "kg_feed_per_kg_output": [
+                    {
+                        "value": 0.464036,
+                        "confidence": 2,
+                        "source": {
+                            "id": 290,
+                            "url": "https://www.fao.org/4/i3461e/i3461e.pdf",
+                            "title": "FAO (2013) — Greenhouse gas emissions from ruminant supply chains: A global life cycle assessment (GLEAM; Opio et al.)",
+                            "note": "Kefir — kg_feed_per_kg_output (grass-hay): cow milk value 0.57 x 0.81 kg milk per kg kefir."
+                        }
+                    },
+                    {
+                        "value": 0.0407049,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 292,
+                            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096441/",
+                            "title": "Pelton et al. (2025) — Spatially Resolved Greenhouse Gas Emissions of U.S. Milk Production in 2020 (Environ. Sci. Technol. 59:9552)",
+                            "note": "Kefir — kg_feed_per_kg_output (grass-hay): cow milk value 0.05 x 0.81 kg milk per kg kefir."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 3000,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Kefir — availability_gg (world): no statistic exists. Yogurt in this dataset is ~68,000 Gg; kefir is a niche fermented drink popular in Russia, Eastern Europe and Turkey, so I guessed about 4–5% of that, ~3,000 Gg. Could be off by a factor of three."
+                }
+            }
+        ]
     }
 ]
