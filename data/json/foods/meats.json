@@ -3321,7 +3321,8 @@
         "human_food": 1,
         "tags": [
             "meat",
-            "processed"
+            "processed",
+            "common"
         ],
         "notes": "Raw cured bacon (as sold, pork belly), nutrition from USDA 'Pork, cured, bacon, unprepared'. Everything is copied from the Pork entry (feed, land, gases and the pig figures), treating a kg of bacon as a kg of pork meat, the same approach the repo uses for organ meats (see Beef Liver). The cure usually loses a little weight and the belly is only part of the pig, so this is rough. CO2 adds 0.6 kg CO2e/kg for curing, smoking, slicing and chilled packaging (educated guess, confidence 1; no published figure for that stage alone was found).\n\nNutrition is for raw bacon; cooked bacon loses about two thirds of its weight and is far more calorie-dense. Availability is a confidence-1 guess (~4,000 Gg: about 15% of a pig is belly, ~1,900 Gg in the US alone, and bacon is mostly eaten in North America, the UK, Germany and Canada).",
         "land_types": {

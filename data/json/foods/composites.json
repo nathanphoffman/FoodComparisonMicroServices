@@ -1329,7 +1329,8 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Commercial white sandwich bread, modelled from its ingredients: ~65% wheat flour (1.35 kg of wheat per kg of flour), ~3% sugar, ~2% soybean oil, ~3% salt, yeast and minor ingredients, ~27% water. The recipe shares are confidence 2 and were corrected on 2026-10-06: the first version had only 52% flour, which understated the wheat by about a fifth (it gave 2.06 kcal/g of ingredients against USDA's 2.66). Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses covering baking and distribution. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -1499,7 +1500,8 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Cooked enriched pasta (unsalted), modelled as 0.42 kg of dry pasta per kg cooked (USDA's dry and cooked pasta water contents give a cooking ratio of 2.38) plus absorbed water. Dry pasta is made from semolina, about 71% of the wheat's weight, so each kg of cooked pasta takes ~0.59 kg of wheat. Crop impacts come from the generic wheat entry (not durum).\n\nProcessing emissions (0.25 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses; the home cooking energy and water are not counted. Availability comes from wheat's.",
         "nutrition": [
@@ -1931,8 +1933,9 @@
         "tags": [
             "composite",
             "processed",
-            "legume-product",
-            "vegan"
+            "nut-product",
+            "vegan",
+            "common"
         ],
         "notes": "Smooth, salted peanut butter, modelled from its ingredients: ~90% peanuts (shelled kernels), ~4% sugar, ~3% palm oil, ~3% salt and minor ingredients. The shares are confidence-2 estimates; the US standard requires at least 90% peanuts. Crop impacts come from the peanut, cane sugar and palm oil entries.\n\nProcessing emissions (0.35 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -2074,7 +2077,8 @@
             "composite",
             "processed",
             "legume-product",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Commercial hummus, modelled from its ingredients: ~55% cooked chickpeas, ~7% tahini (sesame), ~4% olive oil, ~4% lemon juice, ~1% garlic, ~1% salt, ~28% water. The shares are confidence-2 estimates and were corrected on 2026-10-06: the first version had 12% tahini and 8% olive oil, which gave 2.24 kcal/g of ingredients against USDA's 1.66; the new mix gives ~1.65. Crop impacts come from the chickpea, sesame, olive oil, lemon and garlic entries.\n\nProcessing emissions (0.3 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -2494,7 +2498,8 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Commercial whole-wheat sandwich bread, modelled from its ingredients: ~60% whole-wheat flour (1.0 kg of wheat per kg of flour, since the bran is kept), ~4% sugar, ~2% soybean oil, ~3% salt, yeast and gluten, ~31% water. The shares are confidence-2 estimates, checked against USDA's calories and protein. Because the bran stays in, whole-wheat bread needs less wheat per kg than white bread. Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -3125,7 +3130,8 @@
         "tags": [
             "composite",
             "processed",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Dark chocolate (70–85% cacao), modelled as ~70% cocoa mass (nibs and cocoa butter), ~28% sugar and ~2% lecithin and vanilla. Cocoa mass emissions (~63.2 kg CO2e/kg) were derived from Poore & Nemecek's dark chocolate value (46.65), so this entry reproduces that figure by construction; it is mostly land-use change from cocoa grown on cleared forest. Water and land come from the cocoa mass and cane sugar entries.\n\nMilk chocolate isn't modelled, because composites can't include animal ingredients. Processing emissions (1.5 kg CO2e/kg) and water (10 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -3248,7 +3254,8 @@
         "tags": [
             "composite",
             "processed",
-            "vegan"
+            "vegan",
+            "cheese-substitute"
         ],
         "notes": "Nutritional yeast flakes, modelled as molasses-grown yeast: ~3.8 kg of cane molasses per kg of dry yeast (educated guess). Molasses is a by-product that carries only a value share of the cane field, so the crop footprint is small; most of the footprint is the fermentation and drying energy (~3 kg CO2e/kg, a confidence-1 guess). Nutrition is the Bob's Red Mill large-flake label (fortified with B vitamins); other brands differ.\n\nWater and emissions are confidence-1 guesses, and urea, phosphate and vitamin inputs are ignored. Availability comes from molasses supply.",
         "nutrition": [
@@ -3346,7 +3353,8 @@
             "composite",
             "processed",
             "beverage",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Not-from-concentrate orange juice, modelled as 2.2 kg of oranges per kg of juice (juice is ~45% of the fruit's weight; educated estimate). All of the fruit's land, water, pesticides and emissions come from the orange entry; the by-product peel and pulp aren't given a share, which slightly overstates the juice. Nutrition is USDA raw orange juice.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (1.5 L/kg) are confidence-1 guesses. Availability comes from oranges' supply.",
         "nutrition": [
@@ -3455,7 +3463,8 @@
             "processed",
             "beverage",
             "alcohol",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Regular beer (~4.5% alcohol), modelled as ~15% malted barley (1.2 kg of barley per kg of malt) plus water. Crop impacts come from the barley entry. Hops, yeast and the glass or can are ignored apart from the packaging in the processing figure. Mekonnen & Hoekstra's own figure for beer is 298 L/kg of water, close to what this builds up to. Nutrition is USDA regular beer.\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from barley's supply.",
         "nutrition": [
@@ -3580,7 +3589,8 @@
             "processed",
             "beverage",
             "alcohol",
-            "vegan"
+            "vegan",
+            "common"
         ],
         "notes": "Red table wine, modelled as 1.4 kg of grapes per kg of wine. Crop impacts come from the grapes entry, which is for table grapes: its US spray rate (~95 kg/ha) is dominated by fumigants and sulphur, and wine grapes differ, so treat the pesticide side as rough. Nutrition is USDA red table wine (about 12–13% alcohol).\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from grapes' supply.",
         "nutrition": [

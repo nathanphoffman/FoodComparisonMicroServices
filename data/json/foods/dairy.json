@@ -4766,7 +4766,8 @@
         "human_food": 1,
         "tags": [
             "dairy",
-            "cheese"
+            "cheese",
+            "common"
         ],
         "notes": "Cream cheese (~34% fat), nutrition from USDA. Every per-kg impact is cow milk × 4.6 kg of milk per kg (value split as in the butter entry: 34.44/3.7 × 0.373 + 6.15/3.3 × 0.627). The whey that cheese-making removes is sold, which is why the protein side is charged by protein rather than by all milk solids. It carries the same cow and calf deaths as milk.\n\nCO2 adds 1.0 kg CO2e/kg for cheese-making and cold-chain packaging (educated guess, confidence 1; Poore & Nemecek's cheese processing is 1.38). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess.",
         "land_types": {
@@ -5725,7 +5726,8 @@
         "category": "dairy",
         "human_food": 1,
         "tags": [
-            "dairy"
+            "dairy",
+            "common"
         ],
         "notes": "Regular vanilla ice cream (~11% fat), nutrition from USDA. The milk side is cow milk × 1.8 kg of milk per kg (fat takes 37% and protein 63% of a milk's value, as in the butter entry: 11/3.7 × 0.373 + 3.5/3.3 × 0.627). It carries the same cow and calf deaths as milk.\n\nAdded sugar (~0.15 kg of cane sugar per kg, confidence 1) is charged through the crop-input rows. Eggs, stabilisers and vanilla are ignored. CO2 adds 1.0 kg CO2e/kg for mixing, freezing, hardening and frozen storage (educated guess, confidence 1). US availability is USDA's October 2024 production annualised; the world figure is a confidence-1 guess.",
         "land_types": {

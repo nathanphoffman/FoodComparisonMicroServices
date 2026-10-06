@@ -15,19 +15,19 @@ type FoodFilter = {
 export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'all',        label: 'All' },
     { key: 'milks',      label: 'Milks',        tags: ['milk'] },
-    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'], tags: ['cheese-substitute'] },
+    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'], tags: ['cheese-substitute', 'dairy'] },
     { key: 'meat',       label: 'Meat',         categories: ['meats'], tags: ['meat-substitute'] },
     { key: 'seafood',    label: 'Seafood',      categories: ['seafood'] },
     { key: 'grains',     label: 'Grains',       categories: ['grains'], tags: ['grain-product'] },
     { key: 'legumes',    label: 'Legumes',      categories: ['legumes'], tags: ['legume-product'] },
-    { key: 'nuts-seeds', label: 'Nuts & Seeds', categories: ['nuts', 'seeds'] },
+    { key: 'nuts-seeds', label: 'Nuts & Seeds', categories: ['nuts', 'seeds'], tags: ['nut-product'] },
     { key: 'vegetables', label: 'Vegetables',   categories: ['vegetables', 'leafy'] },
     { key: 'fruits',     label: 'Fruits',       categories: ['fruits'] },
     { key: 'oils',       label: 'Oils',         categories: ['oils'] },
-    { key: 'sweeteners', label: 'Sweeteners',   categories: ['sweeteners'] },
+    { key: 'sweeteners', label: 'Sweeteners',   categories: ['sweeteners'], tags: ['sweetener'] },
     { key: 'beverages',  label: 'Beverages',    categories: ['beverages'], tags: ['beverage'] },
     { key: 'composites', label: 'Composites',   categories: ['composites'] },
-    { key: 'vegan',      label: 'Vegan',        tags: ['vegan'] },
+    { key: 'vegan',      label: 'Vegan-Substitutes', tags: ['vegan'] },
 ];
 
 export const DEFAULT_FOOD_FILTER = 'all';
