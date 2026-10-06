@@ -18,7 +18,7 @@ use row::compute_row;
 
 // ── Entry point ──────────────────────────────────────────────────────────────
 
-/// Scores every food, plus the custom meal (if any) as the last row.
+/// Scores every food, plus any custom foods (meal, diet) as the last rows.
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     // 1. Per-food values (emissions, land use, water, harm, …) in Compare By units.
     let norms = NormFactors::from_foods(&foods);
@@ -27,8 +27,10 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
         .map(|food| compute_row(food, query, &norms))
         .collect();
 
-    // 2. The custom meal, blended from its ingredients' rows.
-    let mut meal = meal::synthesize_meal(&rows, &query.meal_ingredients);
+    // 2. Custom foods (meal, diet), each blended from its ingredients' rows.
+    let mut blends: Vec<meal::Blend> = query.custom_foods.iter()
+        .filter_map(|custom| meal::synthesize(&rows, &foods, custom))
+        .collect();
 
     // 3. Final scores, relative to the reference food. Left as None when the
     //    reference isn't in the batch.
@@ -39,11 +41,11 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
                 row.improvement_detail = detail;
             }
         }
-        if let Some(meal) = &mut meal {
-            meal.final_score = comparison.meal_score(meal, &rows);
+        for blend in &mut blends {
+            blend.row.final_score = comparison.blend_score(blend);
         }
     }
 
-    rows.extend(meal);
+    rows.extend(blends.into_iter().map(|blend| blend.row));
     rows
 }

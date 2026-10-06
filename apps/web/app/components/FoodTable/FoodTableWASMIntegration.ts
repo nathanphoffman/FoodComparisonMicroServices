@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../_wasm-signal';
-import type { RawFood, LandTypes, NutritionWeights } from './FoodTableTypes';
+import type { RawFood, LandTypes, NutritionWeights, CustomFoodInput } from './FoodTableTypes';
 import type { ScoredRow } from './FoodTableSort';
 import type { SliderValues } from './FoodTableTypes';
 
@@ -23,7 +23,7 @@ type SliderQuery = {
     finalIntelligenceExponent:  number;
     zeroBetterMultiplier:       number;
     referenceSlug:              string | null;
-    mealIngredients:            { slug: string; fraction: number }[];
+    customFoods:                CustomFoodInput[];
     nutritionPriority:          number;
     emissionsPriority:          number;
     intelligencePriority:       number;
@@ -79,7 +79,7 @@ export async function loadWasm() {
  *  - `scoringError`    — non-null when the last score call threw; old scores stay visible
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
-export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) {
+export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, customFoods: CustomFoodInput[]) {
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
     const loadedWasmBuildId              = useRef(WASM_BUILD_ID);
@@ -99,7 +99,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
 
         const { weights, scorePriorities, greenWaterWeight, greyWaterWeight, killMultiplier, captivityMultiplier,
                 neuronExponent, weightExponent, finalIntelligenceExponent,
-                zeroBetterMultiplier, referenceSlug, mealIngredients, landTypeWeights, nutritionWeights, winDampening,
+                zeroBetterMultiplier, referenceSlug, landTypeWeights, nutritionWeights, winDampening,
                 overHuntingFactor, overGatheringFactor } = sliderValues;
 
         const input: ScoreInput = {
@@ -118,7 +118,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
                 finalIntelligenceExponent: finalIntelligenceExponent,
                 zeroBetterMultiplier:      zeroBetterMultiplier,
                 referenceSlug:             referenceSlug,
-                mealIngredients:           mealIngredients,
+                customFoods:               customFoods,
                 nutritionPriority:         scorePriorities.nutrition,
                 emissionsPriority:         scorePriorities.emissions,
                 intelligencePriority:      scorePriorities.intelligence,
@@ -141,7 +141,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues) 
             // Keep the last good scores visible; just surface the error.
             setScoringError(e instanceof Error ? e.message : String(e));
         }
-    }, [rawFoods, sliderValues]);
+    }, [rawFoods, sliderValues, customFoods]);
 
     return { scored, scoringError, setScoringError };
 }

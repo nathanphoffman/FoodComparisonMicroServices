@@ -99,7 +99,6 @@ export type SentientHarmDetail = {
 };
 
 import type { SortKey } from './FoodTableSort';
-import type { MealIngredient } from './MealBuilder';
 
 // ── Food data (rows returned by the API) ──────────────────────────────────────
 
@@ -214,13 +213,35 @@ export type SliderValues = {
     overHuntingFactor:          number;
     overGatheringFactor:        number;
     referenceSlug:              string;
-    mealIngredients:            MealIngredient[];
 };
 
-// Minimal RawFood stub for the synthetic "your-meal" row, which is produced by
-// WASM but never exists in rawFoods from the API.
-export const MEAL_STUB: RawFood = {
-    name: 'Your Meal', slug: 'your-meal', type: 'plant',
+// ── Custom foods (meal, diet) ─────────────────────────────────────────────────
+// User-built composites, scored by WASM as extra rows that never exist in rawFoods.
+
+/** What an ingredient's percentage is a share of. */
+export type CustomFoodBasis = 'calories' | 'mass';
+
+export type MealIngredient = { slug: string; fraction: number };
+
+export type CustomFoodInput = {
+    slug:        string;
+    name:        string;
+    basis:       CustomFoodBasis;
+    ingredients: MealIngredient[];
+};
+
+export const CUSTOM_FOODS = [
+    { slug: 'your-meal', name: 'Your Meal', heading: 'Custom Meal', storageKey: 'food-compare:custom-meal' },
+    { slug: 'your-diet', name: 'Your Diet', heading: 'Diet',        storageKey: 'food-compare:diet' },
+] as const;
+
+export function isCustomFoodSlug(slug: string): boolean {
+    return CUSTOM_FOODS.some(custom => custom.slug === slug);
+}
+
+// Minimal RawFood stub for a custom food's row.
+export const customFoodStub = (slug: string, name: string): RawFood => ({
+    name, slug, type: 'plant',
     calories: 0, fat: 0, protein: 0, fiber: 0, sat_fat: 0, neuron_count: 0,
     sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null, micronutrients: null,
     yield_kg_ha: null, pasture_ha_per_kg_output: null, emissions_per_kg: null,
@@ -237,7 +258,7 @@ export const MEAL_STUB: RawFood = {
     wild_fish_kg_per_kg: null, wild_fish_neuron_count: null, wild_fish_weight_kg: null, wild_fish_lifespan_years: null,
     availability_gg: null, sentient_harm_explanation: null, land_types: null,
     category: null, tags: [],
-};
+});
 
 export const EMPTY_SENTIENT_HARM_DETAIL: SentientHarmDetail = {
     directKillScore: 0,

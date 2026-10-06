@@ -13,14 +13,15 @@ import { SentientHarmCell } from './Cells/SentientHarmCell';
 import { CaptiveSentienceCell } from './Cells/CaptiveSentienceCell';
 import { FinalScoreCell } from './Cells/FinalScoreCell';
 import { AvailabilityCell } from './Cells/AvailabilityCell';
-import { getUnitLabel, toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
+import { getUnitLabel, toNutritionDetail, blendNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs } from './FoodTableInputs';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableDefaults';
 import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
-import { EMPTY_SENTIENT_HARM_DETAIL, MEAL_STUB } from './FoodTableTypes';
+import type { CustomFoodInput } from './FoodTableTypes';
+import { EMPTY_SENTIENT_HARM_DETAIL, CUSTOM_FOODS, customFoodStub, isCustomFoodSlug } from './FoodTableTypes';
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import type { FigureKey } from './FoodDetail/FoodDetailFigures';
@@ -43,8 +44,21 @@ export function FoodTable() {
     const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
     const closeDetail = useCallback(() => setSelectedSlug(null), []);
 
+    // Custom meal / diet, keyed by slug so each builder can report on its own
+    const [customFoodsBySlug, setCustomFoodsBySlug] = useState<Record<string, CustomFoodInput>>({});
+    const customFoods = useMemo(() => Object.values(customFoodsBySlug), [customFoodsBySlug]);
+    const handleCustomFoodChange = useCallback(
+        (food: CustomFoodInput) => setCustomFoodsBySlug(previous => ({ ...previous, [food.slug]: food })),
+        [],
+    );
+
+    // Combined nutrition for the custom foods' tooltips
+    const customNutrition = useMemo(() => new Map(
+        customFoods.map(custom => [custom.slug, blendNutritionDetail(custom, rawFoods)]),
+    ), [customFoods, rawFoods]);
+
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
-    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues);
+    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues, customFoods);
     const dismissScoringError = useCallback(() => setScoringError(null), [setScoringError]);
 
     // Sort state
@@ -84,10 +98,11 @@ export function FoodTable() {
     // ── Sort rows using WASM-scored values ────────────────────────────────────
 
     // Filtering only hides rows; every food is still scored so scores don't shift
-    // with the filter. The custom meal row always stays visible.
+    // with the filter. Custom meal / diet rows always stay visible.
     const displayRows = useMemo(() => {
         const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, foodFilter));
-        const foodsToSort = scored.has('your-meal') ? [...visibleFoods, MEAL_STUB] : visibleFoods;
+        const customRows = CUSTOM_FOODS.filter(custom => scored.has(custom.slug)).map(custom => customFoodStub(custom.slug, custom.name));
+        const foodsToSort = [...visibleFoods, ...customRows];
         return sortRows(foodsToSort, scored);
     }, [rawFoods, foodFilter, scored, sortRows]);
 
@@ -103,11 +118,11 @@ export function FoodTable() {
             const scoredRow = scored.get(food.slug);
             const referenceWater = food.type === 'animal' ? food.feed_water_per_kg : food.water_per_kg;
             return (
-                <Row key={food.slug} className={food.slug === 'your-meal' ? 'bg-yellow-50' : undefined}>
+                <Row key={food.slug} className={isCustomFoodSlug(food.slug) ? 'bg-yellow-50' : undefined}>
                     {activeCols.map(column => {
                         switch (column.key) {
                             case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
-                            case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={toNutritionDetail(food)} />;
+                            case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} />;
                             case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
                             case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
                             case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;
@@ -121,7 +136,7 @@ export function FoodTable() {
                 </Row>
             );
         })
-    ), [displayRows, scored, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
+    ), [displayRows, scored, customNutrition, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
     const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:    `CO₂e (kg / ${unit})`,
@@ -151,6 +166,7 @@ export function FoodTable() {
         <div className="mt-6">
             <FoodTableInputs
                 onSliderValuesChange={setSliderValues}
+                onCustomFoodChange={handleCustomFoodChange}
                 scoringError={scoringError}
                 onDismissScoringError={dismissScoringError}
                 onActiveColsChange={setActiveCols}

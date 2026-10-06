@@ -105,5 +105,4 @@ export const DEFAULT_SLIDER_VALUES: SliderValues = {
     overHuntingFactor:          DEFAULT_OVER_HUNTING,
     overGatheringFactor:        DEFAULT_OVER_GATHERING,
     referenceSlug:              'chicken',
-    mealIngredients:            [],
 };

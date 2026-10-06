@@ -34,7 +34,7 @@ pub struct SliderQuery {
     #[serde(default = "default_zero_better_multiplier")]
     pub zero_better_multiplier: f64, // how many times better a zero score is vs the next best (default 2.0)
     #[serde(default)]
-    pub meal_ingredients: Vec<MealIngredient>,
+    pub custom_foods: Vec<CustomFood>, // user-built composites (custom meal, diet) scored as extra rows
 
     // Score priorities: how much each measure counts toward the Improvement score.
     // 0–100, sum to 100 in the UI; only their relative size matters here.
@@ -74,10 +74,29 @@ pub struct SliderQuery {
     pub over_gathering_factor: f64,
 }
 
+/// What an ingredient's fraction is a share of.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Basis {
+    #[default]
+    Calories,
+    Mass,
+}
+
 #[derive(Debug, Clone, Deserialize)]
 pub struct MealIngredient {
     pub slug:     String,
     pub fraction: f64,
+}
+
+/// A composite row the user builds from foods, e.g. "Your Meal" or "Your Diet".
+#[derive(Debug, Clone, Deserialize)]
+pub struct CustomFood {
+    pub slug:        String,
+    pub name:        String,
+    #[serde(default)]
+    pub basis:       Basis,
+    pub ingredients: Vec<MealIngredient>,
 }
 
 fn default_zero_better_multiplier() -> f64 { 2.0 }

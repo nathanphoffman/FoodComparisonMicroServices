@@ -1,4 +1,5 @@
-import type { RawFood } from './FoodTableTypes';
+import type { RawFood, CustomFoodInput, Micronutrients } from './FoodTableTypes';
+import { MICRONUTRIENT_KEYS } from './FoodTableTypes';
 import type { FoodWeights, IntelligenceDetail, MicronutrientKey, NutritionDetail } from './FoodTableTypes';
 
 // ── Display-only constants ────────────────────────────────────────────────────
@@ -98,6 +99,47 @@ export function toNutritionDetail(food: RawFood): NutritionDetail {
         sugar:        food.sugar,
         protein:      food.protein,
         micronutrients: food.micronutrients,
+    };
+}
+
+/**
+ * Combined nutrition (per gram) of a custom meal / diet: each ingredient's per-gram
+ * values weighted by its share of the mass. A calorie share is turned into mass by
+ * dividing by the food's calories per gram (same as the WASM blend).
+ * Optional nutrients are shown if any ingredient has them; missing ones count as 0.
+ */
+export function blendNutritionDetail(custom: CustomFoodInput, foods: RawFood[]): NutritionDetail | null {
+    const parts = custom.ingredients.flatMap(({ slug, fraction }) => {
+        const food = foods.find(f => f.slug === slug);
+        if (!food || fraction <= 0) return [];
+        const mass = custom.basis === 'mass' ? fraction : food.calories > 0 ? fraction / food.calories : 0;
+        return mass > 0 ? [{ food, mass }] : [];
+    });
+    const totalMass = parts.reduce((sum, part) => sum + part.mass, 0);
+    if (totalMass <= 0) return null;
+
+    const blend = (value: (food: RawFood) => number | null | undefined): number | null => {
+        if (parts.every(part => value(part.food) == null)) return null;
+        return parts.reduce((sum, part) => sum + (part.mass / totalMass) * (value(part.food) ?? 0), 0);
+    };
+    const micronutrients: Micronutrients = {};
+    for (const key of MICRONUTRIENT_KEYS) {
+        const amount = blend(food => food.micronutrients?.[key]);
+        if (amount != null) micronutrients[key] = amount;
+    }
+
+    return {
+        calories:     blend(food => food.calories) ?? 0,
+        fat:          blend(food => food.fat) ?? 0,
+        saturatedFat: blend(food => food.sat_fat) ?? 0,
+        transFat:     blend(food => food.trans_fat),
+        cholesterol:  blend(food => food.cholesterol),
+        sodium:       blend(food => food.sodium),
+        carbs:        blend(food => food.carbs),
+        fiber:        blend(food => food.fiber) ?? 0,
+        sugar:        blend(food => food.sugar),
+        protein:      blend(food => food.protein) ?? 0,
+        micronutrients: Object.keys(micronutrients).length > 0 ? micronutrients : null,
     };
 }
 

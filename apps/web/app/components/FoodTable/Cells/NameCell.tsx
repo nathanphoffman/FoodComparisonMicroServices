@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { Cell } from '../../Table/Cell';
+import { isCustomFoodSlug } from '../FoodTableTypes';
 
 export function NameCell({ name, slug, onSelect }: { name: string; slug: string; onSelect: (slug: string) => void }) {
-  if (slug === 'your-meal') {
+  if (isCustomFoodSlug(slug)) {
     return (
       <Cell key="name">
         <span className="font-semibold italic text-blue-700">{name}</span>

@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+use super::meal::Blend;
 use super::scoring::{compute_improvement, DimensionCaps};
 use crate::models::{FoodRow, ImprovementDetail, ScoredRow, SliderQuery};
 
@@ -42,27 +43,20 @@ impl<'a> Comparison<'a> {
         self.penalized_improvement(row, penalty).map(|detail| (detail.mean / detail.wild_penalty, Some(detail)))
     }
 
-    /// Final score for the custom meal row. `rows` are the scored food rows.
-    pub(super) fn meal_score(&self, meal: &ScoredRow, rows: &[ScoredRow]) -> Option<f64> {
-        let ingredients = &self.query.meal_ingredients;
-
+    /// Final score for a custom food row (meal, diet).
+    pub(super) fn blend_score(&self, blend: &Blend) -> Option<f64> {
         // An ingredient with none of the Compare By unit has no per-unit impacts, so
-        // the meal can't be compared fairly either.
-        let has_unitless_ingredient = ingredients.iter().any(|ingredient| {
-            ingredient.fraction > 0.0
-                && rows.iter().any(|r| r.slug == ingredient.slug && r.divisor <= 0.0)
-        });
-        if has_unitless_ingredient || self.reference.divisor <= 0.0 {
+        // the blend can't be compared fairly either.
+        if blend.has_unitless || self.reference.divisor <= 0.0 {
             return None;
         }
 
-        // Each ingredient's wild penalty counts in proportion to its share of the meal.
-        let total_fraction: f64 = ingredients.iter().map(|i| i.fraction).sum();
-        let meal_penalty: f64 = ingredients.iter()
-            .map(|i| i.fraction / total_fraction * self.penalty_for(&i.slug))
+        // Each ingredient's wild penalty counts in proportion to its share of the blend.
+        let blend_penalty: f64 = blend.shares.iter()
+            .map(|(slug, share)| share * self.penalty_for(slug))
             .sum();
-        let penalty = meal_penalty / self.penalty_for(&self.reference.slug);
-        self.penalized_improvement(meal, penalty).map(|detail| detail.mean / detail.wild_penalty)
+        let penalty = blend_penalty / self.penalty_for(&self.reference.slug);
+        self.penalized_improvement(&blend.row, penalty).map(|detail| detail.mean / detail.wild_penalty)
     }
 
     fn penalty_for(&self, slug: &str) -> f64 {

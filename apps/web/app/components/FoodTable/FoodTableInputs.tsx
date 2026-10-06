@@ -2,8 +2,9 @@
 
 import { memo, useState, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
-import { MealBuilder } from './MealBuilder';
-import type { ColConfig, DataRegion, SliderValues } from './FoodTableTypes';
+import { CustomFoodBuilder } from './CustomFoodBuilder';
+import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from './FoodTableTypes';
+import { CUSTOM_FOODS } from './FoodTableTypes';
 import type { SortKey } from './FoodTableSort';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
@@ -13,6 +14,7 @@ import { FoodTableToolbar } from './FoodTableToolbar';
 
 type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
+    onCustomFoodChange:    (food: CustomFoodInput) => void;
     scoringError:          string | null;
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
@@ -24,6 +26,7 @@ type Props = {
 // Memoized so opening/closing the food detail modal doesn't re-render all the sliders
 export const FoodTableInputs = memo(function FoodTableInputs({
     onSliderValuesChange,
+    onCustomFoodChange,
     scoringError,
     onDismissScoringError,
     onActiveColsChange,
@@ -68,8 +71,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
         commit(next);
     }
     function handlePreset(preset: Preset) {
-        // Keep the custom meal; everything else goes back to defaults first.
-        commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes, mealIngredients: sliderValues.mealIngredients });
+        commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes });
         setScorePriorityLevels(preset.scorePriorityLevels);
         setFoodWeightLevels(preset.foodWeightLevels);
         setSliderResetKey(key => key + 1);
@@ -126,11 +128,19 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                     weightExponent={sliderValues.weightExponent}
                     finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
                 />
-                <div className="mb-4 px-1">
-                    <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">Custom Meal</p>
-                    {/* Meal changes keep the preset highlight, unlike the sliders above. */}
-                    <MealBuilder foods={foods} onChange={mealIngredients => commit({ ...sliderValues, mealIngredients })} />
-                </div>
+                {CUSTOM_FOODS.map(custom => (
+                    <div key={custom.slug} className="mb-4 px-1">
+                        <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">{custom.heading}</p>
+                        {/* Custom foods keep the preset highlight, unlike the sliders above. */}
+                        <CustomFoodBuilder
+                            slug={custom.slug}
+                            name={custom.name}
+                            storageKey={custom.storageKey}
+                            foods={foods}
+                            onChange={onCustomFoodChange}
+                        />
+                    </div>
+                ))}
             </div>
             {scoringError && (
                 <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
