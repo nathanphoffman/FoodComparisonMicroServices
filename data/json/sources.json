@@ -302,7 +302,9 @@
             "Olive oil — water_per_kg: 14,430 L/kg (global average for olive oil; raw olives ~3,025 L/kg with ~5× oil extraction factor; high due to Mediterranean rain-fed vs irrigated production mix).",
             "Coconut — water_per_kg: 2,500 L/kg (estimate; limited direct data in Report 47; derived from coconut palm water use literature and tropical plantation studies; confidence 2).",
             "Onion 345 (192/88/65), Carrot 195 (106/28/61), Cassava 563 (550/0/13), Grapes 609 (425/97/87), Cabbage 280 (181/26/73) L/kg — Vol. 1 global averages.",
-            "Beet sugar 864, Molasses 527, Corn oil 2,576, Watermelon 235, Pineapple 255, Pumpkin 336, Eggplant 362, Kidney beans 5,053, Fava beans 2,018, Rye 1,543, Millet 4,478 L/kg — Vol. 1 global averages."
+            "Beet sugar 864, Molasses 527, Corn oil 2,576, Watermelon 235, Pineapple 255, Pumpkin 336, Eggplant 362, Kidney beans 5,053, Fava beans 2,018, Rye 1,543, Millet 4,478 L/kg — Vol. 1 global averages.",
+            "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — water_per_kg from Report 47 Vol. 1 global averages (added 2026-10-06).",
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — water_per_kg from Report 47 Vol. 1 (some are stand-ins; see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -846,7 +848,9 @@
             "Values used here are global production-weighted averages from Table A1. Confidence 3 for major staple crops (wheat, corn, rice, soy, sorghum, potato) where M&H have dense country coverage. Confidence 2 for tree nuts and specialty crops where regional variation is high or M&H coverage is thinner.",
             "Peas — Vol. 1 global average for FAO item 187 'Peas, dry': green 1,453 / blue 33 / grey 493 m3/t, total 1,979.",
             "Coffee — 'Coffee, green' 15,897 m3/t (green 15,249 / blue 116 / grey 532); roasted 18,925.",
-            "Tea — item 667 'Green and black tea' 8,856 m3/t made tea (green 7,232 / blue 898 / grey 726)."
+            "Tea — item 667 'Green and black tea' 8,856 m3/t made tea (green 7,232 / blue 898 / grey 726).",
+            "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — green/blue/grey split from Report 47 Vol. 1 global averages (added 2026-10-06).",
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — green/blue/grey split from Report 47 Vol. 1 (some are stand-ins) (added 2026-10-06)."
         ]
     },
     {
@@ -914,7 +918,9 @@
             "Peas — emissions_per_kg: OWID 'Peas' category 0.98 kg CO2e/kg used directly for the peas entry.",
             "Coffee — 28.53 kg CO2e/kg (green-bean equivalent) used x 0.073 for brewed coffee.",
             "Onion 0.5 (Onions & Leeks), Carrot 0.43 (Root Vegetables), Cassava 1.32, Grapes 1.53 (Berries & Grapes), Cabbage 0.51 (Brassicas) kg CO2e/kg.",
-            "Beet Sugar 1.81; Other Fruit 1.05 (watermelon, pineapple); Other Vegetables 0.53 (pumpkin, eggplant); Other Pulses 1.79 (kidney, fava); Wheat & Rye 1.57 (rye, and millet as a proxy)."
+            "Beet Sugar 1.81; Other Fruit 1.05 (watermelon, pineapple); Other Vegetables 0.53 (pumpkin, eggplant); Other Pulses 1.79 (kidney, fava); Wheat & Rye 1.57 (rye, and millet as a proxy).",
+            "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — emissions_per_kg from the Poore & Nemecek category value (Citrus Fruit, Brassicas, Berries & Grapes, Other Vegetables or Other Fruit) via the OWID grapher CSV (added 2026-10-06).",
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — emissions_per_kg from P&N category values or educated guesses (see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -1161,7 +1167,8 @@
         "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
         "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
         "notes": [
-            "Vegetables — yield_kg_ha (US), fresh market + processing combined, 2019–2023 means (2019–2020 from the Vegetables 2021 Summary vegean22, 2021–2023 from this report), × 112.085 kg/ha per cwt/acre: sweet potato 200.08 cwt/acre = 22,400 kg/ha; tomato (all, open-field) 864.46 cwt/acre = 96,900 kg/ha; broccoli 143.18 cwt/acre = 16,000 kg/ha; garlic (California only) 153.0 cwt/acre = 17,100 kg/ha."
+            "Vegetables — yield_kg_ha (US), fresh market + processing combined, 2019–2023 means (2019–2020 from the Vegetables 2021 Summary vegean22, 2021–2023 from this report), × 112.085 kg/ha per cwt/acre: sweet potato 200.08 cwt/acre = 22,400 kg/ha; tomato (all, open-field) 864.46 cwt/acre = 96,900 kg/ha; broccoli 143.18 cwt/acre = 16,000 kg/ha; garlic (California only) 153.0 cwt/acre = 17,100 kg/ha.",
+            "celery, chile pepper and squash US yield and production (added 2026-10-06)."
         ]
     },
     {
@@ -1344,7 +1351,9 @@
             "Honey — items 1182 'Natural honey' and 1181 'Bees' (hives) 2020–2024: 1,941 kt from 100.4 M hives (19.3 kg/hive); US 61.1 kt / 2.64 M (23.1 kg).",
             "Onion (403), Carrot (426 'Carrots and turnips'), Cassava (125), Grapes (560), Cabbage (358) — yield_kg_ha and availability_gg: World and US 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
             "Beet sugar (157), sugar cane (156, for molasses), molasses (165), maize (56) and maize oil (60), watermelons (567), pineapples (574), pumpkins/squash (394), eggplants (399), dry beans (176), broad beans (181), rye (71), millet (79), goat meat (1017), duck meat (1069), goat milk (1020) — 2020–2024 means from the same bulk file (downloaded 2026-10-01).",
-            "Goat cheese — item 1021 'Cheese from milk of goats', World 2020–2023 mean 461 Gg."
+            "Goat cheese — item 1021 'Cheese from milk of goats', World 2020–2023 mean 461 Gg.",
+            "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — yield_kg_ha and availability_gg from FAOSTAT QCL 2020–2024 (added 2026-10-06; file dated 2025-12-23).",
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — FAOSTAT-based yield/availability where an item exists (others are educated guesses, see each value) (added 2026-10-06)."
         ]
     },
     {
@@ -1355,7 +1364,9 @@
             "Strawberries — yield_fraction: NDB 09316 refuse 6% (caps and stems) -> 0.94.",
             "Blueberries — yield_fraction: NDB 09050 refuse 5% (stems and green or spoiled berries) -> 0.95.",
             "Onion NDB 11282 refuse 10%; Carrot 11124 refuse 11%; Cassava 11134 refuse 16%; Grapes 09132 refuse 4%; Cabbage 11109 refuse 20%.",
-            "Watermelon 09326 refuse 48%; Pineapple 09266 refuse 49%; Pumpkin 11422 refuse 30%; Eggplant 11209 refuse 19%; kidney beans 16027/16028 and fava beans 16052/16053 water content used for cooked_weight_ratio."
+            "Watermelon 09326 refuse 48%; Pineapple 09266 refuse 49%; Pumpkin 11422 refuse 30%; Eggplant 11209 refuse 19%; kidney beans 16027/16028 and fava beans 16052/16053 water content used for cooked_weight_ratio.",
+            "Green Beans, Cauliflower, Asparagus, Ginger, Lemon, Grapefruit, Peach, Pear, Cherries, Raspberries, Kiwi, Plums, Dates, Figs, Papaya — yield_fraction from SR28 FOOD_DES refuse % (added 2026-10-06).",
+            "Sweet Corn, Celery, Beets, Brussels Sprouts, Chili Pepper, Zucchini, Arugula, Collard Greens, Swiss Chard, Bok Choy, Sesame Seeds, Hemp Seeds, Chia Seeds, Pumpkin Seeds — yield_fraction from SR28 FOOD_DES refuse % (added 2026-10-06)."
         ]
     },
     {
@@ -3117,6 +3128,129 @@
         "title": "Wikipedia — Japanese flying squid (Todarodes pacificus)",
         "notes": [
             "Japanese flying squid weigh up to 0.5 kg, mantle up to 50 cm in females; live about a year."
+        ]
+    },
+    {
+        "id": 513,
+        "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+        "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+        "notes": [
+            "Replacement for source 267, whose 20260924 file URL no longer resolves; same data, newer snapshot (2026-10-06). Same method as 267: bearing/planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated)); per-compound kg/ha = lb/acre/yr x % treated x 1.12085.",
+            "Green Beans (snap beans), Cauliflower, Asparagus (vegetable surveys 2018/2020/2022/2024); Lemon, Grapefruit, Peach, Pear, Cherries (sweet), Raspberries, Kiwi, Plums (fruit surveys 2019/2021/2023/2025), Dates (2019/2021/2023) and Figs (2015/2017): pesticide_kg_ha, fertilizer_kg_ha and per-compound rates (added 2026-10-06).",
+            "Dates, Figs, Asparagus — world-region pesticide_kg_ha are educated guesses (confidence 1) that add an allowance for class totals NASS withheld; explained in each value's note.",
+            "pesticide_kg_ha, fertilizer_kg_ha and per-compound rates for Sweet Corn, Celery, Zucchini (squash), and stand-ins for Arugula (leaf lettuce) and Swiss Chard (spinach) (added 2026-10-06)."
+        ]
+    },
+    {
+        "id": 514,
+        "url": "https://vikaspedia.in/agriculture/crop-production/package-of-practices/spices/ginger",
+        "title": "Vikaspedia — Ginger package of practices (state NPK recommendations)",
+        "notes": [
+            "Ginger — fertilizer_kg_ha and carbaryl: educated guess (confidence 1) from state NPK recommendations (Kerala 70:50:50, Karnataka 100:50:50, Orissa 125:100:100)."
+        ]
+    },
+    {
+        "id": 515,
+        "url": "https://celkau.in/crops/spices/ginger/rhizomerot.php",
+        "title": "Kerala Agricultural University — Ginger rhizome rot management (mancozeb seed and soil doses)",
+        "notes": [
+            "Ginger — pesticide_kg_ha and mancozeb: educated guess (confidence 1) from recommended seed treatment (3 g/kg) and soil drench (1.5 kg/ha) doses; seed rate assumed 1,500 kg/ha."
+        ]
+    },
+    {
+        "id": 516,
+        "url": "https://www.indiascienceandtechnology.gov.in/technologies/fertilizer-dose-250-g-n-250-g-p2o5-and-500-g-k2o-plant-year-recommended-be-applied-six-equal-splits",
+        "title": "India Science & Technology — Papaya fertilizer dose (Coorg Honey Dew)",
+        "notes": [
+            "Papaya — fertilizer_kg_ha: educated guess (confidence 1); India recommendations ~900 kg/ha N+P2O5+K2O or 250 g N + 250 g P2O5 + 500 g K2O per plant."
+        ]
+    },
+    {
+        "id": 517,
+        "url": "https://scielo.br/j/rca/a/FdpmTTFQZkrYbtLdNdfzdWt/?lang=en",
+        "title": "Revista Ciência Agronômica — NPK doses on papaya Caliman 01 (Brazil)",
+        "notes": [
+            "Papaya — fertilizer_kg_ha: educated guess (confidence 1); Brazilian trial: best yield at N 1,088 / P 72 / K 527 kg/ha, best economics at 590 / 72 / 75 kg/ha."
+        ]
+    },
+    {
+        "id": 518,
+        "url": "https://ashs.confex.com/ashs/2012/webprogram/Paper10418.html",
+        "title": "ASHS 2012 — Nitrogen fertilization guidelines for non-bearing Medjool date palms",
+        "notes": [
+            "Dates — fertilizer_kg_ha (world): educated guess (confidence 1) from ~1.2 kg N per tree per year for mature drip-irrigated Medjool palms, halved for oasis practice."
+        ]
+    },
+    {
+        "id": 519,
+        "url": "https://acnpsearch.tweb-dev.unibo.it/singlejournalindex/8018255",
+        "title": "The effect of nitrogen on phosphorus and potassium removal by cauliflower (as indexed by Unibo ACNP; page itself blocked, figures taken from the search-result summary)",
+        "notes": [
+            "Cauliflower — fertilizer_kg_ha (world): educated guess (confidence 1) from reported crop removal (~20 kg P and ~130 kg K per ha) plus N trial rates of 55–220 kg/ha."
+        ]
+    },
+    {
+        "id": 520,
+        "url": "https://wikifarmer.com/library/en/article/celery-harvest-and-yields-per-hectare",
+        "title": "WikiFarmer — Celery harvest and yields per hectare",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 521,
+        "url": "https://www.freshplaza.com/north-america/article/9263886/dutch-belgian-brussels-sprouts-acreage-increasing/",
+        "title": "FreshPlaza — Dutch and Belgian Brussels sprouts acreage increasing",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 522,
+        "url": "https://en.wikipedia.org/wiki/Chia_seed",
+        "title": "Wikipedia — Chia seed (yields and production by country)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 523,
+        "url": "https://en.wikipedia.org/wiki/Styrian_oil_pumpkin",
+        "title": "Wikipedia — Styrian oil pumpkin (seed yield)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 524,
+        "url": "https://journals.uran.ua/tarp/article/view/323745",
+        "title": "Hempseed dehulling studies (kernel yield 28–38% of whole seed, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 525,
+        "url": "https://www.extension.umd.edu/arec.umd.edu/sites/extension.umd.edu/files/2021-04/Knotts%20Handbook%20for%20Vegetable%20Growers_2012%20_vegetable%20%26%20fruit%20yields%20of%20last%20resort.pdf",
+        "title": "Knott's Handbook for Vegetable Growers — typical vegetable yields (cwt/acre)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 526,
+        "url": "https://ishs.org/ishs-article/830_35/",
+        "title": "ISHS — red beet yield trial (30.1 t/ha, as reported in a web search summary)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
+        ]
+    },
+    {
+        "id": 527,
+        "url": "https://hortidaily.com/article/9610447/italian-arugula-cultivation-becomes-more-professional-and-sustainable-with-each-passing-year/",
+        "title": "HortiDaily — Italian arugula cultivation (acreage and exports)",
+        "notes": [
+            "Used for educated-guess values (confidence 1–2) on foods added 2026-10-06; see each value's note."
         ]
     }
 ]

@@ -252,5 +252,990 @@
                 }
             }
         ]
+    },
+    {
+        "id": 166,
+        "slug": "sesame-seeds",
+        "name": "Sesame Seeds",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Whole dried sesame seeds, nutrition from USDA. Yield is FAOSTAT world (~500 kg/ha), a low yield because most sesame is grown by smallholders in Sudan, India, Myanmar, Ethiopia, China and Nigeria. Water is Mekonnen & Hoekstra (9,371 L/kg), very high because of the low yield.\n\nPoore & Nemecek have no sesame figure, so emissions (~4.0 kg CO2e/kg) are a confidence-1 guess: flaxseed's per-hectare footprint divided by sesame's yield. Pesticide, fertilizer and compound rates are copied from flaxseed at confidence 1.",
+        "land_types": {
+            "tropical_savanna": 0.6,
+            "dry": 0.3,
+            "tropical_forest": 0.1
+        },
+        "land_types_note": "Sudan (~15%), India (~12%), Myanmar (~11%), Ethiopia, China, Nigeria and Burkina Faso, mostly rain-fed savanna.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.73,
+                    "fat": 0.4967,
+                    "sat_fat": 0.06957,
+                    "protein": 0.1773,
+                    "fiber": 0.118,
+                    "sodium": 0.11,
+                    "carbs": 0.2345,
+                    "sugar": 0.003,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.0,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0025,
+                    "vitamin_k": 0.0,
+                    "folate": 0.97,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0079,
+                    "calcium": 9.75,
+                    "iron": 0.1455,
+                    "magnesium": 3.51,
+                    "potassium": 4.68,
+                    "zinc": 0.0775,
+                    "phosphorus": 6.29,
+                    "selenium": 0.344,
+                    "ala": 0.00376,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Sesame Seeds — FDC 170150 'Seeds, sesame seeds, whole, dried' (SR Legacy 12023), per 100 g: 573 kcal, protein 17.73 g, fat 49.67 g, sat fat 6.957 g, carbs 23.45 g, fiber 11.8 g, sugars 0.3 g, sodium 11 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170150 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.25 mg, vitamin k 0 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.79 mg, calcium 975 mg, iron 14.55 mg, magnesium 351 mg, potassium 468 mg, zinc 7.75 mg, phosphorus 629 mg, selenium 34.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170150 per 100 g: ALA 0.376 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Sesame Seeds — yield_fraction: USDA 'Seeds, sesame seeds, whole, dried' is the whole seed as harvested, so the edible fraction is 1."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 500,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sesame Seeds — yield_kg_ha (world): FAOSTAT QCL item 289 'Sesame seed', World yield 2020–2024 = 479, 498, 518, 563, 570 kg/ha; 5-year mean 526 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 9371,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Sesame Seeds — water_per_kg: 9371 L/kg (green 8460 + blue 509 + grey 403). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed, 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 8460,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sesame Seeds — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed, 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 509,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sesame Seeds — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed, 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 403,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sesame Seeds — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed, 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Sesame Seeds — pesticide_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No sesame survey exists. Copies this repo's flaxseed entry (another low-input, rain-fed oilseed); sesame is mostly smallholder-grown with little spraying. Copied value: 0.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 70,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Sesame Seeds — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No sesame survey exists. Copies this repo's flaxseed entry (another low-input oilseed). Copied value: 70."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 4.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Sesame Seeds — emissions_per_kg: Poore & Nemecek publish no figure for this seed. Flaxseed (a low-input seed crop) works out to about 2,000 kg CO2e per hectare (mean of the repo's 1.4 and 1.68 kg/kg x 1,300 kg/ha). Dividing by this crop's yield (500 kg/ha) gives 4.0 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sesame Seeds — glyphosate — value: EDUCATED GUESS (confidence 1, not a measured value): No sesame survey exists; copies the flaxseed compound rates. Copied value: 1.1."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Sesame Seeds — 2,4-d — value: EDUCATED GUESS (confidence 1, not a measured value): No sesame survey exists; copies the flaxseed compound rates. Copied value: 0.4."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 6267,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sesame Seeds — availability_gg (world): FAOSTAT QCL item 289 'Sesame seed', World production 2020–2024 = 6.57, 6.23, 5.50, 6.36, 6.68 Mt; mean 6,267 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 167,
+        "slug": "hemp-seeds",
+        "name": "Hemp Seeds",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Hulled hemp seeds ('hemp hearts'), nutrition from USDA. FAOSTAT's hempseed yield (~1,000 kg/ha) is whole seed, so it is converted to a hulled basis at 35% (confidence 1 guess from dehulling studies), giving ~350 kg/ha; availability and water are converted the same way. Canada grows ~72% of the world's hempseed (excluding China, which FAOSTAT doesn't report separately).\n\nPoore & Nemecek have no hemp figure, so emissions (~5.7 kg CO2e/kg) are a confidence-1 guess: flaxseed's per-hectare footprint divided by the hulled yield. Pesticide, fertilizer and compound rates are copied from flaxseed at confidence 1.",
+        "land_types": {
+            "temperate_grassland": 0.8,
+            "temperate_forest": 0.15,
+            "dry": 0.05
+        },
+        "land_types_note": "Canadian prairies (~72%), plus Australia, Russia, Chile, the US and Ukraine.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.53,
+                    "fat": 0.4875,
+                    "sat_fat": 0.046,
+                    "protein": 0.3156,
+                    "fiber": 0.04,
+                    "sodium": 0.05,
+                    "carbs": 0.0867,
+                    "sugar": 0.015,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.01,
+                    "vitamin_c": 0.005,
+                    "vitamin_e": 0.008,
+                    "folate": 1.1,
+                    "vitamin_b6": 0.006,
+                    "calcium": 0.7,
+                    "iron": 0.0795,
+                    "magnesium": 7.0,
+                    "potassium": 12.0,
+                    "zinc": 0.099,
+                    "phosphorus": 16.5,
+                    "ala": 0.08684,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Hemp Seeds — FDC 170148 'Seeds, hemp seed, hulled' (SR Legacy 12012), per 100 g: 553 kcal, protein 31.56 g, fat 48.75 g, sat fat 4.6 g, carbs 8.67 g, fiber 4 g, sugars 1.5 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170148 per 100 g: vitamin a 1 µg RAE, vitamin c 0.5 mg, vitamin d 0 µg, vitamin e 0.8 mg, vitamin k 0 µg, folate 110 µg DFE, vitamin b12 0 µg, vitamin b6 0.6 mg, calcium 70 mg, iron 7.95 mg, magnesium 700 mg, potassium 1200 mg, zinc 9.9 mg, phosphorus 1650 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 170148 per 100 g: ALA 8.684 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Hemp Seeds — yield_fraction: the yield (and the water, emissions and availability figures) are already converted to a hulled-seed basis, so the edible fraction is 1."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 350,
+                "confidence": 1,
+                "source": {
+                    "id": 524,
+                    "url": "https://journals.uran.ua/tarp/article/view/323745",
+                    "title": "Hempseed dehulling studies (kernel yield 28–38% of whole seed, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — yield_kg_ha (world): FAOSTAT hempseed yield is whole seed with hull (~1,000 kg/ha), but USDA's nutrition is for hulled seed ('hemp hearts'). Dehulling studies report kernel yields of about 28–38% of whole seed (centrifugal 28–38%, impeller ~34.5–34.8%), so I used 0.35 and converted the yield to a hulled basis: 1,000 x 0.35 = ~350 kg/ha. Same approach as the almond entry, whose yield is on a kernel basis. Hull share varies by variety and machine."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 10529,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, product 336 Hempseed: green 3,257 / blue 12 / grey 417 m³/t = 3,685 L per kg of whole seed. Divided by the 0.35 hulled share = 10,529 L per kg of hulled seed."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 9306,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, product 336 Hempseed: green 3,257 / blue 12 / grey 417 m³/t = 3,685 L per kg of whole seed. Divided by the 0.35 hulled share = 10,529 L per kg of hulled seed."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 34,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, product 336 Hempseed: green 3,257 / blue 12 / grey 417 m³/t = 3,685 L per kg of whole seed. Divided by the 0.35 hulled share = 10,529 L per kg of hulled seed."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 1189,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, product 336 Hempseed: green 3,257 / blue 12 / grey 417 m³/t = 3,685 L per kg of whole seed. Divided by the 0.35 hulled share = 10,529 L per kg of hulled seed."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Hemp Seeds — pesticide_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No hemp survey exists. Copies this repo's flaxseed entry; hemp is grown with few pesticides on the Canadian prairies, like flax. Copied value: 0.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 70,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Hemp Seeds — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No hemp survey exists. Copies this repo's flaxseed entry; grain hemp typically gets a little more nitrogen, so this may be low. Copied value: 70."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 5.7,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — emissions_per_kg: Poore & Nemecek publish no figure for this seed. Flaxseed (a low-input seed crop) works out to about 2,000 kg CO2e per hectare (mean of the repo's 1.4 and 1.68 kg/kg x 1,300 kg/ha). Dividing by this crop's yield (350 kg/ha) gives 5.7 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Hemp Seeds — glyphosate — value: EDUCATED GUESS (confidence 1, not a measured value): No hemp survey exists; copies the flaxseed compound rates. Copied value: 1.1."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Hemp Seeds — 2,4-d — value: EDUCATED GUESS (confidence 1, not a measured value): No hemp survey exists; copies the flaxseed compound rates. Copied value: 0.4."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 12,
+                "confidence": 1,
+                "source": {
+                    "id": 524,
+                    "url": "https://journals.uran.ua/tarp/article/view/323745",
+                    "title": "Hempseed dehulling studies (kernel yield 28–38% of whole seed, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — availability_gg (world): FAOSTAT whole-seed production (34 Gg) x 0.35 hulled-kernel share ≈ 12 Gg, the same conversion the almond entry uses for shelled production."
+                }
+            }
+        ]
+    },
+    {
+        "id": 168,
+        "slug": "chia-seeds",
+        "name": "Chia Seeds",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Dried chia seeds, nutrition from USDA. FAOSTAT and the water-footprint reports have no chia, so yield (~600 kg/ha) and availability (~160 Gg) come from reported national production and area figures (confidence 2 and 1). Paraguay (~80–90 kt), Bolivia and Argentina grow most chia, much of it newly cleared Chaco land.\n\nWater is borrowed from sesame (9,371 L/kg; confidence 1), a drought-tolerant seed crop with a similar low yield. Emissions (~3.3 kg CO2e/kg) are a confidence-1 guess from flaxseed's per-hectare footprint divided by chia's yield. Pesticide, fertilizer and compound rates are copied from flaxseed at confidence 1.",
+        "land_types": {
+            "tropical_savanna": 0.6,
+            "dry": 0.2,
+            "temperate_grassland": 0.2
+        },
+        "land_types_note": "Paraguay, Bolivia and Argentina (the Chaco and nearby savanna), plus Mexico, Nicaragua and Colombia.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 4.86,
+                    "fat": 0.3074,
+                    "sat_fat": 0.0333,
+                    "protein": 0.1654,
+                    "fiber": 0.344,
+                    "sodium": 0.16,
+                    "carbs": 0.4212,
+                    "sugar": 0.0,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0014,
+                    "vitamin_c": 0.016,
+                    "vitamin_e": 0.005,
+                    "vitamin_b12": 0.0,
+                    "calcium": 6.31,
+                    "iron": 0.0772,
+                    "magnesium": 3.35,
+                    "potassium": 4.07,
+                    "zinc": 0.0458,
+                    "phosphorus": 8.6,
+                    "selenium": 0.552,
+                    "ala": 0.1783,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Chia Seeds — FDC 170554 'Seeds, chia seeds, dried' (SR Legacy 12006), per 100 g: 486 kcal, protein 16.54 g, fat 30.74 g, sat fat 3.33 g, carbs 42.12 g, fiber 34.4 g, sugars 0 g, sodium 16 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170554 per 100 g: vitamin a 0 µg RAE, vitamin c 1.6 mg, vitamin d 0 µg, vitamin e 0.5 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 631 mg, iron 7.72 mg, magnesium 335 mg, potassium 407 mg, zinc 4.58 mg, phosphorus 860 mg, selenium 55.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 170554 per 100 g: ALA 17.83 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Chia Seeds — yield_fraction: USDA 'Seeds, chia seeds, dried' is the whole seed, so the edible fraction is 1."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 600,
+                "confidence": 2,
+                "source": {
+                    "id": 522,
+                    "url": "https://en.wikipedia.org/wiki/Chia_seed",
+                    "title": "Wikipedia — Chia seed (yields and production by country)",
+                    "note": "Chia Seeds — yield_kg_ha (world): FAOSTAT has no chia item. Reported figures: Paraguay 80,000–90,000 t from an estimated 150,000–180,000 ha (≈0.5 t/ha), Argentina and Colombia commercial fields 450–1,250 kg/ha, a Mexican study 924 kg/ha, drought-hit Paraguayan fields 200–700 kg/ha. I used 600 kg/ha, weighted toward Paraguay, the largest grower (confidence 2: derived from reported production and area, not official statistics)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 9371,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chia row. Sesame is the stand-in: both are small-seeded, low-yield (~0.5–0.6 t/ha), drought-tolerant crops, so per-kg water is similarly high. Chia Seeds — water_per_kg: 9371 L/kg (green 8460 + blue 509 + grey 403). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed (stand-in; no chia row), 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 8460,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chia row. Sesame is the stand-in: both are small-seeded, low-yield (~0.5–0.6 t/ha), drought-tolerant crops, so per-kg water is similarly high. Chia Seeds — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed (stand-in; no chia row), 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 509,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chia row. Sesame is the stand-in: both are small-seeded, low-yield (~0.5–0.6 t/ha), drought-tolerant crops, so per-kg water is similarly high. Chia Seeds — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed (stand-in; no chia row), 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 403,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chia row. Sesame is the stand-in: both are small-seeded, low-yield (~0.5–0.6 t/ha), drought-tolerant crops, so per-kg water is similarly high. Chia Seeds — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 289 Sesame seed (stand-in; no chia row), 1996–2005: green 8460 / blue 509 / grey 403 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 0.5,
+                "confidence": 1,
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Chia Seeds — pesticide_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No chia survey exists. Copies this repo's flaxseed entry; chia is a low-input, pest-tolerant crop mostly grown on large rain-fed farms in the South American Chaco. Copied value: 0.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 70,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Chia Seeds — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No chia survey exists. Copies this repo's flaxseed entry. Copied value: 70."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.3,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chia Seeds — emissions_per_kg: Poore & Nemecek publish no figure for this seed. Flaxseed (a low-input seed crop) works out to about 2,000 kg CO2e per hectare (mean of the repo's 1.4 and 1.68 kg/kg x 1,300 kg/ha). Dividing by this crop's yield (600 kg/ha) gives 3.3 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 1.1,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chia Seeds — glyphosate — value: EDUCATED GUESS (confidence 1, not a measured value): No chia survey exists; copies the flaxseed compound rates. Copied value: 1.1."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 12,
+                "name": "2,4-D",
+                "kg_ha": [
+                    {
+                        "value": 0.4,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chia Seeds — 2,4-d — value: EDUCATED GUESS (confidence 1, not a measured value): No chia survey exists; copies the flaxseed compound rates. Copied value: 0.4."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 160,
+                "confidence": 1,
+                "source": {
+                    "id": 522,
+                    "url": "https://en.wikipedia.org/wiki/Chia_seed",
+                    "title": "Wikipedia — Chia seed (yields and production by country)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chia Seeds — availability_gg (world): reported annual production is Paraguay 80,000–90,000 t, Bolivia 50,000+ t and Argentina 20,000+ t, which sums to ~155 kt, so ~160 Gg. Production swings with drought and the figures are not official statistics."
+                }
+            }
+        ]
+    },
+    {
+        "id": 169,
+        "slug": "pumpkin-seeds",
+        "name": "Pumpkin Seeds",
+        "type": "plant",
+        "category": "seeds",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Dried pumpkin seed kernels (pepitas), nutrition from USDA. This assumes hull-less (Styrian-type) oil pumpkins, so the kernel is the whole harvested seed. FAOSTAT has no pumpkin-seed item, so yield (~600 kg/ha, from Austrian oil-pumpkin yields) and availability (~200 Gg) are educated guesses at confidence 1.\n\nWater is derived by dividing a pumpkin crop's water per hectare by the seed yield (~8,568 L/kg, confidence 1). Emissions (~3.3 kg CO2e/kg) are a confidence-1 guess from flaxseed's per-hectare footprint divided by the seed yield. Pesticide, fertilizer and compound rates are copied from the pumpkin entry at confidence 1.",
+        "land_types": {
+            "temperate_forest": 0.4,
+            "temperate_grassland": 0.4,
+            "dry": 0.2
+        },
+        "land_types_note": "Austria (Styria), China, Russia, Ukraine and Mexico; a guess.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 5.59,
+                    "fat": 0.4905,
+                    "sat_fat": 0.08659,
+                    "protein": 0.3023,
+                    "fiber": 0.06,
+                    "sodium": 0.07,
+                    "carbs": 0.1071,
+                    "sugar": 0.014,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.00064,
+                    "vitamin_a": 0.01,
+                    "vitamin_c": 0.019,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0218,
+                    "vitamin_k": 0.073,
+                    "folate": 0.58,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00143,
+                    "calcium": 0.46,
+                    "iron": 0.0882,
+                    "magnesium": 5.92,
+                    "potassium": 8.09,
+                    "zinc": 0.0781,
+                    "phosphorus": 12.33,
+                    "selenium": 0.094,
+                    "ala": 0.0012,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pumpkin Seeds — FDC 170556 'Seeds, pumpkin and squash seed kernels, dried' (SR Legacy 12014), per 100 g: 559 kcal, protein 30.23 g, fat 49.05 g, sat fat 8.659 g, carbs 10.71 g, fiber 6 g, sugars 1.4 g, sodium 7 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170556 per 100 g: vitamin a 1 µg RAE, vitamin c 1.9 mg, vitamin d 0 µg, vitamin e 2.18 mg, vitamin k 7.3 µg, folate 58 µg DFE, vitamin b12 0 µg, vitamin b6 0.143 mg, calcium 46 mg, iron 8.82 mg, magnesium 592 mg, potassium 809 mg, zinc 7.81 mg, phosphorus 1233 mg, selenium 9.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170556 per 100 g: ALA 0.12 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 1,
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Pumpkin Seeds — yield_fraction: USDA 'pumpkin and squash seed kernels, dried' is the hulled kernel. Hull-less oil pumpkins produce kernels without a hull, so the edible fraction is taken as 1 (confidence 4; hulled cultivars only)."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 600,
+                "confidence": 1,
+                "source": {
+                    "id": 523,
+                    "url": "https://en.wikipedia.org/wiki/Styrian_oil_pumpkin",
+                    "title": "Wikipedia — Styrian oil pumpkin (seed yield)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — yield_kg_ha (world): FAOSTAT has no pumpkin-seed item (its 'Melonseed' is egusi, a different crop). Austria's Styrian oil-pumpkin crop averages ~600 kg/ha of hull-less seed at 8% moisture (range 400–1,200), and open-pollinated cultivars give 600–700 kg/ha. I used 600 kg/ha as the world average, although China and other major growers may differ."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 8568,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — water_per_kg: Water per hectare of pumpkins ≈ 336 L/kg x 15,300 kg/ha = 5.14 million L/ha (Mekonnen & Hoekstra and FAOSTAT); the same land makes only ~600 kg of seed, so 5.14 M L ÷ 600 kg = 8,568 L/kg, split in the pumpkin's green/blue/grey proportions. Assumes an oil-pumpkin crop uses about the same water per hectare as a food pumpkin crop."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 5814,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — green_water_per_kg: Water per hectare of pumpkins ≈ 336 L/kg x 15,300 kg/ha = 5.14 million L/ha (Mekonnen & Hoekstra and FAOSTAT); the same land makes only ~600 kg of seed, so 5.14 M L ÷ 600 kg = 8,568 L/kg, split in the pumpkin's green/blue/grey proportions."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 612,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — blue_water_per_kg: Water per hectare of pumpkins ≈ 336 L/kg x 15,300 kg/ha = 5.14 million L/ha (Mekonnen & Hoekstra and FAOSTAT); the same land makes only ~600 kg of seed, so 5.14 M L ÷ 600 kg = 8,568 L/kg, split in the pumpkin's green/blue/grey proportions."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 2142,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — grey_water_per_kg: Water per hectare of pumpkins ≈ 336 L/kg x 15,300 kg/ha = 5.14 million L/ha (Mekonnen & Hoekstra and FAOSTAT); the same land makes only ~600 kg of seed, so 5.14 M L ÷ 600 kg = 8,568 L/kg, split in the pumpkin's green/blue/grey proportions."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 9.5,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Pumpkin Seeds — pesticide_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists. Copies this repo's NASS-based pumpkin entry, which is for food pumpkins (oil-pumpkin spray programs are probably lighter). Copied value: 9.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 135,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Pumpkin Seeds — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists. Copies this repo's NASS-based pumpkin entry. Copied value: 135."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 3.3,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — emissions_per_kg: Poore & Nemecek publish no figure for this seed. Flaxseed (a low-input seed crop) works out to about 2,000 kg CO2e per hectare (mean of the repo's 1.4 and 1.68 kg/kg x 1,300 kg/ha). Dividing by this crop's yield (600 kg/ha) gives 3.3 kg CO2e/kg."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.8217,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — glyphosate — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.8217."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.1314,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — malathion — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.1314."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.1031,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — permethrin — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.1031."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0046,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — imidacloprid — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.0046."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0072,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — thiamethoxam — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.0072."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3191,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — mancozeb — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.3191."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.0325,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — metolachlor — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.0325."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.0071,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — propiconazole — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.0071."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.036,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — paraquat — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.036."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.6995,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Pumpkin Seeds — carbaryl — value: EDUCATED GUESS (confidence 1, not a measured value): No pumpkin-seed survey exists; copies the pumpkin compound rates. Copied value: 0.6995."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 200,
+                "confidence": 1,
+                "source": {
+                    "id": 523,
+                    "url": "https://en.wikipedia.org/wiki/Styrian_oil_pumpkin",
+                    "title": "Wikipedia — Styrian oil pumpkin (seed yield)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Pumpkin Seeds — availability_gg (world): no FAOSTAT item. Austria alone plants ~15,000 ha (~9 Gg), and China, Russia, Ukraine and Mexico grow much more for snack seeds, so I guessed ~200 Gg worldwide with large uncertainty."
+                }
+            }
+        ]
     }
 ]

@@ -4072,5 +4072,3004 @@
                 }
             }
         ]
+    },
+    {
+        "id": 141,
+        "slug": "green-beans",
+        "name": "Green Beans",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Green Beans, nutrition from USDA. 88% is edible (ends, strings, trimmings removed). China grows about 42% of the world's green beans and India ~6%. Yield is FAOSTAT world (~15.9 t/ha).\n\nWater is Mekonnen & Hoekstra (561 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). FAOSTAT's \"Other beans, green\" covers snap/string beans and similar fresh pods. The US yield FAOSTAT reports (~3 t/ha) looks low next to the world figure and probably reflects a different crop definition, so only world yield and availability are used.\n\nUS pesticide (3 kg/ha) and fertilizer (165 kg/ha) are from USDA NASS chemical-use surveys, with the world falling back to the US value since there is no world figure. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "temperate_forest": 0.6,
+            "tropical_savanna": 0.2,
+            "dry": 0.2
+        },
+        "land_types_note": "China grows about 42% of the world's green beans, then India (~6%), Indonesia, Türkiye and France.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.31,
+                    "fat": 0.0022,
+                    "sat_fat": 0.0005,
+                    "protein": 0.0183,
+                    "fiber": 0.027,
+                    "sodium": 0.06,
+                    "carbs": 0.0697,
+                    "sugar": 0.0326,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.35,
+                    "vitamin_c": 0.122,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0041,
+                    "vitamin_k": 0.43,
+                    "folate": 0.33,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00141,
+                    "calcium": 0.37,
+                    "iron": 0.0103,
+                    "magnesium": 0.25,
+                    "potassium": 2.11,
+                    "zinc": 0.0024,
+                    "phosphorus": 0.38,
+                    "selenium": 0.006,
+                    "ala": 0.00069,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Green Beans — FDC 169961 'Beans, snap, green, raw' (SR Legacy 11052), per 100 g: 31 kcal, protein 1.83 g, fat 0.22 g, sat fat 0.05 g, carbs 6.97 g, fiber 2.7 g, sugars 3.26 g, sodium 6 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169961 per 100 g: vitamin a 35 µg RAE, vitamin c 12.2 mg, vitamin d 0 µg, vitamin e 0.41 mg, vitamin k 43 µg, folate 33 µg DFE, vitamin b12 0 µg, vitamin b6 0.141 mg, calcium 37 mg, iron 1.03 mg, magnesium 25 mg, potassium 211 mg, zinc 0.24 mg, phosphorus 38 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169961 per 100 g: ALA 0.069 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.88,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Green Beans — yield_fraction: SR28 FOOD_DES NDB 11052 'Beans, snap, green, raw': refuse 12% (ends, strings, trimmings), so edible fraction = 0.88."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15900,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Green Beans — yield_kg_ha (world): FAOSTAT QCL item 414 'Other beans, green', World yield 2020–2024 = 16,347, 15,909, 15,657, 15,872, 15,762 kg/ha; 5-year mean 15,910 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 561,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Green Beans — water_per_kg: 561 L/kg global average (Report 47 table total; green 320 + blue 54 + grey 188, components rounded separately). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 414 Beans, green, 1996–2005: green 320 / blue 54 / grey 188 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 320,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Green Beans — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 414 Beans, green, 1996–2005: green 320 / blue 54 / grey 188 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 54,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Green Beans — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 414 Beans, green, 1996–2005: green 320 / blue 54 / grey 188 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 188,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Green Beans — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 414 Beans, green, 1996–2005: green 320 / blue 54 / grey 188 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 3.4,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Green Beans — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2018 4.5, 2022 3.5, 2024 2.3 kg/ha; mean 3.4 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 165,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Green Beans — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 165 kg/ha; 2018: K2O 75 lb/ac on 84%, P2O5 43 lb/ac on 82%, N 71 lb/ac on 88%; 2022: K2O 99 lb/ac on 62%, N 71 lb/ac on 71%, P2O5 39 lb/ac on 58%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Green Beans — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0358,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — glyphosate: 2018 1.461 lb/ac on 2%, 2020 0.91 lb/ac on 1%, 2022 0.744 lb/ac on 5%, 2024 0.868 lb/ac on 6%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0015,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — imidacloprid: 2020 0.138 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.4283,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — metolachlor: 2018 1.584 lb/ac on 14%, 2020 1.165 lb/ac on 38%, 2022 1.378 lb/ac on 35%, 2024 1.272 lb/ac on 30%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.1365,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — pendimethalin: 2018 0.92 lb/ac on 18%, 2020 0.905 lb/ac on 10%, 2022 1.01 lb/ac on 9%, 2024 1.169 lb/ac on 12%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.0128,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — paraquat: 2018 0.806 lb/ac on 1%, 2024 0.495 lb/ac on 3%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.1073,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Green Beans — carbaryl: 2022 1.915 lb/ac on 5%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 25759,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Green Beans — availability_gg (world): FAOSTAT QCL item 414 'Other beans, green', World production 2020–2024 = 25.56, 25.66, 25.78, 25.86, 25.93 Mt; mean 25,759 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 142,
+        "slug": "cauliflower",
+        "name": "Cauliflower",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Cauliflower, nutrition from USDA. 39% is edible (leaf stalks, cores and trimmings removed). China and India each grow about a quarter of the world's cauliflower. Yield is FAOSTAT world (~18.8 t/ha), about the same in the US (~17 t/ha).\n\nWater is Mekonnen & Hoekstra (285 L/kg). Emissions use Poore & Nemecek's 'Brassicas' (0.51). FAOSTAT and Mekonnen & Hoekstra only report cauliflower and broccoli combined, so the yield, water and availability figures are the same as for Broccoli. US pesticide uses only the 2020 survey (2018 withheld the \"other\" class total; 2022 and 2024 have too few reports to back out acreage, and only 3% of area was treated in 2022). US fertilizer uses only 2018, the one year with realistic coverage, so both are confidence 2. That year (640 kg/ha) looks high, so the world fertilizer value (~350 kg/ha) is an educated guess at confidence 1 from nutrient-removal research.\n\nUS pesticide (2 kg/ha) and fertilizer (640 kg/ha) are from USDA NASS chemical-use surveys, with the world falling back to the US value since there is no world figure. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "dry": 0.3,
+            "tropical_savanna": 0.2
+        },
+        "land_types_note": "China and India each grow about a quarter of the world's cauliflower and broccoli; the US (irrigated California and Arizona), Mexico and Spain follow.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.25,
+                    "fat": 0.0028,
+                    "sat_fat": 0.0013,
+                    "protein": 0.0192,
+                    "fiber": 0.02,
+                    "sodium": 0.3,
+                    "carbs": 0.0497,
+                    "sugar": 0.0191,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.482,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0008,
+                    "vitamin_k": 0.155,
+                    "folate": 0.57,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00184,
+                    "calcium": 0.22,
+                    "iron": 0.0042,
+                    "magnesium": 0.15,
+                    "potassium": 2.99,
+                    "zinc": 0.0027,
+                    "phosphorus": 0.44,
+                    "selenium": 0.006,
+                    "ala": 0.00015,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Cauliflower — FDC 169986 'Cauliflower, raw' (SR Legacy 11135), per 100 g: 25 kcal, protein 1.92 g, fat 0.28 g, sat fat 0.13 g, carbs 4.97 g, fiber 2 g, sugars 1.91 g, sodium 30 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169986 per 100 g: vitamin a 0 µg RAE, vitamin c 48.2 mg, vitamin d 0 µg, vitamin e 0.08 mg, vitamin k 15.5 µg, folate 57 µg DFE, vitamin b12 0 µg, vitamin b6 0.184 mg, calcium 22 mg, iron 0.42 mg, magnesium 15 mg, potassium 299 mg, zinc 0.27 mg, phosphorus 44 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169986 per 100 g: ALA 0.015 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.39,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Cauliflower — yield_fraction: SR28 FOOD_DES NDB 11135 'Cauliflower, raw': refuse 61% (leaf stalks, cores and trimmings), so edible fraction = 0.39."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 18800,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cauliflower — yield_kg_ha (world): FAOSTAT QCL item 393 'Cauliflowers and broccoli', World yield 2020–2024 = 18,631, 18,794, 18,893, 18,828, 18,829 kg/ha; 5-year mean 18,795 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 17400,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cauliflower — yield_kg_ha (US): FAOSTAT QCL item 393 'Cauliflowers and broccoli', United States of America yield 2020–2024 = 19,518, 16,181, 17,071, 16,908, 17,521 kg/ha; 5-year mean 17,440 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 285,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Cauliflower — water_per_kg: 285 L/kg global average (Report 47 table total; green 189 + blue 21 + grey 75, components rounded separately). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 393 Cauliflowers and broccoli, 1996–2005: green 189 / blue 21 / grey 75 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 189,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cauliflower — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 393 Cauliflowers and broccoli, 1996–2005: green 189 / blue 21 / grey 75 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 21,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cauliflower — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 393 Cauliflowers and broccoli, 1996–2005: green 189 / blue 21 / grey 75 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 75,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Cauliflower — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 393 Cauliflowers and broccoli, 1996–2005: green 189 / blue 21 / grey 75 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 1.8,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Cauliflower — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2020 1.8 kg/ha; mean 1.8 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 640,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Cauliflower — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 640 kg/ha; 2018: N 228 lb/ac on 97%, K2O 333 lb/ac on 54%, P2O5 213 lb/ac on 80%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            },
+            {
+                "value": 350,
+                "confidence": 1,
+                "source": {
+                    "id": 519,
+                    "url": "https://acnpsearch.tweb-dev.unibo.it/singlejournalindex/8018255",
+                    "title": "The effect of nitrogen on phosphorus and potassium removal by cauliflower (as indexed by Unibo ACNP; page itself blocked, figures taken from the search-result summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cauliflower — fertilizer_kg_ha (world): the single US survey year (2018) gives 640 kg/ha (N 248 + P2O5 191 + K2O 202), which looks high. Cauliflower research suggests N trial rates of 55–220 kg/ha (I used 150), and crop removal of ~20 kg P and ~130 kg K per ha (= ~46 kg P2O5 and ~156 kg K2O). Replacing what the crop takes out: 150 + 46 + 156 ≈ 350 kg/ha. This is a world-average guess, not a measured value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Cauliflower — emissions_per_kg (world): Poore & Nemecek (2018) 'Brassicas' global mean, 0.51 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.0937,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Cauliflower — malathion: 2018 1.268 lb/ac on 5%, 2020 1.297 lb/ac on 8%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0082,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Cauliflower — permethrin: 2018 0.108 lb/ac on 4%, 2020 0.114 lb/ac on 9%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0563,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Cauliflower — imidacloprid: 2018 0.05 lb/ac on 7%, 2020 0.294 lb/ac on 33%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.012,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Cauliflower — thiamethoxam: 2018 0.039 lb/ac on 5%, 2020 0.13 lb/ac on 15%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 26457,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cauliflower — availability_gg (world): FAOSTAT QCL item 393 'Cauliflowers and broccoli', World production 2020–2024 = 26.00, 26.31, 26.55, 26.57, 26.86 Mt; mean 26,457 Gg."
+                }
+            },
+            {
+                "value": 1085,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Cauliflower — availability_gg (US): FAOSTAT QCL item 393 'Cauliflowers and broccoli', United States of America production 2020–2024 = 1.13, 1.08, 1.21, 1.00, 1.00 Mt; mean 1,085 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 143,
+        "slug": "asparagus",
+        "name": "Asparagus",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Asparagus, nutrition from USDA. 53% is edible (butt ends removed). China grows about 47% of the world's asparagus. Yield is FAOSTAT world (~5.7 t/ha).\n\nWater is Mekonnen & Hoekstra (2,150 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). Asparagus is a perennial, so one planting is harvested for many years, but FAOSTAT yield is still per harvested hectare per year. Its water footprint (2,150 L/kg) is high mainly because yields are low (~5.7 t/ha). The US imports most of its asparagus (Peru, Mexico), so only world figures are used for yield and availability.\n\nUS pesticide (10 kg/ha) and fertilizer (141 kg/ha) are from USDA NASS chemical-use surveys (a lower bound, because NASS withholds the 'other' class; the world value adds a ~10% educated guess for it, confidence 1), with the world falling back to the US value since there is no world figure. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "dry": 0.35,
+            "tropical_savanna": 0.15
+        },
+        "land_types_note": "China grows about 47% of the world's asparagus; Peru (dry coastal desert, irrigated), Mexico, Germany and Spain are next.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.2,
+                    "fat": 0.0012,
+                    "sat_fat": 0.0004,
+                    "protein": 0.022,
+                    "fiber": 0.021,
+                    "sodium": 0.02,
+                    "carbs": 0.0388,
+                    "sugar": 0.0188,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.38,
+                    "vitamin_c": 0.056,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0113,
+                    "vitamin_k": 0.416,
+                    "folate": 0.52,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00091,
+                    "calcium": 0.24,
+                    "iron": 0.0214,
+                    "magnesium": 0.14,
+                    "potassium": 2.02,
+                    "zinc": 0.0054,
+                    "phosphorus": 0.52,
+                    "selenium": 0.023,
+                    "ala": 0.0001,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Asparagus — FDC 168389 'Asparagus, raw' (SR Legacy 11011), per 100 g: 20 kcal, protein 2.2 g, fat 0.12 g, sat fat 0.04 g, carbs 3.88 g, fiber 2.1 g, sugars 1.88 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168389 per 100 g: vitamin a 38 µg RAE, vitamin c 5.6 mg, vitamin d 0 µg, vitamin e 1.13 mg, vitamin k 41.6 µg, folate 52 µg DFE, vitamin b12 0 µg, vitamin b6 0.091 mg, calcium 24 mg, iron 2.14 mg, magnesium 14 mg, potassium 202 mg, zinc 0.54 mg, phosphorus 52 mg, selenium 2.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 168389 per 100 g: ALA 0.01 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.53,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Asparagus — yield_fraction: SR28 FOOD_DES NDB 11011 'Asparagus, raw': refuse 47% (butt ends), so edible fraction = 0.53."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 5700,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Asparagus — yield_kg_ha (world): FAOSTAT QCL item 367 'Asparagus', World yield 2020–2024 = 5,607, 5,650, 5,664, 5,669, 5,677 kg/ha; 5-year mean 5,653 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 2150,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Asparagus — water_per_kg: 2150 L/kg global average (Report 47 table total; green 1524 + blue 119 + grey 507, components rounded separately). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 367 Asparagus, 1996–2005: green 1524 / blue 119 / grey 507 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1524,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Asparagus — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 367 Asparagus, 1996–2005: green 1524 / blue 119 / grey 507 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 119,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Asparagus — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 367 Asparagus, 1996–2005: green 1524 / blue 119 / grey 507 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 507,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Asparagus — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 367 Asparagus, 1996–2005: green 1524 / blue 119 / grey 507 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 10.3,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Asparagus — pesticide_kg_ha (US, LOWER BOUND): NASS withholds at least one class total (fungicide/insecticide/other) in every survey year, so this sums the disclosed class totals only, divided by planted acres back-calculated from disclosed compounds, x 1.12085. PROGRAM STATES: 2018 8.8, 2020 12.5, 2022 8.1, 2024 11.9 kg/ha; mean 10.3 kg/ha. Real use is somewhat higher. No world figure found; world region falls back to this US value."
+                }
+            },
+            {
+                "value": 11.4,
+                "confidence": 1,
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Asparagus — pesticide_kg_ha (world): the NASS US figure (10.3 kg/ha) leaves out the 'other' class (fumigants such as methyl bromide and chloropicrin plus a few others), which USDA withheld in every survey year. In snap beans, from the same vegetable surveys, the 'other' class was ~10% of total weight in 2018, so I assumed the same: 10.3 / 0.9 = 11.4 kg/ha. No world figure was found; this US-based number is also used for the world."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 141,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Asparagus — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 141 kg/ha; 2018: P2O5 57 lb/ac on 30%, N 72 lb/ac on 80%, K2O 109 lb/ac on 60%; 2022: P2O5 37 lb/ac on 29%, K2O 96 lb/ac on 55%, N 75 lb/ac on 63%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Asparagus — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.8131,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — glyphosate: 2018 1.64 lb/ac on 29%, 2020 1.651 lb/ac on 58%, 2022 1.259 lb/ac on 35%, 2024 1.658 lb/ac on 62%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.4978,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — chlorpyrifos: 2018 1.175 lb/ac on 36%, 2020 1.082 lb/ac on 43%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.1306,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — permethrin: 2018 0.37 lb/ac on 35%, 2020 0.308 lb/ac on 41%, 2022 0.282 lb/ac on 36%, 2024 0.198 lb/ac on 55%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.5734,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — metolachlor: 2018 1.328 lb/ac on 30%, 2020 1.576 lb/ac on 37%, 2022 1.105 lb/ac on 36%, 2024 1.419 lb/ac on 47%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.6037,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — pendimethalin: 2018 2.523 lb/ac on 17%, 2020 3.966 lb/ac on 19%, 2022 1.302 lb/ac on 24%, 2024 1.346 lb/ac on 49%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 1.6482,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Asparagus — carbaryl: 2018 3.087 lb/ac on 45%, 2020 3.893 lb/ac on 55%, 2022 2.577 lb/ac on 38%, 2024 1.806 lb/ac on 76%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 8864,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Asparagus — availability_gg (world): FAOSTAT QCL item 367 'Asparagus', World production 2020–2024 = 8.78, 8.84, 8.89, 8.89, 8.91 Mt; mean 8,864 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 144,
+        "slug": "ginger",
+        "name": "Ginger",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Ginger, nutrition from USDA. 93% is edible (scrapings removed). India grows about 41% of the world's ginger, Nigeria ~14% and China ~11%. Yield is FAOSTAT world (~10.7 t/ha).\n\nWater is Mekonnen & Hoekstra (1,657 L/kg). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53; confidence 2). Ginger is a root spice, not a typical vegetable, so the generic \"Other Vegetables\" average is only a rough fit. USDA does not survey ginger, so pesticide (~6 kg/ha: mancozeb seed and soil treatment against rhizome rot, plus carbaryl) and fertilizer (~250 kg/ha) are educated guesses at confidence 1, built from Indian extension recommendations rather than measured farm use.",
+        "land_types": {
+            "tropical_savanna": 0.5,
+            "temperate_forest": 0.3,
+            "tropical_forest": 0.2
+        },
+        "land_types_note": "India grows about 41% of the world's ginger, then Nigeria (~14%), China (~11%), Nepal and Indonesia.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.8,
+                    "fat": 0.0075,
+                    "sat_fat": 0.00203,
+                    "protein": 0.0182,
+                    "fiber": 0.02,
+                    "sodium": 0.13,
+                    "carbs": 0.1777,
+                    "sugar": 0.017,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.0,
+                    "vitamin_c": 0.05,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0026,
+                    "vitamin_k": 0.001,
+                    "folate": 0.11,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.0016,
+                    "calcium": 0.16,
+                    "iron": 0.006,
+                    "magnesium": 0.43,
+                    "potassium": 4.15,
+                    "zinc": 0.0034,
+                    "phosphorus": 0.34,
+                    "selenium": 0.007,
+                    "ala": 0.00034,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Ginger — FDC 169231 'Ginger root, raw' (SR Legacy 11216), per 100 g: 80 kcal, protein 1.82 g, fat 0.75 g, sat fat 0.203 g, carbs 17.77 g, fiber 2 g, sugars 1.7 g, sodium 13 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169231 per 100 g: vitamin a 0 µg RAE, vitamin c 5 mg, vitamin d 0 µg, vitamin e 0.26 mg, vitamin k 0.1 µg, folate 11 µg DFE, vitamin b12 0 µg, vitamin b6 0.16 mg, calcium 16 mg, iron 0.6 mg, magnesium 43 mg, potassium 415 mg, zinc 0.34 mg, phosphorus 34 mg, selenium 0.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 169231 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.93,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Ginger — yield_fraction: SR28 FOOD_DES NDB 11216 'Ginger root, raw': refuse 7% (scrapings), so edible fraction = 0.93."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 10700,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Ginger — yield_kg_ha (world): FAOSTAT QCL item 720 'Ginger, raw', World yield 2020–2024 = 9,978, 10,416, 11,046, 11,001, 11,167 kg/ha; 5-year mean 10,722 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 1657,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Ginger — water_per_kg: 1657 L/kg global average (Report 47 table total; green 1525 + blue 40 + grey 92, components rounded separately). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 720 Ginger, 1996–2005: green 1525 / blue 40 / grey 92 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 1525,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Ginger — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 720 Ginger, 1996–2005: green 1525 / blue 40 / grey 92 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 40,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Ginger — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 720 Ginger, 1996–2005: green 1525 / blue 40 / grey 92 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 92,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Ginger — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 720 Ginger, 1996–2005: green 1525 / blue 40 / grey 92 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 6.1,
+                "confidence": 1,
+                "source": {
+                    "id": 515,
+                    "url": "https://celkau.in/crops/spices/ginger/rhizomerot.php",
+                    "title": "Kerala Agricultural University — Ginger rhizome rot management (mancozeb seed and soil doses)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Ginger — pesticide_kg_ha: no survey data exists, so this adds up the commonly recommended Indian program. Mancozeb 75% WP: seed treatment 3 g product/kg seed x 0.75 = 2.25 g a.i./kg x an ASSUMED seed rate of 1,500 kg/ha = 3.4 kg a.i./ha; plus two soil drenches at 1,500 g product/ha x 0.75 = 1.1 kg a.i. each = 2.2 kg; mancozeb ≈ 5.6 kg a.i./ha. Carbaryl: 0.1% spray = 1 g/L x 500 L/ha = 0.5 kg product x ~50% a.i. x 2 sprays ≈ 0.5 kg a.i./ha. Total ≈ 6.1 kg a.i./ha. The seed rate is my assumption (typical ginger seed rate is 1.5–2.5 t/ha, not looked up), and real farm use may be lower or higher."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 250,
+                "confidence": 1,
+                "source": {
+                    "id": 514,
+                    "url": "https://vikaspedia.in/agriculture/crop-production/package-of-practices/spices/ginger",
+                    "title": "Vikaspedia — Ginger package of practices (state NPK recommendations)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Ginger — fertilizer_kg_ha: no survey data exists. Indian state guides recommend N:P2O5:K2O of 70:50:50 kg/ha (Kerala, = 170 total), 100:50:50 (Karnataka, = 200) and 125:100:100 (Orissa, = 325). Midpoint of the 170–325 range ≈ 250 kg/ha. Recommended rates are not measured use; smallholders may apply less and some apply more, and manure is not counted."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Ginger — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg (full supply chain incl. land use, transport, packaging, retail). No ginger-specific figure; this is the generic 'Other Vegetables' average, so confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 5.6,
+                        "confidence": 1,
+                        "source": {
+                            "id": 515,
+                            "url": "https://celkau.in/crops/spices/ginger/rhizomerot.php",
+                            "title": "Kerala Agricultural University — Ginger rhizome rot management (mancozeb seed and soil doses)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Ginger — mancozeb: seed treatment (3 g 75% WP per kg seed, assumed 1,500 kg seed/ha) = 3.4 kg a.i./ha plus two soil drenches at 1.1 kg a.i./ha = 2.2 kg; total ≈ 5.6 kg a.i./ha. Doses are from Indian rhizome-rot guidance (as reported in search-result summaries of this and similar extension pages); the seed rate is assumed."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.5,
+                        "confidence": 1,
+                        "source": {
+                            "id": 514,
+                            "url": "https://vikaspedia.in/agriculture/crop-production/package-of-practices/spices/ginger",
+                            "title": "Vikaspedia — Ginger package of practices (state NPK recommendations)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Ginger — carbaryl: 0.1% foliar spray (1 g product/L, ~500 L/ha = 0.5 kg product, ~50% a.i.) x 2 sprays ≈ 0.5 kg a.i./ha, for leaf roller and borer control as suggested in Indian ginger guidance. Number of sprays is assumed."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 4772,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Ginger — availability_gg (world): FAOSTAT QCL item 720 'Ginger, raw', World production 2020–2024 = 4.28, 4.81, 5.09, 4.79, 4.89 Mt; mean 4,772 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 156,
+        "slug": "sweet-corn",
+        "name": "Sweet Corn",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Sweet corn (fresh ears), nutrition from USDA. Only 36% is edible (husk, silk and cob removed, 64% refuse). The US grows about 27% of the world's sweet corn, then Mexico, Croatia, Nigeria and Indonesia. Yield is FAOSTAT 'Green corn (maize)': ~9.0 t/ha world, ~18 t/ha US.\n\nWater is Mekonnen & Hoekstra 'Maize, green' (700 L/kg). Emissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53; confidence 2) because their 'Maize' value is for dry grain. The edible fraction assumes the FAOSTAT weight includes husk and cob, which I couldn't confirm; if it is already husked, the edible share is overstated.\n\nUS pesticide (2.0 kg/ha) and fertilizer (186 kg/ha) are from USDA NASS chemical-use surveys (2022 fertilizer and 2022/2024 pesticide; other years withheld a class total), with the world falling back to the US value. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "temperate_grassland": 0.3,
+            "tropical_savanna": 0.2
+        },
+        "land_types_note": "The US (~27%), Mexico, Croatia, Nigeria, Indonesia, Peru and France grow most sweet corn.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.86,
+                    "fat": 0.0135,
+                    "sat_fat": 0.00325,
+                    "protein": 0.0327,
+                    "fiber": 0.02,
+                    "sodium": 0.15,
+                    "carbs": 0.187,
+                    "sugar": 0.0626,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.09,
+                    "vitamin_c": 0.068,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0007,
+                    "vitamin_k": 0.003,
+                    "folate": 0.42,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00093,
+                    "calcium": 0.02,
+                    "iron": 0.0052,
+                    "magnesium": 0.37,
+                    "potassium": 2.7,
+                    "zinc": 0.0046,
+                    "phosphorus": 0.89,
+                    "selenium": 0.006,
+                    "ala": 0.00014,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Sweet Corn — FDC 169998 'Corn, sweet, yellow, raw' (SR Legacy 11167), per 100 g: 86 kcal, protein 3.27 g, fat 1.35 g, sat fat 0.325 g, carbs 18.7 g, fiber 2 g, sugars 6.26 g, sodium 15 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169998 per 100 g: vitamin a 9 µg RAE, vitamin c 6.8 mg, vitamin d 0 µg, vitamin e 0.07 mg, vitamin k 0.3 µg, folate 42 µg DFE, vitamin b12 0 µg, vitamin b6 0.093 mg, calcium 2 mg, iron 0.52 mg, magnesium 37 mg, potassium 270 mg, zinc 0.46 mg, phosphorus 89 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 169998 per 100 g: ALA 0.014 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.36,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Sweet Corn — yield_fraction: SR28 FOOD_DES NDB 11167 'Corn, sweet, yellow, raw': refuse 64% (35% husk, silk, trimmings; 29% cob), so edible fraction = 0.36."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 9000,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sweet Corn — yield_kg_ha (world): FAOSTAT QCL item 446 'Green corn (maize)', World yield 2020–2024 = 8,981, 9,106, 8,896, 9,139, 8,801 kg/ha; 5-year mean 8,984 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 18300,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sweet Corn — yield_kg_ha (US): FAOSTAT QCL item 446 'Green corn (maize)', United States of America yield 2020–2024 = 18,188, 17,926, 18,512, 19,229, 17,543 kg/ha; 5-year mean 18,280 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 700,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Sweet Corn — water_per_kg: 700 L/kg (green 455 + blue 157 + grey 88). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 446 Maize, green, 1996–2005: green 455 / blue 157 / grey 88 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 455,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sweet Corn — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 446 Maize, green, 1996–2005: green 455 / blue 157 / grey 88 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 157,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sweet Corn — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 446 Maize, green, 1996–2005: green 455 / blue 157 / grey 88 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 88,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Sweet Corn — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 446 Maize, green, 1996–2005: green 455 / blue 157 / grey 88 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 2.0,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Sweet Corn — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2022 2.3, 2024 1.8 kg/ha; mean 2.0 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 186,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Sweet Corn — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 186 kg/ha; 2022: K2O 59 lb/ac on 63%, N 101 lb/ac on 92%, P2O5 48 lb/ac on 75%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Sweet Corn — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. No sweet-corn-specific figure; this is the generic 'Other Vegetables' average (P&N's 'Maize' is dry grain), so confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0263,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — glyphosate: 2020 0.973 lb/ac on 2%, 2022 0.652 lb/ac on 3%, 2024 0.285 lb/ac on 11%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 2,
+                "name": "Atrazine",
+                "kg_ha": [
+                    {
+                        "value": 0.4909,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — atrazine: 2020 1.001 lb/ac on 66%, 2022 0.527 lb/ac on 60%, 2024 0.749 lb/ac on 45%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.0439,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — chlorpyrifos: 2020 1.307 lb/ac on 3%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0145,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — permethrin: 2020 0.73 lb/ac on 1%, 2022 0.373 lb/ac on 5%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.3287,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — metolachlor: 2020 1.477 lb/ac on 34%, 2022 1.047 lb/ac on 1%, 2024 1.469 lb/ac on 25%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.0865,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — pendimethalin: 2020 1.354 lb/ac on 7%, 2022 1.894 lb/ac on 5%, 2024 1.053 lb/ac on 4%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.0245,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — propiconazole: 2020 0.102 lb/ac on 24%, 2022 0.099 lb/ac on 23%, 2024 0.108 lb/ac on 17%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0373,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Sweet Corn — carbaryl: 2022 3.329 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 9785,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sweet Corn — availability_gg (world): FAOSTAT QCL item 446 'Green corn (maize)', World production 2020–2024 = 10.25, 9.74, 9.58, 9.89, 9.46 Mt; mean 9,785 Gg."
+                }
+            },
+            {
+                "value": 2689,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Sweet Corn — availability_gg (US): FAOSTAT QCL item 446 'Green corn (maize)', United States of America production 2020–2024 = 2.74, 2.77, 2.75, 2.79, 2.39 Mt; mean 2,689 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 157,
+        "slug": "celery",
+        "name": "Celery",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Celery (stalks), nutrition from USDA. 89% is edible (roots and trimmings removed). FAOSTAT doesn't report celery, so the world yield (~35 t/ha) and world availability (~4,000 Gg) are educated guesses at confidence 1 from a farming guide and from US and Spanish production. The US figures are measured: California grows ~60 t/ha, about 660 Gg a year.\n\nMekonnen & Hoekstra don't list celery, so water is borrowed from lettuce (237 L/kg; confidence 1). Emissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53; confidence 2).\n\nUS pesticide (6.7 kg/ha, 2018 and 2020 surveys) and fertilizer (537 kg/ha, mean of the 2018 survey at N 387 + P2O5 279 + K2O 333 and a much lower 2022 value) are from USDA NASS. Celery is very heavily fertilized, and the two survey years disagree widely. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "dry": 0.5,
+            "temperate_forest": 0.4,
+            "tropical_savanna": 0.1
+        },
+        "land_types_note": "Irrigated coastal California (the US grows celery almost entirely there), plus China, Spain and Mexico; a guess since FAOSTAT has no celery item.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.16,
+                    "fat": 0.0017,
+                    "sat_fat": 0.00042,
+                    "protein": 0.0069,
+                    "fiber": 0.016,
+                    "sodium": 0.8,
+                    "carbs": 0.0297,
+                    "sugar": 0.0134,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.22,
+                    "vitamin_c": 0.031,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0027,
+                    "vitamin_k": 0.293,
+                    "folate": 0.36,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00074,
+                    "calcium": 0.4,
+                    "iron": 0.002,
+                    "magnesium": 0.11,
+                    "potassium": 2.6,
+                    "zinc": 0.0013,
+                    "phosphorus": 0.24,
+                    "selenium": 0.004,
+                    "ala": 0.0,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Celery — FDC 169988 'Celery, raw' (SR Legacy 11143), per 100 g: 16 kcal, protein 0.69 g, fat 0.17 g, sat fat 0.042 g, carbs 2.97 g, fiber 1.6 g, sugars 1.34 g, sodium 80 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169988 per 100 g: vitamin a 22 µg RAE, vitamin c 3.1 mg, vitamin d 0 µg, vitamin e 0.27 mg, vitamin k 29.3 µg, folate 36 µg DFE, vitamin b12 0 µg, vitamin b6 0.074 mg, calcium 40 mg, iron 0.2 mg, magnesium 11 mg, potassium 260 mg, zinc 0.13 mg, phosphorus 24 mg, selenium 0.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 169988 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.89,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Celery — yield_fraction: SR28 FOOD_DES NDB 11143 'Celery, raw': refuse 11% (roots and trimmings), so edible fraction = 0.89."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 35000,
+                "confidence": 1,
+                "source": {
+                    "id": 520,
+                    "url": "https://wikifarmer.com/library/en/article/celery-harvest-and-yields-per-hectare",
+                    "title": "WikiFarmer — Celery harvest and yields per hectare",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Celery — yield_kg_ha (world): FAOSTAT has no celery item (celery sits inside 'other vegetables'). A farming guide gives 20–35 t/ha as an average-good fresh-market yield and 30–50 t/ha under favourable conditions, so I used 35 t/ha for the world average. The US is far higher (~60 t/ha in California)."
+                }
+            },
+            {
+                "value": 59800.0,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Celery — yield_kg_ha (US, California): USDA NASS Vegetables 2023 Summary, celery yield per acre 2021–2023 = 550.0, 535.0, 515.0 cwt/acre; mean 533.3 cwt/acre x 112.085 = 59,779 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 237,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no celery row. Lettuce is used as the stand-in because celery is another irrigated, short-rooted leaf/stem vegetable grown in the same regions. Celery — water_per_kg: 237 L/kg (green 133 + blue 28 + grey 77). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no celery row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 133,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no celery row. Lettuce is used as the stand-in because celery is another irrigated, short-rooted leaf/stem vegetable grown in the same regions. Celery — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no celery row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 28,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no celery row. Lettuce is used as the stand-in because celery is another irrigated, short-rooted leaf/stem vegetable grown in the same regions. Celery — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no celery row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 77,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no celery row. Lettuce is used as the stand-in because celery is another irrigated, short-rooted leaf/stem vegetable grown in the same regions. Celery — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no celery row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 6.7,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Celery — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2018 5.1, 2020 8.3 kg/ha; mean 6.7 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 537,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Celery — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 537 kg/ha; 2018: K2O 437 lb/ac on 68%, N 345 lb/ac on 100%, P2O5 355 lb/ac on 70%; 2022: P2O5 46 lb/ac on 36%, K2O 47 lb/ac on 36%, N 88 lb/ac on 38%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Celery — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. No celery-specific figure; generic 'Other Vegetables' average, confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.3333,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — malathion: 2018 2.274 lb/ac on 15%, 2020 1.409 lb/ac on 18%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.1637,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — permethrin: 2018 0.285 lb/ac on 42%, 2020 0.312 lb/ac on 42%, 2024 0.264 lb/ac on 71%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0286,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — imidacloprid: 2018 0.357 lb/ac on 8%, 2020 0.32 lb/ac on 7%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0157,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — thiamethoxam: 2018 0.101 lb/ac on 16%, 2020 0.087 lb/ac on 9%, 2024 0.09 lb/ac on 20%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.1423,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — metolachlor: 2020 1.154 lb/ac on 11%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 14,
+                "name": "Propiconazole",
+                "kg_ha": [
+                    {
+                        "value": 0.1307,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — propiconazole: 2018 0.168 lb/ac on 62%, 2020 0.28 lb/ac on 63%, 2024 0.136 lb/ac on 51%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.0385,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — paraquat: 2018 0.859 lb/ac on 4%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.1552,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Celery — carbaryl: 2020 1.539 lb/ac on 9%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 4000,
+                "confidence": 1,
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Celery — availability_gg (world): no FAOSTAT celery item. US production is known (~660 Gg, see the US value) and Spain reported 153 kt in 2021; China is the largest vegetable producer and likely grows several times the US amount. I guessed ~4,000 Gg for the world, which could easily be off by a factor of two."
+                }
+            },
+            {
+                "value": 663,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Celery — availability_gg (US): USDA NASS Vegetables 2023 Summary, celery production 2021–2023 = 15,290.0, 14,712.5, 13,853.5 thousand cwt; mean 14,619 thousand cwt x 45.359 kg = 663 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 158,
+        "slug": "beets",
+        "name": "Beets",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Beets (table beets, roots), nutrition from USDA. 67% is edible (parings and part of the tops removed). FAOSTAT and the water-footprint reports don't list table beets, so yield (~30 t/ha), availability (~3,000 Gg), pesticide (~6 kg/ha), fertilizer (~100 kg/ha) and the per-compound pesticide rates are educated guesses at confidence 1.\n\nWater is borrowed from carrot (195 L/kg; confidence 1) and emissions use Poore & Nemecek's 'Root Vegetables' (0.43; confidence 3).",
+        "land_types": {
+            "temperate_forest": 0.6,
+            "temperate_grassland": 0.3,
+            "dry": 0.1
+        },
+        "land_types_note": "Poland, France, Germany, Russia, Ukraine, the US and Türkiye grow most table beets; the split is a guess.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.43,
+                    "fat": 0.0017,
+                    "sat_fat": 0.00027,
+                    "protein": 0.0161,
+                    "fiber": 0.028,
+                    "sodium": 0.78,
+                    "carbs": 0.0956,
+                    "sugar": 0.0676,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.02,
+                    "vitamin_c": 0.049,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0004,
+                    "vitamin_k": 0.002,
+                    "folate": 1.09,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00067,
+                    "calcium": 0.16,
+                    "iron": 0.008,
+                    "magnesium": 0.23,
+                    "potassium": 3.25,
+                    "zinc": 0.0035,
+                    "phosphorus": 0.4,
+                    "selenium": 0.007,
+                    "ala": 5e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Beets — FDC 169145 'Beets, raw' (SR Legacy 11080), per 100 g: 43 kcal, protein 1.61 g, fat 0.17 g, sat fat 0.027 g, carbs 9.56 g, fiber 2.8 g, sugars 6.76 g, sodium 78 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169145 per 100 g: vitamin a 2 µg RAE, vitamin c 4.9 mg, vitamin d 0 µg, vitamin e 0.04 mg, vitamin k 0.2 µg, folate 109 µg DFE, vitamin b12 0 µg, vitamin b6 0.067 mg, calcium 16 mg, iron 0.8 mg, magnesium 23 mg, potassium 325 mg, zinc 0.35 mg, phosphorus 40 mg, selenium 0.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 169145 per 100 g: ALA 0.005 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.67,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Beets — yield_fraction: SR28 FOOD_DES NDB 11080 'Beets, raw': refuse 33% (parings and part tops), so edible fraction = 0.67."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 30000,
+                "confidence": 1,
+                "source": {
+                    "id": 526,
+                    "url": "https://ishs.org/ishs-article/830_35/",
+                    "title": "ISHS — red beet yield trial (30.1 t/ha, as reported in a web search summary)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beets — yield_kg_ha (world): FAOSTAT has no table-beet item (beets are inside 'other vegetables'). A red-beet trial reported 30.1 t/ha, and carrots (a similar root vegetable) are ~35 t/ha, so I used 30 t/ha as a world average."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 195,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no table-beet row. Carrot is used as the stand-in because it is the nearest irrigated root vegetable. Beets — water_per_kg: 195 L/kg (green 106 + blue 28 + grey 61). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (stand-in; no table-beet row), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 106,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no table-beet row. Carrot is used as the stand-in because it is the nearest irrigated root vegetable. Beets — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (stand-in; no table-beet row), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 28,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no table-beet row. Carrot is used as the stand-in because it is the nearest irrigated root vegetable. Beets — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (stand-in; no table-beet row), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 61,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no table-beet row. Carrot is used as the stand-in because it is the nearest irrigated root vegetable. Beets — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 426 Carrots and turnips (stand-in; no table-beet row), 1996–2005: green 106 / blue 28 / grey 61 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 6,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beets — pesticide_kg_ha (US): no recent NASS survey (only a 2000 one with just the herbicide total disclosed: 23,400 lb over ~6,400 acres ≈ 4.1 kg/ha). I added ~50% for the undisclosed fungicide/insecticide classes ≈ 6 kg/ha."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beets — fertilizer_kg_ha: no beet survey. Carrot (a similar root vegetable) is 86 kg/ha in the NASS-based entry and spinach (a beet relative) is 120 kg/ha in this repo, so I used ~100 kg/ha."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.43,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Beets — emissions_per_kg (world): Poore & Nemecek (2018) 'Root Vegetables' global mean, 0.43 kg CO2e/kg. Category pools root vegetables; no beet-specific figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.09,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Beets — permethrin — value: EDUCATED GUESS (confidence 1, not a measured value): No beet survey; copies this repo's spinach compound rates because spinach is the closest relative (same plant family, beet-spinach-chard) with data. Copied value: 0.09."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.07,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Beets — imidacloprid — value: EDUCATED GUESS (confidence 1, not a measured value): No beet survey; copies this repo's spinach compound rates because spinach is the closest relative (same plant family, beet-spinach-chard) with data. Copied value: 0.07."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.15,
+                        "confidence": 1,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Beets — mancozeb — value: EDUCATED GUESS (confidence 1, not a measured value): No beet survey; copies this repo's spinach compound rates because spinach is the closest relative (same plant family, beet-spinach-chard) with data. Copied value: 0.15."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 3000,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Beets — availability_gg (world): FAOSTAT does not report table beets separately. In 2023 Poland grew ~341 kt, France ~129 kt and Germany ~76 kt, and Russia, the US, Türkiye, Ukraine and Egypt are also large producers, so I guessed ~3,000 Gg worldwide."
+                }
+            }
+        ]
+    },
+    {
+        "id": 159,
+        "slug": "brussels-sprouts",
+        "name": "Brussels Sprouts",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Brussels sprouts, nutrition from USDA. 90% is edible (outer leaves removed). FAOSTAT lumps sprouts into 'Cabbages and other brassicas', so yield (~20 t/ha) and availability (~300 Gg) are educated guesses at confidence 1 from Dutch, Belgian and US production figures.\n\nWater is Mekonnen & Hoekstra's cabbage-and-other-brassicas value (280 L/kg), which formally includes sprouts (confidence 3). Emissions use Poore & Nemecek's 'Brassicas' (0.51). Pesticide, fertilizer and compound rates are copied from cabbage at confidence 1.",
+        "land_types": {
+            "temperate_forest": 0.8,
+            "temperate_grassland": 0.1,
+            "dry": 0.1
+        },
+        "land_types_note": "The Netherlands, Belgium, the UK, Germany, Poland and coastal California grow most Brussels sprouts.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.43,
+                    "fat": 0.003,
+                    "sat_fat": 0.00062,
+                    "protein": 0.0338,
+                    "fiber": 0.038,
+                    "sodium": 0.25,
+                    "carbs": 0.0895,
+                    "sugar": 0.022,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.38,
+                    "vitamin_c": 0.85,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0088,
+                    "vitamin_k": 1.77,
+                    "folate": 0.61,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00219,
+                    "calcium": 0.42,
+                    "iron": 0.014,
+                    "magnesium": 0.23,
+                    "potassium": 3.89,
+                    "zinc": 0.0042,
+                    "phosphorus": 0.69,
+                    "selenium": 0.016,
+                    "ala": 0.00099,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Brussels Sprouts — FDC 170383 'Brussels sprouts, raw' (SR Legacy 11098), per 100 g: 43 kcal, protein 3.38 g, fat 0.3 g, sat fat 0.062 g, carbs 8.95 g, fiber 3.8 g, sugars 2.2 g, sodium 25 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170383 per 100 g: vitamin a 38 µg RAE, vitamin c 85 mg, vitamin d 0 µg, vitamin e 0.88 mg, vitamin k 177 µg, folate 61 µg DFE, vitamin b12 0 µg, vitamin b6 0.219 mg, calcium 42 mg, iron 1.4 mg, magnesium 23 mg, potassium 389 mg, zinc 0.42 mg, phosphorus 69 mg, selenium 1.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 170383 per 100 g: ALA 0.099 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.9,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Brussels Sprouts — yield_fraction: SR28 FOOD_DES NDB 11098 'Brussels sprouts, raw': refuse 10% (outer leaves), so edible fraction = 0.9."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 20000,
+                "confidence": 1,
+                "source": {
+                    "id": 521,
+                    "url": "https://www.freshplaza.com/north-america/article/9263886/dutch-belgian-brussels-sprouts-acreage-increasing/",
+                    "title": "FreshPlaza — Dutch and Belgian Brussels sprouts acreage increasing",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brussels Sprouts — yield_kg_ha: FAOSTAT only has 'Cabbages' (a group that includes sprouts, ~30.6 t/ha), which doesn't describe sprouts well. The Netherlands reported 82,000 t from ~2,700 ha (≈30 t/ha, a very high-yield country, though the 82,000 t and 2,700 ha come from different years), and a trial/stalk figure is ~0.9 kg of sprouts per stalk. I used 20 t/ha for the world average, below the Dutch figure."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 280,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Brussels Sprouts — water_per_kg: 280 L/kg (green 181 + blue 26 + grey 73). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 181,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Brussels Sprouts — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Brussels Sprouts — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 73,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Brussels Sprouts — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 5.6,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Brussels Sprouts — pesticide_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey (NASS only covered them in 2000 and disclosed nothing). Copies this repo's cabbage entry, the closest brassica with a NASS survey. Copied value: 5.6."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 141,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Brussels Sprouts — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey. Copies this repo's cabbage entry (a brassica); sprouts are a long-season crop and may need more. Copied value: 141."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Brussels Sprouts — emissions_per_kg (world): Poore & Nemecek (2018) 'Brassicas' global mean, 0.51 kg CO2e/kg. Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0904,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — glyphosate — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.0904."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0155,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — permethrin — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.0155."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0611,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — imidacloprid — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.0611."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.017,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — thiamethoxam — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.017."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3297,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — mancozeb — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.3297."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.196,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — metolachlor — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.196."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0195,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Brussels Sprouts — carbaryl — value: EDUCATED GUESS (confidence 1, not a measured value): No sprouts survey; copies this repo's cabbage compound rates. Copied value: 0.0195."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 300,
+                "confidence": 1,
+                "source": {
+                    "id": 521,
+                    "url": "https://www.freshplaza.com/north-america/article/9263886/dutch-belgian-brussels-sprouts-acreage-increasing/",
+                    "title": "FreshPlaza — Dutch and Belgian Brussels sprouts acreage increasing",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Brussels Sprouts — availability_gg (world): no FAOSTAT item. The Netherlands produces ~82 kt, the US ~32 kt, Belgium grows ~2,400 ha (~50 kt at 20 t/ha), and the UK, Germany, Poland and others add more, so I guessed ~300 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 160,
+        "slug": "chili-pepper",
+        "name": "Chili Pepper",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Hot chili peppers (green), nutrition from USDA. 73% is edible (stem ends, seeds and core removed). China grows ~40% of the world's chilies and green peppers, then India, Mexico, Türkiye and Indonesia. The FAOSTAT and water figures cover chilies and sweet peppers together, so yield and water are identical to Bell Pepper; the US yield is USDA's chile-specific figure (~21 t/ha).\n\nEmissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53). Pesticide, fertilizer and compound rates are copied from Bell Pepper at confidence 2 (USDA doesn't survey chile spraying); world availability is a confidence-1 guess of half the pooled FAOSTAT total. Fertilizer is a confidence-1 guess because the bell pepper entry has none.",
+        "land_types": {
+            "temperate_forest": 0.4,
+            "dry": 0.25,
+            "tropical_savanna": 0.2,
+            "tropical_forest": 0.15
+        },
+        "land_types_note": "China (~40%), India, Mexico, Türkiye and Indonesia; the same pattern as bell pepper.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.4,
+                    "fat": 0.002,
+                    "sat_fat": 0.00021,
+                    "protein": 0.02,
+                    "fiber": 0.015,
+                    "sodium": 0.07,
+                    "carbs": 0.0946,
+                    "sugar": 0.051,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.59,
+                    "vitamin_c": 2.425,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0069,
+                    "vitamin_k": 0.143,
+                    "folate": 0.23,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00278,
+                    "calcium": 0.18,
+                    "iron": 0.012,
+                    "magnesium": 0.25,
+                    "potassium": 3.4,
+                    "zinc": 0.003,
+                    "phosphorus": 0.46,
+                    "selenium": 0.005,
+                    "ala": 5e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Chili Pepper — FDC 170497 'Peppers, hot chili, green, raw' (SR Legacy 11670), per 100 g: 40 kcal, protein 2 g, fat 0.2 g, sat fat 0.021 g, carbs 9.46 g, fiber 1.5 g, sugars 5.1 g, sodium 7 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170497 per 100 g: vitamin a 59 µg RAE, vitamin c 242.5 mg, vitamin d 0 µg, vitamin e 0.69 mg, vitamin k 14.3 µg, folate 23 µg DFE, vitamin b12 0 µg, vitamin b6 0.278 mg, calcium 18 mg, iron 1.2 mg, magnesium 25 mg, potassium 340 mg, zinc 0.3 mg, phosphorus 46 mg, selenium 0.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 170497 per 100 g: ALA 0.005 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.73,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Chili Pepper — yield_fraction: SR28 FOOD_DES NDB 11670 'Peppers, hot chili, green, raw': refuse 27% (stem ends, seeds and core), so edible fraction = 0.73."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15700,
+                "confidence": 4,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Chili Pepper — yield_kg_ha (world): FAOSTAT QCL item 401 'Chillies and peppers, green (Capsicum spp. and Pimenta spp.)', World yield 2020–2024 = 15,289, 15,536, 15,745, 16,003, 15,910 kg/ha; mean 15,697 kg/ha, rounded. This FAOSTAT item pools chilies and sweet peppers, so it is the same figure as Bell Pepper."
+                }
+            },
+            {
+                "value": 21100.0,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Chili Pepper — yield_kg_ha (US): USDA NASS Vegetables 2023 Summary, chile pepper yield 2021–2023 = 174.3, 212.5, 178.4 cwt/acre; mean 188.4 cwt/acre x 112.085 = 21,117 kg/ha, rounded."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 379,
+                "confidence": 4,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Chili Pepper — water_per_kg: 379 L/kg (green 240 + blue 42 + grey 97). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 401 Chillies and peppers, green, 1996–2005: green 240 / blue 42 / grey 97 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 240,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chili Pepper — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 401 Chillies and peppers, green, 1996–2005: green 240 / blue 42 / grey 97 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 42,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chili Pepper — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 401 Chillies and peppers, green, 1996–2005: green 240 / blue 42 / grey 97 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 97,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Chili Pepper — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 401 Chillies and peppers, green, 1996–2005: green 240 / blue 42 / grey 97 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 94.5,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Chili Pepper — pesticide_kg_ha: NASS doesn't survey chile peppers' chemical use, so this copies the NASS-based Bell Pepper entry (same genus, similar spray program). Copied value: 94.5."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 150,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chili Pepper — fertilizer_kg_ha: no survey and the bell-pepper entry has none; typical vegetable fertilizer ~150 kg/ha (between this repo's cabbage 141 and spinach 120/kale 100 figures)."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Chili Pepper — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 1.5075,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — mancozeb — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 1.5075."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 1.5076,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — metolachlor — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 1.5076."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.3336,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — glyphosate — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.3336."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.1111,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — pendimethalin — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.1111."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.1664,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — carbaryl — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.1664."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.077,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — permethrin — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.077."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0461,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — cypermethrin — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.0461."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0411,
+                        "confidence": 2,
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Chili Pepper — thiamethoxam — value: NASS doesn't survey chile peppers' chemical use, so this copies this repo's Bell Pepper compound rates (same genus). Copied value: 0.0411."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 21755,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Chili Pepper — availability_gg (world): FAOSTAT item 401 pools chilies and sweet peppers (43,510 Gg combined). I assumed about half is chilies, so ~21,755 Gg."
+                }
+            },
+            {
+                "value": 101,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Chili Pepper — availability_gg (US): USDA NASS Vegetables 2023 Summary, chile pepper production 2021–2023 = 2,074.0, 2,507.5, 2,087.0 thousand cwt; mean x 45.359 kg = 101 Gg."
+                }
+            }
+        ]
+    },
+    {
+        "id": 161,
+        "slug": "zucchini",
+        "name": "Zucchini",
+        "type": "plant",
+        "category": "vegetables",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Zucchini (summer squash), nutrition from USDA. 95% is edible (ends trimmed). India and China each grow ~24% of the world's pumpkins, squash and gourds (the FAOSTAT group, which also includes winter squash). World yield is that group's ~15.3 t/ha (confidence 3); the US yield is USDA's summer-squash figure (~17 t/ha).\n\nWater is Mekonnen & Hoekstra's 'Pumpkins, squash and gourds' (336 L/kg, group value). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53). World availability is a confidence-1 guess of one third of the pooled group.\n\nUS pesticide (8.5 kg/ha) and fertilizer (169 kg/ha) are from USDA NASS surveys of squash (all four vegetable surveys for pesticide, 2018 and 2022 for fertilizer). Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "tropical_savanna": 0.3,
+            "temperate_grassland": 0.2
+        },
+        "land_types_note": "India and China grow about half of the world's pumpkins and squash; the US, Italy, Spain, Egypt and Mexico are the main zucchini growers.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.17,
+                    "fat": 0.0032,
+                    "sat_fat": 0.00084,
+                    "protein": 0.0121,
+                    "fiber": 0.01,
+                    "sodium": 0.08,
+                    "carbs": 0.0311,
+                    "sugar": 0.025,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.1,
+                    "vitamin_c": 0.179,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0012,
+                    "vitamin_k": 0.043,
+                    "folate": 0.24,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00163,
+                    "calcium": 0.16,
+                    "iron": 0.0037,
+                    "magnesium": 0.18,
+                    "potassium": 2.61,
+                    "zinc": 0.0032,
+                    "phosphorus": 0.38,
+                    "selenium": 0.002,
+                    "ala": 0.00061,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Zucchini — FDC 169291 'Squash, summer, zucchini, includes skin, raw' (SR Legacy 11477), per 100 g: 17 kcal, protein 1.21 g, fat 0.32 g, sat fat 0.084 g, carbs 3.11 g, fiber 1 g, sugars 2.5 g, sodium 8 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169291 per 100 g: vitamin a 10 µg RAE, vitamin c 17.9 mg, vitamin d 0 µg, vitamin e 0.12 mg, vitamin k 4.3 µg, folate 24 µg DFE, vitamin b12 0 µg, vitamin b6 0.163 mg, calcium 16 mg, iron 0.37 mg, magnesium 18 mg, potassium 261 mg, zinc 0.32 mg, phosphorus 38 mg, selenium 0.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 169291 per 100 g: ALA 0.061 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.95,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Zucchini — yield_fraction: SR28 FOOD_DES NDB 11477 'Squash, summer, zucchini, includes skin, raw': refuse 5% (ends), so edible fraction = 0.95."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 15300,
+                "confidence": 3,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Zucchini — yield_kg_ha (world): FAOSTAT QCL item 394 'Pumpkins, squash and gourds', World yield 2020–2024 = 15,091, 15,252, 15,267, 15,543, 15,385 kg/ha; 5-year mean 15,308 kg/ha, rounded. Fresh harvested weight, harvested-area basis."
+                }
+            },
+            {
+                "value": 17400.0,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Zucchini — yield_kg_ha (US): USDA NASS Vegetables 2023 Summary, squash yield 2021–2023 = 161.8, 153.9, 150.4 cwt/acre; mean 155.4 cwt/acre x 112.085 = 17,414 kg/ha, rounded. NASS 'squash' is summer squash such as zucchini."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 336,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Zucchini — water_per_kg: 336 L/kg (green 228 + blue 24 + grey 84). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds, 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 228,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Zucchini — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds, 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 24,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Zucchini — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds, 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 84,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Zucchini — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 394 Pumpkins, squash and gourds, 1996–2005: green 228 / blue 24 / grey 84 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 8.5,
+                "confidence": 3,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Zucchini — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2018 7.4, 2020 8.3, 2022 7.5, 2024 10.9 kg/ha; mean 8.5 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 169,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Zucchini — fertilizer_kg_ha (US): NASS Agricultural Chemical Use, PROGRAM STATES, N + P2O5 + K2O per planted acre (lb/acre/yr x % treated x 1.12085) = 169 kg/ha; 2018: N 83 lb/ac on 89%, P2O5 61 lb/ac on 82%, K2O 97 lb/ac on 85%; 2022: P2O5 30 lb/ac on 58%, K2O 51 lb/ac on 70%, N 54 lb/ac on 78%. Only the survey years shown published fertilizer. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Zucchini — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.1099,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — glyphosate: 2020 1.621 lb/ac on 2%, 2022 4.241 lb/ac on 2%, 2024 1.966 lb/ac on 9%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.0386,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — malathion: 2022 3.447 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0154,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — permethrin: 2018 0.386 lb/ac on 2%, 2020 0.128 lb/ac on 14%, 2022 0.233 lb/ac on 1%, 2024 0.271 lb/ac on 10%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.033,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — imidacloprid: 2018 0.098 lb/ac on 18%, 2020 0.41 lb/ac on 4%, 2022 0.247 lb/ac on 12%, 2024 0.541 lb/ac on 10%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0036,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — thiamethoxam: 2018 0.135 lb/ac on 1%, 2020 0.081 lb/ac on 2%, 2022 0.105 lb/ac on 4%, 2024 0.289 lb/ac on 2%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.7016,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — mancozeb: 2018 2.308 lb/ac on 8%, 2020 3.471 lb/ac on 9%, 2022 6.653 lb/ac on 21%, 2024 7.619 lb/ac on 8%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.0768,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — metolachlor: 2018 1.016 lb/ac on 2%, 2020 0.993 lb/ac on 7%, 2022 1.447 lb/ac on 3%, 2024 0.939 lb/ac on 15%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 16,
+                "name": "Paraquat",
+                "kg_ha": [
+                    {
+                        "value": 0.0279,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — paraquat: 2018 0.498 lb/ac on 5%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0605,
+                        "confidence": 3,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Zucchini — carbaryl: 2018 1.971 lb/ac on 8%, 2020 1.094 lb/ac on 2%, 2022 2.593 lb/ac on 1%, 2024 1.055 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 10832,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Zucchini — availability_gg (world): FAOSTAT's 'Pumpkins, squash and gourds' totals 32,496 Gg and includes winter squash and pumpkins (also covered by Pumpkin & Squash). I assumed roughly a third is summer squash like zucchini."
+                }
+            },
+            {
+                "value": 296,
+                "confidence": 4,
+                "region": "US",
+                "source": {
+                    "id": 161,
+                    "url": "https://esmis.nal.usda.gov/sites/default/release-files/02870v86p/qz20vd735/ht24z584t/vegean24.pdf",
+                    "title": "USDA NASS — Vegetables 2023 Summary (February 2024)",
+                    "note": "Zucchini — availability_gg (US): USDA NASS Vegetables 2023 Summary, squash production 2021–2023 = 7,020.5, 6,555.0, 6,032.0 thousand cwt; mean x 45.359 kg = 296 Gg."
+                }
+            }
+        ]
     }
 ]

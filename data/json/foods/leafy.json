@@ -1528,5 +1528,1185 @@
                 }
             }
         ]
+    },
+    {
+        "id": 162,
+        "slug": "arugula",
+        "name": "Arugula",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Arugula (rocket), nutrition from USDA. 60% is edible (roots, stems and yellowed leaves removed). FAOSTAT and the water-footprint reports have no arugula, so yield (~22 t/ha), availability (~1,000 Gg), water and the spray figures all use lettuce as a stand-in at confidence 1.\n\nWater is lettuce's 237 L/kg (confidence 1). Emissions use Poore & Nemecek's 'Other Vegetables' (0.53; confidence 2). US pesticide (8.4 kg/ha) and fertilizer (120 kg/ha) come from NASS leaf-lettuce surveys. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "dry": 0.6,
+            "temperate_forest": 0.4
+        },
+        "land_types_note": "Irrigated California and Arizona plus Italy, Spain and the Netherlands; a guess based on where leaf salads are grown.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.25,
+                    "fat": 0.0066,
+                    "sat_fat": 0.00086,
+                    "protein": 0.0258,
+                    "fiber": 0.016,
+                    "sodium": 0.27,
+                    "carbs": 0.0365,
+                    "sugar": 0.0205,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 1.19,
+                    "vitamin_c": 0.15,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0043,
+                    "vitamin_k": 1.086,
+                    "folate": 0.97,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00073,
+                    "calcium": 1.6,
+                    "iron": 0.0146,
+                    "magnesium": 0.47,
+                    "potassium": 3.69,
+                    "zinc": 0.0047,
+                    "phosphorus": 0.52,
+                    "selenium": 0.003,
+                    "ala": 0.0017,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Arugula — FDC 169387 'Arugula, raw' (SR Legacy 11959), per 100 g: 25 kcal, protein 2.58 g, fat 0.66 g, sat fat 0.086 g, carbs 3.65 g, fiber 1.6 g, sugars 2.05 g, sodium 27 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169387 per 100 g: vitamin a 119 µg RAE, vitamin c 15 mg, vitamin d 0 µg, vitamin e 0.43 mg, vitamin k 108.6 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.073 mg, calcium 160 mg, iron 1.46 mg, magnesium 47 mg, potassium 369 mg, zinc 0.47 mg, phosphorus 52 mg, selenium 0.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 169387 per 100 g: ALA 0.17 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.6,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Arugula — yield_fraction: SR28 FOOD_DES NDB 11959 'Arugula, raw': refuse 40% (roots, stems and yellowed leaves), so edible fraction = 0.6."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 22000,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula — yield_kg_ha (world): FAOSTAT has no arugula (rocket) item. Lettuce and chicory (item 372, World yield 2020–2024 = 22,138, 21,716, 22,002, 22,038, 21,909 kg/ha, mean 21,960) is the stand-in, since arugula is grown as a similar short-cycle salad leaf."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 237,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no arugula row; lettuce is the stand-in (another short-cycle leaf salad). Arugula — water_per_kg: 237 L/kg (green 133 + blue 28 + grey 77). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no arugula row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 133,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no arugula row; lettuce is the stand-in (another short-cycle leaf salad). Arugula — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no arugula row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 28,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no arugula row; lettuce is the stand-in (another short-cycle leaf salad). Arugula — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no arugula row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 77,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no arugula row; lettuce is the stand-in (another short-cycle leaf salad). Arugula — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 372 Lettuce (stand-in; no arugula row), 1996–2005: green 133 / blue 28 / grey 77 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 8.4,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. Arugula — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2020 12.1, 2022 5.6, 2024 7.6 kg/ha; mean 8.4 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Arugula — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): The NASS leaf-lettuce fertilizer figure (36 kg/ha, one complete survey year) looks too low next to California lettuce practice, so this copies this repo's romaine lettuce entry instead. Copied value: 120."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Arugula — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. No arugula-specific figure; generic 'Other Vegetables' average, confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0281,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — glyphosate: 2018 2.506 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.0686,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — malathion: 2018 1.528 lb/ac on 2%, 2020 2.199 lb/ac on 3%, 2024 1.741 lb/ac on 5%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.2159,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — permethrin: 2018 0.295 lb/ac on 34%, 2024 0.483 lb/ac on 59%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.1231,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — imidacloprid: 2018 0.325 lb/ac on 30%, 2020 0.279 lb/ac on 17%, 2022 0.057 lb/ac on 29%, 2024 1.112 lb/ac on 25%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0368,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — thiamethoxam: 2020 0.057 lb/ac on 2%, 2022 0.208 lb/ac on 31%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.7385,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula has no USDA survey, so this uses NASS leaf lettuce (lettuce excluding head), a similar leafy salad crop in the same California/Arizona fields as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Arugula — mancozeb: 2018 2.272 lb/ac on 29%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1000,
+                "confidence": 1,
+                "source": {
+                    "id": 527,
+                    "url": "https://hortidaily.com/article/9610447/italian-arugula-cultivation-becomes-more-professional-and-sustainable-with-each-passing-year/",
+                    "title": "HortiDaily — Italian arugula cultivation (acreage and exports)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Arugula — availability_gg (world): no FAOSTAT item. Italy exported ~194 kt and the US ~145 kt of arugula in 2024, and Italy grows rocket on ~4,000–4,800 ha, so production is at least a few hundred Gg; I guessed ~1,000 Gg worldwide."
+                }
+            }
+        ]
+    },
+    {
+        "id": 163,
+        "slug": "collards",
+        "name": "Collard Greens",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Collard greens, nutrition from USDA. 57% is edible (stems removed). Yield (~13.5 t/ha) is Knott's Handbook's approximate US average (confidence 2). Availability (~400 Gg) is a confidence-1 guess. Pesticide and the compound rates are from USDA's 2000 NASS survey (the only one that covered collards), so they are old (confidence 2); fertilizer is copied from kale (confidence 1).\n\nWater is Mekonnen & Hoekstra's cabbage-and-other-brassicas value (280 L/kg), which includes collards (confidence 2); emissions use Poore & Nemecek's 'Brassicas' (0.51).",
+        "land_types": {
+            "temperate_forest": 0.5,
+            "tropical_savanna": 0.3,
+            "dry": 0.2
+        },
+        "land_types_note": "The southern US (South Carolina, Georgia, North Carolina), East Africa, Brazil and Portugal; a guess.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.32,
+                    "fat": 0.0061,
+                    "sat_fat": 0.00055,
+                    "protein": 0.0302,
+                    "fiber": 0.04,
+                    "sodium": 0.17,
+                    "carbs": 0.0542,
+                    "sugar": 0.0046,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 2.51,
+                    "vitamin_c": 0.353,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0226,
+                    "vitamin_k": 4.371,
+                    "folate": 1.29,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00165,
+                    "calcium": 2.32,
+                    "iron": 0.0047,
+                    "magnesium": 0.27,
+                    "potassium": 2.13,
+                    "zinc": 0.0021,
+                    "phosphorus": 0.25,
+                    "selenium": 0.013,
+                    "ala": 0.00108,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Collard Greens — FDC 170406 'Collards, raw' (SR Legacy 11161), per 100 g: 32 kcal, protein 3.02 g, fat 0.61 g, sat fat 0.055 g, carbs 5.42 g, fiber 4 g, sugars 0.46 g, sodium 17 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170406 per 100 g: vitamin a 251 µg RAE, vitamin c 35.3 mg, vitamin d 0 µg, vitamin e 2.26 mg, vitamin k 437.1 µg, folate 129 µg DFE, vitamin b12 0 µg, vitamin b6 0.165 mg, calcium 232 mg, iron 0.47 mg, magnesium 27 mg, potassium 213 mg, zinc 0.21 mg, phosphorus 25 mg, selenium 1.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 170406 per 100 g: ALA 0.108 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.57,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Collard Greens — yield_fraction: SR28 FOOD_DES NDB 11161 'Collards, raw': refuse 43% (stems), so edible fraction = 0.57."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 13500,
+                "confidence": 2,
+                "source": {
+                    "id": 525,
+                    "url": "https://www.extension.umd.edu/arec.umd.edu/sites/extension.umd.edu/files/2021-04/Knotts%20Handbook%20for%20Vegetable%20Growers_2012%20_vegetable%20%26%20fruit%20yields%20of%20last%20resort.pdf",
+                    "title": "Knott's Handbook for Vegetable Growers — typical vegetable yields (cwt/acre)",
+                    "note": "Collard Greens — yield_kg_ha: Knott's Handbook gives ~120 cwt/acre as the approximate average US collard yield (200 cwt/acre as a good yield): 120 x 112.085 = 13,450 kg/ha, rounded. A US figure used as the world average; FAOSTAT has no collards item."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 280,
+                "confidence": 2,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Collard Greens — water_per_kg: 280 L/kg (green 181 + blue 26 + grey 73). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 181,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Collard Greens — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Collard Greens — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 73,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Collard Greens — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 3.8,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "Collard Greens — pesticide_kg_ha (US): NASS 2000 survey, herbicide + fungicide + insecticide class totals 10,600 + 17,400 + 20,600 lb (the 'other' class was withheld) over ~14,300 acres back-calculated from disclosed compounds, x 1.12085 = 3.8 kg/ha. A lower bound from a 26-year-old survey, so confidence 2."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 100,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Collard Greens — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): No collard fertilizer survey (NASS 2000 didn't publish it). Copies this repo's kale entry (same species, Brassica oleracea). Copied value: 100."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Collard Greens — emissions_per_kg (world): Poore & Nemecek (2018) 'Brassicas' global mean, 0.51 kg CO2e/kg. Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 3,
+                "name": "Chlorpyrifos",
+                "kg_ha": [
+                    {
+                        "value": 0.0289,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — chlorpyrifos: 2000 0.86 lb/ac on 3%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 4,
+                "name": "Malathion",
+                "kg_ha": [
+                    {
+                        "value": 0.1446,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — malathion: 2000 2.15 lb/ac on 6%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0161,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — permethrin: 2000 0.24 lb/ac on 6%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 6,
+                "name": "Cypermethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0151,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — cypermethrin: 2000 0.15 lb/ac on 9%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0168,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — imidacloprid: 2000 0.15 lb/ac on 10%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 13,
+                "name": "Pendimethalin",
+                "kg_ha": [
+                    {
+                        "value": 0.0336,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — pendimethalin: 2000 0.75 lb/ac on 4%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 15,
+                "name": "Diazinon",
+                "kg_ha": [
+                    {
+                        "value": 0.0108,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — diazinon: 2000 0.96 lb/ac on 1%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.1044,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Collard Greens — carbaryl: 2000 1.33 lb/ac on 7%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 400,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Collard Greens — availability_gg: no FAOSTAT collards item. NASS counted ~14,300 acres of US collards in 2000 (~80 Gg at 13.5 t/ha) and 'kale and collards' are staples in East Africa and the southern US, so I guessed ~400 Gg worldwide."
+                }
+            }
+        ]
+    },
+    {
+        "id": 164,
+        "slug": "swiss-chard",
+        "name": "Swiss Chard",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [],
+        "notes": "Swiss chard, nutrition from USDA. 92% is edible (tough stems and damaged leaves removed). FAOSTAT, USDA and the water-footprint reports don't cover chard, so yield (~20 t/ha), availability (~500 Gg), water (spinach's 292 L/kg) and the spray figures are educated guesses at confidence 1, using spinach as the stand-in for water and spray.\n\nEmissions use Poore & Nemecek's generic 'Other Vegetables' average (0.53; confidence 2). US pesticide (6.8 kg/ha) and fertilizer (120 kg/ha) come from NASS spinach surveys. Products in NASS's \"other\" class (such as soil fumigants) count toward pesticide weight but aren't in the toxicity table, so they don't add to the modelled insect, bee and worm deaths.",
+        "land_types": {
+            "dry": 0.5,
+            "temperate_forest": 0.5
+        },
+        "land_types_note": "Chard is grown in small plantings worldwide (California, Mediterranean Europe, Brazil); a guess.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.19,
+                    "fat": 0.002,
+                    "sat_fat": 0.0003,
+                    "protein": 0.018,
+                    "fiber": 0.016,
+                    "sodium": 2.13,
+                    "carbs": 0.0374,
+                    "sugar": 0.011,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 3.06,
+                    "vitamin_c": 0.3,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0189,
+                    "vitamin_k": 8.3,
+                    "folate": 0.14,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00099,
+                    "calcium": 0.51,
+                    "iron": 0.018,
+                    "magnesium": 0.81,
+                    "potassium": 3.79,
+                    "zinc": 0.0036,
+                    "phosphorus": 0.46,
+                    "selenium": 0.009,
+                    "ala": 7e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Swiss Chard — FDC 169991 'Chard, swiss, raw' (SR Legacy 11147), per 100 g: 19 kcal, protein 1.8 g, fat 0.2 g, sat fat 0.03 g, carbs 3.74 g, fiber 1.6 g, sugars 1.1 g, sodium 213 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169991 per 100 g: vitamin a 306 µg RAE, vitamin c 30 mg, vitamin d 0 µg, vitamin e 1.89 mg, vitamin k 830 µg, folate 14 µg DFE, vitamin b12 0 µg, vitamin b6 0.099 mg, calcium 51 mg, iron 1.8 mg, magnesium 81 mg, potassium 379 mg, zinc 0.36 mg, phosphorus 46 mg, selenium 0.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 169991 per 100 g: ALA 0.007 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.92,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Swiss Chard — yield_fraction: SR28 FOOD_DES NDB 11147 'Chard, swiss, raw': refuse 8% (tough stems and damaged leaves), so edible fraction = 0.92."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 20000,
+                "confidence": 1,
+                "source": {
+                    "id": 525,
+                    "url": "https://www.extension.umd.edu/arec.umd.edu/sites/extension.umd.edu/files/2021-04/Knotts%20Handbook%20for%20Vegetable%20Growers_2012%20_vegetable%20%26%20fruit%20yields%20of%20last%20resort.pdf",
+                    "title": "Knott's Handbook for Vegetable Growers — typical vegetable yields (cwt/acre)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard — yield_kg_ha: FAOSTAT has no chard item. Knott's Handbook lists 150 cwt/acre (≈16.8 t/ha) as a good commercial yield, while agronomy trials report ~35 t/ha means and up to 78 t/ha with dense spacing and heavy nitrogen. I took 20 t/ha as a realistic commercial average."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 292,
+                "confidence": 1,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chard row; spinach is the stand-in because chard and spinach are close relatives with similar leaf crops. Swiss Chard — water_per_kg: 292 L/kg (green 118 + blue 14 + grey 160). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 373 Spinach (stand-in; no chard row), 1996–2005: green 118 / blue 14 / grey 160 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 118,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chard row; spinach is the stand-in because chard and spinach are close relatives with similar leaf crops. Swiss Chard — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 373 Spinach (stand-in; no chard row), 1996–2005: green 118 / blue 14 / grey 160 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 14,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chard row; spinach is the stand-in because chard and spinach are close relatives with similar leaf crops. Swiss Chard — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 373 Spinach (stand-in; no chard row), 1996–2005: green 118 / blue 14 / grey 160 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 160,
+                "confidence": 1,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Mekonnen & Hoekstra have no chard row; spinach is the stand-in because chard and spinach are close relatives with similar leaf crops. Swiss Chard — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 373 Spinach (stand-in; no chard row), 1996–2005: green 118 / blue 14 / grey 160 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 6.8,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 513,
+                    "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                    "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard has no USDA survey, so this uses NASS spinach, the closest relative (same plant family) with a USDA survey as a stand-in. Swiss Chard — pesticide_kg_ha (US): total active ingredient per planted ha from NASS class TOTAL rows (herbicide + fungicide + insecticide + other), divided by planted acres back-calculated from disclosed compounds (lb / (lb/acre/yr x % treated), median per year), x 1.12085 per kg/ha. PROGRAM STATES aggregate: 2024 6.8 kg/ha; mean 6.8 kg/ha (survey years with a withheld class total or fewer than 10 usable compounds are skipped). Includes fumigants and other 'other'-class products that are not in pesticides.json. No world figure found; world region falls back to this US value."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 120,
+                "confidence": 1,
+                "source": {
+                    "id": 62,
+                    "url": "https://www.fao.org/3/cb6562en/cb6562en.pdf",
+                    "title": "FAO (2021) — World Food and Agriculture Statistical Pocketbook",
+                    "note": "Swiss Chard — fertilizer_kg_ha: EDUCATED GUESS (confidence 1, not a measured value): The NASS spinach fertilizer figure (46 kg/ha, one complete survey year) looks too low, so this copies this repo's spinach entry instead (chard is a close relative). Copied value: 120."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.53,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Swiss Chard — emissions_per_kg (world): Poore & Nemecek (2018) 'Other Vegetables' global mean, 0.53 kg CO2e/kg. No chard-specific figure; generic 'Other Vegetables' average, confidence 2."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 1.1306,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard has no USDA survey, so this uses NASS spinach, the closest relative (same plant family) with a USDA survey as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Swiss Chard — permethrin: 2024 1.834 lb/ac on 55%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0284,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard has no USDA survey, so this uses NASS spinach, the closest relative (same plant family) with a USDA survey as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Swiss Chard — imidacloprid: 2020 0.249 lb/ac on 24%, 2022 0.061 lb/ac on 11%, 2024 0.05 lb/ac on 19%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.0051,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard has no USDA survey, so this uses NASS spinach, the closest relative (same plant family) with a USDA survey as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Swiss Chard — thiamethoxam: 2020 0.091 lb/ac on 5%; mean."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.1728,
+                        "confidence": 1,
+                        "region": "US",
+                        "source": {
+                            "id": 513,
+                            "url": "https://www.nass.usda.gov/datasets/qs.environmental_20261006.txt.gz",
+                            "title": "USDA NASS Quick Stats — Environmental dataset (Agricultural Chemical Use: Fruit surveys 2019/2021/2023/2025, Vegetable surveys 2018/2020/2022/2024; 2026-10-06 snapshot)",
+                            "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard has no USDA survey, so this uses NASS spinach, the closest relative (same plant family) with a USDA survey as a stand-in. NASS Agricultural Chemical Use (vegetable surveys), PROGRAM STATES aggregate (2026-10-06 file snapshot). Per-planted-hectare rate = avg lb/acre/yr on treated acres x % of area treated x 1.12085; mean of the survey years that disclose the compound (withheld years skipped). Swiss Chard — metolachlor: 2024 2.569 lb/ac on 6%; mean."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 500,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Swiss Chard — availability_gg: FAOSTAT and USDA don't track chard (it sits in 'other vegetables' and is a minor crop). I guessed ~500 Gg worldwide, with large uncertainty."
+                }
+            }
+        ]
+    },
+    {
+        "id": 165,
+        "slug": "bok-choy",
+        "name": "Bok Choy",
+        "type": "plant",
+        "category": "leafy",
+        "human_food": 1,
+        "tags": [
+            "common"
+        ],
+        "notes": "Bok choy (pak choi), nutrition from USDA. 88% is edible (base and damaged leaves removed). FAOSTAT pools Chinese cabbages like bok choy with cabbages, so yield (~30.6 t/ha world, ~45 t/ha US) is the cabbage-group value at confidence 2; availability is a confidence-1 guess of about 7% of the group.\n\nWater is Mekonnen & Hoekstra's cabbage-and-other-brassicas value (280 L/kg); emissions use Poore & Nemecek's 'Brassicas' (0.51). Pesticide, fertilizer and compound rates are copied from this repo's cabbage entry at confidence 2.",
+        "land_types": {
+            "temperate_forest": 0.7,
+            "tropical_savanna": 0.2,
+            "temperate_grassland": 0.1
+        },
+        "land_types_note": "China grows nearly all the world's Chinese cabbages and bok choy; California is the main US source.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.13,
+                    "fat": 0.002,
+                    "sat_fat": 0.00027,
+                    "protein": 0.015,
+                    "fiber": 0.01,
+                    "sodium": 0.65,
+                    "carbs": 0.0218,
+                    "sugar": 0.0118,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 2.23,
+                    "vitamin_c": 0.45,
+                    "vitamin_d": 0.0,
+                    "vitamin_e": 0.0009,
+                    "vitamin_k": 0.455,
+                    "folate": 0.66,
+                    "vitamin_b12": 0.0,
+                    "vitamin_b6": 0.00194,
+                    "calcium": 1.05,
+                    "iron": 0.008,
+                    "magnesium": 0.19,
+                    "potassium": 2.52,
+                    "zinc": 0.0019,
+                    "phosphorus": 0.37,
+                    "selenium": 0.005,
+                    "ala": 0.00055,
+                    "epa_dha": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Bok Choy — FDC 170390 'Cabbage, chinese (pak-choi), raw' (SR Legacy 11116), per 100 g: 13 kcal, protein 1.5 g, fat 0.2 g, sat fat 0.027 g, carbs 2.18 g, fiber 1 g, sugars 1.18 g, sodium 65 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170390 per 100 g: vitamin a 223 µg RAE, vitamin c 45 mg, vitamin d 0 µg, vitamin e 0.09 mg, vitamin k 45.5 µg, folate 66 µg DFE, vitamin b12 0 µg, vitamin b6 0.194 mg, calcium 105 mg, iron 0.8 mg, magnesium 19 mg, potassium 252 mg, zinc 0.19 mg, phosphorus 37 mg, selenium 0.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 170390 per 100 g: ALA 0.055 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            }
+        ],
+        "yield_fraction": [
+            {
+                "value": 0.88,
+                "confidence": 5,
+                "source": {
+                    "id": 264,
+                    "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/sr28/dnload/sr28asc.zip",
+                    "title": "USDA ARS — National Nutrient Database for Standard Reference, Legacy (SR28) ASCII files: FOOD_DES refuse fields",
+                    "note": "Bok Choy — yield_fraction: SR28 FOOD_DES NDB 11116 'Cabbage, chinese (pak-choi), raw': refuse 12% (base and damaged leaves), so edible fraction = 0.88."
+                }
+            }
+        ],
+        "yield_kg_ha": [
+            {
+                "value": 30600,
+                "confidence": 2,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Bok Choy — yield_kg_ha (world): FAOSTAT QCL item 358 'Cabbages', World yield 2020–2024 = 30,704, 30,586, 30,531, 30,613, 30,574 kg/ha; 5-year mean 30,602 kg/ha, rounded. Fresh harvested weight, harvested-area basis. FAOSTAT's 'Cabbages' item pools cabbages and other brassicas including Chinese cabbages like bok choy, so this is a group value (confidence lowered)."
+                }
+            },
+            {
+                "value": 45100,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "Bok Choy — yield_kg_ha (US): FAOSTAT QCL item 358 'Cabbages', United States of America yield 2020–2024 = 45,543, 42,315, 46,883, 45,232, 45,564 kg/ha; 5-year mean 45,107 kg/ha, rounded. FAOSTAT's 'Cabbages' item pools cabbages and other brassicas including Chinese cabbages like bok choy, so this is a group value (confidence lowered)."
+                }
+            }
+        ],
+        "water_per_kg": [
+            {
+                "value": 280,
+                "confidence": 3,
+                "source": {
+                    "id": 30,
+                    "url": "https://www.waterfootprint.org/resources/Report47-WaterFootprintCrops-Vol1.pdf",
+                    "title": "Mekonnen & Hoekstra — Water Footprint of Crops (Report 47)",
+                    "note": "Bok Choy — water_per_kg: 280 L/kg (green 181 + blue 26 + grey 73). Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "green_water_per_kg": [
+            {
+                "value": 181,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Bok Choy — green_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "blue_water_per_kg": [
+            {
+                "value": 26,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Bok Choy — blue_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "grey_water_per_kg": [
+            {
+                "value": 73,
+                "confidence": 3,
+                "source": {
+                    "id": 67,
+                    "url": "https://www.unesco-ihe.org/sites/default/files/report47-waterfoot.pdf",
+                    "title": "Mekonnen & Hoekstra (2010) — The Green, Blue and Grey Water Footprint of Crops and Crop Products (UNESCO-IHE Report 47)",
+                    "note": "Bok Choy — grey_water_per_kg: Mekonnen & Hoekstra Report 47 Vol. 1, global average, product 358 Cabbages and other brassicas, 1996–2005: green 181 / blue 26 / grey 73 m³/t = L/kg."
+                }
+            }
+        ],
+        "soil_erosion": [],
+        "pesticide_kg_ha": [
+            {
+                "value": 5.6,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Bok Choy — pesticide_kg_ha: No bok choy survey; copies this repo's NASS-based cabbage entry (another Brassica rapa/oleracea crop with similar pests). Copied value: 5.6."
+                }
+            }
+        ],
+        "fertilizer_kg_ha": [
+            {
+                "value": 141,
+                "confidence": 2,
+                "region": "US",
+                "source": {
+                    "id": 52,
+                    "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                    "title": "USDA NASS — Agricultural Chemical Use Survey",
+                    "note": "Bok Choy — fertilizer_kg_ha: No bok choy survey; copies this repo's NASS-based cabbage entry. Copied value: 141."
+                }
+            }
+        ],
+        "emissions_per_kg": [
+            {
+                "value": 0.51,
+                "confidence": 3,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Bok Choy — emissions_per_kg (world): Poore & Nemecek (2018) 'Brassicas' global mean, 0.51 kg CO2e/kg. Category pools similar crops; no crop-specific global figure."
+                }
+            }
+        ],
+        "tillage_events_per_year": [],
+        "co2_capture_kg_ha_yr": [],
+        "pesticides": [
+            {
+                "pesticide_id": 1,
+                "name": "Glyphosate",
+                "kg_ha": [
+                    {
+                        "value": 0.0904,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — glyphosate — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.0904."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 5,
+                "name": "Permethrin",
+                "kg_ha": [
+                    {
+                        "value": 0.0155,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — permethrin — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.0155."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 7,
+                "name": "Imidacloprid",
+                "kg_ha": [
+                    {
+                        "value": 0.0611,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — imidacloprid — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.0611."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 8,
+                "name": "Thiamethoxam",
+                "kg_ha": [
+                    {
+                        "value": 0.017,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — thiamethoxam — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.017."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 10,
+                "name": "Mancozeb",
+                "kg_ha": [
+                    {
+                        "value": 0.3297,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — mancozeb — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.3297."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 11,
+                "name": "Metolachlor",
+                "kg_ha": [
+                    {
+                        "value": 0.196,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — metolachlor — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.196."
+                        }
+                    }
+                ]
+            },
+            {
+                "pesticide_id": 17,
+                "name": "Carbaryl",
+                "kg_ha": [
+                    {
+                        "value": 0.0195,
+                        "confidence": 2,
+                        "region": "US",
+                        "source": {
+                            "id": 52,
+                            "url": "https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/index.php",
+                            "title": "USDA NASS — Agricultural Chemical Use Survey",
+                            "note": "Bok Choy — carbaryl — value: No bok choy survey; copies this repo's cabbage compound rates. Copied value: 0.0195."
+                        }
+                    }
+                ]
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 5000,
+                "confidence": 1,
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bok Choy — availability_gg (world): the FAOSTAT cabbage group totals 74,986 Gg (China ~48%) and includes Chinese cabbages, but bok choy isn't split out. I guessed that pak choi / bok choy is roughly 7% of that, ~5,000 Gg."
+                }
+            },
+            {
+                "value": 60,
+                "confidence": 1,
+                "region": "US",
+                "source": {
+                    "id": 263,
+                    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+                    "title": "FAOSTAT — Crops and Livestock Products (QCL) bulk download: Strawberries (item 544) and Blueberries (item 552), 2019–2024",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Bok Choy — availability_gg (US): the US grows bok choy mainly in California; I guessed ~60 Gg, which is small next to US cabbage (~960 Gg)."
+                }
+            }
+        ]
     }
 ]

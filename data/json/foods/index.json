@@ -70,14 +70,28 @@
         "carrot",
         "cassava",
         "pumpkin",
-        "eggplant"
+        "eggplant",
+        "green-beans",
+        "cauliflower",
+        "asparagus",
+        "ginger",
+        "sweet-corn",
+        "celery",
+        "beets",
+        "brussels-sprouts",
+        "chili-pepper",
+        "zucchini"
     ],
     "leafy": [
         "romaine-lettuce",
         "iceberg-lettuce",
         "spinach",
         "kale",
-        "cabbage"
+        "cabbage",
+        "arugula",
+        "collards",
+        "swiss-chard",
+        "bok-choy"
     ],
     "seafood": [
         "salmon",
@@ -116,7 +130,18 @@
         "blueberries",
         "grapes",
         "watermelon",
-        "pineapple"
+        "pineapple",
+        "lemon",
+        "grapefruit",
+        "peach",
+        "pear",
+        "cherries",
+        "raspberries",
+        "kiwi",
+        "plums",
+        "dates",
+        "figs",
+        "papaya"
     ],
     "dairy": [
         "milk",
@@ -140,7 +165,11 @@
         "corn-oil"
     ],
     "seeds": [
-        "flaxseed"
+        "flaxseed",
+        "sesame-seeds",
+        "hemp-seeds",
+        "chia-seeds",
+        "pumpkin-seeds"
     ],
     "sweeteners": [
         "maple-syrup",
