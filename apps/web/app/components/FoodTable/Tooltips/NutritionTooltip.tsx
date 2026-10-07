@@ -1,10 +1,11 @@
 import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../FoodTableTypes';
-import { MICRONUTRIENT_INFO, nutritionScale } from '../FoodTableCalculations';
+import { MICRONUTRIENT_INFO, aminoAcidProfile, nutritionScale } from '../FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
 
 export function NutritionTooltip({ detail, children }: { detail: NutritionDetail; children: React.ReactNode }) {
   const scale = nutritionScale(detail.calories);
   const micronutrients = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null);
+  const aminoAcids = aminoAcidProfile(detail);
   return (
     <Tooltip content={
       <div className="flex flex-col gap-4 md:flex-row md:gap-6">
@@ -33,6 +34,30 @@ export function NutritionTooltip({ detail, children }: { detail: NutritionDetail
                 } />
               );
             })}
+          </TooltipSection>
+        )}
+        {aminoAcids && (
+          <TooltipSection title="Amino acids (mg per g of protein, % of need)">
+            {aminoAcids.score != null && (
+              <TooltipRow label={<span className="font-medium">Amino acid score</span>} value={
+                <>
+                  <span className="font-medium">{(aminoAcids.score * 100).toFixed(0)}%</span>
+                  {aminoAcids.limiting && aminoAcids.score < 1 && <span className="ml-2 text-amber-300">limited by {aminoAcids.limiting.toLowerCase()}</span>}
+                </>
+              } />
+            )}
+            {aminoAcids.requirements.map(({ label, mgPerGramProtein, share }) => (
+              <TooltipRow key={label} label={label} value={
+                <>
+                  {mgPerGramProtein.toLocaleString(undefined, { maximumFractionDigits: 1 })} mg
+                  <span className={`ml-2 inline-block w-10 text-right ${share < 1 ? 'text-amber-300' : 'text-neutral-400'}`}>{(share * 100).toFixed(0)}%</span>
+                </>
+              } />
+            ))}
+            {aminoAcids.others.length > 0 && <div className="mt-1 text-xs text-neutral-400">Other amino acids</div>}
+            {aminoAcids.others.map(({ label, mgPerGramProtein }) => (
+              <TooltipRow key={label} label={label} value={`${mgPerGramProtein.toLocaleString(undefined, { maximumFractionDigits: 1 })} mg`} />
+            ))}
           </TooltipSection>
         )}
       </div>

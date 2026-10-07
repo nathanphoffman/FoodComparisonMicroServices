@@ -53,6 +53,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 169247 per 100 g: vitamin a 436 µg RAE, vitamin c 4 mg, vitamin d 0 µg, vitamin e 0.13 mg, vitamin k 102.5 µg, folate 136 µg DFE, vitamin b12 0 µg, vitamin b6 0.074 mg, calcium 33 mg, iron 0.97 mg, magnesium 14 mg, potassium 247 mg, zinc 0.23 mg, phosphorus 30 mg, selenium 0.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 169247 per 100 g: ALA 0.113 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0001,
+                    "threonine": 0.00043,
+                    "isoleucine": 0.00045,
+                    "leucine": 0.00076,
+                    "lysine": 0.00064,
+                    "methionine": 0.00015,
+                    "cystine": 6e-05,
+                    "phenylalanine": 0.00065,
+                    "tyrosine": 0.00025,
+                    "valine": 0.00055,
+                    "arginine": 0.00054,
+                    "histidine": 0.00021,
+                    "alanine": 0.00056,
+                    "aspartic_acid": 0.00139,
+                    "glutamic_acid": 0.00178,
+                    "glycine": 0.00049,
+                    "proline": 0.00045,
+                    "serine": 0.0005
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169247 'Lettuce, cos or romaine, raw' (SR Legacy 11251), g of each amino acid per 100 g: tryptophan 0.01, threonine 0.043, isoleucine 0.045, leucine 0.076, lysine 0.064, methionine 0.015, cystine 0.006, phenylalanine 0.065, tyrosine 0.025, valine 0.055, arginine 0.054, histidine 0.021, alanine 0.056, aspartic acid 0.139, glutamic acid 0.178, glycine 0.049, proline 0.045, serine 0.05; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -711,6 +740,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 168462 (Spinach, raw) per 100 g: vitamin a 469 µg RAE, vitamin c 28.1 mg, vitamin d 0 µg, vitamin e 2.03 mg, vitamin k 482.9 µg, folate 194 µg DFE, vitamin b12 0 µg, vitamin b6 0.195 mg, calcium 99 mg, iron 2.71 mg, magnesium 79 mg, potassium 558 mg, zinc 0.53 mg, phosphorus 49 mg, selenium 1 µg; divided by 100 for per-gram values. Omega-3 from FDC 168462 per 100 g: ALA 0.138 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00039,
+                    "threonine": 0.00122,
+                    "isoleucine": 0.00147,
+                    "leucine": 0.00223,
+                    "lysine": 0.00174,
+                    "methionine": 0.00053,
+                    "cystine": 0.00035,
+                    "phenylalanine": 0.00129,
+                    "tyrosine": 0.00108,
+                    "valine": 0.00161,
+                    "arginine": 0.00162,
+                    "histidine": 0.00064,
+                    "alanine": 0.00142,
+                    "aspartic_acid": 0.0024,
+                    "glutamic_acid": 0.00343,
+                    "glycine": 0.00134,
+                    "proline": 0.00112,
+                    "serine": 0.00104
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168462 'Spinach, raw' (SR Legacy 11457), g of each amino acid per 100 g: tryptophan 0.039, threonine 0.122, isoleucine 0.147, leucine 0.223, lysine 0.174, methionine 0.053, cystine 0.035, phenylalanine 0.129, tyrosine 0.108, valine 0.161, arginine 0.162, histidine 0.064, alanine 0.142, aspartic acid 0.24, glutamic acid 0.343, glycine 0.134, proline 0.112, serine 0.104; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -983,6 +1041,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 168421 per 100 g: vitamin a 241 µg RAE, vitamin c 93.4 mg, vitamin d 0 µg, vitamin e 0.66 mg, vitamin k 389.6 µg, folate 62 µg DFE, vitamin b12 0 µg, vitamin b6 0.147 mg, calcium 254 mg, iron 1.6 mg, magnesium 33 mg, potassium 348 mg, zinc 0.39 mg, phosphorus 55 mg, selenium 0.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 168421 per 100 g: ALA 0.378 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0005205,
+                    "threonine": 0.001924,
+                    "isoleucine": 0.00258,
+                    "leucine": 0.00301,
+                    "lysine": 0.00258,
+                    "methionine": 0.0004074,
+                    "cystine": 0.0005658,
+                    "phenylalanine": 0.002195,
+                    "tyrosine": 0.001516,
+                    "valine": 0.002354,
+                    "arginine": 0.002399,
+                    "histidine": 0.0009053,
+                    "alanine": 0.002173,
+                    "aspartic_acid": 0.003847,
+                    "glutamic_acid": 0.004888,
+                    "glycine": 0.002082,
+                    "proline": 0.002557,
+                    "serine": 0.001811
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Cooked kale's amino acid profile (the same plant), scaled to raw kale's protein. Profile from FDC 169238 'Kale, cooked, boiled, drained, without salt' (SR Legacy 11234): mg per g of protein x this food's protein (4.30 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
                 }
             }
         ],
@@ -1257,6 +1344,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Cabbage — FDC 169975 'Cabbage, raw' (SR Legacy 11109), per 100 g: 25 kcal, protein 1.28 g, fat 0.1 g, sat fat 0.034 g, trans 0 g, carbs 5.8 g, fiber 2.5 g, sugars 3.2 g, sodium 18 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169975 per 100 g: vitamin a 5 µg RAE, vitamin c 36.6 mg, vitamin d 0 µg, vitamin e 0.15 mg, vitamin k 76 µg, folate 43 µg DFE, vitamin b12 0 µg, vitamin b6 0.124 mg, calcium 40 mg, iron 0.47 mg, magnesium 12 mg, potassium 170 mg, zinc 0.18 mg, phosphorus 26 mg, selenium 0.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 169975 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00011,
+                    "threonine": 0.00035,
+                    "isoleucine": 0.0003,
+                    "leucine": 0.00041,
+                    "lysine": 0.00044,
+                    "methionine": 0.00012,
+                    "cystine": 0.00011,
+                    "phenylalanine": 0.00032,
+                    "tyrosine": 0.00019,
+                    "valine": 0.00042,
+                    "arginine": 0.00075,
+                    "histidine": 0.00022,
+                    "alanine": 0.00042,
+                    "aspartic_acid": 0.00122,
+                    "glutamic_acid": 0.00294,
+                    "glycine": 0.0003,
+                    "proline": 0.00048,
+                    "serine": 0.00053
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169975 'Cabbage, raw' (SR Legacy 11109), g of each amino acid per 100 g: tryptophan 0.011, threonine 0.035, isoleucine 0.03, leucine 0.041, lysine 0.044, methionine 0.012, cystine 0.011, phenylalanine 0.032, tyrosine 0.019, valine 0.042, arginine 0.075, histidine 0.022, alanine 0.042, aspartic acid 0.122, glutamic acid 0.294, glycine 0.03, proline 0.048, serine 0.053; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1583,6 +1699,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Arugula — FDC 169387 'Arugula, raw' (SR Legacy 11959), per 100 g: 25 kcal, protein 2.58 g, fat 0.66 g, sat fat 0.086 g, carbs 3.65 g, fiber 1.6 g, sugars 2.05 g, sodium 27 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169387 per 100 g: vitamin a 119 µg RAE, vitamin c 15 mg, vitamin d 0 µg, vitamin e 0.43 mg, vitamin k 108.6 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.073 mg, calcium 160 mg, iron 1.46 mg, magnesium 47 mg, potassium 369 mg, zinc 0.47 mg, phosphorus 52 mg, selenium 0.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 169387 per 100 g: ALA 0.17 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0003123,
+                    "threonine": 0.001154,
+                    "isoleucine": 0.001548,
+                    "leucine": 0.001806,
+                    "lysine": 0.001548,
+                    "methionine": 0.0002444,
+                    "cystine": 0.0003395,
+                    "phenylalanine": 0.001317,
+                    "tyrosine": 0.0009098,
+                    "valine": 0.001412,
+                    "arginine": 0.001439,
+                    "histidine": 0.0005432,
+                    "alanine": 0.001304,
+                    "aspartic_acid": 0.002308,
+                    "glutamic_acid": 0.002933,
+                    "glycine": 0.001249,
+                    "proline": 0.001534,
+                    "serine": 0.001086
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Cooked kale's profile as a stand-in (another brassica leaf), scaled to arugula's protein. Profile from FDC 169238 'Kale, cooked, boiled, drained, without salt' (SR Legacy 11234): mg per g of protein x this food's protein (2.58 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "yield_fraction": [
@@ -1868,6 +2013,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Collard Greens — FDC 170406 'Collards, raw' (SR Legacy 11161), per 100 g: 32 kcal, protein 3.02 g, fat 0.61 g, sat fat 0.055 g, carbs 5.42 g, fiber 4 g, sugars 0.46 g, sodium 17 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170406 per 100 g: vitamin a 251 µg RAE, vitamin c 35.3 mg, vitamin d 0 µg, vitamin e 2.26 mg, vitamin k 437.1 µg, folate 129 µg DFE, vitamin b12 0 µg, vitamin b6 0.165 mg, calcium 232 mg, iron 0.47 mg, magnesium 27 mg, potassium 213 mg, zinc 0.21 mg, phosphorus 25 mg, selenium 1.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 170406 per 100 g: ALA 0.108 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00031,
+                    "threonine": 0.00086,
+                    "isoleucine": 0.001,
+                    "leucine": 0.00151,
+                    "lysine": 0.00117,
+                    "methionine": 0.00033,
+                    "cystine": 0.00025,
+                    "phenylalanine": 0.00087,
+                    "tyrosine": 0.00066,
+                    "valine": 0.0012,
+                    "arginine": 0.00125,
+                    "histidine": 0.00047,
+                    "alanine": 0.00105,
+                    "aspartic_acid": 0.00187,
+                    "glutamic_acid": 0.00204,
+                    "glycine": 0.00094,
+                    "proline": 0.00105,
+                    "serine": 0.00078
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170406 'Collards, raw' (SR Legacy 11161), g of each amino acid per 100 g: tryptophan 0.031, threonine 0.086, isoleucine 0.1, leucine 0.151, lysine 0.117, methionine 0.033, cystine 0.025, phenylalanine 0.087, tyrosine 0.066, valine 0.12, arginine 0.125, histidine 0.047, alanine 0.105, aspartic acid 0.187, glutamic acid 0.204, glycine 0.094, proline 0.105, serine 0.078; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2186,6 +2360,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Swiss Chard — FDC 169991 'Chard, swiss, raw' (SR Legacy 11147), per 100 g: 19 kcal, protein 1.8 g, fat 0.2 g, sat fat 0.03 g, carbs 3.74 g, fiber 1.6 g, sugars 1.1 g, sodium 213 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169991 per 100 g: vitamin a 306 µg RAE, vitamin c 30 mg, vitamin d 0 µg, vitamin e 1.89 mg, vitamin k 830 µg, folate 14 µg DFE, vitamin b12 0 µg, vitamin b6 0.099 mg, calcium 51 mg, iron 1.8 mg, magnesium 81 mg, potassium 379 mg, zinc 0.36 mg, phosphorus 46 mg, selenium 0.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 169991 per 100 g: ALA 0.007 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0002455,
+                    "threonine": 0.0007678,
+                    "isoleucine": 0.0009252,
+                    "leucine": 0.001403,
+                    "lysine": 0.001095,
+                    "methionine": 0.0003336,
+                    "cystine": 0.0002203,
+                    "phenylalanine": 0.0008119,
+                    "tyrosine": 0.0006797,
+                    "valine": 0.001013,
+                    "arginine": 0.00102,
+                    "histidine": 0.0004028,
+                    "alanine": 0.0008937,
+                    "aspartic_acid": 0.00151,
+                    "glutamic_acid": 0.002159,
+                    "glycine": 0.0008434,
+                    "proline": 0.0007049,
+                    "serine": 0.0006545
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Raw spinach's profile as a stand-in (a close relative), scaled to chard's protein. Profile from FDC 168462 'Spinach, raw' (SR Legacy 11457): mg per g of protein x this food's protein (1.80 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "yield_fraction": [
@@ -2437,6 +2640,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Bok Choy — FDC 170390 'Cabbage, chinese (pak-choi), raw' (SR Legacy 11116), per 100 g: 13 kcal, protein 1.5 g, fat 0.2 g, sat fat 0.027 g, carbs 2.18 g, fiber 1 g, sugars 1.18 g, sodium 65 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170390 per 100 g: vitamin a 223 µg RAE, vitamin c 45 mg, vitamin d 0 µg, vitamin e 0.09 mg, vitamin k 45.5 µg, folate 66 µg DFE, vitamin b12 0 µg, vitamin b6 0.194 mg, calcium 105 mg, iron 0.8 mg, magnesium 19 mg, potassium 252 mg, zinc 0.19 mg, phosphorus 37 mg, selenium 0.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 170390 per 100 g: ALA 0.055 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00015,
+                    "threonine": 0.00049,
+                    "isoleucine": 0.00085,
+                    "leucine": 0.00088,
+                    "lysine": 0.00089,
+                    "methionine": 9e-05,
+                    "cystine": 0.00017,
+                    "phenylalanine": 0.00044,
+                    "tyrosine": 0.00029,
+                    "valine": 0.00066,
+                    "arginine": 0.00084,
+                    "histidine": 0.00026,
+                    "alanine": 0.00086,
+                    "aspartic_acid": 0.00108,
+                    "glutamic_acid": 0.0036,
+                    "glycine": 0.00043,
+                    "proline": 0.00031,
+                    "serine": 0.00048
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170390 'Cabbage, chinese (pak-choi), raw' (SR Legacy 11116), g of each amino acid per 100 g: tryptophan 0.015, threonine 0.049, isoleucine 0.085, leucine 0.088, lysine 0.089, methionine 0.009, cystine 0.017, phenylalanine 0.044, tyrosine 0.029, valine 0.066, arginine 0.084, histidine 0.026, alanine 0.086, aspartic acid 0.108, glutamic acid 0.36, glycine 0.043, proline 0.031, serine 0.048; divided by 100 for per-gram values."
                 }
             }
         ],

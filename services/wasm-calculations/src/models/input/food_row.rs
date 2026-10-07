@@ -1,5 +1,6 @@
 use serde::Deserialize;
 
+use super::amino_acids::AminoAcids;
 use super::land_types::LandTypes;
 use super::micronutrients::Micronutrients;
 
@@ -30,6 +31,9 @@ pub struct FoodRow {
     // Vitamins and minerals per gram; None when none are sourced.
     #[serde(default)]
     pub micronutrients: Option<Micronutrients>,
+    // Amino acids per gram; None when none are sourced (the food is then not penalised).
+    #[serde(default)]
+    pub amino_acids: Option<AminoAcids>,
 
     // Plant metrics
     pub yield_kg_ha:               Option<f64>,

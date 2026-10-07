@@ -16,6 +16,10 @@ pub struct NutritionWeights {
     /// but whole fruit barely moves.
     pub sugar_allowance:  f64,
     pub sodium:           f64, // points lost per 100 mg of sodium (harms)
+    /// Protein quality: how much of the protein's points are lost when its weakest essential
+    /// amino acid is short of what the body needs. 0 ignores amino acids; 1 cuts the protein
+    /// points by the full shortfall (a food at 50% of its lysine need loses half its protein points).
+    pub protein_quality: f64,
 }
 
 impl Default for NutritionWeights {
@@ -28,6 +32,7 @@ impl Default for NutritionWeights {
             free_sugar:      0.25,
             sugar_allowance: 5.0,
             sodium:          2.0,
+            protein_quality: 0.5,
         }
     }
 }

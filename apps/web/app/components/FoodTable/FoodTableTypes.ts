@@ -50,6 +50,7 @@ export type NutritionDetail = {
     sugar:        number | null;
     protein:      number;
     micronutrients: Micronutrients | null;
+  aminoAcids:     AminoAcids | null;
 };
 
 export type IntelligenceDetail = {
@@ -109,6 +110,8 @@ export type RawFood = {
   cholesterol: number | null; trans_fat: number | null;
   // vitamins and minerals per gram (units in data/json/SCHEMA.md); null when none are sourced
   micronutrients: Micronutrients | null;
+  // the 18 amino acids in g per gram of food; null when none are sourced
+  amino_acids: AminoAcids | null;
   yield_kg_ha: number | null; pasture_ha_per_kg_output: number | null;
   emissions_per_kg: number | null; water_per_kg: number | null;
   neuron_count: number; weight_kg: number | null; yield_fraction: number | null;
@@ -167,6 +170,18 @@ export type MicronutrientKey = typeof MICRONUTRIENT_KEYS[number];
 // Only the nutrients the source reports are present. Keys match the Rust Micronutrients struct.
 export type Micronutrients = Partial<Record<MicronutrientKey, number>>;
 
+// All 18 amino acids USDA reports, g per gram of food. The first eleven are the essential ones
+// (methionine + cystine and phenylalanine + tyrosine are scored together); the rest are for display.
+// Keys match the Rust AminoAcids struct.
+export const AMINO_ACID_KEYS = [
+  'histidine', 'isoleucine', 'leucine', 'lysine', 'methionine', 'cystine', 'phenylalanine', 'tyrosine', 'threonine', 'tryptophan', 'valine',
+  'alanine', 'arginine', 'aspartic_acid', 'glutamic_acid', 'glycine', 'proline', 'serine',
+] as const;
+
+export type AminoAcidKey = typeof AMINO_ACID_KEYS[number];
+
+export type AminoAcids = Partial<Record<AminoAcidKey, number>>;
+
 // One value per broad land type — a food's land split (fractions) or the Land Use
 // slider weights (multipliers). Keys match the Rust LandTypes struct.
 export type LandTypes = {
@@ -188,6 +203,7 @@ export type NutritionWeights = {
   freeSugar:      number;  // per g of sugar beyond the fiber allowance (harms)
   sugarAllowance: number;  // g of sugar per g of fiber not counted as free sugar
   sodium:         number;  // per 100 mg (harms)
+  proteinQuality: number;  // 0–1: share of the protein points lost at the worst amino acid shortfall (harms)
 };
 
 // ── Inputs (columns, data region, sliders) ────────────────────────────────────
@@ -243,7 +259,7 @@ export function isCustomFoodSlug(slug: string): boolean {
 export const customFoodStub = (slug: string, name: string): RawFood => ({
     name, slug, type: 'plant',
     calories: 0, fat: 0, protein: 0, fiber: 0, sat_fat: 0, neuron_count: 0,
-    sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null, micronutrients: null,
+    sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null, micronutrients: null, amino_acids: null,
     yield_kg_ha: null, pasture_ha_per_kg_output: null, emissions_per_kg: null,
     water_per_kg: null, weight_kg: null, yield_fraction: null,
     lifetime_output_kg: null, offspring_deaths_per_animal: null, offspring_captivity_years: null,

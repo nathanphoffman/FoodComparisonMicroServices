@@ -57,6 +57,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Whole cow milk (3.25% fat) — calories 0.61 kcal/g, fat 0.033 g/g, sat_fat 0.021 g/g, protein 0.032 g/g, sodium 0.44 mg/g, carbs 0.047 g/g, sugar 0.047 g/g, cholesterol 0.1 mg/g. All values per gram as consumed. Vitamins and minerals from USDA FDC 171265 per 100 g: vitamin a 46 µg RAE, vitamin c 0 mg, vitamin d 1.3 µg, vitamin e 0.07 mg, vitamin k 0.3 µg, folate 5 µg DFE, vitamin b12 0.45 µg, vitamin b6 0.036 mg, calcium 113 mg, iron 0.03 mg, magnesium 10 mg, potassium 132 mg, zinc 0.37 mg, phosphorus 84 mg, selenium 3.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 171265 per 100 g: ALA 0.075 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0004,
+                    "threonine": 0.00134,
+                    "isoleucine": 0.00163,
+                    "leucine": 0.00299,
+                    "lysine": 0.00264,
+                    "methionine": 0.00083,
+                    "cystine": 0.00019,
+                    "phenylalanine": 0.00163,
+                    "tyrosine": 0.00159,
+                    "valine": 0.00206,
+                    "arginine": 0.0009,
+                    "histidine": 0.00095,
+                    "alanine": 0.00107,
+                    "aspartic_acid": 0.0027,
+                    "glutamic_acid": 0.00708,
+                    "glycine": 0.00062,
+                    "proline": 0.00311,
+                    "serine": 0.0019
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Milk, whole, 3.25% milkfat, with added vitamin D' (SR Legacy 01077), g of each amino acid per 100 g: tryptophan 0.04, threonine 0.134, isoleucine 0.163, leucine 0.299, lysine 0.264, methionine 0.083, cystine 0.019, phenylalanine 0.163, tyrosine 0.159, valine 0.206, arginine 0.09, histidine 0.095, alanine 0.107, aspartic acid 0.27, glutamic acid 0.708, glycine 0.062, proline 0.311, serine 0.19; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -545,6 +574,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Plain whole-milk yogurt — calories 0.59 kcal/g, fat 0.033 g/g, sat_fat 0.021 g/g, protein 0.035 g/g, sodium 0.46 mg/g, carbs 0.046 g/g, sugar 0.046 g/g, cholesterol 0.13 mg/g. All values per gram as consumed. Vitamins and minerals from USDA FDC 171284 per 100 g: vitamin a 27 µg RAE, vitamin c 0.5 mg, vitamin d 0.1 µg, vitamin e 0.06 mg, vitamin k 0.2 µg, folate 7 µg DFE, vitamin b12 0.37 µg, vitamin b6 0.032 mg, calcium 121 mg, iron 0.05 mg, magnesium 12 mg, potassium 155 mg, zinc 0.59 mg, phosphorus 95 mg, selenium 2.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 171284 per 100 g: ALA 0.027 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0002,
+                    "threonine": 0.00142,
+                    "isoleucine": 0.00189,
+                    "leucine": 0.0035,
+                    "lysine": 0.00311,
+                    "methionine": 0.00102,
+                    "cystine": 0.00032,
+                    "phenylalanine": 0.00189,
+                    "tyrosine": 0.00175,
+                    "valine": 0.00287,
+                    "arginine": 0.00104,
+                    "histidine": 0.00086,
+                    "alanine": 0.00148,
+                    "aspartic_acid": 0.00275,
+                    "glutamic_acid": 0.00679,
+                    "glycine": 0.00084,
+                    "proline": 0.00411,
+                    "serine": 0.00215
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Yogurt, plain, whole milk, 8 grams protein per 8 ounce' (SR Legacy 01116), g of each amino acid per 100 g: tryptophan 0.02, threonine 0.142, isoleucine 0.189, leucine 0.35, lysine 0.311, methionine 0.102, cystine 0.032, phenylalanine 0.189, tyrosine 0.175, valine 0.287, arginine 0.104, histidine 0.086, alanine 0.148, aspartic acid 0.275, glutamic acid 0.679, glycine 0.084, proline 0.411, serine 0.215; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1507,6 +1565,35 @@
                     "title": "USDA FoodData Central — SR Legacy 173180: Beverages, Protein powder whey based",
                     "note": "Whey Protein — stand-in vitamins and minerals: the branded whey labels list only a few minerals, so they come from USDA's generic whey-based protein powder record. Vitamins and minerals from USDA FDC 173180 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 33 µg DFE, vitamin b12 2.45 µg, vitamin b6 0.607 mg, calcium 469 mg, iron 1.13 mg, magnesium 195 mg, potassium 500 mg, zinc 6.18 mg, phosphorus 1321 mg, selenium 26.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 173180 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.01153,
+                    "threonine": 0.04594,
+                    "isoleucine": 0.04043,
+                    "leucine": 0.06668,
+                    "lysine": 0.05791,
+                    "methionine": 0.01355,
+                    "cystine": 0.01423,
+                    "phenylalanine": 0.02288,
+                    "tyrosine": 0.02041,
+                    "valine": 0.03919,
+                    "arginine": 0.02108,
+                    "histidine": 0.01333,
+                    "alanine": 0.03362,
+                    "aspartic_acid": 0.07135,
+                    "glutamic_acid": 0.1264,
+                    "glycine": 0.01574,
+                    "proline": 0.04419,
+                    "serine": 0.03497
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Dried sweet whey's amino acid profile as a stand-in (whey protein concentrate has the same whey protein), scaled to the product's protein. Profile from FDC n/a 'Whey, sweet, dried' (SR Legacy 01115): mg per g of protein x this food's protein (72.70 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -1945,6 +2032,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Cheddar — nutrition: USDA FDC 173414 (SR Legacy 1009) 'Cheese, cheddar' per 100 g: 403 kcal, fat 33.31 g, sat 18.867 g, protein 22.87 g, sodium 653 mg, carbs 3.37 g, sugars 0.48 g, cholesterol 99 mg; trans fat not reported. Per gram. Vitamins and minerals from USDA FDC 173414 per 100 g: vitamin a 337 µg RAE, vitamin c 0 mg, vitamin d 0.6 µg, vitamin e 0.71 mg, vitamin k 2.4 µg, folate 27 µg DFE, vitamin b12 1.1 µg, vitamin b6 0.066 mg, calcium 710 mg, iron 0.14 mg, magnesium 27 mg, potassium 76 mg, zinc 3.64 mg, phosphorus 455 mg, selenium 28.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 173414 per 100 g: ALA 0.108 g, EPA + DHA 11 mg (EPA 0.01 + DHA 0.001); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00547,
+                    "threonine": 0.01044,
+                    "isoleucine": 0.01206,
+                    "leucine": 0.01939,
+                    "lysine": 0.01025,
+                    "methionine": 0.00547,
+                    "cystine": 0.00123,
+                    "phenylalanine": 0.01074,
+                    "tyrosine": 0.01108,
+                    "valine": 0.01404,
+                    "arginine": 0.00547,
+                    "histidine": 0.00547,
+                    "alanine": 0.00751,
+                    "aspartic_acid": 0.01734,
+                    "glutamic_acid": 0.04735,
+                    "glycine": 0.00547,
+                    "proline": 0.02497,
+                    "serine": 0.0078
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, cheddar' (SR Legacy 01009), g of each amino acid per 100 g: tryptophan 0.547, threonine 1.044, isoleucine 1.206, leucine 1.939, lysine 1.025, methionine 0.547, cystine 0.123, phenylalanine 1.074, tyrosine 1.108, valine 1.404, arginine 0.547, histidine 0.547, alanine 0.751, aspartic acid 1.734, glutamic acid 4.735, glycine 0.547, proline 2.497, serine 0.78; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2386,6 +2502,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Mozzarella — nutrition: USDA FDC 171244 (SR Legacy 1029) 'Cheese, mozzarella, low moisture, part-skim' per 100 g: 295 kcal, fat 19.78 g, sat 11.295 g, protein 23.75 g, sodium 666 mg, carbs 5.58 g, sugars 1.9 g, cholesterol 64 mg, trans 0.72 g. Per gram. Vitamins and minerals from USDA FDC 171244 per 100 g: vitamin a 227 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.5 mg, vitamin k 1.3 µg, folate 27 µg DFE, vitamin b12 1.68 µg, vitamin b6 0.1 mg, calcium 697 mg, iron 0.22 mg, magnesium 27 mg, potassium 188 mg, zinc 3.62 mg, phosphorus 548 mg, selenium 27.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 171244 per 100 g: ALA 0.071 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 5 mg (EPA 0.005 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00551,
+                    "threonine": 0.01053,
+                    "isoleucine": 0.01216,
+                    "leucine": 0.01956,
+                    "lysine": 0.01034,
+                    "methionine": 0.00551,
+                    "cystine": 0.00124,
+                    "phenylalanine": 0.01083,
+                    "tyrosine": 0.01117,
+                    "valine": 0.01416,
+                    "arginine": 0.00551,
+                    "histidine": 0.00551,
+                    "alanine": 0.00757,
+                    "aspartic_acid": 0.01749,
+                    "glutamic_acid": 0.04776,
+                    "glycine": 0.00551,
+                    "proline": 0.02519,
+                    "serine": 0.00787
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, mozzarella, low moisture, part-skim' (SR Legacy 01029), g of each amino acid per 100 g: tryptophan 0.551, threonine 1.053, isoleucine 1.216, leucine 1.956, lysine 1.034, methionine 0.551, cystine 0.124, phenylalanine 1.083, tyrosine 1.117, valine 1.416, arginine 0.551, histidine 0.551, alanine 0.757, aspartic acid 1.749, glutamic acid 4.776, glycine 0.551, proline 2.519, serine 0.787; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -2825,6 +2970,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Parmesan — nutrition: USDA FDC 170848 (SR Legacy 1033) 'Cheese, parmesan, hard' per 100 g: 392 kcal, fat 25.0 g, sat 14.85 g, protein 35.75 g, sodium 1,175 mg, carbs 3.22 g, sugars 0.11 g, cholesterol 68 mg; trans fat not reported. Per gram. Vitamins and minerals from USDA FDC 170848 per 100 g: vitamin a 207 µg RAE, vitamin c 0 mg, vitamin d 0.5 µg, vitamin e 0.22 mg, vitamin k 1.7 µg, folate 7 µg DFE, vitamin b12 1.2 µg, vitamin b6 0.091 mg, calcium 1184 mg, iron 0.82 mg, magnesium 44 mg, potassium 92 mg, zinc 2.75 mg, phosphorus 694 mg, selenium 22.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 170848 per 100 g: ALA 0.297 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00482,
+                    "threonine": 0.01317,
+                    "isoleucine": 0.01894,
+                    "leucine": 0.03452,
+                    "lysine": 0.03306,
+                    "methionine": 0.00958,
+                    "cystine": 0.00235,
+                    "phenylalanine": 0.01922,
+                    "tyrosine": 0.01995,
+                    "valine": 0.02454,
+                    "arginine": 0.01317,
+                    "histidine": 0.01384,
+                    "alanine": 0.01048,
+                    "aspartic_acid": 0.02236,
+                    "glutamic_acid": 0.08209,
+                    "glycine": 0.00622,
+                    "proline": 0.0418,
+                    "serine": 0.02068
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, parmesan, hard' (SR Legacy 01033), g of each amino acid per 100 g: tryptophan 0.482, threonine 1.317, isoleucine 1.894, leucine 3.452, lysine 3.306, methionine 0.958, cystine 0.235, phenylalanine 1.922, tyrosine 1.995, valine 2.454, arginine 1.317, histidine 1.384, alanine 1.048, aspartic acid 2.236, glutamic acid 8.209, glycine 0.622, proline 4.18, serine 2.068; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3266,6 +3440,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Goat Milk — FDC 171278 'Milk, goat, fluid, with added vitamin D' (SR Legacy 01106), per 100 g: 69 kcal, protein 3.56 g, fat 4.14 g, sat fat 2.667 g, carbs 4.45 g, fiber 0 g, sugars 4.45 g, sodium 50 mg, cholesterol 11 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171278 per 100 g: vitamin a 57 µg RAE, vitamin c 1.3 mg, vitamin d 1.3 µg, vitamin e 0.07 mg, vitamin k 0.3 µg, folate 1 µg DFE, vitamin b12 0.07 µg, vitamin b6 0.046 mg, calcium 134 mg, iron 0.05 mg, magnesium 14 mg, potassium 204 mg, zinc 0.3 mg, phosphorus 111 mg, selenium 1.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 171278 per 100 g: ALA 0.04 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00044,
+                    "threonine": 0.00163,
+                    "isoleucine": 0.00207,
+                    "leucine": 0.00314,
+                    "lysine": 0.0029,
+                    "methionine": 0.0008,
+                    "cystine": 0.00046,
+                    "phenylalanine": 0.00155,
+                    "tyrosine": 0.00179,
+                    "valine": 0.0024,
+                    "arginine": 0.00119,
+                    "histidine": 0.00089,
+                    "alanine": 0.00118,
+                    "aspartic_acid": 0.0021,
+                    "glutamic_acid": 0.00626,
+                    "glycine": 0.0005,
+                    "proline": 0.00368,
+                    "serine": 0.00181
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Milk, goat, fluid, with added vitamin D' (SR Legacy 01106), g of each amino acid per 100 g: tryptophan 0.044, threonine 0.163, isoleucine 0.207, leucine 0.314, lysine 0.29, methionine 0.08, cystine 0.046, phenylalanine 0.155, tyrosine 0.179, valine 0.24, arginine 0.119, histidine 0.089, alanine 0.118, aspartic acid 0.21, glutamic acid 0.626, glycine 0.05, proline 0.368, serine 0.181; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3572,6 +3775,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Goat Cheese — nutrition: USDA FDC 173435 (SR Legacy 01159) 'Cheese, goat, soft type' per 100 g: 264 kcal, fat 21.08 g, sat 14.575 g, protein 18.52 g, sodium 459 mg, carbs 0 g, sugars 0 g, cholesterol 46 mg; trans fat not reported. Per gram. Vitamins and minerals from USDA FDC 173435 per 100 g: vitamin a 288 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.18 mg, vitamin k 1.8 µg, folate 12 µg DFE, vitamin b12 0.19 µg, vitamin b6 0.25 mg, calcium 140 mg, iron 1.9 mg, magnesium 16 mg, potassium 26 mg, zinc 0.92 mg, phosphorus 256 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 173435 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00195,
+                    "threonine": 0.00691,
+                    "isoleucine": 0.00766,
+                    "leucine": 0.01597,
+                    "lysine": 0.0133,
+                    "methionine": 0.00494,
+                    "cystine": 0.00084,
+                    "phenylalanine": 0.00737,
+                    "tyrosine": 0.00723,
+                    "valine": 0.01274,
+                    "arginine": 0.00549,
+                    "histidine": 0.00505,
+                    "alanine": 0.00319,
+                    "aspartic_acid": 0.0092,
+                    "glutamic_acid": 0.03452,
+                    "glycine": 0.00209,
+                    "proline": 0.02241,
+                    "serine": 0.00711
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, goat, soft type' (SR Legacy 01159), g of each amino acid per 100 g: tryptophan 0.195, threonine 0.691, isoleucine 0.766, leucine 1.597, lysine 1.33, methionine 0.494, cystine 0.084, phenylalanine 0.737, tyrosine 0.723, valine 1.274, arginine 0.549, histidine 0.505, alanine 0.319, aspartic acid 0.92, glutamic acid 3.452, glycine 0.209, proline 2.241, serine 0.711; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3865,6 +4097,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Heavy Cream — FDC 170859 'Cream, fluid, heavy whipping' (SR Legacy 01053), per 100 g: 340 kcal, protein 2.84 g, fat 36.08 g, sat fat 23.032 g, carbs 2.74 g, fiber 0 g, sugars 2.92 g, sodium 27 mg, cholesterol 113 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170859 per 100 g: vitamin a 411 µg RAE, vitamin c 0.6 mg, vitamin d 1.6 µg, vitamin e 0.92 mg, vitamin k 3.2 µg, folate 4 µg DFE, vitamin b12 0.16 µg, vitamin b6 0.035 mg, calcium 66 mg, iron 0.1 mg, magnesium 7 mg, potassium 95 mg, zinc 0.24 mg, phosphorus 58 mg, selenium 3 µg; divided by 100 for per-gram values. Omega-3 from FDC 170859 per 100 g: ALA 0.122 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 9 mg (EPA 0.009 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00066,
+                    "threonine": 0.00126,
+                    "isoleucine": 0.00146,
+                    "leucine": 0.00234,
+                    "lysine": 0.00124,
+                    "methionine": 0.00066,
+                    "cystine": 0.00015,
+                    "phenylalanine": 0.0013,
+                    "tyrosine": 0.00134,
+                    "valine": 0.0017,
+                    "arginine": 0.00066,
+                    "histidine": 0.00066,
+                    "alanine": 0.00091,
+                    "aspartic_acid": 0.00209,
+                    "glutamic_acid": 0.00572,
+                    "glycine": 0.00066,
+                    "proline": 0.00302,
+                    "serine": 0.00094
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cream, fluid, heavy whipping' (SR Legacy 01053), g of each amino acid per 100 g: tryptophan 0.066, threonine 0.126, isoleucine 0.146, leucine 0.234, lysine 0.124, methionine 0.066, cystine 0.015, phenylalanine 0.13, tyrosine 0.134, valine 0.17, arginine 0.066, histidine 0.066, alanine 0.091, aspartic acid 0.209, glutamic acid 0.572, glycine 0.066, proline 0.302, serine 0.094; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -4333,6 +4594,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Sour Cream — FDC 171257 'Cream, sour, cultured' (SR Legacy 01056), per 100 g: 198 kcal, protein 2.44 g, fat 19.35 g, sat fat 10.14 g, carbs 4.63 g, fiber 0 g, sugars 3.41 g, sodium 31 mg, cholesterol 59 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171257 per 100 g: vitamin a 124 µg RAE, vitamin c 0.9 mg, vitamin d 0 µg, vitamin e 0.38 mg, vitamin k 1.5 µg, folate 6 µg DFE, vitamin b12 0.21 µg, vitamin b6 0.041 mg, calcium 101 mg, iron 0.07 mg, magnesium 10 mg, potassium 125 mg, zinc 0.33 mg, phosphorus 76 mg, selenium 3.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 171257 per 100 g: ALA 0.068 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 7 mg (EPA 0.006 + DHA 0.001); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00042,
+                    "threonine": 0.00142,
+                    "isoleucine": 0.00163,
+                    "leucine": 0.00322,
+                    "lysine": 0.00275,
+                    "methionine": 0.00078,
+                    "cystine": 0.00029,
+                    "phenylalanine": 0.00157,
+                    "tyrosine": 0.00152,
+                    "valine": 0.00195,
+                    "arginine": 0.00117,
+                    "histidine": 0.00092,
+                    "alanine": 0.00116,
+                    "aspartic_acid": 0.00262,
+                    "glutamic_acid": 0.00673,
+                    "glycine": 0.00076,
+                    "proline": 0.0031,
+                    "serine": 0.00191
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cream, sour, cultured' (SR Legacy 01056), g of each amino acid per 100 g: tryptophan 0.042, threonine 0.142, isoleucine 0.163, leucine 0.322, lysine 0.275, methionine 0.078, cystine 0.029, phenylalanine 0.157, tyrosine 0.152, valine 0.195, arginine 0.117, histidine 0.092, alanine 0.116, aspartic acid 0.262, glutamic acid 0.673, glycine 0.076, proline 0.31, serine 0.191; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -4815,6 +5105,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Cream Cheese — FDC 173418 'Cheese, cream' (SR Legacy 01017), per 100 g: 350 kcal, protein 6.15 g, fat 34.44 g, sat fat 20.213 g, carbs 5.52 g, fiber 0 g, sugars 3.76 g, sodium 314 mg, cholesterol 101 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173418 per 100 g: vitamin a 308 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.86 mg, vitamin k 2.1 µg, folate 9 µg DFE, vitamin b12 0.22 µg, vitamin b6 0.056 mg, calcium 97 mg, iron 0.11 mg, magnesium 9 mg, potassium 132 mg, zinc 0.5 mg, phosphorus 107 mg, selenium 8.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 173418 per 100 g: ALA 0.125 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 10 mg (EPA 0.01 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00069,
+                    "threonine": 0.00233,
+                    "isoleucine": 0.00324,
+                    "leucine": 0.00657,
+                    "lysine": 0.00567,
+                    "methionine": 0.00191,
+                    "cystine": 0.00042,
+                    "phenylalanine": 0.00291,
+                    "tyrosine": 0.00303,
+                    "valine": 0.00395,
+                    "arginine": 0.00235,
+                    "histidine": 0.00175,
+                    "alanine": 0.00184,
+                    "aspartic_acid": 0.00514,
+                    "glutamic_acid": 0.01304,
+                    "glycine": 0.00142,
+                    "proline": 0.00665,
+                    "serine": 0.00374
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, cream' (SR Legacy 01017), g of each amino acid per 100 g: tryptophan 0.069, threonine 0.233, isoleucine 0.324, leucine 0.657, lysine 0.567, methionine 0.191, cystine 0.042, phenylalanine 0.291, tyrosine 0.303, valine 0.395, arginine 0.235, histidine 0.175, alanine 0.184, aspartic acid 0.514, glutamic acid 1.304, glycine 0.142, proline 0.665, serine 0.374; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -5295,6 +5614,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Cottage Cheese — FDC 172179 'Cheese, cottage, creamed, large or small curd' (SR Legacy 01012), per 100 g: 98 kcal, protein 11.12 g, fat 4.3 g, sat fat 1.718 g, carbs 3.38 g, fiber 0 g, sugars 2.67 g, sodium 364 mg, cholesterol 17 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172179 per 100 g: vitamin a 37 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.08 mg, vitamin k 0 µg, folate 12 µg DFE, vitamin b12 0.43 µg, vitamin b6 0.046 mg, calcium 83 mg, iron 0.07 mg, magnesium 8 mg, potassium 104 mg, zinc 0.4 mg, phosphorus 159 mg, selenium 9.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172179 per 100 g: ALA 0.017 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00147,
+                    "threonine": 0.005,
+                    "isoleucine": 0.00591,
+                    "leucine": 0.01116,
+                    "lysine": 0.00934,
+                    "methionine": 0.00269,
+                    "cystine": 0.00066,
+                    "phenylalanine": 0.00577,
+                    "tyrosine": 0.00604,
+                    "valine": 0.00748,
+                    "arginine": 0.00497,
+                    "histidine": 0.00326,
+                    "alanine": 0.00384,
+                    "aspartic_acid": 0.00905,
+                    "glutamic_acid": 0.02603,
+                    "glycine": 0.00222,
+                    "proline": 0.01229,
+                    "serine": 0.00639
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, cottage, creamed, large or small curd' (SR Legacy 01012), g of each amino acid per 100 g: tryptophan 0.147, threonine 0.5, isoleucine 0.591, leucine 1.116, lysine 0.934, methionine 0.269, cystine 0.066, phenylalanine 0.577, tyrosine 0.604, valine 0.748, arginine 0.497, histidine 0.326, alanine 0.384, aspartic acid 0.905, glutamic acid 2.603, glycine 0.222, proline 1.229, serine 0.639; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -5774,6 +6122,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Ice Cream — FDC 167575 'Ice creams, vanilla' (SR Legacy 19095), per 100 g: 207 kcal, protein 3.5 g, fat 11 g, sat fat 6.79 g, carbs 23.6 g, fiber 0.7 g, sugars 21.22 g, sodium 80 mg, cholesterol 44 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 167575 per 100 g: vitamin a 118 µg RAE, vitamin c 0.6 mg, vitamin d 0.2 µg, vitamin e 0.3 mg, vitamin k 0.3 µg, folate 5 µg DFE, vitamin b12 0.39 µg, vitamin b6 0.048 mg, calcium 128 mg, iron 0.09 mg, magnesium 14 mg, potassium 199 mg, zinc 0.69 mg, phosphorus 105 mg, selenium 1.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 167575 per 100 g: ALA 0.175 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 3 mg (EPA 0.003 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00045,
+                    "threonine": 0.00146,
+                    "isoleucine": 0.00195,
+                    "leucine": 0.00316,
+                    "lysine": 0.00258,
+                    "methionine": 0.00081,
+                    "cystine": 0.00029,
+                    "phenylalanine": 0.00157,
+                    "tyrosine": 0.00155,
+                    "valine": 0.00217,
+                    "arginine": 0.00125,
+                    "histidine": 0.00088,
+                    "alanine": 0.00121,
+                    "aspartic_acid": 0.0025,
+                    "glutamic_acid": 0.00681,
+                    "glycine": 0.00093,
+                    "proline": 0.00326,
+                    "serine": 0.00177
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 167575 'Ice creams, vanilla' (SR Legacy 19095), g of each amino acid per 100 g: tryptophan 0.045, threonine 0.146, isoleucine 0.195, leucine 0.316, lysine 0.258, methionine 0.081, cystine 0.029, phenylalanine 0.157, tyrosine 0.155, valine 0.217, arginine 0.125, histidine 0.088, alanine 0.121, aspartic acid 0.25, glutamic acid 0.681, glycine 0.093, proline 0.326, serine 0.177; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -6271,6 +6648,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Kefir — FDC 170904 'Kefir, lowfat, plain, LIFEWAY' (SR Legacy 01289), per 100 g: 41 kcal, protein 3.79 g, fat 0.93 g, sat fat 0.658 g, carbs 4.48 g, fiber 0 g, sugars 4.61 g, sodium 40 mg, cholesterol 5 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170904 per 100 g: vitamin a 171 µg RAE, vitamin c 0.2 mg, vitamin d 1 µg, vitamin e 0.02 mg, vitamin k 0.1 µg, folate 13 µg DFE, vitamin b12 0.29 µg, vitamin b6 0.058 mg, calcium 130 mg, iron 0.04 mg, magnesium 12 mg, potassium 164 mg, zinc 0.46 mg, phosphorus 105 mg, selenium 3.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 170904 per 100 g: ALA 0.006 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0004813,
+                    "threonine": 0.001612,
+                    "isoleucine": 0.001961,
+                    "leucine": 0.003597,
+                    "lysine": 0.003176,
+                    "methionine": 0.0009986,
+                    "cystine": 0.0002286,
+                    "phenylalanine": 0.001961,
+                    "tyrosine": 0.001913,
+                    "valine": 0.002479,
+                    "arginine": 0.001083,
+                    "histidine": 0.001143,
+                    "alanine": 0.001287,
+                    "aspartic_acid": 0.003249,
+                    "glutamic_acid": 0.008518,
+                    "glycine": 0.000746,
+                    "proline": 0.003742,
+                    "serine": 0.002286
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Whole cow's milk's amino acid profile, scaled to kefir's protein (kefir protein is milk protein). Profile from FDC n/a 'Milk, whole, 3.25% milkfat, with added vitamin D' (SR Legacy 01077): mg per g of protein x this food's protein (3.79 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -6739,6 +7145,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Swiss Cheese — FDC 171251 'Cheese, swiss' (SR Legacy 01040), per 100 g: 393 kcal, protein 26.96 g, fat 30.99 g, sat fat 18.227 g, carbs 1.44 g, fiber 0 g, sugars 0 g, sodium 187 mg, cholesterol 93 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171251 per 100 g: vitamin a 288 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.6 mg, vitamin k 1.4 µg, folate 10 µg DFE, vitamin b12 3.06 µg, vitamin b6 0.071 mg, calcium 890 mg, iron 0.13 mg, magnesium 33 mg, potassium 72 mg, zinc 4.37 mg, phosphorus 574 mg, selenium 30 µg; divided by 100 for per-gram values. Omega-3 from FDC 171251 per 100 g: ALA 0.125 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00401,
+                    "threonine": 0.01038,
+                    "isoleucine": 0.01537,
+                    "leucine": 0.02959,
+                    "lysine": 0.02585,
+                    "methionine": 0.00784,
+                    "cystine": 0.0029,
+                    "phenylalanine": 0.01662,
+                    "tyrosine": 0.01693,
+                    "valine": 0.02139,
+                    "arginine": 0.00927,
+                    "histidine": 0.01065,
+                    "alanine": 0.00914,
+                    "aspartic_acid": 0.01569,
+                    "glutamic_acid": 0.05704,
+                    "glycine": 0.00508,
+                    "proline": 0.0369,
+                    "serine": 0.0164
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, swiss' (SR Legacy 01040), g of each amino acid per 100 g: tryptophan 0.401, threonine 1.038, isoleucine 1.537, leucine 2.959, lysine 2.585, methionine 0.784, cystine 0.29, phenylalanine 1.662, tyrosine 1.693, valine 2.139, arginine 0.927, histidine 1.065, alanine 0.914, aspartic acid 1.569, glutamic acid 5.704, glycine 0.508, proline 3.69, serine 1.64; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -7217,6 +7652,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Brie — FDC 172177 'Cheese, brie' (SR Legacy 01006), per 100 g: 334 kcal, protein 20.75 g, fat 27.68 g, sat fat 17.41 g, carbs 0.45 g, fiber 0 g, sugars 0.45 g, sodium 629 mg, cholesterol 100 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172177 per 100 g: vitamin a 174 µg RAE, vitamin c 0 mg, vitamin d 0.5 µg, vitamin e 0.24 mg, vitamin k 2.3 µg, folate 65 µg DFE, vitamin b12 1.65 µg, vitamin b6 0.235 mg, calcium 184 mg, iron 0.5 mg, magnesium 20 mg, potassium 152 mg, zinc 2.38 mg, phosphorus 188 mg, selenium 14.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 172177 per 100 g: ALA 0.313 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00322,
+                    "threonine": 0.00751,
+                    "isoleucine": 0.01015,
+                    "leucine": 0.01929,
+                    "lysine": 0.01851,
+                    "methionine": 0.00592,
+                    "cystine": 0.00114,
+                    "phenylalanine": 0.01158,
+                    "tyrosine": 0.012,
+                    "valine": 0.0134,
+                    "arginine": 0.00735,
+                    "histidine": 0.00716,
+                    "alanine": 0.00859,
+                    "aspartic_acid": 0.0135,
+                    "glutamic_acid": 0.04387,
+                    "glycine": 0.00397,
+                    "proline": 0.02459,
+                    "serine": 0.01168
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, brie' (SR Legacy 01006), g of each amino acid per 100 g: tryptophan 0.322, threonine 0.751, isoleucine 1.015, leucine 1.929, lysine 1.851, methionine 0.592, cystine 0.114, phenylalanine 1.158, tyrosine 1.2, valine 1.34, arginine 0.735, histidine 0.716, alanine 0.859, aspartic acid 1.35, glutamic acid 4.387, glycine 0.397, proline 2.459, serine 1.168; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -7682,6 +8146,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Feta — FDC 173420 'Cheese, feta' (SR Legacy 01019), per 100 g: 264 kcal, protein 14.21 g, fat 21.28 g, sat fat 14.946 g, carbs 4.09 g, fiber 0 g, sugars 4.09 g, sodium 917 mg, cholesterol 89 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173420 per 100 g: vitamin a 125 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.18 mg, vitamin k 1.8 µg, folate 32 µg DFE, vitamin b12 1.69 µg, vitamin b6 0.424 mg, calcium 493 mg, iron 0.65 mg, magnesium 19 mg, potassium 62 mg, zinc 2.88 mg, phosphorus 337 mg, selenium 15 µg; divided by 100 for per-gram values. Omega-3 from FDC 173420 per 100 g: ALA 0.265 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002,
+                    "threonine": 0.00637,
+                    "isoleucine": 0.00803,
+                    "leucine": 0.01395,
+                    "lysine": 0.01219,
+                    "methionine": 0.00368,
+                    "cystine": 0.00083,
+                    "phenylalanine": 0.00675,
+                    "tyrosine": 0.00668,
+                    "valine": 0.01065,
+                    "arginine": 0.0047,
+                    "histidine": 0.00397,
+                    "alanine": 0.00639,
+                    "aspartic_acid": 0.00779,
+                    "glutamic_acid": 0.02421,
+                    "glycine": 0.00097,
+                    "proline": 0.01378,
+                    "serine": 0.01169
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cheese, feta' (SR Legacy 01019), g of each amino acid per 100 g: tryptophan 0.2, threonine 0.637, isoleucine 0.803, leucine 1.395, lysine 1.219, methionine 0.368, cystine 0.083, phenylalanine 0.675, tyrosine 0.668, valine 1.065, arginine 0.47, histidine 0.397, alanine 0.639, aspartic acid 0.779, glutamic acid 2.421, glycine 0.097, proline 1.378, serine 1.169; divided by 100 for per-gram values."
                 }
             }
         ],

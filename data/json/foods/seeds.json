@@ -50,6 +50,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 169414 per 100 g: vitamin a 0 µg RAE, vitamin c 0.6 mg, vitamin d 0 µg, vitamin e 0.31 mg, vitamin k 4.3 µg, folate 87 µg DFE, vitamin b12 0 µg, vitamin b6 0.473 mg, calcium 255 mg, iron 5.73 mg, magnesium 392 mg, potassium 813 mg, zinc 4.34 mg, phosphorus 642 mg, selenium 25.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 169414 per 100 g: ALA 22.813 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00297,
+                    "threonine": 0.00766,
+                    "isoleucine": 0.00896,
+                    "leucine": 0.01235,
+                    "lysine": 0.00862,
+                    "methionine": 0.0037,
+                    "cystine": 0.0034,
+                    "phenylalanine": 0.00957,
+                    "tyrosine": 0.00493,
+                    "valine": 0.01072,
+                    "arginine": 0.01925,
+                    "histidine": 0.00472,
+                    "alanine": 0.00925,
+                    "aspartic_acid": 0.02046,
+                    "glutamic_acid": 0.04039,
+                    "glycine": 0.01248,
+                    "proline": 0.00806,
+                    "serine": 0.0097
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169414 'Seeds, flaxseed' (SR Legacy 12220), g of each amino acid per 100 g: tryptophan 0.297, threonine 0.766, isoleucine 0.896, leucine 1.235, lysine 0.862, methionine 0.37, cystine 0.34, phenylalanine 0.957, tyrosine 0.493, valine 1.072, arginine 1.925, histidine 0.472, alanine 0.925, aspartic acid 2.046, glutamic acid 4.039, glycine 1.248, proline 0.806, serine 0.97; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -306,6 +335,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Sesame Seeds — FDC 170150 'Seeds, sesame seeds, whole, dried' (SR Legacy 12023), per 100 g: 573 kcal, protein 17.73 g, fat 49.67 g, sat fat 6.957 g, carbs 23.45 g, fiber 11.8 g, sugars 0.3 g, sodium 11 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170150 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.25 mg, vitamin k 0 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.79 mg, calcium 975 mg, iron 14.55 mg, magnesium 351 mg, potassium 468 mg, zinc 7.75 mg, phosphorus 629 mg, selenium 34.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170150 per 100 g: ALA 0.376 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00388,
+                    "threonine": 0.00736,
+                    "isoleucine": 0.00763,
+                    "leucine": 0.01358,
+                    "lysine": 0.00569,
+                    "methionine": 0.00586,
+                    "cystine": 0.00358,
+                    "phenylalanine": 0.0094,
+                    "tyrosine": 0.00743,
+                    "valine": 0.0099,
+                    "arginine": 0.0263,
+                    "histidine": 0.00522,
+                    "alanine": 0.00927,
+                    "aspartic_acid": 0.01646,
+                    "glutamic_acid": 0.03955,
+                    "glycine": 0.01215,
+                    "proline": 0.0081,
+                    "serine": 0.00967
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170150 'Seeds, sesame seeds, whole, dried' (SR Legacy 12023), g of each amino acid per 100 g: tryptophan 0.388, threonine 0.736, isoleucine 0.763, leucine 1.358, lysine 0.569, methionine 0.586, cystine 0.358, phenylalanine 0.94, tyrosine 0.743, valine 0.99, arginine 2.63, histidine 0.522, alanine 0.927, aspartic acid 1.646, glutamic acid 3.955, glycine 1.215, proline 0.81, serine 0.967; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -527,6 +585,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "EDUCATED GUESS (confidence 1, not a measured value): Hemp Seeds — vitamin_d and vitamin_b12: USDA's SR record 'Seeds, hemp seed, hulled' (FDC 170148) reports neither. Plants do not make vitamin D or B12 (apart from trace D from fungi/algae), so I assumed 0. Vitamin K and selenium are still unknown and are left out rather than assumed."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00369,
+                    "threonine": 0.01269,
+                    "isoleucine": 0.01286,
+                    "leucine": 0.02163,
+                    "lysine": 0.01276,
+                    "methionine": 0.00933,
+                    "cystine": 0.00672,
+                    "phenylalanine": 0.01447,
+                    "tyrosine": 0.01263,
+                    "valine": 0.01777,
+                    "arginine": 0.0455,
+                    "histidine": 0.00969,
+                    "alanine": 0.01528,
+                    "aspartic_acid": 0.03662,
+                    "glutamic_acid": 0.06269,
+                    "glycine": 0.01611,
+                    "proline": 0.01597,
+                    "serine": 0.01713
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170148 'Seeds, hemp seed, hulled' (SR Legacy 12012), g of each amino acid per 100 g: tryptophan 0.369, threonine 1.269, isoleucine 1.286, leucine 2.163, lysine 1.276, methionine 0.933, cystine 0.672, phenylalanine 1.447, tyrosine 1.263, valine 1.777, arginine 4.55, histidine 0.969, alanine 1.528, aspartic acid 3.662, glutamic acid 6.269, glycine 1.611, proline 1.597, serine 1.713; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -762,6 +849,35 @@
                     "title": "USDA FoodData Central",
                     "note": "EDUCATED GUESS (confidence 1, not a measured value): Chia Seeds — vitamin_d: neither USDA chia record reports it. Plants do not make vitamin D, so I assumed 0. Vitamin A, K and folate are still unknown and are left out rather than assumed."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00436,
+                    "threonine": 0.00709,
+                    "isoleucine": 0.00801,
+                    "leucine": 0.01371,
+                    "lysine": 0.0097,
+                    "methionine": 0.00588,
+                    "cystine": 0.00407,
+                    "phenylalanine": 0.01016,
+                    "tyrosine": 0.00563,
+                    "valine": 0.0095,
+                    "arginine": 0.02143,
+                    "histidine": 0.00531,
+                    "alanine": 0.01044,
+                    "aspartic_acid": 0.01689,
+                    "glutamic_acid": 0.035,
+                    "glycine": 0.00943,
+                    "proline": 0.00776,
+                    "serine": 0.01049
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170554 'Seeds, chia seeds, dried' (SR Legacy 12006), g of each amino acid per 100 g: tryptophan 0.436, threonine 0.709, isoleucine 0.801, leucine 1.371, lysine 0.97, methionine 0.588, cystine 0.407, phenylalanine 1.016, tyrosine 0.563, valine 0.95, arginine 2.143, histidine 0.531, alanine 1.044, aspartic acid 1.689, glutamic acid 3.5, glycine 0.943, proline 0.776, serine 1.049; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -974,6 +1090,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Pumpkin Seeds — FDC 170556 'Seeds, pumpkin and squash seed kernels, dried' (SR Legacy 12014), per 100 g: 559 kcal, protein 30.23 g, fat 49.05 g, sat fat 8.659 g, carbs 10.71 g, fiber 6 g, sugars 1.4 g, sodium 7 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170556 per 100 g: vitamin a 1 µg RAE, vitamin c 1.9 mg, vitamin d 0 µg, vitamin e 2.18 mg, vitamin k 7.3 µg, folate 58 µg DFE, vitamin b12 0 µg, vitamin b6 0.143 mg, calcium 46 mg, iron 8.82 mg, magnesium 592 mg, potassium 809 mg, zinc 7.81 mg, phosphorus 1233 mg, selenium 9.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170556 per 100 g: ALA 0.12 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00576,
+                    "threonine": 0.00998,
+                    "isoleucine": 0.01281,
+                    "leucine": 0.02419,
+                    "lysine": 0.01236,
+                    "methionine": 0.00603,
+                    "cystine": 0.00332,
+                    "phenylalanine": 0.01733,
+                    "tyrosine": 0.01093,
+                    "valine": 0.01579,
+                    "arginine": 0.05353,
+                    "histidine": 0.0078,
+                    "alanine": 0.01485,
+                    "aspartic_acid": 0.0296,
+                    "glutamic_acid": 0.06188,
+                    "glycine": 0.01843,
+                    "proline": 0.01316,
+                    "serine": 0.01673
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170556 'Seeds, pumpkin and squash seed kernels, dried' (SR Legacy 12014), g of each amino acid per 100 g: tryptophan 0.576, threonine 0.998, isoleucine 1.281, leucine 2.419, lysine 1.236, methionine 0.603, cystine 0.332, phenylalanine 1.733, tyrosine 1.093, valine 1.579, arginine 5.353, histidine 0.78, alanine 1.485, aspartic acid 2.96, glutamic acid 6.188, glycine 1.843, proline 1.316, serine 1.673; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1326,6 +1471,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Cocoa (Unsweetened Baking Chocolate) — FDC 167568 'Baking chocolate, unsweetened, squares' (SR Legacy 19078), per 100 g: 642 kcal, protein 14.32 g, fat 52.31 g, sat fat 32.277 g, carbs 28.42 g, fiber 16.6 g, sugars 0.91 g, sodium 24 mg, cholesterol 2 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 167568 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.4 mg, vitamin k 9.7 µg, folate 28 µg DFE, vitamin b12 0 µg, vitamin b6 0.027 mg, calcium 101 mg, iron 17.4 mg, magnesium 327 mg, potassium 830 mg, zinc 9.63 mg, phosphorus 400 mg, selenium 8.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 167568 per 100 g: ALA 0.117 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0013,
+                    "threonine": 0.0037,
+                    "isoleucine": 0.0041,
+                    "leucine": 0.00695,
+                    "lysine": 0.0047,
+                    "methionine": 0.0014,
+                    "cystine": 0.00225,
+                    "phenylalanine": 0.00525,
+                    "tyrosine": 0.00425,
+                    "valine": 0.00655,
+                    "arginine": 0.00815,
+                    "histidine": 0.00215,
+                    "alanine": 0.00475,
+                    "aspartic_acid": 0.0127,
+                    "glutamic_acid": 0.0187,
+                    "glycine": 0.00505,
+                    "proline": 0.0088,
+                    "serine": 0.0053
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 167568 'Baking chocolate, unsweetened, squares' (SR Legacy 19078), g of each amino acid per 100 g: tryptophan 0.13, threonine 0.37, isoleucine 0.41, leucine 0.695, lysine 0.47, methionine 0.14, cystine 0.225, phenylalanine 0.525, tyrosine 0.425, valine 0.655, arginine 0.815, histidine 0.215, alanine 0.475, aspartic acid 1.27, glutamic acid 1.87, glycine 0.505, proline 0.88, serine 0.53; divided by 100 for per-gram values."
                 }
             }
         ],

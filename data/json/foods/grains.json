@@ -54,6 +54,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 168893 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.71 mg, vitamin k 1.9 µg, folate 44 µg DFE, vitamin b12 0 µg, vitamin b6 0.407 mg, calcium 34 mg, iron 3.6 mg, magnesium 137 mg, potassium 363 mg, zinc 2.6 mg, phosphorus 357 mg, selenium 61.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168893 per 100 g: ALA 0.073 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00174,
+                    "threonine": 0.00367,
+                    "isoleucine": 0.00443,
+                    "leucine": 0.00898,
+                    "lysine": 0.00359,
+                    "methionine": 0.00228,
+                    "cystine": 0.00275,
+                    "phenylalanine": 0.00682,
+                    "tyrosine": 0.00275,
+                    "valine": 0.00564,
+                    "arginine": 0.00648,
+                    "histidine": 0.00357,
+                    "alanine": 0.00489,
+                    "aspartic_acid": 0.00722,
+                    "glutamic_acid": 0.04328,
+                    "glycine": 0.00569,
+                    "proline": 0.02075,
+                    "serine": 0.0062
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168893 'Wheat flour, whole-grain' (SR Legacy 20080), g of each amino acid per 100 g: tryptophan 0.174, threonine 0.367, isoleucine 0.443, leucine 0.898, lysine 0.359, methionine 0.228, cystine 0.275, phenylalanine 0.682, tyrosine 0.275, valine 0.564, arginine 0.648, histidine 0.357, alanine 0.489, aspartic acid 0.722, glutamic acid 4.328, glycine 0.569, proline 2.075, serine 0.62; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -430,6 +459,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/170290/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 170290: Corn flour, whole-grain, yellow",
                     "note": "Corn — stand-in values: USDA's corn grain record (170288) doesn't report EPA/DHA, so it comes from whole-grain yellow corn flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00067,
+                    "threonine": 0.00354,
+                    "isoleucine": 0.00337,
+                    "leucine": 0.01155,
+                    "lysine": 0.00265,
+                    "methionine": 0.00197,
+                    "cystine": 0.0017,
+                    "phenylalanine": 0.00463,
+                    "tyrosine": 0.00383,
+                    "valine": 0.00477,
+                    "arginine": 0.0047,
+                    "histidine": 0.00287,
+                    "alanine": 0.00705,
+                    "aspartic_acid": 0.00655,
+                    "glutamic_acid": 0.01768,
+                    "glycine": 0.00386,
+                    "proline": 0.00822,
+                    "serine": 0.00447
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170288 'Corn grain, yellow' (SR Legacy 20014), g of each amino acid per 100 g: tryptophan 0.067, threonine 0.354, isoleucine 0.337, leucine 1.155, lysine 0.265, methionine 0.197, cystine 0.17, phenylalanine 0.463, tyrosine 0.383, valine 0.477, arginine 0.47, histidine 0.287, alanine 0.705, aspartic acid 0.655, glutamic acid 1.768, glycine 0.386, proline 0.822, serine 0.447; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -846,6 +904,35 @@
                     "title": "USDA FoodData Central — SR Legacy 168943: Sorghum flour, whole-grain",
                     "note": "Sorghum — stand-in values: USDA's sorghum grain record (169716) doesn't report these, so they come from whole-grain sorghum flour (the same grain, milled). Per 100 g: vitamin k 6.4 µg, epa dha 1 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00124,
+                    "threonine": 0.00346,
+                    "isoleucine": 0.00433,
+                    "leucine": 0.01491,
+                    "lysine": 0.00229,
+                    "methionine": 0.00169,
+                    "cystine": 0.00127,
+                    "phenylalanine": 0.00546,
+                    "tyrosine": 0.00321,
+                    "valine": 0.00561,
+                    "arginine": 0.00355,
+                    "histidine": 0.00246,
+                    "alanine": 0.01033,
+                    "aspartic_acid": 0.00743,
+                    "glutamic_acid": 0.02439,
+                    "glycine": 0.00346,
+                    "proline": 0.00852,
+                    "serine": 0.00462
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169716 'Sorghum grain' (SR Legacy 20067), g of each amino acid per 100 g: tryptophan 0.124, threonine 0.346, isoleucine 0.433, leucine 1.491, lysine 0.229, methionine 0.169, cystine 0.127, phenylalanine 0.546, tyrosine 0.321, valine 0.561, arginine 0.355, histidine 0.246, alanine 1.033, aspartic acid 0.743, glutamic acid 2.439, glycine 0.346, proline 0.852, serine 0.462; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -1126,6 +1213,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/168878/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 168878: Rice, white, long-grain, regular, enriched, cooked",
                     "note": "CORRECTION 2026-09-24: all nutrition fields now taken from one cooked form, FDC 168878 (white long-grain rice, boiled, no salt), per 100 g: 130 kcal, fat 0.28 g, sat fat 0.077 g, protein 2.69 g, fiber 0.4 g, sodium 1 mg, carbs 28.2 g, sugar 0.05 g, water 68.4 g. Previous entry was already cooked rice (1.3 kcal/g) but carbs 0.285 / sugar 0 did not match a single FDC item, and there was no cooked_weight_ratio, so these cooked-weight nutrients were compared against per-kg-DRY yield/water/emissions (rice looked ~2.8x worse per calorie than it is). Vitamins and minerals from USDA FDC 168878 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.04 mg, vitamin k 0 µg, folate 97 µg DFE, vitamin b12 0 µg, vitamin b6 0.093 mg, calcium 10 mg, iron 1.2 mg, magnesium 12 mg, potassium 35 mg, zinc 0.49 mg, phosphorus 43 mg, selenium 7.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 168878 per 100 g: ALA 0.013 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00031,
+                    "threonine": 0.00096,
+                    "isoleucine": 0.00116,
+                    "leucine": 0.00222,
+                    "lysine": 0.00097,
+                    "methionine": 0.00063,
+                    "cystine": 0.00055,
+                    "phenylalanine": 0.00144,
+                    "tyrosine": 0.0009,
+                    "valine": 0.00164,
+                    "arginine": 0.00224,
+                    "histidine": 0.00063,
+                    "alanine": 0.00156,
+                    "aspartic_acid": 0.00253,
+                    "glutamic_acid": 0.00524,
+                    "glycine": 0.00122,
+                    "proline": 0.00127,
+                    "serine": 0.00141
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168878 'Rice, white, long-grain, regular, enriched, cooked' (SR Legacy 20045), g of each amino acid per 100 g: tryptophan 0.031, threonine 0.096, isoleucine 0.116, leucine 0.222, lysine 0.097, methionine 0.063, cystine 0.055, phenylalanine 0.144, tyrosine 0.09, valine 0.164, arginine 0.224, histidine 0.063, alanine 0.156, aspartic acid 0.253, glutamic acid 0.524, glycine 0.122, proline 0.127, serine 0.141; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1487,6 +1603,35 @@
                     "title": "USDA FoodData Central — SR Legacy 173904: Cereals, oats, regular and quick, not fortified, dry",
                     "note": "Oats — stand-in values: USDA's oats record (169705) doesn't report these, so they come from dry regular/quick oats (not fortified). Per 100 g: vitamin e 0.42 mg, vitamin k 2 µg, selenium 28.9 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00234,
+                    "threonine": 0.00575,
+                    "isoleucine": 0.00694,
+                    "leucine": 0.01284,
+                    "lysine": 0.00701,
+                    "methionine": 0.00312,
+                    "cystine": 0.00408,
+                    "phenylalanine": 0.00895,
+                    "tyrosine": 0.00573,
+                    "valine": 0.00937,
+                    "arginine": 0.01192,
+                    "histidine": 0.00405,
+                    "alanine": 0.00881,
+                    "aspartic_acid": 0.01448,
+                    "glutamic_acid": 0.03712,
+                    "glycine": 0.00841,
+                    "proline": 0.00934,
+                    "serine": 0.0075
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169705 'Oats' (SR Legacy 20038), g of each amino acid per 100 g: tryptophan 0.234, threonine 0.575, isoleucine 0.694, leucine 1.284, lysine 0.701, methionine 0.312, cystine 0.408, phenylalanine 0.895, tyrosine 0.573, valine 0.937, arginine 1.192, histidine 0.405, alanine 0.881, aspartic acid 1.448, glutamic acid 3.712, glycine 0.841, proline 0.934, serine 0.75; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -1742,6 +1887,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/168917/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 168917: Quinoa, cooked",
                     "note": "CORRECTION 2026-09-24: nutrition was already COOKED quinoa (1.2 kcal/g) while yield, water and emissions are per kg of dry seed, with no cooked_weight_ratio — quinoa looked ~3x worse per calorie than it is. Now all fields from one cooked item, FDC 168917 (Quinoa, cooked), per 100 g: 120 kcal, fat 1.92 g, sat fat 0.231 g, protein 4.4 g, fiber 2.8 g, sodium 7 mg, carbs 21.3 g, sugar 0.87 g; and cooked_weight_ratio added. Vitamins and minerals from USDA FDC 168917 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.63 mg, vitamin k 0 µg, folate 42 µg DFE, vitamin b12 0 µg, vitamin b6 0.123 mg, calcium 17 mg, iron 1.49 mg, magnesium 64 mg, potassium 172 mg, zinc 1.09 mg, phosphorus 152 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168917 per 100 g: ALA 0.085 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 15 mg (EPA 0 + DHA 0.015); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00052,
+                    "threonine": 0.00131,
+                    "isoleucine": 0.00157,
+                    "leucine": 0.00261,
+                    "lysine": 0.00239,
+                    "methionine": 0.00096,
+                    "cystine": 0.00063,
+                    "phenylalanine": 0.00185,
+                    "tyrosine": 0.00083,
+                    "valine": 0.00185,
+                    "arginine": 0.0034,
+                    "histidine": 0.00127,
+                    "alanine": 0.00183,
+                    "aspartic_acid": 0.00353,
+                    "glutamic_acid": 0.0058,
+                    "glycine": 0.00216,
+                    "proline": 0.0024,
+                    "serine": 0.00176
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168917 'Quinoa, cooked' (SR Legacy 20137), g of each amino acid per 100 g: tryptophan 0.052, threonine 0.131, isoleucine 0.157, leucine 0.261, lysine 0.239, methionine 0.096, cystine 0.063, phenylalanine 0.185, tyrosine 0.083, valine 0.185, arginine 0.34, histidine 0.127, alanine 0.183, aspartic acid 0.353, glutamic acid 0.58, glycine 0.216, proline 0.24, serine 0.176; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2001,6 +2175,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170283 per 100 g: vitamin a 1 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.57 mg, vitamin k 2.2 µg, folate 19 µg DFE, vitamin b12 0 µg, vitamin b6 0.318 mg, calcium 33 mg, iron 3.6 mg, magnesium 133 mg, potassium 452 mg, zinc 2.77 mg, phosphorus 264 mg, selenium 37.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 170283 per 100 g: ALA 0.11 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00208,
+                    "threonine": 0.00424,
+                    "isoleucine": 0.00456,
+                    "leucine": 0.00848,
+                    "lysine": 0.00465,
+                    "methionine": 0.0024,
+                    "cystine": 0.00276,
+                    "phenylalanine": 0.007,
+                    "tyrosine": 0.00358,
+                    "valine": 0.00612,
+                    "arginine": 0.00625,
+                    "histidine": 0.00281,
+                    "alanine": 0.00486,
+                    "aspartic_acid": 0.00779,
+                    "glutamic_acid": 0.03261,
+                    "glycine": 0.00452,
+                    "proline": 0.01484,
+                    "serine": 0.00527
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170283 'Barley, hulled' (SR Legacy 20004), g of each amino acid per 100 g: tryptophan 0.208, threonine 0.424, isoleucine 0.456, leucine 0.848, lysine 0.465, methionine 0.24, cystine 0.276, phenylalanine 0.7, tyrosine 0.358, valine 0.612, arginine 0.625, histidine 0.281, alanine 0.486, aspartic acid 0.779, glutamic acid 3.261, glycine 0.452, proline 1.484, serine 0.527; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2342,6 +2545,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/172336/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 172336: Oil, canola (used to estimate oat milk's vitamin E and ALA)",
                     "note": "Oat Milk (Unsweetened) — GUESS. USDA's oat milk record (2257046) doesn't report vitamins C or E or any omega-3. Most of oat milk's fat (2.749 g per 100 g) is added rapeseed (canola) oil, so vitamin E and ALA are that fat times USDA canola oil's values (17.46 mg vitamin E and 9.137 g ALA per 100 g oil). EPA/DHA is 0 because no ingredient is from fish or algae. Vitamin C is 0 because oats have none (USDA oats 169705) and none is added. Per 100 g: vitamin e 0.48 mg, ala 0.2512 g, epa dha 0 mg, vitamin c 0 mg; divided by 100 for per-gram values. Some oat milks use sunflower oil instead, which has more vitamin E and almost no ALA. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0001121,
+                    "threonine": 0.0002754,
+                    "isoleucine": 0.0003325,
+                    "leucine": 0.0006151,
+                    "lysine": 0.0003358,
+                    "methionine": 0.0001495,
+                    "cystine": 0.0001954,
+                    "phenylalanine": 0.0004287,
+                    "tyrosine": 0.0002745,
+                    "valine": 0.0004489,
+                    "arginine": 0.000571,
+                    "histidine": 0.000194,
+                    "alanine": 0.000422,
+                    "aspartic_acid": 0.0006937,
+                    "glutamic_acid": 0.001778,
+                    "glycine": 0.0004029,
+                    "proline": 0.0004474,
+                    "serine": 0.0003593
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The oats entry's amino acid profile, scaled to the oat milk's protein (oat milk protein is oat protein). Scaled from the oats entry: mg per g of protein x 0.80 g per 100 g ÷ 1000."
                 }
             }
         ],
@@ -3017,6 +3249,35 @@
                     "title": "USDA FoodData Central — SR Legacy 169703: Rice, brown, long-grain, raw (scaled estimate for rice protein)",
                     "note": "Rice Protein — GUESS by analogy with pea protein. No source gives these for rice protein. Analysed pea protein isolate keeps B6 and folate at about the same level as or above whole peas (Mad Barn vs USDA split peas), so rice protein is given brown rice's own B6 (0.477 mg), folate (23 µg DFE) and vitamin K (0.6 µg) per 100 g, unscaled. Vitamin E is fat-soluble, so it is brown rice's 0.6 mg scaled by fat (label average 4.17 g ÷ 3.2 g). Per 100 g: vitamin b6 0.477 mg, folate 23 µg DFE, vitamin k 0.6 µg, vitamin e 0.7819 mg; divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.009219,
+                    "threonine": 0.02855,
+                    "isoleucine": 0.0345,
+                    "leucine": 0.06602,
+                    "lysine": 0.02885,
+                    "methionine": 0.01874,
+                    "cystine": 0.01636,
+                    "phenylalanine": 0.04283,
+                    "tyrosine": 0.02677,
+                    "valine": 0.04877,
+                    "arginine": 0.06662,
+                    "histidine": 0.01874,
+                    "alanine": 0.04639,
+                    "aspartic_acid": 0.07524,
+                    "glutamic_acid": 0.1558,
+                    "glycine": 0.03628,
+                    "proline": 0.03777,
+                    "serine": 0.04193
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The rice entry's amino acid profile as a stand-in for rice protein isolate (rice protein is ~lysine-limited like rice), scaled to the product's protein. Scaled from the rice entry: mg per g of protein x 80.00 g per 100 g ÷ 1000."
+                }
             }
         ],
         "yield_fraction": [
@@ -3336,6 +3597,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Rye — FDC 168884 'Rye grain' (SR Legacy 20062), per 100 g: 338 kcal, protein 10.34 g, fat 1.63 g, sat fat 0.197 g, carbs 75.86 g, fiber 15.1 g, sugars 0.98 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168884 per 100 g: vitamin a 1 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.85 mg, vitamin k 5.9 µg, folate 38 µg DFE, vitamin b12 0 µg, vitamin b6 0.294 mg, calcium 24 mg, iron 2.63 mg, magnesium 110 mg, potassium 510 mg, zinc 2.65 mg, phosphorus 332 mg, selenium 13.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 168884 per 100 g: ALA 0.108 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001362,
+                    "threonine": 0.002873,
+                    "isoleucine": 0.003468,
+                    "leucine": 0.007029,
+                    "lysine": 0.00281,
+                    "methionine": 0.001785,
+                    "cystine": 0.002153,
+                    "phenylalanine": 0.005338,
+                    "tyrosine": 0.002153,
+                    "valine": 0.004415,
+                    "arginine": 0.005072,
+                    "histidine": 0.002794,
+                    "alanine": 0.003828,
+                    "aspartic_acid": 0.005651,
+                    "glutamic_acid": 0.03388,
+                    "glycine": 0.004454,
+                    "proline": 0.01624,
+                    "serine": 0.004853
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Whole-grain wheat flour's profile (USDA's rye records have no amino acids; rye is a close cereal relative with a slightly higher lysine share, so this is a little low). Profile from FDC 168893 'Wheat flour, whole-grain' (SR Legacy 20080): mg per g of protein x this food's protein (10.34 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "yield_fraction": [
@@ -3615,6 +3905,35 @@
                     "title": "USDA FoodData Central — SR Legacy 172023: Millet flour",
                     "note": "Millet — stand-in values: USDA's raw millet record (169702) doesn't report EPA/DHA, so it comes from millet flour (the same grain, milled). Per 100 g: epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00119,
+                    "threonine": 0.00353,
+                    "isoleucine": 0.00465,
+                    "leucine": 0.014,
+                    "lysine": 0.00212,
+                    "methionine": 0.00221,
+                    "cystine": 0.00212,
+                    "phenylalanine": 0.0058,
+                    "tyrosine": 0.0034,
+                    "valine": 0.00578,
+                    "arginine": 0.00382,
+                    "histidine": 0.00236,
+                    "alanine": 0.00986,
+                    "aspartic_acid": 0.00726,
+                    "glutamic_acid": 0.02396,
+                    "glycine": 0.00287,
+                    "proline": 0.00877,
+                    "serine": 0.00644
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169702 'Millet, raw' (SR Legacy 20031), g of each amino acid per 100 g: tryptophan 0.119, threonine 0.353, isoleucine 0.465, leucine 1.4, lysine 0.212, methionine 0.221, cystine 0.212, phenylalanine 0.58, tyrosine 0.34, valine 0.578, arginine 0.382, histidine 0.236, alanine 0.986, aspartic acid 0.726, glutamic acid 2.396, glycine 0.287, proline 0.877, serine 0.644; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -3849,6 +4168,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Buckwheat — FDC 170686 'Buckwheat groats, roasted, cooked' (SR Legacy 20010), per 100 g: 92 kcal, protein 3.38 g, fat 0.62 g, sat fat 0.134 g, carbs 19.94 g, fiber 2.7 g, sugars 0.9 g, sodium 4 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170686 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.09 mg, vitamin k 1.9 µg, folate 14 µg DFE, vitamin b12 0 µg, vitamin b6 0.077 mg, calcium 7 mg, iron 0.8 mg, magnesium 51 mg, potassium 88 mg, zinc 0.61 mg, phosphorus 70 mg, selenium 2.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 170686 per 100 g: ALA 0.014 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00049,
+                    "threonine": 0.00129,
+                    "isoleucine": 0.00127,
+                    "leucine": 0.00212,
+                    "lysine": 0.00172,
+                    "methionine": 0.00044,
+                    "cystine": 0.00058,
+                    "phenylalanine": 0.00133,
+                    "tyrosine": 0.00062,
+                    "valine": 0.00173,
+                    "arginine": 0.0025,
+                    "histidine": 0.00079,
+                    "alanine": 0.00191,
+                    "aspartic_acid": 0.00289,
+                    "glutamic_acid": 0.00522,
+                    "glycine": 0.00263,
+                    "proline": 0.00129,
+                    "serine": 0.00175
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170686 'Buckwheat groats, roasted, cooked' (SR Legacy 20010), g of each amino acid per 100 g: tryptophan 0.049, threonine 0.129, isoleucine 0.127, leucine 0.212, lysine 0.172, methionine 0.044, cystine 0.058, phenylalanine 0.133, tyrosine 0.062, valine 0.173, arginine 0.25, histidine 0.079, alanine 0.191, aspartic acid 0.289, glutamic acid 0.522, glycine 0.263, proline 0.129, serine 0.175; divided by 100 for per-gram values."
                 }
             }
         ],

@@ -409,6 +409,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173944 per 100 g: vitamin a 3 µg RAE, vitamin c 8.7 mg, vitamin d 0 µg, vitamin e 0.1 mg, vitamin k 0.5 µg, folate 20 µg DFE, vitamin b12 0 µg, vitamin b6 0.367 mg, calcium 5 mg, iron 0.26 mg, magnesium 27 mg, potassium 358 mg, zinc 0.15 mg, phosphorus 22 mg, selenium 1 µg; divided by 100 for per-gram values. Omega-3 from FDC 173944 per 100 g: ALA 0.027 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 9e-05,
+                    "threonine": 0.00028,
+                    "isoleucine": 0.00028,
+                    "leucine": 0.00068,
+                    "lysine": 0.0005,
+                    "methionine": 8e-05,
+                    "cystine": 9e-05,
+                    "phenylalanine": 0.00049,
+                    "tyrosine": 9e-05,
+                    "valine": 0.00047,
+                    "arginine": 0.00049,
+                    "histidine": 0.00077,
+                    "alanine": 0.0004,
+                    "aspartic_acid": 0.00124,
+                    "glutamic_acid": 0.00152,
+                    "glycine": 0.00038,
+                    "proline": 0.00028,
+                    "serine": 0.0004
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Bananas, raw' (SR Legacy 09040), g of each amino acid per 100 g: tryptophan 0.009, threonine 0.028, isoleucine 0.028, leucine 0.068, lysine 0.05, methionine 0.008, cystine 0.009, phenylalanine 0.049, tyrosine 0.009, valine 0.047, arginine 0.049, histidine 0.077, alanine 0.04, aspartic acid 0.124, glutamic acid 0.152, glycine 0.038, proline 0.028, serine 0.04; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -698,6 +727,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171705 per 100 g: vitamin a 7 µg RAE, vitamin c 10 mg, vitamin d 0 µg, vitamin e 2.07 mg, vitamin k 21 µg, folate 81 µg DFE, vitamin b12 0 µg, vitamin b6 0.257 mg, calcium 12 mg, iron 0.55 mg, magnesium 29 mg, potassium 485 mg, zinc 0.64 mg, phosphorus 52 mg, selenium 0.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 171705 per 100 g: ALA 0.111 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00025,
+                    "threonine": 0.00073,
+                    "isoleucine": 0.00084,
+                    "leucine": 0.00143,
+                    "lysine": 0.00132,
+                    "methionine": 0.00038,
+                    "cystine": 0.00027,
+                    "phenylalanine": 0.00097,
+                    "tyrosine": 0.00049,
+                    "valine": 0.00107,
+                    "arginine": 0.00088,
+                    "histidine": 0.00049,
+                    "alanine": 0.00109,
+                    "aspartic_acid": 0.00236,
+                    "glutamic_acid": 0.00287,
+                    "glycine": 0.00104,
+                    "proline": 0.00098,
+                    "serine": 0.00114
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Avocados, raw, all commercial varieties' (SR Legacy 09037), g of each amino acid per 100 g: tryptophan 0.025, threonine 0.073, isoleucine 0.084, leucine 0.143, lysine 0.132, methionine 0.038, cystine 0.027, phenylalanine 0.097, tyrosine 0.049, valine 0.107, arginine 0.088, histidine 0.049, alanine 0.109, aspartic acid 0.236, glutamic acid 0.287, glycine 0.104, proline 0.098, serine 0.114; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -968,6 +1026,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170169 per 100 g: vitamin a 0 µg RAE, vitamin c 3.3 mg, vitamin d 0 µg, vitamin e 0.24 mg, vitamin k 0.2 µg, folate 26 µg DFE, vitamin b12 0 µg, vitamin b6 0.054 mg, calcium 14 mg, iron 2.43 mg, magnesium 32 mg, potassium 356 mg, zinc 1.1 mg, phosphorus 113 mg, selenium 10.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 170169 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00039,
+                    "threonine": 0.00121,
+                    "isoleucine": 0.00131,
+                    "leucine": 0.00247,
+                    "lysine": 0.00147,
+                    "methionine": 0.00062,
+                    "cystine": 0.00066,
+                    "phenylalanine": 0.00169,
+                    "tyrosine": 0.00103,
+                    "valine": 0.00202,
+                    "arginine": 0.00546,
+                    "histidine": 0.00077,
+                    "alanine": 0.0017,
+                    "aspartic_acid": 0.00325,
+                    "glutamic_acid": 0.00761,
+                    "glycine": 0.00158,
+                    "proline": 0.00138,
+                    "serine": 0.00172
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170169 'Nuts, coconut meat, raw' (SR Legacy 12104), g of each amino acid per 100 g: tryptophan 0.039, threonine 0.121, isoleucine 0.131, leucine 0.247, lysine 0.147, methionine 0.062, cystine 0.066, phenylalanine 0.169, tyrosine 0.103, valine 0.202, arginine 0.546, histidine 0.077, alanine 0.17, aspartic acid 0.325, glutamic acid 0.761, glycine 0.158, proline 0.138, serine 0.172; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -4944,6 +5031,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Cherries — FDC 171719 'Cherries, sweet, raw' (SR Legacy 09070), per 100 g: 63 kcal, protein 1.06 g, fat 0.2 g, sat fat 0.038 g, carbs 16.01 g, fiber 2.1 g, sugars 12.82 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171719 per 100 g: vitamin a 3 µg RAE, vitamin c 7 mg, vitamin d 0 µg, vitamin e 0.07 mg, vitamin k 2.1 µg, folate 4 µg DFE, vitamin b12 0 µg, vitamin b6 0.049 mg, calcium 13 mg, iron 0.36 mg, magnesium 11 mg, potassium 222 mg, zinc 0.07 mg, phosphorus 21 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 171719 per 100 g: ALA 0.026 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 9e-05,
+                    "threonine": 0.00022,
+                    "isoleucine": 0.0002,
+                    "leucine": 0.0003,
+                    "lysine": 0.00032,
+                    "methionine": 0.0001,
+                    "cystine": 0.0001,
+                    "phenylalanine": 0.00024,
+                    "tyrosine": 0.00014,
+                    "valine": 0.00024,
+                    "arginine": 0.00018,
+                    "histidine": 0.00015,
+                    "alanine": 0.00026,
+                    "aspartic_acid": 0.00569,
+                    "glutamic_acid": 0.00083,
+                    "glycine": 0.00023,
+                    "proline": 0.00039,
+                    "serine": 0.0003
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cherries, sweet, raw' (SR Legacy 09070), g of each amino acid per 100 g: tryptophan 0.009, threonine 0.022, isoleucine 0.02, leucine 0.03, lysine 0.032, methionine 0.01, cystine 0.01, phenylalanine 0.024, tyrosine 0.014, valine 0.024, arginine 0.018, histidine 0.015, alanine 0.026, aspartic acid 0.569, glutamic acid 0.083, glycine 0.023, proline 0.039, serine 0.03; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -5663,6 +5779,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Kiwi — FDC 168153 'Kiwifruit, green, raw' (SR Legacy 09148), per 100 g: 61 kcal, protein 1.14 g, fat 0.52 g, sat fat 0.029 g, carbs 14.66 g, fiber 3 g, sugars 8.99 g, sodium 3 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168153 per 100 g: vitamin a 4 µg RAE, vitamin c 92.7 mg, vitamin d 0 µg, vitamin e 1.46 mg, vitamin k 40.3 µg, folate 25 µg DFE, vitamin b12 0 µg, vitamin b6 0.063 mg, calcium 34 mg, iron 0.31 mg, magnesium 17 mg, potassium 312 mg, zinc 0.14 mg, phosphorus 34 mg, selenium 0.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 168153 per 100 g: ALA 0.042 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00015,
+                    "threonine": 0.00047,
+                    "isoleucine": 0.00051,
+                    "leucine": 0.00066,
+                    "lysine": 0.00061,
+                    "methionine": 0.00024,
+                    "cystine": 0.00031,
+                    "phenylalanine": 0.00044,
+                    "tyrosine": 0.00034,
+                    "valine": 0.00057,
+                    "arginine": 0.00081,
+                    "histidine": 0.00027,
+                    "alanine": 0.00053,
+                    "aspartic_acid": 0.00126,
+                    "glutamic_acid": 0.00184,
+                    "glycine": 0.0006,
+                    "proline": 0.00044,
+                    "serine": 0.00053
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Kiwifruit, green, raw' (SR Legacy 09148), g of each amino acid per 100 g: tryptophan 0.015, threonine 0.047, isoleucine 0.051, leucine 0.066, lysine 0.061, methionine 0.024, cystine 0.031, phenylalanine 0.044, tyrosine 0.034, valine 0.057, arginine 0.081, histidine 0.027, alanine 0.053, aspartic acid 0.126, glutamic acid 0.184, glycine 0.06, proline 0.044, serine 0.053; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -6183,6 +6328,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Dates — FDC 171726 'Dates, deglet noor' (SR Legacy 09087), per 100 g: 282 kcal, protein 2.45 g, fat 0.39 g, sat fat 0.032 g, carbs 75.03 g, fiber 8 g, sugars 63.35 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 171726 per 100 g: vitamin a 0 µg RAE, vitamin c 0.4 mg, vitamin d 0 µg, vitamin e 0.05 mg, vitamin k 2.7 µg, folate 19 µg DFE, vitamin b12 0 µg, vitamin b6 0.165 mg, calcium 39 mg, iron 1.02 mg, magnesium 43 mg, potassium 656 mg, zinc 0.29 mg, phosphorus 62 mg, selenium 3 µg; divided by 100 for per-gram values. Omega-3 from FDC 171726 per 100 g: ALA 0.003 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00012,
+                    "threonine": 0.00043,
+                    "isoleucine": 0.00049,
+                    "leucine": 0.00084,
+                    "lysine": 0.00066,
+                    "methionine": 0.00022,
+                    "cystine": 0.00067,
+                    "phenylalanine": 0.0005,
+                    "tyrosine": 0.00015,
+                    "valine": 0.00071,
+                    "arginine": 0.00136,
+                    "histidine": 0.00032,
+                    "alanine": 0.00083,
+                    "aspartic_acid": 0.00213,
+                    "glutamic_acid": 0.00359,
+                    "glycine": 0.00101,
+                    "proline": 0.0013,
+                    "serine": 0.00057
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Dates, deglet noor' (SR Legacy 09087), g of each amino acid per 100 g: tryptophan 0.012, threonine 0.043, isoleucine 0.049, leucine 0.084, lysine 0.066, methionine 0.022, cystine 0.067, phenylalanine 0.05, tyrosine 0.015, valine 0.071, arginine 0.136, histidine 0.032, alanine 0.083, aspartic acid 0.213, glutamic acid 0.359, glycine 0.101, proline 0.13, serine 0.057; divided by 100 for per-gram values."
                 }
             }
         ],

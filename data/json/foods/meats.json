@@ -55,6 +55,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 174036 per 100 g: vitamin a 4 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.17 mg, vitamin k 1.8 µg, folate 7 µg DFE, vitamin b12 2.14 µg, vitamin b6 0.323 mg, calcium 18 mg, iron 1.94 mg, magnesium 17 mg, potassium 270 mg, zinc 4.18 mg, phosphorus 158 mg, selenium 15 µg; divided by 100 for per-gram values. Omega-3 from FDC 174036 per 100 g: ALA 0.051 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00087,
+                    "threonine": 0.00665,
+                    "isoleucine": 0.00759,
+                    "leucine": 0.01339,
+                    "lysine": 0.01423,
+                    "methionine": 0.00442,
+                    "cystine": 0.00177,
+                    "phenylalanine": 0.0067,
+                    "tyrosine": 0.00528,
+                    "valine": 0.00844,
+                    "arginine": 0.01118,
+                    "histidine": 0.00558,
+                    "alanine": 0.01076,
+                    "aspartic_acid": 0.01547,
+                    "glutamic_acid": 0.02575,
+                    "glycine": 0.01166,
+                    "proline": 0.00875,
+                    "serine": 0.00688
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174036 'Beef, ground, 80% lean meat / 20% fat, raw' (SR Legacy 23572), g of each amino acid per 100 g: tryptophan 0.087, threonine 0.665, isoleucine 0.759, leucine 1.339, lysine 1.423, methionine 0.442, cystine 0.177, phenylalanine 0.67, tyrosine 0.528, valine 0.844, arginine 1.118, histidine 0.558, alanine 1.076, aspartic acid 1.547, glutamic acid 2.575, glycine 1.166, proline 0.875, serine 0.688; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -403,6 +432,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171477 per 100 g: vitamin a 6 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.27 mg, vitamin k 0.3 µg, folate 4 µg DFE, vitamin b12 0.34 µg, vitamin b6 0.6 mg, calcium 15 mg, iron 1.04 mg, magnesium 29 mg, potassium 256 mg, zinc 1 mg, phosphorus 228 mg, selenium 27.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 171477 per 100 g: ALA 0.03 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 30 mg (EPA 0.01 + DHA 0.02); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00362,
+                    "threonine": 0.0131,
+                    "isoleucine": 0.01638,
+                    "leucine": 0.02328,
+                    "lysine": 0.02635,
+                    "methionine": 0.00859,
+                    "cystine": 0.00397,
+                    "phenylalanine": 0.01231,
+                    "tyrosine": 0.01047,
+                    "valine": 0.01539,
+                    "arginine": 0.01871,
+                    "histidine": 0.00963,
+                    "alanine": 0.01692,
+                    "aspartic_acid": 0.02764,
+                    "glutamic_acid": 0.04645,
+                    "glycine": 0.01524,
+                    "proline": 0.01275,
+                    "serine": 0.01067
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Chicken, broilers or fryers, breast, meat only, cooked, roasted' (SR Legacy 05064), g of each amino acid per 100 g: tryptophan 0.362, threonine 1.31, isoleucine 1.638, leucine 2.328, lysine 2.635, methionine 0.859, cystine 0.397, phenylalanine 1.231, tyrosine 1.047, valine 1.539, arginine 1.871, histidine 0.963, alanine 1.692, aspartic acid 2.764, glutamic acid 4.645, glycine 1.524, proline 1.275, serine 1.067; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -668,6 +726,35 @@
                     "title": "USDA FoodData Central — SR Legacy 167903: Pork, fresh, ground, cooked",
                     "note": "Pork — stand-in values: USDA's raw ground pork record (167902) doesn't report these, so they come from cooked ground pork, scaled down to raw by protein (16.88 ÷ 25.69 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0.3285 µg, vitamin e 0.138 mg, vitamin k 0 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00214,
+                    "threonine": 0.00771,
+                    "isoleucine": 0.0079,
+                    "leucine": 0.01354,
+                    "lysine": 0.01518,
+                    "methionine": 0.00447,
+                    "cystine": 0.00215,
+                    "phenylalanine": 0.00674,
+                    "tyrosine": 0.00588,
+                    "valine": 0.00916,
+                    "arginine": 0.01049,
+                    "histidine": 0.00674,
+                    "alanine": 0.00983,
+                    "aspartic_acid": 0.01566,
+                    "glutamic_acid": 0.02642,
+                    "glycine": 0.00802,
+                    "proline": 0.00678,
+                    "serine": 0.00697
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 167902 'Pork, fresh, ground, raw' (SR Legacy 10219), g of each amino acid per 100 g: tryptophan 0.214, threonine 0.771, isoleucine 0.79, leucine 1.354, lysine 1.518, methionine 0.447, cystine 0.215, phenylalanine 0.674, tyrosine 0.588, valine 0.916, arginine 1.049, histidine 0.674, alanine 0.983, aspartic acid 1.566, glutamic acid 2.642, glycine 0.802, proline 0.678, serine 0.697; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -907,6 +994,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 171479 per 100 g: vitamin a 12 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.07 mg, vitamin k 0 µg, folate 9 µg DFE, vitamin b12 1.02 µg, vitamin b6 0.616 mg, calcium 14 mg, iron 1.09 mg, magnesium 30 mg, potassium 239 mg, zinc 2.48 mg, phosphorus 223 mg, selenium 29.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 171479 per 100 g: ALA 0.105 g, EPA + DHA 13 mg (EPA 0.008 + DHA 0.005); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00291,
+                    "threonine": 0.01004,
+                    "isoleucine": 0.00796,
+                    "leucine": 0.01925,
+                    "lysine": 0.02282,
+                    "methionine": 0.00724,
+                    "cystine": 0.00265,
+                    "phenylalanine": 0.00903,
+                    "tyrosine": 0.00819,
+                    "valine": 0.00902,
+                    "arginine": 0.01631,
+                    "histidine": 0.00749,
+                    "alanine": 0.01576,
+                    "aspartic_acid": 0.02235,
+                    "glutamic_acid": 0.03787,
+                    "glycine": 0.01427,
+                    "proline": 0.01635,
+                    "serine": 0.01114
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Turkey, whole, meat and skin, cooked, roasted' (SR Legacy 05166), g of each amino acid per 100 g: tryptophan 0.291, threonine 1.004, isoleucine 0.796, leucine 1.925, lysine 2.282, methionine 0.724, cystine 0.265, phenylalanine 0.903, tyrosine 0.819, valine 0.902, arginine 1.631, histidine 0.749, alanine 1.576, aspartic acid 2.235, glutamic acid 3.787, glycine 1.427, proline 1.635, serine 1.114; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -1104,6 +1220,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172480 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.14 mg, vitamin k 4.6 µg, folate 18 µg DFE, vitamin b12 2.55 µg, vitamin b6 0.13 mg, calcium 17 mg, iron 1.88 mg, magnesium 23 mg, potassium 310 mg, zinc 4.46 mg, phosphorus 188 mg, selenium 26.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 172480 per 100 g: ALA 0.3 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00287,
+                    "threonine": 0.0105,
+                    "isoleucine": 0.01183,
+                    "leucine": 0.01908,
+                    "lysine": 0.02166,
+                    "methionine": 0.00629,
+                    "cystine": 0.00293,
+                    "phenylalanine": 0.00998,
+                    "tyrosine": 0.00824,
+                    "valine": 0.01323,
+                    "arginine": 0.01457,
+                    "histidine": 0.00777,
+                    "alanine": 0.01475,
+                    "aspartic_acid": 0.02159,
+                    "glutamic_acid": 0.03559,
+                    "glycine": 0.01198,
+                    "proline": 0.01029,
+                    "serine": 0.00912
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172480 'Lamb, domestic, composite of trimmed retail cuts, separable lean and fat, trimmed to 1/4\" fat, choice, cooked' (SR Legacy 17002), g of each amino acid per 100 g: tryptophan 0.287, threonine 1.05, isoleucine 1.183, leucine 1.908, lysine 2.166, methionine 0.629, cystine 0.293, phenylalanine 0.998, tyrosine 0.824, valine 1.323, arginine 1.457, histidine 0.777, alanine 1.475, aspartic acid 2.159, glutamic acid 3.559, glycine 1.198, proline 1.029, serine 0.912; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1399,6 +1544,35 @@
                     "title": "USDA FoodData Central — SR Legacy 172604: Game meat, deer, loin, separable lean only, 1\" steak, cooked, broiled",
                     "note": "Venison (Wild) — stand-in values: USDA's roasted deer record (175085) doesn't report these, so they come from broiled deer loin (lean, also cooked). Per 100 g: vitamin d 0 µg, vitamin e 0.62 mg, vitamin k 1.2 µg, folate 9 µg DFE, vitamin b12 1.83 µg, vitamin b6 0.756 mg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002662,
+                    "threonine": 0.01134,
+                    "isoleucine": 0.01288,
+                    "leucine": 0.02281,
+                    "lysine": 0.02435,
+                    "methionine": 0.007002,
+                    "cystine": 0.002801,
+                    "phenylalanine": 0.01134,
+                    "tyrosine": 0.009373,
+                    "valine": 0.01456,
+                    "arginine": 0.01791,
+                    "histidine": 0.008957,
+                    "alanine": 0.0175,
+                    "aspartic_acid": 0.02603,
+                    "glutamic_acid": 0.04255,
+                    "glycine": 0.01638,
+                    "proline": 0.01316,
+                    "serine": 0.01036
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Ground raw deer's amino acid profile, scaled to the venison record's protein (the roast record has no amino acids). Profile from FDC 172602 'Game meat, deer, ground, raw' (SR Legacy 17343): mg per g of protein x this food's protein (30.20 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -1565,6 +1739,35 @@
                     "title": "USDA FoodData Central — SR Legacy 172524: Game meat, squirrel, cooked, roasted",
                     "note": "Wild Squirrel — stand-in values: USDA's raw squirrel record (172523) doesn't report these, so they come from its roasted squirrel record, scaled down to raw by protein (21.23 ÷ 30.77 g per 100 g) because cooking removes water. Per 100 g: vitamin d 0 µg, vitamin e 0.276 mg, vitamin k 0.9659 µg, folate 6.21 µg DFE, vitamin b12 4.492 µg, vitamin b6 0.2553 mg, zinc 1.228 mg, epa dha 75.21 mg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002828,
+                    "threonine": 0.009575,
+                    "isoleucine": 0.01015,
+                    "leucine": 0.01668,
+                    "lysine": 0.01874,
+                    "methionine": 0.005352,
+                    "cystine": 0.002691,
+                    "phenylalanine": 0.00879,
+                    "tyrosine": 0.007621,
+                    "valine": 0.01088,
+                    "arginine": 0.01322,
+                    "histidine": 0.006001,
+                    "alanine": 0.01291,
+                    "aspartic_acid": 0.02091,
+                    "glutamic_acid": 0.03433,
+                    "glycine": 0.01162,
+                    "proline": 0.01046,
+                    "serine": 0.009487
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Wild rabbit's profile as a stand-in (a small wild game mammal), scaled to squirrel's protein. Profile from FDC 174347 'Game meat, rabbit, wild, raw' (SR Legacy 17180): mg per g of protein x this food's protein (21.40 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -1715,6 +1918,29 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Goat — FDC 175304 'Game meat, goat, cooked, roasted' (SR Legacy 17169), per 100 g: 143 kcal, protein 27.1 g, fat 3.03 g, sat fat 0.93 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 86 mg, cholesterol 75 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175304 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.34 mg, vitamin k 1.2 µg, folate 5 µg DFE, vitamin b12 1.19 µg, vitamin b6 0 mg, calcium 17 mg, iron 3.73 mg, magnesium 0 mg, potassium 405 mg, zinc 5.27 mg, phosphorus 201 mg, selenium 11.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 175304 per 100 g: ALA 0.02 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00403,
+                    "threonine": 0.0129,
+                    "isoleucine": 0.01371,
+                    "leucine": 0.02258,
+                    "lysine": 0.02016,
+                    "methionine": 0.00726,
+                    "cystine": 0.00323,
+                    "phenylalanine": 0.00941,
+                    "tyrosine": 0.00833,
+                    "valine": 0.01452,
+                    "arginine": 0.01989,
+                    "histidine": 0.00565
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175304 'Game meat, goat, cooked, roasted' (SR Legacy 17169), g of each amino acid per 100 g: tryptophan 0.403, threonine 1.29, isoleucine 1.371, leucine 2.258, lysine 2.016, methionine 0.726, cystine 0.323, phenylalanine 0.941, tyrosine 0.833, valine 1.452, arginine 1.989, histidine 0.565; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1953,6 +2179,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Duck — FDC 172411 'Duck, domesticated, meat only, cooked, roasted' (SR Legacy 05142), per 100 g: 201 kcal, protein 23.48 g, fat 11.2 g, sat fat 3.951 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 65 mg, cholesterol 89 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172411 per 100 g: vitamin a 23 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 0.7 mg, vitamin k 3.8 µg, folate 10 µg DFE, vitamin b12 0.4 µg, vitamin b6 0.25 mg, calcium 12 mg, iron 2.7 mg, magnesium 20 mg, potassium 252 mg, zinc 2.6 mg, phosphorus 203 mg, selenium 22.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 172411 per 100 g: ALA 0.146 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00327,
+                    "threonine": 0.01003,
+                    "isoleucine": 0.01206,
+                    "leucine": 0.01983,
+                    "lysine": 0.02009,
+                    "methionine": 0.00635,
+                    "cystine": 0.00361,
+                    "phenylalanine": 0.00984,
+                    "tyrosine": 0.00894,
+                    "valine": 0.01228,
+                    "arginine": 0.01499,
+                    "histidine": 0.0062,
+                    "alanine": 0.01487,
+                    "aspartic_acid": 0.02299,
+                    "glutamic_acid": 0.03673,
+                    "glycine": 0.01315,
+                    "proline": 0.01153,
+                    "serine": 0.0101
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Duck, domesticated, meat only, cooked, roasted' (SR Legacy 05142), g of each amino acid per 100 g: tryptophan 0.327, threonine 1.003, isoleucine 1.206, leucine 1.983, lysine 2.009, methionine 0.635, cystine 0.361, phenylalanine 0.984, tyrosine 0.894, valine 1.228, arginine 1.499, histidine 0.62, alanine 1.487, aspartic acid 2.299, glutamic acid 3.673, glycine 1.315, proline 1.153, serine 1.01; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2193,6 +2448,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
                     "note": "Beef Liver — nutrition: FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy) per 100 g: 135 kcal, fat 3.63 g, sat fat 1.233 g, protein 20.36 g, fiber 0, sodium 69 mg, carbs 3.89 g, cholesterol 275 mg, sugars 0 g, trans fat 0.17 g. Vitamins and minerals: vitamin a 4968 µg RAE, vitamin c 1.3 mg, vitamin d 1.2 µg, vitamin e 0.38 mg, vitamin k 3.1 µg, folate 290 µg DFE, vitamin b12 59.3 µg, vitamin b6 1.083 mg, calcium 5 mg, iron 4.9 mg, magnesium 18 mg, potassium 313 mg, zinc 4 mg, phosphorus 387 mg, selenium 39.7 µg. Divided by 100 for per-gram values. Omega-3 from FDC 169451 per 100 g: ALA (18:3 n-3) 0.007 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00263,
+                    "threonine": 0.00869,
+                    "isoleucine": 0.00967,
+                    "leucine": 0.0191,
+                    "lysine": 0.01607,
+                    "methionine": 0.00543,
+                    "cystine": 0.00376,
+                    "phenylalanine": 0.01084,
+                    "tyrosine": 0.00807,
+                    "valine": 0.0126,
+                    "arginine": 0.01241,
+                    "histidine": 0.00629,
+                    "alanine": 0.01164,
+                    "aspartic_acid": 0.01927,
+                    "glutamic_acid": 0.02612,
+                    "glycine": 0.01164,
+                    "proline": 0.00961,
+                    "serine": 0.00905
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy 13325), g of each amino acid per 100 g: tryptophan 0.263, threonine 0.869, isoleucine 0.967, leucine 1.91, lysine 1.607, methionine 0.543, cystine 0.376, phenylalanine 1.084, tyrosine 0.807, valine 1.26, arginine 1.241, histidine 0.629, alanine 1.164, aspartic acid 1.927, glutamic acid 2.612, glycine 1.164, proline 0.961, serine 0.905; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2542,6 +2826,35 @@
                     "title": "USDA FoodData Central — SR Legacy 171060: Chicken, liver, all classes, raw",
                     "note": "Chicken Liver — nutrition: FDC 171060 'Chicken, liver, all classes, raw' (SR Legacy) per 100 g: 119 kcal, fat 4.83 g, sat fat 1.563 g, protein 16.92 g, fiber 0, sodium 71 mg, carbs 0.73 g, cholesterol 345 mg, sugars 0 g, trans fat 0.065 g. Vitamins and minerals: vitamin a 3296 µg RAE, vitamin c 17.9 mg, vitamin d 0 µg, vitamin e 0.7 mg, vitamin k 0 µg, folate 588 µg DFE, vitamin b12 16.58 µg, vitamin b6 0.853 mg, calcium 8 mg, iron 8.99 mg, magnesium 19 mg, potassium 230 mg, zinc 2.67 mg, phosphorus 297 mg, selenium 54.6 µg. Divided by 100 for per-gram values. Omega-3 from FDC 171060 per 100 g: ALA (18:3 n-3) 0.006 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00176,
+                    "threonine": 0.00725,
+                    "isoleucine": 0.00813,
+                    "leucine": 0.01512,
+                    "lysine": 0.01332,
+                    "methionine": 0.00432,
+                    "cystine": 0.00272,
+                    "phenylalanine": 0.00824,
+                    "tyrosine": 0.00653,
+                    "valine": 0.00998,
+                    "arginine": 0.01093,
+                    "histidine": 0.00507,
+                    "alanine": 0.00993,
+                    "aspartic_acid": 0.01593,
+                    "glutamic_acid": 0.02093,
+                    "glycine": 0.00849,
+                    "proline": 0.00726,
+                    "serine": 0.00735
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Chicken, liver, all classes, raw' (SR Legacy 05027), g of each amino acid per 100 g: tryptophan 0.176, threonine 0.725, isoleucine 0.813, leucine 1.512, lysine 1.332, methionine 0.432, cystine 0.272, phenylalanine 0.824, tyrosine 0.653, valine 0.998, arginine 1.093, histidine 0.507, alanine 0.993, aspartic acid 1.593, glutamic acid 2.093, glycine 0.849, proline 0.726, serine 0.735; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -2819,6 +3132,35 @@
                     "title": "foodintake.space — Pork, liver, raw (third-party nutrition site; credits the Canadian Nutrient File)",
                     "note": "Pork Liver — vitamin K: 88 µg per 100 g (0.88 µg/g). DUBIOUS SOURCING: this is from a third-party nutrition website, not a primary database. It credits the Canadian Nutrient File, but that could not be checked (Health Canada's site didn't respond). USDA and the UK's CoFID both list no vitamin K for pig liver, and 88 µg is high for liver (USDA beef liver: 3.1 µg), so it may include vitamin K2 or be an error. Confidence 1; replace with a primary source if one turns up."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00301,
+                    "threonine": 0.0091,
+                    "isoleucine": 0.01085,
+                    "leucine": 0.01906,
+                    "lysine": 0.01649,
+                    "methionine": 0.0053,
+                    "cystine": 0.00404,
+                    "phenylalanine": 0.01047,
+                    "tyrosine": 0.00729,
+                    "valine": 0.01321,
+                    "arginine": 0.01317,
+                    "histidine": 0.00582,
+                    "alanine": 0.01276,
+                    "aspartic_acid": 0.01937,
+                    "glutamic_acid": 0.02782,
+                    "glycine": 0.01239,
+                    "proline": 0.01146,
+                    "serine": 0.01157
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 167862 'Pork, fresh, variety meats and by-products, liver, raw' (SR Legacy 10110), g of each amino acid per 100 g: tryptophan 0.301, threonine 0.91, isoleucine 1.085, leucine 1.906, lysine 1.649, methionine 0.53, cystine 0.404, phenylalanine 1.047, tyrosine 0.729, valine 1.321, arginine 1.317, histidine 0.582, alanine 1.276, aspartic acid 1.937, glutamic acid 2.782, glycine 1.239, proline 1.146, serine 1.157; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3079,6 +3421,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 169451: Beef, variety meats and by-products, liver, raw",
                     "note": "Lamb Liver — stand-in values: USDA's lamb liver record doesn't report vitamin K, so it comes from raw beef liver, the closest liver USDA measures. Per 100 g: vitamin k 3.1 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00236,
+                    "threonine": 0.00882,
+                    "isoleucine": 0.00878,
+                    "leucine": 0.01665,
+                    "lysine": 0.01102,
+                    "methionine": 0.00442,
+                    "cystine": 0.00214,
+                    "phenylalanine": 0.0091,
+                    "tyrosine": 0.00727,
+                    "valine": 0.01122,
+                    "arginine": 0.01143,
+                    "histidine": 0.00479,
+                    "alanine": 0.01022,
+                    "aspartic_acid": 0.01758,
+                    "glutamic_acid": 0.02198,
+                    "glycine": 0.00985,
+                    "proline": 0.00974,
+                    "serine": 0.00878
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172531 'Lamb, variety meats and by-products, liver, raw' (SR Legacy 17199), g of each amino acid per 100 g: tryptophan 0.236, threonine 0.882, isoleucine 0.878, leucine 1.665, lysine 1.102, methionine 0.442, cystine 0.214, phenylalanine 0.91, tyrosine 0.727, valine 1.122, arginine 1.143, histidine 0.479, alanine 1.022, aspartic acid 1.758, glutamic acid 2.198, glycine 0.985, proline 0.974, serine 0.878; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3369,6 +3740,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Bacon — FDC 168277 'Pork, cured, bacon, unprepared' (SR Legacy 10123), per 100 g: 417 kcal, protein 12.62 g, fat 39.69 g, sat fat 13.296 g, carbs 1.28 g, fiber 0 g, sugars 1 g, sodium 662 mg, cholesterol 66 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168277 per 100 g: vitamin a 11 µg RAE, vitamin c 0 mg, vitamin d 0.4 µg, vitamin e 0.43 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0.5 µg, vitamin b6 0.266 mg, calcium 5 mg, iron 0.41 mg, magnesium 12 mg, potassium 198 mg, zinc 1.18 mg, phosphorus 144 mg, selenium 20.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 168277 per 100 g: ALA 0.234 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 9 mg (EPA 0.004 + DHA 0.005); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0015,
+                    "threonine": 0.00555,
+                    "isoleucine": 0.00598,
+                    "leucine": 0.01039,
+                    "lysine": 0.01123,
+                    "methionine": 0.00346,
+                    "cystine": 0.00142,
+                    "phenylalanine": 0.00524,
+                    "tyrosine": 0.005,
+                    "valine": 0.00638,
+                    "arginine": 0.00813,
+                    "histidine": 0.00513,
+                    "alanine": 0.00723,
+                    "aspartic_acid": 0.01181,
+                    "glutamic_acid": 0.01928,
+                    "glycine": 0.0057,
+                    "proline": 0.0051,
+                    "serine": 0.00527
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168277 'Pork, cured, bacon, unprepared' (SR Legacy 10123), g of each amino acid per 100 g: tryptophan 0.15, threonine 0.555, isoleucine 0.598, leucine 1.039, lysine 1.123, methionine 0.346, cystine 0.142, phenylalanine 0.524, tyrosine 0.5, valine 0.638, arginine 0.813, histidine 0.513, alanine 0.723, aspartic acid 1.181, glutamic acid 1.928, glycine 0.57, proline 0.51, serine 0.527; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3606,6 +4006,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Beef Heart — FDC 168625 'Beef, variety meats and by-products, heart, raw' (SR Legacy 13321), per 100 g: 112 kcal, protein 17.72 g, fat 3.94 g, sat fat 1.383 g, carbs 0.14 g, fiber 0 g, sugars 0 g, sodium 98 mg, cholesterol 124 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168625 per 100 g: vitamin a 0 µg RAE, vitamin c 2 mg, vitamin d 0 µg, vitamin e 0.22 mg, vitamin k 0 µg, folate 3 µg DFE, vitamin b12 8.55 µg, vitamin b6 0.279 mg, calcium 7 mg, iron 4.31 mg, magnesium 21 mg, potassium 287 mg, zinc 1.7 mg, phosphorus 212 mg, selenium 21.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 168625 per 100 g: ALA 0.011 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001984,
+                    "threonine": 0.00774,
+                    "isoleucine": 0.007962,
+                    "leucine": 0.014,
+                    "lysine": 0.01474,
+                    "methionine": 0.004533,
+                    "cystine": 0.001984,
+                    "phenylalanine": 0.006919,
+                    "tyrosine": 0.005952,
+                    "valine": 0.008621,
+                    "arginine": 0.01119,
+                    "histidine": 0.006063,
+                    "alanine": 0.01069,
+                    "aspartic_acid": 0.01619,
+                    "glutamic_acid": 0.02661,
+                    "glycine": 0.009664,
+                    "proline": 0.007825,
+                    "serine": 0.006773
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Beef muscle's (brisket lean) profile as a stand-in, since the heart is mostly muscle and USDA has no amino acids for it, scaled to the heart's protein. Profile from FDC 168607 'Beef, brisket, whole, separable lean only, all grades, raw' (SR Legacy 13023): mg per g of protein x this food's protein (17.72 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
                 }
             }
         ],
@@ -3955,6 +4384,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Beef Kidney — FDC 169449 'Beef, variety meats and by-products, kidneys, raw' (SR Legacy 13323), per 100 g: 99 kcal, protein 17.4 g, fat 3.09 g, sat fat 0.868 g, carbs 0.29 g, fiber 0 g, sugars 0 g, sodium 182 mg, cholesterol 411 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169449 per 100 g: vitamin a 419 µg RAE, vitamin c 9.4 mg, vitamin d 1.1 µg, vitamin e 0.22 mg, vitamin k 0 µg, folate 98 µg DFE, vitamin b12 27.5 µg, vitamin b6 0.665 mg, calcium 13 mg, iron 4.6 mg, magnesium 17 mg, potassium 262 mg, zinc 1.92 mg, phosphorus 257 mg, selenium 141 µg; divided by 100 for per-gram values. Omega-3 from FDC 169449 per 100 g: ALA 0.007 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002248,
+                    "threonine": 0.007427,
+                    "isoleucine": 0.008264,
+                    "leucine": 0.01632,
+                    "lysine": 0.01373,
+                    "methionine": 0.004641,
+                    "cystine": 0.003213,
+                    "phenylalanine": 0.009264,
+                    "tyrosine": 0.006897,
+                    "valine": 0.01077,
+                    "arginine": 0.01061,
+                    "histidine": 0.005376,
+                    "alanine": 0.009948,
+                    "aspartic_acid": 0.01647,
+                    "glutamic_acid": 0.02232,
+                    "glycine": 0.009948,
+                    "proline": 0.008213,
+                    "serine": 0.007734
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Beef liver's profile as a stand-in (another organ meat), scaled to the kidney's protein. Profile from FDC 169451 'Beef, variety meats and by-products, liver, raw' (SR Legacy 13325): mg per g of protein x this food's protein (17.40 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -4296,6 +4754,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Bison — FDC 173851 'Game meat, bison, separable lean only, raw' (SR Legacy 17156), per 100 g: 109 kcal, protein 21.62 g, fat 1.84 g, sat fat 0.69 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 54 mg, cholesterol 62 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173851 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 0 µg, vitamin b6 0 mg, calcium 6 mg, iron 2.6 mg, magnesium 25 mg, potassium 343 mg, zinc 2.8 mg, phosphorus 187 mg, selenium 27 µg; divided by 100 for per-gram values. Omega-3 from FDC 173851 per 100 g: ALA 0.03 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001637,
+                    "threonine": 0.009805,
+                    "isoleucine": 0.01043,
+                    "leucine": 0.01855,
+                    "lysine": 0.02006,
+                    "methionine": 0.005848,
+                    "cystine": 0.002574,
+                    "phenylalanine": 0.009177,
+                    "tyrosine": 0.007358,
+                    "valine": 0.01163,
+                    "arginine": 0.01472,
+                    "histidine": 0.007922,
+                    "alanine": 0.0144,
+                    "aspartic_acid": 0.02113,
+                    "glutamic_acid": 0.03521,
+                    "glycine": 0.01403,
+                    "proline": 0.01107,
+                    "serine": 0.008986
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Cooked ground bison's amino acid profile (same animal; USDA's raw sirloin and ribeye records report tryptophan and cystine as 0, which is a missing measurement), scaled to the lean bison record's protein. Profile from FDC 174422 'Game meat, bison, ground, cooked, pan-broiled' (SR Legacy 17331): mg per g of protein x this food's protein (21.62 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -4508,6 +4995,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Rabbit — FDC 172521 'Game meat, rabbit, domesticated, composite of cuts, raw' (SR Legacy 17177), per 100 g: 136 kcal, protein 20.05 g, fat 5.55 g, sat fat 1.66 g, carbs 0 g, fiber 0 g, sugars 0 g, sodium 41 mg, cholesterol 57 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172521 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 8 µg DFE, vitamin b12 7.16 µg, vitamin b6 0.5 mg, calcium 13 mg, iron 1.57 mg, magnesium 19 mg, potassium 330 mg, zinc 1.57 mg, phosphorus 213 mg, selenium 23.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172521 per 100 g: ALA 0.22 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00265,
+                    "threonine": 0.00897,
+                    "isoleucine": 0.00951,
+                    "leucine": 0.01562,
+                    "lysine": 0.01756,
+                    "methionine": 0.00502,
+                    "cystine": 0.00252,
+                    "phenylalanine": 0.00823,
+                    "tyrosine": 0.00714,
+                    "valine": 0.01019,
+                    "arginine": 0.01239,
+                    "histidine": 0.00562,
+                    "alanine": 0.0121,
+                    "aspartic_acid": 0.01959,
+                    "glutamic_acid": 0.03217,
+                    "glycine": 0.01089,
+                    "proline": 0.0098,
+                    "serine": 0.00889
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172521 'Game meat, rabbit, domesticated, composite of cuts, raw' (SR Legacy 17177), g of each amino acid per 100 g: tryptophan 0.265, threonine 0.897, isoleucine 0.951, leucine 1.562, lysine 1.756, methionine 0.502, cystine 0.252, phenylalanine 0.823, tyrosine 0.714, valine 1.019, arginine 1.239, histidine 0.562, alanine 1.21, aspartic acid 1.959, glutamic acid 3.217, glycine 1.089, proline 0.98, serine 0.889; divided by 100 for per-gram values."
                 }
             }
         ],

@@ -63,6 +63,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Impossible Burger (Composite) — GUESS from ingredients. The label doesn't list these, so each is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Soy 0.22, Sunflower Oil 0.055, Coconut Oil 0.055). Water, salt and the minor ingredients (other minor ingredients (flavors, methylcellulose, starch, dextrose, yeast extract, heme, salt); water) are counted as 0. Per 100 g: vitamin a 0 µg RAE, vitamin c 0.374 mg, vitamin e 2.342 mg, vitamin k 4.554 µg, magnesium 18.92 mg, selenium 1.606 µg, ala 0.1326 g, epa dha 0 mg; divided by 100 for per-gram values. The soy share uses this dataset's cooked soybean values; the real ingredient is soy protein concentrate, which has less water, so magnesium and selenium are probably too low. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002407,
+                    "threonine": 0.007191,
+                    "isoleucine": 0.008027,
+                    "leucine": 0.01348,
+                    "lysine": 0.01102,
+                    "methionine": 0.002228,
+                    "cystine": 0.002666,
+                    "phenylalanine": 0.008644,
+                    "tyrosine": 0.006266,
+                    "valine": 0.008266,
+                    "arginine": 0.01284,
+                    "histidine": 0.004466,
+                    "alanine": 0.007798,
+                    "aspartic_acid": 0.02082,
+                    "glutamic_acid": 0.03207,
+                    "glycine": 0.007659,
+                    "proline": 0.009688,
+                    "serine": 0.009599
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: soy 3.72), then scaled to this food's protein (16.81 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
+                }
             }
         ],
         "ingredients": [
@@ -266,6 +295,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Beyond Burger (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Pea Protein 0.19, Canola Oil 0.07, Coconut Oil 0.039, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 1.526 mg, vitamin k 8.053 µg, folate 7.819 µg DFE, magnesium 35.2 mg, phosphorus 87.7 mg; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001655,
+                    "threonine": 0.006347,
+                    "isoleucine": 0.007664,
+                    "leucine": 0.0131,
+                    "lysine": 0.01155,
+                    "methionine": 0.001882,
+                    "cystine": 0.002502,
+                    "phenylalanine": 0.008853,
+                    "tyrosine": 0.004904,
+                    "valine": 0.009088,
+                    "arginine": 0.01385,
+                    "histidine": 0.004877,
+                    "alanine": 0.007812,
+                    "aspartic_acid": 0.01921,
+                    "glutamic_acid": 0.02848,
+                    "glycine": 0.007332,
+                    "proline": 0.007546,
+                    "serine": 0.008334
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: pea-protein 14.78, rice-protein 2.40), then scaled to this food's protein (17.70 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
                 }
             }
         ],
@@ -473,6 +531,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Violife Just Like Parmesan (Composite) — GUESS from ingredients (second pass, after pea and rice protein were filled). Each value is the sum of the ingredients' values times their weight share in this entry's recipe estimate (Coconut Oil 0.175, Potato Starch 0.28, Rice Starch 0.06, Rice Protein 0.03); water, salt and minor ingredients count as 0. Pea and rice protein values are themselves rough guesses. Per 100 g: vitamin e 0.04271 mg, vitamin k 0.123 µg, folate 0.69 µg DFE, vitamin b6 0.01431 mg; divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0004114,
+                    "threonine": 0.001274,
+                    "isoleucine": 0.00154,
+                    "leucine": 0.002946,
+                    "lysine": 0.001287,
+                    "methionine": 0.0008363,
+                    "cystine": 0.0007301,
+                    "phenylalanine": 0.001911,
+                    "tyrosine": 0.001195,
+                    "valine": 0.002176,
+                    "arginine": 0.002973,
+                    "histidine": 0.0008363,
+                    "alanine": 0.00207,
+                    "aspartic_acid": 0.003358,
+                    "glutamic_acid": 0.006953,
+                    "glycine": 0.001619,
+                    "proline": 0.001685,
+                    "serine": 0.001871
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: rice-protein 2.40), then scaled to this food's protein (3.57 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
                 }
             }
         ],
@@ -1138,6 +1225,35 @@
                     "title": "USDA FoodData Central — Soymilk, unsweetened, with added calcium, vitamins A and D",
                     "note": "Soy milk — nutrition per 100 g, typical unsweetened fortified soy milk: 33 kcal, fat 1.61 g, sat fat 0.2 g, protein 2.86 g, fiber 0.4 g, carbs 1.74 g, sugar 0.5 g, sodium 12 mg, vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 1.1 µg, vitamin e 0.11 mg, vitamin k 3 µg, folate 18 µg DFE, vitamin b12 0.45 µg, vitamin b6 0.04 mg, calcium 123 mg (fortified), iron 0.64 mg, magnesium 25 mg, potassium 118 mg, zinc 0.23 mg, phosphorus 49 mg, selenium 0.1 µg, ALA 0.11 g, EPA + DHA 0 mg; divided by 100 for per-gram values. Vitamins and calcium vary by brand fortification."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0004095,
+                    "threonine": 0.001224,
+                    "isoleucine": 0.001366,
+                    "leucine": 0.002293,
+                    "lysine": 0.001875,
+                    "methionine": 0.0003791,
+                    "cystine": 0.0004535,
+                    "phenylalanine": 0.001471,
+                    "tyrosine": 0.001066,
+                    "valine": 0.001406,
+                    "arginine": 0.002185,
+                    "histidine": 0.0007598,
+                    "alanine": 0.001327,
+                    "aspartic_acid": 0.003542,
+                    "glutamic_acid": 0.005456,
+                    "glycine": 0.001303,
+                    "proline": 0.001648,
+                    "serine": 0.001633
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: soy 1.69), then scaled to this food's protein (2.86 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
+                }
             }
         ],
         "ingredients": [
@@ -1262,6 +1378,35 @@
                     "title": "USDA FoodData Central",
                     "note": "White Flour — FDC 168894 'Wheat flour, white, all-purpose, enriched, bleached' (SR Legacy 20081), per 100 g: 364 kcal, protein 10.33 g, fat 0.98 g, sat fat 0.155 g, carbs 76.31 g, fiber 2.7 g, sugars 0.27 g, sodium 2 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 168894 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.06 mg, vitamin k 0.3 µg, folate 291 µg DFE, vitamin b12 0 µg, vitamin b6 0.044 mg, calcium 15 mg, iron 4.64 mg, magnesium 22 mg, potassium 107 mg, zinc 0.7 mg, phosphorus 108 mg, selenium 33.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 168894 per 100 g: ALA 0.022 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00127,
+                    "threonine": 0.00281,
+                    "isoleucine": 0.00357,
+                    "leucine": 0.0071,
+                    "lysine": 0.00228,
+                    "methionine": 0.00183,
+                    "cystine": 0.00219,
+                    "phenylalanine": 0.0052,
+                    "tyrosine": 0.00312,
+                    "valine": 0.00415,
+                    "arginine": 0.00417,
+                    "histidine": 0.0023,
+                    "alanine": 0.00332,
+                    "aspartic_acid": 0.00435,
+                    "glutamic_acid": 0.03479,
+                    "glycine": 0.00371,
+                    "proline": 0.01198,
+                    "serine": 0.00516
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 168894 'Wheat flour, white, all-purpose, enriched, bleached' (SR Legacy 20081), g of each amino acid per 100 g: tryptophan 0.127, threonine 0.281, isoleucine 0.357, leucine 0.71, lysine 0.228, methionine 0.183, cystine 0.219, phenylalanine 0.52, tyrosine 0.312, valine 0.415, arginine 0.417, histidine 0.23, alanine 0.332, aspartic acid 0.435, glutamic acid 3.479, glycine 0.371, proline 1.198, serine 0.516; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -1370,6 +1515,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "White Bread — FDC 174924 'Bread, white, commercially prepared (includes soft bread crumbs)' (SR Legacy 18069), per 100 g: 266 kcal, protein 8.85 g, fat 3.33 g, sat fat 0.698 g, carbs 49.42 g, fiber 2.7 g, sugars 5.67 g, sodium 490 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 174924 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.22 mg, vitamin k 0.2 µg, folate 171 µg DFE, vitamin b12 0 µg, vitamin b6 0.087 mg, calcium 144 mg, iron 3.61 mg, magnesium 23 mg, potassium 126 mg, zinc 0.74 mg, phosphorus 98 mg, selenium 22 µg; divided by 100 for per-gram values. Omega-3 from FDC 174924 per 100 g: ALA 0.166 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 1 mg (EPA 0.001 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001088,
+                    "threonine": 0.002407,
+                    "isoleucine": 0.003059,
+                    "leucine": 0.006083,
+                    "lysine": 0.001953,
+                    "methionine": 0.001568,
+                    "cystine": 0.001876,
+                    "phenylalanine": 0.004455,
+                    "tyrosine": 0.002673,
+                    "valine": 0.003555,
+                    "arginine": 0.003573,
+                    "histidine": 0.00197,
+                    "alanine": 0.002844,
+                    "aspartic_acid": 0.003727,
+                    "glutamic_acid": 0.02981,
+                    "glycine": 0.003178,
+                    "proline": 0.01026,
+                    "serine": 0.004421
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — White wheat flour's amino acid profile, scaled to the bread's protein (USDA's bread record has no amino acids; bread protein is wheat protein). Profile from FDC 168894 'Wheat flour, white, all-purpose, enriched, bleached' (SR Legacy 20081): mg per g of protein x this food's protein (8.85 g per 100 g) ÷ 1000 gives g per g of food."
                 }
             }
         ],
@@ -1542,6 +1716,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Pasta (Cooked) — FDC 169737 'Pasta, cooked, enriched, without added salt' (SR Legacy 20121), per 100 g: 158 kcal, protein 5.8 g, fat 0.93 g, sat fat 0.176 g, carbs 30.86 g, fiber 1.8 g, sugars 0.56 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169737 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.06 mg, vitamin k 0 µg, folate 119 µg DFE, vitamin b12 0 µg, vitamin b6 0.049 mg, calcium 7 mg, iron 1.28 mg, magnesium 18 mg, potassium 44 mg, zinc 0.51 mg, phosphorus 58 mg, selenium 26.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 169737 per 100 g: ALA 0.024 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00081,
+                    "threonine": 0.00203,
+                    "isoleucine": 0.00224,
+                    "leucine": 0.00434,
+                    "lysine": 0.00131,
+                    "methionine": 0.00064,
+                    "cystine": 0.00112,
+                    "phenylalanine": 0.00293,
+                    "tyrosine": 0.00107,
+                    "valine": 0.00258,
+                    "arginine": 0.00208,
+                    "histidine": 0.00131,
+                    "alanine": 0.00192,
+                    "aspartic_acid": 0.00274,
+                    "glutamic_acid": 0.02018,
+                    "glycine": 0.00194,
+                    "proline": 0.00689,
+                    "serine": 0.00271
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169737 'Pasta, cooked, enriched, without added salt' (SR Legacy 20121), g of each amino acid per 100 g: tryptophan 0.081, threonine 0.203, isoleucine 0.224, leucine 0.434, lysine 0.131, methionine 0.064, cystine 0.112, phenylalanine 0.293, tyrosine 0.107, valine 0.258, arginine 0.208, histidine 0.131, alanine 0.192, aspartic acid 0.274, glutamic acid 2.018, glycine 0.194, proline 0.689, serine 0.271; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -1665,6 +1868,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Flour Tortillas — FDC 167535 'Tortillas, ready-to-bake or -fry, flour, shelf stable' (SR Legacy 18970), per 100 g: 297 kcal, protein 8.01 g, fat 7.58 g, sat fat 1.225 g, carbs 49.27 g, fiber 2.4 g, sugars 2.66 g, sodium 742 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 167535 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.86 mg, vitamin k 4.2 µg, folate 188 µg DFE, vitamin b12 0 µg, vitamin b6 0.028 mg, calcium 163 mg, iron 3.32 mg, magnesium 21 mg, potassium 133 mg, zinc 0.57 mg, phosphorus 213 mg, selenium 21.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 167535 per 100 g: ALA 0.387 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00082,
+                    "threonine": 0.00182,
+                    "isoleucine": 0.00231,
+                    "leucine": 0.00459,
+                    "lysine": 0.00147,
+                    "methionine": 0.00118,
+                    "cystine": 0.00142,
+                    "phenylalanine": 0.00336,
+                    "tyrosine": 0.00202,
+                    "valine": 0.00268,
+                    "arginine": 0.0027,
+                    "histidine": 0.00149,
+                    "alanine": 0.00215,
+                    "aspartic_acid": 0.00281,
+                    "glutamic_acid": 0.02249,
+                    "glycine": 0.0024,
+                    "proline": 0.00774,
+                    "serine": 0.00333
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 167535 'Tortillas, ready-to-bake or -fry, flour, shelf stable' (SR Legacy 18970), g of each amino acid per 100 g: tryptophan 0.082, threonine 0.182, isoleucine 0.231, leucine 0.459, lysine 0.147, methionine 0.118, cystine 0.142, phenylalanine 0.336, tyrosine 0.202, valine 0.268, arginine 0.27, histidine 0.149, alanine 0.215, aspartic acid 0.281, glutamic acid 2.249, glycine 0.24, proline 0.774, serine 0.333; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1819,6 +2051,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Corn Flakes (Cereal) — FDC 174648 'Cereals ready-to-eat, RALSTON Corn Flakes' (SR Legacy 08506), per 100 g: 357 kcal, protein 5.9 g, fat 0.91 g, sat fat 0.227 g, carbs 88.01 g, fiber 2.7 g, sugars 7.84 g, sodium 571 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 174648 per 100 g: vitamin a 981 µg RAE, vitamin c 65 mg, vitamin d 7.1 µg, vitamin e 0.02 mg, vitamin k 0 µg, folate 0 µg DFE, vitamin b12 5.36 µg, vitamin b6 1.907 mg, calcium 2 mg, iron 19.4 mg, magnesium 7 mg, potassium 107 mg, zinc 0.2 mg, phosphorus 33 mg, selenium 2.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 174648 per 100 g: ALA 0.017 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00037,
+                    "threonine": 0.00233,
+                    "isoleucine": 0.00247,
+                    "leucine": 0.01013,
+                    "lysine": 0.00043,
+                    "methionine": 0.0011,
+                    "cystine": 0.0011,
+                    "phenylalanine": 0.0039,
+                    "tyrosine": 0.00167,
+                    "valine": 0.00303,
+                    "arginine": 0.00133,
+                    "histidine": 0.0017,
+                    "alanine": 0.0058,
+                    "aspartic_acid": 0.00643,
+                    "glutamic_acid": 0.0152,
+                    "glycine": 0.00197,
+                    "proline": 0.00936,
+                    "serine": 0.0032
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cereals ready-to-eat, RALSTON Corn Flakes' (SR Legacy 08506), g of each amino acid per 100 g: tryptophan 0.037, threonine 0.233, isoleucine 0.247, leucine 1.013, lysine 0.043, methionine 0.11, cystine 0.11, phenylalanine 0.39, tyrosine 0.167, valine 0.303, arginine 0.133, histidine 0.17, alanine 0.58, aspartic acid 0.643, glutamic acid 1.52, glycine 0.197, proline 0.936, serine 0.32; divided by 100 for per-gram values. CAUTION: USDA's lysine for this processed cereal (0.043 g per 100 g) is low, probably partly because heat processing blocks lysine; corn grain itself is higher."
                 }
             }
         ],
@@ -1976,6 +2237,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Peanut Butter — FDC 174266 'Peanut butter, smooth style, with salt' (SR Legacy 16098), per 100 g: 598 kcal, protein 22.21 g, fat 51.36 g, sat fat 10.325 g, carbs 22.31 g, fiber 5 g, sugars 10.49 g, sodium 426 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 174266 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 9.1 mg, vitamin k 0.3 µg, folate 87 µg DFE, vitamin b12 0 µg, vitamin b6 0.441 mg, calcium 49 mg, iron 1.74 mg, magnesium 168 mg, potassium 558 mg, zinc 2.51 mg, phosphorus 335 mg, selenium 4.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 174266 per 100 g: ALA 0.027 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00231,
+                    "threonine": 0.00525,
+                    "isoleucine": 0.00616,
+                    "leucine": 0.01546,
+                    "lysine": 0.00681,
+                    "methionine": 0.00265,
+                    "cystine": 0.00229,
+                    "phenylalanine": 0.01202,
+                    "tyrosine": 0.00829,
+                    "valine": 0.00782,
+                    "arginine": 0.02768,
+                    "histidine": 0.00557,
+                    "alanine": 0.00916,
+                    "aspartic_acid": 0.03054,
+                    "glutamic_acid": 0.05092,
+                    "glycine": 0.01437,
+                    "proline": 0.01408,
+                    "serine": 0.01481
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174266 'Peanut butter, smooth style, with salt' (SR Legacy 16098), g of each amino acid per 100 g: tryptophan 0.231, threonine 0.525, isoleucine 0.616, leucine 1.546, lysine 0.681, methionine 0.265, cystine 0.229, phenylalanine 1.202, tyrosine 0.829, valine 0.782, arginine 2.768, histidine 0.557, alanine 0.916, aspartic acid 3.054, glutamic acid 5.092, glycine 1.437, proline 1.408, serine 1.481; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -2115,6 +2405,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Hummus — FDC 174289 'Hummus, commercial' (SR Legacy 16158), per 100 g: 166 kcal, protein 7.9 g, fat 9.6 g, sat fat 1.437 g, carbs 14.29 g, fiber 6 g, sugars 0 g, sodium 379 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 174289 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 83 µg DFE, vitamin b12 0 µg, vitamin b6 0.2 mg, calcium 38 mg, iron 2.44 mg, magnesium 71 mg, potassium 228 mg, zinc 1.83 mg, phosphorus 176 mg, selenium 2.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 174289 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0009502,
+                    "threonine": 0.002982,
+                    "isoleucine": 0.003371,
+                    "leucine": 0.005672,
+                    "lysine": 0.004698,
+                    "methionine": 0.001345,
+                    "cystine": 0.001162,
+                    "phenylalanine": 0.004191,
+                    "tyrosine": 0.002215,
+                    "valine": 0.003527,
+                    "arginine": 0.008278,
+                    "histidine": 0.00219,
+                    "alanine": 0.003507,
+                    "aspartic_acid": 0.008833,
+                    "glutamic_acid": 0.01449,
+                    "glycine": 0.003695,
+                    "proline": 0.0033,
+                    "serine": 0.004019
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: chickpeas 4.90, sesame-seeds 1.24, garlic 0.06), then scaled to this food's protein (7.90 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
                 }
             }
         ],
@@ -2540,6 +2859,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Whole-Wheat Bread — FDC 172688 'Bread, whole-wheat, commercially prepared' (SR Legacy 18075), per 100 g: 252 kcal, protein 12.45 g, fat 3.5 g, sat fat 0.722 g, carbs 42.71 g, fiber 6 g, sugars 4.34 g, sodium 455 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 172688 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 2.66 mg, vitamin k 7.8 µg, folate 42 µg DFE, vitamin b12 0 µg, vitamin b6 0.215 mg, calcium 161 mg, iron 2.47 mg, magnesium 75 mg, potassium 254 mg, zinc 1.77 mg, phosphorus 212 mg, selenium 25.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 172688 per 100 g: ALA 0.137 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00164,
+                    "threonine": 0.003459,
+                    "isoleucine": 0.004175,
+                    "leucine": 0.008463,
+                    "lysine": 0.003383,
+                    "methionine": 0.002149,
+                    "cystine": 0.002592,
+                    "phenylalanine": 0.006428,
+                    "tyrosine": 0.002592,
+                    "valine": 0.005316,
+                    "arginine": 0.006107,
+                    "histidine": 0.003365,
+                    "alanine": 0.004609,
+                    "aspartic_acid": 0.006805,
+                    "glutamic_acid": 0.04079,
+                    "glycine": 0.005363,
+                    "proline": 0.01956,
+                    "serine": 0.005843
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Whole-grain wheat flour's amino acid profile, scaled to the bread's protein (USDA's bread record has no amino acids). Profile from FDC 168893 'Wheat flour, whole-grain' (SR Legacy 20080): mg per g of protein x this food's protein (12.45 g per 100 g) ÷ 1000 gives g per g of food."
+                }
             }
         ],
         "ingredients": [
@@ -2709,6 +3057,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Oat Cereal (Cheerios-style) — FDC 173884 'Cereals ready-to-eat, GENERAL MILLS, CHEERIOS' (SR Legacy 08013), per 100 g: 376 kcal, protein 12.09 g, fat 6.73 g, sat fat 1.5 g, carbs 73.23 g, fiber 9.4 g, sugars 4.36 g, sodium 497 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173884 per 100 g: vitamin a 990 µg RAE, vitamin c 21.6 mg, vitamin d 3.4 µg, vitamin e 0.65 mg, vitamin k 1.8 µg, folate 1201 µg DFE, vitamin b12 6.77 µg, vitamin b6 2.39 mg, calcium 401 mg, iron 33.17 mg, magnesium 114 mg, potassium 641 mg, zinc 16.73 mg, phosphorus 481 mg, selenium 24.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 173884 per 100 g: ALA 0.068 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00167,
+                    "threonine": 0.00418,
+                    "isoleucine": 0.00429,
+                    "leucine": 0.0091,
+                    "lysine": 0.00366,
+                    "methionine": 0.00178,
+                    "cystine": 0.00209,
+                    "phenylalanine": 0.00628,
+                    "tyrosine": 0.00366,
+                    "valine": 0.00586,
+                    "arginine": 0.00816,
+                    "histidine": 0.00261,
+                    "alanine": 0.00586,
+                    "aspartic_acid": 0.00983,
+                    "glutamic_acid": 0.02709,
+                    "glycine": 0.00617,
+                    "proline": 0.00648,
+                    "serine": 0.00596
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC n/a 'Cereals ready-to-eat, GENERAL MILLS, CHEERIOS' (SR Legacy 08013), g of each amino acid per 100 g: tryptophan 0.167, threonine 0.418, isoleucine 0.429, leucine 0.91, lysine 0.366, methionine 0.178, cystine 0.209, phenylalanine 0.628, tyrosine 0.366, valine 0.586, arginine 0.816, histidine 0.261, alanine 0.586, aspartic acid 0.983, glutamic acid 2.709, glycine 0.617, proline 0.648, serine 0.596; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2892,6 +3269,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Rice Cakes — FDC 170250 'Snacks, rice cakes, brown rice, plain, unsalted' (SR Legacy 19816), per 100 g: 387 kcal, protein 8.2 g, fat 2.8 g, sat fat 0.57 g, carbs 81.5 g, fiber 4.2 g, sugars 0.88 g, sodium 26 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170250 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 1.24 mg, vitamin k 1.9 µg, folate 21 µg DFE, vitamin b12 0 µg, vitamin b6 0.15 mg, calcium 11 mg, iron 1.49 mg, magnesium 131 mg, potassium 290 mg, zinc 3 mg, phosphorus 360 mg, selenium 24.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 170250 per 100 g: ALA 0.01 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00104,
+                    "threonine": 0.00299,
+                    "isoleucine": 0.00346,
+                    "leucine": 0.00675,
+                    "lysine": 0.00311,
+                    "methionine": 0.00184,
+                    "cystine": 0.00099,
+                    "phenylalanine": 0.00421,
+                    "tyrosine": 0.00306,
+                    "valine": 0.00479,
+                    "arginine": 0.00618,
+                    "histidine": 0.00207,
+                    "alanine": 0.00476,
+                    "aspartic_acid": 0.00764,
+                    "glutamic_acid": 0.01662,
+                    "glycine": 0.00402,
+                    "proline": 0.00383,
+                    "serine": 0.00422
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170250 'Snacks, rice cakes, brown rice, plain, unsalted' (SR Legacy 19816), g of each amino acid per 100 g: tryptophan 0.104, threonine 0.299, isoleucine 0.346, leucine 0.675, lysine 0.311, methionine 0.184, cystine 0.099, phenylalanine 0.421, tyrosine 0.306, valine 0.479, arginine 0.618, histidine 0.207, alanine 0.476, aspartic acid 0.764, glutamic acid 1.662, glycine 0.402, proline 0.383, serine 0.422; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -3032,6 +3438,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Corn Tortillas — FDC 175036 'Tortillas, ready-to-bake or -fry, corn' (SR Legacy 18363), per 100 g: 218 kcal, protein 5.7 g, fat 2.85 g, sat fat 0.453 g, carbs 44.64 g, fiber 6.3 g, sugars 0.88 g, sodium 45 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175036 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.28 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 0 µg, vitamin b6 0.219 mg, calcium 81 mg, iron 1.23 mg, magnesium 72 mg, potassium 186 mg, zinc 1.31 mg, phosphorus 314 mg, selenium 6.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 175036 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00042,
+                    "threonine": 0.00218,
+                    "isoleucine": 0.00208,
+                    "leucine": 0.00711,
+                    "lysine": 0.00163,
+                    "methionine": 0.00121,
+                    "cystine": 0.00105,
+                    "phenylalanine": 0.00285,
+                    "tyrosine": 0.00236,
+                    "valine": 0.00294,
+                    "arginine": 0.00289,
+                    "histidine": 0.00177,
+                    "alanine": 0.00434,
+                    "aspartic_acid": 0.00403,
+                    "glutamic_acid": 0.01087,
+                    "glycine": 0.00238,
+                    "proline": 0.00506,
+                    "serine": 0.00275
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175036 'Tortillas, ready-to-bake or -fry, corn' (SR Legacy 18363), g of each amino acid per 100 g: tryptophan 0.042, threonine 0.218, isoleucine 0.208, leucine 0.711, lysine 0.163, methionine 0.121, cystine 0.105, phenylalanine 0.285, tyrosine 0.236, valine 0.294, arginine 0.289, histidine 0.177, alanine 0.434, aspartic acid 0.403, glutamic acid 1.087, glycine 0.238, proline 0.506, serine 0.275; divided by 100 for per-gram values."
+                }
             }
         ],
         "ingredients": [
@@ -3169,6 +3604,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Dark Chocolate (70–85%) — FDC 170273 'Chocolate, dark, 70-85% cacao solids' (SR Legacy 19904), per 100 g: 598 kcal, protein 7.79 g, fat 42.63 g, sat fat 24.489 g, carbs 45.9 g, fiber 10.9 g, sugars 23.99 g, sodium 20 mg, cholesterol 3 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170273 per 100 g: vitamin a 2 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.59 mg, vitamin k 7.3 µg, folate 0 µg DFE, vitamin b12 0.28 µg, vitamin b6 0.038 mg, calcium 73 mg, iron 11.9 mg, magnesium 228 mg, potassium 715 mg, zinc 3.31 mg, phosphorus 308 mg, selenium 6.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 170273 per 100 g: ALA 0.034 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0007072,
+                    "threonine": 0.002013,
+                    "isoleucine": 0.00223,
+                    "leucine": 0.003781,
+                    "lysine": 0.002557,
+                    "methionine": 0.0007616,
+                    "cystine": 0.001224,
+                    "phenylalanine": 0.002856,
+                    "tyrosine": 0.002312,
+                    "valine": 0.003563,
+                    "arginine": 0.004434,
+                    "histidine": 0.00117,
+                    "alanine": 0.002584,
+                    "aspartic_acid": 0.006909,
+                    "glutamic_acid": 0.01017,
+                    "glycine": 0.002747,
+                    "proline": 0.004787,
+                    "serine": 0.002883
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — computed from the ingredients: each ingredient's amino acid profile (mg per g of its protein) is averaged weighted by the protein it contributes (ingredient share x its protein per 100 g: cocoa-mass 10.02), then scaled to this food's protein (7.79 g per 100 g). No USDA amino acid record exists for the product itself. Minor ingredients with no protein data are ignored."
+                }
             }
         ],
         "ingredients": [
@@ -3285,6 +3749,35 @@
                     "url": "https://www.myfooddiary.com/foods/7260005/bobs-red-mill-large-flake-nutritional-yeast",
                     "title": "Bob's Red Mill Large Flake Nutritional Yeast — Nutrition Facts label (per 15 g)",
                     "note": "Nutritional Yeast — nutrition: Bob's Red Mill Large Flake Nutritional Yeast label (FDC branded record 2596118, 400 kcal and 53.3 g protein per 100 g), per 15 g (1/4 cup): 60 kcal, fat 0.5 g, sat fat 0 g, trans fat 0 g, cholesterol 0 mg, sodium 25 mg, carbs 5 g, fiber 3 g, sugars 0 g, protein 8 g, calcium 6 mg, iron 1 mg, potassium 264 mg, vitamins A, C and D 0, vitamin B12 73% of the 2.4 µg daily value (1.75 µg); divided by 15 for per-gram values. Fortified with B vitamins (folic acid and others listed on the label but without amounts in the source I could read, so left out). Label values are rounded, confidence 3."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.007122,
+                    "threonine": 0.02624,
+                    "isoleucine": 0.02493,
+                    "leucine": 0.03851,
+                    "lysine": 0.04326,
+                    "methionine": 0.007781,
+                    "cystine": 0.006594,
+                    "phenylalanine": 0.02308,
+                    "tyrosine": 0.0149,
+                    "valine": 0.03046,
+                    "arginine": 0.02677,
+                    "histidine": 0.012,
+                    "alanine": 0.0306,
+                    "aspartic_acid": 0.05473,
+                    "glutamic_acid": 0.08533,
+                    "glycine": 0.02545,
+                    "proline": 0.02176,
+                    "serine": 0.02611
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Baker's active dry yeast's profile (the same organism; nutritional yeast is deactivated Saccharomyces), scaled to the product's protein. Profile from FDC 175043 'Leavening agents, yeast, baker's, active dry' (SR Legacy 18375): mg per g of protein x this food's protein (53.33 g per 100 g) ÷ 1000 gives g per g of food."
                 }
             }
         ],
@@ -3736,6 +4229,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Coconut Milk (Canned) — FDC 170173 'Nuts, coconut milk, canned (liquid expressed from grated meat and water)' (SR Legacy 12118), per 100 g: 197 kcal, protein 2.02 g, fat 21.33 g, sat fat 18.915 g, carbs 2.81 g, fiber 0 g, sugars 0 g, sodium 13 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 170173 per 100 g: vitamin a 0 µg RAE, vitamin c 1 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 14 µg DFE, vitamin b12 0 µg, vitamin b6 0.028 mg, calcium 18 mg, iron 3.3 mg, magnesium 46 mg, potassium 220 mg, zinc 0.56 mg, phosphorus 96 mg, selenium 0 µg; divided by 100 for per-gram values. Omega-3 from FDC 170173 per 100 g: ALA 0 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar or fiber value; stored as 0."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00024,
+                    "threonine": 0.00074,
+                    "isoleucine": 0.00079,
+                    "leucine": 0.0015,
+                    "lysine": 0.00089,
+                    "methionine": 0.00038,
+                    "cystine": 0.0004,
+                    "phenylalanine": 0.00102,
+                    "tyrosine": 0.00062,
+                    "valine": 0.00122,
+                    "arginine": 0.00331,
+                    "histidine": 0.00046,
+                    "alanine": 0.00103,
+                    "aspartic_acid": 0.00197,
+                    "glutamic_acid": 0.00462,
+                    "glycine": 0.00096,
+                    "proline": 0.00083,
+                    "serine": 0.00104
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170173 'Nuts, coconut milk, canned (liquid expressed from grated meat and water)' (SR Legacy 12118), g of each amino acid per 100 g: tryptophan 0.024, threonine 0.074, isoleucine 0.079, leucine 0.15, lysine 0.089, methionine 0.038, cystine 0.04, phenylalanine 0.102, tyrosine 0.062, valine 0.122, arginine 0.331, histidine 0.046, alanine 0.103, aspartic acid 0.197, glutamic acid 0.462, glycine 0.096, proline 0.083, serine 0.104; divided by 100 for per-gram values."
                 }
             }
         ],

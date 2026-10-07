@@ -17,11 +17,15 @@ type NutritionSliderSettings = {
 
 const points = (unit: string) => (value: number) => `${value} pt${value === 1 ? '' : 's'} / ${unit}`;
 
-// Helps first, then harms, then the sugar allowance that tunes the sugar penalty.
+// Helps first (protein quality sits right after protein: it only ever reduces the protein points), then harms, then the sugar allowance that tunes the sugar penalty.
 const SETTINGS: Record<keyof NutritionWeights, NutritionSliderSettings> = {
     protein: {
         label: 'Protein', description: 'helps the score: points per gram of protein',
         max: 5, step: 0.1, format: points('g'),
+    },
+    proteinQuality: {
+        label: 'Protein Quality', description: 'harms the score: share of the protein points lost when a food is short of an essential amino acid (0% ignores amino acids)',
+        max: 1, step: 0.05, format: value => `${Math.round(value * 100)}% of the shortfall`,
     },
     fiber: {
         label: 'Fiber', description: 'helps the score: points per gram of fiber',

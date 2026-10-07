@@ -54,6 +54,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 174271 per 100 g: vitamin a 0 µg RAE, vitamin c 1.7 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 19.2 µg, folate 54 µg DFE, vitamin b12 0 µg, vitamin b6 0.234 mg, calcium 102 mg, iron 5.14 mg, magnesium 86 mg, potassium 515 mg, zinc 1.15 mg, phosphorus 245 mg, selenium 7.3 µg; divided by 100 for per-gram values. Omega-3 from FDC 174271 per 100 g: ALA 0.598 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00242,
+                    "threonine": 0.00723,
+                    "isoleucine": 0.00807,
+                    "leucine": 0.01355,
+                    "lysine": 0.01108,
+                    "methionine": 0.00224,
+                    "cystine": 0.00268,
+                    "phenylalanine": 0.00869,
+                    "tyrosine": 0.0063,
+                    "valine": 0.00831,
+                    "arginine": 0.01291,
+                    "histidine": 0.00449,
+                    "alanine": 0.00784,
+                    "aspartic_acid": 0.02093,
+                    "glutamic_acid": 0.03224,
+                    "glycine": 0.0077,
+                    "proline": 0.00974,
+                    "serine": 0.00965
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174271 'Soybeans, mature cooked, boiled, without salt' (SR Legacy 16109), g of each amino acid per 100 g: tryptophan 0.242, threonine 0.723, isoleucine 0.807, leucine 1.355, lysine 1.108, methionine 0.224, cystine 0.268, phenylalanine 0.869, tyrosine 0.63, valine 0.831, arginine 1.291, histidine 0.449, alanine 0.784, aspartic acid 2.093, glutamic acid 3.224, glycine 0.77, proline 0.974, serine 0.965; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -436,6 +465,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172421 per 100 g: vitamin a 0 µg RAE, vitamin c 1.5 mg, vitamin d 0 µg, vitamin e 0.11 mg, vitamin k 1.7 µg, folate 181 µg DFE, vitamin b12 0 µg, vitamin b6 0.178 mg, calcium 19 mg, iron 3.33 mg, magnesium 36 mg, potassium 369 mg, zinc 1.27 mg, phosphorus 180 mg, selenium 2.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 172421 per 100 g: ALA 0.037 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00081,
+                    "threonine": 0.00323,
+                    "isoleucine": 0.0039,
+                    "leucine": 0.00654,
+                    "lysine": 0.0063,
+                    "methionine": 0.00077,
+                    "cystine": 0.00118,
+                    "phenylalanine": 0.00445,
+                    "tyrosine": 0.00241,
+                    "valine": 0.00448,
+                    "arginine": 0.00697,
+                    "histidine": 0.00254,
+                    "alanine": 0.00377,
+                    "aspartic_acid": 0.00998,
+                    "glutamic_acid": 0.01399,
+                    "glycine": 0.00367,
+                    "proline": 0.00377,
+                    "serine": 0.00416
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172421 'Lentils, mature seeds, cooked, boiled, without salt' (SR Legacy 16070), g of each amino acid per 100 g: tryptophan 0.081, threonine 0.323, isoleucine 0.39, leucine 0.654, lysine 0.63, methionine 0.077, cystine 0.118, phenylalanine 0.445, tyrosine 0.241, valine 0.448, arginine 0.697, histidine 0.254, alanine 0.377, aspartic acid 0.998, glutamic acid 1.399, glycine 0.367, proline 0.377, serine 0.416; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -706,6 +764,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173757 per 100 g: vitamin a 1 µg RAE, vitamin c 1.3 mg, vitamin d 0 µg, vitamin e 0.35 mg, vitamin k 4 µg, folate 172 µg DFE, vitamin b12 0 µg, vitamin b6 0.139 mg, calcium 49 mg, iron 2.89 mg, magnesium 48 mg, potassium 291 mg, zinc 1.53 mg, phosphorus 168 mg, selenium 3.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 173757 per 100 g: ALA 0.043 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00085,
+                    "threonine": 0.00329,
+                    "isoleucine": 0.0038,
+                    "leucine": 0.00631,
+                    "lysine": 0.00593,
+                    "methionine": 0.00116,
+                    "cystine": 0.00119,
+                    "phenylalanine": 0.00475,
+                    "tyrosine": 0.0022,
+                    "valine": 0.00372,
+                    "arginine": 0.00835,
+                    "histidine": 0.00244,
+                    "alanine": 0.0038,
+                    "aspartic_acid": 0.01042,
+                    "glutamic_acid": 0.0155,
+                    "glycine": 0.00369,
+                    "proline": 0.00366,
+                    "serine": 0.00447
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173757 'Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt' (SR Legacy 16057), g of each amino acid per 100 g: tryptophan 0.085, threonine 0.329, isoleucine 0.38, leucine 0.631, lysine 0.593, methionine 0.116, cystine 0.119, phenylalanine 0.475, tyrosine 0.22, valine 0.372, arginine 0.835, histidine 0.244, alanine 0.38, aspartic acid 1.042, glutamic acid 1.55, glycine 0.369, proline 0.366, serine 0.447; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1047,6 +1134,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 173735 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.87 mg, vitamin k 3.3 µg, folate 149 µg DFE, vitamin b12 0 µg, vitamin b6 0.069 mg, calcium 27 mg, iron 2.1 mg, magnesium 70 mg, potassium 355 mg, zinc 1.12 mg, phosphorus 140 mg, selenium 1.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 173735 per 100 g: ALA 0.105 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00105,
+                    "threonine": 0.00373,
+                    "isoleucine": 0.00391,
+                    "leucine": 0.00708,
+                    "lysine": 0.00608,
+                    "methionine": 0.00133,
+                    "cystine": 0.00096,
+                    "phenylalanine": 0.00479,
+                    "tyrosine": 0.0025,
+                    "valine": 0.00464,
+                    "arginine": 0.00549,
+                    "histidine": 0.00247,
+                    "alanine": 0.00372,
+                    "aspartic_acid": 0.01072,
+                    "glutamic_acid": 0.01351,
+                    "glycine": 0.00346,
+                    "proline": 0.00376,
+                    "serine": 0.00482
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173735 'Beans, black, mature seeds, cooked, boiled, without salt' (SR Legacy 16015), g of each amino acid per 100 g: tryptophan 0.105, threonine 0.373, isoleucine 0.391, leucine 0.708, lysine 0.608, methionine 0.133, cystine 0.096, phenylalanine 0.479, tyrosine 0.25, valine 0.464, arginine 0.549, histidine 0.247, alanine 0.372, aspartic acid 1.072, glutamic acid 1.351, glycine 0.346, proline 0.376, serine 0.482; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1402,6 +1518,35 @@
                     "title": "USDA FoodData Central — SR Legacy 172476: Tofu, raw, regular, prepared with calcium sulfate",
                     "note": "Tofu — stand-in vitamins: USDA's firm tofu record (172475) has no vitamin E, K or EPA/DHA, so they come from raw regular tofu (also set with calcium sulfate), scaled up by calories (144 ÷ 76 kcal) because firm tofu has less water. Per 100 g after scaling: vitamin e 0.0189 mg, vitamin k 4.55 µg, epa dha 0 mg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00235,
+                    "threonine": 0.00785,
+                    "isoleucine": 0.00849,
+                    "leucine": 0.01392,
+                    "lysine": 0.00883,
+                    "methionine": 0.00211,
+                    "cystine": 0.00057,
+                    "phenylalanine": 0.00835,
+                    "tyrosine": 0.00701,
+                    "valine": 0.0087,
+                    "arginine": 0.01369,
+                    "histidine": 0.00431,
+                    "alanine": 0.00773,
+                    "aspartic_acid": 0.02036,
+                    "glutamic_acid": 0.03288,
+                    "glycine": 0.00733,
+                    "proline": 0.01084,
+                    "serine": 0.01015
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172475 'Tofu, raw, firm, prepared with calcium sulfate' (SR Legacy 16426), g of each amino acid per 100 g: tryptophan 0.235, threonine 0.785, isoleucine 0.849, leucine 1.392, lysine 0.883, methionine 0.211, cystine 0.057, phenylalanine 0.835, tyrosine 0.701, valine 0.87, arginine 1.369, histidine 0.431, alanine 0.773, aspartic acid 2.036, glutamic acid 3.288, glycine 0.733, proline 1.084, serine 1.015; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -1730,6 +1875,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Peas — nutrition: USDA FDC 172429 (SR Legacy 16086) 'Peas, split, mature seeds, cooked, boiled, without salt' per 100 g: 118 kcal, fat 0.39 g, sat fat 0.054 g, protein 8.34 g, fiber 8.3 g, sodium 2 mg, carbs 21.1 g, sugars 2.9 g; converted to per gram. Cooked basis, matching cooked_weight_ratio. Vitamins and minerals from USDA FDC 172429 per 100 g: vitamin a 0 µg RAE, vitamin c 0.4 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 5 µg, folate 65 µg DFE, vitamin b12 0 µg, vitamin b6 0.048 mg, calcium 14 mg, iron 1.29 mg, magnesium 36 mg, potassium 362 mg, zinc 1 mg, phosphorus 99 mg, selenium 0.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 172429 per 100 g: ALA 0.028 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00093,
+                    "threonine": 0.00296,
+                    "isoleucine": 0.00344,
+                    "leucine": 0.00598,
+                    "lysine": 0.00602,
+                    "methionine": 0.00085,
+                    "cystine": 0.00127,
+                    "phenylalanine": 0.00384,
+                    "tyrosine": 0.00242,
+                    "valine": 0.00394,
+                    "arginine": 0.00744,
+                    "histidine": 0.00203,
+                    "alanine": 0.00367,
+                    "aspartic_acid": 0.00984,
+                    "glutamic_acid": 0.01426,
+                    "glycine": 0.00371,
+                    "proline": 0.00344,
+                    "serine": 0.00367
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172429 'Peas, split, mature seeds, cooked, boiled, without salt' (SR Legacy 16086), g of each amino acid per 100 g: tryptophan 0.093, threonine 0.296, isoleucine 0.344, leucine 0.598, lysine 0.602, methionine 0.085, cystine 0.127, phenylalanine 0.384, tyrosine 0.242, valine 0.394, arginine 0.744, histidine 0.203, alanine 0.367, aspartic acid 0.984, glutamic acid 1.426, glycine 0.371, proline 0.344, serine 0.367; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -2034,6 +2208,35 @@
                     "title": "USDA FoodData Central — SR Legacy 172428: Peas, green, split, mature seeds, raw (scaled estimate for pea protein)",
                     "note": "Pea Protein — GUESS for vitamin K. No source gives vitamin K for pea protein isolate (Mad Barn lists only synthetic K3), so it is raw split peas' 15.9 µg per 100 g, unscaled, assuming vitamin K neither concentrates nor washes out. Per 100 g: vitamin k 15.9 µg; divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.007002,
+                    "threonine": 0.02792,
+                    "isoleucine": 0.03371,
+                    "leucine": 0.05653,
+                    "lysine": 0.05446,
+                    "methionine": 0.006656,
+                    "cystine": 0.0102,
+                    "phenylalanine": 0.03847,
+                    "tyrosine": 0.02083,
+                    "valine": 0.03873,
+                    "arginine": 0.06025,
+                    "histidine": 0.02196,
+                    "alanine": 0.03259,
+                    "aspartic_acid": 0.08627,
+                    "glutamic_acid": 0.1209,
+                    "glycine": 0.03173,
+                    "proline": 0.03259,
+                    "serine": 0.03596
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The lentil entry's amino acid profile as a stand-in for pea protein (pea and lentil proteins are both legume globulins; USDA has no amino acids for pea protein isolate), scaled to the product's protein. Scaled from the lentils entry: mg per g of protein x 77.80 g per 100 g ÷ 1000."
+                }
             }
         ],
         "yield_fraction": [
@@ -2293,6 +2496,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Kidney Beans — FDC 173740 'Beans, kidney, all types, mature seeds, cooked, boiled, without salt' (SR Legacy 16028), per 100 g: 127 kcal, protein 8.67 g, fat 0.5 g, sat fat 0.073 g, carbs 22.8 g, fiber 6.4 g, sugars 0.32 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173740 per 100 g: vitamin a 0 µg RAE, vitamin c 1.2 mg, vitamin d 0 µg, vitamin e 0.03 mg, vitamin k 8.4 µg, folate 130 µg DFE, vitamin b12 0 µg, vitamin b6 0.12 mg, calcium 35 mg, iron 2.22 mg, magnesium 42 mg, potassium 405 mg, zinc 1 mg, phosphorus 138 mg, selenium 1.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 173740 per 100 g: ALA 0.17 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00104,
+                    "threonine": 0.00319,
+                    "isoleucine": 0.0041,
+                    "leucine": 0.00736,
+                    "lysine": 0.00607,
+                    "methionine": 0.00113,
+                    "cystine": 0.00081,
+                    "phenylalanine": 0.00511,
+                    "tyrosine": 0.00205,
+                    "valine": 0.005,
+                    "arginine": 0.00475,
+                    "histidine": 0.00238,
+                    "alanine": 0.00394,
+                    "aspartic_acid": 0.01086,
+                    "glutamic_acid": 0.01393,
+                    "glycine": 0.00351,
+                    "proline": 0.00496,
+                    "serine": 0.00544
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173740 'Beans, kidney, all types, mature seeds, cooked, boiled, without salt' (SR Legacy 16028), g of each amino acid per 100 g: tryptophan 0.104, threonine 0.319, isoleucine 0.41, leucine 0.736, lysine 0.607, methionine 0.113, cystine 0.081, phenylalanine 0.511, tyrosine 0.205, valine 0.5, arginine 0.475, histidine 0.238, alanine 0.394, aspartic acid 1.086, glutamic acid 1.393, glycine 0.351, proline 0.496, serine 0.544; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2592,6 +2824,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Fava Beans — FDC 173753 'Broadbeans (fava beans), mature seeds, cooked, boiled, without salt' (SR Legacy 16053), per 100 g: 110 kcal, protein 7.6 g, fat 0.4 g, sat fat 0.066 g, carbs 19.65 g, fiber 5.4 g, sugars 1.82 g, sodium 5 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173753 per 100 g: vitamin a 1 µg RAE, vitamin c 0.3 mg, vitamin d 0 µg, vitamin e 0.02 mg, vitamin k 2.9 µg, folate 104 µg DFE, vitamin b12 0 µg, vitamin b6 0.072 mg, calcium 36 mg, iron 1.5 mg, magnesium 43 mg, potassium 268 mg, zinc 1.01 mg, phosphorus 125 mg, selenium 2.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 173753 per 100 g: ALA 0.012 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00072,
+                    "threonine": 0.0027,
+                    "isoleucine": 0.00306,
+                    "leucine": 0.00572,
+                    "lysine": 0.00486,
+                    "methionine": 0.00062,
+                    "cystine": 0.00097,
+                    "phenylalanine": 0.00321,
+                    "tyrosine": 0.00241,
+                    "valine": 0.00338,
+                    "arginine": 0.00702,
+                    "histidine": 0.00193,
+                    "alanine": 0.00311,
+                    "aspartic_acid": 0.00849,
+                    "glutamic_acid": 0.01291,
+                    "glycine": 0.00319,
+                    "proline": 0.0032,
+                    "serine": 0.00348
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173753 'Broadbeans (fava beans), mature seeds, cooked, boiled, without salt' (SR Legacy 16053), g of each amino acid per 100 g: tryptophan 0.072, threonine 0.27, isoleucine 0.306, leucine 0.572, lysine 0.486, methionine 0.062, cystine 0.097, phenylalanine 0.321, tyrosine 0.241, valine 0.338, arginine 0.702, histidine 0.193, alanine 0.311, aspartic acid 0.849, glutamic acid 1.291, glycine 0.319, proline 0.32, serine 0.348; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -2816,6 +3077,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Pinto Beans — FDC 175200 'Beans, pinto, mature seeds, cooked, boiled, without salt' (SR Legacy 16043), per 100 g: 143 kcal, protein 9.01 g, fat 0.65 g, sat fat 0.136 g, carbs 26.22 g, fiber 9 g, sugars 0.34 g, sodium 1 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 175200 per 100 g: vitamin a 0 µg RAE, vitamin c 0.8 mg, vitamin d 0 µg, vitamin e 0.94 mg, vitamin k 3.5 µg, folate 172 µg DFE, vitamin b12 0 µg, vitamin b6 0.229 mg, calcium 46 mg, iron 2.09 mg, magnesium 50 mg, potassium 436 mg, zinc 0.98 mg, phosphorus 147 mg, selenium 6.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 175200 per 100 g: ALA 0.137 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00108,
+                    "threonine": 0.00331,
+                    "isoleucine": 0.00426,
+                    "leucine": 0.00765,
+                    "lysine": 0.0063,
+                    "methionine": 0.00117,
+                    "cystine": 0.00084,
+                    "phenylalanine": 0.00531,
+                    "tyrosine": 0.00213,
+                    "valine": 0.00519,
+                    "arginine": 0.00494,
+                    "histidine": 0.00247,
+                    "alanine": 0.00409,
+                    "aspartic_acid": 0.01128,
+                    "glutamic_acid": 0.01447,
+                    "glycine": 0.00365,
+                    "proline": 0.00515,
+                    "serine": 0.00565
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175200 'Beans, pinto, mature seeds, cooked, boiled, without salt' (SR Legacy 16043), g of each amino acid per 100 g: tryptophan 0.108, threonine 0.331, isoleucine 0.426, leucine 0.765, lysine 0.63, methionine 0.117, cystine 0.084, phenylalanine 0.531, tyrosine 0.213, valine 0.519, arginine 0.494, histidine 0.247, alanine 0.409, aspartic acid 1.128, glutamic acid 1.447, glycine 0.365, proline 0.515, serine 0.565; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3079,6 +3369,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Navy Beans — FDC 173746 'Beans, navy, mature seeds, cooked, boiled, without salt' (SR Legacy 16038), per 100 g: 140 kcal, protein 8.23 g, fat 0.62 g, sat fat 0.098 g, carbs 26.05 g, fiber 10.5 g, sugars 0.37 g, sodium 0 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 173746 per 100 g: vitamin a 0 µg RAE, vitamin c 0.9 mg, vitamin d 0 µg, vitamin e 0.01 mg, vitamin k 0.6 µg, folate 140 µg DFE, vitamin b12 0 µg, vitamin b6 0.138 mg, calcium 69 mg, iron 2.36 mg, magnesium 53 mg, potassium 389 mg, zinc 1.03 mg, phosphorus 144 mg, selenium 2.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 173746 per 100 g: ALA 0.177 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.001,
+                    "threonine": 0.00289,
+                    "isoleucine": 0.00387,
+                    "leucine": 0.007,
+                    "lysine": 0.0052,
+                    "methionine": 0.00111,
+                    "cystine": 0.00076,
+                    "phenylalanine": 0.00471,
+                    "tyrosine": 0.00197,
+                    "valine": 0.00504,
+                    "arginine": 0.00415,
+                    "histidine": 0.00206,
+                    "alanine": 0.00369,
+                    "aspartic_acid": 0.01056,
+                    "glutamic_acid": 0.01259,
+                    "glycine": 0.00326,
+                    "proline": 0.00454,
+                    "serine": 0.00479
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173746 'Beans, navy, mature seeds, cooked, boiled, without salt' (SR Legacy 16038), g of each amino acid per 100 g: tryptophan 0.1, threonine 0.289, isoleucine 0.387, leucine 0.7, lysine 0.52, methionine 0.111, cystine 0.076, phenylalanine 0.471, tyrosine 0.197, valine 0.504, arginine 0.415, histidine 0.206, alanine 0.369, aspartic acid 1.056, glutamic acid 1.259, glycine 0.326, proline 0.454, serine 0.479; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -3338,6 +3657,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Edamame — FDC 169282 'Soybeans, green, raw' (SR Legacy 11450), per 100 g: 147 kcal, protein 12.95 g, fat 6.8 g, sat fat 0.786 g, carbs 11.05 g, fiber 4.2 g, sugars 0 g, sodium 15 mg, cholesterol 0 mg; divided by 100 for per-gram values. Vitamins and minerals from USDA FDC 169282 per 100 g: vitamin a 9 µg RAE, vitamin c 29 mg, vitamin d 0 µg, vitamin e 0 mg, vitamin k 0 µg, folate 165 µg DFE, vitamin b12 0 µg, vitamin b6 0.065 mg, calcium 197 mg, iron 3.55 mg, magnesium 65 mg, potassium 620 mg, zinc 0.99 mg, phosphorus 194 mg, selenium 1.5 µg; divided by 100 for per-gram values. Omega-3 from FDC 169282 per 100 g: ALA 0.376 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values. USDA reports no sugar value; stored as 0."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00157,
+                    "threonine": 0.00516,
+                    "isoleucine": 0.0057,
+                    "leucine": 0.00926,
+                    "lysine": 0.00775,
+                    "methionine": 0.00157,
+                    "cystine": 0.00118,
+                    "phenylalanine": 0.00586,
+                    "tyrosine": 0.00464,
+                    "valine": 0.00576,
+                    "arginine": 0.01042,
+                    "histidine": 0.00348,
+                    "alanine": 0.00582,
+                    "aspartic_acid": 0.01508,
+                    "glutamic_acid": 0.02433,
+                    "glycine": 0.00539,
+                    "proline": 0.00607,
+                    "serine": 0.00721
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 169282 'Soybeans, green, raw' (SR Legacy 11450), g of each amino acid per 100 g: tryptophan 0.157, threonine 0.516, isoleucine 0.57, leucine 0.926, lysine 0.775, methionine 0.157, cystine 0.118, phenylalanine 0.586, tyrosine 0.464, valine 0.576, arginine 1.042, histidine 0.348, alanine 0.582, aspartic acid 1.508, glutamic acid 2.433, glycine 0.539, proline 0.607, serine 0.721; divided by 100 for per-gram values."
                 }
             }
         ],

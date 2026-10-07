@@ -55,6 +55,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175167 'Fish, salmon, Atlantic, farmed, raw' per 100 g: vitamin a 58 µg RAE, vitamin c 3.9 mg, vitamin d 11 µg, vitamin e 3.55 mg, vitamin k 0.5 µg, folate 26 µg DFE, vitamin b12 3.23 µg, vitamin b6 0.636 mg, calcium 9 mg, iron 0.34 mg, magnesium 27 mg, potassium 363 mg, zinc 0.36 mg, phosphorus 240 mg, selenium 24 µg, ALA 0.148 g, EPA + DHA 1966 mg (EPA 862 + DHA 1104); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00209,
+                    "threonine": 0.0086,
+                    "isoleucine": 0.00968,
+                    "leucine": 0.01615,
+                    "lysine": 0.0187,
+                    "methionine": 0.00626,
+                    "cystine": 0.00219,
+                    "phenylalanine": 0.00845,
+                    "tyrosine": 0.00759,
+                    "valine": 0.01107,
+                    "arginine": 0.01221,
+                    "histidine": 0.00549,
+                    "alanine": 0.01271,
+                    "aspartic_acid": 0.02025,
+                    "glutamic_acid": 0.0283,
+                    "glycine": 0.0096,
+                    "proline": 0.00721,
+                    "serine": 0.00896
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175167 'Fish, salmon, Atlantic, farmed, raw' (SR Legacy 15236), g of each amino acid per 100 g: tryptophan 0.209, threonine 0.86, isoleucine 0.968, leucine 1.615, lysine 1.87, methionine 0.626, cystine 0.219, phenylalanine 0.845, tyrosine 0.759, valine 1.107, arginine 1.221, histidine 0.549, alanine 1.271, aspartic acid 2.025, glutamic acid 2.83, glycine 0.96, proline 0.721, serine 0.896; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -315,6 +344,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175159 'Fish, tuna, fresh, yellowfin, raw' per 100 g: vitamin a 18 µg RAE, vitamin c 0 mg, vitamin d 1.7 µg, vitamin e 0.24 mg, vitamin k 0.1 µg, folate 2 µg DFE, vitamin b12 2.08 µg, vitamin b6 0.933 mg, calcium 4 mg, iron 0.77 mg, magnesium 35 mg, potassium 441 mg, zinc 0.37 mg, phosphorus 278 mg, selenium 90.6 µg, ALA 0.002 g, EPA + DHA 100 mg (EPA 12 + DHA 88); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00262,
+                    "threonine": 0.01025,
+                    "isoleucine": 0.01077,
+                    "leucine": 0.019,
+                    "lysine": 0.02147,
+                    "methionine": 0.00692,
+                    "cystine": 0.00251,
+                    "phenylalanine": 0.00913,
+                    "tyrosine": 0.00789,
+                    "valine": 0.01204,
+                    "arginine": 0.01399,
+                    "histidine": 0.00688,
+                    "alanine": 0.01414,
+                    "aspartic_acid": 0.02394,
+                    "glutamic_acid": 0.03489,
+                    "glycine": 0.01122,
+                    "proline": 0.00827,
+                    "serine": 0.00954
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175159 'Fish, tuna, fresh, yellowfin, raw' (SR Legacy 15127), g of each amino acid per 100 g: tryptophan 0.262, threonine 1.025, isoleucine 1.077, leucine 1.9, lysine 2.147, methionine 0.692, cystine 0.251, phenylalanine 0.913, tyrosine 0.789, valine 1.204, arginine 1.399, histidine 0.688, alanine 1.414, aspartic acid 2.394, glutamic acid 3.489, glycine 1.122, proline 0.827, serine 0.954; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -500,6 +558,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
                     "note": "Shrimp (Wild) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002301,
+                    "threonine": 0.008015,
+                    "isoleucine": 0.009306,
+                    "leucine": 0.01729,
+                    "lysine": 0.01925,
+                    "methionine": 0.005892,
+                    "cystine": 0.002404,
+                    "phenylalanine": 0.008801,
+                    "tyrosine": 0.007644,
+                    "valine": 0.009454,
+                    "arginine": 0.01992,
+                    "histidine": 0.004453,
+                    "alanine": 0.0125,
+                    "aspartic_acid": 0.02252,
+                    "glutamic_acid": 0.03547,
+                    "glycine": 0.01189,
+                    "proline": 0.009291,
+                    "serine": 0.008237
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Mixed-species raw shrimp's amino acid profile, scaled to this shrimp record's protein. Profile from FDC 174210 'Crustaceans, shrimp, mixed species, raw (may have been previously frozen)' (SR Legacy 15149): mg per g of protein x this food's protein (20.20 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
                 }
             }
         ],
@@ -713,6 +800,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
                     "note": "Shrimp (Farmed) — stand-in vitamins: USDA's raw shrimp record (175179) lists no vitamins, so they come from its raw mixed-species shrimp record, which may contain moisture-retaining additives. Per 100 g: vitamin a 54 µg RAE, vitamin c 0 mg, vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg, folate 19 µg DFE, vitamin b12 1.11 µg, vitamin b6 0.161 mg, selenium 29.6 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002301,
+                    "threonine": 0.008015,
+                    "isoleucine": 0.009306,
+                    "leucine": 0.01729,
+                    "lysine": 0.01925,
+                    "methionine": 0.005892,
+                    "cystine": 0.002404,
+                    "phenylalanine": 0.008801,
+                    "tyrosine": 0.007644,
+                    "valine": 0.009454,
+                    "arginine": 0.01992,
+                    "histidine": 0.004453,
+                    "alanine": 0.0125,
+                    "aspartic_acid": 0.02252,
+                    "glutamic_acid": 0.03547,
+                    "glycine": 0.01189,
+                    "proline": 0.009291,
+                    "serine": 0.008237
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Mixed-species raw shrimp's amino acid profile, scaled to this shrimp record's protein. Profile from FDC 174210 'Crustaceans, shrimp, mixed species, raw (may have been previously frozen)' (SR Legacy 15149): mg per g of protein x this food's protein (20.20 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
                 }
             }
         ],
@@ -994,6 +1110,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins, minerals and omega-3 from FDC 175139 'Fish, sardine, Atlantic, canned in oil, drained solids with bone' per 100 g: vitamin a 32 µg RAE, vitamin c 0 mg, vitamin d 4.8 µg, vitamin e 2.04 mg, vitamin k 2.6 µg, folate 10 µg DFE, vitamin b12 8.94 µg, vitamin b6 0.167 mg, calcium 382 mg, iron 2.92 mg, magnesium 39 mg, potassium 397 mg, zinc 1.31 mg, phosphorus 490 mg, selenium 52.7 µg, ALA 0.498 g (USDA's total 18:3), EPA + DHA 982 mg (EPA 473 + DHA 509); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00276,
+                    "threonine": 0.01079,
+                    "isoleucine": 0.01134,
+                    "leucine": 0.02001,
+                    "lysine": 0.0226,
+                    "methionine": 0.00729,
+                    "cystine": 0.00264,
+                    "phenylalanine": 0.00961,
+                    "tyrosine": 0.00831,
+                    "valine": 0.01268,
+                    "arginine": 0.01473,
+                    "histidine": 0.00725,
+                    "alanine": 0.01489,
+                    "aspartic_acid": 0.0252,
+                    "glutamic_acid": 0.03674,
+                    "glycine": 0.01181,
+                    "proline": 0.0087,
+                    "serine": 0.01004
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175139 'Fish, sardine, Atlantic, canned in oil, drained solids with bone' (SR Legacy 15088), g of each amino acid per 100 g: tryptophan 0.276, threonine 1.079, isoleucine 1.134, leucine 2.001, lysine 2.26, methionine 0.729, cystine 0.264, phenylalanine 0.961, tyrosine 0.831, valine 1.268, arginine 1.473, histidine 0.725, alanine 1.489, aspartic acid 2.52, glutamic acid 3.674, glycine 1.181, proline 0.87, serine 1.004; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -1184,6 +1329,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Farmed tilapia — nutrition: USDA FoodData Central raw tilapia values (FDC ID 175177, raw tilapia). Values reported per gram of edible flesh. Vitamins, minerals and omega-3 from FDC 175177 'Fish, tilapia, cooked, dry heat' per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 3.7 µg, vitamin e 0.79 mg, vitamin k 0.9 µg, folate 6 µg DFE, vitamin b12 1.86 µg, vitamin b6 0.123 mg, calcium 14 mg, iron 0.69 mg, magnesium 34 mg, potassium 380 mg, zinc 0.41 mg, phosphorus 204 mg, selenium 54.4 µg, ALA 0.045 g, EPA + DHA 135 mg (EPA 5 + DHA 130); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00265,
+                    "threonine": 0.01156,
+                    "isoleucine": 0.0122,
+                    "leucine": 0.0204,
+                    "lysine": 0.02315,
+                    "methionine": 0.00766,
+                    "cystine": 0.00265,
+                    "phenylalanine": 0.0105,
+                    "tyrosine": 0.0087,
+                    "valine": 0.0128,
+                    "arginine": 0.0159,
+                    "histidine": 0.00585,
+                    "alanine": 0.01491,
+                    "aspartic_acid": 0.0281,
+                    "glutamic_acid": 0.0392,
+                    "glycine": 0.0122,
+                    "proline": 0.00953,
+                    "serine": 0.00961
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175177 'Fish, tilapia, cooked, dry heat' (SR Legacy 15262), g of each amino acid per 100 g: tryptophan 0.265, threonine 1.156, isoleucine 1.22, leucine 2.04, lysine 2.315, methionine 0.766, cystine 0.265, phenylalanine 1.05, tyrosine 0.87, valine 1.28, arginine 1.59, histidine 0.585, alanine 1.491, aspartic acid 2.81, glutamic acid 3.92, glycine 1.22, proline 0.953, serine 0.961; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1425,6 +1599,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Mussels (Farmed) — nutrition: USDA FoodData Central 'Mollusks, mussel, blue, raw' (Mytilus edulis) values (FDC ID 174216; previously mis-cited as 175180, which is cooked shrimp). Values reported per gram of edible mussel meat. Sodium is notably high (286 mg/100g) reflecting the marine origin of mussels. Cholesterol 28 mg/100g. Carbohydrates 3.7 g/100g (mussels contain small amounts of glycogen as energy storage). Vitamins and minerals from FDC 174216 per 100 g: vitamin a 48 µg RAE, vitamin c 8 mg, vitamin d 0 µg, vitamin e 0.55 mg, vitamin k 0.1 µg, folate 42 µg DFE, vitamin b12 12 µg, vitamin b6 0.05 mg, calcium 26 mg, iron 3.95 mg, magnesium 34 mg, potassium 320 mg, zinc 1.6 mg, phosphorus 197 mg, selenium 44.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 174216 per 100 g: ALA 0.02 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 441 mg (EPA 188 + DHA 253); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00133,
+                    "threonine": 0.00512,
+                    "isoleucine": 0.00518,
+                    "leucine": 0.00838,
+                    "lysine": 0.00889,
+                    "methionine": 0.00268,
+                    "cystine": 0.00156,
+                    "phenylalanine": 0.00426,
+                    "tyrosine": 0.00381,
+                    "valine": 0.0052,
+                    "arginine": 0.00868,
+                    "histidine": 0.00228,
+                    "alanine": 0.0072,
+                    "aspartic_acid": 0.01148,
+                    "glutamic_acid": 0.01618,
+                    "glycine": 0.00744,
+                    "proline": 0.00486,
+                    "serine": 0.00533
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174216 'Mollusks, mussel, blue, raw' (SR Legacy 15164), g of each amino acid per 100 g: tryptophan 0.133, threonine 0.512, isoleucine 0.518, leucine 0.838, lysine 0.889, methionine 0.268, cystine 0.156, phenylalanine 0.426, tyrosine 0.381, valine 0.52, arginine 0.868, histidine 0.228, alanine 0.72, aspartic acid 1.148, glutamic acid 1.618, glycine 0.744, proline 0.486, serine 0.533; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -1603,6 +1806,35 @@
                     "title": "USDA FoodData Central — SR Legacy 171978: Mollusks, oyster, eastern, wild, raw",
                     "note": "Oysters (Farmed) — stand-in vitamins: USDA's Pacific oyster record (174219) has no vitamin D, E or K, so they come from raw wild eastern oyster. Per 100 g: vitamin d 0 µg, vitamin e 0.85 mg, vitamin k 1 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00106,
+                    "threonine": 0.00407,
+                    "isoleucine": 0.00411,
+                    "leucine": 0.00665,
+                    "lysine": 0.00706,
+                    "methionine": 0.00213,
+                    "cystine": 0.00124,
+                    "phenylalanine": 0.00339,
+                    "tyrosine": 0.00302,
+                    "valine": 0.00413,
+                    "arginine": 0.00689,
+                    "histidine": 0.00181,
+                    "alanine": 0.00572,
+                    "aspartic_acid": 0.00912,
+                    "glutamic_acid": 0.01285,
+                    "glycine": 0.00591,
+                    "proline": 0.00386,
+                    "serine": 0.00423
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174219 'Mollusks, oyster, Pacific, raw' (SR Legacy 15171), g of each amino acid per 100 g: tryptophan 0.106, threonine 0.407, isoleucine 0.411, leucine 0.665, lysine 0.706, methionine 0.213, cystine 0.124, phenylalanine 0.339, tyrosine 0.302, valine 0.413, arginine 0.689, histidine 0.181, alanine 0.572, aspartic acid 0.912, glutamic acid 1.285, glycine 0.591, proline 0.386, serine 0.423; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -1769,6 +2001,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Clams (Farmed) — nutrition: USDA SR Legacy 'Mollusks, clam, mixed species, raw' (fdcId 174214) per 100 g: 86 kcal (FDC's 360 figure is kJ), 14.7 g protein, 0.96 g fat, 0.187 g sat fat, 3.57 g carbs, 601 mg sodium, 30 mg cholesterol; converted to per gram. Vitamins and minerals from FDC 174214 per 100 g: vitamin a 90 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 0.68 mg, vitamin k 0.2 µg, folate 5 µg DFE, vitamin b12 11.28 µg, vitamin b6 0.01 mg, calcium 39 mg, iron 1.62 mg, magnesium 19 mg, potassium 46 mg, zinc 0.51 mg, phosphorus 198 mg, selenium 30.6 µg; divided by 100 for per-gram values. Omega-3 from FDC 174214 per 100 g: ALA (18:3 n-3) 0.015 g, EPA + DHA 107 mg (EPA 43 + DHA 64); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00205,
+                    "threonine": 0.007,
+                    "isoleucine": 0.00693,
+                    "leucine": 0.012,
+                    "lysine": 0.01123,
+                    "methionine": 0.00423,
+                    "cystine": 0.00175,
+                    "phenylalanine": 0.0056,
+                    "tyrosine": 0.00597,
+                    "valine": 0.00743,
+                    "arginine": 0.0121,
+                    "histidine": 0.003,
+                    "alanine": 0.00885,
+                    "aspartic_acid": 0.01608,
+                    "glutamic_acid": 0.02248,
+                    "glycine": 0.0064,
+                    "proline": 0.005,
+                    "serine": 0.0069
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174214 'Mollusks, clam, mixed species, raw' (SR Legacy 15157), g of each amino acid per 100 g: tryptophan 0.205, threonine 0.7, isoleucine 0.693, leucine 1.2, lysine 1.123, methionine 0.423, cystine 0.175, phenylalanine 0.56, tyrosine 0.597, valine 0.743, arginine 1.21, histidine 0.3, alanine 0.885, aspartic acid 1.608, glutamic acid 2.248, glycine 0.64, proline 0.5, serine 0.69; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1948,6 +2209,35 @@
                     "title": "USDA FoodData Central — SR Legacy 175129: Fish, pollock, Atlantic, raw",
                     "note": "Pollock (Wild) — stand-in vitamins: USDA's raw Alaska pollock record (173725) lists no vitamins, so they come from raw Atlantic pollock, a close relative. The raw Alaska record that does list vitamins (175130) has added water, which would understate them. Per 100 g: vitamin a 14 µg RAE, vitamin c 0 mg, vitamin d 1 µg, vitamin e 0.23 mg, vitamin k 0.1 µg, folate 3 µg DFE, vitamin b12 3.19 µg, vitamin b6 0.287 mg, selenium 36.5 µg; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002338,
+                    "threonine": 0.00755,
+                    "isoleucine": 0.008071,
+                    "leucine": 0.0138,
+                    "lysine": 0.01575,
+                    "methionine": 0.005212,
+                    "cystine": 0.001817,
+                    "phenylalanine": 0.006634,
+                    "tyrosine": 0.006381,
+                    "valine": 0.008719,
+                    "arginine": 0.0121,
+                    "histidine": 0.003648,
+                    "alanine": 0.009761,
+                    "aspartic_acid": 0.01706,
+                    "glutamic_acid": 0.02707,
+                    "glycine": 0.007676,
+                    "proline": 0.006507,
+                    "serine": 0.007029
+                },
+                "confidence": 4,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — Alaska pollock's raw record has amino acids; this is the same fish, scaled to this record's protein. Profile from FDC 175130 'Fish, pollock, Alaska, raw (may have been previously frozen)' (SR Legacy 15066): mg per g of protein x this food's protein (17.17 g per 100 g) ÷ 1000 gives g per g of food. Individual amino acids add up to roughly the protein."
+                }
             }
         ],
         "neuron_count": [
@@ -2113,6 +2403,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Cod (Wild) — nutrition: USDA SR Legacy 'Fish, cod, Atlantic, raw' (fdcId 171955) per 100 g: 82 kcal, 17.81 g protein, 0.67 g fat, 0.131 g sat fat, 0 g carbs, 54 mg sodium, 43 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 171955 'Fish, cod, Atlantic, raw' per 100 g: vitamin a 12 µg RAE, vitamin c 1 mg, vitamin d 0.9 µg, vitamin e 0.64 mg, vitamin k 0.1 µg, folate 7 µg DFE, vitamin b12 0.91 µg, vitamin b6 0.245 mg, calcium 16 mg, iron 0.38 mg, magnesium 32 mg, potassium 413 mg, zinc 0.45 mg, phosphorus 203 mg, selenium 33.1 µg, ALA 0.001 g (USDA's total 18:3), EPA + DHA 184 mg (EPA 64 + DHA 120); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00199,
+                    "threonine": 0.00781,
+                    "isoleucine": 0.00821,
+                    "leucine": 0.01447,
+                    "lysine": 0.01635,
+                    "methionine": 0.00527,
+                    "cystine": 0.00191,
+                    "phenylalanine": 0.00695,
+                    "tyrosine": 0.00601,
+                    "valine": 0.00917,
+                    "arginine": 0.01066,
+                    "histidine": 0.00524,
+                    "alanine": 0.01077,
+                    "aspartic_acid": 0.01823,
+                    "glutamic_acid": 0.02658,
+                    "glycine": 0.00855,
+                    "proline": 0.0063,
+                    "serine": 0.00726
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 171955 'Fish, cod, Atlantic, raw' (SR Legacy 15015), g of each amino acid per 100 g: tryptophan 0.199, threonine 0.781, isoleucine 0.821, leucine 1.447, lysine 1.635, methionine 0.527, cystine 0.191, phenylalanine 0.695, tyrosine 0.601, valine 0.917, arginine 1.066, histidine 0.524, alanine 1.077, aspartic acid 1.823, glutamic acid 2.658, glycine 0.855, proline 0.63, serine 0.726; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2284,6 +2603,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Carp (Farmed) — nutrition: USDA SR Legacy 'Fish, carp, raw' (fdcId 171952) per 100 g: 127 kcal, 17.83 g protein, 5.6 g fat, 1.083 g sat fat, 0 g carbs, 49 mg sodium, 66 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 171952 'Fish, carp, raw' per 100 g: vitamin a 9 µg RAE, vitamin c 1.6 mg, vitamin d 24.7 µg, vitamin e 0.63 mg, vitamin k 0.1 µg, folate 15 µg DFE, vitamin b12 1.53 µg, vitamin b6 0.19 mg, calcium 41 mg, iron 1.24 mg, magnesium 29 mg, potassium 333 mg, zinc 1.48 mg, phosphorus 415 mg, selenium 12.6 µg, ALA 0.27 g (USDA's total 18:3), EPA + DHA 352 mg (EPA 238 + DHA 114); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.002,
+                    "threonine": 0.00782,
+                    "isoleucine": 0.00822,
+                    "leucine": 0.01449,
+                    "lysine": 0.01638,
+                    "methionine": 0.00528,
+                    "cystine": 0.00191,
+                    "phenylalanine": 0.00696,
+                    "tyrosine": 0.00602,
+                    "valine": 0.00919,
+                    "arginine": 0.01067,
+                    "histidine": 0.00525,
+                    "alanine": 0.01078,
+                    "aspartic_acid": 0.01826,
+                    "glutamic_acid": 0.02662,
+                    "glycine": 0.00856,
+                    "proline": 0.00631,
+                    "serine": 0.00728
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 171952 'Fish, carp, raw' (SR Legacy 15008), g of each amino acid per 100 g: tryptophan 0.2, threonine 0.782, isoleucine 0.822, leucine 1.449, lysine 1.638, methionine 0.528, cystine 0.191, phenylalanine 0.696, tyrosine 0.602, valine 0.919, arginine 1.067, histidine 0.525, alanine 1.078, aspartic acid 1.826, glutamic acid 2.662, glycine 0.856, proline 0.631, serine 0.728; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2500,6 +2848,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Catfish (Farmed) — nutrition: USDA SR Legacy 'Fish, catfish, channel, farmed, raw' (fdcId 175165) per 100 g: 119 kcal, 15.23 g protein, 5.94 g fat, 1.31 g sat fat, 0 g carbs, 98 mg sodium, 55 mg cholesterol; converted to per gram. Vitamins, minerals and omega-3 from FDC 175165 'Fish, catfish, channel, farmed, raw' per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0.2 µg, vitamin e 0.81 mg, vitamin k 2.1 µg, folate 10 µg DFE, vitamin b12 2.88 µg, vitamin b6 0.154 mg, calcium 8 mg, iron 0.23 mg, magnesium 19 mg, potassium 302 mg, zinc 0.48 mg, phosphorus 204 mg, selenium 8.2 µg, ALA 0.054 g, EPA + DHA 74 mg (EPA 17 + DHA 57); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00182,
+                    "threonine": 0.00688,
+                    "isoleucine": 0.00678,
+                    "leucine": 0.01153,
+                    "lysine": 0.01386,
+                    "methionine": 0.00445,
+                    "cystine": 0.00162,
+                    "phenylalanine": 0.00607,
+                    "tyrosine": 0.00506,
+                    "valine": 0.00738,
+                    "arginine": 0.00951,
+                    "histidine": 0.00334,
+                    "alanine": 0.0086,
+                    "aspartic_acid": 0.01487,
+                    "glutamic_acid": 0.02164,
+                    "glycine": 0.00769,
+                    "proline": 0.00566,
+                    "serine": 0.00577
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175165 'Fish, catfish, channel, farmed, raw' (SR Legacy 15234), g of each amino acid per 100 g: tryptophan 0.182, threonine 0.688, isoleucine 0.678, leucine 1.153, lysine 1.386, methionine 0.445, cystine 0.162, phenylalanine 0.607, tyrosine 0.506, valine 0.738, arginine 0.951, histidine 0.334, alanine 0.86, aspartic acid 1.487, glutamic acid 2.164, glycine 0.769, proline 0.566, serine 0.577; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -2710,6 +3087,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Octopus (Wild) — FDC 174218 'Mollusks, octopus, common, raw' (SR Legacy 15166), per 100 g: 82 kcal, protein 14.91 g, fat 1.04 g, sat fat 0.227 g, carbs 2.2 g, fiber 0 g, sugars 0 g, sodium 230 mg, cholesterol 48 mg; divided by 100 for per-gram values. Vitamins, minerals and omega-3 from FDC 174218 'Mollusks, octopus, common, raw' per 100 g: vitamin a 45 µg RAE, vitamin c 5 mg, vitamin d 0 µg, vitamin e 1.2 mg, vitamin k 0.1 µg, folate 16 µg DFE, vitamin b12 20 µg, vitamin b6 0.36 mg, calcium 53 mg, iron 5.3 mg, magnesium 30 mg, potassium 350 mg, zinc 1.68 mg, phosphorus 186 mg, selenium 44.8 µg, ALA 0 g (USDA's total 18:3), EPA + DHA 157 mg (EPA 76 + DHA 81); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00167,
+                    "threonine": 0.00642,
+                    "isoleucine": 0.00649,
+                    "leucine": 0.01049,
+                    "lysine": 0.01114,
+                    "methionine": 0.00336,
+                    "cystine": 0.00196,
+                    "phenylalanine": 0.00534,
+                    "tyrosine": 0.00477,
+                    "valine": 0.00651,
+                    "arginine": 0.01088,
+                    "histidine": 0.00286,
+                    "alanine": 0.00902,
+                    "aspartic_acid": 0.01438,
+                    "glutamic_acid": 0.02027,
+                    "glycine": 0.00933,
+                    "proline": 0.00608,
+                    "serine": 0.00668
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174218 'Mollusks, octopus, common, raw' (SR Legacy 15166), g of each amino acid per 100 g: tryptophan 0.167, threonine 0.642, isoleucine 0.649, leucine 1.049, lysine 1.114, methionine 0.336, cystine 0.196, phenylalanine 0.534, tyrosine 0.477, valine 0.651, arginine 1.088, histidine 0.286, alanine 0.902, aspartic acid 1.438, glutamic acid 2.027, glycine 0.933, proline 0.608, serine 0.668; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -2865,6 +3271,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Swordfish (Wild) — nutrition: USDA SR Legacy 'Fish, swordfish, raw' (FDC 173703) per 100 g: 144 kcal, protein 19.66 g, fat 6.65 g, sat fat 1.614 g, carbs 0 g, sodium 81 mg, cholesterol 66 mg, vitamin a 36 µg RAE, vitamin c 0 mg, vitamin d 13.9 µg, vitamin e 2.02 mg, vitamin k 0.1 µg, folate 2 µg DFE, vitamin b12 1.7 µg, vitamin b6 0.543 mg, calcium 5 mg, iron 0.38 mg, magnesium 29 mg, potassium 418 mg, zinc 0.66 mg, phosphorus 255 mg, selenium 57.4 µg, ALA 0.027 g (18:3 n-3), EPA + DHA 756 mg (EPA 108 + DHA 648); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00222,
+                    "threonine": 0.00868,
+                    "isoleucine": 0.00912,
+                    "leucine": 0.01609,
+                    "lysine": 0.01818,
+                    "methionine": 0.00586,
+                    "cystine": 0.00212,
+                    "phenylalanine": 0.00773,
+                    "tyrosine": 0.00668,
+                    "valine": 0.0102,
+                    "arginine": 0.01185,
+                    "histidine": 0.00583,
+                    "alanine": 0.01198,
+                    "aspartic_acid": 0.02028,
+                    "glutamic_acid": 0.02956,
+                    "glycine": 0.0095,
+                    "proline": 0.007,
+                    "serine": 0.00808
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 173703 'Fish, swordfish, raw' (SR Legacy 15110), g of each amino acid per 100 g: tryptophan 0.222, threonine 0.868, isoleucine 0.912, leucine 1.609, lysine 1.818, methionine 0.586, cystine 0.212, phenylalanine 0.773, tyrosine 0.668, valine 1.02, arginine 1.185, histidine 0.583, alanine 1.198, aspartic acid 2.028, glutamic acid 2.956, glycine 0.95, proline 0.7, serine 0.808; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3019,6 +3454,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Halibut (Wild) — nutrition: USDA SR Legacy 'Fish, halibut, Atlantic and Pacific, raw' (FDC 174200) per 100 g: 91 kcal, protein 18.56 g, fat 1.33 g, sat fat 0.292 g, carbs 0 g, sodium 68 mg, cholesterol 49 mg, vitamin a 20 µg RAE, vitamin c 0 mg, vitamin d 4.7 µg, vitamin e 0.61 mg, vitamin k 0 µg, folate 12 µg DFE, vitamin b12 1.1 µg, vitamin b6 0.548 mg, calcium 7 mg, iron 0.16 mg, magnesium 23 mg, potassium 435 mg, zinc 0.36 mg, phosphorus 236 mg, selenium 45.6 µg, ALA 0.011 g (18:3 n-3), EPA + DHA 194 mg (EPA 66 + DHA 128); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00233,
+                    "threonine": 0.00912,
+                    "isoleucine": 0.00959,
+                    "leucine": 0.01692,
+                    "lysine": 0.01911,
+                    "methionine": 0.00616,
+                    "cystine": 0.00223,
+                    "phenylalanine": 0.00813,
+                    "tyrosine": 0.00703,
+                    "valine": 0.01072,
+                    "arginine": 0.01245,
+                    "histidine": 0.00613,
+                    "alanine": 0.01259,
+                    "aspartic_acid": 0.02131,
+                    "glutamic_acid": 0.03107,
+                    "glycine": 0.00999,
+                    "proline": 0.00736,
+                    "serine": 0.00849
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174200 'Fish, halibut, Atlantic and Pacific, raw' (SR Legacy 15036), g of each amino acid per 100 g: tryptophan 0.233, threonine 0.912, isoleucine 0.959, leucine 1.692, lysine 1.911, methionine 0.616, cystine 0.223, phenylalanine 0.813, tyrosine 0.703, valine 1.072, arginine 1.245, histidine 0.613, alanine 1.259, aspartic acid 2.131, glutamic acid 3.107, glycine 0.999, proline 0.736, serine 0.849; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3187,6 +3651,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Mahi-Mahi (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw mahi-mahi record does not report them, so they are copied from USDA's raw haddock (FDC 171964), another lean white-fleshed fish: vitamin d 0.5 µg, vitamin e 0.45 mg, vitamin k 0.1 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00207,
+                    "threonine": 0.00811,
+                    "isoleucine": 0.00852,
+                    "leucine": 0.01504,
+                    "lysine": 0.01699,
+                    "methionine": 0.00548,
+                    "cystine": 0.00198,
+                    "phenylalanine": 0.00722,
+                    "tyrosine": 0.00625,
+                    "valine": 0.00953,
+                    "arginine": 0.01107,
+                    "histidine": 0.00545,
+                    "alanine": 0.01119,
+                    "aspartic_acid": 0.01894,
+                    "glutamic_acid": 0.02762,
+                    "glycine": 0.00888,
+                    "proline": 0.00654,
+                    "serine": 0.00755
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 171959 'Fish, mahimahi, raw' (SR Legacy 15023), g of each amino acid per 100 g: tryptophan 0.207, threonine 0.811, isoleucine 0.852, leucine 1.504, lysine 1.699, methionine 0.548, cystine 0.198, phenylalanine 0.722, tyrosine 0.625, valine 0.953, arginine 1.107, histidine 0.545, alanine 1.119, aspartic acid 1.894, glutamic acid 2.762, glycine 0.888, proline 0.654, serine 0.755; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3341,6 +3834,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Haddock (Wild) — nutrition: USDA SR Legacy 'Fish, haddock, raw' (FDC 171964) per 100 g: 74 kcal, protein 16.32 g, fat 0.45 g, sat fat 0.091 g, carbs 0 g, sodium 213 mg, cholesterol 54 mg, vitamin a 17 µg RAE, vitamin c 0 mg, vitamin d 0.5 µg, vitamin e 0.45 mg, vitamin k 0.1 µg, folate 12 µg DFE, vitamin b12 1.83 µg, vitamin b6 0.281 mg, calcium 11 mg, iron 0.17 mg, magnesium 21 mg, potassium 286 mg, zinc 0.32 mg, phosphorus 227 mg, selenium 25.9 µg, ALA 0.002 g (18:3 n-3), EPA + DHA 131 mg (EPA 42 + DHA 89); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00212,
+                    "threonine": 0.00829,
+                    "isoleucine": 0.00871,
+                    "leucine": 0.01537,
+                    "lysine": 0.01736,
+                    "methionine": 0.0056,
+                    "cystine": 0.00203,
+                    "phenylalanine": 0.00738,
+                    "tyrosine": 0.00638,
+                    "valine": 0.00974,
+                    "arginine": 0.01131,
+                    "histidine": 0.00557,
+                    "alanine": 0.01143,
+                    "aspartic_acid": 0.01936,
+                    "glutamic_acid": 0.02822,
+                    "glycine": 0.00908,
+                    "proline": 0.00669,
+                    "serine": 0.00771
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 171964 'Fish, haddock, raw' (SR Legacy 15033), g of each amino acid per 100 g: tryptophan 0.212, threonine 0.829, isoleucine 0.871, leucine 1.537, lysine 1.736, methionine 0.56, cystine 0.203, phenylalanine 0.738, tyrosine 0.638, valine 0.974, arginine 1.131, histidine 0.557, alanine 1.143, aspartic acid 1.936, glutamic acid 2.822, glycine 0.908, proline 0.669, serine 0.771; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3497,6 +4019,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Herring (Wild) — nutrition: USDA SR Legacy 'Fish, herring, Atlantic, raw' (FDC 175116) per 100 g: 158 kcal, protein 17.96 g, fat 9.04 g, sat fat 2.04 g, carbs 0 g, sodium 90 mg, cholesterol 60 mg, vitamin a 28 µg RAE, vitamin c 0.7 mg, vitamin d 4.2 µg, vitamin e 1.07 mg, vitamin k 0.1 µg, folate 10 µg DFE, vitamin b12 13.67 µg, vitamin b6 0.302 mg, calcium 57 mg, iron 1.1 mg, magnesium 32 mg, potassium 327 mg, zinc 0.99 mg, phosphorus 236 mg, selenium 36.5 µg, ALA 0.103 g (18:3 n-3), EPA + DHA 1571 mg (EPA 709 + DHA 862); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00201,
+                    "threonine": 0.00787,
+                    "isoleucine": 0.00828,
+                    "leucine": 0.0146,
+                    "lysine": 0.0165,
+                    "methionine": 0.00532,
+                    "cystine": 0.00193,
+                    "phenylalanine": 0.00701,
+                    "tyrosine": 0.00606,
+                    "valine": 0.00925,
+                    "arginine": 0.01075,
+                    "histidine": 0.00529,
+                    "alanine": 0.01086,
+                    "aspartic_acid": 0.01839,
+                    "glutamic_acid": 0.02681,
+                    "glycine": 0.00862,
+                    "proline": 0.00635,
+                    "serine": 0.00733
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175116 'Fish, herring, Atlantic, raw' (SR Legacy 15039), g of each amino acid per 100 g: tryptophan 0.201, threonine 0.787, isoleucine 0.828, leucine 1.46, lysine 1.65, methionine 0.532, cystine 0.193, phenylalanine 0.701, tyrosine 0.606, valine 0.925, arginine 1.075, histidine 0.529, alanine 1.086, aspartic acid 1.839, glutamic acid 2.681, glycine 0.862, proline 0.635, serine 0.733; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3675,6 +4226,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Anchovy (Wild) — GUESS for vitamin d: USDA's raw European anchovy record does not report it, so it is copied from USDA's raw Atlantic herring (FDC 175116), another small oily fish: vitamin d 4.2 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00228,
+                    "threonine": 0.00892,
+                    "isoleucine": 0.00938,
+                    "leucine": 0.01654,
+                    "lysine": 0.01869,
+                    "methionine": 0.00602,
+                    "cystine": 0.00218,
+                    "phenylalanine": 0.00794,
+                    "tyrosine": 0.00687,
+                    "valine": 0.01048,
+                    "arginine": 0.01217,
+                    "histidine": 0.00599,
+                    "alanine": 0.01231,
+                    "aspartic_acid": 0.02084,
+                    "glutamic_acid": 0.03038,
+                    "glycine": 0.00977,
+                    "proline": 0.0072,
+                    "serine": 0.0083
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174182 'Fish, anchovy, european, raw' (SR Legacy 15001), g of each amino acid per 100 g: tryptophan 0.228, threonine 0.892, isoleucine 0.938, leucine 1.654, lysine 1.869, methionine 0.602, cystine 0.218, phenylalanine 0.794, tyrosine 0.687, valine 1.048, arginine 1.217, histidine 0.599, alanine 1.231, aspartic acid 2.084, glutamic acid 3.038, glycine 0.977, proline 0.72, serine 0.83; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -3840,6 +4420,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "Mackerel (Wild) — nutrition: USDA SR Legacy 'Fish, mackerel, Atlantic, raw' (FDC 175119) per 100 g: 205 kcal, protein 18.6 g, fat 13.89 g, sat fat 3.257 g, carbs 0 g, sodium 90 mg, cholesterol 70 mg, vitamin a 50 µg RAE, vitamin c 0.4 mg, vitamin d 16.1 µg, vitamin e 1.52 mg, vitamin k 5 µg, folate 1 µg DFE, vitamin b12 8.71 µg, vitamin b6 0.399 mg, calcium 12 mg, iron 1.63 mg, magnesium 76 mg, potassium 314 mg, zinc 0.63 mg, phosphorus 217 mg, selenium 44.1 µg, ALA 0.159 g (18:3 n-3), EPA + DHA 2299 mg (EPA 898 + DHA 1401); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00208,
+                    "threonine": 0.00815,
+                    "isoleucine": 0.00857,
+                    "leucine": 0.01512,
+                    "lysine": 0.01708,
+                    "methionine": 0.00551,
+                    "cystine": 0.00199,
+                    "phenylalanine": 0.00726,
+                    "tyrosine": 0.00628,
+                    "valine": 0.00958,
+                    "arginine": 0.01113,
+                    "histidine": 0.00548,
+                    "alanine": 0.01125,
+                    "aspartic_acid": 0.01905,
+                    "glutamic_acid": 0.02777,
+                    "glycine": 0.00893,
+                    "proline": 0.00658,
+                    "serine": 0.00759
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 175119 'Fish, mackerel, Atlantic, raw' (SR Legacy 15046), g of each amino acid per 100 g: tryptophan 0.208, threonine 0.815, isoleucine 0.857, leucine 1.512, lysine 1.708, methionine 0.551, cystine 0.199, phenylalanine 0.726, tyrosine 0.628, valine 0.958, arginine 1.113, histidine 0.548, alanine 1.125, aspartic acid 1.905, glutamic acid 2.777, glycine 0.893, proline 0.658, serine 0.759; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -4007,6 +4616,35 @@
                     "title": "USDA FoodData Central",
                     "note": "Squid (Wild) — nutrition: USDA SR Legacy 'Mollusks, squid, mixed species, raw' (FDC 174223) per 100 g: 92 kcal, protein 15.58 g, fat 1.38 g, sat fat 0.358 g, carbs 3.08 g, sodium 44 mg, cholesterol 233 mg, vitamin a 10 µg RAE, vitamin c 4.7 mg, vitamin d 0 µg, vitamin e 1.2 mg, vitamin k 0 µg, folate 5 µg DFE, vitamin b12 1.3 µg, vitamin b6 0.056 mg, calcium 32 mg, iron 0.68 mg, magnesium 33 mg, potassium 246 mg, zinc 1.53 mg, phosphorus 221 mg, selenium 44.8 µg, ALA 0.004 g (18:3 n-3), EPA + DHA 488 mg (EPA 146 + DHA 342); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00174,
+                    "threonine": 0.0067,
+                    "isoleucine": 0.00678,
+                    "leucine": 0.01096,
+                    "lysine": 0.01164,
+                    "methionine": 0.00351,
+                    "cystine": 0.00204,
+                    "phenylalanine": 0.00558,
+                    "tyrosine": 0.00498,
+                    "valine": 0.0068,
+                    "arginine": 0.01136,
+                    "histidine": 0.00299,
+                    "alanine": 0.00942,
+                    "aspartic_acid": 0.01503,
+                    "glutamic_acid": 0.02118,
+                    "glycine": 0.00974,
+                    "proline": 0.00635,
+                    "serine": 0.00698
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174223 'Mollusks, squid, mixed species, raw' (SR Legacy 15175), g of each amino acid per 100 g: tryptophan 0.174, threonine 0.67, isoleucine 0.678, leucine 1.096, lysine 1.164, methionine 0.351, cystine 0.204, phenylalanine 0.558, tyrosine 0.498, valine 0.68, arginine 1.136, histidine 0.299, alanine 0.942, aspartic acid 1.503, glutamic acid 2.118, glycine 0.974, proline 0.635, serine 0.698; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -4163,6 +4801,35 @@
                     "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
                     "note": "Crab (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw blue crab record does not report them, so they come from USDA's raw mixed-species shrimp record (FDC 174210, may contain moisture-retaining additives): vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00251,
+                    "threonine": 0.00731,
+                    "isoleucine": 0.00875,
+                    "leucine": 0.01433,
+                    "lysine": 0.01572,
+                    "methionine": 0.00508,
+                    "cystine": 0.00202,
+                    "phenylalanine": 0.00763,
+                    "tyrosine": 0.00601,
+                    "valine": 0.00849,
+                    "arginine": 0.01577,
+                    "histidine": 0.00367,
+                    "alanine": 0.01023,
+                    "aspartic_acid": 0.01866,
+                    "glutamic_acid": 0.0308,
+                    "glycine": 0.01089,
+                    "proline": 0.00595,
+                    "serine": 0.00711
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174204 'Crustaceans, crab, blue, raw' (SR Legacy 15139), g of each amino acid per 100 g: tryptophan 0.251, threonine 0.731, isoleucine 0.875, leucine 1.433, lysine 1.572, methionine 0.508, cystine 0.202, phenylalanine 0.763, tyrosine 0.601, valine 0.849, arginine 1.577, histidine 0.367, alanine 1.023, aspartic acid 1.866, glutamic acid 3.08, glycine 1.089, proline 0.595, serine 0.711; divided by 100 for per-gram values."
+                }
             }
         ],
         "neuron_count": [
@@ -4318,6 +4985,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/174210/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 174210: Crustaceans, shrimp, mixed species, raw (may contain additives to retain moisture)",
                     "note": "Lobster (Wild) — GUESS for vitamin d, vitamin e, vitamin k: USDA's raw spiny lobster record does not report them, so they come from USDA's raw mixed-species shrimp record (FDC 174210, may contain moisture-retaining additives): vitamin d 0.1 µg, vitamin e 1.32 mg, vitamin k 0.3 µg per 100 g; divided by 100 for per-gram values. Only fills values missing from the main entry."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00287,
+                    "threonine": 0.00834,
+                    "isoleucine": 0.00998,
+                    "leucine": 0.01634,
+                    "lysine": 0.01792,
+                    "methionine": 0.0058,
+                    "cystine": 0.00231,
+                    "phenylalanine": 0.0087,
+                    "tyrosine": 0.00685,
+                    "valine": 0.00969,
+                    "arginine": 0.01799,
+                    "histidine": 0.00418,
+                    "alanine": 0.01166,
+                    "aspartic_acid": 0.02129,
+                    "glutamic_acid": 0.03512,
+                    "glycine": 0.01242,
+                    "proline": 0.00679,
+                    "serine": 0.00811
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 174211 'Crustaceans, spiny lobster, mixed species, raw' (SR Legacy 15154), g of each amino acid per 100 g: tryptophan 0.287, threonine 0.834, isoleucine 0.998, leucine 1.634, lysine 1.792, methionine 0.58, cystine 0.231, phenylalanine 0.87, tyrosine 0.685, valine 0.969, arginine 1.799, histidine 0.418, alanine 1.166, aspartic acid 2.129, glutamic acid 3.512, glycine 1.242, proline 0.679, serine 0.811; divided by 100 for per-gram values."
                 }
             }
         ],

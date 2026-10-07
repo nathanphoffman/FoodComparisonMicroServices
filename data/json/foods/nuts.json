@@ -50,6 +50,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170567 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 25.63 mg, vitamin k 0 µg, folate 44 µg DFE, vitamin b12 0 µg, vitamin b6 0.137 mg, calcium 269 mg, iron 3.71 mg, magnesium 270 mg, potassium 733 mg, zinc 3.12 mg, phosphorus 481 mg, selenium 4.1 µg; divided by 100 for per-gram values. Omega-3 from FDC 170567 per 100 g: ALA 0.003 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00211,
+                    "threonine": 0.00601,
+                    "isoleucine": 0.00751,
+                    "leucine": 0.01473,
+                    "lysine": 0.00568,
+                    "methionine": 0.00157,
+                    "cystine": 0.00215,
+                    "phenylalanine": 0.01132,
+                    "tyrosine": 0.0045,
+                    "valine": 0.00855,
+                    "arginine": 0.02465,
+                    "histidine": 0.00539,
+                    "alanine": 0.00999,
+                    "aspartic_acid": 0.02639,
+                    "glutamic_acid": 0.06206,
+                    "glycine": 0.01429,
+                    "proline": 0.00969,
+                    "serine": 0.00912
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170567 'Nuts, almonds' (SR Legacy 12061), g of each amino acid per 100 g: tryptophan 0.211, threonine 0.601, isoleucine 0.751, leucine 1.473, lysine 0.568, methionine 0.157, cystine 0.215, phenylalanine 1.132, tyrosine 0.45, valine 0.855, arginine 2.465, histidine 0.539, alanine 0.999, aspartic acid 2.639, glutamic acid 6.206, glycine 1.429, proline 0.969, serine 0.912; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -371,6 +400,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170187 per 100 g: vitamin a 1 µg RAE, vitamin c 1.3 mg, vitamin d 0 µg, vitamin e 0.7 mg, vitamin k 2.7 µg, folate 98 µg DFE, vitamin b12 0 µg, vitamin b6 0.537 mg, calcium 98 mg, iron 2.91 mg, magnesium 158 mg, potassium 441 mg, zinc 3.09 mg, phosphorus 346 mg, selenium 4.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 170187 per 100 g: ALA 9.08 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0017,
+                    "threonine": 0.00596,
+                    "isoleucine": 0.00625,
+                    "leucine": 0.0117,
+                    "lysine": 0.00424,
+                    "methionine": 0.00236,
+                    "cystine": 0.00208,
+                    "phenylalanine": 0.00711,
+                    "tyrosine": 0.00406,
+                    "valine": 0.00753,
+                    "arginine": 0.02278,
+                    "histidine": 0.00391,
+                    "alanine": 0.00696,
+                    "aspartic_acid": 0.01829,
+                    "glutamic_acid": 0.02816,
+                    "glycine": 0.00816,
+                    "proline": 0.00706,
+                    "serine": 0.00934
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170187 'Nuts, walnuts, english' (SR Legacy 12155), g of each amino acid per 100 g: tryptophan 0.17, threonine 0.596, isoleucine 0.625, leucine 1.17, lysine 0.424, methionine 0.236, cystine 0.208, phenylalanine 0.711, tyrosine 0.406, valine 0.753, arginine 2.278, histidine 0.391, alanine 0.696, aspartic acid 1.829, glutamic acid 2.816, glycine 0.816, proline 0.706, serine 0.934; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -652,6 +710,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170162 per 100 g: vitamin a 0 µg RAE, vitamin c 0.5 mg, vitamin d 0 µg, vitamin e 0.9 mg, vitamin k 34.1 µg, folate 25 µg DFE, vitamin b12 0 µg, vitamin b6 0.417 mg, calcium 37 mg, iron 6.68 mg, magnesium 292 mg, potassium 660 mg, zinc 5.78 mg, phosphorus 593 mg, selenium 19.9 µg; divided by 100 for per-gram values. Omega-3 from FDC 170162 per 100 g: ALA 0.062 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00287,
+                    "threonine": 0.00688,
+                    "isoleucine": 0.00789,
+                    "leucine": 0.01472,
+                    "lysine": 0.00928,
+                    "methionine": 0.00362,
+                    "cystine": 0.00393,
+                    "phenylalanine": 0.00951,
+                    "tyrosine": 0.00508,
+                    "valine": 0.01094,
+                    "arginine": 0.02123,
+                    "histidine": 0.00456,
+                    "alanine": 0.00837,
+                    "aspartic_acid": 0.01795,
+                    "glutamic_acid": 0.04506,
+                    "glycine": 0.00937,
+                    "proline": 0.00812,
+                    "serine": 0.01079
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170162 'Nuts, cashew nuts, raw' (SR Legacy 12087), g of each amino acid per 100 g: tryptophan 0.287, threonine 0.688, isoleucine 0.789, leucine 1.472, lysine 0.928, methionine 0.362, cystine 0.393, phenylalanine 0.951, tyrosine 0.508, valine 1.094, arginine 2.123, histidine 0.456, alanine 0.837, aspartic acid 1.795, glutamic acid 4.506, glycine 0.937, proline 0.812, serine 1.079; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -916,6 +1003,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/170185/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 170185: Nuts, pistachio nuts, dry roasted, without salt added",
                     "note": "Pistachios — stand-in values: USDA's raw pistachio record (170184) doesn't report vitamin K, so it comes from dry-roasted unsalted pistachios (roasting removes a little water, so this may be slightly high). Per 100 g: vitamin k 13.2 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00251,
+                    "threonine": 0.00684,
+                    "isoleucine": 0.00917,
+                    "leucine": 0.01604,
+                    "lysine": 0.01138,
+                    "methionine": 0.0036,
+                    "cystine": 0.00292,
+                    "phenylalanine": 0.01092,
+                    "tyrosine": 0.00509,
+                    "valine": 0.01249,
+                    "arginine": 0.02134,
+                    "histidine": 0.00512,
+                    "alanine": 0.00973,
+                    "aspartic_acid": 0.01884,
+                    "glutamic_acid": 0.043,
+                    "glycine": 0.01009,
+                    "proline": 0.00938,
+                    "serine": 0.01283
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170184 'Nuts, pistachio nuts, raw' (SR Legacy 12151), g of each amino acid per 100 g: tryptophan 0.251, threonine 0.684, isoleucine 0.917, leucine 1.604, lysine 1.138, methionine 0.36, cystine 0.292, phenylalanine 1.092, tyrosine 0.509, valine 1.249, arginine 2.134, histidine 0.512, alanine 0.973, aspartic acid 1.884, glutamic acid 4.3, glycine 1.009, proline 0.938, serine 1.283; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1198,6 +1314,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170182 per 100 g: vitamin a 3 µg RAE, vitamin c 1.1 mg, vitamin d 0 µg, vitamin e 1.4 mg, vitamin k 3.5 µg, folate 22 µg DFE, vitamin b12 0 µg, vitamin b6 0.21 mg, calcium 70 mg, iron 2.53 mg, magnesium 121 mg, potassium 410 mg, zinc 4.53 mg, phosphorus 277 mg, selenium 3.8 µg; divided by 100 for per-gram values. Omega-3 from FDC 170182 per 100 g: ALA 0.986 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00093,
+                    "threonine": 0.00306,
+                    "isoleucine": 0.00336,
+                    "leucine": 0.00598,
+                    "lysine": 0.00287,
+                    "methionine": 0.00183,
+                    "cystine": 0.00152,
+                    "phenylalanine": 0.00426,
+                    "tyrosine": 0.00215,
+                    "valine": 0.00411,
+                    "arginine": 0.01177,
+                    "histidine": 0.00262,
+                    "alanine": 0.00397,
+                    "aspartic_acid": 0.00929,
+                    "glutamic_acid": 0.01829,
+                    "glycine": 0.00453,
+                    "proline": 0.00363,
+                    "serine": 0.00474
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170182 'Nuts, pecans' (SR Legacy 12142), g of each amino acid per 100 g: tryptophan 0.093, threonine 0.306, isoleucine 0.336, leucine 0.598, lysine 0.287, methionine 0.183, cystine 0.152, phenylalanine 0.426, tyrosine 0.215, valine 0.411, arginine 1.177, histidine 0.262, alanine 0.397, aspartic acid 0.929, glutamic acid 1.829, glycine 0.453, proline 0.363, serine 0.474; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -1467,6 +1612,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170581 per 100 g: vitamin a 1 µg RAE, vitamin c 6.3 mg, vitamin d 0 µg, vitamin e 15.03 mg, vitamin k 14.2 µg, folate 113 µg DFE, vitamin b12 0 µg, vitamin b6 0.563 mg, calcium 114 mg, iron 4.7 mg, magnesium 163 mg, potassium 680 mg, zinc 2.45 mg, phosphorus 290 mg, selenium 2.4 µg; divided by 100 for per-gram values. Omega-3 from FDC 170581 per 100 g: ALA 0.087 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00193,
+                    "threonine": 0.00497,
+                    "isoleucine": 0.00545,
+                    "leucine": 0.01063,
+                    "lysine": 0.0042,
+                    "methionine": 0.00221,
+                    "cystine": 0.00277,
+                    "phenylalanine": 0.00663,
+                    "tyrosine": 0.00362,
+                    "valine": 0.00701,
+                    "arginine": 0.02211,
+                    "histidine": 0.00432,
+                    "alanine": 0.0073,
+                    "aspartic_acid": 0.01679,
+                    "glutamic_acid": 0.0371,
+                    "glycine": 0.00724,
+                    "proline": 0.00561,
+                    "serine": 0.00735
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170581 'Nuts, hazelnuts or filberts' (SR Legacy 12120), g of each amino acid per 100 g: tryptophan 0.193, threonine 0.497, isoleucine 0.545, leucine 1.063, lysine 0.42, methionine 0.221, cystine 0.277, phenylalanine 0.663, tyrosine 0.362, valine 0.701, arginine 2.211, histidine 0.432, alanine 0.73, aspartic acid 1.679, glutamic acid 3.71, glycine 0.724, proline 0.561, serine 0.735; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -1744,6 +1918,35 @@
                     "title": "USDA FoodData Central — SR Legacy 170179: Nuts, macadamia nuts, dry roasted, without salt added",
                     "note": "Macadamia Nuts — stand-in values: USDA's raw macadamia record (170178) doesn't report vitamin K, so it comes from dry-roasted unsalted macadamias. Per 100 g: vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00067,
+                    "threonine": 0.0037,
+                    "isoleucine": 0.00314,
+                    "leucine": 0.00602,
+                    "lysine": 0.00018,
+                    "methionine": 0.00023,
+                    "cystine": 6e-05,
+                    "phenylalanine": 0.00665,
+                    "tyrosine": 0.00511,
+                    "valine": 0.00363,
+                    "arginine": 0.01402,
+                    "histidine": 0.00195,
+                    "alanine": 0.00388,
+                    "aspartic_acid": 0.01099,
+                    "glutamic_acid": 0.02267,
+                    "glycine": 0.00454,
+                    "proline": 0.00468,
+                    "serine": 0.00419
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170178 'Nuts, macadamia nuts, raw' (SR Legacy 12131), g of each amino acid per 100 g: tryptophan 0.067, threonine 0.37, isoleucine 0.314, leucine 0.602, lysine 0.018, methionine 0.023, cystine 0.006, phenylalanine 0.665, tyrosine 0.511, valine 0.363, arginine 1.402, histidine 0.195, alanine 0.388, aspartic acid 1.099, glutamic acid 2.267, glycine 0.454, proline 0.468, serine 0.419; divided by 100 for per-gram values. CAUTION: USDA's lysine (0.018 g per 100 g) and methionine (0.023) for macadamia look unusually low, the same in the raw and roasted records, and may be measurement artifacts; they drive macadamia's very low amino acid score."
+                }
             }
         ],
         "yield_fraction": [
@@ -2012,6 +2215,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170569 per 100 g: vitamin a 0 µg RAE, vitamin c 0.7 mg, vitamin d 0 µg, vitamin e 5.65 mg, vitamin k 0 µg, folate 22 µg DFE, vitamin b12 0 µg, vitamin b6 0.101 mg, calcium 160 mg, iron 2.43 mg, magnesium 376 mg, potassium 659 mg, zinc 4.06 mg, phosphorus 725 mg, selenium 1917 µg; divided by 100 for per-gram values. Omega-3 from FDC 170569 per 100 g: ALA 0.018 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00135,
+                    "threonine": 0.00365,
+                    "isoleucine": 0.00518,
+                    "leucine": 0.0119,
+                    "lysine": 0.0049,
+                    "methionine": 0.01124,
+                    "cystine": 0.00306,
+                    "phenylalanine": 0.00639,
+                    "tyrosine": 0.00416,
+                    "valine": 0.0076,
+                    "arginine": 0.0214,
+                    "histidine": 0.00409,
+                    "alanine": 0.00609,
+                    "aspartic_acid": 0.01325,
+                    "glutamic_acid": 0.0319,
+                    "glycine": 0.00733,
+                    "proline": 0.00706,
+                    "serine": 0.00676
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170569 'Nuts, brazilnuts, dried, unblanched' (SR Legacy 12078), g of each amino acid per 100 g: tryptophan 0.135, threonine 0.365, isoleucine 0.518, leucine 1.19, lysine 0.49, methionine 1.124, cystine 0.306, phenylalanine 0.639, tyrosine 0.416, valine 0.76, arginine 2.14, histidine 0.409, alanine 0.609, aspartic acid 1.325, glutamic acid 3.19, glycine 0.733, proline 0.706, serine 0.676; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -2179,6 +2411,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 172430 per 100 g: vitamin a 0 µg RAE, vitamin c 0 mg, vitamin d 0 µg, vitamin e 8.33 mg, vitamin k 0 µg, folate 240 µg DFE, vitamin b12 0 µg, vitamin b6 0.348 mg, calcium 92 mg, iron 4.58 mg, magnesium 168 mg, potassium 705 mg, zinc 3.27 mg, phosphorus 376 mg, selenium 7.2 µg; divided by 100 for per-gram values. Omega-3 from FDC 172430 per 100 g: ALA 0.003 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0025,
+                    "threonine": 0.00883,
+                    "isoleucine": 0.00907,
+                    "leucine": 0.01672,
+                    "lysine": 0.00926,
+                    "methionine": 0.00317,
+                    "cystine": 0.00331,
+                    "phenylalanine": 0.01377,
+                    "tyrosine": 0.01049,
+                    "valine": 0.01082,
+                    "arginine": 0.03085,
+                    "histidine": 0.00652,
+                    "alanine": 0.01025,
+                    "aspartic_acid": 0.03146,
+                    "glutamic_acid": 0.0539,
+                    "glycine": 0.01554,
+                    "proline": 0.01138,
+                    "serine": 0.01271
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 172430 'Peanuts, all types, raw' (SR Legacy 16087), g of each amino acid per 100 g: tryptophan 0.25, threonine 0.883, isoleucine 0.907, leucine 1.672, lysine 0.926, methionine 0.317, cystine 0.331, phenylalanine 1.377, tyrosine 1.049, valine 1.082, arginine 3.085, histidine 0.652, alanine 1.025, aspartic acid 3.146, glutamic acid 5.39, glycine 1.554, proline 1.138, serine 1.271; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -2507,6 +2768,35 @@
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170591 per 100 g: vitamin a 1 µg RAE, vitamin c 0.8 mg, vitamin d 0 µg, vitamin e 9.33 mg, vitamin k 53.9 µg, folate 34 µg DFE, vitamin b12 0 µg, vitamin b6 0.094 mg, calcium 16 mg, iron 5.53 mg, magnesium 251 mg, potassium 597 mg, zinc 6.45 mg, phosphorus 575 mg, selenium 0.7 µg; divided by 100 for per-gram values. Omega-3 from FDC 170591 per 100 g: ALA 0.112 g, EPA + DHA 0 mg (EPA 0 + DHA 0); divided by 100 for per-gram values."
                 }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00107,
+                    "threonine": 0.0037,
+                    "isoleucine": 0.00542,
+                    "leucine": 0.00991,
+                    "lysine": 0.0054,
+                    "methionine": 0.00259,
+                    "cystine": 0.00289,
+                    "phenylalanine": 0.00524,
+                    "tyrosine": 0.00509,
+                    "valine": 0.00687,
+                    "arginine": 0.02413,
+                    "histidine": 0.00341,
+                    "alanine": 0.00684,
+                    "aspartic_acid": 0.01303,
+                    "glutamic_acid": 0.02926,
+                    "glycine": 0.00691,
+                    "proline": 0.00673,
+                    "serine": 0.00835
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170591 'Nuts, pine nuts, dried' (SR Legacy 12147), g of each amino acid per 100 g: tryptophan 0.107, threonine 0.37, isoleucine 0.542, leucine 0.991, lysine 0.54, methionine 0.259, cystine 0.289, phenylalanine 0.524, tyrosine 0.509, valine 0.687, arginine 2.413, histidine 0.341, alanine 0.684, aspartic acid 1.303, glutamic acid 2.926, glycine 0.691, proline 0.673, serine 0.835; divided by 100 for per-gram values."
+                }
             }
         ],
         "yield_fraction": [
@@ -2744,6 +3034,35 @@
                     "url": "https://fdc.nal.usda.gov/",
                     "title": "USDA FoodData Central",
                     "note": "All foods — calories, fat, sat_fat, protein, fiber: Primary source for all nutritional values, reported per gram. Vitamins and minerals from USDA FDC 170562 per 100 g: vitamin a 3 µg RAE, vitamin c 1.4 mg, vitamin d 0 µg, vitamin e 35.17 mg, vitamin k 0 µg, folate 227 µg DFE, vitamin b12 0 µg, vitamin b6 1.345 mg, calcium 78 mg, iron 5.25 mg, magnesium 325 mg, potassium 645 mg, zinc 5 mg, phosphorus 660 mg, selenium 53 µg; divided by 100 for per-gram values. Omega-3 from FDC 170562 per 100 g: ALA 0.06 g (USDA's total 18:3, which is almost all ALA), EPA + DHA 14 mg (EPA 0.014 + DHA 0); divided by 100 for per-gram values."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00348,
+                    "threonine": 0.00928,
+                    "isoleucine": 0.01139,
+                    "leucine": 0.01659,
+                    "lysine": 0.00937,
+                    "methionine": 0.00494,
+                    "cystine": 0.00451,
+                    "phenylalanine": 0.01169,
+                    "tyrosine": 0.00666,
+                    "valine": 0.01315,
+                    "arginine": 0.02403,
+                    "histidine": 0.00632,
+                    "alanine": 0.01117,
+                    "aspartic_acid": 0.02446,
+                    "glutamic_acid": 0.05579,
+                    "glycine": 0.01461,
+                    "proline": 0.01182,
+                    "serine": 0.01075
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — FDC 170562 'Seeds, sunflower seed kernels, dried' (SR Legacy 12036), g of each amino acid per 100 g: tryptophan 0.348, threonine 0.928, isoleucine 1.139, leucine 1.659, lysine 0.937, methionine 0.494, cystine 0.451, phenylalanine 1.169, tyrosine 0.666, valine 1.315, arginine 2.403, histidine 0.632, alanine 1.117, aspartic acid 2.446, glutamic acid 5.579, glycine 1.461, proline 1.182, serine 1.075; divided by 100 for per-gram values."
                 }
             }
         ],
@@ -3029,6 +3348,35 @@
                     "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
                     "title": "USDA FoodData Central — SR Legacy 170567: Nuts, almonds",
                     "note": "Almond Milk (Unsweetened) — stand-in values: USDA's almond milk record (1999631) doesn't report vitamins C or K. Almond milk is mostly water with ~2–3% almonds, and USDA reports 0 vitamin C and 0 vitamin K for almonds themselves, so both are taken as 0. Per 100 g: vitamin c 0 mg, vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 5.472e-05,
+                    "threonine": 0.0001559,
+                    "isoleucine": 0.0001948,
+                    "leucine": 0.000382,
+                    "lysine": 0.0001473,
+                    "methionine": 4.072e-05,
+                    "cystine": 5.576e-05,
+                    "phenylalanine": 0.0002936,
+                    "tyrosine": 0.0001167,
+                    "valine": 0.0002217,
+                    "arginine": 0.0006393,
+                    "histidine": 0.0001398,
+                    "alanine": 0.0002591,
+                    "aspartic_acid": 0.0006844,
+                    "glutamic_acid": 0.00161,
+                    "glycine": 0.0003706,
+                    "proline": 0.0002513,
+                    "serine": 0.0002365
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The almond entry's amino acid profile, scaled to the almond milk's protein. Scaled from the almonds entry: mg per g of protein x 0.56 g per 100 g ÷ 1000."
                 }
             }
         ],

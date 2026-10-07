@@ -37,6 +37,14 @@ public class FoodRow
     public JsonElement? MicronutrientsJson =>
         Micronutrients is null ? null : JsonDocument.Parse(Micronutrients).RootElement.Clone();
 
+    // The 18 amino acids in g per gram of food, stored the same way (JSON object string, NULL if none sourced).
+    [JsonIgnore]
+    public string? AminoAcids { get; set; }
+
+    [JsonPropertyName("amino_acids")]
+    public JsonElement? AminoAcidsJson =>
+        AminoAcids is null ? null : JsonDocument.Parse(AminoAcids).RootElement.Clone();
+
     // Plant metrics
     public double? YieldKgHa                 { get; set; }
     public double? EmissionsPerKg            { get; set; }

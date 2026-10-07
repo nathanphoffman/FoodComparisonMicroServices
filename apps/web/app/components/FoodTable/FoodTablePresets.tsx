@@ -36,7 +36,7 @@ const CARNIVORE_FOOD_WEIGHT_LEVELS: FoodWeights = { calories: 4, protein: 6, dry
 
 const NUTRITION_MAX_WEIGHTS: NutritionWeights = {
     ...DEFAULT_NUTRITION_WEIGHTS,
-    protein: 2, fiber: 3, micronutrients: 3, satFat: 3, freeSugar: 0.5, sodium: 3,
+    protein: 2, fiber: 3, micronutrients: 3, satFat: 3, freeSugar: 0.5, sodium: 3, proteinQuality: 1,
 };
 const CARNIVORE_NUTRITION_WEIGHTS: NutritionWeights = { ...DEFAULT_NUTRITION_WEIGHTS, protein: 3 };
 

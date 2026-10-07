@@ -12,7 +12,7 @@ public class DbService
     private const string Query = """
         SELECT f.slug, f.name, f.type,
                f.calories, f.fat, f.sat_fat, f.protein, f.fiber,
-               f.sodium, f.carbs, f.sugar, f.cholesterol, f.trans_fat, f.micronutrients,
+               f.sodium, f.carbs, f.sugar, f.cholesterol, f.trans_fat, f.micronutrients, f.amino_acids,
                f.yield_kg_ha, f.emissions_per_kg, f.water_per_kg,
                f.green_water_per_kg, f.blue_water_per_kg, f.grey_water_per_kg,
                f.pesticide_insect_paf, f.pesticide_terrestrial_paf,

@@ -261,7 +261,17 @@ plant-specific or animal-specific fields depending on `type`.
         "phosphorus":  <number>,  // mg / g food
         "selenium":    <number>,  // µg / g food
         "ala":         <number>,  // g omega-3 ALA / g food (USDA 18:3 n-3; plain 18:3 when that isn't split out)
-        "epa_dha":     <number>   // mg omega-3 EPA + DHA combined / g food (USDA 20:5 n-3 + 22:6 n-3)
+        "epa_dha":     <number>,  // mg omega-3 EPA + DHA combined / g food (USDA 20:5 n-3 + 22:6 n-3)
+
+        // Amino acids — all optional, all in g of the amino acid per g of food (USDA SR nutrients 501–518).
+        // Kept in their own nutrition entry (see below). The first eleven are the essential ones the
+        // Nutrition score's protein-quality adjustment uses (methionine + cystine and phenylalanine +
+        // tyrosine are compared together, as FAO does); the rest are shown in the nutrition tooltip.
+        "tryptophan": <number>, "threonine": <number>, "isoleucine": <number>, "leucine": <number>,
+        "lysine": <number>, "methionine": <number>, "cystine": <number>, "phenylalanine": <number>,
+        "tyrosine": <number>, "valine": <number>, "histidine": <number>,
+        "arginine": <number>, "alanine": <number>, "aspartic_acid": <number>, "glutamic_acid": <number>,
+        "glycine": <number>, "proline": <number>, "serine": <number>
       },
       "confidence": <1–5>,
       "source": { ... }
@@ -269,6 +279,10 @@ plant-specific or animal-specific fields depending on `type`.
   ]
 }
 ```
+
+**Amino acids.** Each food with ≥ 1 g of protein per 100 g has a second `nutrition` entry holding only the 18 amino acid keys. It comes from the same USDA record as the main entry (confidence 5). Where USDA has no amino acid data for the record, the entry instead scales a close stand-in record's profile (mg per g of protein) to this food's protein (confidence 2–4, said in the note). Composites without a USDA amino acid record compute theirs from their ingredients' profiles, weighted by the protein each contributes (confidence 2). Foods with almost no protein (oils, sugars, tea, drinks) have none.
+
+How it is scored (`amino_acids.rs`, `nutrition.rs`): for each of the nine essential requirements the food's mg per g of protein is divided by the FAO (2013) pattern for older children, adolescents and adults (histidine 16, isoleucine 30, leucine 61, lysine 48, methionine + cystine 23, phenylalanine + tyrosine 41, threonine 25, tryptophan 6.6, valine 40). The lowest ratio, capped at 1, is the amino acid score; the Protein Quality slider sets how much of that shortfall is taken off the protein points. Foods with any essential amino acid unreported are not penalised.
 
 ---
 
@@ -533,6 +547,7 @@ The build pipeline uses confidence scores as exponents in a weighted geometric m
 | `nutrition.vitamin_c`, `vitamin_e`, `vitamin_b6`, `calcium`, `iron`, `magnesium`, `potassium`, `zinc`, `phosphorus` | mg / g food |
 | `nutrition.vitamin_a` (RAE), `vitamin_d`, `vitamin_k`, `folate` (DFE), `vitamin_b12`, `selenium` | µg / g food |
 | `nutrition.ala` | g / g food |
+| `nutrition.tryptophan` … `serine` (the 18 amino acids) | g / g food |
 | `nutrition.epa_dha` | mg / g food |
 | `yield_fraction` | fraction 0–1 |
 | `cooked_weight_ratio` | g cooked / g dry |

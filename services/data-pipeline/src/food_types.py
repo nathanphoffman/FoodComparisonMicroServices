@@ -45,6 +45,25 @@ class NutritionValue(TypedDict):
     selenium: NotRequired[float]
     ala: NotRequired[float]      # omega-3 ALA, g / g food
     epa_dha: NotRequired[float]  # omega-3 EPA + DHA combined, mg / g food
+    # amino acids, g per g of food; absent when the source doesn't report them (keys in AMINO_ACID_KEYS)
+    tryptophan: NotRequired[float]
+    threonine: NotRequired[float]
+    isoleucine: NotRequired[float]
+    leucine: NotRequired[float]
+    lysine: NotRequired[float]
+    methionine: NotRequired[float]
+    cystine: NotRequired[float]
+    phenylalanine: NotRequired[float]
+    tyrosine: NotRequired[float]
+    valine: NotRequired[float]
+    arginine: NotRequired[float]
+    histidine: NotRequired[float]
+    alanine: NotRequired[float]
+    aspartic_acid: NotRequired[float]
+    glutamic_acid: NotRequired[float]
+    glycine: NotRequired[float]
+    proline: NotRequired[float]
+    serine: NotRequired[float]
 
 
 MICRONUTRIENT_KEYS = (
@@ -52,6 +71,15 @@ MICRONUTRIENT_KEYS = (
     "folate", "vitamin_b12", "vitamin_b6",
     "calcium", "iron", "magnesium", "potassium", "zinc", "phosphorus", "selenium",
     "ala", "epa_dha",
+)
+
+# All 18 amino acids USDA reports, g per g of food. The nine essential ones (histidine,
+# isoleucine, leucine, lysine, methionine + cystine, phenylalanine + tyrosine, threonine,
+# tryptophan, valine) drive the Nutrition score's protein-quality adjustment.
+AMINO_ACID_KEYS = (
+    "tryptophan", "threonine", "isoleucine", "leucine", "lysine", "methionine", "cystine",
+    "phenylalanine", "tyrosine", "valine", "histidine",
+    "arginine", "alanine", "aspartic_acid", "glutamic_acid", "glycine", "proline", "serine",
 )
 
 

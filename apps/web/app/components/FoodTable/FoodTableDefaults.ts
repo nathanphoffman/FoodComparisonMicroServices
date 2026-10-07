@@ -85,6 +85,7 @@ export const DEFAULT_NUTRITION_WEIGHTS: NutritionWeights = {
     freeSugar:      0.25,
     sugarAllowance: 5,
     sodium:         2,
+    proteinQuality: 0.5,
 };
 
 // ── Slider values ─────────────────────────────────────────────────────────────
