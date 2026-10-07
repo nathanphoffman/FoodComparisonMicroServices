@@ -7,13 +7,16 @@ import type { CustomFoodBasis, CustomFoodInput } from './FoodTableTypes';
 
 // Each ingredient has its own independent slider level; its percentage is its
 // share of the total level (same idea as the Compare By / Score Priorities sliders).
-type Ingredient = { slug: string; name: string; level: number };
+// `fine` makes that ingredient's slider set its share directly, 0–10% in 0.05% steps.
+type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
 type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[] };
 
 const MAX_LEVEL = 100;
 const LEVEL_STEP = 0.5;
 const DEFAULT_LEVEL = MAX_LEVEL / 2;
+const FINE_MAX_PERCENT = 10;
+const FINE_STEP_PERCENT = 0.05;
 
 const BASIS_OPTIONS: { value: CustomFoodBasis; label: string }[] = [
     { value: 'calories', label: 'By calories' },
@@ -28,7 +31,8 @@ function toPercents(ingredients: Ingredient[]): number[] {
     return ingredients.map(ingredient => total > 0 ? (ingredient.level / total) * 100 : 0);
 }
 
-const formatPercent = (percent: number) => `${Number(percent.toFixed(1))}%`;
+// Small shares need a second decimal now that fine control moves them in 0.05% steps.
+const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1 ? 2 : 1))}%`;
 
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
@@ -40,7 +44,9 @@ function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
         return {
             basis: parsed.basis === 'mass' ? 'mass' : 'calories',
             // Drop foods that no longer exist.
-            ingredients: parsed.ingredients.filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level)),
+            ingredients: parsed.ingredients
+                .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
+                .map(i => ({ ...i, fine: !!i.fine })),
         };
     } catch {
         return empty;
@@ -100,11 +106,27 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, onChange }: P
         setSelectedSlug('');
     }
 
+    const percents = toPercents(ingredients);
+
+    // Fine slider edits this ingredient's share directly (0–10%), so the level is worked out from the other ingredients.
+    function levelForPercent(index: number, percent: number): number {
+        const others = ingredients.reduce((sum, ing, j) => j === index ? sum : sum + ing.level, 0);
+        return others > 0 ? (percent / (100 - percent)) * others : ingredients[index].level;
+    }
+
+    function setFine(index: number, fine: boolean) {
+        update({
+            basis,
+            ingredients: ingredients.map((ing, j) => j !== index ? ing : {
+                ...ing, fine,
+                level: fine && percents[index] > FINE_MAX_PERCENT ? levelForPercent(index, FINE_MAX_PERCENT) : ing.level,
+            }),
+        });
+    }
+
     function remove(removedSlug: string) {
         update({ basis, ingredients: ingredients.filter(i => i.slug !== removedSlug) });
     }
-
-    const percents = toPercents(ingredients);
 
     const available = [...foods]
         .sort((a, b) => a.name.localeCompare(b.name))
@@ -153,16 +175,20 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, onChange }: P
                             <div className="flex-1 min-w-0">
                                 <Slider
                                     min={0}
-                                    max={MAX_LEVEL}
-                                    step={LEVEL_STEP}
-                                    value={ing.level}
-                                    onChange={v => update({ basis, ingredients: ingredients.map((x, j) => j === idx ? { ...x, level: v } : x) })}
+                                    max={ing.fine ? FINE_MAX_PERCENT : MAX_LEVEL}
+                                    step={ing.fine ? FINE_STEP_PERCENT : LEVEL_STEP}
+                                    value={ing.fine ? Math.min(percents[idx], FINE_MAX_PERCENT) : ing.level}
+                                    onChange={v => update({ basis, ingredients: ingredients.map((x, j) => j === idx ? { ...x, level: ing.fine ? levelForPercent(idx, v) : v } : x) })}
                                 />
                                 <div className="flex justify-between text-[10px] text-neutral-400">
                                     <span>Least</span>
-                                    <span>Most</span>
+                                    <span>{ing.fine ? `${FINE_MAX_PERCENT}%` : 'Most'}</span>
                                 </div>
                             </div>
+                            <label className="flex items-center gap-1 text-[10px] text-neutral-500 shrink-0 cursor-pointer" title="Fine control: the slider sets this food's share directly from 0 to 10% in 0.05% steps">
+                                <input type="checkbox" checked={!!ing.fine} onChange={e => setFine(idx, e.target.checked)} />
+                                ÷10
+                            </label>
                             <button
                                 onClick={() => remove(ing.slug)}
                                 className="text-neutral-400 hover:text-red-500 text-xs shrink-0 leading-none"
