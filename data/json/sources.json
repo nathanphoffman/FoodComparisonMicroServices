@@ -3372,5 +3372,29 @@
         "notes": [
             "Used for derived or educated-guess values (confidence 1–3) on foods added 2026-10-06; see each value's note."
         ]
+    },
+    {
+        "id": 541,
+        "url": "https://hannaford.com/groceries/frozen/ice-cream-frozen-treats/dairy-free-ice-cream-frozen-desserts/oatly-non-dairy-vegan-vanilla-frozen-dessert-1-pint.html",
+        "title": "Oatly Non-Dairy Vegan Vanilla Frozen Dessert — Nutrition Facts label (per 2/3 cup)",
+        "notes": [
+            "Used for derived or educated-guess values (confidence 1–3) on foods added 2026-10-09; see each value's note."
+        ]
+    },
+    {
+        "id": 542,
+        "url": "https://stopandshop.com/groceries/frozen/ice-cream-frozen-treats/dairy-free-ice-cream-frozen-desserts/so-delicious-dairy-free-very-vanilla-cashewmilk-frozen-dessert-1-pint.html",
+        "title": "So Delicious Dairy Free Very Vanilla Cashewmilk Frozen Dessert — Nutrition Facts label (per 2/3 cup)",
+        "notes": [
+            "Used for derived or educated-guess values (confidence 1–3) on foods added 2026-10-09; see each value's note."
+        ]
+    },
+    {
+        "id": 543,
+        "url": "https://stopandshop.com/groceries/dairy-eggs/milk/plant-based-milk/almond-breeze-original-almondmilk-12-gallon.html",
+        "title": "Almond Breeze Original Almondmilk — Nutrition Facts label (per 1 cup)",
+        "notes": [
+            "Used for derived or educated-guess values (confidence 1–3) on foods added 2026-10-09; see each value's note."
+        ]
     }
 ]

@@ -221,8 +221,8 @@ plant-specific or animal-specific fields depending on `type`.
   // Optional. Plain-English reason for the land_types split.
   // Tags: "common" = shown by default; "milk" = listed under the Milks filter
   // in the food table, in addition to the food's own category. "meat-substitute"
-  // also lists a food under Meat, "cheese-substitute" under Dairy & Eggs, and
-  // "vegan" under Vegan.
+  // also lists a food under Meat, "cheese-substitute", "ice-cream" and "milk" under Dairy & Eggs & Substitutes (Dairy & Eggs is animal products only), and
+  // "vegan" under Vegan-Substitutes (only for products sold as vegan/allergy-aisle replacements, e.g. plant burgers, vegan cheese, non-dairy milks and ice cream — not ordinary foods that happen to be vegan).
   "land_types_note": <string>,
 
   // --- Nutrition (per gram of edible food as purchased) ---

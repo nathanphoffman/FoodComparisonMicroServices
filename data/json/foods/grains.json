@@ -2489,7 +2489,8 @@
         "tags": [
             "common",
             "milk",
-            "beverage"
+            "beverage",
+            "vegan"
         ],
         "notes": "Unsweetened oat milk, nutrition from USDA (FDC Foundation Foods). It's about 10% oats (Oatly recipe), so land is the oats entry's yield ÷ 10% ≈ 13,750 kg of oat milk per ha. That matches Poore & Nemecek's own oat-milk land figure within a few percent.\n\nEmissions (0.88 kg CO2e/kg) and water come straight from Poore & Nemecek's oat-milk value, covering farming, processing, packaging and retail. Per-hectare pesticide and fertilizer are copied from oats. Availability (~1.5 Mt/yr) is a rough market-based estimate (confidence 1).\n\nVitamins C and E and omega-3 are a guess from its rapeseed oil and oats.",
         "land_types": {

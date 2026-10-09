@@ -15,7 +15,8 @@ type FoodFilter = {
 export const FOOD_FILTERS: FoodFilter[] = [
     { key: 'all',        label: 'All' },
     { key: 'milks',      label: 'Milks',        tags: ['milk'] },
-    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'], tags: ['cheese-substitute', 'dairy'] },
+    { key: 'dairy-eggs', label: 'Dairy & Eggs', categories: ['dairy', 'eggs'], tags: ['dairy'] },
+    { key: 'dairy-eggs-substitutes', label: 'Dairy & Eggs & Substitutes', categories: ['dairy', 'eggs'], tags: ['dairy', 'milk', 'cheese-substitute', 'ice-cream'] },
     { key: 'meat',       label: 'Meat',         categories: ['meats'], tags: ['meat-substitute'] },
     { key: 'seafood',    label: 'Seafood',      categories: ['seafood'] },
     { key: 'grains',     label: 'Grains',       categories: ['grains'], tags: ['grain-product'] },

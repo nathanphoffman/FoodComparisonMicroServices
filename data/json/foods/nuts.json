@@ -3292,7 +3292,8 @@
         "human_food": 1,
         "tags": [
             "milk",
-            "beverage"
+            "beverage",
+            "vegan"
         ],
         "notes": "Unsweetened almond milk, nutrition from USDA (FDC Foundation Foods). It's only about 2.5% almonds, judging by its calories, protein and water. So land is the almond yield ÷ 2.5% ≈ 120,000 kg of almond milk per ha. That was corrected on 2026-09-26: the earlier Poore & Nemecek almond-milk land figure implied ~15% almonds and overstated land about 6×.\n\nWater (368 L/kg) and emissions (0.70 kg CO2e/kg, cradle to retail) are Poore & Nemecek's own almond-milk values. The US water value is almonds' California water × 2.5%. Per-hectare pesticide and fertilizer are copied from almonds.\n\nAlmond orchards depend on trucked-in honeybee colonies; that indirect bee harm is described but not scored. Availability (~4.2 Mt) is a rough estimate from global market value ÷ an assumed retail price (confidence 1).\n\nVitamins C and K are taken as 0 from USDA's almonds record, since almond milk is mostly water and almonds have none.",
         "land_types": {

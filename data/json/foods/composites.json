@@ -1336,8 +1336,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "All-purpose enriched white wheat flour, modelled as milled wheat (1.35 kg of wheat per kg of flour, ~74% extraction). Crop impacts (land, water, pesticides, farm emissions) come from the wheat entry, converted at 1.35×, so flour looks about a third worse than raw wheat per kg. Nutrition is USDA's enriched all-purpose flour.\n\nProcessing emissions (0.15 kg CO2e/kg) and water (1 L/kg) are confidence-1 guesses for milling. Availability is not set, so it comes from wheat's.",
         "nutrition": [
@@ -1474,7 +1473,6 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan",
             "common"
         ],
         "notes": "Commercial white sandwich bread, modelled from its ingredients: ~65% wheat flour (1.35 kg of wheat per kg of flour), ~3% sugar, ~2% soybean oil, ~3% salt, yeast and minor ingredients, ~27% water. The recipe shares are confidence 2 and were corrected on 2026-10-06: the first version had only 52% flour, which understated the wheat by about a fifth (it gave 2.06 kcal/g of ingredients against USDA's 2.66). Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses covering baking and distribution. Availability comes from the ingredients' supply.",
@@ -1674,7 +1672,6 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan",
             "common"
         ],
         "notes": "Cooked enriched pasta (unsalted), modelled as 0.42 kg of dry pasta per kg cooked (USDA's dry and cooked pasta water contents give a cooking ratio of 2.38) plus absorbed water. Dry pasta is made from semolina, about 71% of the wheat's weight, so each kg of cooked pasta takes ~0.59 kg of wheat. Crop impacts come from the generic wheat entry (not durum).\n\nProcessing emissions (0.25 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses; the home cooking energy and water are not counted. Availability comes from wheat's.",
@@ -1827,8 +1824,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "Shelf-stable flour tortillas, modelled from their ingredients: ~68% wheat flour (1.35 kg of wheat per kg of flour), ~6% soybean oil (assumed; recipes also use lard or palm shortening), ~3% salt and minor ingredients, ~23% water. The shares are confidence-2 estimates, corrected on 2026-10-06 (flour raised from 62% to 68% after a calories check). Corn tortillas are a separate entry.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -2011,8 +2007,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "Plain corn flakes cereal, modelled from its ingredients: ~90% milled corn (1.45 kg of corn per kg of grits), ~4% sugar, ~4% malt, salt and vitamins, ~2% moisture. The shares are confidence-2 estimates from USDA's nutrition for Ralston Corn Flakes (a store-brand corn flakes; Kellogg's has no current FDC id). It's field corn, not sweet corn.\n\nProcessing emissions (1.0 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses covering cooking, toasting and packaging. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -2195,7 +2190,6 @@
             "composite",
             "processed",
             "nut-product",
-            "vegan",
             "common"
         ],
         "notes": "Smooth, salted peanut butter, modelled from its ingredients: ~90% peanuts (shelled kernels), ~4% sugar, ~3% palm oil, ~3% salt and minor ingredients. The shares are confidence-2 estimates; the US standard requires at least 90% peanuts. Crop impacts come from the peanut, cane sugar and palm oil entries.\n\nProcessing emissions (0.35 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
@@ -2367,7 +2361,6 @@
             "composite",
             "processed",
             "legume-product",
-            "vegan",
             "common"
         ],
         "notes": "Commercial hummus, modelled from its ingredients: ~55% cooked chickpeas, ~7% tahini (sesame), ~4% olive oil, ~4% lemon juice, ~1% garlic, ~1% salt, ~28% water. The shares are confidence-2 estimates and were corrected on 2026-10-06: the first version had 12% tahini and 8% olive oil, which gave 2.24 kcal/g of ingredients against USDA's 1.66; the new mix gives ~1.65. Crop impacts come from the chickpea, sesame, olive oil, lemon and garlic entries.\n\nProcessing emissions (0.3 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
@@ -2581,8 +2574,7 @@
         "tags": [
             "composite",
             "processed",
-            "sweetener",
-            "vegan"
+            "sweetener"
         ],
         "notes": "Light brown sugar, modelled as refined white sugar (96.5%) plus molasses (3.5%). Crop impacts come from the cane sugar and molasses entries; molasses is a by-product that carries only a value share of the cane field, so adding it barely changes the footprint. Nutrition is USDA brown sugar.\n\nProcessing emissions (0.05 kg CO2e/kg) and water (0.5 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -2692,8 +2684,7 @@
         "tags": [
             "composite",
             "processed",
-            "sweetener",
-            "vegan"
+            "sweetener"
         ],
         "notes": "High-fructose corn syrup (the common soft-drink and processed-food sweetener), modelled as 71% sugar solids from corn plus 29% water. Each kg of sugar solids takes ~1.23 kg of corn-equivalent: Mekonnen & Hoekstra's starch-to-maize water ratio (1.37), which already includes the value split with corn oil, gluten meal and feed, divided by 1.11 for the weight gained when starch becomes glucose. Crop impacts (land, water, pesticides, farm emissions) come from the corn entry. Nutrition is USDA's high-fructose corn syrup; light and dark corn syrup are different products.\n\nProcessing emissions (0.7 kg CO2e/kg) and water (5 L/kg) are confidence-1 guesses. Availability comes from corn's supply.",
         "nutrition": [
@@ -2817,7 +2808,6 @@
             "composite",
             "processed",
             "grain-product",
-            "vegan",
             "common"
         ],
         "notes": "Commercial whole-wheat sandwich bread, modelled from its ingredients: ~60% whole-wheat flour (1.0 kg of wheat per kg of flour, since the bran is kept), ~4% sugar, ~2% soybean oil, ~3% salt, yeast and gluten, ~31% water. The shares are confidence-2 estimates, checked against USDA's calories and protein. Because the bran stays in, whole-wheat bread needs less wheat per kg than white bread. Crop impacts come from the wheat, sugar and soybean oil entries.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
@@ -3016,8 +3006,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "Plain oat cereal (Cheerios-style rings), modelled from its ingredients: ~80% whole-grain oats and oat flour, ~10% modified corn starch, ~3.5% sugar, ~3% salt, minerals and vitamins, ~3.5% moisture. The shares are confidence-2 estimates from the ingredient order on the box and USDA's nutrition for General Mills Cheerios. Crop impacts come from the oats, corn and cane sugar entries.\n\nProcessing emissions (1.0 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
         "nutrition": [
@@ -3227,8 +3216,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "Plain brown-rice cakes, modelled as ~94% brown rice (puffed), ~1% salt and ~5% moisture. Rice is entered through the rice entry's cooked basis (2.8 kg per kg of dry rice), so a kg of cakes carries about 2.6 kg of cooked-rice footprint; that high number is real because rice is a high-emission crop and a rice cake is nearly all dry grain. The rice entry is white milled rice, so brown rice is slightly understated.\n\nProcessing emissions (0.5 kg CO2e/kg) and water (1 L/kg) are confidence-1 guesses. Availability comes from rice's supply.",
         "nutrition": [
@@ -3396,8 +3384,7 @@
         "tags": [
             "composite",
             "processed",
-            "grain-product",
-            "vegan"
+            "grain-product"
         ],
         "notes": "Corn tortillas (ready-to-bake or -fry), modelled from their ingredients: ~50% corn solids (1.1 kg of corn per kg of masa, after nixtamalisation losses), ~47% water, ~3% lime, salt and preservatives. The shares are confidence-2 estimates. Crop impacts come from the corn entry. Flour tortillas are a separate entry.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (5 L/kg) are confidence-1 guesses. Availability comes from corn's supply.",
         "nutrition": [
@@ -3565,7 +3552,6 @@
         "tags": [
             "composite",
             "processed",
-            "vegan",
             "common"
         ],
         "notes": "Dark chocolate (70–85% cacao), modelled as ~70% cocoa mass (nibs and cocoa butter), ~28% sugar and ~2% lecithin and vanilla. Cocoa mass emissions (~63.2 kg CO2e/kg) were derived from Poore & Nemecek's dark chocolate value (46.65), so this entry reproduces that figure by construction; it is mostly land-use change from cocoa grown on cleared forest. Water and land come from the cocoa mass and cane sugar entries.\n\nMilk chocolate isn't modelled, because composites can't include animal ingredients. Processing emissions (1.5 kg CO2e/kg) and water (10 L/kg) are confidence-1 guesses. Availability comes from the ingredients' supply.",
@@ -3846,7 +3832,6 @@
             "composite",
             "processed",
             "beverage",
-            "vegan",
             "common"
         ],
         "notes": "Not-from-concentrate orange juice, modelled as 2.2 kg of oranges per kg of juice (juice is ~45% of the fruit's weight; educated estimate). All of the fruit's land, water, pesticides and emissions come from the orange entry; the by-product peel and pulp aren't given a share, which slightly overstates the juice. Nutrition is USDA raw orange juice.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (1.5 L/kg) are confidence-1 guesses. Availability comes from oranges' supply.",
@@ -3956,7 +3941,6 @@
             "processed",
             "beverage",
             "alcohol",
-            "vegan",
             "common"
         ],
         "notes": "Regular beer (~4.5% alcohol), modelled as ~15% malted barley (1.2 kg of barley per kg of malt) plus water. Crop impacts come from the barley entry. Hops, yeast and the glass or can are ignored apart from the packaging in the processing figure. Mekonnen & Hoekstra's own figure for beer is 298 L/kg of water, close to what this builds up to. Nutrition is USDA regular beer.\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from barley's supply.",
@@ -4082,7 +4066,6 @@
             "processed",
             "beverage",
             "alcohol",
-            "vegan",
             "common"
         ],
         "notes": "Red table wine, modelled as 1.4 kg of grapes per kg of wine. Crop impacts come from the grapes entry, which is for table grapes: its US spray rate (~95 kg/ha) is dominated by fumigants and sulphur, and wine grapes differ, so treat the pesticide side as rough. Nutrition is USDA red table wine (about 12–13% alcohol).\n\nProcessing emissions (0.6 kg CO2e/kg) and water (4 L/kg) are confidence-1 guesses. Availability comes from grapes' supply.",
@@ -4191,8 +4174,7 @@
             "composite",
             "processed",
             "beverage",
-            "milk",
-            "vegan"
+            "milk"
         ],
         "notes": "Canned coconut milk (the thick cooking kind, ~21% fat), modelled as ~62% coconut meat plus water. The coconut meat entry carries the land, water and emissions (its own water and emissions are weak, confidence 2). The recipe is a confidence-2 estimate from USDA's fat, calorie and protein figures. The thinner carton 'coconut milk beverage' is a different product (about 2% fat) and isn't modelled.\n\nProcessing emissions (0.4 kg CO2e/kg) and water (2 L/kg) are confidence-1 guesses. Availability comes from coconut's supply.",
         "nutrition": [
@@ -4315,6 +4297,762 @@
                     "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
                     "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
                     "note": "EDUCATED GUESS (confidence 1, not a measured value): Coconut Milk (Canned) — processing_water_per_kg: ~2 L/kg of factory water is a rough guess (confidence 1)."
+                }
+            }
+        ]
+    },
+    {
+        "id": 215,
+        "slug": "oat-milk-ice-cream",
+        "name": "Oat Milk Ice Cream (Oatly Vanilla)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "dessert",
+            "ice-cream",
+            "oat",
+            "vegan"
+        ],
+        "notes": "Oatly's Vanilla oatmilk frozen dessert (US pint), modelled from its ingredients: oats (the oatmilk), coconut oil, canola oil, sugar and corn-derived dextrose/glucose syrup. The shares are confidence-2 estimates checked against the label's fat, sat fat, sugar and calories (the recipe reproduces ~215 kcal vs 220).\n\nThe label gives no gram weight for the 2/3 cup serving, so ~100 g is assumed for per-gram nutrition. Processing emissions (0.7 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses. Own availability (a confidence-1 guess of a low figure) is blended with the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.2,
+                    "fat": 0.13,
+                    "sat_fat": 0.08,
+                    "protein": 0.01,
+                    "fiber": 0.0,
+                    "sodium": 0.5,
+                    "carbs": 0.24,
+                    "sugar": 0.19,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "iron": 0.0,
+                    "potassium": 0.3,
+                    "calcium": 0.0
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 541,
+                    "url": "https://hannaford.com/groceries/frozen/ice-cream-frozen-treats/dairy-free-ice-cream-frozen-desserts/oatly-non-dairy-vegan-vanilla-frozen-dessert-1-pint.html",
+                    "title": "Oatly Non-Dairy Vegan Vanilla Frozen Dessert — Nutrition Facts label (per 2/3 cup)",
+                    "note": "Oatly Oatmilk Vanilla Frozen Dessert — label per 2/3 cup serving: 220 kcal, fat 13 g, sat fat 8 g, carbs 24 g, sugars 19 g (all added), fiber 0 g, protein 1 g, sodium 50 mg, potassium 30 mg, calcium 0 mg, iron 0 mg. The serving's gram weight isn't on retailer pages; ~100 g is assumed, so per-gram values are label ÷ 100 (a 90–105 g serving would shift them ~±5%). Vitamins and other minerals aren't on the label and are left out."
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.00014,
+                    "threonine": 0.00034,
+                    "isoleucine": 0.00042,
+                    "leucine": 0.00077,
+                    "lysine": 0.00042,
+                    "methionine": 0.00019,
+                    "cystine": 0.00024,
+                    "phenylalanine": 0.00054,
+                    "tyrosine": 0.00034,
+                    "valine": 0.00056,
+                    "arginine": 0.00071,
+                    "histidine": 0.00024,
+                    "alanine": 0.00053,
+                    "aspartic_acid": 0.00087,
+                    "glutamic_acid": 0.00222,
+                    "glycine": 0.0005,
+                    "proline": 0.00056,
+                    "serine": 0.00045
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 541,
+                    "url": "https://hannaford.com/groceries/frozen/ice-cream-frozen-treats/dairy-free-ice-cream-frozen-desserts/oatly-non-dairy-vegan-vanilla-frozen-dessert-1-pint.html",
+                    "title": "Oatly Non-Dairy Vegan Vanilla Frozen Dessert — Nutrition Facts label (per 2/3 cup)",
+                    "note": "Amino acids — computed from the oats entry's profile (the only real protein source), scaled to the label's 1 g protein per 100 g; confidence 2."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "oats",
+                "fraction": [
+                    {
+                        "value": 0.06,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Oats ~6% (the 'oatmilk' base); this alone gives the label's ~1 g protein and a few g of starch."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "coconut-oil",
+                "fraction": [
+                    {
+                        "value": 0.09,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Coconut oil ~9%: 8 g sat fat per serving is almost all coconut oil."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "canola-oil",
+                "fraction": [
+                    {
+                        "value": 0.04,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Low-erucic rapeseed oil (canola) ~4%: the rest of the 13 g fat."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.12,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Sugar ~12%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "corn",
+                "fraction": [
+                    {
+                        "value": 0.07,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Dextrose and dried glucose syrup ~7% combined (both made from corn starch). Together with the sugar this gives the label's 19 g added sugar."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 1.23,
+                        "confidence": 2,
+                        "source": {
+                            "id": 71,
+                            "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                            "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                            "note": "Corn per kg of syrup/dextrose: same factor as this dataset's corn syrup entry (1.23 kg corn per kg)."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "emulsifier, gums, flavor, salt and vanilla",
+                "fraction": [
+                    {
+                        "value": 0.01,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Mono/diglycerides, gums, flavor, salt, ground vanilla: ~1%, no crop footprint counted."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.61,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oatly Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Water ~61% (what's left; ice creams are ~60% water)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.7,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Milk Ice Cream (Oatly Vanilla) — processing_emissions_per_kg: churning, freezing, packaging and cold storage; no published figure for non-dairy frozen desserts was found, so ~0.7 kg CO2e/kg is a rough guess."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 3.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Milk Ice Cream (Oatly Vanilla) — processing_water_per_kg: ~3 L/kg of factory and cleaning water is a rough guess."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Milk Ice Cream (Oatly Vanilla) — availability_gg (product's own): no published sales volume found, so ~1 Gg (about 4 million pints) a year for Oatly frozen desserts in the US is an assumed low figure. The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 216,
+        "slug": "cashew-milk-ice-cream",
+        "name": "Cashew Milk Ice Cream (So Delicious Vanilla)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "dessert",
+            "ice-cream",
+            "vegan"
+        ],
+        "notes": "So Delicious Dairy Free Very Vanilla cashewmilk frozen dessert (US pint), modelled from its ingredients: cashews (the cashewmilk), coconut oil, cane sugar, tapioca syrup and a little pea protein. The shares are confidence-2 estimates checked against the label's fat, sat fat, sugar and calories (the recipe gives ~200 kcal vs 210). Cashews are only ~5% by weight, so most of the footprint is the coconut oil and sugar.\n\nThe tapioca-syrup-to-cassava factor (2 kg per kg) is a confidence-1 guess. Processing emissions (0.7 kg CO2e/kg) and water (3 L/kg) are confidence-1 guesses. Own availability (a confidence-1 guess of a low figure) is blended with the ingredients' supply.",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 2.01923,
+                    "fat": 0.11538,
+                    "sat_fat": 0.08654,
+                    "protein": 0.00962,
+                    "fiber": 0.0,
+                    "sodium": 1.20192,
+                    "carbs": 0.23077,
+                    "sugar": 0.19231,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "iron": 0.00481,
+                    "potassium": 0.52885,
+                    "calcium": 0.04808
+                },
+                "confidence": 5,
+                "source": {
+                    "id": 542,
+                    "url": "https://stopandshop.com/groceries/frozen/ice-cream-frozen-treats/dairy-free-ice-cream-frozen-desserts/so-delicious-dairy-free-very-vanilla-cashewmilk-frozen-dessert-1-pint.html",
+                    "title": "So Delicious Dairy Free Very Vanilla Cashewmilk Frozen Dessert — Nutrition Facts label (per 2/3 cup)",
+                    "note": "So Delicious Very Vanilla Cashewmilk Frozen Dessert — label per 2/3 cup serving (~104 g): 210 kcal, fat 12 g, sat fat 9 g, cholesterol 0 mg, carbs 24 g, sugars 20 g (19 g added), fiber 0 g, protein 1 g, sodium 125 mg, calcium ~5 mg, iron 0.5 mg, potassium ~55 mg. Retailer listings differ slightly (200–210 kcal, 1–2 g protein); the most common values are used. Per-gram values are label ÷ 104. Vitamins and other minerals aren't on the label and are left out. Protein is under 1 g per 100 g, so no amino acid entry."
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "cashews",
+                "fraction": [
+                    {
+                        "value": 0.05,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Cashews ~5% (the 'cashewmilk' base): gives ~2 g fat and the label's ~1 g protein."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "coconut-oil",
+                "fraction": [
+                    {
+                        "value": 0.1,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Coconut oil ~10%: the label's 9 g sat fat is almost all coconut oil."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.13,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Cane sugar ~13%."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cassava",
+                "fraction": [
+                    {
+                        "value": 0.065,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Organic tapioca syrup ~6.5% (cassava starch converted to syrup). With the cane sugar this gives the label's ~20 g sugar."
+                        }
+                    }
+                ],
+                "base_kg_per_kg": [
+                    {
+                        "value": 2.0,
+                        "confidence": 1,
+                        "source": {
+                            "id": 71,
+                            "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                            "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                            "note": "Rough guess: cassava roots are ~35% starch and the syrup is ~80% solids, so ~2 kg cassava per kg syrup."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "pea-protein",
+                "fraction": [
+                    {
+                        "value": 0.01,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Pea protein: listed under 2%, ~1% assumed."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "salt, gums, vanilla and flavor",
+                "fraction": [
+                    {
+                        "value": 0.01,
+                        "confidence": 1,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Sea salt, gums, vanilla extract, natural flavor: ~1%, no crop footprint counted."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": null,
+                "label": "water",
+                "fraction": [
+                    {
+                        "value": 0.635,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "So Delicious Very Vanilla — recipe: estimated from the label's ingredient order and checked against its fat, saturated fat, sugar and calorie figures; labels give order, not amounts. Water ~63.5% (what's left)."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.7,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cashew Milk Ice Cream (So Delicious Vanilla) — processing_emissions_per_kg: churning, freezing, packaging and cold storage; no published figure for non-dairy frozen desserts was found, so ~0.7 kg CO2e/kg is a rough guess."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 3.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cashew Milk Ice Cream (So Delicious Vanilla) — processing_water_per_kg: ~3 L/kg of factory and cleaning water is a rough guess."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 2.0,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Cashew Milk Ice Cream (So Delicious Vanilla) — availability_gg (product's own): no published sales volume found, so ~2 Gg (about 8 million pints) a year for So Delicious cashewmilk frozen desserts is an assumed low figure. The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 217,
+        "slug": "almond-milk-sweetened",
+        "name": "Almond Milk (Sweetened)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "milk",
+            "vegan"
+        ],
+        "notes": "Almond Milk (Unsweetened) plus about 7 g of added cane sugar per cup, modelled as 97.1% Almond Milk (Unsweetened) and 2.9% cane sugar. Nutrition is the unsweetened entry plus the sugar. Cross-checked against Almond Breeze Original: 60 kcal, 7 g sugar (7 g added), 150 mg sodium, 450 mg calcium per cup (older label; newer one says 50 kcal, 6 g added); this recipe gives ~62 kcal per 245 g cup.\n\nProcessing emissions and water are 0 here because the base milk's figures already cover processing, packaging and retail. Assumed ~1/3 of the almond milk market is sweetened (~1,400 Gg of the ~4,200 Gg estimate).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.25361,
+                    "fat": 0.01185,
+                    "sat_fat": 0.00101,
+                    "protein": 0.00539,
+                    "fiber": 0.0,
+                    "sodium": 0.57901,
+                    "carbs": 0.03227,
+                    "sugar": 0.02894,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.39811,
+                    "vitamin_d": 0.00903,
+                    "vitamin_e": 0.03224,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.0033,
+                    "vitamin_b6": 0.0,
+                    "calcium": 1.68012,
+                    "iron": 0.00283,
+                    "magnesium": 0.06603,
+                    "potassium": 0.30159,
+                    "zinc": 0.00165,
+                    "phosphorus": 0.2913,
+                    "selenium": 0.0,
+                    "ala": 1e-05,
+                    "epa_dha": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 543,
+                    "url": "https://stopandshop.com/groceries/dairy-eggs/milk/plant-based-milk/almond-breeze-original-almondmilk-12-gallon.html",
+                    "title": "Almond Breeze Original Almondmilk — Nutrition Facts label (per 1 cup)",
+                    "note": "Almond Milk (Sweetened) — derived: 97.1% Almond Milk (Unsweetened) nutrition (USDA FDC Foundation Foods, same record as that entry) plus 2.9% cane sugar (USDA FDC 169655), per gram. Cross-checked against Almond Breeze Original: 60 kcal, 7 g sugar (7 g added), 150 mg sodium, 450 mg calcium per cup (older label; newer one says 50 kcal, 6 g added); this recipe gives ~62 kcal per 245 g cup."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_c": 0.0,
+                    "vitamin_k": 0.0
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 480,
+                    "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 170567: Nuts, almonds",
+                    "note": "Almond Milk (Unsweetened) — stand-in values: USDA's almond milk record (1999631) doesn't report vitamins C or K. Almond milk is mostly water with ~2–3% almonds, and USDA reports 0 vitamin C and 0 vitamin K for almonds themselves, so both are taken as 0. Per 100 g: vitamin c 0 mg, vitamin k 0 µg; divided by 100 for per-gram values. Only fills values missing from the main entries. [Sweetened version: values scaled by 0.971 (97.1% of the unsweetened milk; the added sugar contributes none).]"
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 5.31e-05,
+                    "threonine": 0.0001514,
+                    "isoleucine": 0.0001892,
+                    "leucine": 0.0003709,
+                    "lysine": 0.000143,
+                    "methionine": 3.95e-05,
+                    "cystine": 5.41e-05,
+                    "phenylalanine": 0.0002851,
+                    "tyrosine": 0.0001133,
+                    "valine": 0.0002153,
+                    "arginine": 0.0006208,
+                    "histidine": 0.0001357,
+                    "alanine": 0.0002516,
+                    "aspartic_acid": 0.0006646,
+                    "glutamic_acid": 0.0015633,
+                    "glycine": 0.0003599,
+                    "proline": 0.000244,
+                    "serine": 0.0002296
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The almond entry's amino acid profile, scaled to the almond milk's protein. Scaled from the almonds entry: mg per g of protein x 0.56 g per 100 g ÷ 1000. [Sweetened version: values scaled by 0.971 (97.1% of the unsweetened milk; the added sugar contributes none).]"
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "almond-milk",
+                "fraction": [
+                    {
+                        "value": 0.971,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Almond Milk (Sweetened) — recipe: Almond Milk (Unsweetened) is the base of the product; its land, water and emissions come from that entry."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.029,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Almond Milk (Sweetened) — recipe: Added cane sugar ~2.9% = ~7 g of added sugar per 240 mL cup (~245 g), typical for sweetened/original plant milks."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Almond Milk (Sweetened) — processing_emissions_per_kg: 0, because the Almond Milk (Unsweetened) entry's emissions already include processing, packaging and retail; adding sugar to the carton is negligible."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 0.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Almond Milk (Sweetened) — processing_water_per_kg: 0, because the Almond Milk (Unsweetened) entry's water already covers processing."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 1400,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Almond Milk (Sweetened) — availability_gg (product's own): Assumed ~1/3 of the almond milk market is sweetened (~1,400 Gg of the ~4,200 Gg estimate). The pipeline blends this with the ingredients' world supply."
+                }
+            }
+        ]
+    },
+    {
+        "id": 218,
+        "slug": "oat-milk-sweetened",
+        "name": "Oat Milk (Sweetened)",
+        "type": "plant",
+        "category": "composites",
+        "human_food": 1,
+        "tags": [
+            "composite",
+            "processed",
+            "beverage",
+            "milk",
+            "vegan"
+        ],
+        "notes": "Oat Milk (Unsweetened) plus about 7 g of added cane sugar per cup, modelled as 97.1% Oat Milk (Unsweetened) and 2.9% cane sugar. Nutrition is the unsweetened entry plus the sugar. No single brand is modelled: 7 g of added sugar per cup is a typical figure, and it comes on top of the sugars oat milk already has from enzyme-treated oats.\n\nProcessing emissions and water are 0 here because the base milk's figures already cover processing, packaging and retail. Assumed ~1/3 of the oat milk market is sweetened (~500 Gg of the ~1,500 Gg estimate).",
+        "nutrition": [
+            {
+                "value": {
+                    "calories": 0.58151,
+                    "fat": 0.0267,
+                    "sat_fat": 0.00291,
+                    "protein": 0.00777,
+                    "fiber": 0.0,
+                    "sodium": 0.40811,
+                    "carbs": 0.07852,
+                    "sugar": 0.05147,
+                    "cholesterol": 0.0,
+                    "trans_fat": 0.0,
+                    "vitamin_a": 0.82535,
+                    "vitamin_d": 0.01651,
+                    "vitamin_k": 0.00388,
+                    "folate": 0.0,
+                    "vitamin_b12": 0.00495,
+                    "vitamin_b6": 6e-05,
+                    "calcium": 1.43737,
+                    "iron": 0.00254,
+                    "magnesium": 0.05729,
+                    "potassium": 1.43766,
+                    "zinc": 0.00088,
+                    "phosphorus": 0.86419,
+                    "selenium": 0.0
+                },
+                "confidence": 3,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Oat Milk (Sweetened) — derived: 97.1% Oat Milk (Unsweetened) nutrition (USDA FDC Foundation Foods, same record as that entry) plus 2.9% cane sugar (USDA FDC 169655), per gram. No single brand is modelled: 7 g of added sugar per cup is a typical figure, and it comes on top of the sugars oat milk already has from enzyme-treated oats."
+                }
+            },
+            {
+                "value": {
+                    "vitamin_e": 0.0046606,
+                    "ala": 0.0024389,
+                    "epa_dha": 0.0,
+                    "vitamin_c": 0.0
+                },
+                "confidence": 1,
+                "source": {
+                    "id": 487,
+                    "url": "https://fdc.nal.usda.gov/food-details/172336/nutrients",
+                    "title": "USDA FoodData Central — SR Legacy 172336: Oil, canola (used to estimate oat milk's vitamin E and ALA)",
+                    "note": "Oat Milk (Unsweetened) — GUESS. USDA's oat milk record (2257046) doesn't report vitamins C or E or any omega-3. Most of oat milk's fat (2.749 g per 100 g) is added rapeseed (canola) oil, so vitamin E and ALA are that fat times USDA canola oil's values (17.46 mg vitamin E and 9.137 g ALA per 100 g oil). EPA/DHA is 0 because no ingredient is from fish or algae. Vitamin C is 0 because oats have none (USDA oats 169705) and none is added. Per 100 g: vitamin e 0.48 mg, ala 0.2512 g, epa dha 0 mg, vitamin c 0 mg; divided by 100 for per-gram values. Some oat milks use sunflower oil instead, which has more vitamin E and almost no ALA. Only fills values missing from the main entries. [Sweetened version: values scaled by 0.971 (97.1% of the unsweetened milk; the added sugar contributes none).]"
+                }
+            },
+            {
+                "value": {
+                    "tryptophan": 0.0001088,
+                    "threonine": 0.0002674,
+                    "isoleucine": 0.0003229,
+                    "leucine": 0.0005973,
+                    "lysine": 0.0003261,
+                    "methionine": 0.0001452,
+                    "cystine": 0.0001897,
+                    "phenylalanine": 0.0004163,
+                    "tyrosine": 0.0002665,
+                    "valine": 0.0004359,
+                    "arginine": 0.0005544,
+                    "histidine": 0.0001884,
+                    "alanine": 0.0004098,
+                    "aspartic_acid": 0.0006736,
+                    "glutamic_acid": 0.0017264,
+                    "glycine": 0.0003912,
+                    "proline": 0.0004344,
+                    "serine": 0.0003489
+                },
+                "confidence": 2,
+                "source": {
+                    "id": 1,
+                    "url": "https://fdc.nal.usda.gov/",
+                    "title": "USDA FoodData Central",
+                    "note": "Amino acids — The oats entry's amino acid profile, scaled to the oat milk's protein (oat milk protein is oat protein). Scaled from the oats entry: mg per g of protein x 0.80 g per 100 g ÷ 1000. [Sweetened version: values scaled by 0.971 (97.1% of the unsweetened milk; the added sugar contributes none).]"
+                }
+            }
+        ],
+        "ingredients": [
+            {
+                "food_slug": "oat-milk",
+                "fraction": [
+                    {
+                        "value": 0.971,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Milk (Sweetened) — recipe: Oat Milk (Unsweetened) is the base of the product; its land, water and emissions come from that entry."
+                        }
+                    }
+                ]
+            },
+            {
+                "food_slug": "cane-sugar",
+                "fraction": [
+                    {
+                        "value": 0.029,
+                        "confidence": 2,
+                        "source": {
+                            "id": 1,
+                            "url": "https://fdc.nal.usda.gov/",
+                            "title": "USDA FoodData Central",
+                            "note": "Oat Milk (Sweetened) — recipe: Added cane sugar ~2.9% = ~7 g of added sugar per 240 mL cup (~245 g), typical for sweetened/original plant milks."
+                        }
+                    }
+                ]
+            }
+        ],
+        "processing_emissions_per_kg": [
+            {
+                "value": 0.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Oat Milk (Sweetened) — processing_emissions_per_kg: 0, because the Oat Milk (Unsweetened) entry's emissions already include processing, packaging and retail; adding sugar to the carton is negligible."
+                }
+            }
+        ],
+        "processing_water_per_kg": [
+            {
+                "value": 0.0,
+                "confidence": 2,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "Oat Milk (Sweetened) — processing_water_per_kg: 0, because the Oat Milk (Unsweetened) entry's water already covers processing."
+                }
+            }
+        ],
+        "availability_gg": [
+            {
+                "value": 500,
+                "confidence": 1,
+                "source": {
+                    "id": 71,
+                    "url": "https://ourworldindata.org/grapher/ghg-per-kg-poore",
+                    "title": "Our World in Data — GHG Emissions per kg of Food (Poore & Nemecek 2018)",
+                    "note": "EDUCATED GUESS (confidence 1, not a measured value): Oat Milk (Sweetened) — availability_gg (product's own): Assumed ~1/3 of the oat milk market is sweetened (~500 Gg of the ~1,500 Gg estimate). The pipeline blends this with the ingredients' world supply."
                 }
             }
         ]
