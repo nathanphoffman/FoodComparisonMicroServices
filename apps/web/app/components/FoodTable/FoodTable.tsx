@@ -28,6 +28,7 @@ import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './Food
 import { Modal } from '../Modals/Modal';
 import { DietExplainer } from './DietExplainer';
 import { DietImpact } from './DietImpact';
+import { AVERAGE_DIET_SLUG, averageDietInput } from './FoodTableAverageDiet';
 import { NutritionDetailContent } from './Tooltips/NutritionTooltip';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import type { FigureKey } from './FoodDetail/FoodDetailFigures';
@@ -58,13 +59,17 @@ export function FoodTable() {
         [],
     );
 
-    // The diet's total calories per day, for the whole-diet % daily values in its nutrition tooltip
     // Whose recommended intakes the tooltips measure vitamins and minerals against
     const [nutrientStandard, setNutrientStandard] = useState<NutrientStandard>(DEFAULT_NUTRIENT_STANDARD);
     const foodSlugs = useMemo(() => new Set(rawFoods.map(food => food.slug)), [rawFoods]);
     const [showDiet, setShowDiet] = useState(false);
     const closeDiet = useCallback(() => setShowDiet(false), []);
+    // The diet's total calories per day, size and activity, for the whole-diet numbers in its tooltip
     const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
+
+    // The hidden benchmark diet is scored alongside the user's, but never shown as a table row
+    const averageDiet = useMemo(() => foodSlugs.size > 0 ? averageDietInput(foodSlugs) : null, [foodSlugs]);
+    const scoredCustomFoods = useMemo(() => averageDiet ? [...customFoods, averageDiet] : customFoods, [customFoods, averageDiet]);
 
     // Combined nutrition for the custom foods' tooltips
     const customNutrition = useMemo(() => new Map(
@@ -72,7 +77,7 @@ export function FoodTable() {
     ), [customFoods, rawFoods]);
 
     // WASM scoring — scored rows contain all scores, breakdowns, and divisors
-    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues, customFoods);
+    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues, scoredCustomFoods);
     const dismissScoringError = useCallback(() => setScoringError(null), [setScoringError]);
 
     // Sort state
@@ -225,6 +230,8 @@ export function FoodTable() {
                             unit={unit}
                             dailyCalories={dietSettings?.calories ?? null}
                             caloriesPerGram={customNutrition.get('your-diet')?.calories ?? null}
+                            benchmark={scored.get(AVERAGE_DIET_SLUG) ?? null}
+                            benchmarkRawLandM2PerKg={averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, slug => scored.get(slug)?.land_use_detail.rawM2PerKg) : null}
                             rawLandM2PerKg={customFoodsBySlug['your-diet'] ? blendLandM2PerKg(customFoodsBySlug['your-diet'], rawFoods, slug => scored.get(slug)?.land_use_detail.rawM2PerKg) : null}
                         />
                     )}
