@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Slider } from '../Inputs/Slider';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
-import type { CustomFoodBasis, CustomFoodInput } from './FoodTableTypes';
+import type { CustomFoodBasis, CustomFoodInput, Micronutrients, MicronutrientKey } from './FoodTableTypes';
+import { absorptionMultiplier, DEFAULT_MEALS_PER_DAY, MAX_MEALS_PER_DAY, MIN_MEALS_PER_DAY, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
 import { MIN_RDA_AGE, type DietSettings, type Sex } from './FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
@@ -13,7 +14,7 @@ type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
 // calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
 // (all null until entered).
-type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null };
+type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; mealsPerDay: number };
 
 const DAYS_PER_WEEK = 7;
 
@@ -42,7 +43,7 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null };
+    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, mealsPerDay: DEFAULT_MEALS_PER_DAY };
     try {
         const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
         if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
@@ -51,6 +52,7 @@ function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
             calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
             sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
             age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
+            mealsPerDay: Number.isFinite(parsed.mealsPerDay) && (parsed.mealsPerDay ?? 0) > 0 ? parsed.mealsPerDay : DEFAULT_MEALS_PER_DAY,
             weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
             // Drop foods that no longer exist.
             ingredients: parsed.ingredients
@@ -70,15 +72,13 @@ function save(storageKey: string, value: Saved) {
     }
 }
 
-const settingsOf = ({ calorieTarget, sex, age, weightLb }: Saved): DietSettings => ({ calories: calorieTarget, sex, age, weightLb });
-
 // ── Component ─────────────────────────────────────────────────────────────────
 
 type Props = {
     slug: string;
     name: string;
     storageKey: string;
-    foods: { slug: string; name: string; calories?: number }[];
+    foods: { slug: string; name: string; calories?: number; micronutrients?: Micronutrients | null }[];
     /** Shows a total calories / day field and each food's calories per day and week. */
     showCalories?: boolean;
     /** Reports the daily calories, sex and age once typing settles (and once on load). */
@@ -105,6 +105,31 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     });
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
+    // The share of each absorption-limited nutrient that still counts, from each food's daily amount and meals per day.
+    function settingsOf(state: Saved): DietSettings {
+        const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb };
+        if (!state.calorieTarget) return base;
+        const shares = toPercents(state.ingredients);
+        const weights = state.ingredients.map((ing, i) => state.basis === 'calories' ? shares[i] : shares[i] * (foods.find(f => f.slug === ing.slug)?.calories ?? 0));
+        const total = weights.reduce((sum, weight) => sum + weight, 0);
+        if (total <= 0) return base;
+        const all: Partial<Record<MicronutrientKey, number>> = {};
+        const counted: Partial<Record<MicronutrientKey, number>> = {};
+        state.ingredients.forEach((ing, i) => {
+            const food = foods.find(f => f.slug === ing.slug);
+            if (!food?.calories || !food.micronutrients) return;
+            const grams = (weights[i] / total) * state.calorieTarget! / food.calories;
+            for (const key of ABSORPTION_NUTRIENTS) {
+                const daily = (food.micronutrients[key] ?? 0) * grams;
+                all[key] = (all[key] ?? 0) + daily;
+                counted[key] = (counted[key] ?? 0) + daily * absorptionMultiplier(key, daily, state.mealsPerDay);
+            }
+        });
+        const absorption: Partial<Record<MicronutrientKey, number>> = {};
+        for (const key of ABSORPTION_NUTRIENTS) if ((all[key] ?? 0) > 0) absorption[key] = counted[key]! / all[key]!;
+        return { ...base, absorption };
+    }
+
     const debouncedSettings = useDebouncedCallback((next: Saved) => onSettingsChange?.(settingsOf(next)), DEBOUNCE_MS);
     const debouncedSettle    = useDebouncedCallback((next: Saved) => {
         setSettled(next);
@@ -133,6 +158,14 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
         setSaved(next);
         save(storageKey, next);
         debouncedSettle(next);
+        debouncedSettings(next);
+    }
+
+    // How many meals a day the foods are spread over; only the whole-diet tooltip numbers change, so no rescoring.
+    function setMeals(mealsPerDay: number) {
+        const next = { ...saved, mealsPerDay };
+        setSaved(next);
+        save(storageKey, next);
         debouncedSettings(next);
     }
 
@@ -259,6 +292,14 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
                             className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white w-20"
                         />
                     </label>
+                </div>
+            )}
+            {showCalories && (
+                <div className="flex items-center gap-3 text-sm text-neutral-700" title="Meals a day you're guaranteed to eat the foods on this list. Fewer meals puts more of the B12, calcium and vitamin C into a single meal than your body can absorb, which lowers the whole-diet % daily need.">
+                    <span className="shrink-0">Meals / day: {saved.mealsPerDay.toFixed(1)}</span>
+                    <div className="flex-1 min-w-0">
+                        <Slider min={MIN_MEALS_PER_DAY} max={MAX_MEALS_PER_DAY} step={0.1} value={saved.mealsPerDay} onChange={setMeals} />
+                    </div>
                 </div>
             )}
             <div className="flex gap-2 items-center">

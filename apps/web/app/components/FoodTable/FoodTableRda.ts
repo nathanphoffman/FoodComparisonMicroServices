@@ -4,7 +4,12 @@ import { MICRONUTRIENT_INFO } from './FoodTableCalculations';
 export type Sex = 'male' | 'female';
 
 /** What the diet row's tooltip needs to turn amounts into the user's own whole-diet % of need. */
-export type DietSettings = { calories: number | null; sex: Sex | null; age: number | null; weightLb: number | null };
+// absorption is the share of each absorption-limited nutrient (B12, calcium, vitamin C) that still counts given how
+// many meals a day each food is eaten in (1 = no loss); missing nutrients count fully.
+export type DietSettings = {
+    calories: number | null; sex: Sex | null; age: number | null; weightLb: number | null;
+    absorption?: Partial<Record<MicronutrientKey, number>>;
+};
 
 /** Protein need in g/day: the 0.8 g per kg of body weight adult RDA. */
 export const PROTEIN_G_PER_KG = 0.8;

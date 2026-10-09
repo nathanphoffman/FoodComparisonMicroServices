@@ -58,7 +58,7 @@ export function NutritionTooltip({ detail, diet, standard = DEFAULT_NUTRIENT_STA
                     {amount.toLocaleString(undefined, { maximumSignificantDigits: 3 })} {unit}
                     <span className="ml-2 inline-block w-10 text-right text-neutral-400">{(amount / needs[key] * 100).toFixed(0)}%</span>
                     {dayScale != null && (() => {
-                      const dayPercent = amount * dayScale / needs[key] * 100;
+                      const dayPercent = amount * dayScale * (diet?.absorption?.[key] ?? 1) / needs[key] * 100;
                       return <span className={`ml-1 inline-block w-14 text-right ${needColor(dayPercent)}`}>({dayPercent.toFixed(0)}%)</span>;
                     })()}
                   </>
