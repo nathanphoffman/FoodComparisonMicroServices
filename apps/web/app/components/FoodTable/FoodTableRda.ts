@@ -8,13 +8,12 @@ export type Sex = 'male' | 'female';
 // many meals a day each food is eaten in (1 = no loss); missing nutrients count fully.
 export type DietSettings = {
     calories: number | null; sex: Sex | null; age: number | null; weightLb: number | null;
+    /** Index into ACTIVITY_LEVELS; scales the protein need. */
+    activity?: number;
     absorption?: Partial<Record<MicronutrientKey, number>>;
 };
 
-/** Protein need in g/day: the 0.8 g per kg of body weight adult RDA. */
-export const PROTEIN_G_PER_KG = 0.8;
 const LB_PER_KG = 2.20462;
-export const proteinNeedGrams = (weightLb: number | null) => weightLb ? (weightLb / LB_PER_KG) * PROTEIN_G_PER_KG : null;
 
 export const MIN_RDA_AGE = 14;
 

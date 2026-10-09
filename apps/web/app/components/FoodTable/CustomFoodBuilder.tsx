@@ -5,6 +5,7 @@ import { Slider } from '../Inputs/Slider';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
 import type { CustomFoodBasis, CustomFoodInput, Micronutrients, MicronutrientKey } from './FoodTableTypes';
 import { absorptionMultiplier, mealsPerDayFor, DEFAULT_DAYS_BETWEEN, MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
+import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from './FoodTableTargets';
 import { MIN_RDA_AGE, type DietSettings, type Sex } from './FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
@@ -14,7 +15,7 @@ type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
 // calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
 // (all null until entered).
-type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number };
+type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number; activity: number };
 
 const DAYS_PER_WEEK = 7;
 
@@ -43,7 +44,7 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN };
+    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
     try {
         const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
         if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
@@ -52,6 +53,7 @@ function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
             calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
             sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
             age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
+            activity: Number.isInteger(parsed.activity) && parsed.activity >= 0 && parsed.activity < ACTIVITY_LEVELS.length ? parsed.activity : DEFAULT_ACTIVITY,
             daysBetween: Number.isFinite(parsed.daysBetween) && (parsed.daysBetween ?? 0) > 0 ? parsed.daysBetween : DEFAULT_DAYS_BETWEEN,
             weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
             // Drop foods that no longer exist.
@@ -109,7 +111,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
     // The share of each absorption-limited nutrient that still counts, from each food's daily amount and meals per day.
     function settingsOf(state: Saved): DietSettings {
-        const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb };
+        const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb, activity: state.activity };
         if (!state.calorieTarget) return base;
         const shares = toPercents(state.ingredients);
         const weights = state.ingredients.map((ing, i) => state.basis === 'calories' ? shares[i] : shares[i] * (foods.find(f => f.slug === ing.slug)?.calories ?? 0));
@@ -166,6 +168,13 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     // Longest gap between eating a food on the list; only the whole-diet tooltip numbers change, so no rescoring.
     function setDaysBetween(daysBetween: number) {
         const next = { ...saved, daysBetween };
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
+    function setActivity(activity: number) {
+        const next = { ...saved, activity };
         setSaved(next);
         save(storageKey, next);
         debouncedSettings(next);
@@ -313,6 +322,14 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
                     </span>
                     <div className="flex-1 min-w-0">
                         <Slider min={MIN_DAYS_BETWEEN} max={MAX_DAYS_BETWEEN} step={0.1} value={saved.daysBetween} onChange={setDaysBetween} />
+                    </div>
+                </div>
+            )}
+            {showCalories && (
+                <div className="flex items-center gap-3 text-sm text-neutral-700" title="Sets a protein floor per kg of body weight (needs your weight): modest exercise 1.0, moderately-heavy exercise 1.1, heavy exercise 1.2, athlete 1.6, extreme athlete 2.0 g/kg, from sports-nutrition position statements. General uses the standard's own value, which is for ordinary everyday life.">
+                    <span className="shrink-0 w-64">Activity level: {ACTIVITY_LEVELS[saved.activity].label}</span>
+                    <div className="flex-1 min-w-0">
+                        <Slider min={0} max={ACTIVITY_LEVELS.length - 1} step={1} value={saved.activity} onChange={setActivity} />
                     </div>
                 </div>
             )}

@@ -211,7 +211,7 @@ export function FoodTable() {
 
             {showDiet && customNutrition.get('your-diet') && (
                 <Modal title="Your Diet" onClose={closeDiet} wide>
-                    <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5">
+                    <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5 md:whitespace-nowrap">
                         <NutritionDetailContent detail={customNutrition.get('your-diet')!} diet={dietSettings} standard={nutrientStandard} />
                     </div>
                 </Modal>
