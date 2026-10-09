@@ -15,10 +15,11 @@ import { FoodTableToolbar } from './FoodTableToolbar';
 type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
     onCustomFoodChange:    (food: CustomFoodInput) => void;
+    onDietCaloriesChange:  (calories: number | null) => void;
     scoringError:          string | null;
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
-    foods: { slug: string; name: string }[];
+    foods: { slug: string; name: string; calories?: number }[];
     dataRegion: DataRegion;
     onDataRegionChange: (region: DataRegion) => void;
 };
@@ -27,6 +28,7 @@ type Props = {
 export const FoodTableInputs = memo(function FoodTableInputs({
     onSliderValuesChange,
     onCustomFoodChange,
+    onDietCaloriesChange,
     scoringError,
     onDismissScoringError,
     onActiveColsChange,
@@ -137,6 +139,8 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                             name={custom.name}
                             storageKey={custom.storageKey}
                             foods={foods}
+                            showCalories={custom.slug === 'your-diet'}
+                            onCalorieTargetChange={onDietCaloriesChange}
                             onChange={onCustomFoodChange}
                         />
                     </div>

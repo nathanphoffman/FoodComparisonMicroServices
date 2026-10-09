@@ -2,8 +2,11 @@ import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../FoodTableTypes';
 import { MICRONUTRIENT_INFO, aminoAcidProfile, nutritionScale } from '../FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
 
-export function NutritionTooltip({ detail, children }: { detail: NutritionDetail; children: React.ReactNode }) {
+// dailyCalories is the user's whole-day calories (diet row only). It scales the per-100-calorie
+// amounts up to the whole day, so 10% per 100 cal on a 2000 cal diet reads (200%).
+export function NutritionTooltip({ detail, dailyCalories, children }: { detail: NutritionDetail; dailyCalories?: number | null; children: React.ReactNode }) {
   const scale = nutritionScale(detail.calories);
+  const dayScale = dailyCalories ? dailyCalories / 100 : null;
   const micronutrients = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null);
   const aminoAcids = aminoAcidProfile(detail);
   return (
@@ -21,7 +24,7 @@ export function NutritionTooltip({ detail, children }: { detail: NutritionDetail
           <TooltipRow label="Protein" value={`${(detail.protein * scale).toFixed(1)} g`} />
         </TooltipSection>
         {micronutrients.length > 0 && (
-          <TooltipSection title="Vitamins, minerals & omega-3 (% daily value)">
+          <TooltipSection title={dayScale != null ? "Vitamins, minerals & omega-3 (% daily value per 100 cal, (whole diet))" : "Vitamins, minerals & omega-3 (% daily value)"}>
             {micronutrients.map(key => {
               const { label, unit, dailyValue, credit } = MICRONUTRIENT_INFO[key];
               const amount = detail.micronutrients![key]! * scale;
@@ -30,6 +33,7 @@ export function NutritionTooltip({ detail, children }: { detail: NutritionDetail
                   <>
                     {amount.toLocaleString(undefined, { maximumSignificantDigits: 3 })} {unit}
                     <span className="ml-2 inline-block w-10 text-right text-neutral-400">{(amount / dailyValue * 100).toFixed(0)}%</span>
+                    {dayScale != null && <span className="ml-1 inline-block w-14 text-right text-green-300">({(amount * dayScale / dailyValue * 100).toFixed(0)}%)</span>}
                   </>
                 } />
               );

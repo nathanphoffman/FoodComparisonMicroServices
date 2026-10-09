@@ -12,11 +12,11 @@ function NutritionScore({ score }: { score: number }) {
   );
 }
 
-export function NutritionScoreCell({ score, detail }: { score: number | null; detail: NutritionDetail }) {
+export function NutritionScoreCell({ score, detail, dailyCalories }: { score: number | null; detail: NutritionDetail; dailyCalories?: number | null }) {
   return (
     <Cell key="nutritionScore" align="right">
       {score != null
-        ? <NutritionTooltip detail={detail}><NutritionScore score={score} /></NutritionTooltip>
+        ? <NutritionTooltip detail={detail} dailyCalories={dailyCalories}><NutritionScore score={score} /></NutritionTooltip>
         : <EmptyValue />
       }
     </Cell>

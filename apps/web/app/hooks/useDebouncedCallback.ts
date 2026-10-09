@@ -1,6 +1,6 @@
 import { useRef, useCallback } from "react";
 
-export const DEBOUNCE_MS = 150;
+export const DEBOUNCE_MS = 500;
 
 // ── useDebouncedCallback ──────────────────────────────────────────────────────
 // Returns a stable debounced wrapper around `callback`. The latest `callback`

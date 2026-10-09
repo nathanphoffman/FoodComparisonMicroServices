@@ -53,6 +53,9 @@ export function FoodTable() {
         [],
     );
 
+    // The diet's total calories per day, for the whole-diet % daily values in its nutrition tooltip
+    const [dietCalories, setDietCalories] = useState<number | null>(null);
+
     // Combined nutrition for the custom foods' tooltips
     const customNutrition = useMemo(() => new Map(
         customFoods.map(custom => [custom.slug, blendNutritionDetail(custom, rawFoods)]),
@@ -135,7 +138,7 @@ export function FoodTable() {
                         switch (column.key) {
                             case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={setSelectedSlug} />;
                             case 'rank':           return <RankCell           key="rank"           rank={ranks.get(food.slug) ?? null} total={rankedCount} />;
-                            case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} />;
+                            case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} dailyCalories={food.slug === 'your-diet' ? dietCalories : null} />;
                             case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={scoredRow?.divisor ?? 1} />;
                             case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={scoredRow?.divisor ?? 1} unit={unit} />;
                             case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;
@@ -149,7 +152,7 @@ export function FoodTable() {
                 </Row>
             );
         })
-    ), [displayRows, scored, ranks, rankedCount, customNutrition, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
+    ), [displayRows, scored, ranks, rankedCount, customNutrition, dietCalories, activeCols, sliderValues, unit, greenWaterWeight, greyWaterWeight]);
     const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const DYNAMIC_LABELS: Partial<Record<ColConfig['key'], string>> = {
         emissions:    `CO₂e (kg / ${unit})`,
@@ -181,6 +184,7 @@ export function FoodTable() {
             <FoodTableInputs
                 onSliderValuesChange={setSliderValues}
                 onCustomFoodChange={handleCustomFoodChange}
+                onDietCaloriesChange={setDietCalories}
                 scoringError={scoringError}
                 onDismissScoringError={dismissScoringError}
                 onActiveColsChange={setActiveCols}
