@@ -26,6 +26,7 @@ import type { CustomFoodInput } from './FoodTableTypes';
 import { EMPTY_SENTIENT_HARM_DETAIL, CUSTOM_FOODS, customFoodStub, isCustomFoodSlug } from './FoodTableTypes';
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
 import { Modal } from '../Modals/Modal';
+import { DietExplainer } from './DietExplainer';
 import { NutritionDetailContent } from './Tooltips/NutritionTooltip';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import type { FigureKey } from './FoodDetail/FoodDetailFigures';
@@ -214,6 +215,7 @@ export function FoodTable() {
                     <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5 md:whitespace-nowrap">
                         <NutritionDetailContent detail={customNutrition.get('your-diet')!} diet={dietSettings} standard={nutrientStandard} />
                     </div>
+                    <DietExplainer />
                 </Modal>
             )}
 
