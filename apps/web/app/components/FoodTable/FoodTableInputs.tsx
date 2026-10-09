@@ -10,12 +10,13 @@ import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
 import type { Preset } from './FoodTablePresets';
+import type { DietSettings } from './FoodTableRda';
 import { FoodTableToolbar } from './FoodTableToolbar';
 
 type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
     onCustomFoodChange:    (food: CustomFoodInput) => void;
-    onDietCaloriesChange:  (calories: number | null) => void;
+    onDietSettingsChange:  (settings: DietSettings) => void;
     scoringError:          string | null;
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
@@ -28,7 +29,7 @@ type Props = {
 export const FoodTableInputs = memo(function FoodTableInputs({
     onSliderValuesChange,
     onCustomFoodChange,
-    onDietCaloriesChange,
+    onDietSettingsChange,
     scoringError,
     onDismissScoringError,
     onActiveColsChange,
@@ -140,7 +141,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                             storageKey={custom.storageKey}
                             foods={foods}
                             showCalories={custom.slug === 'your-diet'}
-                            onCalorieTargetChange={onDietCaloriesChange}
+                            onSettingsChange={onDietSettingsChange}
                             onChange={onCustomFoodChange}
                         />
                     </div>

@@ -4,14 +4,16 @@ import { useState, useEffect } from 'react';
 import { Slider } from '../Inputs/Slider';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
 import type { CustomFoodBasis, CustomFoodInput } from './FoodTableTypes';
+import { MIN_RDA_AGE, type DietSettings, type Sex } from './FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
 // share of the total level (same idea as the Compare By / Score Priorities sliders).
 // `fine` makes that ingredient's slider set its share directly, 0–1% in 0.005% steps.
 type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
-// calorieTarget is the user's total calories per day (null until they type one in).
-type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null };
+// calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
+// (all null until entered).
+type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null };
 
 const DAYS_PER_WEEK = 7;
 
@@ -40,13 +42,16 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null };
+    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null };
     try {
         const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
         if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
         return {
             basis: parsed.basis === 'mass' ? 'mass' : 'calories',
             calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
+            sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
+            age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
+            weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
             // Drop foods that no longer exist.
             ingredients: parsed.ingredients
                 .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
@@ -65,6 +70,8 @@ function save(storageKey: string, value: Saved) {
     }
 }
 
+const settingsOf = ({ calorieTarget, sex, age, weightLb }: Saved): DietSettings => ({ calories: calorieTarget, sex, age, weightLb });
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 type Props = {
@@ -74,8 +81,8 @@ type Props = {
     foods: { slug: string; name: string; calories?: number }[];
     /** Shows a total calories / day field and each food's calories per day and week. */
     showCalories?: boolean;
-    /** Reports the daily calories once typing settles (and once on load). */
-    onCalorieTargetChange?: (calories: number | null) => void;
+    /** Reports the daily calories, sex and age once typing settles (and once on load). */
+    onSettingsChange?: (settings: DietSettings) => void;
     onChange: (food: CustomFoodInput) => void;
 };
 
@@ -83,7 +90,7 @@ type Props = {
  * Builds a custom food (a meal or a whole diet) from other foods, each given a
  * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads.
  */
-export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories, onCalorieTargetChange, onChange }: Props) {
+export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories, onSettingsChange, onChange }: Props) {
     const [saved, setSaved]               = useState<Saved>(() => loadSaved(storageKey, foods));
     const [selectedSlug, setSelectedSlug] = useState('');
     // The calorie lines follow this delayed copy, so they update with the table instead of on every slider move.
@@ -98,7 +105,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     });
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
-    const debouncedCalorieTarget = useDebouncedCallback((calories: number | null) => onCalorieTargetChange?.(calories), DEBOUNCE_MS);
+    const debouncedSettings = useDebouncedCallback((next: Saved) => onSettingsChange?.(settingsOf(next)), DEBOUNCE_MS);
     const debouncedSettle    = useDebouncedCallback((next: Saved) => {
         setSettled(next);
         setActiveSlug(null);
@@ -107,7 +114,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     // Tell the table about the saved food right away on load.
     useEffect(() => {
         onChange(toInput(saved));
-        onCalorieTargetChange?.(saved.calorieTarget);
+        onSettingsChange?.(settingsOf(saved));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -126,7 +133,30 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
         setSaved(next);
         save(storageKey, next);
         debouncedSettle(next);
-        debouncedCalorieTarget(next.calorieTarget);
+        debouncedSettings(next);
+    }
+
+    function setSex(value: string) {
+        const next = { ...saved, sex: value === 'male' || value === 'female' ? value : null } as Saved;
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
+    function setWeight(value: string) {
+        const weight = Number(value);
+        const next = { ...saved, weightLb: value !== '' && Number.isFinite(weight) && weight > 0 ? weight : null };
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
+    function setAge(value: string) {
+        const age = Number(value);
+        const next = { ...saved, age: value !== '' && Number.isFinite(age) && age > 0 ? Math.round(age) : null };
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
     }
 
     function add() {
@@ -180,19 +210,56 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     return (
         <div className="flex flex-col gap-2">
             {showCalories && (
-                <label className="flex items-center gap-2 text-sm text-neutral-700">
-                    Total calories / day
-                    <input
-                        type="number"
-                        min={0}
-                        step={50}
-                        inputMode="numeric"
-                        value={saved.calorieTarget ?? ''}
-                        onChange={e => setCalorieTarget(e.target.value)}
-                        placeholder="2000"
-                        className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white w-24"
-                    />
-                </label>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-neutral-700">
+                    <label className="flex items-center gap-2">
+                        Total calories / day
+                        <input
+                            type="number"
+                            min={0}
+                            step={50}
+                            inputMode="numeric"
+                            value={saved.calorieTarget ?? ''}
+                            onChange={e => setCalorieTarget(e.target.value)}
+                            placeholder="2000"
+                            className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white w-24"
+                        />
+                    </label>
+                    <label className="flex items-center gap-2">
+                        Sex
+                        <select
+                            value={saved.sex ?? ''}
+                            onChange={e => setSex(e.target.value)}
+                            className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                        >
+                            <option value="">Not set</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+                    <label className="flex items-center gap-2" title={`Needs sex and an age of ${MIN_RDA_AGE} or more to adjust the daily values; otherwise the FDA values are used`}>
+                        Age
+                        <input
+                            type="number"
+                            min={MIN_RDA_AGE}
+                            max={120}
+                            inputMode="numeric"
+                            value={saved.age ?? ''}
+                            onChange={e => setAge(e.target.value)}
+                            className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white w-16"
+                        />
+                    </label>
+                    <label className="flex items-center gap-2" title="Scales your vitamin and mineral needs (about weight^0.75) and sets your protein need (0.8 g per kg)">
+                        Weight (lb)
+                        <input
+                            type="number"
+                            min={0}
+                            inputMode="numeric"
+                            value={saved.weightLb ?? ''}
+                            onChange={e => setWeight(e.target.value)}
+                            className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white w-20"
+                        />
+                    </label>
+                </div>
             )}
             <div className="flex gap-2 items-center">
                 <select
