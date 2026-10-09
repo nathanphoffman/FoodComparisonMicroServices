@@ -25,6 +25,8 @@ import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
 import type { CustomFoodInput } from './FoodTableTypes';
 import { EMPTY_SENTIENT_HARM_DETAIL, CUSTOM_FOODS, customFoodStub, isCustomFoodSlug } from './FoodTableTypes';
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
+import { Modal } from '../Modals/Modal';
+import { NutritionDetailContent } from './Tooltips/NutritionTooltip';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import type { FigureKey } from './FoodDetail/FoodDetailFigures';
 
@@ -57,6 +59,8 @@ export function FoodTable() {
     // The diet's total calories per day, for the whole-diet % daily values in its nutrition tooltip
     // Whose recommended intakes the tooltips measure vitamins and minerals against
     const [nutrientStandard, setNutrientStandard] = useState<NutrientStandard>(DEFAULT_NUTRIENT_STANDARD);
+    const [showDiet, setShowDiet] = useState(false);
+    const closeDiet = useCallback(() => setShowDiet(false), []);
     const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
 
     // Combined nutrition for the custom foods' tooltips
@@ -188,6 +192,7 @@ export function FoodTable() {
                 onSliderValuesChange={setSliderValues}
                 onCustomFoodChange={handleCustomFoodChange}
                 onDietSettingsChange={setDietSettings}
+                onShowDiet={() => setShowDiet(true)}
                 scoringError={scoringError}
                 onDismissScoringError={dismissScoringError}
                 onActiveColsChange={setActiveCols}
@@ -203,6 +208,14 @@ export function FoodTable() {
             <Table headers={headers}>
                 {tableRows}
             </Table>
+
+            {showDiet && customNutrition.get('your-diet') && (
+                <Modal title="Your Diet" onClose={closeDiet} wide>
+                    <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5">
+                        <NutritionDetailContent detail={customNutrition.get('your-diet')!} diet={dietSettings} standard={nutrientStandard} />
+                    </div>
+                </Modal>
+            )}
 
             {selectedFood && (
                 <FoodDetailModal

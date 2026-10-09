@@ -81,6 +81,8 @@ type Props = {
     foods: { slug: string; name: string; calories?: number; micronutrients?: Micronutrients | null }[];
     /** Shows a total calories / day field and each food's calories per day and week. */
     showCalories?: boolean;
+    /** Opens the diet's nutrition breakdown; the "Show Diet" button is greyed out until a food is added. */
+    onShow?: () => void;
     /** Reports the daily calories, sex and age once typing settles (and once on load). */
     onSettingsChange?: (settings: DietSettings) => void;
     onChange: (food: CustomFoodInput) => void;
@@ -90,7 +92,7 @@ type Props = {
  * Builds a custom food (a meal or a whole diet) from other foods, each given a
  * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads.
  */
-export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories, onSettingsChange, onChange }: Props) {
+export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories, onShow, onSettingsChange, onChange }: Props) {
     const [saved, setSaved]               = useState<Saved>(() => loadSaved(storageKey, foods));
     const [selectedSlug, setSelectedSlug] = useState('');
     // The calorie lines follow this delayed copy, so they update with the table instead of on every slider move.
@@ -242,6 +244,15 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
 
     return (
         <div className="flex flex-col gap-2">
+            {showCalories && onShow && (
+                <button
+                    onClick={onShow}
+                    disabled={ingredients.length === 0}
+                    className="self-start px-3 py-1 text-sm rounded border border-neutral-200 text-neutral-600 hover:bg-neutral-50 disabled:opacity-40 disabled:hover:bg-transparent disabled:cursor-not-allowed"
+                >
+                    Show Diet
+                </button>
+            )}
             {showCalories && (
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-neutral-700">
                     <label className="flex items-center gap-2">

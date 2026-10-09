@@ -17,6 +17,7 @@ type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
     onCustomFoodChange:    (food: CustomFoodInput) => void;
     onDietSettingsChange:  (settings: DietSettings) => void;
+    onShowDiet:            () => void;
     scoringError:          string | null;
     onDismissScoringError: () => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
@@ -32,6 +33,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     onSliderValuesChange,
     onCustomFoodChange,
     onDietSettingsChange,
+    onShowDiet,
     scoringError,
     onDismissScoringError,
     onActiveColsChange,
@@ -145,6 +147,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                             storageKey={custom.storageKey}
                             foods={foods}
                             showCalories={custom.slug === 'your-diet'}
+                            onShow={onShowDiet}
                             onSettingsChange={onDietSettingsChange}
                             onChange={onCustomFoodChange}
                         />
