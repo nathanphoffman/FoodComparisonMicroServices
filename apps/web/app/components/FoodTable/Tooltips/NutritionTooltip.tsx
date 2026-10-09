@@ -1,17 +1,27 @@
 import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../FoodTableTypes';
 import { MICRONUTRIENT_INFO, aminoAcidProfile, nutritionScale } from '../FoodTableCalculations';
-import { dailyNeeds, hasPersonalNeeds, proteinNeedGrams, type DietSettings } from '../FoodTableRda';
+import { dailyNeeds, needsLabel, proteinNeedGrams, DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from '../FoodTableRda';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
+
+// Colour for a whole-diet % of daily need: red under 50, orange 50–75, yellow 75–125 (about right),
+// green 125–250, blue over 250 (not necessarily bad, just a lot).
+function needColor(percent: number): string {
+  if (percent < 50) return 'text-red-400';
+  if (percent < 75) return 'text-orange-300';
+  if (percent < 125) return 'text-yellow-300';
+  if (percent <= 250) return 'text-green-300';
+  return 'text-blue-300';
+}
 
 // diet (diet row only) holds the user's whole-day calories, sex and age. Calories scale the per-100-calorie
 // amounts up to the whole day, so 10% per 100 cal on a 2000 cal diet reads (200%); sex and age pick
 // their own daily need for each nutrient instead of the FDA daily value.
-export function NutritionTooltip({ detail, diet, children }: { detail: NutritionDetail; diet?: DietSettings | null; children: React.ReactNode }) {
+export function NutritionTooltip({ detail, diet, standard = DEFAULT_NUTRIENT_STANDARD, children }: { detail: NutritionDetail; diet?: DietSettings | null; standard?: NutrientStandard; children: React.ReactNode }) {
   const scale = nutritionScale(detail.calories);
   const dayScale = diet?.calories ? diet.calories / 100 : null;
-  const personal = hasPersonalNeeds(diet?.sex ?? null, diet?.age ?? null, diet?.weightLb ?? null);
+  const needsName = needsLabel(standard, diet?.sex ?? null, diet?.age ?? null, diet?.weightLb ?? null);
   const proteinNeed = proteinNeedGrams(diet?.weightLb ?? null);
-  const needs = dailyNeeds(diet?.sex ?? null, diet?.age ?? null, diet?.weightLb ?? null);
+  const needs = dailyNeeds(standard, diet?.sex ?? null, diet?.age ?? null, diet?.weightLb ?? null);
   const micronutrients = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null);
   const aminoAcids = aminoAcidProfile(detail);
   return (
@@ -30,7 +40,7 @@ export function NutritionTooltip({ detail, diet, children }: { detail: Nutrition
             <>
               {(detail.protein * scale).toFixed(1)} g
               {dayScale != null && (
-                <span className="ml-1 text-green-300">
+                <span className={`ml-1 ${proteinNeed != null ? needColor(detail.protein * scale * dayScale / proteinNeed * 100) : 'text-green-300'}`}>
                   ({(detail.protein * scale * dayScale).toFixed(0)} g{proteinNeed != null && `, ${(detail.protein * scale * dayScale / proteinNeed * 100).toFixed(0)}% of need`})
                 </span>
               )}
@@ -38,7 +48,7 @@ export function NutritionTooltip({ detail, diet, children }: { detail: Nutrition
           } />
         </TooltipSection>
         {micronutrients.length > 0 && (
-          <TooltipSection title={dayScale != null ? `Vitamins, minerals & omega-3 (% daily value per 100 cal, (whole diet vs ${personal ? "your" : "FDA"} daily need))` : "Vitamins, minerals & omega-3 (% daily value)"}>
+          <TooltipSection title={dayScale != null ? `Vitamins, minerals & omega-3 (% of daily need per 100 cal, (whole diet) — ${needsName})` : `Vitamins, minerals & omega-3 (% of daily need — ${needsName})`}>
             {micronutrients.map(key => {
               const { label, unit, credit } = MICRONUTRIENT_INFO[key];
               const amount = detail.micronutrients![key]! * scale;
@@ -47,7 +57,10 @@ export function NutritionTooltip({ detail, diet, children }: { detail: Nutrition
                   <>
                     {amount.toLocaleString(undefined, { maximumSignificantDigits: 3 })} {unit}
                     <span className="ml-2 inline-block w-10 text-right text-neutral-400">{(amount / needs[key] * 100).toFixed(0)}%</span>
-                    {dayScale != null && <span className="ml-1 inline-block w-14 text-right text-green-300">({(amount * dayScale / needs[key] * 100).toFixed(0)}%)</span>}
+                    {dayScale != null && (() => {
+                      const dayPercent = amount * dayScale / needs[key] * 100;
+                      return <span className={`ml-1 inline-block w-14 text-right ${needColor(dayPercent)}`}>({dayPercent.toFixed(0)}%)</span>;
+                    })()}
                   </>
                 } />
               );
@@ -59,7 +72,7 @@ export function NutritionTooltip({ detail, diet, children }: { detail: Nutrition
             {aminoAcids.score != null && (
               <TooltipRow label={<span className="font-medium">Amino acid score</span>} value={
                 <>
-                  <span className="font-medium">{(aminoAcids.score * 100).toFixed(0)}%</span>
+                  <span className={`font-medium ${needColor(aminoAcids.score * 100)}`}>{(aminoAcids.score * 100).toFixed(0)}%</span>
                   {aminoAcids.limiting && aminoAcids.score < 1 && <span className="ml-2 text-amber-300">limited by {aminoAcids.limiting.toLowerCase()}</span>}
                 </>
               } />
@@ -68,7 +81,7 @@ export function NutritionTooltip({ detail, diet, children }: { detail: Nutrition
               <TooltipRow key={label} label={label} value={
                 <>
                   {mgPerGramProtein.toLocaleString(undefined, { maximumFractionDigits: 1 })} mg
-                  <span className={`ml-2 inline-block w-10 text-right ${share < 1 ? 'text-amber-300' : 'text-neutral-400'}`}>{(share * 100).toFixed(0)}%</span>
+                  <span className={`ml-2 inline-block w-10 text-right ${needColor(share * 100)}`}>{(share * 100).toFixed(0)}%</span>
                 </>
               } />
             ))}

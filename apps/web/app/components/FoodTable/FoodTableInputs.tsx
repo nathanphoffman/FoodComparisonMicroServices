@@ -10,7 +10,7 @@ import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
 import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
 import type { Preset } from './FoodTablePresets';
-import type { DietSettings } from './FoodTableRda';
+import type { DietSettings, NutrientStandard } from './FoodTableRda';
 import { FoodTableToolbar } from './FoodTableToolbar';
 
 type Props = {
@@ -23,6 +23,8 @@ type Props = {
     foods: { slug: string; name: string; calories?: number }[];
     dataRegion: DataRegion;
     onDataRegionChange: (region: DataRegion) => void;
+    nutrientStandard: NutrientStandard;
+    onNutrientStandardChange: (standard: NutrientStandard) => void;
 };
 
 // Memoized so opening/closing the food detail modal doesn't re-render all the sliders
@@ -36,6 +38,8 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     foods,
     dataRegion,
     onDataRegionChange,
+    nutrientStandard,
+    onNutrientStandardChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const [visibleColumns, setVisible]    = useState<Set<SortKey>>(
@@ -163,6 +167,8 @@ export const FoodTableInputs = memo(function FoodTableInputs({
             <FoodTableToolbar
                 dataRegion={dataRegion}
                 onDataRegionChange={onDataRegionChange}
+                nutrientStandard={nutrientStandard}
+                onNutrientStandardChange={onNutrientStandardChange}
                 referenceSlug={sliderValues.referenceSlug}
                 onReferenceSlugChange={slug => update('referenceSlug', slug)}
                 foods={foods}

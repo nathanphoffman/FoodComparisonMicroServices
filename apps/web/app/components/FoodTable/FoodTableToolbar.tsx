@@ -3,11 +3,14 @@
 import { useState, useRef, useEffect } from 'react';
 import type { DataRegion } from './FoodTableTypes';
 import type { SortKey } from './FoodTableSort';
+import { NUTRIENT_STANDARD_OPTIONS, type NutrientStandard } from './FoodTableRda';
 import { COLUMN_CONFIG, DATA_REGION_OPTIONS } from './FoodTableDefaults';
 
 type Props = {
     dataRegion: DataRegion;
     onDataRegionChange: (region: DataRegion) => void;
+    nutrientStandard: NutrientStandard;
+    onNutrientStandardChange: (standard: NutrientStandard) => void;
     referenceSlug: string;
     onReferenceSlugChange: (slug: string) => void;
     foods: { slug: string; name: string }[];
@@ -18,6 +21,8 @@ type Props = {
 export function FoodTableToolbar({
     dataRegion,
     onDataRegionChange,
+    nutrientStandard,
+    onNutrientStandardChange,
     referenceSlug,
     onReferenceSlugChange,
     foods,
@@ -47,6 +52,18 @@ export function FoodTableToolbar({
                     className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
                 >
                     {DATA_REGION_OPTIONS.map(option => (
+                        <option key={option.value} value={option.value}>{option.label}</option>
+                    ))}
+                </select>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-neutral-500">
+                <span>Daily needs</span>
+                <select
+                    value={nutrientStandard}
+                    onChange={e => onNutrientStandardChange(e.target.value as NutrientStandard)}
+                    className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
+                >
+                    {NUTRIENT_STANDARD_OPTIONS.map(option => (
                         <option key={option.value} value={option.value}>{option.label}</option>
                     ))}
                 </select>

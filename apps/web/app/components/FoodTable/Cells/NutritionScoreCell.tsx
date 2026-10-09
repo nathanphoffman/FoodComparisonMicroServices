@@ -1,6 +1,6 @@
 import { Cell } from '../../Table/Cell';
 import type { NutritionDetail } from '../FoodTableTypes';
-import type { DietSettings } from '../FoodTableRda';
+import type { DietSettings, NutrientStandard } from '../FoodTableRda';
 import { getNutritionScoreColor } from '../FoodTableStyles';
 import { NutritionTooltip } from '../Tooltips/NutritionTooltip';
 import { EmptyValue } from './EmptyValue';
@@ -13,11 +13,11 @@ function NutritionScore({ score }: { score: number }) {
   );
 }
 
-export function NutritionScoreCell({ score, detail, diet }: { score: number | null; detail: NutritionDetail; diet?: DietSettings | null }) {
+export function NutritionScoreCell({ score, detail, diet, standard }: { score: number | null; detail: NutritionDetail; diet?: DietSettings | null; standard?: NutrientStandard }) {
   return (
     <Cell key="nutritionScore" align="right">
       {score != null
-        ? <NutritionTooltip detail={detail} diet={diet}><NutritionScore score={score} /></NutritionTooltip>
+        ? <NutritionTooltip detail={detail} diet={diet} standard={standard}><NutritionScore score={score} /></NutritionTooltip>
         : <EmptyValue />
       }
     </Cell>

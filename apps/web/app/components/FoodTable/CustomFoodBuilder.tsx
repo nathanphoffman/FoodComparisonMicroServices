@@ -236,7 +236,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
                             <option value="female">Female</option>
                         </select>
                     </label>
-                    <label className="flex items-center gap-2" title={`Needs sex and an age of ${MIN_RDA_AGE} or more to adjust the daily values; otherwise the FDA values are used`}>
+                    <label className="flex items-center gap-2" title={`Adjusts your daily needs by age (${MIN_RDA_AGE} or older)`}>
                         Age
                         <input
                             type="number"
