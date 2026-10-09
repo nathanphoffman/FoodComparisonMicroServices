@@ -227,3 +227,22 @@ export function toIntelligenceDetail(food: RawFood): IntelligenceDetail {
         yieldFraction: food.yield_fraction,
     };
 }
+
+/**
+ * Physical land (m² per kg) of a custom diet: each ingredient's land weighted by its share of the diet's mass.
+ * The scorer leaves a custom food's own land detail empty, so it is rebuilt here from the ingredients.
+ * Calorie shares become mass by dividing by calories per gram, as in the scorer; null when nothing matches.
+ */
+export function blendLandM2PerKg(
+    custom: CustomFoodInput, foods: RawFood[], rawM2PerKg: (slug: string) => number | null | undefined,
+): number | null {
+    const parts = custom.ingredients.flatMap(({ slug, fraction }) => {
+        const food = foods.find(f => f.slug === slug);
+        if (!food || fraction <= 0) return [];
+        const mass = custom.basis === 'mass' ? fraction : food.calories > 0 ? fraction / food.calories : 0;
+        const land = rawM2PerKg(slug);
+        return mass > 0 && land != null ? [{ mass, land }] : [];
+    });
+    const totalMass = parts.reduce((sum, part) => sum + part.mass, 0);
+    return totalMass > 0 ? parts.reduce((sum, part) => sum + (part.mass / totalMass) * part.land, 0) : null;
+}

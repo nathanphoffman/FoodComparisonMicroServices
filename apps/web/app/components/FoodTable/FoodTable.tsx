@@ -15,7 +15,7 @@ import { FinalScoreCell } from './Cells/FinalScoreCell';
 import { RankCell } from './Cells/RankCell';
 import { AvailabilityCell } from './Cells/AvailabilityCell';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './FoodTableRda';
-import { getUnitLabel, toNutritionDetail, blendNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
+import { getUnitLabel, toNutritionDetail, blendNutritionDetail, blendLandM2PerKg, toIntelligenceDetail } from './FoodTableCalculations';
 import type { RawFood } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
 import { loadWasm, useWasmScoring } from './FoodTableWASMIntegration';
@@ -27,6 +27,7 @@ import { EMPTY_SENTIENT_HARM_DETAIL, CUSTOM_FOODS, customFoodStub, isCustomFoodS
 import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
 import { Modal } from '../Modals/Modal';
 import { DietExplainer } from './DietExplainer';
+import { DietImpact } from './DietImpact';
 import { NutritionDetailContent } from './Tooltips/NutritionTooltip';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import type { FigureKey } from './FoodDetail/FoodDetailFigures';
@@ -60,6 +61,7 @@ export function FoodTable() {
     // The diet's total calories per day, for the whole-diet % daily values in its nutrition tooltip
     // Whose recommended intakes the tooltips measure vitamins and minerals against
     const [nutrientStandard, setNutrientStandard] = useState<NutrientStandard>(DEFAULT_NUTRIENT_STANDARD);
+    const foodSlugs = useMemo(() => new Set(rawFoods.map(food => food.slug)), [rawFoods]);
     const [showDiet, setShowDiet] = useState(false);
     const closeDiet = useCallback(() => setShowDiet(false), []);
     const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
@@ -215,6 +217,17 @@ export function FoodTable() {
                     <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5 md:whitespace-nowrap">
                         <NutritionDetailContent detail={customNutrition.get('your-diet')!} diet={dietSettings} standard={nutrientStandard} />
                     </div>
+                    {scored.get('your-diet') && (
+                        <DietImpact
+                            row={scored.get('your-diet')!}
+                            scored={scored}
+                            foodSlugs={foodSlugs}
+                            unit={unit}
+                            dailyCalories={dietSettings?.calories ?? null}
+                            caloriesPerGram={customNutrition.get('your-diet')?.calories ?? null}
+                            rawLandM2PerKg={customFoodsBySlug['your-diet'] ? blendLandM2PerKg(customFoodsBySlug['your-diet'], rawFoods, slug => scored.get(slug)?.land_use_detail.rawM2PerKg) : null}
+                        />
+                    )}
                     <DietExplainer />
                 </Modal>
             )}
