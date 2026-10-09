@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Slider } from '../Inputs/Slider';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
 import type { CustomFoodBasis, CustomFoodInput, Micronutrients, MicronutrientKey } from './FoodTableTypes';
-import { absorptionMultiplier, DEFAULT_MEALS_PER_DAY, MAX_MEALS_PER_DAY, MIN_MEALS_PER_DAY, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
+import { absorptionMultiplier, mealsPerDayFor, DEFAULT_DAYS_BETWEEN, MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
 import { MIN_RDA_AGE, type DietSettings, type Sex } from './FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
@@ -14,7 +14,7 @@ type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
 // calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
 // (all null until entered).
-type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; mealsPerDay: number };
+type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number };
 
 const DAYS_PER_WEEK = 7;
 
@@ -43,7 +43,7 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, mealsPerDay: DEFAULT_MEALS_PER_DAY };
+    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN };
     try {
         const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
         if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
@@ -52,7 +52,7 @@ function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
             calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
             sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
             age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
-            mealsPerDay: Number.isFinite(parsed.mealsPerDay) && (parsed.mealsPerDay ?? 0) > 0 ? parsed.mealsPerDay : DEFAULT_MEALS_PER_DAY,
+            daysBetween: Number.isFinite(parsed.daysBetween) && (parsed.daysBetween ?? 0) > 0 ? parsed.daysBetween : DEFAULT_DAYS_BETWEEN,
             weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
             // Drop foods that no longer exist.
             ingredients: parsed.ingredients
@@ -124,7 +124,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
             for (const key of ABSORPTION_NUTRIENTS) {
                 const daily = (food.micronutrients[key] ?? 0) * grams;
                 all[key] = (all[key] ?? 0) + daily;
-                counted[key] = (counted[key] ?? 0) + daily * absorptionMultiplier(key, daily, state.mealsPerDay);
+                counted[key] = (counted[key] ?? 0) + daily * absorptionMultiplier(key, daily, mealsPerDayFor(state.daysBetween));
             }
         });
         const absorption: Partial<Record<MicronutrientKey, number>> = {};
@@ -163,9 +163,9 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
         debouncedSettings(next);
     }
 
-    // How many meals a day the foods are spread over; only the whole-diet tooltip numbers change, so no rescoring.
-    function setMeals(mealsPerDay: number) {
-        const next = { ...saved, mealsPerDay };
+    // Longest gap between eating a food on the list; only the whole-diet tooltip numbers change, so no rescoring.
+    function setDaysBetween(daysBetween: number) {
+        const next = { ...saved, daysBetween };
         setSaved(next);
         save(storageKey, next);
         debouncedSettings(next);
@@ -306,10 +306,13 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
                 </div>
             )}
             {showCalories && (
-                <div className="flex items-center gap-3 text-sm text-neutral-700" title="Meals a day you're guaranteed to eat the foods on this list. Fewer meals puts more of the B12, calcium and vitamin C into a single meal than your body can absorb, which lowers the whole-diet % daily need.">
-                    <span className="shrink-0">Meals / day: {saved.mealsPerDay.toFixed(1)}</span>
+                <div className="flex items-center gap-3 text-sm text-neutral-700" title="The longest you go without eating a food on this list. The longer the gap, the more of its B12, calcium and vitamin C arrives in one meal, beyond what your body can absorb at once, which lowers the whole-diet % daily need. 0.1 days is 10 meals a day.">
+                    <span className="shrink-0 w-64">
+                        Longest gap without eating a food on this list: {saved.daysBetween.toFixed(1)} {saved.daysBetween === 1 ? 'day' : 'days'}
+                        <span className="text-xs text-neutral-500"> (≈{mealsPerDayFor(saved.daysBetween).toFixed(1)} meals / day)</span>
+                    </span>
                     <div className="flex-1 min-w-0">
-                        <Slider min={MIN_MEALS_PER_DAY} max={MAX_MEALS_PER_DAY} step={0.1} value={saved.mealsPerDay} onChange={setMeals} />
+                        <Slider min={MIN_DAYS_BETWEEN} max={MAX_DAYS_BETWEEN} step={0.1} value={saved.daysBetween} onChange={setDaysBetween} />
                     </div>
                 </div>
             )}

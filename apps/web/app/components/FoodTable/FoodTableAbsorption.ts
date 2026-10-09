@@ -17,9 +17,12 @@ export const ABSORPTION_NUTRIENTS = Object.keys(LIMITS) as MicronutrientKey[];
 /** Meals a day the daily RDA is assumed to be spread over: the baseline for the penalty. */
 export const BASELINE_MEALS = 3;
 
-export const MIN_MEALS_PER_DAY = 0.1;
-export const MAX_MEALS_PER_DAY = 5;
-export const DEFAULT_MEALS_PER_DAY = BASELINE_MEALS;
+// The slider is the longest gap, in days, between eating a food on the list: 0.1 days is 10 meals a day, 10 days is
+// one meal every 10 days. Internally the model works in meals per day (1 ÷ days).
+export const MIN_DAYS_BETWEEN = 0.1;
+export const MAX_DAYS_BETWEEN = 10;
+export const DEFAULT_DAYS_BETWEEN = 0.3;
+export const mealsPerDayFor = (daysBetween: number) => 1 / daysBetween;
 
 function absorbed(perMeal: number, key: MicronutrientKey): number {
     const { capPerMeal, beyondCap } = LIMITS[key]!;
