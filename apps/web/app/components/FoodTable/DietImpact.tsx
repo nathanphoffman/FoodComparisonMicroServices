@@ -75,6 +75,15 @@ function overallTier(scores: number[]) {
     return OVERALL_TIERS.find(tier => tier.score === rounded)!;
 }
 
+const FEET_PER_METER = 3.28084;
+
+// An area as the sides of a square of the same size, in feet, to picture square meters: 30 m² is about 18 × 18 ft.
+function squareFeet(areaM2: number): string {
+    const side = Math.sqrt(areaM2) * FEET_PER_METER;
+    const text = side >= 100 ? Math.round(side).toLocaleString() : side.toFixed(1);
+    return `${text} × ${text} ft`;
+}
+
 // 1st, 2nd, 3rd, 4th ... 11th, 12th, 13th ... 21st.
 function ordinal(n: number): string {
     const lastTwo = n % 100;
@@ -150,6 +159,9 @@ export function DietImpact({ row, scored, foodSlugs, unit, dailyCalories, calori
                             <span className="w-28 shrink-0 font-medium text-neutral-800">{metric.label}</span>
                             <span className="w-52 shrink-0 text-neutral-700">
                                 {amount ? `${formatValue(amount.value, metric)} ${amount.unit}` : formatValue(value, metric)}
+                                {metric.label === 'Land use' && amount && (
+                                    <span className="block text-xs text-neutral-500">≈ {squareFeet(amount.value)} square</span>
+                                )}
                             </span>
                             <span className={`flex-1 ${tier?.color ?? 'text-neutral-500'}`}>
                                 {tier && percent !== null
