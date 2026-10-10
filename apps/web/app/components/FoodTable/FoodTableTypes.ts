@@ -247,7 +247,6 @@ export type CustomFoodInput = {
 };
 
 export const CUSTOM_FOODS = [
-    { slug: 'your-meal', name: 'Your Meal', heading: 'Custom Meal', storageKey: 'food-compare:custom-meal' },
     { slug: 'your-diet', name: 'Your Diet', heading: 'Diet',        storageKey: 'food-compare:diet' },
 ] as const;
 
