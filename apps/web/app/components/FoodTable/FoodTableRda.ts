@@ -11,6 +11,8 @@ export type DietSettings = {
     /** Index into ACTIVITY_LEVELS; scales the protein need. */
     activity?: number;
     absorption?: Partial<Record<MicronutrientKey, number>>;
+    /** Absorbed amount per day of each vitamin / mineral taken as a supplement, in the nutrient's own unit. */
+    supplements?: Partial<Record<MicronutrientKey, number>>;
 };
 
 const LB_PER_KG = 2.20462;

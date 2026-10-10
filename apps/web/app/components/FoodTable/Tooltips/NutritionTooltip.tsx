@@ -40,7 +40,7 @@ export function NutritionDetailContent({ detail, diet, standard = DEFAULT_NUTRIE
     { label: 'Protein', perHundred: detail.protein * scale, unit: 'g', digits: 1, target: targets.protein },
   ];
   const needs = dailyNeeds(standard, diet?.sex ?? null, diet?.age ?? null, diet?.weightLb ?? null);
-  const micronutrients = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null);
+  const micronutrients = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null || (diet?.supplements?.[key] ?? 0) > 0);
   const aminoAcids = aminoAcidProfile(detail);
   return (
       <div className="flex flex-col gap-4 md:flex-row md:gap-6">
@@ -63,15 +63,16 @@ export function NutritionDetailContent({ detail, diet, standard = DEFAULT_NUTRIE
             <div className="text-neutral-400 -mt-1 mb-1">{dayScale != null ? `per 100 cal, (whole diet) · ${needsName}` : needsName}</div>
             {micronutrients.map(key => {
               const { label, unit, credit } = MICRONUTRIENT_INFO[key];
-              const amount = detail.micronutrients![key]! * scale;
+              const amount = (detail.micronutrients?.[key] ?? 0) * scale;
               return (
                 <TooltipRow key={key} label={credit === 2 ? <>{label} <span className="text-amber-300">×2</span></> : label} value={
                   <>
                     {amount.toLocaleString(undefined, { maximumSignificantDigits: 3 })} {unit}
                     <span className="ml-2 inline-block w-12 text-right text-neutral-400">{(amount / needs[key] * 100).toFixed(0)}%</span>
                     {dayScale != null && (() => {
-                      const dayPercent = amount * dayScale * (diet?.absorption?.[key] ?? 1) / needs[key] * 100;
-                      return <span className={`ml-1 inline-block w-20 text-right ${needColor(dayPercent)}`}>({dayPercent.toFixed(0)}%)</span>;
+                      const supplement = diet?.supplements?.[key] ?? 0;
+                      const dayPercent = (amount * dayScale * (diet?.absorption?.[key] ?? 1) + supplement) / needs[key] * 100;
+                      return <span className={`ml-1 inline-block w-20 text-right ${needColor(dayPercent)}`} title={supplement > 0 ? 'Includes your supplement' : undefined}>({dayPercent.toFixed(0)}%{supplement > 0 && '+'})</span>;
                     })()}
                   </>
                 } />

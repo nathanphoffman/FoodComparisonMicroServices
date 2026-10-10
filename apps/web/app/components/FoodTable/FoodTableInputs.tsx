@@ -146,6 +146,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                             name={custom.name}
                             storageKey={custom.storageKey}
                             foods={foods}
+                            standard={nutrientStandard}
                             showCalories={custom.slug === 'your-diet'}
                             onShow={onShowDiet}
                             onSettingsChange={onDietSettingsChange}

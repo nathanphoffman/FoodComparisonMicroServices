@@ -78,6 +78,12 @@ export function DietExplainer() {
                 </p>
             </Subsection>
 
+            <Subsection title="Vitamins and supplements">
+                <p>
+                    Add a vitamin or mineral with its dose per pill and how many you take a week. The average daily amount is added to the whole-diet green number (marked with a +). B12, calcium and vitamin C are limited by how much one dose can absorb (see above), so a big pill counts for less than its label. On top of that, the <strong>Pill absorption</strong> slider (75% by default) sets the share of every pill's dose that counts, since pills are generally absorbed less than food. Supplements are assumed to be taken separately from meals, and don't change the Nutrition Score.
+                </p>
+            </Subsection>
+
             <Subsection title="The colors">
                 <p>
                     Blue is very good, green is good, yellow is neutral, orange is a little off and red is far off. For something to reach (vitamins, fiber, protein), under 50% is red, 50–75% orange, 75–125% yellow, 125–250% green and over 250% blue, which is a lot, not necessarily bad. For a limit, up to 50% is blue, up to 100% green, up to 125% yellow, up to 150% orange and over that red. For fat and carbs, 90–110% is blue and 75–125% is green, with the colors worsening further out.

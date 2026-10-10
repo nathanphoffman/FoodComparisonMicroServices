@@ -29,6 +29,11 @@ function absorbed(perMeal: number, key: MicronutrientKey): number {
     return Math.min(perMeal, capPerMeal) + beyondCap * Math.max(perMeal - capPerMeal, 0);
 }
 
+/** Amount of a supplement pill's dose that is absorbed when taken in one sitting (all of it for nutrients with no limit). */
+export function absorbedFromDose(key: MicronutrientKey, dose: number): number {
+    return key in LIMITS ? absorbed(dose, key) : dose;
+}
+
 /** Share of the nutrient absorbed when `daily` is eaten over `meals` meals a day (meals under 1 means
  * the food is eaten on fewer days, so each time it arrives in one bigger dose). */
 function efficiency(daily: number, meals: number, key: MicronutrientKey): number {

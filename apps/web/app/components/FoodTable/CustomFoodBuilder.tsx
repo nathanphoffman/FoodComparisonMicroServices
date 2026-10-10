@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { Slider } from '../Inputs/Slider';
+import { MICRONUTRIENT_INFO } from './FoodTableCalculations';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../hooks/useDebouncedCallback';
-import type { CustomFoodBasis, CustomFoodInput, Micronutrients, MicronutrientKey } from './FoodTableTypes';
-import { absorptionMultiplier, mealsPerDayFor, DEFAULT_DAYS_BETWEEN, MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
+import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type CustomFoodInput, type Micronutrients, type MicronutrientKey } from './FoodTableTypes';
+import { absorptionMultiplier, absorbedFromDose, mealsPerDayFor, DEFAULT_DAYS_BETWEEN, MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, ABSORPTION_NUTRIENTS } from './FoodTableAbsorption';
 import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from './FoodTableTargets';
-import { MIN_RDA_AGE, type DietSettings, type Sex } from './FoodTableRda';
+import { MIN_RDA_AGE, dailyNeeds, DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard, type Sex } from './FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
 // share of the total level (same idea as the Compare By / Score Priorities sliders).
@@ -15,9 +16,18 @@ type Ingredient = { slug: string; name: string; level: number; fine?: boolean };
 
 // calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
 // (all null until entered).
-type Saved = { basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number; activity: number };
+// A supplement: `dose` per pill in the nutrient's own unit, taken `perWeek` times a week.
+// `percent` only changes how the dose is entered and shown (as % of your daily need); `dose` is always in the nutrient's unit.
+type Supplement = { key: MicronutrientKey; dose: number; perWeek: number; percent?: boolean };
+type Saved = { supplements: Supplement[]; pillAbsorption: number; basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number; activity: number };
 
 const DAYS_PER_WEEK = 7;
+
+// Share of a pill's dose that counts, on top of the per-sitting limit for B12, calcium and vitamin C.
+const DEFAULT_PILL_ABSORPTION = 75;
+
+// What the multivitamin button adds: the vitamins only, not minerals or omega-3.
+const VITAMIN_KEYS: MicronutrientKey[] = ['vitamin_a', 'vitamin_c', 'vitamin_d', 'vitamin_e', 'vitamin_k', 'folate', 'vitamin_b12', 'vitamin_b6'];
 
 const MAX_LEVEL = 100;
 const LEVEL_STEP = 0.5;
@@ -44,7 +54,7 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
+    const empty: Saved = { supplements: [], pillAbsorption: DEFAULT_PILL_ABSORPTION, basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
     try {
         const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
         if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
@@ -56,6 +66,11 @@ function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
             activity: Number.isInteger(parsed.activity) && parsed.activity >= 0 && parsed.activity < ACTIVITY_LEVELS.length ? parsed.activity : DEFAULT_ACTIVITY,
             daysBetween: Number.isFinite(parsed.daysBetween) && (parsed.daysBetween ?? 0) > 0 ? parsed.daysBetween : DEFAULT_DAYS_BETWEEN,
             weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
+            pillAbsorption: Number.isFinite(parsed.pillAbsorption) && parsed.pillAbsorption >= 0 && parsed.pillAbsorption <= 100 ? parsed.pillAbsorption : DEFAULT_PILL_ABSORPTION,
+            supplements: Array.isArray(parsed.supplements)
+                ? parsed.supplements.filter(s => MICRONUTRIENT_KEYS.includes(s?.key) && s.dose > 0 && s.perWeek > 0)
+                    .map(s => ({ ...s, percent: !!s.percent }))
+                : [],
             // Drop foods that no longer exist.
             ingredients: parsed.ingredients
                 .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
@@ -80,6 +95,8 @@ type Props = {
     slug: string;
     name: string;
     storageKey: string;
+    /** Whose recommended intakes a supplement's % RDA is measured against. */
+    standard?: NutrientStandard;
     foods: { slug: string; name: string; calories?: number; micronutrients?: Micronutrients | null }[];
     /** Shows a total calories / day field and each food's calories per day and week. */
     showCalories?: boolean;
@@ -94,9 +111,12 @@ type Props = {
  * Builds a custom food (a meal or a whole diet) from other foods, each given a
  * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads.
  */
-export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories, onShow, onSettingsChange, onChange }: Props) {
+export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DEFAULT_NUTRIENT_STANDARD, showCalories, onShow, onSettingsChange, onChange }: Props) {
     const [saved, setSaved]               = useState<Saved>(() => loadSaved(storageKey, foods));
     const [selectedSlug, setSelectedSlug] = useState('');
+    // The multivitamin shortcut's inputs; it adds one supplement per vitamin at this % of your daily need.
+    const [multiPercent, setMultiPercent] = useState(100);
+    const [multiPerWeek, setMultiPerWeek] = useState(7);
     // The calorie lines follow this delayed copy, so they update with the table instead of on every slider move.
     // The slider being dragged (activeSlug) is the exception: its own line follows the live state.
     const [settled, setSettled]       = useState<Saved>(saved);
@@ -111,7 +131,12 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
     // The share of each absorption-limited nutrient that still counts, from each food's daily amount and meals per day.
     function settingsOf(state: Saved): DietSettings {
-        const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb, activity: state.activity };
+        // Each pill is one sitting, so its absorbed amount is capped for B12, calcium and vitamin C; spread over the week.
+        const supplements: Partial<Record<MicronutrientKey, number>> = {};
+        for (const { key, dose, perWeek } of state.supplements) {
+            supplements[key] = (supplements[key] ?? 0) + absorbedFromDose(key, dose) * (state.pillAbsorption / 100) * perWeek / DAYS_PER_WEEK;
+        }
+        const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb, activity: state.activity, supplements };
         if (!state.calorieTarget) return base;
         const shares = toPercents(state.ingredients);
         const weights = state.ingredients.map((ing, i) => state.basis === 'calories' ? shares[i] : shares[i] * (foods.find(f => f.slug === ing.slug)?.calories ?? 0));
@@ -168,6 +193,29 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
     // Longest gap between eating a food on the list; only the whole-diet tooltip numbers change, so no rescoring.
     function setDaysBetween(daysBetween: number) {
         const next = { ...saved, daysBetween };
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
+    function addMultivitamin() {
+        if (!(multiPercent > 0) || !(multiPerWeek > 0)) return;
+        const needs = dailyNeeds(standard, saved.sex, saved.age, saved.weightLb);
+        setSupplements([
+            ...saved.supplements,
+            ...VITAMIN_KEYS.map(key => ({ key, dose: needs[key] * multiPercent / 100, perWeek: multiPerWeek, percent: true })),
+        ]);
+    }
+
+    function setPillAbsorption(pillAbsorption: number) {
+        const next = { ...saved, pillAbsorption };
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
+    function setSupplements(supplements: Supplement[]) {
+        const next = { ...saved, supplements };
         setSaved(next);
         save(storageKey, next);
         debouncedSettings(next);
@@ -331,6 +379,102 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, showCalories,
                     <div className="flex-1 min-w-0">
                         <Slider min={0} max={ACTIVITY_LEVELS.length - 1} step={1} value={saved.activity} onChange={setActivity} />
                     </div>
+                </div>
+            )}
+            {showCalories && (
+                <div className="flex flex-col gap-1.5 text-sm text-neutral-700">
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span>Vitamins & supplements</span>
+                        <select
+                            value=""
+                            onChange={e => {
+                                const key = e.target.value as MicronutrientKey;
+                                if (key) setSupplements([...saved.supplements, { key, dose: MICRONUTRIENT_INFO[key].dailyValue, perWeek: 7 }]);
+                            }}
+                            aria-label="Add a vitamin or mineral"
+                            className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
+                        >
+                            <option value="">Add a vitamin…</option>
+                            {MICRONUTRIENT_KEYS.map(key => (
+                                <option key={key} value={key}>{MICRONUTRIENT_INFO[key].label}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2 text-xs" title="Adds every vitamin (A, C, D, E, K, folate, B12, B6) as its own line at this % of your daily need, which you can then adjust or remove one by one. Minerals and omega-3 aren't included.">
+                        <span className="text-sm">Multivitamin: all vitamins at</span>
+                        <input
+                            type="number" min={0} step="any" inputMode="decimal"
+                            value={multiPercent || ''}
+                            onChange={e => setMultiPercent(Number(e.target.value) > 0 ? Number(e.target.value) : 0)}
+                            aria-label="Multivitamin percent of RDA"
+                            className="border border-neutral-200 rounded px-2 py-1 text-xs text-neutral-700 bg-white w-16"
+                        />
+                        <span>% RDA ×</span>
+                        <input
+                            type="number" min={0} step="any" inputMode="decimal"
+                            value={multiPerWeek || ''}
+                            onChange={e => setMultiPerWeek(Number(e.target.value) > 0 ? Number(e.target.value) : 0)}
+                            aria-label="Multivitamin pills per week"
+                            className="border border-neutral-200 rounded px-2 py-1 text-xs text-neutral-700 bg-white w-16"
+                        />
+                        <span>per week</span>
+                        <button
+                            onClick={addMultivitamin}
+                            disabled={!(multiPercent > 0) || !(multiPerWeek > 0)}
+                            className="px-3 py-1 text-xs rounded border border-neutral-200 text-neutral-600 hover:bg-neutral-50 disabled:opacity-40 disabled:cursor-not-allowed"
+                        >
+                            Add
+                        </button>
+                    </div>
+                    <div className="flex items-center gap-3" title="The share of each pill's dose your body absorbs. Applied to every supplement, on top of the per-sitting limit for B12, calcium and vitamin C.">
+                        <span className="shrink-0 w-64">Pill absorption: {saved.pillAbsorption}%</span>
+                        <div className="flex-1 min-w-0">
+                            <Slider min={0} max={100} step={5} value={saved.pillAbsorption} onChange={setPillAbsorption} />
+                        </div>
+                    </div>
+                    {saved.supplements.map((supplement, i) => {
+                        const { label, unit } = MICRONUTRIENT_INFO[supplement.key];
+                        const need = dailyNeeds(standard, saved.sex, saved.age, saved.weightLb)[supplement.key];
+                        const shown = supplement.percent ? supplement.dose / need * 100 : supplement.dose;
+                        const change = (patch: Partial<Supplement>) =>
+                            setSupplements(saved.supplements.map((s, j) => j === i ? { ...s, ...patch } : s));
+                        const number = (value: string) => value !== '' && Number.isFinite(Number(value)) && Number(value) > 0 ? Number(value) : 0;
+                        return (
+                            <div key={i} className="flex flex-wrap items-center gap-2 text-xs">
+                                <span className="w-28 shrink-0 text-neutral-600">{label}</span>
+                                <input
+                                    type="number" min={0} step="any" inputMode="decimal"
+                                    value={shown ? Number(shown.toPrecision(4)) : ''}
+                                    onChange={e => change({ dose: supplement.percent ? number(e.target.value) / 100 * need : number(e.target.value) })}
+                                    aria-label={`${label} dose`}
+                                    className="border border-neutral-200 rounded px-2 py-1 text-xs text-neutral-700 bg-white w-20"
+                                />
+                                <select
+                                    value={supplement.percent ? 'percent' : 'unit'}
+                                    onChange={e => change({ percent: e.target.value === 'percent' })}
+                                    aria-label={`${label} dose unit`}
+                                    className="border border-neutral-200 rounded px-1 py-1 text-xs text-neutral-700 bg-white"
+                                >
+                                    <option value="unit">{unit}</option>
+                                    <option value="percent">% RDA</option>
+                                </select>
+                                <span>per pill ×</span>
+                                <input
+                                    type="number" min={0} step="any" inputMode="decimal"
+                                    value={supplement.perWeek || ''}
+                                    onChange={e => change({ perWeek: number(e.target.value) })}
+                                    aria-label={`${label} pills per week`}
+                                    className="border border-neutral-200 rounded px-2 py-1 text-xs text-neutral-700 bg-white w-16"
+                                />
+                                <span>per week</span>
+                                <button
+                                    onClick={() => setSupplements(saved.supplements.filter((_, j) => j !== i))}
+                                    className="text-neutral-400 hover:text-red-500 leading-none"
+                                    aria-label={`Remove ${label}`}
+                                >✕</button>
+                            </div>
+                        );
+                    })}
                 </div>
             )}
             <div className="flex gap-2 items-center">
