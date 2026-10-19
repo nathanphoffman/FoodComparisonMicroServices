@@ -1,4 +1,4 @@
-import type { SortKey } from '../FoodTableSort';
+import type { SortKey } from '../scoring/FoodTableSort';
 import type { LandTypes } from './LandTypes';
 import type { NutritionWeights } from './NutrientTypes';
 

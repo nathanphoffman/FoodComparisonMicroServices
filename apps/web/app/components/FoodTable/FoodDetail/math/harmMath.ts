@@ -1,5 +1,5 @@
-import type { RawFood } from '../../FoodTableTypes';
-import type { ScoredRow } from '../../FoodTableSort';
+import type { RawFood } from '../../Types/FoodTableTypes';
+import type { ScoredRow } from '../../scoring/FoodTableSort';
 import { num, perUnitStep, type MathStep, type MathContext } from './MathShared';
 
 /** Working for the intentional kill: animal deaths plus wild fish used for feed. */

@@ -1,6 +1,6 @@
 import type { FoodDetails, SourcedFigure } from '@/lib/types';
-import { MICRONUTRIENT_KEYS } from '../FoodTableTypes';
-import { MICRONUTRIENT_INFO } from '../FoodTableCalculations';
+import { MICRONUTRIENT_KEYS } from '../Types/FoodTableTypes';
+import { MICRONUTRIENT_INFO } from '../nutrition/FoodTableCalculations';
 import { fieldLabel } from './FoodDetailFields';
 
 /** A figure's plain-English explanation, then each sourced input behind it. */

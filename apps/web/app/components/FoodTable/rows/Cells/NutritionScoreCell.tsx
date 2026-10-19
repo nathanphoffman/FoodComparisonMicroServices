@@ -1,0 +1,25 @@
+import { Cell } from '../../../Table/Cell';
+import type { NutritionDetail } from '../../Types/FoodTableTypes';
+import type { DietSettings, NutrientStandard } from '../../nutrition/FoodTableRda';
+import { getNutritionScoreColor } from '../FoodTableStyles';
+import { NutritionTooltip } from '../Tooltips/NutritionTooltip';
+import { EmptyValue } from './EmptyValue';
+
+function NutritionScore({ score }: { score: number }) {
+  return (
+    <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${getNutritionScoreColor(score)}`}>
+      {score.toFixed(1)}
+    </span>
+  );
+}
+
+export function NutritionScoreCell({ score, detail, diet, standard }: { score: number | null; detail: NutritionDetail; diet?: DietSettings | null; standard?: NutrientStandard }) {
+  return (
+    <Cell key="nutritionScore" align="right">
+      {score != null
+        ? <NutritionTooltip detail={detail} diet={diet} standard={standard}><NutritionScore score={score} /></NutritionTooltip>
+        : <EmptyValue />
+      }
+    </Cell>
+  );
+}

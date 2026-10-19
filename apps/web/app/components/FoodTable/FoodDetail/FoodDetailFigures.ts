@@ -1,11 +1,11 @@
-import type { ColConfig, RawFood } from '../FoodTableTypes';
-import type { ScoredRow } from '../FoodTableSort';
-import { formatIntelligenceValue } from '../FoodTableCalculations';
+import type { ColConfig, RawFood } from '../Types/FoodTableTypes';
+import type { ScoredRow } from '../scoring/FoodTableSort';
+import { formatIntelligenceValue } from '../nutrition/FoodTableCalculations';
 import {
   type Tone,
   getEmissionsTone, getImprovementTone, getIntelligenceTone, getLandUseTone,
   getNutritionScoreTone, getSentientHarmTone, getWaterTone,
-} from '../FoodTableStyles';
+} from '../rows/FoodTableStyles';
 
 export type FigureKey = Exclude<ColConfig['key'], 'name' | 'rank'>;
 

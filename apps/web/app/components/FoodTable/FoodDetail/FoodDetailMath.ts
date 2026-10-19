@@ -1,5 +1,5 @@
-import type { RawFood } from '../FoodTableTypes';
-import type { ScoredRow } from '../FoodTableSort';
+import type { RawFood } from '../Types/FoodTableTypes';
+import type { ScoredRow } from '../scoring/FoodTableSort';
 import type { FigureKey } from './FoodDetailFigures';
 import type { MathStep, MathContext } from './math/MathShared';
 import { nutritionScoreMath } from './math/nutritionMath';

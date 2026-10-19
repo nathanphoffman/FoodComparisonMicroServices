@@ -1,7 +1,7 @@
-import type { ScoredRow } from '../../FoodTableSort';
-import type { SliderValues } from '../../FoodTableTypes';
+import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { SliderValues } from '../../Types/FoodTableTypes';
 import type { FigureKey } from '../FoodDetailFigures';
-import { formatIntelligenceValue } from '../../FoodTableCalculations';
+import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 
 /** One line of a figure's working: label, the equation with this food's numbers, the result. */
 export type MathStep = { label: string; expression: string; result: string };

@@ -3,22 +3,22 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Table } from '../Table/Table';
 import { Row } from '../Table/Row';
-import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './FoodTableRda';
-import { getUnitLabel, blendLandM2PerKg } from './FoodTableCalculations';
-import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
-import { DIET_SLUG, isCustomFoodSlug } from './FoodTableTypes';
-import { useFoodTableSort } from './FoodTableSort';
-import { useWasmScoring } from './FoodTableWASMIntegration';
-import { FoodTableInputs } from './FoodTableInputs';
-import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableDefaults';
-import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './FoodTableFilters';
+import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './nutrition/FoodTableRda';
+import { getUnitLabel, blendLandM2PerKg } from './nutrition/FoodTableCalculations';
+import type { ColConfig, SliderValues, DataRegion } from './Types/FoodTableTypes';
+import { DIET_SLUG, isCustomFoodSlug } from './Types/FoodTableTypes';
+import { useFoodTableSort } from './scoring/FoodTableSort';
+import { useWasmScoring } from './scoring/FoodTableWASMIntegration';
+import { FoodTableInputs } from './controls/FoodTableInputs';
+import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './scoring/FoodTableDefaults';
+import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './controls/FoodTableFilters';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
-import { useFoodData } from './useFoodData';
-import { useCustomFoods } from './useCustomFoods';
-import { rankByImprovement } from './FoodTableRanks';
-import { dynamicLabels, figureLabelsFor } from './FoodTableLabels';
-import { foodTableCell } from './FoodTableCell';
-import { DietModal } from './DietModal';
+import { useFoodData } from './scoring/useFoodData';
+import { useCustomFoods } from './diet/useCustomFoods';
+import { rankByImprovement } from './scoring/FoodTableRanks';
+import { dynamicLabels, figureLabelsFor } from './rows/FoodTableLabels';
+import { foodTableCell } from './rows/FoodTableCell';
+import { DietModal } from './diet/DietModal';
 
 export function FoodTable() {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);

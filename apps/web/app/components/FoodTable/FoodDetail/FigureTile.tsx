@@ -1,7 +1,7 @@
 import type { FoodDetails } from '@/lib/types';
-import type { RawFood } from '../FoodTableTypes';
-import type { ScoredRow } from '../FoodTableSort';
-import { TILE_COLORS } from '../FoodTableStyles';
+import type { RawFood } from '../Types/FoodTableTypes';
+import type { ScoredRow } from '../scoring/FoodTableSort';
+import { TILE_COLORS } from '../rows/FoodTableStyles';
 import { FIGURES } from './FoodDetailFigures';
 import { matchFields } from './FoodDetailFields';
 import { figureMath, type MathContext } from './FoodDetailMath';
