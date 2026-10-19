@@ -57,7 +57,7 @@ export function dailyTargets(
     const add = (key: TargetKey, amount: number | null, kind: TargetKind, unit: 'g' | 'mg') => {
         if (amount !== null) targets[key] = { amount, kind, unit };
     };
-    const fromPercent = (pct: number | null, kcalPerGram: number) => pct === null ? null : (pct / 100) * calories / kcalPerGram;
+    const fromPercent = (percentOfCalories: number | null, caloriesPerGram: number) => percentOfCalories === null ? null : (percentOfCalories / 100) * calories / caloriesPerGram;
 
     const gPerKg = average(standard, PROTEIN_G_PER_KG, sex);
     const activityGPerKg = ACTIVITY_LEVELS[Math.min(Math.max(Math.round(activity), 0), ACTIVITY_LEVELS.length - 1)].gPerKg;

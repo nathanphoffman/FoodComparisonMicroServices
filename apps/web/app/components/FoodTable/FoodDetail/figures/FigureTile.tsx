@@ -1,6 +1,6 @@
 import type { FoodDetails } from '@/lib/types';
 import type { RawFood } from '../../types/FoodTableTypes';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../types/FoodTableTypes';
 import { TILE_COLORS } from '../../rows/FoodTableStyles';
 import { FIGURES } from './FoodDetailFigures';
 import { matchFields } from './FoodDetailFields';

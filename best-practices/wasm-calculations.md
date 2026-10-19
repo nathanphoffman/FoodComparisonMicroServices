@@ -6,7 +6,9 @@ Follow Rust conventions: `snake_case` for functions, variables, modules, and fie
 
 ## Module boundaries
 
-The crate has three modules: `lib.rs` (WASM boundary only), `calculations.rs` (pure math), and `models.rs` (data shapes). Keep this separation strict. `lib.rs` must contain no calculation logic — only deserialise, call `calculations::apply`, and serialise. `calculations.rs` must contain no `wasm_bindgen` or serde imports. `models.rs` owns all `Serialize`/`Deserialize` derives. If `calculations.rs` grows beyond roughly 100 lines, split it into focused sub-modules (e.g. `calculations/emissions.rs`, `calculations/water.rs`) rather than letting it grow into a single large file.
+The crate has three parts: `lib.rs` (WASM boundary only), `calculations/` (pure math) and `models/` (data shapes). Keep this separation strict. `lib.rs` must contain no calculation logic — only deserialise, call `calculations::apply`, and serialise. Nothing under `calculations/` imports `wasm_bindgen` or serde. `models/` owns all `Serialize`/`Deserialize` derives: `input/` is what the browser sends, `output.rs` and `detail.rs` are what it gets back.
+
+`calculations/` is grouped by job: `per_food/` (one food on its own: divisor, nutrition, emissions, water and the assembled row), `comparison/` (foods against each other: the Improvement score, its power mean, and the blended diet row) and `eco/` (land use, kill and harm). `mod.rs` is the only file that runs all three in order. Keep each folder to about six files; split a new group out when one grows well past that.
 
 ## Regex
 
@@ -18,11 +20,11 @@ Avoid regex entirely — Rust's string methods, `char` predicates, and pattern m
 
 ## Pure functions
 
-All functions in `calculations.rs` are pure: no I/O, no global mutable state, no `unsafe`. Prefer more, smaller functions over large ones — a function that computes two independent values should be two functions. Functions over roughly 20 lines should be broken into named helpers. Functions that only apply to one food type (`compute_emissions`, `compute_land_use`, etc.) should remain separate named functions rather than being merged into a single dispatch function.
+All functions under `calculations/` are pure: no I/O, no global mutable state, no `unsafe`. Prefer more, smaller functions over large ones — a function that computes two independent values should be two functions. Functions over roughly 20 lines should be broken into named helpers. Functions that only apply to one food type (`compute_emissions`, `compute_land_use`, etc.) should remain separate named functions rather than being merged into a single dispatch function.
 
 ## Constants
 
-Every numeric literal used in a formula must be a named `const f64` at the top of `calculations.rs` with a comment indicating its units and the matching TypeScript or scientific source. Inline magic numbers are a violation. When a constant depends on others, express the relationship in a comment rather than pre-multiplying silently.
+Every numeric literal used in a formula must be a named `const f64` at the top of the file that uses it (shared eco constants live in `calculations/eco/constants.rs`) with a comment indicating its units and its scientific source. Inline magic numbers are a violation. When a constant depends on others, express the relationship in a comment rather than pre-multiplying silently.
 
 ## Option handling
 
@@ -34,11 +36,11 @@ Functions return `f64` or `Option<f64>` — they do not panic. The `score()` fun
 
 ## Numerical correctness
 
-The Rust calculations are a port of `FoodTableCalculations.ts`. Any change to a formula must be reflected in the TypeScript original (or vice versa) and noted with a comment referencing the TS function name. Constants like `GWP_CH4 = 28.0` and `GWP_N2O = 265.0` are not estimates — do not change them without a source citation.
+The Rust scorer is the source of truth for every score. The web app keeps a few display copies of its numbers (global warming potentials, micronutrient daily values, amino acid requirements, square meters per hectare) so it can show the working. `apps/web/app/components/FoodTable/nutrition/ConstantsInSync.test.ts` reads the Rust source and fails if a copy drifts, so change the Rust value and the web copy together and run `pnpm test`. Constants like `GWP_CH4 = 28.0` and `GWP_N2O = 265.0` are not estimates — do not change them without a source citation.
 
 ## Build
 
-The crate compiles to `cdylib` for WASM. Run `wasm-pack build --target web` to produce the `pkg/` output consumed by `apps/web`. The release profile uses `opt-level = "s"` for size — do not change this without measuring the impact on the browser bundle.
+The crate compiles to `cdylib` for WASM. Run `wasm-pack build --target web` (or `pnpm build:wasm`) to produce the `pkg/` output consumed by `apps/web`. The scored rows are serialized in `camelCase` (`#[serde(rename_all = "camelCase")]`), which the web app's `ScoredRow` type mirrors; renaming a field means changing both and rebuilding. The release profile uses `opt-level = "s"` for size — do not change this without measuring the impact on the browser bundle.
 
 ## Dead code
 

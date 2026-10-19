@@ -1,4 +1,5 @@
-// ── Eco constants (matching FoodTableCalculations.ts exactly) ─────────────────
+// Eco constants. SQUARE_METERS_PER_HA is copied in the web app (FoodDetail/figures/math/MathShared.ts);
+// ConstantsInSync.test.ts fails if the copies drift apart.
 pub(super) const SQUARE_METERS_PER_HA: f64 = 10_000.0;
 
 pub(super) const INSECT_DENSITY_PER_HA: f64 = 1e9;

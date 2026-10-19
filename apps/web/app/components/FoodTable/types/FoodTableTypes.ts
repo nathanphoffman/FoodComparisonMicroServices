@@ -3,5 +3,6 @@ export * from './NutrientTypes';
 export * from './ScoreDetailTypes';
 export * from './LandTypes';
 export * from './RawFood';
+export * from './ScoredRow';
 export * from './SliderTypes';
 export * from './DietTypes';

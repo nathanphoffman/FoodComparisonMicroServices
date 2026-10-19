@@ -46,6 +46,10 @@ export function nutritionScale(calories: number): number {
     return calories > 0 ? 100 / calories : 0;
 }
 
+/**
+ * Names the Compare By unit. The four weights are shares that add up to 100, so a weight of exactly 100 means
+ * that one measure is the only one in use; any mix of measures is a "weighted unit".
+ */
 export function getUnitLabel(weights: FoodWeights): string {
     if (weights.calories === 100) return '1000 kcal';
     if (weights.protein  === 100) return '100g protein';

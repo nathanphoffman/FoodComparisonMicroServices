@@ -1,4 +1,4 @@
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../types/FoodTableTypes';
 import type { Basis } from './Impact/DietImpactMetrics';
 import { METRICS } from './Impact/DietImpactMetrics';
 import { DietImpactRow } from './Impact/DietImpactRow';

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import type { RawFood } from '../types/FoodTableTypes';
-import type { ScoredRow } from '../scoring/FoodTableSort';
+import type { ScoredRow } from '../types/FoodTableTypes';
 import { FIGURES, type FigureKey } from './figures/FoodDetailFigures';
 import type { MathContext } from './figures/math/FoodDetailMath';
 import { FigureTile } from './figures/FigureTile';

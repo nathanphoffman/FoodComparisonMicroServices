@@ -3,10 +3,11 @@ import { nutritionScale } from '../../../nutrition/FoodTableCalculations';
 import type { DietSettings, NutrientStandard } from '../../../nutrition/FoodTableRda';
 import { dailyTargets, targetColor, type Target } from '../../../nutrition/FoodTableTargets';
 import { TooltipSection, TooltipRow } from '../../../../Table/Tooltip';
+import { DEFAULT_NUTRITION_WEIGHTS } from '../../../scoring/FoodTableDefaults';
 import { dayScaleOf, needColor } from './nutritionColors';
 
-// Sugar beyond this many grams per gram of fiber is "free" sugar, the way the Nutrition Score counts it.
-const FREE_SUGAR_FIBER_ALLOWANCE = 5;
+// Sugar beyond this many grams per gram of fiber is "free" sugar, the way the Nutrition Score counts it (at its default setting).
+const FREE_SUGAR_FIBER_ALLOWANCE = DEFAULT_NUTRITION_WEIGHTS.sugarAllowance;
 // Keeps the sugar-to-free-sugar ratio finite when a food has no free sugar at all.
 const SMALLEST_FREE_SUGAR = 1e-9;
 // Amounts under this many grams get a decimal in the whole-day figure.

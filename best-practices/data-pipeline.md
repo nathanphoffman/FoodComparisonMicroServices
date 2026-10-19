@@ -6,7 +6,11 @@ Use `snake_case` for everything except class names, which use `PascalCase`. Name
 
 ## Type annotations
 
-Every function must have type annotations on all parameters and the return value. Use `TypedDict` for data shapes that flow to and from JSON — see `food_types.py` as the reference. Use the built-in generic forms (`list[Food]`, `dict[str, float]`) rather than `List` and `Dict` from `typing`. Use `Optional[X]` only when you need the older syntax; prefer `X | None` in Python 3.10+ contexts.
+Every function must have type annotations on all parameters and the return value. Use `TypedDict` for data shapes that flow to and from JSON — see the `food_types/` package as the reference. Use the built-in generic forms (`list[Food]`, `dict[str, float]`) rather than `List` and `Dict` from `typing`. Use `Optional[X]` only when you need the older syntax; prefer `X | None` in Python 3.10+ contexts.
+
+## Layout
+
+`src/lib/` is grouped by job: `insert/` (one module per table, in `foods/`, `sources/` and `impacts/`), `checks/` (validators and sanity warnings), `database/` (build output: files, version, regions), `load_foods/` (reads the JSON) and `types/` (computation wrappers: `raw/`, `pesticides/` and `crop_mix/`). `food_types/` holds the raw TypedDicts, split by topic and re-exported from its `__init__.py`. Keep each folder to about six items.
 
 ## Functions and files
 
@@ -18,7 +22,7 @@ Avoid regex entirely when string methods, `Path` operations, or explicit parsing
 
 ## Imports
 
-Use absolute imports within the package (`from src.food_types import Food`). Group stdlib, then third-party, then internal imports, separated by blank lines. Do not use star imports.
+Use relative imports within the package (`from ...food_types import Food`). Group stdlib, then third-party, then internal imports, separated by blank lines. Do not use star imports.
 
 ## Constants and paths
 

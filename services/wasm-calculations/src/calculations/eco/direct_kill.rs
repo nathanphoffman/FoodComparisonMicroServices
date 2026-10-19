@@ -1,8 +1,6 @@
 use super::intelligence::{captivity_years_for_slug, compute_intelligence, lifespan_years_for_slug};
 use crate::models::{FoodRow, KillDetail, SliderQuery};
 
-// ── Direct kill ───────────────────────────────────────────────────────────────
-
 /// Intelligence score of one death of this animal, and the kg of food produced
 /// per producing animal. None for plants and animals missing kill data.
 fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, f64)> {
@@ -75,8 +73,6 @@ pub(in crate::calculations) fn wild_fish_kill(food: &FoodRow, query: &SliderQuer
         query.final_intelligence_exponent,
     )
 }
-
-// ── Captive sentience ─────────────────────────────────────────────────────────
 
 /// Suffering from time spent in captivity, expressed as extra deaths:
 /// each year in captivity counts as `captivity_multiplier` additional kills.

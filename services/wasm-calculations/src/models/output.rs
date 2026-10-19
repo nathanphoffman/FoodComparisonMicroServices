@@ -7,9 +7,11 @@ use super::detail::{EmissionsBreakdown, ImprovementDetail, KillDetail, LandUseDe
 /// breakdown details used for tooltips. Divisor is included so the TypeScript
 /// side never needs to recompute it.
 #[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct ScoredRow {
     pub name:      String,
     pub slug:      String,
+    /// "plant" or "animal" copied from the source food, or "diet" for the diet row the scorer blends itself.
     pub food_type: String,
     pub divisor:   f64,
 

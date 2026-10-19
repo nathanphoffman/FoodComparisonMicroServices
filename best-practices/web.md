@@ -14,7 +14,7 @@ Avoid regex entirely when a named function, string method, or explicit parse wou
 
 ## Functions and files
 
-Prefer more, smaller functions and more, smaller files over large ones. A function that does two things should be two functions. A file that covers two concerns should be two files. Functions over roughly 20 lines should be broken into named helpers. Files over roughly 100 lines should be split by responsibility. When in doubt, extract — a well-named 5-line function is always better than an inline block with a comment. Each file exports one React component — the exception is a cohesive set of small, tightly related components (e.g. per-column cell renderers in `FoodTableFields.tsx`).
+Prefer more, smaller functions and more, smaller files over large ones. A function that does two things should be two functions. A file that covers two concerns should be two files. Functions over roughly 20 lines should be broken into named helpers. Files over roughly 100 lines should be split by responsibility. When in doubt, extract — a well-named 5-line function is always better than an inline block with a comment. Each file exports one React component — the exception is a cohesive set of small, tightly related components (e.g. the per-column cell renderers under `FoodTable/rows/Cells/`).
 
 Prefer `const` over `let`. Use named exports only — no default exports except for Next.js page and layout files, where the framework requires it.
 
@@ -24,8 +24,8 @@ Prefer `interface` over `type` alias for object shapes. Use `null` (not `undefin
 
 ## Data and API
 
-The API returns snake_case JSON keys that intentionally mirror the TypeScript types in `lib/types.ts`. Do not rename or restructure these field names in TypeScript without coordinating with the C# `FoodRow` model and the Rust `FoodRow` struct. `lib/queries/commonFoods.ts` and `lib/db.ts` are the only places that should contain raw SQL — inline queries elsewhere are a violation.
+The API returns snake_case JSON keys that intentionally mirror the TypeScript `RawFood` type (`app/components/FoodTable/types/RawFood.ts`). Do not rename or restructure these field names in TypeScript without coordinating with the C# `FoodRow` model and the Rust `FoodRow` struct. The WASM scorer's output is the opposite: camelCase, matching `ScoredRow` in `types/ScoredRow.ts` and the Rust `ScoredRow` serde setting. `lib/queries/commonFoods.ts` and `lib/db.ts` are the only places that should contain raw SQL — inline queries elsewhere are a violation.
 
 ## Component boundaries
 
-`app/components/FoodTable/` has its own agent (`food-table`) with tighter constraints. Respect its folder grouping (`controls/`, `diet/`, `nutrition/`, `rows/`, `scoring/`, `types/`, `FoodDetail/`), keep color functions in `nutrition/FoodTableTargets.ts`, and do not merge the per-column cell components in `rows/Cells/` into a single file.
+`app/components/FoodTable/` has its own agent (`food-table`) with tighter constraints. Respect its folder grouping (`controls/`, `diet/`, `nutrition/`, `rows/`, `scoring/`, `types/`, `FoodDetail/`) and keep every folder to about six items, keep color functions in `nutrition/FoodTableTargets.ts`, and do not merge the per-column cell components in `rows/Cells/` into a single file.

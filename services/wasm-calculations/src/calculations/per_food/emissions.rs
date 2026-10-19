@@ -1,6 +1,8 @@
 use crate::models::{EmissionsBreakdown, FoodRow};
 
-// ── GWP conversion factors (matching FoodTableCalculations.ts) ────────────────
+// Global warming potentials: how many times more a kg of methane or nitrous oxide warms than a kg of CO2, over 100 years.
+// The web app shows copies of these in its working (FoodDetail/figures/math/MathShared.ts);
+// ConstantsInSync.test.ts fails if they drift apart.
 const GWP_CH4: f64 = 28.0;
 const GWP_N2O: f64 = 265.0;
 

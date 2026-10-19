@@ -12,7 +12,7 @@ Prefer more, smaller classes and more, smaller files over large ones. Each file 
 
 C# property names are `PascalCase`. The API serialises to `snake_case` via `JsonNamingPolicy.SnakeCaseLower` in `Program.cs` — do not apply `[JsonPropertyName]` attributes to achieve the same thing, since the global policy handles it. Dapper column mapping uses `DefaultTypeMap.MatchNamesWithUnderscores = true`, so `SatFat` maps to `sat_fat` automatically; do not add manual column attribute mappings unless there is a genuine mismatch.
 
-The snake_case JSON output must stay in sync with the TypeScript `RawFood` type in `apps/web/lib/types.ts` and the Rust `FoodRow` struct in `services/wasm-calculations/src/models.rs`. Renaming or adding a property requires coordinating across all three.
+The snake_case JSON output must stay in sync with the TypeScript `RawFood` type in `apps/web/app/components/FoodTable/types/RawFood.ts` and the Rust `FoodRow` struct in `services/wasm-calculations/src/models/input/food_row.rs`. The `*_paf` fields are database columns and JSON keys, so they keep that short name (it stands for potentially affected fraction) and are explained by a comment on the model. Renaming or adding a property requires coordinating across all three.
 
 ## SQL
 

@@ -61,8 +61,8 @@ export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
 
-    const handleChange = (key: keyof NutritionWeights, val: number) => {
-        const next = { ...weights, [key]: val };
+    const handleChange = (key: keyof NutritionWeights, weight: number) => {
+        const next = { ...weights, [key]: weight };
         setWeights(next);
         debouncedOnChange(next);
     };
@@ -80,7 +80,7 @@ export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_
                             <span>{SETTINGS[key].label}</span>
                             <span className="font-medium text-neutral-700">{SETTINGS[key].format(weights[key])}</span>
                         </div>
-                        <Slider min={0} max={SETTINGS[key].max} step={SETTINGS[key].step} value={weights[key]} onChange={val => handleChange(key, val)} />
+                        <Slider min={0} max={SETTINGS[key].max} step={SETTINGS[key].step} value={weights[key]} onChange={weight => handleChange(key, weight)} />
                         <div className="text-xs text-neutral-400 mt-0.5">{SETTINGS[key].description}</div>
                     </div>
                 ))}

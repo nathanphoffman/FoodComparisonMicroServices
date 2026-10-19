@@ -9,8 +9,6 @@ use crate::models::{FoodRow, ScoredRow, SliderQuery};
 use comparison::{blend_diet, Blend, Comparison};
 use per_food::{compute_row, NormFactors};
 
-// ── Entry point ──────────────────────────────────────────────────────────────
-
 /// Scores every food, plus the diets (the one being planned, and the benchmark) as the last rows.
 pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
     // 1. Per-food values (emissions, land use, water, harm, …) in Compare By units.

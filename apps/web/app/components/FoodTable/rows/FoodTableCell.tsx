@@ -11,7 +11,7 @@ import { RankCell } from './Cells/score/RankCell';
 import { AvailabilityCell } from './Cells/score/AvailabilityCell';
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 import { toNutritionDetail, toIntelligenceDetail } from '../nutrition/FoodTableCalculations';
-import type { ScoredRow } from '../scoring/FoodTableSort';
+import type { ScoredRow } from '../types/FoodTableTypes';
 import { isDietSlug, EMPTY_SENTIENT_HARM_DETAIL, type ColConfig, type NutritionDetail, type RawFood, type SliderValues } from '../types/FoodTableTypes';
 
 /** What every cell in the table can need besides its own food. */
@@ -35,14 +35,14 @@ export function foodTableCell(columnKey: ColConfig['key'], food: RawFood, scored
     switch (columnKey) {
         case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={onSelect} />;
         case 'rank':           return <RankCell           key="rank"           rank={ranks.get(food.slug) ?? null} total={rankedCount} />;
-        case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={(isDietSlug(food.slug) ? dietNutrition : null) ?? toNutritionDetail(food)} diet={isDietSlug(food.slug) ? dietSettings : null} standard={nutrientStandard} />;
-        case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={divisor} />;
-        case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={divisor} unit={unit} />;
-        case 'directKill':     return <DirectKillCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;
-        case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.water_detail} referenceTotal={referenceWater} divisor={divisor} unit={unit} greenWaterWeight={sliderValues.greenWaterWeight} greyWaterWeight={sliderValues.greyWaterWeight} />;
-        case 'captiveSentience': return <CaptiveSentienceCell key="captiveSentience" value={scoredRow?.captive_sentience ?? null} killDetail={scoredRow?.kill_detail} captivityMultiplier={sliderValues.captivityMultiplier} explanation={food.sentient_harm_explanation} />;
-        case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentient_harm ?? null} detail={scoredRow?.sentient_harm_detail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={divisor} killMultiplier={sliderValues.killMultiplier} explanation={food.sentient_harm_explanation} />;
-        case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.final_score ?? null} />;
+        case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutritionScore ?? null} detail={(isDietSlug(food.slug) ? dietNutrition : null) ?? toNutritionDetail(food)} diet={isDietSlug(food.slug) ? dietSettings : null} standard={nutrientStandard} />;
+        case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissionsBreakdown} divisor={divisor} />;
+        case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.landUse ?? null} detail={scoredRow?.landUseDetail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={divisor} unit={unit} />;
+        case 'directKill':     return <DirectKillCell   key="directKill"     value={scoredRow?.directKill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.killDetail} wildFishDeathsPerKg={scoredRow?.wildFishDeathsPerKg} explanation={food.sentient_harm_explanation} />;
+        case 'water':          return <WaterCell          key="water"          value={scoredRow?.water ?? null} detail={scoredRow?.waterDetail} referenceTotal={referenceWater} divisor={divisor} unit={unit} greenWaterWeight={sliderValues.greenWaterWeight} greyWaterWeight={sliderValues.greyWaterWeight} />;
+        case 'captiveSentience': return <CaptiveSentienceCell key="captiveSentience" value={scoredRow?.captiveSentience ?? null} killDetail={scoredRow?.killDetail} captivityMultiplier={sliderValues.captivityMultiplier} explanation={food.sentient_harm_explanation} />;
+        case 'sentientHarm':   return <SentientHarmCell   key="sentientHarm"   value={scoredRow?.sentientHarm ?? null} detail={scoredRow?.sentientHarmDetail ?? EMPTY_SENTIENT_HARM_DETAIL} divisor={divisor} killMultiplier={sliderValues.killMultiplier} explanation={food.sentient_harm_explanation} />;
+        case 'finalScore':     return <FinalScoreCell     key="finalScore"     ratio={scoredRow?.finalScore ?? null} />;
         case 'availability':   return <AvailabilityCell   key="availability"   value={scoredRow?.availability ?? null} />;
     }
 }

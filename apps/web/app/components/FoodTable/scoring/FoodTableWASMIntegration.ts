@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 // service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../../_wasm-signal';
 import type { RawFood, DietInput, SliderValues } from '../types/FoodTableTypes';
-import type { ScoredRow } from './FoodTableSort';
+import type { ScoredRow } from '../types/FoodTableTypes';
 import { buildScoreInput, type ScoreInput } from './FoodTableWasmQuery';
 
 // ── Lazy WASM loader — dynamic import; webpack handles .wasm initialization ──
@@ -27,8 +27,6 @@ export async function loadWasm() {
     wasmReady = true;
 }
 
-// ── Hook ──────────────────────────────────────────────────────────────────────
-
 /**
  * Manages all WASM scoring state and side effects for the FoodTable.
  *
@@ -46,8 +44,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
     const [scoringError, setScoringError] = useState<string | null>(null);
     const loadedWasmBuildId              = useRef(WASM_BUILD_ID);
 
-    // ── Hard-reload on WASM rebuild (dev only) ────────────────────────────────
-    // Fast Refresh re-renders with the new WASM_BUILD_ID but keeps refs, so a
+    // Hard-reload on WASM rebuild (dev only): Fast Refresh re-renders with the new WASM_BUILD_ID but keeps refs, so a
     // mismatch means the binary was rebuilt since this page loaded.
     useEffect(() => {
         if (process.env.NODE_ENV === 'development' && loadedWasmBuildId.current !== WASM_BUILD_ID) {
@@ -55,7 +52,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
         }
     });
 
-    // ── Re-score whenever sliders or data change ──────────────────────────────
+    // Re-score whenever sliders or data change.
     useEffect(() => {
         if (!wasmReady || rawFoods.length === 0) return;
 

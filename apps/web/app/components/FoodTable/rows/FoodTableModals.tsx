@@ -18,7 +18,7 @@ type Props = {
 /** The two windows the table opens: the whole-diet breakdown and a single food's details. */
 export function FoodTableModals({ data, sliderValues, display, diet, detail }: Props) {
     const { rawFoods, scored, dietNutrition, diet: dietInput, averageDiet } = data;
-    const rawLandOf = (slug: string) => scored.get(slug)?.land_use_detail.rawM2PerKg;
+    const rawLandOf = (slug: string) => scored.get(slug)?.landUseDetail.rawM2PerKg;
     const selectedFood = detail.slug ? rawFoods.find(food => food.slug === detail.slug) : undefined;
 
     return (

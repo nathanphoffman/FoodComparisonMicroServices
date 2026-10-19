@@ -42,6 +42,7 @@ pub struct FoodRow {
     pub green_water_per_kg:        Option<f64>,
     pub blue_water_per_kg:         Option<f64>,
     pub grey_water_per_kg:         Option<f64>,
+    // PAF = potentially affected fraction: the share (0-1) of a group of species harmed by this crop's pesticides. The name is kept because it is also the database column and JSON key.
     pub pesticide_insect_paf:      Option<f64>,
     pub pesticide_terrestrial_paf: Option<f64>,
     pub pesticide_bee_hazard:      Option<f64>,

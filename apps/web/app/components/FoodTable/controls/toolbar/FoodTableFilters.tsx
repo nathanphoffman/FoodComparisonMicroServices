@@ -1,7 +1,7 @@
 'use client';
 
 import { DIET, dietStub, type RawFood } from '../../types/FoodTableTypes';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../types/FoodTableTypes';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)
 // and/or any of its tags. A food can appear under more than one filter — almond milk

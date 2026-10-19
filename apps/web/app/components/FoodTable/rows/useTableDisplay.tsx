@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Row } from '../../Table/Row';
-import type { ScoredRow } from '../scoring/FoodTableSort';
+import type { ScoredRow } from '../types/FoodTableTypes';
 import { useFoodTableSort } from '../scoring/FoodTableSort';
 import { rankByImprovement } from '../scoring/FoodTableRanks';
 import { foodsToShow } from '../controls/toolbar/FoodTableFilters';

@@ -23,6 +23,7 @@ export type RawFood = {
   green_water_per_kg: number | null;
   blue_water_per_kg:  number | null;
   grey_water_per_kg:  number | null;
+  // PAF = potentially affected fraction: the share (0-1) of a group of species harmed by this crop's pesticides. The name is kept because it is also the database column and JSON key.
   pesticide_insect_paf:      number | null;
   pesticide_terrestrial_paf: number | null;
   pesticide_bee_hazard:      number | null;

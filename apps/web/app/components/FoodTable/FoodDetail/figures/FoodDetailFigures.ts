@@ -1,5 +1,5 @@
 import type { ColConfig, RawFood } from '../../types/FoodTableTypes';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../types/FoodTableTypes';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 import {
   type Tone,
@@ -29,7 +29,7 @@ const oneDecimal = (value: number) => value.toFixed(1);
 export const FIGURES: Figure[] = [
   {
     key: 'nutritionScore',
-    value: row => row.nutrition_score,
+    value: row => row.nutritionScore,
     format: oneDecimal,
     tone: value => getTone('nutritionScore', value),
     fields: () => ['nutrition'],
@@ -51,7 +51,7 @@ export const FIGURES: Figure[] = [
   },
   {
     key: 'landUse',
-    value: row => row.land_use,
+    value: row => row.landUse,
     format: oneDecimal,
     tone: value => getTone('landUse', value),
     fields: food => food.type === 'animal'
@@ -65,7 +65,7 @@ export const FIGURES: Figure[] = [
   },
   {
     key: 'directKill',
-    value: row => row.direct_kill,
+    value: row => row.directKill,
     format: formatIntelligenceValue,
     tone: value => getTone('directKill', value),
     fields: food => food.type === 'animal'
@@ -87,7 +87,7 @@ export const FIGURES: Figure[] = [
   },
   {
     key: 'captiveSentience',
-    value: row => row.captive_sentience,
+    value: row => row.captiveSentience,
     format: formatIntelligenceValue,
     tone: value => getTone('sentientHarm', value),
     fields: () => ['neuron_count', 'weight_kg', 'lifetime_output_kg', 'offspring_deaths_per_animal', 'offspring_captivity_years'],
@@ -95,7 +95,7 @@ export const FIGURES: Figure[] = [
   },
   {
     key: 'sentientHarm',
-    value: row => row.sentient_harm,
+    value: row => row.sentientHarm,
     format: formatIntelligenceValue,
     tone: value => getTone('sentientHarm', value),
     fields: food => food.type === 'animal'
@@ -117,7 +117,7 @@ export const FIGURES: Figure[] = [
   },
   {
     key: 'finalScore',
-    value: row => row.final_score,
+    value: row => row.finalScore,
     format: value => `${value.toFixed(1)}x`,
     tone: value => getTone('improvement', value),
     fields: () => [],

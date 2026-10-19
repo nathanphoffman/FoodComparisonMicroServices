@@ -35,7 +35,7 @@ type Props = { detail: SentientHarmDetail; divisor?: number; killMultiplier: num
 
 export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total, explanation, children }: Props) {
   const perUnit = (value: number) => formatIntelligenceValue(value / divisor);
-  // Mirrors the sentient_harm formula in wasm-calculations/src/calculations/per_food/row.rs:
+  // Mirrors the sentientHarm formula in wasm-calculations/src/calculations/per_food/row.rs:
   // intentional + accidental ÷ killMultiplier (at 0×, intentional harm is dropped).
   const showScore = (score: number, accidental: boolean) => {
     if (!accidental) return killMultiplier > 0 ? perUnit(score) : 'not counted at 0×';

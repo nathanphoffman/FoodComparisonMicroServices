@@ -1,7 +1,7 @@
 import { Slider } from '../../../../Inputs/Slider';
 import { DAYS_PER_WEEK, FINE_MAX_PERCENT, FINE_STEP_PERCENT, LEVEL_STEP, MAX_LEVEL, formatPercent, type Ingredient } from '../logic/DietSaved';
 
-const formatCalories = (kcal: number) => Math.round(kcal).toLocaleString();
+const formatCalories = (calories: number) => Math.round(calories).toLocaleString();
 
 type Props = {
     ingredients: Ingredient[];
@@ -19,7 +19,7 @@ export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide,
     return (
         <div className="flex flex-col gap-1.5 pt-1">
             {ingredients.map((ing, idx) => {
-                const kcal = caloriesPerDay(ing.slug);
+                const dailyCalories = caloriesPerDay(ing.slug);
                 return (
                     <div key={ing.slug}>
                         <div className="flex items-center gap-2">
@@ -50,9 +50,9 @@ export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide,
                                 aria-label={`Remove ${ing.name}`}
                             >✕</button>
                         </div>
-                        {kcal !== null && (
+                        {dailyCalories !== null && (
                             <p className="text-[10px] text-neutral-500 pl-[5.5rem] md:pl-[8rem]">
-                                {formatCalories(kcal)} kcal / day · {formatCalories(kcal * DAYS_PER_WEEK)} kcal / week
+                                {formatCalories(dailyCalories)} kcal / day · {formatCalories(dailyCalories * DAYS_PER_WEEK)} kcal / week
                             </p>
                         )}
                     </div>

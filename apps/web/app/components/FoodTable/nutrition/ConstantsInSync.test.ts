@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { GWP_CH4, GWP_N2O, SQUARE_METERS_PER_HA } from '../FoodDetail/figures/math/MathShared';
 import { AMINO_ACID_REQUIREMENTS, MICRONUTRIENT_INFO } from './FoodTableCalculations';
 import { MICRONUTRIENT_KEYS } from '../types/FoodTableTypes';
+import { DEFAULT_NUTRITION_WEIGHTS } from '../scoring/FoodTableDefaults';
 
 // The web app shows copies of numbers that the Rust scorer actually uses. These tests read the Rust
 // source so a change on one side without the other fails here instead of showing wrong working to users.
@@ -50,5 +51,16 @@ describe('constants copied from Rust', () => {
         const source = rustSource('models/input/amino_acids.rs');
         const rustNames = ['HISTIDINE', 'ISOLEUCINE', 'LEUCINE', 'LYSINE', 'METHIONINE_PLUS_CYSTINE', 'PHENYLALANINE_PLUS_TYROSINE', 'THREONINE', 'TRYPTOPHAN', 'VALINE'];
         expect(AMINO_ACID_REQUIREMENTS.map(row => row.mgPerGramProtein)).toEqual(rustNames.map(name => rustConstant(source, name)));
+    });
+
+    it('the default Nutrition slider weights match nutrition_weights.rs', () => {
+        const defaults = rustSource('models/input/nutrition_weights.rs').match(/fn default\(\) -> Self \{\s*Self \{([^}]*)\}/)?.[1];
+        if (!defaults) throw new Error('Could not find the NutritionWeights default in the Rust source');
+        // Regex on purpose: reads each `field_name: 1.5,` line of the Rust struct literal into a number.
+        const rustWeights = Object.fromEntries([...defaults.matchAll(/(\w+):\s*([\d.]+)/g)].map(([, name, value]) => [name, Number(value)]));
+        const toSnakeCase = (name: string) => name.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+        for (const [name, value] of Object.entries(DEFAULT_NUTRITION_WEIGHTS)) {
+            expect(value, name).toBe(rustWeights[toSnakeCase(name)]);
+        }
     });
 });

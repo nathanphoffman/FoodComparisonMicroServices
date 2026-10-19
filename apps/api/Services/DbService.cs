@@ -84,7 +84,7 @@ public class DbService
 
     public IEnumerable<FoodRow> LoadFoods(string region)
     {
-        using var conn = new SqliteConnection($"Data Source={CurrentDbPath()};Mode=ReadOnly");
-        return conn.Query<FoodRow>(Query, new { Region = region });
+        using var connection = new SqliteConnection($"Data Source={CurrentDbPath()};Mode=ReadOnly");
+        return connection.Query<FoodRow>(Query, new { Region = region });
     }
 }

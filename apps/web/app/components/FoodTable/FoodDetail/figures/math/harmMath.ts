@@ -1,44 +1,44 @@
 import type { RawFood } from '../../../types/FoodTableTypes';
-import type { ScoredRow } from '../../../scoring/FoodTableSort';
-import { num, perUnitStep, type MathStep, type MathContext } from './MathShared';
+import type { ScoredRow } from '../../../types/FoodTableTypes';
+import { formatNumber, perUnitStep, type MathStep, type MathContext } from './MathShared';
 
 /** Working for the intentional kill: animal deaths plus wild fish used for feed. */
 export function directKillMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders, unit } = context;
   const divisor = row.divisor;
-  if (row.direct_kill == null) return [];
-  const kill = row.kill_detail;
-  const perKg = row.direct_kill * divisor;
+  if (row.directKill == null) return [];
+  const kill = row.killDetail;
+  const perKg = row.directKill * divisor;
   const steps: MathStep[] = [];
   if (kill) {
     steps.push({
       label: 'Intelligence per death',
-      expression: `(neurons^${sliders.neuronExponent} × lifespan ÷ weight^${sliders.weightExponent})^${sliders.finalIntelligenceExponent} = (${num(food.neuron_count)}^${sliders.neuronExponent} × ${num(kill.lifespanYears)} yr ÷ ${num(food.weight_kg ?? 0)} kg^${sliders.weightExponent})^${sliders.finalIntelligenceExponent}`,
-      result: num(kill.intelligencePerDeath),
+      expression: `(neurons^${sliders.neuronExponent} × lifespan ÷ weight^${sliders.weightExponent})^${sliders.finalIntelligenceExponent} = (${formatNumber(food.neuron_count)}^${sliders.neuronExponent} × ${formatNumber(kill.lifespanYears)} yr ÷ ${formatNumber(food.weight_kg ?? 0)} kg^${sliders.weightExponent})^${sliders.finalIntelligenceExponent}`,
+      result: formatNumber(kill.intelligencePerDeath),
     });
     const deaths = 1 + kill.offspringDeaths;
     const own = kill.intelligencePerDeath * deaths / kill.outputKgPerDeath;
     steps.push({
       label: 'Per kg',
-      expression: `intelligence × (1 + ${num(kill.offspringDeaths)} offspring) ÷ ${num(kill.outputKgPerDeath)} kg of food per animal`,
-      result: num(own),
+      expression: `intelligence × (1 + ${formatNumber(kill.offspringDeaths)} offspring) ÷ ${formatNumber(kill.outputKgPerDeath)} kg of food per animal`,
+      result: formatNumber(own),
     });
   }
-  if (row.wild_fish_kill > 0) {
-    const fishPerKg = row.wild_fish_deaths_per_kg;
+  if (row.wildFishKill > 0) {
+    const fishPerKg = row.wildFishDeathsPerKg;
     steps.push({
       label: 'Wild fish for feed (per kg)',
       expression: fishPerKg != null
-        ? `${num(fishPerKg)} fish per kg × ${num(row.wild_fish_kill / fishPerKg)} intelligence per fish`
+        ? `${formatNumber(fishPerKg)} fish per kg × ${formatNumber(row.wildFishKill / fishPerKg)} intelligence per fish`
         : 'wild fish killed for fishmeal / fish oil in its feed',
-      result: num(row.wild_fish_kill),
+      result: formatNumber(row.wildFishKill),
     });
   }
   if (steps.length === 0) return [{ label: 'Per kg', expression: 'no animals are killed on purpose for this food', result: '0' }];
-  if (kill && row.wild_fish_kill > 0) {
-    steps.push({ label: 'Total per kg', expression: `animal + wild fish = ${num(perKg - row.wild_fish_kill)} + ${num(row.wild_fish_kill)}`, result: num(perKg) });
+  if (kill && row.wildFishKill > 0) {
+    steps.push({ label: 'Total per kg', expression: `animal + wild fish = ${formatNumber(perKg - row.wildFishKill)} + ${formatNumber(row.wildFishKill)}`, result: formatNumber(perKg) });
   }
-  steps.push(perUnitStep(perKg, divisor, unit, row.direct_kill));
+  steps.push(perUnitStep(perKg, divisor, unit, row.directKill));
   return steps;
 }
 
@@ -46,20 +46,20 @@ export function directKillMath(food: RawFood, row: ScoredRow, context: MathConte
 export function captiveSentienceMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders, unit } = context;
   const divisor = row.divisor;
-  const kill = row.kill_detail;
-  if (row.captive_sentience == null || !kill) {
+  const kill = row.killDetail;
+  if (row.captiveSentience == null || !kill) {
     return [{ label: 'Per kg', expression: 'no animals are kept in captivity for this food', result: '0' }];
   }
   const years = kill.captivityYears + kill.offspringDeaths * kill.offspringCaptivityYears;
-  const perKg = row.captive_sentience * divisor;
+  const perKg = row.captiveSentience * divisor;
   return [
-    { label: 'Years in captivity per animal', expression: `own ${num(kill.captivityYears)} + ${num(kill.offspringDeaths)} offspring × ${num(kill.offspringCaptivityYears)}`, result: num(years) },
+    { label: 'Years in captivity per animal', expression: `own ${formatNumber(kill.captivityYears)} + ${formatNumber(kill.offspringDeaths)} offspring × ${formatNumber(kill.offspringCaptivityYears)}`, result: formatNumber(years) },
     {
       label: 'Per kg',
-      expression: `intelligence ${num(kill.intelligencePerDeath)} × ${num(years)} years × ${num(sliders.captivityMultiplier)} (Captivity slider) ÷ ${num(kill.outputKgPerDeath)} kg of food per animal`,
-      result: num(perKg),
+      expression: `intelligence ${formatNumber(kill.intelligencePerDeath)} × ${formatNumber(years)} years × ${formatNumber(sliders.captivityMultiplier)} (Captivity slider) ÷ ${formatNumber(kill.outputKgPerDeath)} kg of food per animal`,
+      result: formatNumber(perKg),
     },
-    perUnitStep(perKg, divisor, unit, row.captive_sentience),
+    perUnitStep(perKg, divisor, unit, row.captiveSentience),
   ];
 }
 
@@ -67,8 +67,8 @@ export function captiveSentienceMath(food: RawFood, row: ScoredRow, context: Mat
 export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders, unit } = context;
   const divisor = row.divisor;
-  if (row.sentient_harm == null) return [];
-  const detail = row.sentient_harm_detail;
+  if (row.sentientHarm == null) return [];
+  const detail = row.sentientHarmDetail;
   const parts: [string, number][] = [
     ['insects', detail.insectScore],
     ['bees', detail.beeScore],
@@ -85,23 +85,23 @@ export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathCon
   const accidental = shown.reduce((sum, [, score]) => sum + score, 0);
   const intentional = detail.directKillScore + detail.captiveSentienceScore;
   const killMultiplier = sliders.killMultiplier;
-  const perKg = row.sentient_harm * divisor;
+  const perKg = row.sentientHarm * divisor;
   const steps: MathStep[] = [];
   if (shown.length > 0) {
-    steps.push({ label: 'Accidental deaths (per kg)', expression: shown.map(([name, score]) => `${name} ${num(score)}`).join(' + '), result: num(accidental) });
+    steps.push({ label: 'Accidental deaths (per kg)', expression: shown.map(([name, score]) => `${name} ${formatNumber(score)}`).join(' + '), result: formatNumber(accidental) });
   }
   if (killMultiplier > 0) {
     if (intentional > 0) {
-      steps.push({ label: 'Intentional (per kg)', expression: `direct kill ${num(detail.directKillScore)} + captivity ${num(detail.captiveSentienceScore)}`, result: num(intentional) });
+      steps.push({ label: 'Intentional (per kg)', expression: `direct kill ${formatNumber(detail.directKillScore)} + captivity ${formatNumber(detail.captiveSentienceScore)}`, result: formatNumber(intentional) });
     }
     steps.push({
       label: 'Total per kg',
-      expression: `intentional + accidental ÷ ${num(killMultiplier)} (Kill : Accident slider) = ${num(intentional)} + ${num(accidental)} ÷ ${num(killMultiplier)}`,
-      result: num(perKg),
+      expression: `intentional + accidental ÷ ${formatNumber(killMultiplier)} (Kill : Accident slider) = ${formatNumber(intentional)} + ${formatNumber(accidental)} ÷ ${formatNumber(killMultiplier)}`,
+      result: formatNumber(perKg),
     });
   } else {
-    steps.push({ label: 'Total per kg', expression: 'accidental only (intentional harm is dropped at 0×)', result: num(perKg) });
+    steps.push({ label: 'Total per kg', expression: 'accidental only (intentional harm is dropped at 0×)', result: formatNumber(perKg) });
   }
-  steps.push(perUnitStep(perKg, divisor, unit, row.sentient_harm));
+  steps.push(perUnitStep(perKg, divisor, unit, row.sentientHarm));
   return steps;
 }

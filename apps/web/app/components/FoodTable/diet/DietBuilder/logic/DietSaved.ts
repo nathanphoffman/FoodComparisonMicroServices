@@ -36,8 +36,6 @@ export function positiveOrNull(value: string): number | null {
     return value !== '' && Number.isFinite(number) && number > 0 ? number : null;
 }
 
-// ── Percentage math ───────────────────────────────────────────────────────────
-
 /** Each ingredient's percentage of the total level; all 0 if every slider is at 0. */
 export function toPercents(ingredients: Ingredient[]): number[] {
     const total = ingredients.reduce((sum, ingredient) => sum + ingredient.level, 0);
@@ -100,8 +98,6 @@ export function loadSaved(storageKey: string, foods: { slug: string }[]): LoadRe
 export function save(storageKey: string, value: Saved) {
     localStorage.setItem(storageKey, JSON.stringify(value));
 }
-
-// ── Export / import file ──────────────────────────────────────────────────────
 
 /** Downloads the diet as a .json file. */
 export function downloadDiet(value: Saved, filePrefix: string) {

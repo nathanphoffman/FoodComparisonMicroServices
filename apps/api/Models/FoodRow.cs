@@ -52,6 +52,7 @@ public class FoodRow
     public double? GreenWaterPerKg           { get; set; }
     public double? BlueWaterPerKg            { get; set; }
     public double? GreyWaterPerKg            { get; set; }
+    // PAF = potentially affected fraction: the share (0-1) of a group of species harmed by this crop's pesticides. The name is kept because it is also the database column and JSON key.
     public double? PesticideInsectPaf        { get; set; }
     public double? PesticideTerrestrialPaf   { get; set; }
     public double? PesticideBeeHazard        { get; set; }

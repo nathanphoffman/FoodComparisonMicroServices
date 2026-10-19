@@ -5,8 +5,6 @@ const CALORIE_NORM_FALLBACK: f64 = 1_000.0;
 const PROTEIN_NORM_FALLBACK: f64 = 100.0;
 const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
 
-// ── Batch-derived normalisation ───────────────────────────────────────────────
-
 /// Arithmetic mean of the positive, finite values in `iter`, or `None` if
 /// there are no such values.
 fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
@@ -49,8 +47,6 @@ impl NormFactors {
         }
     }
 }
-
-// ── Divisor (unit normalisation) ─────────────────────────────────────────────
 
 /// Amount of Compare By units in one kg of this food. None when the food has none
 /// of the chosen unit (it used to fall back to 1, scoring zero-protein oils as if

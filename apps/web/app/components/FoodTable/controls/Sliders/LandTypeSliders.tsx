@@ -36,8 +36,8 @@ export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => voi
 
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
 
-    const handleChange = (key: keyof LandTypes, val: number) => {
-        const next = { ...weights, [key]: val };
+    const handleChange = (key: keyof LandTypes, weight: number) => {
+        const next = { ...weights, [key]: weight };
         setWeights(next);
         debouncedOnChange(next);
     };
@@ -55,7 +55,7 @@ export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => voi
                             <span>{LAND_TYPE_LABELS[key]}</span>
                             <span className="font-medium text-neutral-700">{weights[key].toFixed(2)}×</span>
                         </div>
-                        <Slider min={0} max={10} step={0.25} value={weights[key]} onChange={val => handleChange(key, val)} />
+                        <Slider min={0} max={10} step={0.25} value={weights[key]} onChange={weight => handleChange(key, weight)} />
                         <div className="text-xs text-neutral-400 mt-0.5">{DESCRIPTIONS[key]}</div>
                     </div>
                 ))}

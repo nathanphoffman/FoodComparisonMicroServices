@@ -1,8 +1,5 @@
 import { useCallback, useState } from 'react';
-import type { RawFood } from '../types/FoodTableTypes';
-import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail, ImprovementDetail } from '../types/FoodTableTypes';
-
-// ── Types ─────────────────────────────────────────────────────────────────────
+import type { RawFood, ScoredRow } from '../types/FoodTableTypes';
 
 export type SortKey =
     | 'name'
@@ -17,48 +14,16 @@ export type SortKey =
     | 'finalScore'
     | 'availability';
 
-/** Shape returned by the WASM scorer. */
-export type ScoredRow = {
-    slug:      string;
-    name:      string;
-    food_type: string;
-    divisor:   number;
-
-    // Aggregate scores
-    nutrition_score: number | null;
-    emissions:       number | null;
-    land_use:        number | null;
-    water:           number | null;
-    direct_kill:     number | null;
-    captive_sentience: number | null;
-    sentient_harm:   number | null;
-    final_score:     number | null;
-    availability:    number | null;
-
-    // Tooltip breakdown details (camelCase, matching Rust serde rename_all)
-    emissions_breakdown?:  EmissionsBreakdown;
-    water_detail:          WaterDetail;
-    land_use_detail:       LandUseDetail;
-    sentient_harm_detail:  SentientHarmDetail;
-    kill_detail:           KillDetail | null;
-    // Wild fish killed per kg for fishmeal / fish oil; null if none
-    wild_fish_deaths_per_kg: number | null;
-    // Intelligence-weighted kill of those fish, per kg (part of direct kill)
-    wild_fish_kill: number;
-    // How final_score was built; null when final_score is null or 0 by default
-    improvement_detail: ImprovementDetail | null;
-};
-
 /** The scored value each column sorts by; 'name' and 'rank' have none (the name sorts on the food itself). */
-const SORT_FIELDS: Partial<Record<SortKey, 'nutrition_score' | 'emissions' | 'land_use' | 'water' | 'direct_kill' | 'captive_sentience' | 'sentient_harm' | 'final_score' | 'availability'>> = {
-    nutritionScore:   'nutrition_score',
+const SORT_FIELDS: Partial<Record<SortKey, 'nutritionScore' | 'emissions' | 'landUse' | 'water' | 'directKill' | 'captiveSentience' | 'sentientHarm' | 'finalScore' | 'availability'>> = {
+    nutritionScore:   'nutritionScore',
     emissions:        'emissions',
-    landUse:          'land_use',
-    directKill:       'direct_kill',
-    captiveSentience: 'captive_sentience',
+    landUse:          'landUse',
+    directKill:       'directKill',
+    captiveSentience: 'captiveSentience',
     water:            'water',
-    sentientHarm:     'sentient_harm',
-    finalScore:       'final_score',
+    sentientHarm:     'sentientHarm',
+    finalScore:       'finalScore',
     availability:     'availability',
 };
 
@@ -90,17 +55,18 @@ export function useFoodTableSort() {
         if (!sortKey) return foods;
 
         return [...foods].sort((a, b) => {
-            const sa = scored.get(a.slug);
-            const sb = scored.get(b.slug);
+            const scoredA = scored.get(a.slug);
+            const scoredB = scored.get(b.slug);
             const field = SORT_FIELDS[sortKey];
-            const va = sortKey === 'name' ? a.name : field ? sa?.[field] ?? null : null;
-            const vb = sortKey === 'name' ? b.name : field ? sb?.[field] ?? null : null;
+            const valueA = sortKey === 'name' ? a.name : field ? scoredA?.[field] ?? null : null;
+            const valueB = sortKey === 'name' ? b.name : field ? scoredB?.[field] ?? null : null;
 
-            if (va === null && vb === null) return 0;
-            if (va === null) return 1;
-            if (vb === null) return -1;
-            if (va === vb) return 0;
-            const cmp = va < vb ? -1 : 1;
+            // A food with no value goes last whichever way the column is sorted, so gaps never lead the table.
+            if (valueA === null && valueB === null) return 0;
+            if (valueA === null) return 1;
+            if (valueB === null) return -1;
+            if (valueA === valueB) return 0;
+            const cmp = valueA < valueB ? -1 : 1;
             return sortDir === 'asc' ? cmp : -cmp;
         });
     }, [sortKey, sortDir]);

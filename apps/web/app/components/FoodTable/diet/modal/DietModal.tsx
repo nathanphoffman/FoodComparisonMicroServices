@@ -4,7 +4,7 @@ import { DietImpact } from './DietImpact';
 import { AVERAGE_DIET_SLUG } from '../FoodTableAverageDiet';
 import { NutritionDetailContent } from '../../rows/Tooltips/nutrition/NutritionTooltip';
 import type { DietSettings, NutrientStandard } from '../../nutrition/FoodTableRda';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../types/FoodTableTypes';
 import { DIET_SLUG, type NutritionDetail } from '../../types/FoodTableTypes';
 
 type Props = {
