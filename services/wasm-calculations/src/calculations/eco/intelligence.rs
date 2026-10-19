@@ -80,6 +80,9 @@ pub(super) fn captivity_years_for_slug(slug: &str) -> f64 {
     }
 }
 
+/// Lifespan used for any animal without its own entry below, and for bycatch with no known species.
+pub(super) const DEFAULT_LIFESPAN_YEARS: f64 = 10.0;
+
 /// Returns the typical lifespan in years for an animal food slug.
 /// Used by both direct-kill and bycatch scoring to normalise kill impact.
 pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
@@ -103,6 +106,6 @@ pub(super) fn lifespan_years_for_slug(slug: &str) -> f64 {
         "crab" => 4.0,           // blue crab 3–4 years (NOAA)
         "lobster" => 30.0,       // American lobster possibly ~100 years (NOAA); spiny lobsters ~20; 30 is a rough middle
         "honey" => 0.15, // worker honey bee, averaged over summer (~6 weeks) and winter (~6 months) bees
-        _ => 10.0,
+        _ => DEFAULT_LIFESPAN_YEARS,
     }
 }
