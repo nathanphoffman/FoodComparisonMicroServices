@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../../hooks/useDebouncedCallback';
 import type { CustomFoodInput } from '../types/FoodTableTypes';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from '../nutrition/FoodTableRda';
-import { DEFAULT_LEVEL, downloadDiet, loadSaved, readDietFile, save, toPercents, type Saved } from './CustomFood/CustomFoodSaved';
-import { caloriesPerDayIn, levelForFine, levelForPercent, settingsOf, toInput, type BuilderFood } from './CustomFood/CustomFoodMath';
-import { DietActions } from './CustomFood/DietActions';
-import { DietSettingsFields } from './CustomFood/DietSettingsFields';
-import { SupplementEditor } from './CustomFood/SupplementEditor';
-import { IngredientPicker } from './CustomFood/IngredientPicker';
-import { IngredientList } from './CustomFood/IngredientList';
+import { DEFAULT_LEVEL, downloadDiet, loadSaved, readDietFile, save, toPercents, type Saved } from './CustomFood/logic/CustomFoodSaved';
+import { caloriesPerDayIn, levelForFine, levelForPercent, settingsOf, toInput, type BuilderFood } from './CustomFood/logic/CustomFoodMath';
+import { DietActions } from './CustomFood/inputs/DietActions';
+import { DietSettingsFields } from './CustomFood/inputs/DietSettingsFields';
+import { SupplementEditor } from './CustomFood/inputs/SupplementEditor';
+import { IngredientPicker } from './CustomFood/inputs/IngredientPicker';
+import { IngredientList } from './CustomFood/inputs/IngredientList';
 
 type Props = {
     slug: string;

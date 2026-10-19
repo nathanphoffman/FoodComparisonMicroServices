@@ -1,8 +1,8 @@
-import { Slider } from '../../../Inputs/Slider';
-import { MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, mealsPerDayFor } from '../../nutrition/FoodTableAbsorption';
-import { ACTIVITY_LEVELS } from '../../nutrition/FoodTableTargets';
-import { MIN_RDA_AGE } from '../../nutrition/FoodTableRda';
-import { positiveOrNull, type Saved } from './CustomFoodSaved';
+import { Slider } from '../../../../Inputs/Slider';
+import { MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, mealsPerDayFor } from '../../../nutrition/FoodTableAbsorption';
+import { ACTIVITY_LEVELS } from '../../../nutrition/FoodTableTargets';
+import { MIN_RDA_AGE } from '../../../nutrition/FoodTableRda';
+import { positiveOrNull, type Saved } from '../logic/CustomFoodSaved';
 
 const INPUT = 'border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white';
 

@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import type { RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
-import { FIGURES, type FigureKey } from './FoodDetailFigures';
-import type { MathContext } from './FoodDetailMath';
-import { FigureTile } from './FigureTile';
+import { FIGURES, type FigureKey } from './figures/FoodDetailFigures';
+import type { MathContext } from './figures/math/FoodDetailMath';
+import { FigureTile } from './figures/FigureTile';
 import { LoadingNotes, Notes } from './FoodNotes';
 import { useFoodDetails } from './useFoodDetails';
 import { useModalLock } from './useModalLock';

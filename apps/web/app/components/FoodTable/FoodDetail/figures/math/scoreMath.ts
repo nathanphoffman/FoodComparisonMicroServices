@@ -1,5 +1,5 @@
-import type { RawFood } from '../../types/FoodTableTypes';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { RawFood } from '../../../types/FoodTableTypes';
+import type { ScoredRow } from '../../../scoring/FoodTableSort';
 import { num, pct, type MathStep, type MathContext } from './MathShared';
 
 /** Working for availability: production per unit of land. */

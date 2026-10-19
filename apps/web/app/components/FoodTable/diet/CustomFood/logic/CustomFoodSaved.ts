@@ -1,7 +1,7 @@
-import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type MicronutrientKey } from '../../types/FoodTableTypes';
-import { DEFAULT_DAYS_BETWEEN } from '../../nutrition/FoodTableAbsorption';
-import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from '../../nutrition/FoodTableTargets';
-import type { Sex } from '../../nutrition/FoodTableRda';
+import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type MicronutrientKey } from '../../../types/FoodTableTypes';
+import { DEFAULT_DAYS_BETWEEN } from '../../../nutrition/FoodTableAbsorption';
+import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from '../../../nutrition/FoodTableTargets';
+import type { Sex } from '../../../nutrition/FoodTableRda';
 
 // Each ingredient has its own independent slider level; its percentage is its
 // share of the total level (same idea as the Compare By / Score Priorities sliders).

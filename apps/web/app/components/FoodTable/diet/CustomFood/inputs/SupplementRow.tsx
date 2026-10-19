@@ -1,5 +1,5 @@
-import { MICRONUTRIENT_INFO } from '../../nutrition/FoodTableCalculations';
-import type { Supplement } from './CustomFoodSaved';
+import { MICRONUTRIENT_INFO } from '../../../nutrition/FoodTableCalculations';
+import type { Supplement } from '../logic/CustomFoodSaved';
 
 const INPUT = 'border border-neutral-200 rounded px-2 py-1 text-xs text-neutral-700 bg-white';
 

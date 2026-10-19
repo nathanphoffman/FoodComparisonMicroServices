@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Slider } from '../../../Inputs/Slider';
-import { MICRONUTRIENT_INFO } from '../../nutrition/FoodTableCalculations';
-import { MICRONUTRIENT_KEYS, type MicronutrientKey } from '../../types/FoodTableTypes';
-import { dailyNeeds, type NutrientStandard } from '../../nutrition/FoodTableRda';
+import { Slider } from '../../../../Inputs/Slider';
+import { MICRONUTRIENT_INFO } from '../../../nutrition/FoodTableCalculations';
+import { MICRONUTRIENT_KEYS, type MicronutrientKey } from '../../../types/FoodTableTypes';
+import { dailyNeeds, type NutrientStandard } from '../../../nutrition/FoodTableRda';
 import { positiveOrZero, SupplementRow } from './SupplementRow';
-import type { Saved, Supplement } from './CustomFoodSaved';
+import type { Saved, Supplement } from '../logic/CustomFoodSaved';
 
 // What the multivitamin button adds: the vitamins only, not minerals or omega-3.
 const VITAMIN_KEYS: MicronutrientKey[] = ['vitamin_a', 'vitamin_c', 'vitamin_d', 'vitamin_e', 'vitamin_k', 'folate', 'vitamin_b12', 'vitamin_b6'];

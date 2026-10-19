@@ -1,4 +1,4 @@
-import type { CustomFoodBasis } from '../../types/FoodTableTypes';
+import type { CustomFoodBasis } from '../../../types/FoodTableTypes';
 
 const BASIS_OPTIONS: { value: CustomFoodBasis; label: string }[] = [
     { value: 'calories', label: 'By calories' },

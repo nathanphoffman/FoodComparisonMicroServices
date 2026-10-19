@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { GWP_CH4, GWP_N2O, SQUARE_METERS_PER_HA } from '../FoodDetail/math/MathShared';
+import { GWP_CH4, GWP_N2O, SQUARE_METERS_PER_HA } from '../FoodDetail/figures/math/MathShared';
 import { AMINO_ACID_REQUIREMENTS, MICRONUTRIENT_INFO } from './FoodTableCalculations';
 import { MICRONUTRIENT_KEYS } from '../types/FoodTableTypes';
 

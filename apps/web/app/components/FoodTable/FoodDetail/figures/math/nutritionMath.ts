@@ -1,6 +1,6 @@
-import { MICRONUTRIENT_KEYS, type RawFood } from '../../types/FoodTableTypes';
-import type { ScoredRow } from '../../scoring/FoodTableSort';
-import { MICRONUTRIENT_INFO, aminoAcidProfile } from '../../nutrition/FoodTableCalculations';
+import { MICRONUTRIENT_KEYS, type RawFood } from '../../../types/FoodTableTypes';
+import type { ScoredRow } from '../../../scoring/FoodTableSort';
+import { MICRONUTRIENT_INFO, aminoAcidProfile } from '../../../nutrition/FoodTableCalculations';
 import { num, pct, type MathStep, type MathContext } from './MathShared';
 
 /** Working for the Nutrition Score: the points per 100 g, then per 100 kcal. */

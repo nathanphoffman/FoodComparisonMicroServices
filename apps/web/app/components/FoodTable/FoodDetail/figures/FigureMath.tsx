@@ -1,4 +1,4 @@
-import type { MathStep } from './FoodDetailMath';
+import type { MathStep } from './math/FoodDetailMath';
 
 /** The figure's working, one step per line: label, equation with this food's numbers, result. */
 export function FigureMath({ steps }: { steps: MathStep[] }) {

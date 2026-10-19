@@ -1,11 +1,11 @@
-import type { RawFood } from '../types/FoodTableTypes';
-import type { ScoredRow } from '../scoring/FoodTableSort';
-import type { FigureKey } from './FoodDetailFigures';
-import type { MathStep, MathContext } from './math/MathShared';
-import { nutritionScoreMath } from './math/nutritionMath';
-import { emissionsMath, landUseMath, waterMath } from './math/environmentMath';
-import { directKillMath, captiveSentienceMath, sentientHarmMath } from './math/harmMath';
-import { availabilityMath, finalScoreMath } from './math/scoreMath';
+import type { RawFood } from '../../../types/FoodTableTypes';
+import type { ScoredRow } from '../../../scoring/FoodTableSort';
+import type { FigureKey } from '../FoodDetailFigures';
+import type { MathStep, MathContext } from './MathShared';
+import { nutritionScoreMath } from './nutritionMath';
+import { emissionsMath, landUseMath, waterMath } from './environmentMath';
+import { directKillMath, captiveSentienceMath, sentientHarmMath } from './harmMath';
+import { availabilityMath, finalScoreMath } from './scoreMath';
 
 export type { MathStep, MathContext };
 

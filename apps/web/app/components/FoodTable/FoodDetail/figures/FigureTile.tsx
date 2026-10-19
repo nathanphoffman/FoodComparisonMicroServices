@@ -1,10 +1,10 @@
 import type { FoodDetails } from '@/lib/types';
-import type { RawFood } from '../types/FoodTableTypes';
-import type { ScoredRow } from '../scoring/FoodTableSort';
-import { TILE_COLORS } from '../rows/FoodTableStyles';
+import type { RawFood } from '../../types/FoodTableTypes';
+import type { ScoredRow } from '../../scoring/FoodTableSort';
+import { TILE_COLORS } from '../../rows/FoodTableStyles';
 import { FIGURES } from './FoodDetailFigures';
 import { matchFields } from './FoodDetailFields';
-import { figureMath, type MathContext } from './FoodDetailMath';
+import { figureMath, type MathContext } from './math/FoodDetailMath';
 import { FigureMath } from './FigureMath';
 import { FigureSources } from './FigureSources';
 

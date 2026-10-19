@@ -1,6 +1,6 @@
 import type { ColConfig } from '../types/FoodTableTypes';
 import { COLUMN_CONFIG } from '../scoring/FoodTableDefaults';
-import type { FigureKey } from '../FoodDetail/FoodDetailFigures';
+import type { FigureKey } from '../FoodDetail/figures/FoodDetailFigures';
 
 /** Column headers that depend on the Compare By unit and the reference food. */
 export function dynamicLabels(unit: string, referenceName: string): Partial<Record<ColConfig['key'], string>> {

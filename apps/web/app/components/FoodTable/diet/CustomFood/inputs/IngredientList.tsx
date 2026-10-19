@@ -1,5 +1,5 @@
-import { Slider } from '../../../Inputs/Slider';
-import { DAYS_PER_WEEK, FINE_MAX_PERCENT, FINE_STEP_PERCENT, LEVEL_STEP, MAX_LEVEL, formatPercent, type Ingredient } from './CustomFoodSaved';
+import { Slider } from '../../../../Inputs/Slider';
+import { DAYS_PER_WEEK, FINE_MAX_PERCENT, FINE_STEP_PERCENT, LEVEL_STEP, MAX_LEVEL, formatPercent, type Ingredient } from '../logic/CustomFoodSaved';
 
 const formatCalories = (kcal: number) => Math.round(kcal).toLocaleString();
 
