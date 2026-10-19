@@ -1,12 +1,12 @@
 import type { NutritionDetail } from '../../../types/FoodTableTypes';
 import type { DietSettings, NutrientStandard } from '../../../nutrition/FoodTableRda';
-import { getNutritionScoreColor } from '../../FoodTableStyles';
+import { getColor } from '../../FoodTableStyles';
 import { NutritionTooltip } from '../../Tooltips/nutrition/NutritionTooltip';
 import { ValueCell } from '../ValueCell';
 
 function NutritionScore({ score }: { score: number }) {
   return (
-    <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${getNutritionScoreColor(score)}`}>
+    <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${getColor('nutritionScore', score)}`}>
       {score.toFixed(1)}
     </span>
   );

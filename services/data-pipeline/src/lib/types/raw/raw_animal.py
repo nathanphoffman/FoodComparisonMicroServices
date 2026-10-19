@@ -13,14 +13,7 @@ from typing import TYPE_CHECKING
 
 from ....food_types import Animal
 from ..sourced_array import SourcedArray
-from ..crop_mix import (
-    CropShare,
-    compute_land_use_square_meters_per_kg,
-    compute_per_yield_impacts,
-    compute_pesticide_paf_impacts,
-    compute_water_and_emissions,
-    compute_wild_fish,
-)
+from ..crop_mix import CropShare, compute_wild_fish, summarize_crop_mix
 
 if TYPE_CHECKING:
     from .raw_plant import RawPlant
@@ -82,40 +75,23 @@ class RawAnimal:
 
         pasture_hectares_per_kg = self.pasture_ha_per_kg_output.weighted_average() or 0
         pasture_evaporation_liters_per_ha = self.pasture_green_water_l_per_ha.weighted_average() or 0
-        pasture_baseline_water = pasture_hectares_per_kg * pasture_evaporation_liters_per_ha
-
-        land_square_meters = compute_land_use_square_meters_per_kg(self._feed_entries)
-        emissions, green_water, blue_water, grey_water = compute_water_and_emissions(
-            self._feed_entries, pasture_baseline=pasture_baseline_water
+        totals = summarize_crop_mix(
+            self._feed_entries, pasture_baseline=pasture_hectares_per_kg * pasture_evaporation_liters_per_ha
         )
-        soil_erosion, fertilizer, tillage, carbon_capture = compute_per_yield_impacts(
-            self._feed_entries
-        )
-        (
-            pesticide_kg_per_kg,
-            freshwater_paf,
-            terrestrial_paf,
-            insect_paf,
-            bee_hazard,
-        ) = compute_pesticide_paf_impacts(self._feed_entries)
 
         return {
             "yield_kg_ha":               None,
             "yield_fraction":            None,
-            "land_m2_per_kg":            land_square_meters or None,
-            "water_per_kg":              (green_water + blue_water) or None,
-            "green_water_per_kg":        green_water or None,
-            "blue_water_per_kg":         blue_water or None,
-            "grey_water_per_kg":         grey_water or None,
-            "soil_erosion":              soil_erosion or None,
+            "land_m2_per_kg":            totals.land_square_meters or None,
+            "water_per_kg":              (totals.green_water + totals.blue_water) or None,
+            "green_water_per_kg":        totals.green_water or None,
+            "blue_water_per_kg":         totals.blue_water or None,
+            "grey_water_per_kg":         totals.grey_water or None,
+            "soil_erosion":              totals.soil_erosion or None,
             "pesticide_kg_ha":           None,
-            "fertilizer_kg_ha":          fertilizer or None,
-            "emissions_per_kg":          emissions or None,
-            "tillage_events_per_year":   tillage or None,
-            "co2_capture_kg_ha_yr":      carbon_capture or None,
-            "pesticide_freshwater_paf":  freshwater_paf,
-            "pesticide_terrestrial_paf": terrestrial_paf,
-            "pesticide_insect_paf":      insect_paf,
-            "pesticide_bee_hazard":      bee_hazard,
-            "pesticide_kg_per_kg_food":  pesticide_kg_per_kg or None,
+            "fertilizer_kg_ha":          totals.fertilizer or None,
+            "emissions_per_kg":          totals.emissions or None,
+            "tillage_events_per_year":   totals.tillage or None,
+            "co2_capture_kg_ha_yr":      totals.carbon_capture or None,
+            **totals.pesticide_paf_fields(),
         }

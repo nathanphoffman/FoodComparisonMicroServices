@@ -9,14 +9,7 @@ treat it like any other plant food.
 """
 
 from ....food_types import Composite
-from ..crop_mix import (
-    CropShare,
-    compute_land_use_square_meters_per_kg,
-    compute_per_yield_impacts,
-    compute_pesticide_paf_impacts,
-    compute_water_and_emissions,
-    compute_wild_fish,
-)
+from ..crop_mix import CropShare, compute_wild_fish, summarize_crop_mix
 from .raw_plant import RawPlant
 from ..sourced_array import SourcedArray
 
@@ -52,21 +45,10 @@ class RawComposite:
     def normalized_fields(self) -> dict[str, float | None]:
         """Returns plant-style metrics for FoodNormalized, per kg of product. Per-hectare
         fields (erosion, fertilizer …) are land-weighted averages over the ingredients."""
-        land_square_meters = compute_land_use_square_meters_per_kg(self._ingredients)
-        yield_kg_per_ha = SQUARE_METERS_PER_HA / land_square_meters if land_square_meters else None
-
-        emissions, green_water, blue_water, grey_water = compute_water_and_emissions(self._ingredients)
-        emissions += self.processing_emissions_per_kg.weighted_average() or 0.0
-        blue_water += self.processing_water_per_kg.weighted_average() or 0.0
-
-        soil_erosion, fertilizer, tillage, carbon_capture = compute_per_yield_impacts(self._ingredients)
-        (
-            pesticide_kg_per_kg,
-            freshwater_paf,
-            terrestrial_paf,
-            insect_paf,
-            bee_hazard,
-        ) = compute_pesticide_paf_impacts(self._ingredients)
+        totals = summarize_crop_mix(self._ingredients)
+        yield_kg_per_ha = SQUARE_METERS_PER_HA / totals.land_square_meters if totals.land_square_meters else None
+        emissions = totals.emissions + (self.processing_emissions_per_kg.weighted_average() or 0.0)
+        blue_water = totals.blue_water + (self.processing_water_per_kg.weighted_average() or 0.0)
 
         def per_ha(value_per_kg: float) -> float | None:
             return value_per_kg * yield_kg_per_ha if value_per_kg and yield_kg_per_ha else None
@@ -74,22 +56,18 @@ class RawComposite:
         return {
             "yield_kg_ha":               yield_kg_per_ha,
             "yield_fraction":            1.0,
-            "water_per_kg":              (green_water + blue_water + grey_water) or None,
-            "green_water_per_kg":        green_water or None,
+            "water_per_kg":              (totals.green_water + blue_water + totals.grey_water) or None,
+            "green_water_per_kg":        totals.green_water or None,
             "blue_water_per_kg":         blue_water or None,
-            "grey_water_per_kg":         grey_water or None,
-            "soil_erosion":              per_ha(soil_erosion),
-            "pesticide_kg_ha":           per_ha(pesticide_kg_per_kg),
-            "fertilizer_kg_ha":          per_ha(fertilizer),
+            "grey_water_per_kg":         totals.grey_water or None,
+            "soil_erosion":              per_ha(totals.soil_erosion),
+            "pesticide_kg_ha":           per_ha(totals.pesticide_kg_per_kg),
+            "fertilizer_kg_ha":          per_ha(totals.fertilizer),
             "emissions_per_kg":          emissions or None,
-            "tillage_events_per_year":   per_ha(tillage),
-            "co2_capture_kg_ha_yr":      per_ha(carbon_capture),
-            "pesticide_freshwater_paf":  freshwater_paf,
-            "pesticide_terrestrial_paf": terrestrial_paf,
-            "pesticide_insect_paf":      insect_paf,
-            "pesticide_bee_hazard":      bee_hazard,
-            "pesticide_kg_per_kg_food":  pesticide_kg_per_kg or None,
-            "land_m2_per_kg":            land_square_meters or None,
+            "tillage_events_per_year":   per_ha(totals.tillage),
+            "co2_capture_kg_ha_yr":      per_ha(totals.carbon_capture),
+            "land_m2_per_kg":            totals.land_square_meters or None,
+            **totals.pesticide_paf_fields(),
             **compute_wild_fish(self._ingredients),
         }
 

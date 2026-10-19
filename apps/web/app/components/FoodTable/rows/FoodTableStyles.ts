@@ -1,22 +1,7 @@
 import { ONE_TRILLION } from '../nutrition/FoodTableCalculations';
 
-const TEN_TRILLION  = 1e13;
+const TEN_TRILLION = 1e13;
 const ONE_HUNDRED_TRILLION = 1e14;
-
-const LOW_EMISSIONS_THRESHOLD  = 2;
-const HIGH_EMISSIONS_THRESHOLD = 10;
-
-const LOW_WATER_USE_THRESHOLD  = 2_000;
-const HIGH_WATER_USE_THRESHOLD = 8_000;
-
-const GOOD_NUTRITION_SCORE_THRESHOLD = 3;
-const FAIR_NUTRITION_SCORE_THRESHOLD = 1;
-
-const LOW_LAND_USE_THRESHOLD  = 5;
-const HIGH_LAND_USE_THRESHOLD = 50;
-
-const GOOD_IMPROVEMENT_THRESHOLD = 1.5;
-const FAIR_IMPROVEMENT_THRESHOLD = 0.7;
 
 // ── Tones ─────────────────────────────────────────────────────────────────────
 // How good or bad a value is. The table's text/badge colours and the food detail
@@ -24,51 +9,46 @@ const FAIR_IMPROVEMENT_THRESHOLD = 0.7;
 
 export type Tone = 'good' | 'fair' | 'poor' | 'bad' | 'worst';
 
-export function getEmissionsTone(value: number): Tone {
-  if (value < LOW_EMISSIONS_THRESHOLD)  return 'good';
-  if (value < HIGH_EMISSIONS_THRESHOLD) return 'fair';
-  return 'bad';
-}
+type Test = 'below' | 'atMost' | 'above' | 'atLeast';
+/** The first rule a value passes sets its tone; a value that passes none gets `otherwise`. */
+type ToneScale = { rules: { tone: Tone; test: Test; value: number }[]; otherwise: Tone };
 
-export function getWaterTone(value: number): Tone {
-  if (value < LOW_WATER_USE_THRESHOLD)  return 'good';
-  if (value < HIGH_WATER_USE_THRESHOLD) return 'fair';
-  return 'bad';
-}
+const PASSES: Record<Test, (value: number, limit: number) => boolean> = {
+  below:   (value, limit) => value < limit,
+  atMost:  (value, limit) => value <= limit,
+  above:   (value, limit) => value > limit,
+  atLeast: (value, limit) => value >= limit,
+};
 
-export function getNutritionScoreTone(score: number): Tone {
-  if (score > GOOD_NUTRITION_SCORE_THRESHOLD) return 'good';
-  if (score > FAIR_NUTRITION_SCORE_THRESHOLD) return 'fair';
-  return 'bad';
-}
+/** Lower is better: good under `low`, fair under `high`, bad from there. */
+const lowerIsBetter = (low: number, high: number): ToneScale => ({
+  rules: [{ tone: 'good', test: 'below', value: low }, { tone: 'fair', test: 'below', value: high }],
+  otherwise: 'bad',
+});
 
-export function getLandUseTone(value: number): Tone {
-  if (value < LOW_LAND_USE_THRESHOLD)  return 'good';
-  if (value < HIGH_LAND_USE_THRESHOLD) return 'fair';
-  return 'bad';
-}
+/** Harm scores: zero is good, then fair until each cutoff makes it worse. */
+const harmScale = (worseTones: [Tone, number][]): ToneScale => ({
+  rules: [{ tone: 'good', test: 'atMost', value: 0 }, ...worseTones.map(([tone, value]) => ({ tone, test: 'atLeast' as const, value }))],
+  otherwise: 'fair',
+});
 
-/** Direct kill. Zero (no animal killed) is 'good'; callers handle that case. */
-export function getIntelligenceTone(value: number): Tone {
-  if (value <= 0)            return 'good';
-  if (value >= TEN_TRILLION) return 'bad';
-  if (value >= ONE_TRILLION) return 'poor';
-  return 'fair';
-}
+const MEASURE_SCALES = {
+  emissions: lowerIsBetter(2, 10),
+  water: lowerIsBetter(2_000, 8_000),
+  landUse: lowerIsBetter(5, 50),
+  nutritionScore: { rules: [{ tone: 'good', test: 'above', value: 3 }, { tone: 'fair', test: 'above', value: 1 }], otherwise: 'bad' },
+  improvement: { rules: [{ tone: 'good', test: 'atLeast', value: 1.5 }, { tone: 'fair', test: 'atLeast', value: 0.7 }], otherwise: 'bad' },
+  // Direct kill. Zero (no animal killed) is 'good'; callers handle that case.
+  intelligence: harmScale([['bad', TEN_TRILLION], ['poor', ONE_TRILLION]]),
+  // Sentient harm and captive sentience.
+  sentientHarm: harmScale([['worst', ONE_HUNDRED_TRILLION], ['bad', TEN_TRILLION], ['poor', ONE_TRILLION]]),
+} satisfies Record<string, ToneScale>;
 
-export function getImprovementTone(ratio: number): Tone {
-  if (ratio >= GOOD_IMPROVEMENT_THRESHOLD) return 'good';
-  if (ratio >= FAIR_IMPROVEMENT_THRESHOLD) return 'fair';
-  return 'bad';
-}
+export type Measure = keyof typeof MEASURE_SCALES;
 
-/** Sentient harm and captive sentience. Zero is 'good'. */
-export function getSentientHarmTone(value: number): Tone {
-  if (value <= 0)                    return 'good';
-  if (value >= ONE_HUNDRED_TRILLION) return 'worst';
-  if (value >= TEN_TRILLION)         return 'bad';
-  if (value >= ONE_TRILLION)         return 'poor';
-  return 'fair';
+export function getTone(measure: Measure, value: number): Tone {
+  const { rules, otherwise } = MEASURE_SCALES[measure];
+  return rules.find(rule => PASSES[rule.test](value, rule.value))?.tone ?? otherwise;
 }
 
 // ── Table colours ─────────────────────────────────────────────────────────────
@@ -97,32 +77,19 @@ const HARM_COLORS: Record<Tone, string> = {
   worst: 'text-red-700 font-medium',
 };
 
-export function getEmissionsColor(value: number): string {
-  return BADGE_COLORS[getEmissionsTone(value)];
-}
+/** Which set of colours each measure's value is drawn in. */
+const MEASURE_COLORS: Record<Measure, Record<Tone, string>> = {
+  emissions: BADGE_COLORS,
+  nutritionScore: BADGE_COLORS,
+  improvement: BADGE_COLORS,
+  water: WATER_COLORS,
+  landUse: LAND_USE_COLORS,
+  intelligence: HARM_COLORS,
+  sentientHarm: HARM_COLORS,
+};
 
-export function getWaterColor(value: number): string {
-  return WATER_COLORS[getWaterTone(value)];
-}
-
-export function getNutritionScoreColor(score: number): string {
-  return BADGE_COLORS[getNutritionScoreTone(score)];
-}
-
-export function getLandUseColor(value: number): string {
-  return LAND_USE_COLORS[getLandUseTone(value)];
-}
-
-export function getIntelligenceColor(value: number): string {
-  return HARM_COLORS[getIntelligenceTone(value)];
-}
-
-export function getImprovementColor(ratio: number): string {
-  return BADGE_COLORS[getImprovementTone(ratio)];
-}
-
-export function getSentientHarmColor(value: number): string {
-  return HARM_COLORS[getSentientHarmTone(value)];
+export function getColor(measure: Measure, value: number): string {
+  return MEASURE_COLORS[measure][getTone(measure, value)];
 }
 
 // ── Food detail modal tiles ───────────────────────────────────────────────────

@@ -3,8 +3,7 @@ import type { ScoredRow } from '../../scoring/FoodTableSort';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 import {
   type Tone,
-  getEmissionsTone, getImprovementTone, getIntelligenceTone, getLandUseTone,
-  getNutritionScoreTone, getSentientHarmTone, getWaterTone,
+  getTone,
 } from '../../rows/FoodTableStyles';
 
 export type FigureKey = Exclude<ColConfig['key'], 'name' | 'rank'>;
@@ -32,7 +31,7 @@ export const FIGURES: Figure[] = [
     key: 'nutritionScore',
     value: row => row.nutrition_score,
     format: oneDecimal,
-    tone: getNutritionScoreTone,
+    tone: value => getTone('nutritionScore', value),
     fields: () => ['nutrition'],
     explanation: () => 'Score per 100 kcal: protein, fibre and vitamins/minerals/omega-3 (1 point per full daily value, 2 for vitamin D, calcium, potassium and EPA+DHA) add points; saturated fat, free sugar and sodium take them away.',
   },
@@ -40,7 +39,7 @@ export const FIGURES: Figure[] = [
     key: 'emissions',
     value: row => row.emissions,
     format: oneDecimal,
-    tone: getEmissionsTone,
+    tone: value => getTone('emissions', value),
     fields: food => food.type === 'animal'
       ? ['ch4_kg_per_kg_output', 'n2o_kg_per_kg_output', 'co2_kg_per_kg_output', 'feed:', 'lifetime_output_kg', 'emissions_per_kg']
       : ['emissions_per_kg', 'farm_gate_emissions_per_kg', 'cooked_weight_ratio', 'processing_emissions_per_kg', 'ingredient:'],
@@ -54,7 +53,7 @@ export const FIGURES: Figure[] = [
     key: 'landUse',
     value: row => row.land_use,
     format: oneDecimal,
-    tone: getLandUseTone,
+    tone: value => getTone('landUse', value),
     fields: food => food.type === 'animal'
       ? ['pasture_ha_per_kg_output', 'feed:', 'yield_fraction', 'lifetime_output_kg']
       : ['yield_kg_ha', 'yield_fraction', 'cooked_weight_ratio', 'ingredient:'],
@@ -68,7 +67,7 @@ export const FIGURES: Figure[] = [
     key: 'directKill',
     value: row => row.direct_kill,
     format: formatIntelligenceValue,
-    tone: getIntelligenceTone,
+    tone: value => getTone('intelligence', value),
     fields: food => food.type === 'animal'
       ? ['neuron_count', 'weight_kg', 'yield_fraction', 'lifetime_output_kg', 'offspring_deaths_per_animal', 'feed:fishmeal', 'feed:fish-oil']
       : ['wild_fish_kg_per_kg', 'wild_fish_neuron_count', 'wild_fish_weight_kg', 'wild_fish_lifespan_years'],
@@ -78,7 +77,7 @@ export const FIGURES: Figure[] = [
     key: 'water',
     value: row => row.water,
     format: value => value.toLocaleString(undefined, { maximumFractionDigits: 0 }),
-    tone: getWaterTone,
+    tone: value => getTone('water', value),
     fields: food => food.type === 'animal'
       ? ['pasture_green_water_l_per_ha', 'pasture_ha_per_kg_output', 'feed:']
       : ['water_per_kg', 'green_water_per_kg', 'blue_water_per_kg', 'grey_water_per_kg', 'cooked_weight_ratio', 'processing_water_per_kg', 'ingredient:'],
@@ -90,7 +89,7 @@ export const FIGURES: Figure[] = [
     key: 'captiveSentience',
     value: row => row.captive_sentience,
     format: formatIntelligenceValue,
-    tone: getSentientHarmTone,
+    tone: value => getTone('sentientHarm', value),
     fields: () => ['neuron_count', 'weight_kg', 'lifetime_output_kg', 'offspring_deaths_per_animal', 'offspring_captivity_years'],
     explanation: () => "Years animals spend in captivity per unit of food, weighted by intelligence. The producing animal's own years in captivity are a fixed model value per species; offspring years are sourced below.",
   },
@@ -98,7 +97,7 @@ export const FIGURES: Figure[] = [
     key: 'sentientHarm',
     value: row => row.sentient_harm,
     format: formatIntelligenceValue,
-    tone: getSentientHarmTone,
+    tone: value => getTone('sentientHarm', value),
     fields: food => food.type === 'animal'
       ? ['feed:', 'pasture_ha_per_kg_output', 'native_fraction', 'bycatch_amount', 'neuron_count', 'weight_kg', 'lifetime_output_kg', 'offspring_deaths_per_animal']
       : ['yield_kg_ha', 'pesticide_kg_ha', 'pesticide:', 'ingredient:'],
@@ -120,7 +119,7 @@ export const FIGURES: Figure[] = [
     key: 'finalScore',
     value: row => row.final_score,
     format: value => `${value.toFixed(1)}x`,
-    tone: getImprovementTone,
+    tone: value => getTone('improvement', value),
     fields: () => [],
     explanation: () => 'Combines every other figure against the reference food, using the priority sliders. It has no sources of its own — click the other figures to see theirs.',
   },

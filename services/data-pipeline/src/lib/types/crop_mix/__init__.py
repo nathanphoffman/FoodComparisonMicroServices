@@ -10,16 +10,20 @@ many kg of it go into 1 kg of output. All values are on the crop's raw (dry) bas
   - water_and_emissions.py — water footprint and emissions
   - pesticides.py          — pesticide amount and affected-species fractions
   - wild_fish.py           — wild fish killed for fishmeal / fish oil
+  - summary.py             — all of the above in one call, for building a normalized row
 """
 
 from .crop_share import CropShare
 from .land import compute_land_use_square_meters_per_kg, compute_per_yield_impacts
 from .pesticides import compute_pesticide_paf_impacts
+from .summary import CropMixTotals, summarize_crop_mix
 from .water_and_emissions import compute_water_and_emissions
 from .wild_fish import compute_wild_fish
 
 __all__ = [
+    "CropMixTotals",
     "CropShare",
+    "summarize_crop_mix",
     "compute_land_use_square_meters_per_kg",
     "compute_per_yield_impacts",
     "compute_pesticide_paf_impacts",

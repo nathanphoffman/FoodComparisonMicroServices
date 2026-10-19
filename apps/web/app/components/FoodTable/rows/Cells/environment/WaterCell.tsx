@@ -1,10 +1,10 @@
 import type { WaterDetail } from '../../../types/FoodTableTypes';
-import { getWaterColor } from '../../FoodTableStyles';
+import { getColor } from '../../FoodTableStyles';
 import { WaterTooltip } from '../../Tooltips/WaterTooltip';
 import { ValueCell } from '../ValueCell';
 
 function WaterValue({ value }: { value: number }) {
-  return <span className={getWaterColor(value)}>{value.toLocaleString()}</span>;
+  return <span className={getColor('water', value)}>{value.toLocaleString()}</span>;
 }
 
 export function WaterCell({ value, detail, referenceTotal, divisor, unit, greenWaterWeight, greyWaterWeight }: {
