@@ -2,14 +2,15 @@
 
 import { memo, useState, useEffect } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
-import { CustomFoodBuilder } from './CustomFoodBuilder';
+import { CustomFoodSections } from './CustomFoodSections';
+import { ScoringErrorBanner } from './ScoringErrorBanner';
 import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from './FoodTableTypes';
-import { CUSTOM_FOODS } from './FoodTableTypes';
 import type { SortKey } from './FoodTableSort';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
 import { useIsMobile } from '../../hooks/useIsMobile';
-import { FoodTablePresets, PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresets';
-import type { Preset } from './FoodTablePresets';
+import { FoodTablePresets } from './FoodTablePresets';
+import { PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresetData';
+import type { Preset } from './FoodTablePresetData';
 import type { DietSettings, NutrientStandard } from './FoodTableRda';
 import { FoodTableToolbar } from './FoodTableToolbar';
 
@@ -44,7 +45,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     onNutrientStandardChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
-    const [visibleColumns, setVisible]    = useState<Set<SortKey>>(
+    const [visibleColumns, setVisibleColumns] = useState<Set<SortKey>>(
         () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
     );
     const [showControls, setShowControls] = useState(false);
@@ -54,7 +55,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     useEffect(() => {
         if (!isMobile) return;
         const mobileCols = COLUMN_CONFIG.filter(c => c.mobileVisible);
-        setVisible(new Set(mobileCols.map(c => c.key)));
+        setVisibleColumns(new Set(mobileCols.map(c => c.key)));
         onActiveColsChange(mobileCols);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isMobile]);
@@ -75,11 +76,11 @@ export const FoodTableInputs = memo(function FoodTableInputs({
         setSliderValues(next);
         onSliderValuesChange(next);
     }
-    function commitManual(next: SliderValues) {
+    function commitByHand(next: SliderValues) {
         setActivePreset(null);
         commit(next);
     }
-    function handlePreset(preset: Preset) {
+    function applyPreset(preset: Preset) {
         commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes });
         setScorePriorityLevels(preset.scorePriorityLevels);
         setFoodWeightLevels(preset.foodWeightLevels);
@@ -88,21 +89,21 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     }
 
     // Sets one slider value by hand, which also clears the preset highlight.
-    function update<K extends keyof SliderValues>(key: K, value: SliderValues[K]) {
-        commitManual({ ...sliderValues, [key]: value });
+    function setSlider<K extends keyof SliderValues>(key: K, value: SliderValues[K]) {
+        commitByHand({ ...sliderValues, [key]: value });
     }
 
-    function handleToggle(key: SortKey) {
+    function toggleColumn(key: SortKey) {
         const next = new Set(visibleColumns);
         if (next.has(key)) next.delete(key);
         else next.add(key);
-        setVisible(next);
+        setVisibleColumns(next);
         onActiveColsChange(COLUMN_CONFIG.filter(c => next.has(c.key)));
     }
 
     return (
         <>
-            <FoodTablePresets selected={activePreset} onSelect={handlePreset} />
+            <FoodTablePresets selected={activePreset} onSelect={applyPreset} />
             <button
                 onClick={() => setShowControls(v => !v)}
                 className="md:hidden mb-3 w-full text-sm text-neutral-600 border border-neutral-200 rounded px-3 py-2 flex items-center justify-between bg-white"
@@ -111,21 +112,21 @@ export const FoodTableInputs = memo(function FoodTableInputs({
             </button>
             <div className={showControls ? 'block' : 'hidden md:block'}>
                 <FoodTableSliders
-                    onChange={value => update('weights', value)}
-                    onScorePrioritiesChange={value => update('scorePriorities', value)}
-                    onGreenWaterChange={value => update('greenWaterWeight', value)}
-                    onGreyWaterChange={value => update('greyWaterWeight', value)}
-                    onPhilosophicalKillChange={value => update('killMultiplier', value)}
-                    onCaptivityChange={value => update('captivityMultiplier', value)}
-                    onNeuronExponentChange={value => update('neuronExponent', value)}
-                    onWeightExponentChange={value => update('weightExponent', value)}
-                    onFinalIntelligenceExponentChange={value => update('finalIntelligenceExponent', value)}
-                    onZeroBetterMultiplierChange={value => update('zeroBetterMultiplier', value)}
-                    onLandTypeWeightsChange={value => update('landTypeWeights', value)}
-                    onNutritionWeightsChange={value => update('nutritionWeights', value)}
-                    onWinDampeningChange={value => update('winDampening', value)}
-                    onOverHuntingChange={value => update('overHuntingFactor', value)}
-                    onOverGatheringChange={value => update('overGatheringFactor', value)}
+                    onChange={value => setSlider('weights', value)}
+                    onScorePrioritiesChange={value => setSlider('scorePriorities', value)}
+                    onGreenWaterChange={value => setSlider('greenWaterWeight', value)}
+                    onGreyWaterChange={value => setSlider('greyWaterWeight', value)}
+                    onPhilosophicalKillChange={value => setSlider('killMultiplier', value)}
+                    onCaptivityChange={value => setSlider('captivityMultiplier', value)}
+                    onNeuronExponentChange={value => setSlider('neuronExponent', value)}
+                    onWeightExponentChange={value => setSlider('weightExponent', value)}
+                    onFinalIntelligenceExponentChange={value => setSlider('finalIntelligenceExponent', value)}
+                    onZeroBetterMultiplierChange={value => setSlider('zeroBetterMultiplier', value)}
+                    onLandTypeWeightsChange={value => setSlider('landTypeWeights', value)}
+                    onNutritionWeightsChange={value => setSlider('nutritionWeights', value)}
+                    onWinDampeningChange={value => setSlider('winDampening', value)}
+                    onOverHuntingChange={value => setSlider('overHuntingFactor', value)}
+                    onOverGatheringChange={value => setSlider('overGatheringFactor', value)}
                     resetKey={sliderResetKey}
                     foodWeightLevels={foodWeightLevels}
                     nutritionWeights={sliderValues.nutritionWeights}
@@ -137,47 +138,25 @@ export const FoodTableInputs = memo(function FoodTableInputs({
                     weightExponent={sliderValues.weightExponent}
                     finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
                 />
-                {CUSTOM_FOODS.map(custom => (
-                    <div key={custom.slug} className="mb-4 px-1">
-                        <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">{custom.heading}</p>
-                        {/* Custom foods keep the preset highlight, unlike the sliders above. */}
-                        <CustomFoodBuilder
-                            slug={custom.slug}
-                            name={custom.name}
-                            storageKey={custom.storageKey}
-                            foods={foods}
-                            standard={nutrientStandard}
-                            showCalories={custom.slug === 'your-diet'}
-                            onShow={onShowDiet}
-                            onSettingsChange={onDietSettingsChange}
-                            onChange={onCustomFoodChange}
-                        />
-                    </div>
-                ))}
+                <CustomFoodSections
+                    foods={foods}
+                    nutrientStandard={nutrientStandard}
+                    onShowDiet={onShowDiet}
+                    onDietSettingsChange={onDietSettingsChange}
+                    onCustomFoodChange={onCustomFoodChange}
+                />
             </div>
-            {scoringError && (
-                <div className="flex items-start justify-between gap-3 mb-3 px-4 py-3 rounded-md bg-red-50 border border-red-200 text-red-700 text-sm">
-                    <div>
-                        <span className="font-medium">Scoring error — </span>
-                        scores may be stale. {scoringError}
-                    </div>
-                    <button
-                        onClick={onDismissScoringError}
-                        className="shrink-0 text-red-400 hover:text-red-600 leading-none text-base"
-                        aria-label="Dismiss"
-                    >✕</button>
-                </div>
-            )}
+            {scoringError && <ScoringErrorBanner message={scoringError} onDismiss={onDismissScoringError} />}
             <FoodTableToolbar
                 dataRegion={dataRegion}
                 onDataRegionChange={onDataRegionChange}
                 nutrientStandard={nutrientStandard}
                 onNutrientStandardChange={onNutrientStandardChange}
                 referenceSlug={sliderValues.referenceSlug}
-                onReferenceSlugChange={slug => update('referenceSlug', slug)}
+                onReferenceSlugChange={slug => setSlider('referenceSlug', slug)}
                 foods={foods}
                 visibleColumns={visibleColumns}
-                onToggleColumn={handleToggle}
+                onToggleColumn={toggleColumn}
             />
         </>
     );
