@@ -1,7 +1,7 @@
 import type { NutritionDetail } from '../../../types/FoodTableTypes';
 import type { DietSettings, NutrientStandard } from '../../../nutrition/FoodTableRda';
 import { getNutritionScoreColor } from '../../FoodTableStyles';
-import { NutritionTooltip } from '../../Tooltips/NutritionTooltip';
+import { NutritionTooltip } from '../../Tooltips/nutrition/NutritionTooltip';
 import { ValueCell } from '../ValueCell';
 
 function NutritionScore({ score }: { score: number }) {

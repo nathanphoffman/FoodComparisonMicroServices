@@ -18,6 +18,9 @@ export type Saved = { supplements: Supplement[]; pillAbsorption: number; basis: 
 
 export const DAYS_PER_WEEK = 7;
 
+// A new supplement starts as one pill a day.
+export const DEFAULT_PILLS_PER_WEEK = DAYS_PER_WEEK;
+
 // Share of a pill's dose that counts, on top of the per-sitting limit for B12, calcium and vitamin C.
 export const DEFAULT_PILL_ABSORPTION = 75;
 

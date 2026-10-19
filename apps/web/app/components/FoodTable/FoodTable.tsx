@@ -1,108 +1,64 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Table } from '../Table/Table';
-import { Row } from '../Table/Row';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './nutrition/FoodTableRda';
-import { getUnitLabel, blendLandM2PerKg } from './nutrition/FoodTableCalculations';
+import { blendLandM2PerKg } from './nutrition/FoodTableCalculations';
 import type { ColConfig, SliderValues, DataRegion } from './types/FoodTableTypes';
-import { DIET_SLUG, isCustomFoodSlug } from './types/FoodTableTypes';
-import { useFoodTableSort } from './scoring/FoodTableSort';
-import { useWasmScoring } from './scoring/FoodTableWASMIntegration';
+import { DIET_SLUG } from './types/FoodTableTypes';
 import { FoodTableInputs } from './controls/FoodTableInputs';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './scoring/FoodTableDefaults';
-import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './controls/toolbar/FoodTableFilters';
+import { FoodTableFilters, DEFAULT_FOOD_FILTER } from './controls/toolbar/FoodTableFilters';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
-import { useFoodData } from './scoring/useFoodData';
-import { useCustomFoods } from './diet/useCustomFoods';
-import { rankByImprovement } from './scoring/FoodTableRanks';
-import { dynamicLabels, figureLabelsFor } from './rows/FoodTableLabels';
-import { foodTableCell } from './rows/FoodTableCell';
+import { useFoodTableData } from './scoring/useFoodTableData';
+import { useTableDisplay } from './rows/useTableDisplay';
 import { DietModal } from './diet/modal/DietModal';
 
 export function FoodTable() {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const [dataRegion, setDataRegion] = useState<DataRegion>(DEFAULT_DATA_REGION);
-    const { rawFoods, loadingApi, error } = useFoodData(dataRegion);
-    const [loadingScore, setLoadingScore] = useState(true);
     const [foodFilter, setFoodFilter] = useState<string>(DEFAULT_FOOD_FILTER);
-    // Food whose detail modal is open (null = closed)
-    const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
-    const closeDetail = useCallback(() => setSelectedSlug(null), []);
-
-    const { customFoodsBySlug, onCustomFoodChange, foodSlugs, averageDiet, scoredCustomFoods, customNutrition } = useCustomFoods(rawFoods);
-
     // Whose recommended intakes the tooltips measure vitamins and minerals against
     const [nutrientStandard, setNutrientStandard] = useState<NutrientStandard>(DEFAULT_NUTRIENT_STANDARD);
+    // UI state — activeCols updated synchronously by FoodTableInputs
+    const [activeCols, setActiveCols] = useState<ColConfig[]>(() => COLUMN_CONFIG.filter(column => column.defaultVisible));
+    // Food whose detail modal is open (null = closed)
+    const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
     const [showDiet, setShowDiet] = useState(false);
-    const closeDiet = useCallback(() => setShowDiet(false), []);
     // The diet's total calories per day, size and activity, for the whole-diet numbers in its tooltip
     const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
 
-    // WASM scoring — scored rows contain all scores, breakdowns, and divisors
-    const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues, scoredCustomFoods);
-    const dismissScoringError = useCallback(() => setScoringError(null), [setScoringError]);
-
-    const { columnSortProps, sortRows } = useFoodTableSort();
-
-    // UI state — activeCols updated synchronously by FoodTableInputs
-    const [activeCols, setActiveCols] = useState<ColConfig[]>(
-        () => COLUMN_CONFIG.filter(column => column.defaultVisible)
+    const data = useFoodTableData(dataRegion, sliderValues);
+    const { rawFoods, scored, customNutrition } = data;
+    const cellInputs = useMemo(
+        () => ({ nutrientStandard, dietSettings, customNutrition, onSelect: setSelectedSlug }),
+        [nutrientStandard, dietSettings, customNutrition],
     );
+    const display = useTableDisplay({ rawFoods, scored, foodFilter, activeCols, sliderValues, cellInputs });
 
-    useEffect(() => {
-        if (scored && scored.size) setLoadingScore(false);
-    }, [scored]);
-
-    const displayRows = useMemo(() => sortRows(foodsToShow(rawFoods, foodFilter, scored), scored), [rawFoods, foodFilter, scored, sortRows]);
-
-    const { ranks, rankedCount } = useMemo(() => rankByImprovement(displayRows, scored), [displayRows, scored]);
-
-    const unit = getUnitLabel(sliderValues.weights);
-    const cellContext = useMemo(
-        () => ({ unit, sliderValues, nutrientStandard, dietSettings, customNutrition, ranks, rankedCount, onSelect: setSelectedSlug }),
-        [unit, sliderValues, nutrientStandard, dietSettings, customNutrition, ranks, rankedCount],
-    );
-
-    // Memoized so opening/closing the detail modal (or other unrelated state changes)
-    // doesn't re-render every row and its tooltips.
-    const tableRows = useMemo(() => (
-        displayRows.map(food => (
-            <Row key={food.slug} className={isCustomFoodSlug(food.slug) ? 'bg-yellow-50' : undefined}>
-                {activeCols.map(column => foodTableCell(column.key, food, scored.get(food.slug), cellContext))}
-            </Row>
-        ))
-    ), [displayRows, scored, activeCols, cellContext]);
-    const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
-    const labelOverrides = dynamicLabels(unit, referenceName);
-
-    const figureLabels = figureLabelsFor(labelOverrides);
-    const rawLandOf = (slug: string) => scored.get(slug)?.land_use_detail.rawM2PerKg;
-    const selectedFood = selectedSlug ? rawFoods.find(food => food.slug === selectedSlug) : undefined;
-
-    const headers = activeCols.map(column => ({
-        label: labelOverrides[column.key] ?? column.label,
-        // Rank follows the Improvement score, so it isn't a sort column of its own.
-        ...(column.key === 'rank' ? {} : columnSortProps(column.key)),
-    }));
-
+    const closeDetail = useCallback(() => setSelectedSlug(null), []);
+    const closeDiet = useCallback(() => setShowDiet(false), []);
     const showDietModal = useCallback(() => setShowDiet(true), []);
     // Grouped props are memoized so the (memoized) inputs only re-render when something in them changes.
     const dietHandlers = useMemo(
-        () => ({ onCustomFoodChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
-        [onCustomFoodChange, showDietModal],
+        () => ({ onCustomFoodChange: data.onCustomFoodChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
+        [data.onCustomFoodChange, showDietModal],
     );
     const dataSettings = useMemo(
         () => ({ dataRegion, onDataRegionChange: setDataRegion, nutrientStandard, onNutrientStandardChange: setNutrientStandard }),
         [dataRegion, nutrientStandard],
     );
     const scoringErrorBanner = useMemo(
-        () => scoringError === null ? null : { message: scoringError, onDismiss: dismissScoringError },
-        [scoringError, dismissScoringError],
+        () => data.scoringError === null ? null : { message: data.scoringError, onDismiss: data.dismissScoringError },
+        [data.scoringError, data.dismissScoringError],
     );
 
-    if (error)   return <p className="mt-6 text-red-600">Failed to load data: {error}</p>;
-    if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
+    if (data.error) return <p className="mt-6 text-red-600">Failed to load data: {data.error}</p>;
+    if (data.loading) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
+
+    const rawLandOf = (slug: string) => scored.get(slug)?.land_use_detail.rawM2PerKg;
+    const selectedFood = selectedSlug ? rawFoods.find(food => food.slug === selectedSlug) : undefined;
+    const dietNutrition = customNutrition.get(DIET_SLUG);
 
     return (
         <div className="mt-6">
@@ -117,18 +73,18 @@ export function FoodTable() {
 
             <FoodTableFilters selected={foodFilter} onChange={setFoodFilter} />
 
-            <Table headers={headers}>
-                {tableRows}
+            <Table headers={display.headers}>
+                {display.rows}
             </Table>
 
-            {showDiet && customNutrition.get(DIET_SLUG) && (
+            {showDiet && dietNutrition && (
                 <DietModal
-                    nutrition={customNutrition.get(DIET_SLUG)!}
+                    nutrition={dietNutrition}
                     settings={{ diet: dietSettings, standard: nutrientStandard }}
-                    scoring={{ scored, foodSlugs, unit }}
+                    scoring={{ scored, foodSlugs: data.foodSlugs, unit: display.unit }}
                     rawLandM2PerKg={{
-                        diet: customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null,
-                        benchmark: averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, rawLandOf) : null,
+                        diet: data.customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(data.customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null,
+                        benchmark: data.averageDiet ? blendLandM2PerKg(data.averageDiet, rawFoods, rawLandOf) : null,
                     }}
                     onClose={closeDiet}
                 />
@@ -138,13 +94,13 @@ export function FoodTable() {
                 <FoodDetailModal
                     food={selectedFood}
                     scoredRow={scored.get(selectedFood.slug)}
-                    labels={figureLabels}
+                    labels={display.figureLabels}
                     mathContext={{
                         sliders: sliderValues,
-                        unit,
+                        unit: display.unit,
                         referenceRow: scored.get(sliderValues.referenceSlug),
-                        referenceName,
-                        figureLabels,
+                        referenceName: display.referenceName,
+                        figureLabels: display.figureLabels,
                     }}
                     onClose={closeDetail}
                 />
