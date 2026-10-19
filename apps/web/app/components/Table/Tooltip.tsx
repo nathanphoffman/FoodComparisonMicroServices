@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+
 export function TooltipSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-1">
@@ -32,17 +33,27 @@ export function Tooltip({ children, content }: { children: React.ReactNode, cont
   const drag = useRef<{ startY: number; startHeight: number } | null>(null);
   // null until the handle is first dragged; until then the sheet is as tall as its content, up to 90% of the screen.
   const [sheetHeight, setSheetHeight] = useState<number | null>(null);
+  // Phones get the sheet and everything else the hover bubble, so the content is only drawn once.
+  const [sheet, setSheet] = useState(false);
+  // How far the bubble is slid sideways to stay inside the window.
+  const [shift, setShift] = useState(0);
 
   function close() {
     setOpen(false);
     setSheetHeight(null);
   }
 
+  function toggle() {
+    if (open) return close();
+    setSheet(!window.matchMedia('(min-width: 768px)').matches);
+    setOpen(true);
+  }
+
   function dragHeight(e: React.PointerEvent) {
     return Math.min(drag.current!.startHeight + drag.current!.startY - e.clientY, window.innerHeight * SHEET_MAX_VH);
   }
 
-  // Slides the bubble sideways (--shift) so it stays inside the window. It's hidden until hover, so
+  // Slides the bubble sideways so it stays inside the window. It's hidden until hover, so
   // show it for a moment to measure it.
   function fitToWindow() {
     const bubble = bubbleRef.current;
@@ -52,11 +63,9 @@ export function Tooltip({ children, content }: { children: React.ReactNode, cont
     bubble.style.display = 'block';
     const rect = bubble.getBoundingClientRect();
     bubble.style.display = previousDisplay;
-    const shift = parseFloat(bubble.style.getPropertyValue('--shift')) || 0;
     const overLeft = margin - rect.left;
     const overRight = rect.right - (window.innerWidth - margin);
-    const next = overLeft > 0 ? shift + overLeft : overRight > 0 ? shift - overRight : shift;
-    bubble.style.setProperty('--shift', `${next}px`);
+    setShift(overLeft > 0 ? shift + overLeft : overRight > 0 ? shift - overRight : shift);
   }
 
   useEffect(() => {
@@ -70,16 +79,16 @@ export function Tooltip({ children, content }: { children: React.ReactNode, cont
 
   return (
     <span ref={ref} onMouseEnter={fitToWindow} className="relative group/tip inline-block">
-      <span onClick={() => open ? close() : setOpen(true)} className="underline decoration-dashed decoration-neutral-400 underline-offset-2 cursor-help">
+      <span onClick={toggle} className="underline decoration-dashed decoration-neutral-400 underline-offset-2 cursor-help">
         {children}
       </span>
-      <div ref={bubbleRef} className={`pointer-events-none z-20 hidden md:group-hover/tip:block ${open ? 'md:block' : ''} md:absolute md:bottom-full md:left-[calc(50%+var(--shift,0px))] md:-translate-x-1/2 md:mb-2 md:w-max md:max-w-[calc(100vw-1rem)]`}>
+      <div ref={bubbleRef} style={{ '--shift': `${shift}px` } as React.CSSProperties} className={`pointer-events-none z-20 hidden md:group-hover/tip:block ${open && !sheet ? 'md:block' : ''} md:absolute md:bottom-full md:left-[calc(50%+var(--shift,0px))] md:-translate-x-1/2 md:mb-2 md:w-max md:max-w-[calc(100vw-1rem)]`}>
         <div className="bg-neutral-900 text-neutral-100 text-xs text-left rounded-lg px-3 py-2.5 shadow-xl">
-          {content}
+          {!(open && sheet) && content}
         </div>
         <div className="absolute top-full left-[calc(50%-var(--shift,0px))] -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-neutral-900" />
       </div>
-      {open && (
+      {open && sheet && (
         <div className="md:hidden fixed inset-0 z-50">
           <div className="absolute inset-0 bg-black/40" onClick={close} />
           <div

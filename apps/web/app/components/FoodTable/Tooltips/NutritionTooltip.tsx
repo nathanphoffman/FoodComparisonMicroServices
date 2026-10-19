@@ -5,12 +5,12 @@ import { dailyTargets, targetColor } from '../FoodTableTargets';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
 
 // Colour for a whole-diet % of daily need: red under 50, orange 50–75, yellow 75–125 (about right),
-// green 125–250, blue over 250 (not necessarily bad, just a lot).
+// green 125–200, blue over 200 (not necessarily bad, just a lot).
 function needColor(percent: number): string {
   if (percent < 50) return 'text-red-400';
   if (percent < 75) return 'text-orange-300';
   if (percent < 125) return 'text-yellow-300';
-  if (percent <= 250) return 'text-green-300';
+  if (percent <= 200) return 'text-green-300';
   return 'text-blue-300';
 }
 

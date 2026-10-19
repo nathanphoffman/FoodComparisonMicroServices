@@ -51,7 +51,7 @@ function toPercents(ingredients: Ingredient[]): number[] {
 // Small shares need three decimals now that fine control moves them in 0.005% steps.
 const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1 ? 3 : 1))}%`;
 
-// ── Saved state (localStorage) ────────────────────────────────────────────────
+// ── Saved state (localStorage, and the exported / imported file) ────────────────────────────────────────────────
 
 const EMPTY_SAVED: Saved = { supplements: [], pillAbsorption: DEFAULT_PILL_ABSORPTION, basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
 
@@ -114,7 +114,8 @@ type Props = {
 
 /**
  * Builds a custom food (a meal or a whole diet) from other foods, each given a
- * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads.
+ * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads,
+ * and can be exported to a file and imported back.
  */
 export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DEFAULT_NUTRIENT_STANDARD, showCalories, onShow, onSettingsChange, onChange }: Props) {
     const [saved, setSaved]               = useState<Saved>(() => loadSaved(storageKey, foods));
@@ -177,6 +178,13 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // Keeps a settings change in state and local storage, and tells the table once typing settles.
+    function commit(next: Saved) {
+        setSaved(next);
+        save(storageKey, next);
+        debouncedSettings(next);
+    }
+
     function update(patch: Pick<Saved, 'basis' | 'ingredients'>) {
         const next = { ...saved, ...patch };
         setSaved(next);
@@ -189,18 +197,14 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
     function setCalorieTarget(value: string) {
         const calories = Number(value);
         const next = { ...saved, calorieTarget: value !== '' && Number.isFinite(calories) && calories > 0 ? calories : null };
-        setSaved(next);
-        save(storageKey, next);
         debouncedSettle(next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     // Longest gap between eating a food on the list; only the whole-diet tooltip numbers change, so no rescoring.
     function setDaysBetween(daysBetween: number) {
         const next = { ...saved, daysBetween };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function addMultivitamin() {
@@ -214,46 +218,34 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
 
     function setPillAbsorption(pillAbsorption: number) {
         const next = { ...saved, pillAbsorption };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function setSupplements(supplements: Supplement[]) {
         const next = { ...saved, supplements };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function setActivity(activity: number) {
         const next = { ...saved, activity };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function setSex(value: string) {
         const next = { ...saved, sex: value === 'male' || value === 'female' ? value : null } as Saved;
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function setWeight(value: string) {
         const weight = Number(value);
         const next = { ...saved, weightLb: value !== '' && Number.isFinite(weight) && weight > 0 ? weight : null };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function setAge(value: string) {
         const age = Number(value);
         const next = { ...saved, age: value !== '' && Number.isFinite(age) && age > 0 ? Math.round(age) : null };
-        setSaved(next);
-        save(storageKey, next);
-        debouncedSettings(next);
+        commit(next);
     }
 
     function exportDiet() {
