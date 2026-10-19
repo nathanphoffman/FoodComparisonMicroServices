@@ -28,4 +28,4 @@ The API returns snake_case JSON keys that intentionally mirror the TypeScript ty
 
 ## Component boundaries
 
-`app/components/FoodTable/` has its own agent (`food-table`) with tighter constraints. Respect its 7-file structure, keep color functions in `FoodTableCalculations.ts`, and do not merge the per-column cell components into a single file.
+`app/components/FoodTable/` has its own agent (`food-table`) with tighter constraints. Respect its folder grouping (`controls/`, `diet/`, `nutrition/`, `rows/`, `scoring/`, `types/`, `FoodDetail/`), keep color functions in `nutrition/FoodTableTargets.ts`, and do not merge the per-column cell components in `rows/Cells/` into a single file.

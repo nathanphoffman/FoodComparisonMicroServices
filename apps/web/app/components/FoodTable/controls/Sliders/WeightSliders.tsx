@@ -1,6 +1,6 @@
 'use client';
 
-import type { FoodWeights } from "../../Types/FoodTableTypes";
+import type { FoodWeights } from "../../types/FoodTableTypes";
 import { CalorieWeightModal } from "../../../Modals/CalorieWeightModal";
 import { ProteinWeightModal } from "../../../Modals/ProteinWeightModal";
 import { DryMassWeightModal } from "../../../Modals/DryMassWeightModal";

@@ -1,4 +1,4 @@
-import { MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, type RawFood, type CustomFoodInput, type Micronutrients, type AminoAcids, type IntelligenceDetail, type NutritionDetail } from '../../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, type RawFood, type CustomFoodInput, type Micronutrients, type AminoAcids, type IntelligenceDetail, type NutritionDetail } from '../../types/FoodTableTypes';
 
 // Tooltip detail types: pure passthroughs from the raw data, plus the blends for a custom meal / diet.
 

@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { LandUseDetail } from '../../Types/FoodTableTypes';
+import type { LandUseDetail } from '../../types/FoodTableTypes';
 import { getLandUseColor } from '../FoodTableStyles';
 import { LandUseTooltip } from '../Tooltips/LandUseTooltip';
 import { EmptyValue } from './EmptyValue';

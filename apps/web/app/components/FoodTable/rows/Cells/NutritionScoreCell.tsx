@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { NutritionDetail } from '../../Types/FoodTableTypes';
+import type { NutritionDetail } from '../../types/FoodTableTypes';
 import type { DietSettings, NutrientStandard } from '../../nutrition/FoodTableRda';
 import { getNutritionScoreColor } from '../FoodTableStyles';
 import { NutritionTooltip } from '../Tooltips/NutritionTooltip';

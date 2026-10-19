@@ -1,6 +1,6 @@
 'use client';
 
-import { CUSTOM_FOODS, customFoodStub, type RawFood } from '../Types/FoodTableTypes';
+import { CUSTOM_FOODS, customFoodStub, type RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)

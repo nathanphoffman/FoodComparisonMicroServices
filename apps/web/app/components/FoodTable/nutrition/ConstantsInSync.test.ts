@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { GWP_CH4, GWP_N2O, SQUARE_METERS_PER_HA } from '../FoodDetail/math/MathShared';
 import { AMINO_ACID_REQUIREMENTS, MICRONUTRIENT_INFO } from './FoodTableCalculations';
-import { MICRONUTRIENT_KEYS } from '../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS } from '../types/FoodTableTypes';
 
 // The web app shows copies of numbers that the Rust scorer actually uses. These tests read the Rust
 // source so a change on one side without the other fails here instead of showing wrong working to users.

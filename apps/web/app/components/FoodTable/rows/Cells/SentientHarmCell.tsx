@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { SentientHarmDetail } from '../../Types/FoodTableTypes';
+import type { SentientHarmDetail } from '../../types/FoodTableTypes';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 import { getSentientHarmColor } from '../FoodTableStyles';
 import { SentientHarmTooltip } from '../Tooltips/SentientHarmTooltip';

@@ -1,5 +1,5 @@
-import type { ScorePriorities } from '../Types/FoodTableTypes';
-import type { FoodWeights, NutritionWeights, SliderValues } from '../Types/FoodTableTypes';
+import type { ScorePriorities } from '../types/FoodTableTypes';
+import type { FoodWeights, NutritionWeights, SliderValues } from '../types/FoodTableTypes';
 import { toShares } from './Sliders/PercentSliders';
 import { SCORE_PRIORITY_KEYS, SCORE_PRIORITY_LABELS } from './Sliders/ScorePrioritySliders';
 import { DEFAULT_SCORE_PRIORITY_LEVELS, DEFAULT_FOOD_WEIGHT_LEVELS, DEFAULT_NUTRITION_WEIGHTS } from '../scoring/FoodTableDefaults';

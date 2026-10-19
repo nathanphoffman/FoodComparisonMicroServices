@@ -12,7 +12,7 @@ import { AvailabilityCell } from './Cells/AvailabilityCell';
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 import { toNutritionDetail, toIntelligenceDetail } from '../nutrition/FoodTableCalculations';
 import type { ScoredRow } from '../scoring/FoodTableSort';
-import { DIET_SLUG, EMPTY_SENTIENT_HARM_DETAIL, type ColConfig, type NutritionDetail, type RawFood, type SliderValues } from '../Types/FoodTableTypes';
+import { DIET_SLUG, EMPTY_SENTIENT_HARM_DETAIL, type ColConfig, type NutritionDetail, type RawFood, type SliderValues } from '../types/FoodTableTypes';
 
 /** What every cell in the table can need besides its own food. */
 export type CellContext = {

@@ -1,4 +1,4 @@
-import { AMINO_ACID_KEYS, type AminoAcidKey, type NutritionDetail } from '../../Types/FoodTableTypes';
+import { AMINO_ACID_KEYS, type AminoAcidKey, type NutritionDetail } from '../../types/FoodTableTypes';
 
 // What the body needs per gram of protein: the FAO (2013) indispensable amino acid reference pattern
 // for older children, adolescents and adults, in mg per g of protein. Display copy of the constants in

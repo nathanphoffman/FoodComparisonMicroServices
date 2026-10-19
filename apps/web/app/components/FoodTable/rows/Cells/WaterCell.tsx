@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { WaterDetail } from '../../Types/FoodTableTypes';
+import type { WaterDetail } from '../../types/FoodTableTypes';
 import { getWaterColor } from '../FoodTableStyles';
 import { WaterTooltip } from '../Tooltips/WaterTooltip';
 import { EmptyValue } from './EmptyValue';

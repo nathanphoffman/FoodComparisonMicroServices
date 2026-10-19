@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import type { DataRegion } from '../Types/FoodTableTypes';
+import type { DataRegion } from '../types/FoodTableTypes';
 import type { SortKey } from '../scoring/FoodTableSort';
 import { NUTRIENT_STANDARD_OPTIONS, type NutrientStandard } from '../nutrition/FoodTableRda';
 import { COLUMN_CONFIG, DATA_REGION_OPTIONS } from '../scoring/FoodTableDefaults';

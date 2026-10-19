@@ -1,4 +1,4 @@
-import type { WaterDetail } from '../../Types/FoodTableTypes';
+import type { WaterDetail } from '../../types/FoodTableTypes';
 import { Tooltip, TooltipSection, TooltipRow } from '../../../Table/Tooltip';
 import { formatPerUnit, TooltipFootnote } from './TooltipParts';
 

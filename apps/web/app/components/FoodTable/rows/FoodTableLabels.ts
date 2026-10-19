@@ -1,4 +1,4 @@
-import type { ColConfig } from '../Types/FoodTableTypes';
+import type { ColConfig } from '../types/FoodTableTypes';
 import { COLUMN_CONFIG } from '../scoring/FoodTableDefaults';
 import type { FigureKey } from '../FoodDetail/FoodDetailFigures';
 

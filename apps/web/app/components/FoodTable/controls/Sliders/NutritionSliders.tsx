@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
 import { NutritionWeightsModal } from "../../../Modals/NutritionWeightsModal";
-import type { NutritionWeights } from "../../Types/FoodTableTypes";
+import type { NutritionWeights } from "../../types/FoodTableTypes";
 import { DEFAULT_NUTRITION_WEIGHTS } from "../../scoring/FoodTableDefaults";
 
 type NutritionSliderSettings = {

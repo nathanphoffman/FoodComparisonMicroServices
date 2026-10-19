@@ -1,4 +1,4 @@
-import type { CustomFoodInput, Micronutrients, MicronutrientKey } from '../../Types/FoodTableTypes';
+import type { CustomFoodInput, Micronutrients, MicronutrientKey } from '../../types/FoodTableTypes';
 import { absorptionMultiplier, absorbedFromDose, mealsPerDayFor, ABSORPTION_NUTRIENTS } from '../../nutrition/FoodTableAbsorption';
 import type { DietSettings } from '../../nutrition/FoodTableRda';
 import { DAYS_PER_WEEK, FINE_MAX_PERCENT, toPercents, type Ingredient, type Saved } from './CustomFoodSaved';

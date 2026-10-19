@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { EmissionsBreakdown } from '../../Types/FoodTableTypes';
+import type { EmissionsBreakdown } from '../../types/FoodTableTypes';
 import { getEmissionsColor } from '../FoodTableStyles';
 import { EmissionsTooltip } from '../Tooltips/EmissionsTooltip';
 import { EmptyValue } from './EmptyValue';

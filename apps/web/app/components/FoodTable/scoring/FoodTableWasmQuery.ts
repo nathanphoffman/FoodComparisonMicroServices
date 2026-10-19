@@ -1,4 +1,4 @@
-import type { RawFood, LandTypes, NutritionWeights, CustomFoodInput, SliderValues } from '../Types/FoodTableTypes';
+import type { RawFood, LandTypes, NutritionWeights, CustomFoodInput, SliderValues } from '../types/FoodTableTypes';
 
 // Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
 export type SliderQuery = {

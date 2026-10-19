@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Cell } from '../../../Table/Cell';
-import { isCustomFoodSlug } from '../../Types/FoodTableTypes';
+import { isCustomFoodSlug } from '../../types/FoodTableTypes';
 
 export function NameCell({ name, slug, onSelect }: { name: string; slug: string; onSelect: (slug: string) => void }) {
   if (isCustomFoodSlug(slug)) {

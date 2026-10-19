@@ -1,4 +1,4 @@
-import type { CustomFoodInput } from '../Types/FoodTableTypes';
+import type { CustomFoodInput } from '../types/FoodTableTypes';
 
 // A benchmark "average American diet" built from this dataset's own foods, so every measure (sentient harm included)
 // is in the same units as the user's diet. It is scored as an extra hidden custom food and never shown as a table row.

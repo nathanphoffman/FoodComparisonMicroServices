@@ -1,4 +1,4 @@
-import type { EmissionsBreakdown } from '../../Types/FoodTableTypes';
+import type { EmissionsBreakdown } from '../../types/FoodTableTypes';
 import { Tooltip, TooltipSection, TooltipRow } from '../../../Table/Tooltip';
 
 export function EmissionsTooltip({ breakdown, divisor, children }: { breakdown: EmissionsBreakdown; divisor: number; children: React.ReactNode }) {

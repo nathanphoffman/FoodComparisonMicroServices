@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { IntelligenceDetail, KillDetail } from '../../Types/FoodTableTypes';
+import type { IntelligenceDetail, KillDetail } from '../../types/FoodTableTypes';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 import { getIntelligenceColor } from '../FoodTableStyles';
 import { IntelligenceTooltip } from '../Tooltips/IntelligenceTooltip';

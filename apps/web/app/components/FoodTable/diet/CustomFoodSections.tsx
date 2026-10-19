@@ -1,5 +1,5 @@
 import { CustomFoodBuilder } from './CustomFoodBuilder';
-import { CUSTOM_FOODS, DIET_SLUG, type CustomFoodInput } from '../Types/FoodTableTypes';
+import { CUSTOM_FOODS, DIET_SLUG, type CustomFoodInput } from '../types/FoodTableTypes';
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 
 type Props = {

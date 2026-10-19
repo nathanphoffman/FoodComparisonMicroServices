@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { RawFood } from '../Types/FoodTableTypes';
+import type { RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
 import { FIGURES, type FigureKey } from './FoodDetailFigures';
 import type { MathContext } from './FoodDetailMath';

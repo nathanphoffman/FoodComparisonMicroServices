@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback } from 'react';
 import { blendNutritionDetail } from '../nutrition/FoodTableCalculations';
 import { averageDietInput } from './FoodTableAverageDiet';
-import type { CustomFoodInput, RawFood } from '../Types/FoodTableTypes';
+import type { CustomFoodInput, RawFood } from '../types/FoodTableTypes';
 
 /** The user's custom meal / diet, plus the hidden benchmark diet that is scored with it. */
 export function useCustomFoods(rawFoods: RawFood[]) {

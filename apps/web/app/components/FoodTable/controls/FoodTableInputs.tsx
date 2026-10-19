@@ -4,7 +4,7 @@ import { memo, useState } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { CustomFoodSections } from '../diet/CustomFoodSections';
 import { ScoringErrorBanner } from './ScoringErrorBanner';
-import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from '../Types/FoodTableTypes';
+import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from '../types/FoodTableTypes';
 import { DEFAULT_SLIDER_VALUES } from '../scoring/FoodTableDefaults';
 import { useColumnVisibility } from './useColumnVisibility';
 import { FoodTablePresets } from './FoodTablePresets';

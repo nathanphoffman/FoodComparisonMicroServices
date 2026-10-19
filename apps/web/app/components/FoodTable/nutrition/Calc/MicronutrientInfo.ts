@@ -1,4 +1,4 @@
-import type { MicronutrientKey } from '../../Types/FoodTableTypes';
+import type { MicronutrientKey } from '../../types/FoodTableTypes';
 
 // Daily values are display copies of DAILY_VALUES in services/wasm-calculations
 // micronutrients.rs (FDA Daily Values; omega-3 from NIH / EFSA) — keep in sync.

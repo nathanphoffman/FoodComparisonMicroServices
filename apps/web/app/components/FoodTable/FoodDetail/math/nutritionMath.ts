@@ -1,4 +1,4 @@
-import { MICRONUTRIENT_KEYS, type RawFood } from '../../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type RawFood } from '../../types/FoodTableTypes';
 import type { ScoredRow } from '../../scoring/FoodTableSort';
 import { MICRONUTRIENT_INFO, aminoAcidProfile } from '../../nutrition/FoodTableCalculations';
 import { num, pct, type MathStep, type MathContext } from './MathShared';

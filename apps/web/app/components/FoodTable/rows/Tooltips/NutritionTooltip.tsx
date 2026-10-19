@@ -1,4 +1,4 @@
-import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../../types/FoodTableTypes';
 import { MICRONUTRIENT_INFO, aminoAcidProfile, nutritionScale } from '../../nutrition/FoodTableCalculations';
 import { dailyNeeds, needsLabel, DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from '../../nutrition/FoodTableRda';
 import { dailyTargets, targetColor, scaleColor, COLOR_SCALES } from '../../nutrition/FoodTableTargets';

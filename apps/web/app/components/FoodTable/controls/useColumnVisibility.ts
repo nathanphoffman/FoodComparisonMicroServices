@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { SortKey } from '../scoring/FoodTableSort';
-import type { ColConfig } from '../Types/FoodTableTypes';
+import type { ColConfig } from '../types/FoodTableTypes';
 import { COLUMN_CONFIG } from '../scoring/FoodTableDefaults';
 import { useIsMobile } from '../../../hooks/useIsMobile';
 

@@ -1,4 +1,4 @@
-import type { SentientHarmDetail } from '../../Types/FoodTableTypes';
+import type { SentientHarmDetail } from '../../types/FoodTableTypes';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../../../Table/Tooltip';
 import { ExplanationNote, TooltipFootnote } from './TooltipParts';

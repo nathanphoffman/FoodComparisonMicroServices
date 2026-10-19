@@ -1,5 +1,5 @@
 import type { FoodDetails } from '@/lib/types';
-import type { RawFood } from '../Types/FoodTableTypes';
+import type { RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
 import { TILE_COLORS } from '../rows/FoodTableStyles';
 import { FIGURES } from './FoodDetailFigures';

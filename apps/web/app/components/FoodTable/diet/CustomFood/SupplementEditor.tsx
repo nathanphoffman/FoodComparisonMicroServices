@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Slider } from '../../../Inputs/Slider';
 import { MICRONUTRIENT_INFO } from '../../nutrition/FoodTableCalculations';
-import { MICRONUTRIENT_KEYS, type MicronutrientKey } from '../../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type MicronutrientKey } from '../../types/FoodTableTypes';
 import { dailyNeeds, type NutrientStandard } from '../../nutrition/FoodTableRda';
 import { positiveOrZero, SupplementRow } from './SupplementRow';
 import type { Saved, Supplement } from './CustomFoodSaved';

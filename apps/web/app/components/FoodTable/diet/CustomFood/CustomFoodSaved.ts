@@ -1,4 +1,4 @@
-import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type MicronutrientKey } from '../../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type MicronutrientKey } from '../../types/FoodTableTypes';
 import { DEFAULT_DAYS_BETWEEN } from '../../nutrition/FoodTableAbsorption';
 import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from '../../nutrition/FoodTableTargets';
 import type { Sex } from '../../nutrition/FoodTableRda';

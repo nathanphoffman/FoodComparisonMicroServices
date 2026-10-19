@@ -5,7 +5,7 @@ import { AVERAGE_DIET_SLUG } from './FoodTableAverageDiet';
 import { NutritionDetailContent } from '../rows/Tooltips/NutritionTooltip';
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 import type { ScoredRow } from '../scoring/FoodTableSort';
-import { DIET_SLUG, type NutritionDetail } from '../Types/FoodTableTypes';
+import { DIET_SLUG, type NutritionDetail } from '../types/FoodTableTypes';
 
 type Props = {
     nutrition: NutritionDetail;

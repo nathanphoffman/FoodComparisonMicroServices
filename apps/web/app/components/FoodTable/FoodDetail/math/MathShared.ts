@@ -1,5 +1,5 @@
 import type { ScoredRow } from '../../scoring/FoodTableSort';
-import type { SliderValues } from '../../Types/FoodTableTypes';
+import type { SliderValues } from '../../types/FoodTableTypes';
 import type { FigureKey } from '../FoodDetailFigures';
 import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
 

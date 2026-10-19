@@ -1,4 +1,4 @@
-import type { RawFood } from '../../Types/FoodTableTypes';
+import type { RawFood } from '../../types/FoodTableTypes';
 import type { ScoredRow } from '../../scoring/FoodTableSort';
 import { GWP_CH4, GWP_N2O, SQUARE_METERS_PER_HA, num, pct, perUnitStep, type MathStep, type MathContext } from './MathShared';
 

@@ -1,4 +1,4 @@
-import type { ColConfig, RawFood } from '../Types/FoodTableTypes';
+import type { ColConfig, RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
 import { formatIntelligenceValue } from '../nutrition/FoodTableCalculations';
 import {

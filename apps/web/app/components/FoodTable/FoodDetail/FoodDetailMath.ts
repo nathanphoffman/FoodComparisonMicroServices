@@ -1,4 +1,4 @@
-import type { RawFood } from '../Types/FoodTableTypes';
+import type { RawFood } from '../types/FoodTableTypes';
 import type { ScoredRow } from '../scoring/FoodTableSort';
 import type { FigureKey } from './FoodDetailFigures';
 import type { MathStep, MathContext } from './math/MathShared';

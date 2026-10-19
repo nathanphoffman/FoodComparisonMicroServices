@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { RawFood, DataRegion } from '../Types/FoodTableTypes';
+import type { RawFood, DataRegion } from '../types/FoodTableTypes';
 import { loadWasm } from './FoodTableWASMIntegration';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5050';

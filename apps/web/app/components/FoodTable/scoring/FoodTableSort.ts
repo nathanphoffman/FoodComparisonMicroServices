@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
-import type { RawFood } from '../Types/FoodTableTypes';
-import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail, ImprovementDetail } from '../Types/FoodTableTypes';
+import type { RawFood } from '../types/FoodTableTypes';
+import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail, KillDetail, ImprovementDetail } from '../types/FoodTableTypes';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 

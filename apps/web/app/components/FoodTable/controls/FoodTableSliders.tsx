@@ -13,8 +13,8 @@ import {
     DEFAULT_FINAL_INTELLIGENCE_EXPONENT, DEFAULT_ZERO_BETTER_MULTIPLIER, DEFAULT_WIN_DAMPENING,
     DEFAULT_OVER_GATHERING,
 } from "../scoring/FoodTableDefaults";
-import type { FoodWeights, ScorePriorities } from "../Types/FoodTableTypes";
-import type { LandTypes, NutritionWeights } from "../Types/FoodTableTypes";
+import type { FoodWeights, ScorePriorities } from "../types/FoodTableTypes";
+import type { LandTypes, NutritionWeights } from "../types/FoodTableTypes";
 
 export type { FoodWeights };
 

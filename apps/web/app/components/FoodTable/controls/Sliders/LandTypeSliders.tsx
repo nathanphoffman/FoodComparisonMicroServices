@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
 import { LandTypeModal } from "../../../Modals/LandTypeModal";
-import type { LandTypes } from "../../Types/FoodTableTypes";
+import type { LandTypes } from "../../types/FoodTableTypes";
 import { DEFAULT_LAND_TYPE_WEIGHTS } from "../../scoring/FoodTableDefaults";
 
 // Ordered from most to least harmful at the defaults.

@@ -1,4 +1,4 @@
-import type { MicronutrientKey } from '../Types/FoodTableTypes';
+import type { MicronutrientKey } from '../types/FoodTableTypes';
 
 // Some nutrients can only be absorbed up to a limit per meal, so eating a lot of one in a single meal
 // wastes the rest, while spreading the same amount over several meals absorbs more.

@@ -1,5 +1,5 @@
-import type { LandUseDetail } from '../../Types/FoodTableTypes';
-import type { LandTypes } from '../../Types/FoodTableTypes';
+import type { LandUseDetail } from '../../types/FoodTableTypes';
+import type { LandTypes } from '../../types/FoodTableTypes';
 import { Tooltip, TooltipSection, TooltipRow } from '../../../Table/Tooltip';
 import { LAND_TYPE_LABELS } from '../../controls/Sliders/LandTypeSliders';
 import { formatPerUnit } from './TooltipParts';

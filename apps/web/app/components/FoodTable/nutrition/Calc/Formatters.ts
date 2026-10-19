@@ -1,4 +1,4 @@
-import type { FoodWeights } from '../../Types/FoodTableTypes';
+import type { FoodWeights } from '../../types/FoodTableTypes';
 
 // Display-only: no scoring happens here.
 export const ONE_MILLION    = 1_000_000;

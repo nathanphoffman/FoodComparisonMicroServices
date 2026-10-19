@@ -1,4 +1,4 @@
-import type { IntelligenceDetail, KillDetail } from '../../Types/FoodTableTypes';
+import type { IntelligenceDetail, KillDetail } from '../../types/FoodTableTypes';
 import { formatCount, formatNeurons } from '../../nutrition/FoodTableCalculations';
 import { Tooltip, TooltipSection, TooltipRow } from '../../../Table/Tooltip';
 import { ExplanationNote, TooltipFootnote } from './TooltipParts';

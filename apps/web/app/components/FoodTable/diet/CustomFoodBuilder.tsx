@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../../hooks/useDebouncedCallback';
-import type { CustomFoodInput } from '../Types/FoodTableTypes';
+import type { CustomFoodInput } from '../types/FoodTableTypes';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from '../nutrition/FoodTableRda';
 import { DEFAULT_LEVEL, downloadDiet, loadSaved, readDietFile, save, toPercents, type Saved } from './CustomFood/CustomFoodSaved';
 import { caloriesPerDayIn, levelForFine, levelForPercent, settingsOf, toInput, type BuilderFood } from './CustomFood/CustomFoodMath';

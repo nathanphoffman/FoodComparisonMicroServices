@@ -1,4 +1,4 @@
-import type { MicronutrientKey } from '../Types/FoodTableTypes';
+import type { MicronutrientKey } from '../types/FoodTableTypes';
 import { MICRONUTRIENT_INFO } from './FoodTableCalculations';
 
 export type Sex = 'male' | 'female';

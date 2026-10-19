@@ -1,5 +1,5 @@
 import { Cell } from '../../../Table/Cell';
-import type { KillDetail } from '../../Types/FoodTableTypes';
+import type { KillDetail } from '../../types/FoodTableTypes';
 import { CaptiveSentienceTooltip } from '../Tooltips/CaptiveSentienceTooltip';
 import { SentientHarmValue } from './SentientHarmCell';
 

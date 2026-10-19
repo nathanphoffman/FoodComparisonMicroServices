@@ -1,5 +1,5 @@
 import type { FoodDetails, SourcedFigure } from '@/lib/types';
-import { MICRONUTRIENT_KEYS } from '../Types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS } from '../types/FoodTableTypes';
 import { MICRONUTRIENT_INFO } from '../nutrition/FoodTableCalculations';
 import { fieldLabel } from './FoodDetailFields';
 

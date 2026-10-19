@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { blendLandM2PerKg, blendNutritionDetail } from './FoodDetails';
-import { customFoodStub, type CustomFoodInput, type RawFood } from '../../Types/FoodTableTypes';
+import { customFoodStub, type CustomFoodInput, type RawFood } from '../../types/FoodTableTypes';
 
 const food = (slug: string, fields: Partial<RawFood>): RawFood => ({ ...customFoodStub(slug, slug), ...fields });
 const FOODS = [food('rice', { calories: 1, protein: 0.2 }), food('beans', { calories: 4, protein: 0 })];
