@@ -21,15 +21,15 @@ export type Preset = {
 
 // Nutrition and Intelligence at 30% each; the other four split the rest (10% each).
 const PLANT_BASED_LEVELS: ScorePriorities = {
-    nutrition: 9, intelligence: 9, emissions: 3, water: 3, landUse: 3, availability: 3,
+    nutrition: 9, sentientHarm: 9, emissions: 3, water: 3, landUse: 3, availability: 3,
 };
 
 // One preset's shape per focus: that priority gets a big share, the rest are split evenly.
-const CLIMATE_LEVELS: ScorePriorities      = { emissions: 8, nutrition: 4, water: 4, landUse: 2, availability: 1, intelligence: 1 };
-const WATER_LEVELS: ScorePriorities        = { water: 7, nutrition: 2, emissions: 2, landUse: 2, availability: 2, intelligence: 2 };
-const NUTRITION_LEVELS: ScorePriorities    = { nutrition: 10, emissions: 2, water: 2, landUse: 2, availability: 2, intelligence: 2 };
-const WILDLIFE_LAND_LEVELS: ScorePriorities = { landUse: 8, intelligence: 4, nutrition: 2, emissions: 2, water: 2, availability: 2 };
-const AVAILABILITY_LEVELS: ScorePriorities = { availability: 6, nutrition: 2, emissions: 2, water: 2, landUse: 2, intelligence: 2 };
+const CLIMATE_LEVELS: ScorePriorities      = { emissions: 8, nutrition: 4, water: 4, landUse: 2, availability: 1, sentientHarm: 1 };
+const WATER_LEVELS: ScorePriorities        = { water: 7, nutrition: 2, emissions: 2, landUse: 2, availability: 2, sentientHarm: 2 };
+const NUTRITION_LEVELS: ScorePriorities    = { nutrition: 10, emissions: 2, water: 2, landUse: 2, availability: 2, sentientHarm: 2 };
+const WILDLIFE_LAND_LEVELS: ScorePriorities = { landUse: 8, sentientHarm: 4, nutrition: 2, emissions: 2, water: 2, availability: 2 };
+const AVAILABILITY_LEVELS: ScorePriorities = { availability: 6, nutrition: 2, emissions: 2, water: 2, landUse: 2, sentientHarm: 2 };
 const CARNIVORE_FOOD_WEIGHT_LEVELS: FoodWeights = { calories: 4, protein: 6, dryMass: 1, wetMass: 1 };
 
 const NUTRITION_MAX_WEIGHTS: NutritionWeights = {

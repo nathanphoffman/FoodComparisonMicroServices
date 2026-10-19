@@ -1,12 +1,12 @@
-import type { CustomFoodInput, Micronutrients, MicronutrientKey } from '../../../types/FoodTableTypes';
+import type { DietInput, Micronutrients, MicronutrientKey } from '../../../types/FoodTableTypes';
 import { absorptionMultiplier, absorbedFromDose, mealsPerDayFor, ABSORPTION_NUTRIENTS } from '../../../nutrition/FoodTableAbsorption';
 import type { DietSettings } from '../../../nutrition/FoodTableRda';
-import { DAYS_PER_WEEK, FINE_MAX_PERCENT, toPercents, type Ingredient, type Saved } from './CustomFoodSaved';
+import { DAYS_PER_WEEK, FINE_MAX_PERCENT, toPercents, type Ingredient, type Saved } from './DietSaved';
 
 export type BuilderFood = { slug: string; name: string; calories?: number; micronutrients?: Micronutrients | null };
 
 /** What the table scores: each ingredient as a fraction of the food. */
-export function toInput(slug: string, name: string, { basis, ingredients }: Saved): CustomFoodInput {
+export function toInput(slug: string, name: string, { basis, ingredients }: Saved): DietInput {
     return {
         slug, name, basis,
         ingredients: toPercents(ingredients).map((percent, i) => ({ slug: ingredients[i].slug, fraction: percent / 100 })),

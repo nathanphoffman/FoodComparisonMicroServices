@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../../_wasm-signal';
-import type { RawFood, CustomFoodInput, SliderValues } from '../types/FoodTableTypes';
+import type { RawFood, DietInput, SliderValues } from '../types/FoodTableTypes';
 import type { ScoredRow } from './FoodTableSort';
 import { buildScoreInput, type ScoreInput } from './FoodTableWasmQuery';
 
@@ -41,7 +41,7 @@ export async function loadWasm() {
  *  - `scoringError`    — non-null when the last score call threw; old scores stay visible
  *  - `setScoringError` — lets the parent dismiss the error banner
  */
-export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, customFoods: CustomFoodInput[]) {
+export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, diets: DietInput[]) {
     const [scored,       setScored]       = useState<Map<string, ScoredRow>>(new Map());
     const [scoringError, setScoringError] = useState<string | null>(null);
     const loadedWasmBuildId              = useRef(WASM_BUILD_ID);
@@ -59,7 +59,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
     useEffect(() => {
         if (!wasmReady || rawFoods.length === 0) return;
 
-        const input = buildScoreInput(rawFoods, sliderValues, customFoods);
+        const input = buildScoreInput(rawFoods, sliderValues, diets);
 
         try {
             const rows = wasmScore!(input);
@@ -69,7 +69,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
             // Keep the last good scores visible; just surface the error.
             setScoringError(e instanceof Error ? e.message : String(e));
         }
-    }, [rawFoods, sliderValues, customFoods]);
+    }, [rawFoods, sliderValues, diets]);
 
     return { scored, scoringError, setScoringError };
 }

@@ -1,6 +1,6 @@
-import type { CustomFoodBasis } from '../../../types/FoodTableTypes';
+import type { DietBasis } from '../../../types/FoodTableTypes';
 
-const BASIS_OPTIONS: { value: CustomFoodBasis; label: string }[] = [
+const BASIS_OPTIONS: { value: DietBasis; label: string }[] = [
     { value: 'calories', label: 'By calories' },
     { value: 'mass',     label: 'By mass' },
 ];
@@ -9,10 +9,10 @@ type Props = {
     /** Foods not yet in the diet. */
     available: { slug: string; name: string }[];
     selectedSlug: string;
-    basis: CustomFoodBasis;
+    basis: DietBasis;
     onSelect: (slug: string) => void;
     onAdd: () => void;
-    onBasisChange: (basis: CustomFoodBasis) => void;
+    onBasisChange: (basis: DietBasis) => void;
 };
 
 /** Pick a food to add, and choose whether the percentages are of calories or of mass. */
@@ -38,7 +38,7 @@ export function IngredientPicker({ available, selectedSlug, basis, onSelect, onA
             </button>
             <select
                 value={basis}
-                onChange={e => onBasisChange(e.target.value as CustomFoodBasis)}
+                onChange={e => onBasisChange(e.target.value as DietBasis)}
                 aria-label="What the percentages are of"
                 className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white shrink-0"
             >

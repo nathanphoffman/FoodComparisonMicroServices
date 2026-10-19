@@ -86,7 +86,7 @@ fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimensi
         ("emissions",    food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
         ("landUse",      food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
         ("water",        food.water,         reference.water,         caps.water,         query.water_priority),
-        ("sentientHarm", food.sentient_harm, reference.sentient_harm, caps.sentient_harm, query.intelligence_priority),
+        ("sentientHarm", food.sentient_harm, reference.sentient_harm, caps.sentient_harm, query.sentient_harm_priority),
     ] {
         if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
             if reference_score > 0.0 {
@@ -101,7 +101,7 @@ fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimensi
 
 // Higher-is-better: ratio = food / reference.
 // Nutrition is shifted by the batch offset so negative scores count as bad
-// rather than being dropped. The floor guards the meal row and rounding.
+// rather than being dropped. The floor guards the diet row and rounding.
 fn higher_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &DimensionCaps, query: &SliderQuery) -> Vec<ImprovementTerm> {
     let mut terms = Vec::new();
     if let (Some(food_score), Some(reference_score)) = (food.nutrition_score, reference.nutrition_score) {

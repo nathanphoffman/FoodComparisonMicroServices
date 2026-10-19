@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use super::meal::Blend;
+use super::blend::Blend;
 use super::scoring::{compute_improvement, DimensionCaps};
 use crate::models::{FoodRow, ImprovementDetail, ScoredRow, SliderQuery};
 
@@ -43,7 +43,7 @@ impl<'a> Comparison<'a> {
         self.penalized_improvement(row, penalty).map(|detail| (detail.mean / detail.wild_penalty, Some(detail)))
     }
 
-    /// Final score for a custom food row (meal, diet).
+    /// Final score for a blended diet row.
     pub(in crate::calculations) fn blend_score(&self, blend: &Blend) -> Option<f64> {
         // An ingredient with none of the Compare By unit has no per-unit impacts, so
         // the blend can't be compared fairly either.

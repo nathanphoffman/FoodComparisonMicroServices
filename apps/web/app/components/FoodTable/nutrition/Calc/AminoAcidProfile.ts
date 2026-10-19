@@ -50,7 +50,7 @@ export type AminoAcidProfile = {
     limiting: string | null;
 };
 
-/** Per-protein amino acid profile for a food or meal's nutrition detail; null when it has no amino acid data. */
+/** Per-protein amino acid profile for a food or diet's nutrition detail; null when it has no amino acid data. */
 export function aminoAcidProfile(detail: Pick<NutritionDetail, 'protein' | 'aminoAcids'>): AminoAcidProfile | null {
     const { protein, aminoAcids } = detail;
     if (!aminoAcids || protein <= 0) return null;

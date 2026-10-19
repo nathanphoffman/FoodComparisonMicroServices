@@ -2,9 +2,9 @@
 
 import { memo, useState } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
-import { CustomFoodSections } from '../diet/CustomFoodSections';
+import { DietSection } from '../diet/DietSection';
 import { ScoringErrorBanner } from './ScoringErrorBanner';
-import type { ColConfig, CustomFoodInput, SliderValues } from '../types/FoodTableTypes';
+import type { ColConfig, DietInput, SliderValues } from '../types/FoodTableTypes';
 import { DEFAULT_SLIDER_VALUES } from '../scoring/FoodTableDefaults';
 import { useColumnVisibility } from './toolbar/useColumnVisibility';
 import { FoodTablePresets } from './presets/FoodTablePresets';
@@ -20,7 +20,7 @@ type Props = {
     dataSettings: DataSettings;
     /** Everything the diet builder reports back: its food, its daily settings, and a request to show the breakdown. */
     diet: {
-        onCustomFoodChange: (food: CustomFoodInput) => void;
+        onDietChange: (food: DietInput) => void;
         onSettingsChange: (settings: DietSettings) => void;
         onShow: () => void;
     };
@@ -82,10 +82,10 @@ export const FoodTableInputs = memo(function FoodTableInputs({ foods, onSliderVa
                     presetLevels={{ foodWeights: foodWeightLevels, scorePriorities: scorePriorityLevels }}
                     resetKey={sliderResetKey}
                 />
-                <CustomFoodSections
+                <DietSection
                     foods={foods}
-                    diet={{ standard: dataSettings.nutrientStandard, onShow: diet.onShow, onSettingsChange: diet.onSettingsChange }}
-                    onCustomFoodChange={diet.onCustomFoodChange}
+                    options={{ standard: dataSettings.nutrientStandard, onShow: diet.onShow, onSettingsChange: diet.onSettingsChange }}
+                    onDietChange={diet.onDietChange}
                 />
             </div>
             {scoringError && <ScoringErrorBanner message={scoringError.message} onDismiss={scoringError.onDismiss} />}

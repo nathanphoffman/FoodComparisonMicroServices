@@ -1,5 +1,5 @@
 import { Slider } from '../../../../Inputs/Slider';
-import { DAYS_PER_WEEK, FINE_MAX_PERCENT, FINE_STEP_PERCENT, LEVEL_STEP, MAX_LEVEL, formatPercent, type Ingredient } from '../logic/CustomFoodSaved';
+import { DAYS_PER_WEEK, FINE_MAX_PERCENT, FINE_STEP_PERCENT, LEVEL_STEP, MAX_LEVEL, formatPercent, type Ingredient } from '../logic/DietSaved';
 
 const formatCalories = (kcal: number) => Math.round(kcal).toLocaleString();
 
@@ -9,18 +9,17 @@ type Props = {
     percents: number[];
     /** Shows each ingredient's calories per day and week, when this returns a number for it. */
     caloriesPerDay: (slug: string) => number | null;
-    showCalories?: boolean;
     onSlide: (index: number, value: number) => void;
     onFineChange: (index: number, fine: boolean) => void;
     onRemove: (slug: string) => void;
 };
 
 /** One slider per ingredient, with its percentage, a fine-control toggle and a remove button. */
-export function IngredientList({ ingredients, percents, caloriesPerDay, showCalories, onSlide, onFineChange, onRemove }: Props) {
+export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide, onFineChange, onRemove }: Props) {
     return (
         <div className="flex flex-col gap-1.5 pt-1">
             {ingredients.map((ing, idx) => {
-                const kcal = showCalories ? caloriesPerDay(ing.slug) : null;
+                const kcal = caloriesPerDay(ing.slug);
                 return (
                     <div key={ing.slug}>
                         <div className="flex items-center gap-2">

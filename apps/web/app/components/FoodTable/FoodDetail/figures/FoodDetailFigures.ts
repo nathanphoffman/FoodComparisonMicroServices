@@ -67,7 +67,7 @@ export const FIGURES: Figure[] = [
     key: 'directKill',
     value: row => row.direct_kill,
     format: formatIntelligenceValue,
-    tone: value => getTone('intelligence', value),
+    tone: value => getTone('directKill', value),
     fields: food => food.type === 'animal'
       ? ['neuron_count', 'weight_kg', 'yield_fraction', 'lifetime_output_kg', 'offspring_deaths_per_animal', 'feed:fishmeal', 'feed:fish-oil']
       : ['wild_fish_kg_per_kg', 'wild_fish_neuron_count', 'wild_fish_weight_kg', 'wild_fish_lifespan_years'],

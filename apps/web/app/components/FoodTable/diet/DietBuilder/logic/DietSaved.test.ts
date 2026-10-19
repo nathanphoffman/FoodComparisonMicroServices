@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { loadSaved, positiveOrNull, readDietFile, sanitize, toPercents, type Saved } from './CustomFoodSaved';
+import { loadSaved, positiveOrNull, readDietFile, sanitize, toPercents, type Saved } from './DietSaved';
 
 const KNOWN_FOODS = [{ slug: 'rice' }, { slug: 'beans' }];
 const A_DIET = {

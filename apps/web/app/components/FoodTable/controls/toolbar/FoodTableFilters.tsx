@@ -1,6 +1,6 @@
 'use client';
 
-import { CUSTOM_FOODS, customFoodStub, type RawFood } from '../../types/FoodTableTypes';
+import { DIET, dietStub, type RawFood } from '../../types/FoodTableTypes';
 import type { ScoredRow } from '../../scoring/FoodTableSort';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)
@@ -42,13 +42,12 @@ export function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
 }
 
 /**
- * The foods to list: those matching the filter, plus the custom meal / diet rows once they're scored.
+ * The foods to list: those matching the filter, plus the diet row once it's scored.
  * Filtering only hides rows; every food is still scored so scores don't shift with the filter.
  */
 export function foodsToShow(rawFoods: RawFood[], filterKey: string, scored: Map<string, ScoredRow>): RawFood[] {
     const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, filterKey));
-    const customRows = CUSTOM_FOODS.filter(custom => scored.has(custom.slug)).map(custom => customFoodStub(custom.slug, custom.name));
-    return [...visibleFoods, ...customRows];
+    return scored.has(DIET.slug) ? [...visibleFoods, dietStub(DIET.slug, DIET.name)] : visibleFoods;
 }
 
 export function FoodTableFilters({ selected, onChange }: { selected: string; onChange: (key: string) => void }) {

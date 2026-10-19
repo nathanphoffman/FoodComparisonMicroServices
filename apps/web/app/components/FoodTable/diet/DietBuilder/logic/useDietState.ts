@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../../../../hooks/useDebouncedCallback';
-import type { CustomFoodInput } from '../../../types/FoodTableTypes';
+import type { DietInput } from '../../../types/FoodTableTypes';
 import type { DietSettings } from '../../../nutrition/FoodTableRda';
-import { loadSaved, readDietFile, save, type Saved } from './CustomFoodSaved';
-import { caloriesPerDayIn, settingsOf, toInput, type BuilderFood } from './CustomFoodMath';
+import { loadSaved, readDietFile, save, type Saved } from './DietSaved';
+import { caloriesPerDayIn, settingsOf, toInput, type BuilderFood } from './DietMath';
 
-type Custom = { slug: string; name: string; storageKey: string };
+type DietIdentity = { slug: string; name: string; storageKey: string };
 
 /** The saved diet, kept in this browser. `problem` is what went wrong loading or saving it, for the user to read. */
 function useSavedDiet(storageKey: string, foods: BuilderFood[]) {
@@ -46,15 +46,15 @@ function useSettledDiet(initial: Saved, foods: BuilderFood[]) {
 }
 
 type Options = {
-    custom: Custom;
+    diet: DietIdentity;
     foods: BuilderFood[];
-    onChange: (food: CustomFoodInput) => void;
+    onChange: (food: DietInput) => void;
     onSettingsChange?: (settings: DietSettings) => void;
 };
 
-/** Everything a custom food remembers: the saved diet, telling the table when it changes, and importing a file. */
-export function useDietState({ custom, foods, onChange, onSettingsChange }: Options) {
-    const { slug, name, storageKey } = custom;
+/** Everything the diet builder remembers: the saved diet, telling the table when it changes, and importing a file. */
+export function useDietState({ diet, foods, onChange, onSettingsChange }: Options) {
+    const { slug, name, storageKey } = diet;
     const { saved, problem, setProblem, keep } = useSavedDiet(storageKey, foods);
     const { settleNow, settleLater, markActive, caloriesPerDay } = useSettledDiet(saved, foods);
     const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);

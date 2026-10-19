@@ -1,4 +1,4 @@
-import { MICRONUTRIENT_KEYS, type CustomFoodBasis, type MicronutrientKey } from '../../../types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, type DietBasis, type MicronutrientKey } from '../../../types/FoodTableTypes';
 import { DEFAULT_DAYS_BETWEEN } from '../../../nutrition/FoodTableAbsorption';
 import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from '../../../nutrition/FoodTableTargets';
 import type { Sex } from '../../../nutrition/FoodTableRda';
@@ -14,7 +14,7 @@ export type Supplement = { key: MicronutrientKey; dose: number; perWeek: number;
 
 // calorieTarget is the user's total calories per day, sex and age pick their daily vitamin and mineral needs
 // (all null until entered).
-export type Saved = { supplements: Supplement[]; pillAbsorption: number; basis: CustomFoodBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number; activity: number };
+export type Saved = { supplements: Supplement[]; pillAbsorption: number; basis: DietBasis; ingredients: Ingredient[]; calorieTarget: number | null; sex: Sex | null; age: number | null; weightLb: number | null; daysBetween: number; activity: number };
 
 export const DAYS_PER_WEEK = 7;
 

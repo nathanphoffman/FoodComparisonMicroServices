@@ -1,4 +1,4 @@
-import type { RawFood, LandTypes, NutritionWeights, CustomFoodInput, SliderValues } from '../types/FoodTableTypes';
+import type { RawFood, LandTypes, NutritionWeights, DietInput, SliderValues } from '../types/FoodTableTypes';
 
 // Field names must match #[serde(rename_all = "camelCase")] on the Rust SliderQuery struct.
 export type SliderQuery = {
@@ -15,10 +15,10 @@ export type SliderQuery = {
     finalIntelligenceExponent:  number;
     zeroBetterMultiplier:       number;
     referenceSlug:              string | null;
-    customFoods:                CustomFoodInput[];
+    diets:                      DietInput[];
     nutritionPriority:          number;
     emissionsPriority:          number;
-    intelligencePriority:       number;
+    sentientHarmPriority:       number;
     waterPriority:              number;
     landUsePriority:            number;
     availabilityPriority:       number;
@@ -37,8 +37,8 @@ export type ScoreInput = {
 };
 
 
-/** The slider values and custom foods in the shape the WASM scorer takes. */
-export function buildScoreInput(foods: RawFood[], sliderValues: SliderValues, customFoods: CustomFoodInput[]): ScoreInput {
+/** The slider values and diets in the shape the WASM scorer takes. */
+export function buildScoreInput(foods: RawFood[], sliderValues: SliderValues, diets: DietInput[]): ScoreInput {
     const { weights, scorePriorities, greenWaterWeight, greyWaterWeight } = sliderValues;
     return {
         foods,
@@ -51,11 +51,11 @@ export function buildScoreInput(foods: RawFood[], sliderValues: SliderValues, cu
             greyWater:            greyWaterWeight,
             nutritionPriority:    scorePriorities.nutrition,
             emissionsPriority:    scorePriorities.emissions,
-            intelligencePriority: scorePriorities.intelligence,
+            sentientHarmPriority: scorePriorities.sentientHarm,
             waterPriority:        scorePriorities.water,
             landUsePriority:      scorePriorities.landUse,
             availabilityPriority: scorePriorities.availability,
-            customFoods,
+            diets,
             // These are named the same in the slider values and the query.
             killMultiplier:            sliderValues.killMultiplier,
             captivityMultiplier:       sliderValues.captivityMultiplier,

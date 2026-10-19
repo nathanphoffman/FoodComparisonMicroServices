@@ -39,7 +39,7 @@ const MEASURE_SCALES = {
   nutritionScore: { rules: [{ tone: 'good', test: 'above', value: 3 }, { tone: 'fair', test: 'above', value: 1 }], otherwise: 'bad' },
   improvement: { rules: [{ tone: 'good', test: 'atLeast', value: 1.5 }, { tone: 'fair', test: 'atLeast', value: 0.7 }], otherwise: 'bad' },
   // Direct kill. Zero (no animal killed) is 'good'; callers handle that case.
-  intelligence: harmScale([['bad', TEN_TRILLION], ['poor', ONE_TRILLION]]),
+  directKill: harmScale([['bad', TEN_TRILLION], ['poor', ONE_TRILLION]]),
   // Sentient harm and captive sentience.
   sentientHarm: harmScale([['worst', ONE_HUNDRED_TRILLION], ['bad', TEN_TRILLION], ['poor', ONE_TRILLION]]),
 } satisfies Record<string, ToneScale>;
@@ -84,7 +84,7 @@ const MEASURE_COLORS: Record<Measure, Record<Tone, string>> = {
   improvement: BADGE_COLORS,
   water: WATER_COLORS,
   landUse: LAND_USE_COLORS,
-  intelligence: HARM_COLORS,
+  directKill: HARM_COLORS,
   sentientHarm: HARM_COLORS,
 };
 

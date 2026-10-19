@@ -1,18 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import type { CustomFoodInput } from '../types/FoodTableTypes';
-import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
-import { DEFAULT_LEVEL, downloadDiet, toPercents } from './CustomFood/logic/CustomFoodSaved';
-import { levelForFine, levelForPercent, type BuilderFood } from './CustomFood/logic/CustomFoodMath';
-import { useDietState } from './CustomFood/logic/useDietState';
-import { DietActions } from './CustomFood/inputs/DietActions';
-import { DietSettingsFields } from './CustomFood/inputs/DietSettingsFields';
-import { SupplementEditor } from './CustomFood/inputs/SupplementEditor';
-import { IngredientPicker } from './CustomFood/inputs/IngredientPicker';
-import { IngredientList } from './CustomFood/inputs/IngredientList';
+import { DIET, type DietInput } from '../../types/FoodTableTypes';
+import type { DietSettings, NutrientStandard } from '../../nutrition/FoodTableRda';
+import { DEFAULT_LEVEL, downloadDiet, toPercents } from './logic/DietSaved';
+import { levelForFine, levelForPercent, type BuilderFood } from './logic/DietMath';
+import { useDietState } from './logic/useDietState';
+import { DietActions } from './inputs/DietActions';
+import { DietSettingsFields } from './inputs/DietSettingsFields';
+import { SupplementEditor } from './inputs/SupplementEditor';
+import { IngredientPicker } from './inputs/IngredientPicker';
+import { IngredientList } from './inputs/IngredientList';
 
-/** What turns a custom food into the whole-diet builder: calories and daily needs, and the breakdown window. */
+/** How the diet builder talks to the rest of the page: daily needs, the breakdown window, and the daily settings. */
 export type DietOptions = {
     /** Whose recommended intakes a supplement's % RDA is measured against. */
     standard: NutrientStandard;
@@ -23,22 +23,18 @@ export type DietOptions = {
 };
 
 type Props = {
-    custom: { slug: string; name: string; storageKey: string };
     foods: BuilderFood[];
-    /** Set for the whole diet: shows the calories / day field and each food's calories per day and week. */
-    diet?: DietOptions;
-    onChange: (food: CustomFoodInput) => void;
+    options: DietOptions;
+    onChange: (diet: DietInput) => void;
 };
 
 /**
- * Builds a custom food (a meal or a whole diet) from other foods, each given a
- * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads,
+ * Plans a diet from other foods, each given a slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads,
  * and can be exported to a file and imported back.
  */
-export function CustomFoodBuilder({ custom, foods, diet, onChange }: Props) {
-    const showCalories = !!diet;
+export function DietBuilder({ foods, options, onChange }: Props) {
     const { saved, problem, updateFoods, updateSettings, importDiet, caloriesPerDay, markActive } = useDietState({
-        custom, foods, onChange, onSettingsChange: diet?.onSettingsChange,
+        diet: DIET, foods, onChange, onSettingsChange: options.onSettingsChange,
     });
     const [selectedSlug, setSelectedSlug] = useState('');
     const { basis, ingredients } = saved;
@@ -71,9 +67,9 @@ export function CustomFoodBuilder({ custom, foods, diet, onChange }: Props) {
     return (
         <div className="flex flex-col gap-2">
             {problem && <p role="alert" className="text-sm text-red-600">{problem}</p>}
-            {diet && <DietActions onExport={() => downloadDiet(saved, custom.slug)} onImport={importDiet} onShow={diet.onShow} hasFoods={ingredients.length > 0} />}
-            {diet && <DietSettingsFields saved={saved} onChange={updateSettings} />}
-            {diet && <SupplementEditor saved={saved} standard={diet.standard} onChange={updateSettings} />}
+            <DietActions onExport={() => downloadDiet(saved, DIET.slug)} onImport={importDiet} onShow={options.onShow} hasFoods={ingredients.length > 0} />
+            <DietSettingsFields saved={saved} onChange={updateSettings} />
+            <SupplementEditor saved={saved} standard={options.standard} onChange={updateSettings} />
             <IngredientPicker
                 available={available}
                 selectedSlug={selectedSlug}
@@ -87,7 +83,6 @@ export function CustomFoodBuilder({ custom, foods, diet, onChange }: Props) {
                     ingredients={ingredients}
                     percents={toPercents(ingredients)}
                     caloriesPerDay={caloriesPerDay}
-                    showCalories={showCalories}
                     onSlide={slideIngredient}
                     onFineChange={setFine}
                     onRemove={removedSlug => updateFoods({ basis, ingredients: ingredients.filter(i => i.slug !== removedSlug) })}

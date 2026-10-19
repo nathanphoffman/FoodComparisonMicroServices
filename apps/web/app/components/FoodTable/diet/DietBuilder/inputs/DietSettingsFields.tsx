@@ -5,7 +5,7 @@ import { SliderRow } from '../../../../Inputs/SliderRow';
 import { MAX_DAYS_BETWEEN, MIN_DAYS_BETWEEN, mealsPerDayFor } from '../../../nutrition/FoodTableAbsorption';
 import { ACTIVITY_LEVELS } from '../../../nutrition/FoodTableTargets';
 import { MIN_RDA_AGE } from '../../../nutrition/FoodTableRda';
-import { positiveOrNull, type Saved } from '../logic/CustomFoodSaved';
+import { positiveOrNull, type Saved } from '../logic/DietSaved';
 
 const MAX_AGE = 120;
 const SEX_OPTIONS = [

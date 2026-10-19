@@ -21,8 +21,8 @@ export function FoodTable() {
 
     const data = useFoodTableData(settings.dataRegion, sliderValues);
     const cellInputs = useMemo(
-        () => ({ nutrientStandard, dietSettings, customNutrition: data.customNutrition, onSelect: setSelectedSlug }),
-        [nutrientStandard, dietSettings, data.customNutrition],
+        () => ({ nutrientStandard, dietSettings, dietNutrition: data.dietNutrition, onSelect: setSelectedSlug }),
+        [nutrientStandard, dietSettings, data.dietNutrition],
     );
     const display = useTableDisplay({
         rawFoods: data.rawFoods, scored: data.scored, foodFilter: settings.foodFilter,
@@ -34,8 +34,8 @@ export function FoodTable() {
     const showDietModal = useCallback(() => setShowDiet(true), []);
     // Grouped props are memoized so the (memoized) inputs only re-render when something in them changes.
     const dietHandlers = useMemo(
-        () => ({ onCustomFoodChange: data.onCustomFoodChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
-        [data.onCustomFoodChange, showDietModal],
+        () => ({ onDietChange: data.onDietChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
+        [data.onDietChange, showDietModal],
     );
     const scoringErrorBanner = useMemo(
         () => data.scoringError === null ? null : { message: data.scoringError, onDismiss: data.dismissScoringError },

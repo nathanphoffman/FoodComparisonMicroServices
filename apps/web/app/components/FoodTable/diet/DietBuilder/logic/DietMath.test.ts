@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { caloriesPerDayIn, levelForPercent, settingsOf, type BuilderFood } from './CustomFoodMath';
-import { toPercents, type Saved } from './CustomFoodSaved';
+import { caloriesPerDayIn, levelForPercent, settingsOf, type BuilderFood } from './DietMath';
+import { toPercents, type Saved } from './DietSaved';
 
 const RICE_CALORIES_PER_GRAM = 1;
 const BEANS_CALORIES_PER_GRAM = 4;

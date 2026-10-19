@@ -13,7 +13,7 @@ export type FoodWeights = {
 export type ScorePriorities = {
     nutrition:    number;
     emissions:    number;
-    intelligence: number;
+    sentientHarm: number;
     water:        number;
     landUse:      number;
     availability: number;

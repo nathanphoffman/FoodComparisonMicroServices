@@ -4,4 +4,4 @@ export * from './ScoreDetailTypes';
 export * from './LandTypes';
 export * from './RawFood';
 export * from './SliderTypes';
-export * from './CustomFoodTypes';
+export * from './DietTypes';

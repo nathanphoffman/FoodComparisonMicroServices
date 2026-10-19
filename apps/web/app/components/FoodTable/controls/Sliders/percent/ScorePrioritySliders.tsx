@@ -3,12 +3,12 @@
 import type { ScorePriorities } from "../../../types/FoodTableTypes";
 import { PercentSliders } from "./PercentSliders";
 
-export const SCORE_PRIORITY_KEYS: (keyof ScorePriorities)[] = ['nutrition', 'emissions', 'intelligence', 'water', 'landUse', 'availability'];
+export const SCORE_PRIORITY_KEYS: (keyof ScorePriorities)[] = ['nutrition', 'emissions', 'sentientHarm', 'water', 'landUse', 'availability'];
 
 export const SCORE_PRIORITY_LABELS: Record<keyof ScorePriorities, string> = {
     nutrition:    'Nutrition',
     emissions:    'CO₂',
-    intelligence: 'Intelligence',
+    sentientHarm: 'Intelligence',
     water:        'Water',
     landUse:      'Land Use',
     availability: 'Availability',
@@ -17,7 +17,7 @@ export const SCORE_PRIORITY_LABELS: Record<keyof ScorePriorities, string> = {
 const DESCRIPTIONS: Record<keyof ScorePriorities, string> = {
     nutrition:    'how much the nutrition score counts',
     emissions:    'how much greenhouse emissions count',
-    intelligence: 'how much sentient harm counts',
+    sentientHarm: 'how much sentient harm counts',
     water:        'how much water use counts',
     landUse:      'how much land use counts',
     availability: 'how much global supply counts',

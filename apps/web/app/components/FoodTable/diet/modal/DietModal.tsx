@@ -11,7 +11,7 @@ type Props = {
     nutrition: NutritionDetail;
     /** The person's daily settings and whose recommended intakes the nutrition is measured against. */
     settings: { diet: DietSettings | null; standard: NutrientStandard };
-    /** Every scored food, which of them are real foods (not custom rows), and the Compare By unit. */
+    /** Every scored food, which of them are real foods (not diet rows), and the Compare By unit. */
     scoring: { scored: Map<string, ScoredRow>; foodSlugs: Set<string>; unit: string };
     /** Raw land use (m² per kg) of the diet and of the hidden average diet it's compared with. */
     rawLandM2PerKg: { diet: number | null; benchmark: number | null };

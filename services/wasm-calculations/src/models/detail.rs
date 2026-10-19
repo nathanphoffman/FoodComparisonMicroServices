@@ -73,7 +73,7 @@ impl SentientHarmDetail {
 }
 
 /// Per-animal facts behind the direct kill and captivity scores, for the
-/// tooltips. None for plants, meals, and animals missing kill data.
+/// tooltips. None for plants, diets, and animals missing kill data.
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct KillDetail {

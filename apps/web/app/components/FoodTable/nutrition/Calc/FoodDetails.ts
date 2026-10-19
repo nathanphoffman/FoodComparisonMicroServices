@@ -1,6 +1,6 @@
-import { MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, type RawFood, type CustomFoodInput, type Micronutrients, type AminoAcids, type IntelligenceDetail, type NutritionDetail } from '../../types/FoodTableTypes';
+import { MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, type RawFood, type DietInput, type Micronutrients, type AminoAcids, type IntelligenceDetail, type NutritionDetail } from '../../types/FoodTableTypes';
 
-// Tooltip detail types: pure passthroughs from the raw data, plus the blends for a custom meal / diet.
+// Tooltip detail types: pure passthroughs from the raw data, plus the blends for a diet.
 
 export function toNutritionDetail(food: RawFood): NutritionDetail {
     return {
@@ -20,23 +20,23 @@ export function toNutritionDetail(food: RawFood): NutritionDetail {
 }
 
 /** Each ingredient that's in the food list with a positive share, with its mass; a calorie share becomes mass by dividing by calories per gram (same as the WASM blend). */
-function ingredientMasses(custom: CustomFoodInput, foods: RawFood[]): { food: RawFood; mass: number }[] {
-    return custom.ingredients.flatMap(({ slug, fraction }) => {
+function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; mass: number }[] {
+    return diet.ingredients.flatMap(({ slug, fraction }) => {
         const food = foods.find(f => f.slug === slug);
         if (!food || fraction <= 0) return [];
-        const mass = custom.basis === 'mass' ? fraction : food.calories > 0 ? fraction / food.calories : 0;
+        const mass = diet.basis === 'mass' ? fraction : food.calories > 0 ? fraction / food.calories : 0;
         return mass > 0 ? [{ food, mass }] : [];
     });
 }
 
 /**
- * Combined nutrition (per gram) of a custom meal / diet: each ingredient's per-gram
+ * Combined nutrition (per gram) of a diet: each ingredient's per-gram
  * values weighted by its share of the mass. A calorie share is turned into mass by
  * dividing by the food's calories per gram (same as the WASM blend).
  * Optional nutrients are shown if any ingredient has them; missing ones count as 0.
  */
-export function blendNutritionDetail(custom: CustomFoodInput, foods: RawFood[]): NutritionDetail | null {
-    const parts = ingredientMasses(custom, foods);
+export function blendDietNutrition(diet: DietInput, foods: RawFood[]): NutritionDetail | null {
+    const parts = ingredientMasses(diet, foods);
     const totalMass = parts.reduce((sum, part) => sum + part.mass, 0);
     if (totalMass <= 0) return null;
 
@@ -81,14 +81,14 @@ export function toIntelligenceDetail(food: RawFood): IntelligenceDetail {
 }
 
 /**
- * Physical land (m² per kg) of a custom diet: each ingredient's land weighted by its share of the diet's mass.
- * The scorer leaves a custom food's own land detail empty, so it is rebuilt here from the ingredients.
+ * Physical land (m² per kg) of a diet diet: each ingredient's land weighted by its share of the diet's mass.
+ * The scorer leaves a diet's own land detail empty, so it is rebuilt here from the ingredients.
  * Calorie shares become mass by dividing by calories per gram, as in the scorer; null when nothing matches.
  */
 export function blendLandM2PerKg(
-    custom: CustomFoodInput, foods: RawFood[], rawM2PerKg: (slug: string) => number | null | undefined,
+    diet: DietInput, foods: RawFood[], rawM2PerKg: (slug: string) => number | null | undefined,
 ): number | null {
-    const parts = ingredientMasses(custom, foods).flatMap(({ food, mass }) => {
+    const parts = ingredientMasses(diet, foods).flatMap(({ food, mass }) => {
         const land = rawM2PerKg(food.slug);
         return land != null ? [{ mass, land }] : [];
     });

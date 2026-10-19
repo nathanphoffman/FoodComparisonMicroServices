@@ -18,7 +18,7 @@ function KillRows({ killDetail }: { killDetail: KillDetail }) {
   );
 }
 
-export function IntelligenceTooltip({ detail, killDetail, wildFishDeathsPerKg, explanation, children }: { detail: IntelligenceDetail; killDetail?: KillDetail | null; wildFishDeathsPerKg?: number | null; explanation?: string | null; children: React.ReactNode }) {
+export function DirectKillTooltip({ detail, killDetail, wildFishDeathsPerKg, explanation, children }: { detail: IntelligenceDetail; killDetail?: KillDetail | null; wildFishDeathsPerKg?: number | null; explanation?: string | null; children: React.ReactNode }) {
   return (
     <Tooltip content={
       <TooltipSection title="Intelligence score">

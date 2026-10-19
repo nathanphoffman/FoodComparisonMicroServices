@@ -5,7 +5,7 @@ import { MICRONUTRIENT_KEYS, type MicronutrientKey } from '../../../types/FoodTa
 import { dailyNeeds, type NutrientStandard } from '../../../nutrition/FoodTableRda';
 import { MultivitaminForm } from './MultivitaminForm';
 import { SupplementRow } from './SupplementRow';
-import { DEFAULT_PILLS_PER_WEEK, type Saved, type Supplement } from '../logic/CustomFoodSaved';
+import { DEFAULT_PILLS_PER_WEEK, type Saved, type Supplement } from '../logic/DietSaved';
 
 const PILL_ABSORPTION_STEP = 5;
 const PILL_ABSORPTION_HELP = "The share of each pill's dose your body absorbs. Applied to every supplement, on top of the per-sitting limit for B12, calcium and vitamin C.";

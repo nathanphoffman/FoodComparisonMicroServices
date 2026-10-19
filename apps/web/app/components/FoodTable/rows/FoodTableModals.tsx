@@ -1,6 +1,6 @@
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 import { blendLandM2PerKg } from '../nutrition/FoodTableCalculations';
-import { DIET_SLUG, type SliderValues } from '../types/FoodTableTypes';
+import type { SliderValues } from '../types/FoodTableTypes';
 import type { FoodTableData } from '../scoring/useFoodTableData';
 import { DietModal } from '../diet/modal/DietModal';
 import { FoodDetailModal } from '../FoodDetail/FoodDetailModal';
@@ -17,9 +17,8 @@ type Props = {
 
 /** The two windows the table opens: the whole-diet breakdown and a single food's details. */
 export function FoodTableModals({ data, sliderValues, display, diet, detail }: Props) {
-    const { rawFoods, scored, customNutrition, customFoodsBySlug, averageDiet } = data;
+    const { rawFoods, scored, dietNutrition, diet: dietInput, averageDiet } = data;
     const rawLandOf = (slug: string) => scored.get(slug)?.land_use_detail.rawM2PerKg;
-    const dietNutrition = customNutrition.get(DIET_SLUG);
     const selectedFood = detail.slug ? rawFoods.find(food => food.slug === detail.slug) : undefined;
 
     return (
@@ -30,7 +29,7 @@ export function FoodTableModals({ data, sliderValues, display, diet, detail }: P
                     settings={{ diet: diet.settings, standard: diet.standard }}
                     scoring={{ scored, foodSlugs: data.foodSlugs, unit: display.unit }}
                     rawLandM2PerKg={{
-                        diet: customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null,
+                        diet: dietInput ? blendLandM2PerKg(dietInput, rawFoods, rawLandOf) : null,
                         benchmark: averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, rawLandOf) : null,
                     }}
                     onClose={diet.onClose}

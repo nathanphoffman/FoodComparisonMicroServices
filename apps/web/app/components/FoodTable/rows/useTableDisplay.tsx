@@ -5,7 +5,7 @@ import { useFoodTableSort } from '../scoring/FoodTableSort';
 import { rankByImprovement } from '../scoring/FoodTableRanks';
 import { foodsToShow } from '../controls/toolbar/FoodTableFilters';
 import { getUnitLabel } from '../nutrition/FoodTableCalculations';
-import { isCustomFoodSlug, type ColConfig, type RawFood, type SliderValues } from '../types/FoodTableTypes';
+import { isDietSlug, type ColConfig, type RawFood, type SliderValues } from '../types/FoodTableTypes';
 import { dynamicLabels, figureLabelsFor } from './FoodTableLabels';
 import { foodTableCell, type CellContext } from './FoodTableCell';
 
@@ -16,7 +16,7 @@ type Inputs = {
     activeCols: ColConfig[];
     sliderValues: SliderValues;
     /** What the cells need besides the food: tooltips' daily-needs settings and the diet's nutrition. */
-    cellInputs: Pick<CellContext, 'nutrientStandard' | 'dietSettings' | 'customNutrition' | 'onSelect'>;
+    cellInputs: Pick<CellContext, 'nutrientStandard' | 'dietSettings' | 'dietNutrition' | 'onSelect'>;
 };
 
 /** The table's header labels and its rows (filtered, sorted, ranked), plus the labels the detail window reuses. */
@@ -34,7 +34,7 @@ export function useTableDisplay({ rawFoods, scored, foodFilter, activeCols, slid
     // Memoized so opening/closing a modal (or other unrelated state changes)
     // doesn't re-render every row and its tooltips.
     const rows = useMemo(() => displayRows.map(food => (
-        <Row key={food.slug} className={isCustomFoodSlug(food.slug) ? 'bg-yellow-50' : undefined}>
+        <Row key={food.slug} className={isDietSlug(food.slug) ? 'bg-yellow-50' : undefined}>
             {activeCols.map(column => foodTableCell(column.key, food, scored.get(food.slug), cellContext))}
         </Row>
     )), [displayRows, scored, activeCols, cellContext]);

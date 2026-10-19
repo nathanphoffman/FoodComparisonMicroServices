@@ -20,7 +20,7 @@ describe('higher-is-better measures', () => {
 
 describe('harm scores', () => {
     it('are good at zero, then fair until each trillion-scale cutoff', () => {
-        expect([0, 1, 1e12, 1e13].map(value => getTone('intelligence', value))).toEqual(['good', 'fair', 'poor', 'bad']);
+        expect([0, 1, 1e12, 1e13].map(value => getTone('directKill', value))).toEqual(['good', 'fair', 'poor', 'bad']);
         expect([0, 1e12, 1e13, 1e14].map(value => getTone('sentientHarm', value))).toEqual(['good', 'poor', 'bad', 'worst']);
     });
 });

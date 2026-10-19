@@ -39,7 +39,7 @@ export const DEFAULT_FOOD_WEIGHTS: FoodWeights = toShares(DEFAULT_FOOD_WEIGHT_LE
 export const DEFAULT_SCORE_PRIORITY_LEVELS: ScorePriorities = {
     nutrition:    DEFAULT_LEVEL,
     emissions:    DEFAULT_LEVEL,
-    intelligence: DEFAULT_LEVEL,
+    sentientHarm: DEFAULT_LEVEL,
     water:        DEFAULT_LEVEL,
     landUse:      DEFAULT_LEVEL,
     availability: DEFAULT_LEVEL,

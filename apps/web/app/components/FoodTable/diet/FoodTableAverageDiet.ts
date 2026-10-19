@@ -1,7 +1,7 @@
-import type { CustomFoodInput } from '../types/FoodTableTypes';
+import type { DietInput } from '../types/FoodTableTypes';
 
 // A benchmark "average American diet" built from this dataset's own foods, so every measure (sentient harm included)
-// is in the same units as the user's diet. It is scored as an extra hidden custom food and never shown as a table row.
+// is in the same units as the user's diet. It is scored as an extra hidden diet and never shown as a table row.
 //
 // Calorie shares follow USDA ERS loss-adjusted food availability for 2010 (2,481 kcal a person a day):
 // grains 581 kcal (23%), added fats and oils 518 (21%), meat, poultry and fish 416 (17%), nuts 72 (3%), with 70% of
@@ -40,7 +40,7 @@ const SHARES: [string, number][] = [
     ['beer', 1], ['wine', 0.5],
 ];
 
-export function averageDietInput(foodSlugs: Set<string>): CustomFoodInput {
+export function averageDietInput(foodSlugs: Set<string>): DietInput {
     // Only foods that exist in the loaded data, renormalised so a missing food doesn't shrink the diet.
     const available = SHARES.filter(([slug]) => foodSlugs.has(slug));
     const total = available.reduce((sum, [, percent]) => sum + percent, 0);

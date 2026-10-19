@@ -1,30 +1,26 @@
 import type { RawFood } from './RawFood';
 
 /** What an ingredient's percentage is a share of. */
-export type CustomFoodBasis = 'calories' | 'mass';
+export type DietBasis = 'calories' | 'mass';
 
-export type MealIngredient = { slug: string; fraction: number };
+export type DietIngredient = { slug: string; fraction: number };
 
-export type CustomFoodInput = {
+export type DietInput = {
     slug:        string;
     name:        string;
-    basis:       CustomFoodBasis;
-    ingredients: MealIngredient[];
+    basis:       DietBasis;
+    ingredients: DietIngredient[];
 };
 
-/** The slug of the user's whole-diet custom food. */
-export const DIET_SLUG = 'your-diet';
+/** The diet the person is planning: its table row, its heading and where it's saved in this browser. */
+export const DIET = { slug: 'your-diet', name: 'Your Diet', heading: 'Diet', storageKey: 'food-compare:diet' } as const;
 
-export const CUSTOM_FOODS = [
-    { slug: DIET_SLUG, name: 'Your Diet', heading: 'Diet',        storageKey: 'food-compare:diet' },
-] as const;
+export const DIET_SLUG = DIET.slug;
 
-export function isCustomFoodSlug(slug: string): boolean {
-    return CUSTOM_FOODS.some(custom => custom.slug === slug);
-}
+export const isDietSlug = (slug: string): boolean => slug === DIET.slug;
 
-// Minimal RawFood stub for a custom food's row.
-export const customFoodStub = (slug: string, name: string): RawFood => ({
+// Minimal RawFood stub for the diet's row.
+export const dietStub = (slug: string, name: string): RawFood => ({
     name, slug, type: 'plant',
     calories: 0, fat: 0, protein: 0, fiber: 0, sat_fat: 0, neuron_count: 0,
     sodium: null, carbs: null, sugar: null, cholesterol: null, trans_fat: null, micronutrients: null, amino_acids: null,

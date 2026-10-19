@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { MicronutrientKey } from '../../../types/FoodTableTypes';
 import { positiveOrZero } from './SupplementRow';
-import { DEFAULT_PILLS_PER_WEEK, type Supplement } from '../logic/CustomFoodSaved';
+import { DEFAULT_PILLS_PER_WEEK, type Supplement } from '../logic/DietSaved';
 
 // What the multivitamin button adds: the vitamins only, not minerals or omega-3.
 const VITAMIN_KEYS: MicronutrientKey[] = ['vitamin_a', 'vitamin_c', 'vitamin_d', 'vitamin_e', 'vitamin_k', 'folate', 'vitamin_b12', 'vitamin_b6'];

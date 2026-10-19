@@ -1,6 +1,6 @@
-use crate::models::{Basis, CustomFood, FoodRow, ScoredRow};
+use crate::models::{Basis, Diet, FoodRow, ScoredRow};
 
-/// A custom food's blended row plus how much each ingredient counts toward it.
+/// A diet's blended row plus how much each ingredient counts toward it.
 pub struct Blend {
     pub row: ScoredRow,
     /// (slug, share of the blend's Compare By units); shares sum to 1.
@@ -12,9 +12,9 @@ pub struct Blend {
 /// Each ingredient's share of the blend's mass (sums to 1), whatever the user's basis.
 /// A calorie share is turned into mass by dividing by the food's calories per gram;
 /// foods with no calories can't hold a calorie share, so they drop out.
-fn mass_shares(foods: &[FoodRow], custom: &CustomFood) -> Vec<(String, f64)> {
-    let raw: Vec<(String, f64)> = custom.ingredients.iter().filter(|i| i.fraction > 0.0).filter_map(|i| {
-        match custom.basis {
+fn mass_shares(foods: &[FoodRow], diet: &Diet) -> Vec<(String, f64)> {
+    let raw: Vec<(String, f64)> = diet.ingredients.iter().filter(|i| i.fraction > 0.0).filter_map(|i| {
+        match diet.basis {
             Basis::Mass => Some((i.slug.clone(), i.fraction)),
             Basis::Calories => {
                 let calories_per_gram = foods.iter().find(|f| f.slug == i.slug)?.calories;
@@ -74,11 +74,11 @@ fn blend_scores(rows: &[ScoredRow], masses: &[(String, f64)], weights: &[f64]) -
 }
 
 /// A blend's row: its aggregate scores, with no tooltip breakdowns (those only exist for single foods).
-fn blend_row(custom: &CustomFood, divisor: f64, scores: BlendedScores) -> ScoredRow {
+fn blend_row(diet: &Diet, divisor: f64, scores: BlendedScores) -> ScoredRow {
     ScoredRow {
-        name:      custom.name.clone(),
-        slug:      custom.slug.clone(),
-        food_type: "meal".to_string(),
+        name:      diet.name.clone(),
+        slug:      diet.slug.clone(),
+        food_type: "diet".to_string(),
         divisor,
         nutrition_score: Some(scores.nutrition),
         emissions:       Some(scores.emissions),
@@ -92,7 +92,7 @@ fn blend_row(custom: &CustomFood, divisor: f64, scores: BlendedScores) -> Scored
         emissions_breakdown:  None,
         water_detail:         crate::models::WaterDetail  { green: None, blue: None, grey: None },
         land_use_detail:      crate::models::LandUseDetail {
-            land_type: "meal".to_string(),
+            land_type: "diet".to_string(),
             yield_kilograms_per_hectare: None,
             pasture_hectares_per_kilogram: None,
             feed_land_m2_per_kg: None,
@@ -108,12 +108,12 @@ fn blend_row(custom: &CustomFood, divisor: f64, scores: BlendedScores) -> Scored
     }
 }
 
-pub fn synthesize(rows: &[ScoredRow], foods: &[FoodRow], custom: &CustomFood) -> Option<Blend> {
-    let masses = mass_shares(foods, custom);
+pub fn blend_diet(rows: &[ScoredRow], foods: &[FoodRow], diet: &Diet) -> Option<Blend> {
+    let masses = mass_shares(foods, diet);
     let (weights, divisor, has_unitless) = unit_weights(rows, &masses);
     let (scores, matched) = blend_scores(rows, &masses, &weights);
     if matched == 0 { return None; }
 
-    let row = blend_row(custom, divisor, scores);
+    let row = blend_row(diet, divisor, scores);
     Some(Blend { row, shares: masses.into_iter().map(|(slug, _)| slug).zip(weights).collect(), has_unitless })
 }
