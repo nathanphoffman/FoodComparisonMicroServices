@@ -1,4 +1,4 @@
-import type { ScoredRow } from '../../scoring/FoodTableSort';
+import type { ScoredRow } from '../../../scoring/FoodTableSort';
 
 // Values are per Compare By unit, the same as the table columns, so they compare fairly with other foods.
 

@@ -1,13 +1,13 @@
 'use client';
 
-import { WeightSliders }                    from "./Sliders/WeightSliders";
-import { ScorePrioritySliders }             from "./Sliders/ScorePrioritySliders";
+import { WeightSliders }                    from "./Sliders/percent/WeightSliders";
+import { ScorePrioritySliders }             from "./Sliders/percent/ScorePrioritySliders";
 import { ExpandableSliderGroup }            from "./Sliders/ExpandableSliderGroup";
 import { LandTypeSliders }                  from "./Sliders/LandTypeSliders";
 import { NutritionSliders }                 from "./Sliders/NutritionSliders";
 import { IntelligenceExamples }             from "./Sliders/IntelligenceExamples";
-import { ValueSlider }                      from "./Sliders/ValueSlider";
-import * as SLIDERS                         from "./Sliders/ValueSliderSettings";
+import { ValueSlider }                      from "./Sliders/value/ValueSlider";
+import * as SLIDERS                         from "./Sliders/value/ValueSliderSettings";
 import {
     DEFAULT_GREEN_WATER, DEFAULT_GREY_WATER, DEFAULT_NEURON_EXPONENT, DEFAULT_WEIGHT_EXPONENT,
     DEFAULT_FINAL_INTELLIGENCE_EXPONENT, DEFAULT_ZERO_BETTER_MULTIPLIER, DEFAULT_WIN_DAMPENING,

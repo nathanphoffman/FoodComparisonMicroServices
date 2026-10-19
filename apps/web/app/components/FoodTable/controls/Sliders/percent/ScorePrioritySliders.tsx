@@ -1,6 +1,6 @@
 'use client';
 
-import type { ScorePriorities } from "../../types/FoodTableTypes";
+import type { ScorePriorities } from "../../../types/FoodTableTypes";
 import { PercentSliders } from "./PercentSliders";
 
 export const SCORE_PRIORITY_KEYS: (keyof ScorePriorities)[] = ['nutrition', 'emissions', 'intelligence', 'water', 'landUse', 'availability'];

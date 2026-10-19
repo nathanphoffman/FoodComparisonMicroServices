@@ -1,11 +1,11 @@
-import { Modal } from '../../Modals/Modal';
+import { Modal } from '../../../Modals/Modal';
 import { DietExplainer } from './DietExplainer';
 import { DietImpact } from './DietImpact';
-import { AVERAGE_DIET_SLUG } from './FoodTableAverageDiet';
-import { NutritionDetailContent } from '../rows/Tooltips/NutritionTooltip';
-import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
-import type { ScoredRow } from '../scoring/FoodTableSort';
-import { DIET_SLUG, type NutritionDetail } from '../types/FoodTableTypes';
+import { AVERAGE_DIET_SLUG } from '../FoodTableAverageDiet';
+import { NutritionDetailContent } from '../../rows/Tooltips/NutritionTooltip';
+import type { DietSettings, NutrientStandard } from '../../nutrition/FoodTableRda';
+import type { ScoredRow } from '../../scoring/FoodTableSort';
+import { DIET_SLUG, type NutritionDetail } from '../../types/FoodTableTypes';
 
 type Props = {
     nutrition: NutritionDetail;

@@ -1,5 +1,5 @@
 import type { ColConfig, DataRegion, FoodWeights, LandTypes, NutritionWeights, ScorePriorities, SliderValues } from '../types/FoodTableTypes';
-import { DEFAULT_LEVEL, toShares } from '../controls/Sliders/PercentSliders';
+import { DEFAULT_LEVEL, toShares } from '../controls/Sliders/percent/PercentSliders';
 
 // ── Column config ─────────────────────────────────────────────────────────────
 

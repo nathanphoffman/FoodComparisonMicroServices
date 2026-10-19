@@ -11,14 +11,14 @@ import { useFoodTableSort } from './scoring/FoodTableSort';
 import { useWasmScoring } from './scoring/FoodTableWASMIntegration';
 import { FoodTableInputs } from './controls/FoodTableInputs';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './scoring/FoodTableDefaults';
-import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './controls/FoodTableFilters';
+import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './controls/toolbar/FoodTableFilters';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
 import { useFoodData } from './scoring/useFoodData';
 import { useCustomFoods } from './diet/useCustomFoods';
 import { rankByImprovement } from './scoring/FoodTableRanks';
 import { dynamicLabels, figureLabelsFor } from './rows/FoodTableLabels';
 import { foodTableCell } from './rows/FoodTableCell';
-import { DietModal } from './diet/DietModal';
+import { DietModal } from './diet/modal/DietModal';
 
 export function FoodTable() {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);

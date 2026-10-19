@@ -1,7 +1,7 @@
 // "How did we get these numbers": the plain-English method behind the Diet modal's % figures.
 // Keep in step with FoodTableRda.ts, FoodTableTargets.ts and FoodTableAbsorption.ts.
 
-import { COLOR_SCALES, describeScale } from '../nutrition/FoodTableTargets';
+import { COLOR_SCALES, describeScale } from '../../nutrition/FoodTableTargets';
 
 function Subsection({ title, children }: { title: string; children: React.ReactNode }) {
     return (

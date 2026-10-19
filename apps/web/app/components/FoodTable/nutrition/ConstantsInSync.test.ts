@@ -27,7 +27,7 @@ function rustNutrientTable(source: string, tableName: string): Record<string, nu
 
 describe('constants copied from Rust', () => {
     it('global warming potentials match emissions.rs', () => {
-        const emissions = rustSource('calculations/emissions.rs');
+        const emissions = rustSource('calculations/per_food/emissions.rs');
         expect(GWP_CH4).toBe(rustConstant(emissions, 'GWP_CH4'));
         expect(GWP_N2O).toBe(rustConstant(emissions, 'GWP_N2O'));
     });

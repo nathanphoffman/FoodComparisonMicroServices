@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import type { SortKey } from '../scoring/FoodTableSort';
-import type { ColConfig } from '../types/FoodTableTypes';
-import { COLUMN_CONFIG } from '../scoring/FoodTableDefaults';
-import { useIsMobile } from '../../../hooks/useIsMobile';
+import type { SortKey } from '../../scoring/FoodTableSort';
+import type { ColConfig } from '../../types/FoodTableTypes';
+import { COLUMN_CONFIG } from '../../scoring/FoodTableDefaults';
+import { useIsMobile } from '../../../../hooks/useIsMobile';
 
 /** Which columns are showing, and a toggle for one. `onActiveColsChange` hears about every change, in table order. */
 export function useColumnVisibility(onActiveColsChange: (cols: ColConfig[]) => void) {

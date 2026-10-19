@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from "react";
-import { Slider } from "../../../Inputs/Slider";
-import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
-import { HelpModal } from "../../../Modals/HelpModal";
-import type { HelpTopicKey } from "../../../Modals/helpTopics";
+import { Slider } from "../../../../Inputs/Slider";
+import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../../hooks/useDebouncedCallback";
+import { HelpModal } from "../../../../Modals/HelpModal";
+import type { HelpTopicKey } from "../../../../Modals/helpTopics";
 
 /** Maps between the slider's position and the value it stands for (e.g. a log scale). */
 export type SliderScale = {

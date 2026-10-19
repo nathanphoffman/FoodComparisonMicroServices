@@ -1,4 +1,4 @@
-import { formatIntelligenceValue } from '../../nutrition/FoodTableCalculations';
+import { formatIntelligenceValue } from '../../../nutrition/FoodTableCalculations';
 import type { Metric } from './DietImpactMetrics';
 
 const FEET_PER_METER = 3.28084;

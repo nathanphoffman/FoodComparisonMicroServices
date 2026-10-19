@@ -1,9 +1,9 @@
 'use client';
 
-import type { FoodWeights } from "../../types/FoodTableTypes";
-import type { HelpTopicKey } from "../../../Modals/helpTopics";
+import type { FoodWeights } from "../../../types/FoodTableTypes";
+import type { HelpTopicKey } from "../../../../Modals/helpTopics";
 import { PercentSliders } from "./PercentSliders";
-import { DEFAULT_FOOD_WEIGHT_LEVELS } from "../../scoring/FoodTableDefaults";
+import { DEFAULT_FOOD_WEIGHT_LEVELS } from "../../../scoring/FoodTableDefaults";
 
 const KEYS: (keyof FoodWeights)[] = ['calories', 'protein', 'dryMass', 'wetMass'];
 

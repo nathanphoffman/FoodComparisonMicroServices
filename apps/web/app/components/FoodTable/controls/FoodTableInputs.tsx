@@ -6,12 +6,12 @@ import { CustomFoodSections } from '../diet/CustomFoodSections';
 import { ScoringErrorBanner } from './ScoringErrorBanner';
 import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from '../types/FoodTableTypes';
 import { DEFAULT_SLIDER_VALUES } from '../scoring/FoodTableDefaults';
-import { useColumnVisibility } from './useColumnVisibility';
-import { FoodTablePresets } from './FoodTablePresets';
-import { PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresetData';
-import type { Preset } from './FoodTablePresetData';
+import { useColumnVisibility } from './toolbar/useColumnVisibility';
+import { FoodTablePresets } from './presets/FoodTablePresets';
+import { PRESETS, DEFAULT_PRESET_KEY } from './presets/FoodTablePresetData';
+import type { Preset } from './presets/FoodTablePresetData';
 import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
-import { FoodTableToolbar } from './FoodTableToolbar';
+import { FoodTableToolbar } from './toolbar/FoodTableToolbar';
 
 type Props = {
     onSliderValuesChange: (v: SliderValues) => void;
