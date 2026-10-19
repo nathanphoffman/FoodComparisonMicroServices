@@ -27,59 +27,66 @@ fn mass_shares(foods: &[FoodRow], custom: &CustomFood) -> Vec<(String, f64)> {
     raw.into_iter().map(|(slug, m)| (slug, m / total)).collect()
 }
 
-pub fn synthesize(rows: &[ScoredRow], foods: &[FoodRow], custom: &CustomFood) -> Option<Blend> {
-    let masses = mass_shares(foods, custom);
+/// How much each ingredient counts toward the blend (sums to 1), the blend's divisor (Compare By units per kg of the
+/// blend), and whether any ingredient has none of the unit.
+///
+/// Rows hold values per Compare By unit, and a kg of each food holds a different
+/// number of units (its divisor). So an ingredient counts in proportion to
+/// mass × divisor.
+fn unit_weights(rows: &[ScoredRow], masses: &[(String, f64)]) -> (Vec<f64>, f64, bool) {
     let divisor_of = |slug: &str| rows.iter().find(|r| r.slug == slug).map_or(0.0, |r| r.divisor);
-
-    // Rows hold values per Compare By unit, and a kg of each food holds a different
-    // number of units (its divisor). So an ingredient counts in proportion to
-    // mass × divisor; the blend's divisor is units per kg of the blend.
     let units: Vec<f64> = masses.iter().map(|(slug, m)| m * divisor_of(slug)).collect();
     let divisor: f64 = units.iter().sum();
     let has_unitless = masses.iter().any(|(slug, _)| divisor_of(slug) <= 0.0);
     // With no units at all there is nothing to weight by; fall back to mass.
-    let weights: Vec<f64> = if divisor > 0.0 {
+    let weights = if divisor > 0.0 {
         units.iter().map(|u| u / divisor).collect()
     } else {
         masses.iter().map(|(_, m)| *m).collect()
     };
+    (weights, divisor, has_unitless)
+}
 
-    let mut matched       = 0_usize;
-    let mut nutrition     = 0.0_f64;
-    let mut emissions     = 0.0_f64;
-    let mut land_use      = 0.0_f64;
-    let mut water         = 0.0_f64;
-    let mut direct_kill   = 0.0_f64;
-    let mut captive       = 0.0_f64;
-    let mut sentient_harm = 0.0_f64;
+/// The blend's aggregate scores: each ingredient's score weighted by its share.
+#[derive(Default)]
+struct BlendedScores {
+    nutrition: f64, emissions: f64, land_use: f64, water: f64,
+    direct_kill: f64, captive: f64, sentient_harm: f64,
+}
 
-    for ((slug, _), weight) in masses.iter().zip(&weights) {
+/// Weighted sum of the ingredients' scores, and how many of them were found in `rows`.
+fn blend_scores(rows: &[ScoredRow], masses: &[(String, f64)], weights: &[f64]) -> (BlendedScores, usize) {
+    let mut scores = BlendedScores::default();
+    let mut matched = 0;
+    for ((slug, _), weight) in masses.iter().zip(weights) {
         if let Some(row) = rows.iter().find(|r| &r.slug == slug) {
             matched += 1;
-            nutrition     += weight * row.nutrition_score.unwrap_or(0.0);
-            emissions     += weight * row.emissions.unwrap_or(0.0);
-            land_use      += weight * row.land_use.unwrap_or(0.0);
-            water         += weight * row.water.unwrap_or(0.0);
-            direct_kill   += weight * row.direct_kill.unwrap_or(0.0);
-            captive       += weight * row.captive_sentience.unwrap_or(0.0);
-            sentient_harm += weight * row.sentient_harm.unwrap_or(0.0);
+            scores.nutrition     += weight * row.nutrition_score.unwrap_or(0.0);
+            scores.emissions     += weight * row.emissions.unwrap_or(0.0);
+            scores.land_use      += weight * row.land_use.unwrap_or(0.0);
+            scores.water         += weight * row.water.unwrap_or(0.0);
+            scores.direct_kill   += weight * row.direct_kill.unwrap_or(0.0);
+            scores.captive       += weight * row.captive_sentience.unwrap_or(0.0);
+            scores.sentient_harm += weight * row.sentient_harm.unwrap_or(0.0);
         }
     }
+    (scores, matched)
+}
 
-    if matched == 0 { return None; }
-
-    let row = ScoredRow {
+/// A blend's row: its aggregate scores, with no tooltip breakdowns (those only exist for single foods).
+fn blend_row(custom: &CustomFood, divisor: f64, scores: BlendedScores) -> ScoredRow {
+    ScoredRow {
         name:      custom.name.clone(),
         slug:      custom.slug.clone(),
         food_type: "meal".to_string(),
         divisor,
-        nutrition_score: Some(nutrition),
-        emissions:       Some(emissions),
-        land_use:        Some(land_use),
-        water:           Some(water),
-        direct_kill:     Some(direct_kill),
-        captive_sentience: Some(captive),
-        sentient_harm:   Some(sentient_harm),
+        nutrition_score: Some(scores.nutrition),
+        emissions:       Some(scores.emissions),
+        land_use:        Some(scores.land_use),
+        water:           Some(scores.water),
+        direct_kill:     Some(scores.direct_kill),
+        captive_sentience: Some(scores.captive),
+        sentient_harm:   Some(scores.sentient_harm),
         final_score:     None,
         availability:    None,
         emissions_breakdown:  None,
@@ -98,6 +105,15 @@ pub fn synthesize(rows: &[ScoredRow], foods: &[FoodRow], custom: &CustomFood) ->
         wild_fish_deaths_per_kg: None,
         wild_fish_kill:       0.0,
         improvement_detail:   None,
-    };
+    }
+}
+
+pub fn synthesize(rows: &[ScoredRow], foods: &[FoodRow], custom: &CustomFood) -> Option<Blend> {
+    let masses = mass_shares(foods, custom);
+    let (weights, divisor, has_unitless) = unit_weights(rows, &masses);
+    let (scores, matched) = blend_scores(rows, &masses, &weights);
+    if matched == 0 { return None; }
+
+    let row = blend_row(custom, divisor, scores);
     Some(Blend { row, shares: masses.into_iter().map(|(slug, _)| slug).zip(weights).collect(), has_unitless })
 }

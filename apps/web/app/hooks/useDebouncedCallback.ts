@@ -1,33 +1,29 @@
-import { useRef, useCallback } from "react";
+import { useRef, useCallback, useEffect } from "react";
 
 export const DEBOUNCE_MS = 500;
 
-// ── useDebouncedCallback ──────────────────────────────────────────────────────
-// Returns a stable debounced wrapper around `callback`. The latest `callback`
-// ref is always used so the wrapper never goes stale, and cancels on unmount.
-
+/**
+ * Returns a stable debounced wrapper around `callback`. The latest `callback`
+ * is always used so the wrapper never goes stale, and a pending call is dropped on unmount.
+ */
 export function useDebouncedCallback<T extends (...args: never[]) => void>(
     callback: T | undefined,
     delay: number,
 ): (...args: Parameters<T>) => void {
-    const cbRef      = useRef(callback);
-    cbRef.current    = callback;
-    const timerRef   = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const callbackRef = useRef(callback);
+    callbackRef.current = callback;
+    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    // Cancel any pending timer when the component unmounts.
-    const cancelRef  = useRef(() => {
+    useEffect(() => () => {
         if (timerRef.current !== null) clearTimeout(timerRef.current);
-    });
+    }, []);
 
-    // Stable identity across renders — deps array is intentionally [delay].
+    // Stable identity across renders; only a new delay makes a new wrapper.
     return useCallback((...args: Parameters<T>) => {
         if (timerRef.current !== null) clearTimeout(timerRef.current);
         timerRef.current = setTimeout(() => {
             timerRef.current = null;
-            cbRef.current?.(...args);
+            callbackRef.current?.(...args);
         }, delay);
-
-        // Register unmount cleanup once (no-op if already registered).
-        return cancelRef.current;
     }, [delay]);
 }

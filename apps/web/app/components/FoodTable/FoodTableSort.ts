@@ -49,7 +49,21 @@ export type ScoredRow = {
     improvement_detail: ImprovementDetail | null;
 };
 
-// ── Hook ──────────────────────────────────────────────────────────────────────
+/** The scored value each column sorts by; 'name' and 'rank' have none (the name sorts on the food itself). */
+const SORT_FIELDS: Partial<Record<SortKey, 'nutrition_score' | 'emissions' | 'land_use' | 'water' | 'direct_kill' | 'captive_sentience' | 'sentient_harm' | 'final_score' | 'availability'>> = {
+    nutritionScore:   'nutrition_score',
+    emissions:        'emissions',
+    landUse:          'land_use',
+    directKill:       'direct_kill',
+    captiveSentience: 'captive_sentience',
+    water:            'water',
+    sentientHarm:     'sentient_harm',
+    finalScore:       'final_score',
+    availability:     'availability',
+};
+
+// Columns where a bigger number is better, so the first click sorts them biggest first.
+const HIGHER_IS_BETTER: SortKey[] = ['finalScore', 'nutritionScore', 'availability'];
 
 /**
  * Encapsulates all sort state and logic for the FoodTable.
@@ -61,8 +75,6 @@ export type ScoredRow = {
 export function useFoodTableSort() {
     const [sortKey, setSortKey] = useState<SortKey | null>('finalScore');
     const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
-
-    const HIGHER_IS_BETTER: SortKey[] = ['finalScore', 'nutritionScore', 'availability'];
 
     function handleSort(key: SortKey) {
         if (sortKey === key) setSortDir(d => (d === 'asc' ? 'desc' : 'asc'));
@@ -80,35 +92,9 @@ export function useFoodTableSort() {
         return [...foods].sort((a, b) => {
             const sa = scored.get(a.slug);
             const sb = scored.get(b.slug);
-
-            let va: number | string | null = null;
-            let vb: number | string | null = null;
-
-            if (sortKey === 'name') {
-                va = a.name; vb = b.name;
-            } else if (sortKey === 'nutritionScore') {
-                va = sa?.nutrition_score ?? null;
-                vb = sb?.nutrition_score ?? null;
-            } else if (sa && sb) {
-                va = sortKey === 'emissions'      ? sa.emissions
-                   : sortKey === 'landUse'        ? sa.land_use
-                   : sortKey === 'directKill'     ? sa.direct_kill
-                   : sortKey === 'captiveSentience' ? sa.captive_sentience
-                   : sortKey === 'water'          ? sa.water
-                   : sortKey === 'sentientHarm'   ? sa.sentient_harm
-                   : sortKey === 'finalScore'     ? sa.final_score
-                   : sortKey === 'availability'   ? sa.availability
-                   : null;
-                vb = sortKey === 'emissions'      ? sb.emissions
-                   : sortKey === 'landUse'        ? sb.land_use
-                   : sortKey === 'directKill'     ? sb.direct_kill
-                   : sortKey === 'captiveSentience' ? sb.captive_sentience
-                   : sortKey === 'water'          ? sb.water
-                   : sortKey === 'sentientHarm'   ? sb.sentient_harm
-                   : sortKey === 'finalScore'     ? sb.final_score
-                   : sortKey === 'availability'   ? sb.availability
-                   : null;
-            }
+            const field = SORT_FIELDS[sortKey];
+            const va = sortKey === 'name' ? a.name : field ? sa?.[field] ?? null : null;
+            const vb = sortKey === 'name' ? b.name : field ? sb?.[field] ?? null : null;
 
             if (va === null && vb === null) return 0;
             if (va === null) return 1;

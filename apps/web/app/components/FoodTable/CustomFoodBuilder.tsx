@@ -6,7 +6,7 @@ import type { CustomFoodInput } from './FoodTableTypes';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './FoodTableRda';
 import { DEFAULT_LEVEL, downloadDiet, loadSaved, readDietFile, save, toPercents, type Saved } from './CustomFood/CustomFoodSaved';
 import { caloriesPerDayIn, levelForFine, levelForPercent, settingsOf, toInput, type BuilderFood } from './CustomFood/CustomFoodMath';
-import { DietFileButtons } from './CustomFood/DietFileButtons';
+import { DietActions } from './CustomFood/DietActions';
 import { DietSettingsFields } from './CustomFood/DietSettingsFields';
 import { SupplementEditor } from './CustomFood/SupplementEditor';
 import { IngredientPicker } from './CustomFood/IngredientPicker';
@@ -118,16 +118,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
 
     return (
         <div className="flex flex-col gap-2">
-            {showCalories && <DietFileButtons onExport={() => downloadDiet(saved, slug)} onImport={importDiet} />}
-            {showCalories && onShow && (
-                <button
-                    onClick={onShow}
-                    disabled={ingredients.length === 0}
-                    className="self-start px-3 py-1 text-sm rounded border border-neutral-200 text-neutral-600 hover:bg-neutral-50 disabled:opacity-40 disabled:hover:bg-transparent disabled:cursor-not-allowed"
-                >
-                    Show Diet
-                </button>
-            )}
+            {showCalories && <DietActions onExport={() => downloadDiet(saved, slug)} onImport={importDiet} onShow={onShow} hasFoods={ingredients.length > 0} />}
             {showCalories && <DietSettingsFields saved={saved} onChange={updateSettings} />}
             {showCalories && <SupplementEditor saved={saved} standard={standard} onChange={updateSettings} />}
             <IngredientPicker

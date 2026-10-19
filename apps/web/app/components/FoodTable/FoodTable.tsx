@@ -6,18 +6,17 @@ import { Row } from '../Table/Row';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './FoodTableRda';
 import { getUnitLabel, blendLandM2PerKg } from './FoodTableCalculations';
 import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
-import { CUSTOM_FOODS, customFoodStub, isCustomFoodSlug } from './FoodTableTypes';
+import { isCustomFoodSlug } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
 import { useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs } from './FoodTableInputs';
 import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES, DEFAULT_DATA_REGION } from './FoodTableDefaults';
-import { FoodTableFilters, DEFAULT_FOOD_FILTER, matchesFoodFilter } from './FoodTableFilters';
+import { FoodTableFilters, DEFAULT_FOOD_FILTER, foodsToShow } from './FoodTableFilters';
 import { FoodDetailModal } from './FoodDetail/FoodDetailModal';
-import type { FigureKey } from './FoodDetail/FoodDetailFigures';
 import { useFoodData } from './useFoodData';
 import { useCustomFoods } from './useCustomFoods';
 import { rankByImprovement } from './FoodTableRanks';
-import { dynamicLabels } from './FoodTableLabels';
+import { dynamicLabels, figureLabelsFor } from './FoodTableLabels';
 import { foodTableCell } from './FoodTableCell';
 import { DietModal } from './DietModal';
 
@@ -55,14 +54,7 @@ export function FoodTable() {
         if (scored && scored.size) setLoadingScore(false);
     }, [scored]);
 
-    // Filtering only hides rows; every food is still scored so scores don't shift
-    // with the filter. Custom meal / diet rows always stay visible.
-    const displayRows = useMemo(() => {
-        const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, foodFilter));
-        const customRows = CUSTOM_FOODS.filter(custom => scored.has(custom.slug)).map(custom => customFoodStub(custom.slug, custom.name));
-        const foodsToSort = [...visibleFoods, ...customRows];
-        return sortRows(foodsToSort, scored);
-    }, [rawFoods, foodFilter, scored, sortRows]);
+    const displayRows = useMemo(() => sortRows(foodsToShow(rawFoods, foodFilter, scored), scored), [rawFoods, foodFilter, scored, sortRows]);
 
     const { ranks, rankedCount } = useMemo(() => rankByImprovement(displayRows, scored), [displayRows, scored]);
 
@@ -84,10 +76,7 @@ export function FoodTable() {
     const referenceName = rawFoods.find(f => f.slug === sliderValues.referenceSlug)?.name ?? sliderValues.referenceSlug;
     const labelOverrides = dynamicLabels(unit, referenceName);
 
-    // Every column's label, for the detail modal's tiles (it shows all figures, not only visible columns)
-    const figureLabels = Object.fromEntries(
-        COLUMN_CONFIG.filter(column => column.key !== 'name' && column.key !== 'rank').map(column => [column.key, labelOverrides[column.key] ?? column.label]),
-    ) as Record<FigureKey, string>;
+    const figureLabels = figureLabelsFor(labelOverrides);
     const rawLandOf = (slug: string) => scored.get(slug)?.land_use_detail.rawM2PerKg;
     const selectedFood = selectedSlug ? rawFoods.find(food => food.slug === selectedSlug) : undefined;
 

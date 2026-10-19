@@ -1,13 +1,12 @@
 'use client';
 
-import { memo, useState, useEffect } from 'react';
+import { memo, useState } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { CustomFoodSections } from './CustomFoodSections';
 import { ScoringErrorBanner } from './ScoringErrorBanner';
 import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from './FoodTableTypes';
-import type { SortKey } from './FoodTableSort';
-import { COLUMN_CONFIG, DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
-import { useIsMobile } from '../../hooks/useIsMobile';
+import { DEFAULT_SLIDER_VALUES } from './FoodTableDefaults';
+import { useColumnVisibility } from './useColumnVisibility';
 import { FoodTablePresets } from './FoodTablePresets';
 import { PRESETS, DEFAULT_PRESET_KEY } from './FoodTablePresetData';
 import type { Preset } from './FoodTablePresetData';
@@ -45,20 +44,8 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     onNutrientStandardChange,
 }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
-    const [visibleColumns, setVisibleColumns] = useState<Set<SortKey>>(
-        () => new Set(COLUMN_CONFIG.filter(c => c.defaultVisible).map(c => c.key))
-    );
+    const { visibleColumns, toggleColumn } = useColumnVisibility(onActiveColsChange);
     const [showControls, setShowControls] = useState(false);
-    const isMobile                        = useIsMobile();
-
-    // On mobile, start with a short column list; users can add more via Columns.
-    useEffect(() => {
-        if (!isMobile) return;
-        const mobileCols = COLUMN_CONFIG.filter(c => c.mobileVisible);
-        setVisibleColumns(new Set(mobileCols.map(c => c.key)));
-        onActiveColsChange(mobileCols);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isMobile]);
 
     // Presets reset the sliders by remounting them (sliderResetKey) with the
     // preset's values. Any manual change afterwards clears the highlight.
@@ -91,14 +78,6 @@ export const FoodTableInputs = memo(function FoodTableInputs({
     // Sets one slider value by hand, which also clears the preset highlight.
     function setSlider<K extends keyof SliderValues>(key: K, value: SliderValues[K]) {
         commitByHand({ ...sliderValues, [key]: value });
-    }
-
-    function toggleColumn(key: SortKey) {
-        const next = new Set(visibleColumns);
-        if (next.has(key)) next.delete(key);
-        else next.add(key);
-        setVisibleColumns(next);
-        onActiveColsChange(COLUMN_CONFIG.filter(c => next.has(c.key)));
     }
 
     return (

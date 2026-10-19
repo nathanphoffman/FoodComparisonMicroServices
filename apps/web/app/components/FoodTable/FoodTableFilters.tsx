@@ -1,6 +1,7 @@
 'use client';
 
-import type { RawFood } from './FoodTableTypes';
+import { CUSTOM_FOODS, customFoodStub, type RawFood } from './FoodTableTypes';
+import type { ScoredRow } from './FoodTableSort';
 
 // Each filter matches foods by their data category (the foods/<category>.json file)
 // and/or any of its tags. A food can appear under more than one filter — almond milk
@@ -38,6 +39,16 @@ export function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
     if (!filter || (!filter.categories && !filter.tags)) return true;
     return (filter.categories?.includes(food.category ?? '') ?? false)
         || (filter.tags?.some(tag => (food.tags ?? []).includes(tag)) ?? false);
+}
+
+/**
+ * The foods to list: those matching the filter, plus the custom meal / diet rows once they're scored.
+ * Filtering only hides rows; every food is still scored so scores don't shift with the filter.
+ */
+export function foodsToShow(rawFoods: RawFood[], filterKey: string, scored: Map<string, ScoredRow>): RawFood[] {
+    const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, filterKey));
+    const customRows = CUSTOM_FOODS.filter(custom => scored.has(custom.slug)).map(custom => customFoodStub(custom.slug, custom.name));
+    return [...visibleFoods, ...customRows];
 }
 
 export function FoodTableFilters({ selected, onChange }: { selected: string; onChange: (key: string) => void }) {

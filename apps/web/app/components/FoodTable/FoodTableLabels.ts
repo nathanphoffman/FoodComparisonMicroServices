@@ -1,4 +1,6 @@
 import type { ColConfig } from './FoodTableTypes';
+import { COLUMN_CONFIG } from './FoodTableDefaults';
+import type { FigureKey } from './FoodDetail/FoodDetailFigures';
 
 /** Column headers that depend on the Compare By unit and the reference food. */
 export function dynamicLabels(unit: string, referenceName: string): Partial<Record<ColConfig['key'], string>> {
@@ -11,4 +13,11 @@ export function dynamicLabels(unit: string, referenceName: string): Partial<Reco
         sentientHarm:     `Sentient Harm / ${unit}`,
         finalScore:       `Improvement over ${referenceName}`,
     };
+}
+
+/** Every column's label, for the detail modal's tiles (it shows all figures, not only visible columns). */
+export function figureLabelsFor(overrides: Partial<Record<ColConfig['key'], string>>): Record<FigureKey, string> {
+    return Object.fromEntries(
+        COLUMN_CONFIG.filter(column => column.key !== 'name' && column.key !== 'rank').map(column => [column.key, overrides[column.key] ?? column.label]),
+    ) as Record<FigureKey, string>;
 }

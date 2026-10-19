@@ -1,3 +1,4 @@
+use super::power_mean::weighted_power_mean;
 use crate::models::{ImprovementDetail, ImprovementTerm, ScoredRow, SliderQuery};
 
 /// Nutrition score the worst food in the batch is shifted up to, so every
@@ -62,13 +63,25 @@ pub fn compute_improvement(
     caps: &DimensionCaps,
     query: &SliderQuery,
 ) -> Option<ImprovementDetail> {
-    // ratio > 1 means the food beats the reference.
-    let mut terms: Vec<ImprovementTerm> = Vec::new();
+    let mut terms = lower_is_better_terms(food, reference, caps, query);
+    terms.extend(higher_is_better_terms(food, reference, caps, query));
 
-    // Lower-is-better: ratio = reference / food.
-    // Zero food score means the food is perfect for this dimension — use the batch
-    // cap so it still registers as meaningfully better than the reference.
-    // Intelligence uses sentient_harm only; it already includes direct_kill.
+    // A 0% priority drops that measure out entirely.
+    let total_priority: f64 = terms.iter().map(|term| term.priority).sum();
+    if total_priority <= 0.0 { return None; }
+
+    let exponent = 1.0 - query.win_dampening;
+    let weighted_ratios: Vec<(f64, f64)> = terms.iter().map(|term| (term.ratio, term.priority)).collect();
+    let mean = weighted_power_mean(&weighted_ratios, total_priority, exponent);
+    Some(ImprovementDetail { terms, exponent, mean, wild_penalty: 1.0 })
+}
+
+// Lower-is-better: ratio = reference / food (> 1 means the food beats the reference).
+// Zero food score means the food is perfect for this dimension — use the batch
+// cap so it still registers as meaningfully better than the reference.
+// Intelligence uses sentient_harm only; it already includes direct_kill.
+fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &DimensionCaps, query: &SliderQuery) -> Vec<ImprovementTerm> {
+    let mut terms = Vec::new();
     for (measure, food_score, reference_score, zero_cap, priority) in [
         ("emissions",    food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
         ("landUse",      food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
@@ -83,10 +96,14 @@ pub fn compute_improvement(
             }
         }
     }
+    terms
+}
 
-    // Higher-is-better: ratio = food / reference.
-    // Nutrition is shifted by the batch offset so negative scores count as bad
-    // rather than being dropped. The floor guards the meal row and rounding.
+// Higher-is-better: ratio = food / reference.
+// Nutrition is shifted by the batch offset so negative scores count as bad
+// rather than being dropped. The floor guards the meal row and rounding.
+fn higher_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &DimensionCaps, query: &SliderQuery) -> Vec<ImprovementTerm> {
+    let mut terms = Vec::new();
     if let (Some(food_score), Some(reference_score)) = (food.nutrition_score, reference.nutrition_score) {
         let shifted_food      = (food_score      + caps.nutrition_offset).max(NUTRITION_FLOOR);
         let shifted_reference = (reference_score + caps.nutrition_offset).max(NUTRITION_FLOOR);
@@ -103,46 +120,5 @@ pub fn compute_improvement(
             });
         }
     }
-
-    // A 0% priority drops that measure out entirely.
-    let total_priority: f64 = terms.iter().map(|term| term.priority).sum();
-    if total_priority <= 0.0 { return None; }
-
-    let exponent = 1.0 - query.win_dampening;
-    let weighted_ratios: Vec<(f64, f64)> = terms.iter().map(|term| (term.ratio, term.priority)).collect();
-    let mean = weighted_power_mean(&weighted_ratios, total_priority, exponent);
-    Some(ImprovementDetail { terms, exponent, mean, wild_penalty: 1.0 })
-}
-
-/// Weighted power mean of the ratios with exponent `p`: p = 1 is the plain
-/// (linear) average, where a 100× win in one measure dominates; p = 0 is the
-/// geometric mean, where a 100× win exactly cancels a 100× loss; p = -1 is the
-/// harmonic mean, where the weakest measure dominates.
-fn weighted_power_mean(weighted_ratios: &[(f64, f64)], total_priority: f64, p: f64) -> f64 {
-    if p.abs() < 1e-9 {
-        let weighted_log_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.ln() * priority).sum();
-        return (weighted_log_sum / total_priority).exp();
-    }
-    let weighted_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.powf(p) * priority).sum();
-    (weighted_sum / total_priority).powf(1.0 / p)
-}
-
-#[cfg(test)]
-mod tests {
-    use super::weighted_power_mean;
-
-    // One measure 100× better, five equal, all equal priority.
-    const RATIOS: [(f64, f64); 6] = [(100.0, 1.0), (1.0, 1.0), (1.0, 1.0), (1.0, 1.0), (1.0, 1.0), (1.0, 1.0)];
-
-    #[test]
-    fn power_mean_dampening() {
-        let linear    = weighted_power_mean(&RATIOS, 6.0, 1.0);
-        let geometric = weighted_power_mean(&RATIOS, 6.0, 0.0);
-        let harmonic  = weighted_power_mean(&RATIOS, 6.0, -1.0);
-        assert!((linear - 17.5).abs() < 1e-9);
-        assert!((geometric - 100f64.powf(1.0 / 6.0)).abs() < 1e-9);
-        assert!(harmonic < geometric && harmonic > 1.0);
-        // near-zero p converges to the geometric mean
-        assert!((weighted_power_mean(&RATIOS, 6.0, 1e-6) - geometric).abs() < 1e-4);
-    }
+    terms
 }

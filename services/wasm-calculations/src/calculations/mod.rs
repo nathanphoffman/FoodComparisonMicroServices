@@ -1,5 +1,5 @@
-//! Pure Rust port of FoodTableCalculations.ts (runtime calculation portions).
-//! All functions are free of I/O and WASM-bindgen concerns.
+//! Scores every food and blends custom foods (meal, diet) from them: per-food values, the
+//! reference comparison and the final scores. All functions are free of I/O and WASM-bindgen concerns.
 
 mod divisor;
 mod eco;
@@ -7,6 +7,7 @@ mod emissions;
 mod final_score;
 mod meal;
 mod nutrition;
+mod power_mean;
 mod row;
 mod scoring;
 mod water;
