@@ -53,40 +53,43 @@ fn animal_sentient_harm(
     intel: &VictimIntelligence,
     query: &SliderQuery,
 ) -> (f64, SentientHarmDetail) {
-    let mut contributions: Vec<f64> = Vec::new();
+    let feed = feed_cropland_harm(food, intel);
+    let pasture = food
+        .pasture_ha_per_kg_output
+        .map(|ha_per_kg| LandHarm::habitat_loss(ha_per_kg, PASTURE_AGE_YEARS, intel));
+    let bycatch = bycatch_score(food, query);
+
     let mut detail = SentientHarmDetail::zero();
-
-    // Feed cropland impact — use actual feed land area (m² → ha) rather than a
-    // pesticide-kg proxy, so insect/bee/deforestation deaths scale correctly with
-    // the true land required for each feed crop.
-    if let Some(feed_land_m2) = food.feed_land_m2_per_kg.filter(|&v| v > 0.0) {
-        let pesticides = PesticideRates {
-            insect_paf:      food.feed_pesticide_insect_paf,
-            bee_hazard:      food.feed_pesticide_bee_hazard,
-            terrestrial_paf: food.feed_pesticide_terrestrial_paf,
-        };
-        let feed = LandHarm::cropland(feed_land_m2 / SQUARE_METERS_PER_HA, &pesticides, intel);
-
+    if let Some(feed) = &feed {
         detail.feed_insect_score        = feed.insect;
         detail.feed_bee_score           = feed.bee;
         detail.feed_worm_score          = feed.worm;
         detail.feed_deforestation_score = feed.deforestation();
-        contributions.extend(feed.parts());
     }
-
-    // Pasture habitat impact
-    if let Some(pasture_ha_per_kg) = food.pasture_ha_per_kg_output {
-        let pasture = LandHarm::habitat_loss(pasture_ha_per_kg, PASTURE_AGE_YEARS, intel);
+    if let Some(pasture) = &pasture {
         detail.pasture_deforestation_score = pasture.deforestation();
-        contributions.extend(pasture.parts());
     }
+    detail.bycatch_score = bycatch.unwrap_or(0.0);
 
-    if let Some(score) = bycatch_score(food, query) {
-        detail.bycatch_score = score;
-        contributions.push(score);
-    }
-
+    // Same order as before (feed, pasture, bycatch) so the floating-point sum is unchanged.
+    let contributions: Vec<f64> = feed.iter().flat_map(LandHarm::parts)
+        .chain(pasture.iter().flat_map(LandHarm::parts))
+        .chain(bycatch)
+        .collect();
     (sum_positive(&contributions), detail)
+}
+
+/// Harm from the cropland that grows an animal's feed. Uses the actual feed land area (m² → ha)
+/// rather than a pesticide-kg proxy, so insect/bee/deforestation deaths scale correctly with
+/// the true land required for each feed crop.
+fn feed_cropland_harm(food: &FoodRow, intel: &VictimIntelligence) -> Option<LandHarm> {
+    let feed_land_m2 = food.feed_land_m2_per_kg.filter(|&v| v > 0.0)?;
+    let pesticides = PesticideRates {
+        insect_paf:      food.feed_pesticide_insect_paf,
+        bee_hazard:      food.feed_pesticide_bee_hazard,
+        terrestrial_paf: food.feed_pesticide_terrestrial_paf,
+    };
+    Some(LandHarm::cropland(feed_land_m2 / SQUARE_METERS_PER_HA, &pesticides, intel))
 }
 
 fn sum_positive(values: &[f64]) -> f64 {

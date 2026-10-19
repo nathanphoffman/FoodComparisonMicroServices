@@ -6,9 +6,12 @@ import type { ScoredRow } from '../types/FoodTableTypes';
 import { FIGURES, type FigureKey } from './figures/FoodDetailFigures';
 import type { MathContext } from './figures/math/FoodDetailMath';
 import { FigureTile } from './figures/FigureTile';
-import { LoadingNotes, Notes } from './FoodNotes';
+import { NotesSection } from './FoodNotes';
+import { FoodDetailHeader } from './FoodDetailHeader';
 import { useFoodDetails } from './useFoodDetails';
 import { useModalLock } from './useModalLock';
+
+const TITLE_ID = 'food-detail-title';
 
 type Props = {
   food: RawFood;
@@ -33,24 +36,10 @@ export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose 
       <div
         role="dialog"
         aria-modal="true"
-        aria-labelledby="food-detail-title"
+        aria-labelledby={TITLE_ID}
         className="relative flex max-h-[90vh] w-full flex-col rounded-t-2xl bg-white shadow-xl sm:mx-4 sm:max-w-2xl sm:rounded-2xl"
       >
-        <div className="flex items-start justify-between gap-4 border-b border-neutral-100 px-5 py-4">
-          <div>
-            <h2 id="food-detail-title" className="text-base font-semibold text-neutral-900">{food.name}</h2>
-            <p className="mt-0.5 text-xs text-neutral-500">Click a figure for sourcing</p>
-          </div>
-          <button
-            onClick={onClose}
-            className="-mr-1 rounded p-1 text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-600"
-            aria-label="Close"
-          >
-            <svg className="h-5 w-5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-          </button>
-        </div>
+        <FoodDetailHeader name={food.name} titleId={TITLE_ID} onClose={onClose} />
 
         <div className="overflow-y-auto px-5 py-4">
           <div className="space-y-1.5">
@@ -69,11 +58,7 @@ export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose 
             ))}
           </div>
 
-          <div className="mt-5 text-sm leading-relaxed text-neutral-700">
-            {loadError && <p className="text-red-600">Couldn't load notes and sources: {loadError}</p>}
-            {!loadError && !details && <LoadingNotes />}
-            {details && <Notes notes={details.notes} />}
-          </div>
+          <NotesSection details={details} loadError={loadError} />
         </div>
       </div>
     </div>

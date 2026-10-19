@@ -20,6 +20,16 @@ if TYPE_CHECKING:
     from .raw_animal_feed import RawAnimalFeed
 
 
+# Metrics that go into the normalized row as a plain weighted average. Each name is both the
+# attribute on RawAnimal and the column in the normalized database.
+AVERAGED_FIELDS = (
+    "neuron_count", "weight_kg", "lifetime_output_kg", "offspring_deaths_per_animal",
+    "offspring_captivity_years", "yield_fraction", "pasture_ha_per_kg_output",
+    "pasture_green_water_l_per_ha", "native_fraction", "bycatch_amount",
+    "ch4_kg_per_kg_output", "n2o_kg_per_kg_output", "co2_kg_per_kg_output",
+)
+
+
 class FeedEntry(CropShare):
     """Pairs a feed ratio record with its corresponding plant metrics."""
 
@@ -51,20 +61,8 @@ class RawAnimal:
     def normalized_fields(self) -> dict[str, float | str | None]:
         """Returns all animal metrics as a flat dict for FoodNormalized."""
         return {
-            "neuron_count":                  self.neuron_count.weighted_average(),
-            "weight_kg":                     self.weight_kg.weighted_average(),
-            "lifetime_output_kg":            self.lifetime_output_kg.weighted_average(),
-            "offspring_deaths_per_animal":   self.offspring_deaths_per_animal.weighted_average(),
-            "offspring_captivity_years":     self.offspring_captivity_years.weighted_average(),
-            "yield_fraction":                self.yield_fraction.weighted_average(),
-            "pasture_ha_per_kg_output":      self.pasture_ha_per_kg_output.weighted_average(),
-            "pasture_green_water_l_per_ha":  self.pasture_green_water_l_per_ha.weighted_average(),
-            "native_fraction":               self.native_fraction.weighted_average(),
-            "bycatch_amount":                self.bycatch_amount.weighted_average(),
-            "bycatch_food_slug":             self.bycatch_food_slug,
-            "ch4_kg_per_kg_output":          self.ch4_kg_per_kg_output.weighted_average(),
-            "n2o_kg_per_kg_output":          self.n2o_kg_per_kg_output.weighted_average(),
-            "co2_kg_per_kg_output":          self.co2_kg_per_kg_output.weighted_average(),
+            **{name: getattr(self, name).weighted_average() for name in AVERAGED_FIELDS},
+            "bycatch_food_slug": self.bycatch_food_slug,
             **compute_wild_fish(self._feed_entries),
         }
 

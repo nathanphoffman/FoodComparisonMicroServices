@@ -1,41 +1,31 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Table } from '../Table/Table';
-import type { DietSettings } from './nutrition/FoodTableRda';
 import { FoodTableInputs } from './controls/FoodTableInputs';
 import { FoodTableFilters } from './controls/toolbar/FoodTableFilters';
-import { useFoodTableSettings } from './controls/useFoodTableSettings';
+import { useFoodTableState } from './controls/useFoodTableState';
 import { useFoodTableData } from './scoring/useFoodTableData';
 import { useTableDisplay } from './rows/useTableDisplay';
 import { FoodTableModals } from './rows/FoodTableModals';
 
 export function FoodTable() {
-    const settings = useFoodTableSettings();
-    const { sliderValues, nutrientStandard } = settings;
-    // Food whose detail modal is open (null = closed)
-    const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
-    const [showDiet, setShowDiet] = useState(false);
-    // The diet's total calories per day, size and activity, for the whole-diet numbers in its tooltip
-    const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
-
-    const data = useFoodTableData(settings.dataRegion, sliderValues);
+    const state = useFoodTableState();
+    const { sliderValues, nutrientStandard, dietSettings } = state;
+    const data = useFoodTableData(state.dataRegion, sliderValues);
     const cellInputs = useMemo(
-        () => ({ nutrientStandard, dietSettings, dietNutrition: data.dietNutrition, onSelect: setSelectedSlug }),
-        [nutrientStandard, dietSettings, data.dietNutrition],
+        () => ({ nutrientStandard, dietSettings, dietNutrition: data.dietNutrition, onSelect: state.setSelectedSlug }),
+        [nutrientStandard, dietSettings, data.dietNutrition, state.setSelectedSlug],
     );
     const display = useTableDisplay({
-        rawFoods: data.rawFoods, scored: data.scored, foodFilter: settings.foodFilter,
-        activeCols: settings.activeCols, sliderValues, cellInputs,
+        rawFoods: data.rawFoods, scored: data.scored, foodFilter: state.foodFilter,
+        activeCols: state.activeCols, sliderValues, cellInputs,
     });
 
-    const closeDetail = useCallback(() => setSelectedSlug(null), []);
-    const closeDiet = useCallback(() => setShowDiet(false), []);
-    const showDietModal = useCallback(() => setShowDiet(true), []);
     // Grouped props are memoized so the (memoized) inputs only re-render when something in them changes.
     const dietHandlers = useMemo(
-        () => ({ onDietChange: data.onDietChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
-        [data.onDietChange, showDietModal],
+        () => ({ onDietChange: data.onDietChange, onSettingsChange: state.setDietSettings, onShow: state.openDiet }),
+        [data.onDietChange, state.setDietSettings, state.openDiet],
     );
     const scoringErrorBanner = useMemo(
         () => data.scoringError === null ? null : { message: data.scoringError, onDismiss: data.dismissScoringError },
@@ -49,14 +39,14 @@ export function FoodTable() {
         <div className="mt-6">
             <FoodTableInputs
                 foods={data.rawFoods}
-                onSliderValuesChange={settings.setSliderValues}
-                onActiveColsChange={settings.setActiveCols}
-                dataSettings={settings.dataSettings}
+                onSliderValuesChange={state.setSliderValues}
+                onActiveColsChange={state.setActiveCols}
+                dataSettings={state.dataSettings}
                 diet={dietHandlers}
                 scoringError={scoringErrorBanner}
             />
 
-            <FoodTableFilters selected={settings.foodFilter} onChange={settings.setFoodFilter} />
+            <FoodTableFilters selected={state.foodFilter} onChange={state.setFoodFilter} />
 
             <Table headers={display.headers}>
                 {display.rows}
@@ -66,8 +56,8 @@ export function FoodTable() {
                 data={data}
                 sliderValues={sliderValues}
                 display={display}
-                diet={{ isOpen: showDiet, settings: dietSettings, standard: nutrientStandard, onClose: closeDiet }}
-                detail={{ slug: selectedSlug, onClose: closeDetail }}
+                diet={{ isOpen: state.showDiet, settings: dietSettings, standard: nutrientStandard, onClose: state.closeDiet }}
+                detail={{ slug: state.selectedSlug, onClose: state.closeDetail }}
             />
         </div>
     );

@@ -17,6 +17,17 @@ from ..pesticides.pesticide_impact import (
 
 SQUARE_METERS_PER_HA = 10000
 
+# Metrics that go into the normalized row as a plain weighted average. Each name is both the
+# attribute on RawPlant and the column in the normalized database.
+AVERAGED_FIELDS = (
+    "yield_fraction", "soil_erosion", "pesticide_kg_ha", "fertilizer_kg_ha",
+    "tillage_events_per_year", "co2_capture_kg_ha_yr",
+    "wild_fish_kg_per_kg", "wild_fish_neuron_count", "wild_fish_weight_kg", "wild_fish_lifespan_years",
+)
+
+# Per-kg metrics sourced per kg of dry harvest; they are converted to per kg cooked (see normalized_fields).
+PER_KG_FIELDS = ("water_per_kg", "green_water_per_kg", "blue_water_per_kg", "grey_water_per_kg", "emissions_per_kg")
+
 
 class RawPlant:
     """Wraps a Plant record and exposes weighted averages for all environmental metrics."""
@@ -93,28 +104,18 @@ class RawPlant:
             SQUARE_METERS_PER_HA / average_yield_kg_per_ha if average_yield_kg_per_ha else None
         )
         return {
-            "yield_kg_ha":               average_yield_kg_per_ha,
-            "yield_fraction":            self.yield_fraction.weighted_average(),
-            "water_per_kg":              _per_cooked_kg(self.water_per_kg.weighted_average(), cooked_ratio),
-            "green_water_per_kg":        _per_cooked_kg(self.green_water_per_kg.weighted_average(), cooked_ratio),
-            "blue_water_per_kg":         _per_cooked_kg(self.blue_water_per_kg.weighted_average(), cooked_ratio),
-            "grey_water_per_kg":         _per_cooked_kg(self.grey_water_per_kg.weighted_average(), cooked_ratio),
-            "soil_erosion":              self.soil_erosion.weighted_average(),
-            "pesticide_kg_ha":           self.pesticide_kg_ha.weighted_average(),
-            "fertilizer_kg_ha":          self.fertilizer_kg_ha.weighted_average(),
-            "emissions_per_kg":          _per_cooked_kg(self.emissions_per_kg.weighted_average(), cooked_ratio),
-            "tillage_events_per_year":   self.tillage_events_per_year.weighted_average(),
-            "co2_capture_kg_ha_yr":      self.co2_capture_kg_ha_yr.weighted_average(),
+            "yield_kg_ha": average_yield_kg_per_ha,
+            **{name: getattr(self, name).weighted_average() for name in AVERAGED_FIELDS},
+            **{
+                name: _per_cooked_kg(getattr(self, name).weighted_average(), cooked_ratio)
+                for name in PER_KG_FIELDS
+            },
             "pesticide_freshwater_paf":  self.pesticide_affected_freshwater_fraction,
             "pesticide_terrestrial_paf": self.pesticide_affected_terrestrial_fraction,
             "pesticide_insect_paf":      self.pesticide_affected_insect_fraction,
             "pesticide_bee_hazard":      self.pesticide_bee_mortality_fraction,
             "pesticide_kg_per_kg_food":  _per_cooked_kg(self.avg_pesticide_kg_per_kg_food, cooked_ratio),
             "land_m2_per_kg":            land_square_meters_per_kg,
-            "wild_fish_kg_per_kg":       self.wild_fish_kg_per_kg.weighted_average(),
-            "wild_fish_neuron_count":    self.wild_fish_neuron_count.weighted_average(),
-            "wild_fish_weight_kg":       self.wild_fish_weight_kg.weighted_average(),
-            "wild_fish_lifespan_years":  self.wild_fish_lifespan_years.weighted_average(),
         }
 
 
