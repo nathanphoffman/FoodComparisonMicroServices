@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
-import { NutritionWeightsModal } from "../../../Modals/NutritionWeightsModal";
+import { HelpModal } from "../../../Modals/HelpModal";
 import type { NutritionWeights } from "../../types/FoodTableTypes";
 import { DEFAULT_NUTRITION_WEIGHTS } from "../../scoring/FoodTableDefaults";
 
@@ -85,7 +85,7 @@ export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_
                     </div>
                 ))}
             </div>
-            {showModal && <NutritionWeightsModal onClose={() => setShowModal(false)} />}
+            {showModal && <HelpModal topic="nutritionWeights" onClose={() => setShowModal(false)} />}
         </div>
     );
 }

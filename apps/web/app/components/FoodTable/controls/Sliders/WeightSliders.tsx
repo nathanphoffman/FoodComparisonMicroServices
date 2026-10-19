@@ -1,10 +1,7 @@
 'use client';
 
 import type { FoodWeights } from "../../types/FoodTableTypes";
-import { CalorieWeightModal } from "../../../Modals/CalorieWeightModal";
-import { ProteinWeightModal } from "../../../Modals/ProteinWeightModal";
-import { DryMassWeightModal } from "../../../Modals/DryMassWeightModal";
-import { WetMassWeightModal } from "../../../Modals/WetMassWeightModal";
+import type { HelpTopicKey } from "../../../Modals/helpTopics";
 import { PercentSliders } from "./PercentSliders";
 import { DEFAULT_FOOD_WEIGHT_LEVELS } from "../../scoring/FoodTableDefaults";
 
@@ -24,11 +21,11 @@ const DESCRIPTIONS: Record<keyof FoodWeights, string> = {
     wetMass:  'how much food weight as eaten (beans and grains cooked) contributes to the score',
 };
 
-const MODALS: Record<keyof FoodWeights, React.ComponentType<{ onClose: () => void }>> = {
-    calories: CalorieWeightModal,
-    protein:  ProteinWeightModal,
-    dryMass:  DryMassWeightModal,
-    wetMass:  WetMassWeightModal,
+const HELP_TOPICS: Record<keyof FoodWeights, HelpTopicKey> = {
+    calories: 'calorieWeight',
+    protein:  'proteinWeight',
+    dryMass:  'dryMassWeight',
+    wetMass:  'wetMassWeight',
 };
 
 export function WeightSliders({ onChange, defaultLevels = DEFAULT_FOOD_WEIGHT_LEVELS }: { onChange?: (w: FoodWeights) => void; defaultLevels?: FoodWeights }) {
@@ -37,7 +34,7 @@ export function WeightSliders({ onChange, defaultLevels = DEFAULT_FOOD_WEIGHT_LE
             keys={KEYS}
             labels={LABELS}
             descriptions={DESCRIPTIONS}
-            modals={MODALS}
+            helpTopics={HELP_TOPICS}
             defaultLevels={defaultLevels}
             onChange={onChange}
         />

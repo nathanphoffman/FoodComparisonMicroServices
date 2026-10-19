@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
-import { LandTypeModal } from "../../../Modals/LandTypeModal";
+import { HelpModal } from "../../../Modals/HelpModal";
 import type { LandTypes } from "../../types/FoodTableTypes";
 import { DEFAULT_LAND_TYPE_WEIGHTS } from "../../scoring/FoodTableDefaults";
 
@@ -60,7 +60,7 @@ export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => voi
                     </div>
                 ))}
             </div>
-            {showModal && <LandTypeModal onClose={() => setShowModal(false)} />}
+            {showModal && <HelpModal topic="landType" onClose={() => setShowModal(false)} />}
         </div>
     );
 }

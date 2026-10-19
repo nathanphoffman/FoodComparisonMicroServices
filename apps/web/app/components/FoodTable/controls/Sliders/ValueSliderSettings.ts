@@ -1,15 +1,4 @@
 import type { SliderScale, ValueSliderSettings } from "./ValueSlider";
-import { GreyWaterModal }                 from "../../../Modals/GreyWaterModal";
-import { GreenWaterModal }                from "../../../Modals/GreenWaterModal";
-import { NeuronExponentModal }            from "../../../Modals/NeuronExponentModal";
-import { WeightExponentModal }            from "../../../Modals/WeightExponentModal";
-import { FinalIntelligenceExponentModal } from "../../../Modals/FinalIntelligenceExponentModal";
-import { PhilosophicalKillModal }         from "../../../Modals/PhilosophicalKillModal";
-import { CaptivityModal }                 from "../../../Modals/CaptivityModal";
-import { ZeroBetterMultiplierModal }      from "../../../Modals/ZeroBetterMultiplierModal";
-import { WinDampeningModal }              from "../../../Modals/WinDampeningModal";
-import { OverHuntingModal }               from "../../../Modals/OverHuntingModal";
-import { OverGatheringModal }             from "../../../Modals/OverGatheringModal";
 
 // Settings for every single-value slider. Starting values live in FoodTableDefaults.
 
@@ -25,7 +14,7 @@ export const GREY_WATER: ValueSliderSettings = {
     description: 'how much grey (pollution) water counts',
     min: 0, max: 100,
     format: percent,
-    Modal:  GreyWaterModal,
+    helpTopic:  'greyWater',
 };
 
 export const GREEN_WATER: ValueSliderSettings = {
@@ -33,7 +22,7 @@ export const GREEN_WATER: ValueSliderSettings = {
     description: 'how much green (rain) water counts',
     min: 0, max: 100,
     format:  percent,
-    Modal:   GreenWaterModal,
+    helpTopic:   'greenWater',
     divider: true,
 };
 
@@ -44,7 +33,7 @@ export const NEURON_EXPONENT: ValueSliderSettings = {
     description: 'exponent applied to neuron count in intelligence calc',
     min: 1, max: 2, step: 0.05,
     format: twoDecimal,
-    Modal:  NeuronExponentModal,
+    helpTopic:  'neuronExponent',
 };
 
 export const WEIGHT_EXPONENT: ValueSliderSettings = {
@@ -52,7 +41,7 @@ export const WEIGHT_EXPONENT: ValueSliderSettings = {
     description: 'exponent applied to body mass in intelligence calc',
     min: 0.1, max: 2, step: 0.05,
     format: twoDecimal,
-    Modal:  WeightExponentModal,
+    helpTopic:  'weightExponent',
 };
 
 export const FINAL_INTELLIGENCE_EXPONENT: ValueSliderSettings = {
@@ -60,7 +49,7 @@ export const FINAL_INTELLIGENCE_EXPONENT: ValueSliderSettings = {
     description: 'final nonlinear curve applied to overall intelligence score',
     min: 1.0, max: 1.5, step: 0.01,
     format: twoDecimal,
-    Modal:  FinalIntelligenceExponentModal,
+    helpTopic:  'finalIntelligenceExponent',
 };
 
 export const MAX_PHILOSOPHICAL_KILL = 1000;
@@ -70,7 +59,7 @@ export const PHILOSOPHICAL_KILL: ValueSliderSettings = {
     description: 'how much worse intentional killing is vs. accidental',
     min: 0, max: MAX_PHILOSOPHICAL_KILL,
     format:  times,
-    Modal:   PhilosophicalKillModal,
+    helpTopic:   'philosophicalKill',
     divider: true,
 };
 
@@ -91,7 +80,7 @@ export const CAPTIVITY: ValueSliderSettings = {
     min: 0, max: MAX_CAPTIVITY_POSITION,
     scale:   captivityScale,
     format:  times,
-    Modal:   CaptivityModal,
+    helpTopic:   'captivity',
     divider: true,
 };
 
@@ -108,7 +97,7 @@ export const WIN_DAMPENING: ValueSliderSettings = {
     description: 'how much a huge advantage in one measure is shrunk when combining them',
     min: 0, max: 2, step: 0.1,
     format: (value) => `${value.toFixed(1)} (${describeWinDampening(value)})`,
-    Modal:  WinDampeningModal,
+    helpTopic:  'winDampening',
 };
 
 export const MAX_OVER_HUNTING = 5;
@@ -118,7 +107,7 @@ export const OVER_HUNTING: ValueSliderSettings = {
     description: 'divides the Improvement score of wild-caught animals',
     min: 1, max: MAX_OVER_HUNTING, step: 0.5,
     format:  times1dp,
-    Modal:   OverHuntingModal,
+    helpTopic:   'overHunting',
     divider: true,
 };
 
@@ -127,7 +116,7 @@ export const OVER_GATHERING: ValueSliderSettings = {
     description: 'divides the Improvement score of wild-gathered plants',
     min: 1, max: 5, step: 0.5,
     format:  times1dp,
-    Modal:   OverGatheringModal,
+    helpTopic:   'overGathering',
     divider: true,
 };
 
@@ -136,6 +125,6 @@ export const ZERO_BETTER_MULTIPLIER: ValueSliderSettings = {
     description: 'how many times better a zero-impact score is vs. the next best',
     min: 1, max: 4, step: 0.1,
     format:  times1dp,
-    Modal:   ZeroBetterMultiplierModal,
+    helpTopic:   'zeroBetterMultiplier',
     divider: true,
 };

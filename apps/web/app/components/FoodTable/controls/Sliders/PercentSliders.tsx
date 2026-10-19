@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
+import { HelpModal } from "../../../Modals/HelpModal";
+import type { HelpTopicKey } from "../../../Modals/helpTopics";
 
 export const MAX_LEVEL = 10;
 export const DEFAULT_LEVEL = MAX_LEVEL / 2;
@@ -38,14 +40,14 @@ export function PercentSliders<K extends string>({
     keys,
     labels,
     descriptions,
-    modals,
+    helpTopics,
     defaultLevels,
     onChange,
 }: {
     keys: K[];
     labels: Record<K, string>;
     descriptions: Record<K, string>;
-    modals?: Partial<Record<K, React.ComponentType<{ onClose: () => void }>>>;
+    helpTopics?: Partial<Record<K, HelpTopicKey>>;
     /** Starting slider levels (0–MAX_LEVEL); equal when omitted. */
     defaultLevels?: Levels<K>;
     onChange?: (shares: Levels<K>) => void;
@@ -71,7 +73,7 @@ export function PercentSliders<K extends string>({
         debouncedOnChange(toShares(balanced));
     };
 
-    const ActiveModal: React.ComponentType<{ onClose: () => void }> | null | undefined = openModal ? modals?.[openModal] : null;
+    const openTopic = openModal ? helpTopics?.[openModal] : undefined;
 
     return <div className="flex flex-col gap-2 flex-1">
         <div className="flex justify-start">
@@ -91,13 +93,13 @@ export function PercentSliders<K extends string>({
                     </div>
                     <div className="text-xs text-neutral-400 mt-0.5">
                         {descriptions[key]}
-                        {modals?.[key] && (
+                        {helpTopics?.[key] && (
                             <button onClick={() => setOpenModal(key)} className="ml-1.5 text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">more info</button>
                         )}
                     </div>
                 </div>
             ))}
         </div>
-        {ActiveModal && <ActiveModal onClose={() => setOpenModal(null)} />}
+        {openTopic && <HelpModal topic={openTopic} onClose={() => setOpenModal(null)} />}
     </div>;
 }

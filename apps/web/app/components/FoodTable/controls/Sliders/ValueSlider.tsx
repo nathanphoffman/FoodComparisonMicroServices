@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Slider } from "../../../Inputs/Slider";
 import { useDebouncedCallback, DEBOUNCE_MS } from "../../../../hooks/useDebouncedCallback";
+import { HelpModal } from "../../../Modals/HelpModal";
+import type { HelpTopicKey } from "../../../Modals/helpTopics";
 
 /** Maps between the slider's position and the value it stands for (e.g. a log scale). */
 export type SliderScale = {
@@ -18,14 +20,14 @@ export type ValueSliderSettings = {
     max:         number;
     step?:       number;
     format:      (value: number) => string;
-    Modal:       React.ComponentType<{ onClose: () => void }>;
+    helpTopic:   HelpTopicKey;   // names the text shown by "more info"
     scale?:      SliderScale;   // when set, min/max/step are slider positions, not values
     divider?:    boolean;       // draws a line separating it from the slider before it
 };
 
 /** A single labelled slider with a "more info" modal. */
 export function ValueSlider({
-    label, description, min, max, step, format, Modal, scale, divider,
+    label, description, min, max, step, format, helpTopic, scale, divider,
     initialValue, onChange,
 }: ValueSliderSettings & {
     initialValue: number;
@@ -55,7 +57,7 @@ export function ValueSlider({
                 {description}
                 <button onClick={() => setShowModal(true)} className="ml-1.5 text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">more info</button>
             </div>
-            {showModal && <Modal onClose={() => setShowModal(false)} />}
+            {showModal && <HelpModal topic={helpTopic} onClose={() => setShowModal(false)} />}
         </div>
     );
 }
