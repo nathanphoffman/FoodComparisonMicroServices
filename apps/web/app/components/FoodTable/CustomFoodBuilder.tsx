@@ -34,7 +34,10 @@ type Props = {
  * and can be exported to a file and imported back.
  */
 export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DEFAULT_NUTRIENT_STANDARD, showCalories, onShow, onSettingsChange, onChange }: Props) {
-    const [saved, setSaved]               = useState<Saved>(() => loadSaved(storageKey, foods));
+    const [loaded]                        = useState(() => loadSaved(storageKey, foods));
+    const [saved, setSaved]               = useState<Saved>(loaded.saved);
+    // Shown in red under the buttons: what went wrong loading, saving or importing the diet.
+    const [problem, setProblem]            = useState<string | null>(loaded.problem);
     const [selectedSlug, setSelectedSlug] = useState('');
     // The calorie lines follow this delayed copy, so they update with the table instead of on every slider move.
     // The slider being dragged (activeSlug) is the exception: its own line follows the live state.
@@ -56,11 +59,21 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // Keeps the diet in this browser; if that fails, the diet still works but the user is told it won't survive a reload.
+    function persist(next: Saved) {
+        try {
+            save(storageKey, next);
+        } catch (error) {
+            console.error('Could not save the diet in this browser:', error);
+            setProblem("Your diet couldn't be saved in this browser, so it will be lost on reload. Use Export Diet to keep a copy.");
+        }
+    }
+
     // Changes to the diet's foods or basis: saved, then the table rescores the food and the calorie lines catch up.
     function updateFoods(patch: Pick<Saved, 'basis' | 'ingredients'>) {
         const next = { ...saved, ...patch };
         setSaved(next);
-        save(storageKey, next);
+        persist(next);
         debouncedOnChange(toInput(slug, name, next));
         debouncedSettle(next);
     }
@@ -69,23 +82,25 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
     function updateSettings(patch: Partial<Saved>) {
         const next = { ...saved, ...patch };
         setSaved(next);
-        save(storageKey, next);
+        persist(next);
         debouncedSettings(next);
         if ('calorieTarget' in patch) debouncedSettle(next);
     }
 
     async function importDiet(file: File | undefined) {
         if (!file) return;
-        const next = await readDietFile(file, foods);
-        if (!next) {
-            alert("That file isn't a diet export.");
-            return;
+        try {
+            const { saved: next, droppedFoodCount } = await readDietFile(file, foods);
+            setSaved(next);
+            setSettled(next);
+            persist(next);
+            onChange(toInput(slug, name, next));
+            onSettingsChange?.(settingsOf(next, foods));
+            setProblem(droppedFoodCount > 0 ? `Imported, but ${droppedFoodCount} food(s) in the file are no longer available and were skipped.` : null);
+        } catch (error) {
+            console.error('Could not import the diet:', error);
+            setProblem(error instanceof Error ? error.message : String(error));
         }
-        setSaved(next);
-        setSettled(next);
-        save(storageKey, next);
-        onChange(toInput(slug, name, next));
-        onSettingsChange?.(settingsOf(next, foods));
     }
 
     function addIngredient() {
@@ -118,6 +133,7 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
 
     return (
         <div className="flex flex-col gap-2">
+            {problem && <p role="alert" className="text-sm text-red-600">{problem}</p>}
             {showCalories && <DietActions onExport={() => downloadDiet(saved, slug)} onImport={importDiet} onShow={onShow} hasFoods={ingredients.length > 0} />}
             {showCalories && <DietSettingsFields saved={saved} onChange={updateSettings} />}
             {showCalories && <SupplementEditor saved={saved} standard={standard} onChange={updateSettings} />}

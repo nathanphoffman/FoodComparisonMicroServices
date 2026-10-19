@@ -12,7 +12,7 @@ import { AvailabilityCell } from './Cells/AvailabilityCell';
 import type { DietSettings, NutrientStandard } from './FoodTableRda';
 import { toNutritionDetail, toIntelligenceDetail } from './FoodTableCalculations';
 import type { ScoredRow } from './FoodTableSort';
-import { EMPTY_SENTIENT_HARM_DETAIL, type ColConfig, type NutritionDetail, type RawFood, type SliderValues } from './FoodTableTypes';
+import { DIET_SLUG, EMPTY_SENTIENT_HARM_DETAIL, type ColConfig, type NutritionDetail, type RawFood, type SliderValues } from './FoodTableTypes';
 
 /** What every cell in the table can need besides its own food. */
 export type CellContext = {
@@ -35,7 +35,7 @@ export function foodTableCell(columnKey: ColConfig['key'], food: RawFood, scored
     switch (columnKey) {
         case 'name':           return <NameCell           key="name"           name={food.name} slug={food.slug} onSelect={onSelect} />;
         case 'rank':           return <RankCell           key="rank"           rank={ranks.get(food.slug) ?? null} total={rankedCount} />;
-        case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} diet={food.slug === 'your-diet' ? dietSettings : null} standard={nutrientStandard} />;
+        case 'nutritionScore': return <NutritionScoreCell key="nutritionScore" score={scoredRow?.nutrition_score ?? null} detail={customNutrition.get(food.slug) ?? toNutritionDetail(food)} diet={food.slug === DIET_SLUG ? dietSettings : null} standard={nutrientStandard} />;
         case 'emissions':      return <EmissionsCell      key="emissions"      value={scoredRow?.emissions ?? null} breakdown={scoredRow?.emissions_breakdown} divisor={divisor} />;
         case 'landUse':        return <LandUseCell        key="landUse"        value={scoredRow?.land_use ?? null} detail={scoredRow?.land_use_detail ?? { type: food.type, yieldKilogramsPerHectare: null, pastureHectaresPerKilogram: null, feedLandM2PerKg: null, rawM2PerKg: 0, landTypes: null, multiplier: 1 }} divisor={divisor} unit={unit} />;
         case 'directKill':     return <IntelligenceCell   key="directKill"     value={scoredRow?.direct_kill ?? null} detail={toIntelligenceDetail(food)} killDetail={scoredRow?.kill_detail} wildFishDeathsPerKg={scoredRow?.wild_fish_deaths_per_kg} explanation={food.sentient_harm_explanation} />;

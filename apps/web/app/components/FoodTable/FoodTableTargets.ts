@@ -81,7 +81,8 @@ const COLOR_CLASS: Record<Color, string> = { blue: 'text-blue-300', green: 'text
 /**
  * A colour scale for a % of target. `bands` run from the first to the last cutoff and the first one the percent fits wins;
  * anything past the last cutoff gets `beyond`. With `aroundTarget` the cutoffs measure how far the percent is from 100
- * instead (so a range is best near its middle). `exclusive` makes a cutoff count only below it, not at it.
+ * instead (so a range is best near its middle). `exclusive` makes a cutoff count only below it, not at it, except the
+ * last one: "over 200%" means blue starts just above 200%, so 200% itself is still the band below.
  */
 type ColorScale = { bands: { upTo: number; color: Color }[]; beyond: Color; aroundTarget?: boolean; exclusive?: boolean };
 
@@ -100,7 +101,8 @@ export const COLOR_SCALES = {
 /** The text colour class for a % of target on the given scale. */
 export function scaleColor(percent: number, scale: ColorScale): string {
     const value = scale.aroundTarget ? Math.abs(percent - 100) : percent;
-    const band = scale.bands.find(b => scale.exclusive ? value < b.upTo : value <= b.upTo);
+    const lastIndex = scale.bands.length - 1;
+    const band = scale.bands.find((b, i) => scale.exclusive && i < lastIndex ? value < b.upTo : value <= b.upTo);
     return COLOR_CLASS[band?.color ?? scale.beyond];
 }
 

@@ -5,7 +5,7 @@ import { AVERAGE_DIET_SLUG } from './FoodTableAverageDiet';
 import { NutritionDetailContent } from './Tooltips/NutritionTooltip';
 import type { DietSettings, NutrientStandard } from './FoodTableRda';
 import type { ScoredRow } from './FoodTableSort';
-import type { NutritionDetail } from './FoodTableTypes';
+import { DIET_SLUG, type NutritionDetail } from './FoodTableTypes';
 
 type Props = {
     nutrition: NutritionDetail;
@@ -22,7 +22,7 @@ type Props = {
 
 /** The "Your Diet" window: its nutrition breakdown, its impact against the average diet, and how it's worked out. */
 export function DietModal({ nutrition, dietSettings, nutrientStandard, scored, foodSlugs, unit, rawLandM2PerKg, benchmarkRawLandM2PerKg, onClose }: Props) {
-    const dietRow = scored.get('your-diet');
+    const dietRow = scored.get(DIET_SLUG);
     return (
         <Modal title="Your Diet" onClose={onClose} wide>
             <div className="bg-neutral-900 text-neutral-100 text-xs rounded-lg px-3 py-2.5 md:whitespace-nowrap">

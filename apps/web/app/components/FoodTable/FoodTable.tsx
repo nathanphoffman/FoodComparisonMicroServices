@@ -6,7 +6,7 @@ import { Row } from '../Table/Row';
 import { DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from './FoodTableRda';
 import { getUnitLabel, blendLandM2PerKg } from './FoodTableCalculations';
 import type { ColConfig, SliderValues, DataRegion } from './FoodTableTypes';
-import { isCustomFoodSlug } from './FoodTableTypes';
+import { DIET_SLUG, isCustomFoodSlug } from './FoodTableTypes';
 import { useFoodTableSort } from './FoodTableSort';
 import { useWasmScoring } from './FoodTableWASMIntegration';
 import { FoodTableInputs } from './FoodTableInputs';
@@ -112,15 +112,15 @@ export function FoodTable() {
                 {tableRows}
             </Table>
 
-            {showDiet && customNutrition.get('your-diet') && (
+            {showDiet && customNutrition.get(DIET_SLUG) && (
                 <DietModal
-                    nutrition={customNutrition.get('your-diet')!}
+                    nutrition={customNutrition.get(DIET_SLUG)!}
                     dietSettings={dietSettings}
                     nutrientStandard={nutrientStandard}
                     scored={scored}
                     foodSlugs={foodSlugs}
                     unit={unit}
-                    rawLandM2PerKg={customFoodsBySlug['your-diet'] ? blendLandM2PerKg(customFoodsBySlug['your-diet'], rawFoods, rawLandOf) : null}
+                    rawLandM2PerKg={customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null}
                     benchmarkRawLandM2PerKg={averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, rawLandOf) : null}
                     onClose={closeDiet}
                 />

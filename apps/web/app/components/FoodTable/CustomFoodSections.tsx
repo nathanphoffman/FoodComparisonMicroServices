@@ -1,5 +1,5 @@
 import { CustomFoodBuilder } from './CustomFoodBuilder';
-import { CUSTOM_FOODS, type CustomFoodInput } from './FoodTableTypes';
+import { CUSTOM_FOODS, DIET_SLUG, type CustomFoodInput } from './FoodTableTypes';
 import type { DietSettings, NutrientStandard } from './FoodTableRda';
 
 type Props = {
@@ -23,7 +23,7 @@ export function CustomFoodSections({ foods, nutrientStandard, onShowDiet, onDiet
                         storageKey={custom.storageKey}
                         foods={foods}
                         standard={nutrientStandard}
-                        showCalories={custom.slug === 'your-diet'}
+                        showCalories={custom.slug === DIET_SLUG}
                         onShow={onShowDiet}
                         onSettingsChange={onDietSettingsChange}
                         onChange={onCustomFoodChange}

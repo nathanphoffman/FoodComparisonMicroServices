@@ -12,8 +12,11 @@ export type CustomFoodInput = {
     ingredients: MealIngredient[];
 };
 
+/** The slug of the user's whole-diet custom food. */
+export const DIET_SLUG = 'your-diet';
+
 export const CUSTOM_FOODS = [
-    { slug: 'your-diet', name: 'Your Diet', heading: 'Diet',        storageKey: 'food-compare:diet' },
+    { slug: DIET_SLUG, name: 'Your Diet', heading: 'Diet',        storageKey: 'food-compare:diet' },
 ] as const;
 
 export function isCustomFoodSlug(slug: string): boolean {

@@ -71,20 +71,31 @@ export function sanitize(parsed: Saved | null, foods: { slug: string }[]): Saved
     };
 }
 
-export function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
+/** What loading found: the diet to use, and a message when stored data was unreadable (so it wasn't silently thrown away). */
+export type LoadResult = { saved: Saved; problem: string | null };
+
+export function loadSaved(storageKey: string, foods: { slug: string }[]): LoadResult {
+    let stored: string | null;
     try {
-        return sanitize(JSON.parse(localStorage.getItem(storageKey) ?? 'null'), foods) ?? EMPTY_SAVED;
-    } catch {
-        return EMPTY_SAVED;
+        stored = localStorage.getItem(storageKey);
+    } catch (error) {
+        console.error('Could not read the saved diet from this browser:', error);
+        return { saved: EMPTY_SAVED, problem: "This browser won't let the site read your saved diet. Import a backup if you have one." };
     }
+    if (stored === null) return { saved: EMPTY_SAVED, problem: null };
+    try {
+        const saved = sanitize(JSON.parse(stored), foods);
+        if (saved) return { saved, problem: null };
+    } catch (error) {
+        console.error('The saved diet is not valid JSON:', error);
+    }
+    console.error('The saved diet has an unexpected shape:', stored);
+    return { saved: EMPTY_SAVED, problem: "Your saved diet couldn't be read, so it was reset. Import a backup if you have one." };
 }
 
+/** Throws if the browser refuses the write (storage full or blocked), so the caller can tell the user. */
 export function save(storageKey: string, value: Saved) {
-    try {
-        localStorage.setItem(storageKey, JSON.stringify(value));
-    } catch {
-        // Storage can be full or blocked; the builder still works without it.
-    }
+    localStorage.setItem(storageKey, JSON.stringify(value));
 }
 
 // ── Export / import file ──────────────────────────────────────────────────────
@@ -100,11 +111,18 @@ export function downloadDiet(value: Saved, filePrefix: string) {
     URL.revokeObjectURL(url);
 }
 
-/** Reads a file picked for import; null if it isn't a diet export. */
-export async function readDietFile(file: File, foods: { slug: string }[]): Promise<Saved | null> {
+/** A diet read from an imported file, and how many of its foods are no longer available. */
+export type ImportedDiet = { saved: Saved; droppedFoodCount: number };
+
+/** Reads a file picked for import; throws an Error saying what is wrong if it isn't a diet export. */
+export async function readDietFile(file: File, foods: { slug: string }[]): Promise<ImportedDiet> {
+    let parsed: Saved;
     try {
-        return sanitize(JSON.parse(await file.text()), foods);
+        parsed = JSON.parse(await file.text());
     } catch {
-        return null;
+        throw new Error("That file isn't valid JSON, so it can't be a diet export.");
     }
+    const saved = sanitize(parsed, foods);
+    if (!saved) throw new Error("That file has no list of foods, so it isn't a diet export.");
+    return { saved, droppedFoodCount: parsed.ingredients.length - saved.ingredients.length };
 }
