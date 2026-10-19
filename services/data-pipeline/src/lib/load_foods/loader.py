@@ -11,7 +11,7 @@ from pathlib import Path
 from ...food_types import (
     Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide, Composite, CompositeIngredient,
 )
-from ..validate import assert_land_types
+from ..checks.validate import assert_land_types
 from .category_keys import CATEGORY_FILES
 from .composites import extract_composites
 from .extract_records import (

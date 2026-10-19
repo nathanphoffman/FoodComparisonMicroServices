@@ -12,22 +12,22 @@ import sys
 from .food_types import Source, Pesticide
 from .paths import JSON_DIR, SQL_DIR
 from .lib.load_foods import load_category_foods, CategoryData
-from .lib.db_version import bump_version
-from .lib.database_files import make_empty_database, write_databases
-from .lib.insert_sources import insert as insert_sources
-from .lib.insert_foods import insert as insert_foods
-from .lib.insert_animals import insert as insert_animals
-from .lib.insert_plants import insert as insert_plants
-from .lib.insert_pesticides import insert as insert_pesticides
-from .lib.insert_plant_kills import insert as insert_plant_kills
-from .lib.insert_plant_pesticides import insert as insert_plant_pesticides
-from .lib.insert_animal_feed import insert as insert_animal_feed
-from .lib.insert_composites import insert as insert_composites
-from .lib.insert_food_sources import insert as insert_food_sources
-from .lib.insert_foods_normalized import insert as insert_foods_normalized
-from .lib.regions import REGIONS, resolve_regions
-from .lib.check_animal_emissions import check_animal_emissions
-from .lib.check_plant_pesticides import check_plant_pesticides
+from .lib.database.db_version import bump_version
+from .lib.database.database_files import make_empty_database, write_databases
+from .lib.insert.sources.insert_sources import insert as insert_sources
+from .lib.insert.foods.insert_foods import insert as insert_foods
+from .lib.insert.foods.insert_animals import insert as insert_animals
+from .lib.insert.foods.insert_plants import insert as insert_plants
+from .lib.insert.impacts.insert_pesticides import insert as insert_pesticides
+from .lib.insert.impacts.insert_plant_kills import insert as insert_plant_kills
+from .lib.insert.impacts.insert_plant_pesticides import insert as insert_plant_pesticides
+from .lib.insert.foods.insert_animal_feed import insert as insert_animal_feed
+from .lib.insert.foods.insert_composites import insert as insert_composites
+from .lib.insert.sources.insert_food_sources import insert as insert_food_sources
+from .lib.insert.foods.insert_foods_normalized import insert as insert_foods_normalized
+from .lib.database.regions import REGIONS, resolve_regions
+from .lib.checks.check_animal_emissions import check_animal_emissions
+from .lib.checks.check_plant_pesticides import check_plant_pesticides
 
 
 def main() -> None:

@@ -1,21 +1,13 @@
 //! Scores every food and blends custom foods (meal, diet) from them: per-food values, the
 //! reference comparison and the final scores. All functions are free of I/O and WASM-bindgen concerns.
 
-mod divisor;
+mod comparison;
 mod eco;
-mod emissions;
-mod final_score;
-mod meal;
-mod nutrition;
-mod power_mean;
-mod row;
-mod scoring;
-mod water;
+mod per_food;
 
 use crate::models::{FoodRow, ScoredRow, SliderQuery};
-use divisor::NormFactors;
-use final_score::Comparison;
-use row::compute_row;
+use comparison::{synthesize, Blend, Comparison};
+use per_food::{compute_row, NormFactors};
 
 // ── Entry point ──────────────────────────────────────────────────────────────
 
@@ -29,8 +21,8 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
         .collect();
 
     // 2. Custom foods (meal, diet), each blended from its ingredients' rows.
-    let mut blends: Vec<meal::Blend> = query.custom_foods.iter()
-        .filter_map(|custom| meal::synthesize(&rows, &foods, custom))
+    let mut blends: Vec<Blend> = query.custom_foods.iter()
+        .filter_map(|custom| synthesize(&rows, &foods, custom))
         .collect();
 
     // 3. Final scores, relative to the reference food. Left as None when the

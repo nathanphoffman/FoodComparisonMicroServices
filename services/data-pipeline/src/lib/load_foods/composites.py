@@ -3,7 +3,7 @@ composites.py — builds composite food records and their ingredient rows.
 """
 
 from ...food_types import Food, Plant, Composite, CompositeIngredient
-from ..validate import assert_composite_ingredients
+from ..checks.validate import assert_composite_ingredients
 from .category_keys import COMPOSITE_KEYS
 
 

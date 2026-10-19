@@ -5,7 +5,7 @@ crop_share.py — one crop in a crop mix, and how much of it goes into the outpu
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from ..raw_plant import RawPlant
+    from ..raw.raw_plant import RawPlant
 
 
 class CropShare:

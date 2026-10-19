@@ -1,9 +1,8 @@
 """
-lib/ — insert helpers and raw-type wrappers for the data pipeline.
+lib/ — the data pipeline's building blocks, one folder per job.
 
-Each insert_*.py module owns one insert() function for one table;
-insert_foods_normalized/ is a package because the normalized rows need extra joins.
-load_foods/ reads the JSON, and db_version.py / database_files.py handle the build output.
+insert/ writes one table per module (foods/, sources/, impacts/), load_foods/ reads the JSON,
+checks/ validates and warns, and database/ handles the build output (files, version, regions).
 The types/ sub-package holds computation wrappers (RawFood, RawAnimal, etc.)
 that calculate weighted averages before writing to the normalized database.
 """
