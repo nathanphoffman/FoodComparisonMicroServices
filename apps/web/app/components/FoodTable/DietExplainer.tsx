@@ -1,6 +1,8 @@
 // "How did we get these numbers": the plain-English method behind the Diet modal's % figures.
 // Keep in step with FoodTableRda.ts, FoodTableTargets.ts and FoodTableAbsorption.ts.
 
+import { COLOR_SCALES, describeScale } from './FoodTableTargets';
+
 function Subsection({ title, children }: { title: string; children: React.ReactNode }) {
     return (
         <div className="mt-3">
@@ -86,7 +88,7 @@ export function DietExplainer() {
 
             <Subsection title="The colors">
                 <p>
-                    Blue is very good, green is good, yellow is neutral, orange is a little off and red is far off. For something to reach (fiber, protein), under 50% is red, 50–75% orange, 75–125% yellow, 125–250% green and over 250% blue, which is a lot, not necessarily bad. Vitamins and minerals use the same colors, but go blue at over 200%. For a limit, up to 50% is blue, up to 100% green, up to 125% yellow, up to 150% orange and over that red. For fat and carbs, 90–110% is blue and 75–125% is green, with the colors worsening further out.
+                    Blue is very good, green is good, yellow is neutral, orange is a little off and red is far off. For something to reach (fiber, protein), {describeScale(COLOR_SCALES.min)}; blue there is a lot, not necessarily bad. Vitamins and minerals use the same colors, but {describeScale(COLOR_SCALES.nutrient)}. For a limit, {describeScale(COLOR_SCALES.max)}. For fat and carbs, {describeScale(COLOR_SCALES.range)}.
                 </p>
             </Subsection>
 

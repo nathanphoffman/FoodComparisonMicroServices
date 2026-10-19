@@ -1,18 +1,11 @@
 import { MICRONUTRIENT_KEYS, type NutritionDetail } from '../FoodTableTypes';
 import { MICRONUTRIENT_INFO, aminoAcidProfile, nutritionScale } from '../FoodTableCalculations';
 import { dailyNeeds, needsLabel, DEFAULT_NUTRIENT_STANDARD, type DietSettings, type NutrientStandard } from '../FoodTableRda';
-import { dailyTargets, targetColor } from '../FoodTableTargets';
+import { dailyTargets, targetColor, scaleColor, COLOR_SCALES } from '../FoodTableTargets';
 import { Tooltip, TooltipSection, TooltipRow } from '../../Table/Tooltip';
 
-// Colour for a whole-diet % of daily need: red under 50, orange 50–75, yellow 75–125 (about right),
-// green 125–200, blue over 200 (not necessarily bad, just a lot).
-function needColor(percent: number): string {
-  if (percent < 50) return 'text-red-400';
-  if (percent < 75) return 'text-orange-300';
-  if (percent < 125) return 'text-yellow-300';
-  if (percent <= 200) return 'text-green-300';
-  return 'text-blue-300';
-}
+// Colour for a whole-diet % of daily need; the cutoffs are in COLOR_SCALES.
+const needColor = (percent: number) => scaleColor(percent, COLOR_SCALES.nutrient);
 
 // diet (diet row only) holds the user's whole-day calories, sex and age. Calories scale the per-100-calorie
 // amounts up to the whole day, so 10% per 100 cal on a 2000 cal diet reads (200%); sex and age pick

@@ -73,29 +73,48 @@ export function dailyTargets(
     return targets;
 }
 
+// ── Tooltip colours ───────────────────────────────────────────────────────────
+
+type Color = 'blue' | 'green' | 'yellow' | 'orange' | 'red';
+const COLOR_CLASS: Record<Color, string> = { blue: 'text-blue-300', green: 'text-green-300', yellow: 'text-yellow-300', orange: 'text-orange-300', red: 'text-red-400' };
+
 /**
- * Tooltip text colour for a % of target, on one scale: blue very good, green good, yellow neutral, orange sort of bad,
- * red very bad. A limit is better the further under it; a range is best near its middle; for something to reach, more is
- * better (blue for a lot, which isn't bad, just worth calling out).
+ * A colour scale for a % of target. `bands` run from the first to the last cutoff and the first one the percent fits wins;
+ * anything past the last cutoff gets `beyond`. With `aroundTarget` the cutoffs measure how far the percent is from 100
+ * instead (so a range is best near its middle). `exclusive` makes a cutoff count only below it, not at it.
  */
+type ColorScale = { bands: { upTo: number; color: Color }[]; beyond: Color; aroundTarget?: boolean; exclusive?: boolean };
+
+/**
+ * Blue very good, green good, yellow neutral, orange sort of bad, red very bad. A limit ('max') is better the further
+ * under it; a range is best near its middle; for something to reach ('min') more is better (blue for a lot, which isn't
+ * bad, just worth calling out). `nutrient` is the same as 'min' for vitamins and minerals, which go blue sooner.
+ */
+export const COLOR_SCALES = {
+    max: { bands: [{ upTo: 50, color: 'blue' }, { upTo: 100, color: 'green' }, { upTo: 125, color: 'yellow' }, { upTo: 150, color: 'orange' }], beyond: 'red' },
+    range: { bands: [{ upTo: 10, color: 'blue' }, { upTo: 25, color: 'green' }, { upTo: 40, color: 'yellow' }, { upTo: 50, color: 'orange' }], beyond: 'red', aroundTarget: true },
+    min: { bands: [{ upTo: 50, color: 'red' }, { upTo: 75, color: 'orange' }, { upTo: 125, color: 'yellow' }, { upTo: 250, color: 'green' }], beyond: 'blue', exclusive: true },
+    nutrient: { bands: [{ upTo: 50, color: 'red' }, { upTo: 75, color: 'orange' }, { upTo: 125, color: 'yellow' }, { upTo: 200, color: 'green' }], beyond: 'blue', exclusive: true },
+} satisfies Record<string, ColorScale>;
+
+/** The text colour class for a % of target on the given scale. */
+export function scaleColor(percent: number, scale: ColorScale): string {
+    const value = scale.aroundTarget ? Math.abs(percent - 100) : percent;
+    const band = scale.bands.find(b => scale.exclusive ? value < b.upTo : value <= b.upTo);
+    return COLOR_CLASS[band?.color ?? scale.beyond];
+}
+
 export function targetColor(percent: number, kind: TargetKind): string {
-    if (kind === 'max') {
-        if (percent <= 50) return 'text-blue-300';
-        if (percent <= 100) return 'text-green-300';
-        if (percent <= 125) return 'text-yellow-300';
-        if (percent <= 150) return 'text-orange-300';
-        return 'text-red-400';
-    }
-    if (kind === 'range') {
-        if (percent >= 90 && percent <= 110) return 'text-blue-300';
-        if (percent >= 75 && percent <= 125) return 'text-green-300';
-        if (percent >= 60 && percent <= 140) return 'text-yellow-300';
-        if (percent >= 50 && percent <= 150) return 'text-orange-300';
-        return 'text-red-400';
-    }
-    if (percent < 50) return 'text-red-400';
-    if (percent < 75) return 'text-orange-300';
-    if (percent < 125) return 'text-yellow-300';
-    if (percent <= 250) return 'text-green-300';
-    return 'text-blue-300';
+    return scaleColor(percent, COLOR_SCALES[kind]);
+}
+
+/** The scale in words for the explainer, e.g. "under 50% is red, 50–75% orange and over 75% blue". */
+export function describeScale(scale: ColorScale): string {
+    const { bands, beyond, aroundTarget, exclusive } = scale;
+    const parts = bands.map((band, i) => {
+        if (aroundTarget) return `${100 - band.upTo}–${100 + band.upTo}% ${i === 0 ? 'is ' : ''}${band.color}`;
+        return i === 0 ? `${exclusive ? 'under' : 'up to'} ${band.upTo}% is ${band.color}` : `${bands[i - 1].upTo}–${band.upTo}% ${band.color}`;
+    });
+    parts.push(aroundTarget ? `further out ${beyond}` : `over ${bands[bands.length - 1].upTo}% ${beyond}`);
+    return `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
 }
