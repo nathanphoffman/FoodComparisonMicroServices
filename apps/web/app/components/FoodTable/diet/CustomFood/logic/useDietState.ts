@@ -5,44 +5,17 @@ import type { DietSettings } from '../../../nutrition/FoodTableRda';
 import { loadSaved, readDietFile, save, type Saved } from './CustomFoodSaved';
 import { caloriesPerDayIn, settingsOf, toInput, type BuilderFood } from './CustomFoodMath';
 
-type Options = {
-    custom: { slug: string; name: string; storageKey: string };
-    foods: BuilderFood[];
-    onChange: (food: CustomFoodInput) => void;
-    onSettingsChange?: (settings: DietSettings) => void;
-};
+type Custom = { slug: string; name: string; storageKey: string };
 
-/**
- * Everything a custom food remembers: the saved diet, keeping it in this browser, telling the table when it changes,
- * importing a file, and the problem message to show when any of that goes wrong.
- */
-export function useDietState({ custom, foods, onChange, onSettingsChange }: Options) {
-    const { slug, name, storageKey } = custom;
+/** The saved diet, kept in this browser. `problem` is what went wrong loading or saving it, for the user to read. */
+function useSavedDiet(storageKey: string, foods: BuilderFood[]) {
     const [loaded] = useState(() => loadSaved(storageKey, foods));
     const [saved, setSaved] = useState<Saved>(loaded.saved);
-    // What went wrong loading, saving or importing the diet, for the user to read.
     const [problem, setProblem] = useState<string | null>(loaded.problem);
-    // The calorie lines follow this delayed copy, so they update with the table instead of on every slider move.
-    // The slider being dragged (activeSlug) is the exception: its own line follows the live state.
-    const [settled, setSettled] = useState<Saved>(saved);
-    const [activeSlug, setActiveSlug] = useState<string | null>(null);
 
-    const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
-    const debouncedSettings = useDebouncedCallback((next: Saved) => onSettingsChange?.(settingsOf(next, foods)), DEBOUNCE_MS);
-    const debouncedSettle = useDebouncedCallback((next: Saved) => {
-        setSettled(next);
-        setActiveSlug(null);
-    }, DEBOUNCE_MS);
-
-    // Tell the table about the saved food right away on load.
-    useEffect(() => {
-        onChange(toInput(slug, name, saved));
-        onSettingsChange?.(settingsOf(saved, foods));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    // Keeps the diet in this browser; if that fails, the diet still works but the user is told it won't survive a reload.
-    function persist(next: Saved) {
+    // If the browser refuses the write, the diet still works but the user is told it won't survive a reload.
+    function keep(next: Saved) {
+        setSaved(next);
         try {
             save(storageKey, next);
         } catch (error) {
@@ -51,31 +24,71 @@ export function useDietState({ custom, foods, onChange, onSettingsChange }: Opti
         }
     }
 
+    return { saved, problem, setProblem, keep };
+}
+
+/**
+ * The calorie lines follow a delayed copy of the diet, so they update with the table instead of on every slider move.
+ * The slider being dragged (the active one) is the exception: its own line follows the live diet.
+ */
+function useSettledDiet(initial: Saved, foods: BuilderFood[]) {
+    const [settled, setSettled] = useState<Saved>(initial);
+    const [activeSlug, setActiveSlug] = useState<string | null>(null);
+    const settleLater = useDebouncedCallback((next: Saved) => {
+        setSettled(next);
+        setActiveSlug(null);
+    }, DEBOUNCE_MS);
+
+    const caloriesPerDay = (live: Saved, ingredientSlug: string) =>
+        caloriesPerDayIn(ingredientSlug === activeSlug ? live : settled, foods, ingredientSlug);
+
+    return { settleNow: setSettled, settleLater, markActive: setActiveSlug, caloriesPerDay };
+}
+
+type Options = {
+    custom: Custom;
+    foods: BuilderFood[];
+    onChange: (food: CustomFoodInput) => void;
+    onSettingsChange?: (settings: DietSettings) => void;
+};
+
+/** Everything a custom food remembers: the saved diet, telling the table when it changes, and importing a file. */
+export function useDietState({ custom, foods, onChange, onSettingsChange }: Options) {
+    const { slug, name, storageKey } = custom;
+    const { saved, problem, setProblem, keep } = useSavedDiet(storageKey, foods);
+    const { settleNow, settleLater, markActive, caloriesPerDay } = useSettledDiet(saved, foods);
+    const debouncedOnChange = useDebouncedCallback(onChange, DEBOUNCE_MS);
+    const debouncedSettings = useDebouncedCallback((next: Saved) => onSettingsChange?.(settingsOf(next, foods)), DEBOUNCE_MS);
+
+    // Tell the table about the saved food right away on load.
+    useEffect(() => {
+        onChange(toInput(slug, name, saved));
+        onSettingsChange?.(settingsOf(saved, foods));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     // Changes to the diet's foods or basis: saved, then the table rescores the food and the calorie lines catch up.
     function updateFoods(patch: Pick<Saved, 'basis' | 'ingredients'>) {
         const next = { ...saved, ...patch };
-        setSaved(next);
-        persist(next);
+        keep(next);
         debouncedOnChange(toInput(slug, name, next));
-        debouncedSettle(next);
+        settleLater(next);
     }
 
     // Changes to the person's settings or supplements: nothing to rescore, only the whole-diet tooltip numbers change.
     function updateSettings(patch: Partial<Saved>) {
         const next = { ...saved, ...patch };
-        setSaved(next);
-        persist(next);
+        keep(next);
         debouncedSettings(next);
-        if ('calorieTarget' in patch) debouncedSettle(next);
+        if ('calorieTarget' in patch) settleLater(next);
     }
 
     async function importDiet(file: File | undefined) {
         if (!file) return;
         try {
             const { saved: next, droppedFoodCount } = await readDietFile(file, foods);
-            setSaved(next);
-            setSettled(next);
-            persist(next);
+            keep(next);
+            settleNow(next);
             onChange(toInput(slug, name, next));
             onSettingsChange?.(settingsOf(next, foods));
             setProblem(droppedFoodCount > 0 ? `Imported, but ${droppedFoodCount} food(s) in the file are no longer available and were skipped.` : null);
@@ -85,8 +98,5 @@ export function useDietState({ custom, foods, onChange, onSettingsChange }: Opti
         }
     }
 
-    // The item being adjusted updates live; every other item waits for the debounce.
-    const caloriesPerDay = (ingredientSlug: string) => caloriesPerDayIn(ingredientSlug === activeSlug ? saved : settled, foods, ingredientSlug);
-
-    return { saved, problem, updateFoods, updateSettings, importDiet, caloriesPerDay, markActive: setActiveSlug };
+    return { saved, problem, updateFoods, updateSettings, importDiet, markActive, caloriesPerDay: (ingredientSlug: string) => caloriesPerDay(saved, ingredientSlug) };
 }

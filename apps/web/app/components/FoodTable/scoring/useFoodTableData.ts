@@ -19,3 +19,5 @@ export function useFoodTableData(dataRegion: DataRegion, sliderValues: SliderVal
 
     return { rawFoods, error, loading: loadingApi || !hasScores, scored, scoringError, dismissScoringError, ...custom };
 }
+
+export type FoodTableData = ReturnType<typeof useFoodTableData>;

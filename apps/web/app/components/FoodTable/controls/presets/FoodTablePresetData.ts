@@ -1,6 +1,6 @@
 import type { ScorePriorities } from '../../types/FoodTableTypes';
 import type { FoodWeights, NutritionWeights, SliderValues } from '../../types/FoodTableTypes';
-import { toShares } from '../Sliders/percent/PercentSliders';
+import { toShares } from '../Sliders/percent/percentLevels';
 import { SCORE_PRIORITY_KEYS, SCORE_PRIORITY_LABELS } from '../Sliders/percent/ScorePrioritySliders';
 import { DEFAULT_SCORE_PRIORITY_LEVELS, DEFAULT_FOOD_WEIGHT_LEVELS, DEFAULT_NUTRITION_WEIGHTS } from '../../scoring/FoodTableDefaults';
 import { MAX_PHILOSOPHICAL_KILL, MAX_CAPTIVITY_MULTIPLIER, MAX_OVER_HUNTING } from '../Sliders/value/ValueSliderSettings';
