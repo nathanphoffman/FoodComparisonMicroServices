@@ -5,25 +5,24 @@ import { DietImpactRow } from './Impact/DietImpactRow';
 
 // The diet's overall impact: each scored measure for the whole diet, judged against every other food in the table.
 
-export function DietImpact({ row, scored, foodSlugs, unit, dailyCalories, caloriesPerGram, rawLandM2PerKg, benchmark, benchmarkRawLandM2PerKg }: {
+type Props = {
     row: ScoredRow;
-    scored: Map<string, ScoredRow>;
-    foodSlugs: Set<string>;
+    /** The other foods' scored rows, which the diet is ranked against. */
+    others: ScoredRow[];
     unit: string;
-    dailyCalories: number | null;
-    caloriesPerGram: number | null;
-    /** Physical land (m² per kg) of the whole diet, from its foods. */
-    rawLandM2PerKg: number | null;
-    /** The average American diet, scored the same way as the user's. */
-    benchmark: ScoredRow | null;
-    benchmarkRawLandM2PerKg: number | null;
-}) {
+    /** What turns the diet's per-unit scores into real amounts: the person's day and the diet's calories and land per kg. */
+    amounts: { dailyCalories: number | null; caloriesPerGram: number | null; rawLandM2PerKg: number | null };
+    /** The average American diet, scored the same way as the user's, and its land per kg. */
+    benchmark: { row: ScoredRow | null; rawLandM2PerKg: number | null };
+};
+
+export function DietImpact({ row, others, unit, amounts, benchmark }: Props) {
+    const { dailyCalories, caloriesPerGram, rawLandM2PerKg } = amounts;
     // kg of this diet eaten in a day, from your calorie total and the diet's calories per gram; without a
     // calorie total the amounts are per 1,000 kcal instead.
     const basis: Basis | null = !caloriesPerGram ? null : dailyCalories
         ? { kg: dailyCalories / (caloriesPerGram * 1000), perDay: true, rawLandM2PerKg }
         : { kg: 1 / caloriesPerGram, perDay: false, rawLandM2PerKg };
-    const others = [...scored.values()].filter(food => foodSlugs.has(food.slug));
 
     return (
         <section className="mt-5 pt-4 border-t border-neutral-200">
@@ -41,7 +40,7 @@ export function DietImpact({ row, scored, foodSlugs, unit, dailyCalories, calori
             </div>
             <div className="divide-y divide-neutral-100">
                 {METRICS.map(metric => (
-                    <DietImpactRow key={metric.label} metric={metric} row={row} others={others} basis={basis} benchmark={benchmark} benchmarkRawLandM2PerKg={benchmarkRawLandM2PerKg} />
+                    <DietImpactRow key={metric.label} metric={metric} row={row} others={others} basis={basis} benchmark={benchmark.row} benchmarkRawLandM2PerKg={benchmark.rawLandM2PerKg} />
                 ))}
             </div>
             <p className="mt-2 text-neutral-500">

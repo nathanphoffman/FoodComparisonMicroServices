@@ -12,19 +12,21 @@ import { SupplementEditor } from './CustomFood/inputs/SupplementEditor';
 import { IngredientPicker } from './CustomFood/inputs/IngredientPicker';
 import { IngredientList } from './CustomFood/inputs/IngredientList';
 
-type Props = {
-    slug: string;
-    name: string;
-    storageKey: string;
+/** What turns a custom food into the whole-diet builder: calories and daily needs, and the breakdown window. */
+export type DietOptions = {
     /** Whose recommended intakes a supplement's % RDA is measured against. */
-    standard?: NutrientStandard;
-    foods: BuilderFood[];
-    /** Shows a total calories / day field and each food's calories per day and week. */
-    showCalories?: boolean;
+    standard: NutrientStandard;
     /** Opens the diet's nutrition breakdown; the "Show Diet" button is greyed out until a food is added. */
-    onShow?: () => void;
+    onShow: () => void;
     /** Reports the daily calories, sex and age once typing settles (and once on load). */
-    onSettingsChange?: (settings: DietSettings) => void;
+    onSettingsChange: (settings: DietSettings) => void;
+};
+
+type Props = {
+    custom: { slug: string; name: string; storageKey: string };
+    foods: BuilderFood[];
+    /** Set for the whole diet: shows the calories / day field and each food's calories per day and week. */
+    diet?: DietOptions;
     onChange: (food: CustomFoodInput) => void;
 };
 
@@ -33,7 +35,11 @@ type Props = {
  * slider whose share becomes its percentage of calories or of mass. Saved in localStorage, so it survives reloads,
  * and can be exported to a file and imported back.
  */
-export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DEFAULT_NUTRIENT_STANDARD, showCalories, onShow, onSettingsChange, onChange }: Props) {
+export function CustomFoodBuilder({ custom, foods, diet, onChange }: Props) {
+    const { slug, name, storageKey } = custom;
+    const showCalories = !!diet;
+    const standard = diet?.standard ?? DEFAULT_NUTRIENT_STANDARD;
+    const { onShow, onSettingsChange } = diet ?? {};
     const [loaded]                        = useState(() => loadSaved(storageKey, foods));
     const [saved, setSaved]               = useState<Saved>(loaded.saved);
     // Shown in red under the buttons: what went wrong loading, saving or importing the diet.

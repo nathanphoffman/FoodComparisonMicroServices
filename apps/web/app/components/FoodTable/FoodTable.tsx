@@ -86,24 +86,33 @@ export function FoodTable() {
         ...(column.key === 'rank' ? {} : columnSortProps(column.key)),
     }));
 
+    const showDietModal = useCallback(() => setShowDiet(true), []);
+    // Grouped props are memoized so the (memoized) inputs only re-render when something in them changes.
+    const dietHandlers = useMemo(
+        () => ({ onCustomFoodChange, onSettingsChange: setDietSettings, onShow: showDietModal }),
+        [onCustomFoodChange, showDietModal],
+    );
+    const dataSettings = useMemo(
+        () => ({ dataRegion, onDataRegionChange: setDataRegion, nutrientStandard, onNutrientStandardChange: setNutrientStandard }),
+        [dataRegion, nutrientStandard],
+    );
+    const scoringErrorBanner = useMemo(
+        () => scoringError === null ? null : { message: scoringError, onDismiss: dismissScoringError },
+        [scoringError, dismissScoringError],
+    );
+
     if (error)   return <p className="mt-6 text-red-600">Failed to load data: {error}</p>;
     if (loadingApi || loadingScore) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
 
     return (
         <div className="mt-6">
             <FoodTableInputs
-                onSliderValuesChange={setSliderValues}
-                onCustomFoodChange={onCustomFoodChange}
-                onDietSettingsChange={setDietSettings}
-                onShowDiet={() => setShowDiet(true)}
-                scoringError={scoringError}
-                onDismissScoringError={dismissScoringError}
-                onActiveColsChange={setActiveCols}
                 foods={rawFoods}
-                dataRegion={dataRegion}
-                onDataRegionChange={setDataRegion}
-                nutrientStandard={nutrientStandard}
-                onNutrientStandardChange={setNutrientStandard}
+                onSliderValuesChange={setSliderValues}
+                onActiveColsChange={setActiveCols}
+                dataSettings={dataSettings}
+                diet={dietHandlers}
+                scoringError={scoringErrorBanner}
             />
 
             <FoodTableFilters selected={foodFilter} onChange={setFoodFilter} />
@@ -115,13 +124,12 @@ export function FoodTable() {
             {showDiet && customNutrition.get(DIET_SLUG) && (
                 <DietModal
                     nutrition={customNutrition.get(DIET_SLUG)!}
-                    dietSettings={dietSettings}
-                    nutrientStandard={nutrientStandard}
-                    scored={scored}
-                    foodSlugs={foodSlugs}
-                    unit={unit}
-                    rawLandM2PerKg={customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null}
-                    benchmarkRawLandM2PerKg={averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, rawLandOf) : null}
+                    settings={{ diet: dietSettings, standard: nutrientStandard }}
+                    scoring={{ scored, foodSlugs, unit }}
+                    rawLandM2PerKg={{
+                        diet: customFoodsBySlug[DIET_SLUG] ? blendLandM2PerKg(customFoodsBySlug[DIET_SLUG], rawFoods, rawLandOf) : null,
+                        benchmark: averageDiet ? blendLandM2PerKg(averageDiet, rawFoods, rawLandOf) : null,
+                    }}
                     onClose={closeDiet}
                 />
             )}

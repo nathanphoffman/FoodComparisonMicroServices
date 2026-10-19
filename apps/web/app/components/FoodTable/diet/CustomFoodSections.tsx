@@ -1,31 +1,24 @@
-import { CustomFoodBuilder } from './CustomFoodBuilder';
+import { CustomFoodBuilder, type DietOptions } from './CustomFoodBuilder';
 import { CUSTOM_FOODS, DIET_SLUG, type CustomFoodInput } from '../types/FoodTableTypes';
-import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
 
 type Props = {
     foods: { slug: string; name: string; calories?: number }[];
-    nutrientStandard: NutrientStandard;
-    onShowDiet: () => void;
-    onDietSettingsChange: (settings: DietSettings) => void;
+    /** How the whole-diet builder behaves; the other custom foods don't get it. */
+    diet: DietOptions;
     onCustomFoodChange: (food: CustomFoodInput) => void;
 };
 
 /** One builder per custom food (the diet), each under its own heading. */
-export function CustomFoodSections({ foods, nutrientStandard, onShowDiet, onDietSettingsChange, onCustomFoodChange }: Props) {
+export function CustomFoodSections({ foods, diet, onCustomFoodChange }: Props) {
     return (
         <>
             {CUSTOM_FOODS.map(custom => (
                 <div key={custom.slug} className="mb-4 px-1">
                     <p className="text-xs font-medium text-neutral-500 mb-2 uppercase tracking-wide">{custom.heading}</p>
                     <CustomFoodBuilder
-                        slug={custom.slug}
-                        name={custom.name}
-                        storageKey={custom.storageKey}
+                        custom={custom}
                         foods={foods}
-                        standard={nutrientStandard}
-                        showCalories={custom.slug === DIET_SLUG}
-                        onShow={onShowDiet}
-                        onSettingsChange={onDietSettingsChange}
+                        diet={custom.slug === DIET_SLUG ? diet : undefined}
                         onChange={onCustomFoodChange}
                     />
                 </div>

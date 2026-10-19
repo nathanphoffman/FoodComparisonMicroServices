@@ -6,29 +6,23 @@ import type { SortKey } from '../../scoring/FoodTableSort';
 import { NUTRIENT_STANDARD_OPTIONS, type NutrientStandard } from '../../nutrition/FoodTableRda';
 import { COLUMN_CONFIG, DATA_REGION_OPTIONS } from '../../scoring/FoodTableDefaults';
 
-type Props = {
+/** Which data region and whose daily needs the table uses, with the setters for both. */
+export type DataSettings = {
     dataRegion: DataRegion;
     onDataRegionChange: (region: DataRegion) => void;
     nutrientStandard: NutrientStandard;
     onNutrientStandardChange: (standard: NutrientStandard) => void;
-    referenceSlug: string;
-    onReferenceSlugChange: (slug: string) => void;
-    foods: { slug: string; name: string }[];
-    visibleColumns: Set<SortKey>;
-    onToggleColumn: (key: SortKey) => void;
 };
 
-export function FoodTableToolbar({
-    dataRegion,
-    onDataRegionChange,
-    nutrientStandard,
-    onNutrientStandardChange,
-    referenceSlug,
-    onReferenceSlugChange,
-    foods,
-    visibleColumns,
-    onToggleColumn,
-}: Props) {
+type Props = {
+    dataSettings: DataSettings;
+    reference: { slug: string; onChange: (slug: string) => void };
+    foods: { slug: string; name: string }[];
+    columns: { visible: Set<SortKey>; onToggle: (key: SortKey) => void };
+};
+
+export function FoodTableToolbar({ dataSettings, reference, foods, columns }: Props) {
+    const { dataRegion, onDataRegionChange, nutrientStandard, onNutrientStandardChange } = dataSettings;
     const [showToggle, setShowToggle] = useState(false);
     const toggleRef                   = useRef<HTMLDivElement>(null);
 
@@ -71,8 +65,8 @@ export function FoodTableToolbar({
             <div className="flex items-center gap-2 text-sm text-neutral-500">
                 <span>Compare vs.</span>
                 <select
-                    value={referenceSlug}
-                    onChange={e => onReferenceSlugChange(e.target.value)}
+                    value={reference.slug}
+                    onChange={e => reference.onChange(e.target.value)}
                     className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white max-w-[10rem]"
                 >
                     {[...foods].sort((a, b) => a.name.localeCompare(b.name)).map(f => (
@@ -93,8 +87,8 @@ export function FoodTableToolbar({
                             <label key={col.key} className="flex items-center gap-2 text-sm cursor-pointer text-neutral-700">
                                 <input
                                     type="checkbox"
-                                    checked={visibleColumns.has(col.key)}
-                                    onChange={() => onToggleColumn(col.key)}
+                                    checked={columns.visible.has(col.key)}
+                                    onChange={() => columns.onToggle(col.key)}
                                     className="accent-neutral-700"
                                 />
                                 {col.label}

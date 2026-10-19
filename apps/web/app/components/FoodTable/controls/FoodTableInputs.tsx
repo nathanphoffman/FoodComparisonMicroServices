@@ -4,45 +4,31 @@ import { memo, useState } from 'react';
 import { FoodTableSliders } from './FoodTableSliders';
 import { CustomFoodSections } from '../diet/CustomFoodSections';
 import { ScoringErrorBanner } from './ScoringErrorBanner';
-import type { ColConfig, CustomFoodInput, DataRegion, SliderValues } from '../types/FoodTableTypes';
+import type { ColConfig, CustomFoodInput, SliderValues } from '../types/FoodTableTypes';
 import { DEFAULT_SLIDER_VALUES } from '../scoring/FoodTableDefaults';
 import { useColumnVisibility } from './toolbar/useColumnVisibility';
 import { FoodTablePresets } from './presets/FoodTablePresets';
 import { PRESETS, DEFAULT_PRESET_KEY } from './presets/FoodTablePresetData';
 import type { Preset } from './presets/FoodTablePresetData';
-import type { DietSettings, NutrientStandard } from '../nutrition/FoodTableRda';
-import { FoodTableToolbar } from './toolbar/FoodTableToolbar';
+import type { DietSettings } from '../nutrition/FoodTableRda';
+import { FoodTableToolbar, type DataSettings } from './toolbar/FoodTableToolbar';
 
 type Props = {
-    onSliderValuesChange: (v: SliderValues) => void;
-    onCustomFoodChange:    (food: CustomFoodInput) => void;
-    onDietSettingsChange:  (settings: DietSettings) => void;
-    onShowDiet:            () => void;
-    scoringError:          string | null;
-    onDismissScoringError: () => void;
-    onActiveColsChange: (cols: ColConfig[]) => void;
     foods: { slug: string; name: string; calories?: number }[];
-    dataRegion: DataRegion;
-    onDataRegionChange: (region: DataRegion) => void;
-    nutrientStandard: NutrientStandard;
-    onNutrientStandardChange: (standard: NutrientStandard) => void;
+    onSliderValuesChange: (v: SliderValues) => void;
+    onActiveColsChange: (cols: ColConfig[]) => void;
+    dataSettings: DataSettings;
+    /** Everything the diet builder reports back: its food, its daily settings, and a request to show the breakdown. */
+    diet: {
+        onCustomFoodChange: (food: CustomFoodInput) => void;
+        onSettingsChange: (settings: DietSettings) => void;
+        onShow: () => void;
+    };
+    scoringError: { message: string; onDismiss: () => void } | null;
 };
 
 // Memoized so opening/closing the food detail modal doesn't re-render all the sliders
-export const FoodTableInputs = memo(function FoodTableInputs({
-    onSliderValuesChange,
-    onCustomFoodChange,
-    onDietSettingsChange,
-    onShowDiet,
-    scoringError,
-    onDismissScoringError,
-    onActiveColsChange,
-    foods,
-    dataRegion,
-    onDataRegionChange,
-    nutrientStandard,
-    onNutrientStandardChange,
-}: Props) {
+export const FoodTableInputs = memo(function FoodTableInputs({ foods, onSliderValuesChange, onActiveColsChange, dataSettings, diet, scoringError }: Props) {
     const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
     const { visibleColumns, toggleColumn } = useColumnVisibility(onActiveColsChange);
     const [showControls, setShowControls] = useState(false);
@@ -91,51 +77,23 @@ export const FoodTableInputs = memo(function FoodTableInputs({
             </button>
             <div className={showControls ? 'block' : 'hidden md:block'}>
                 <FoodTableSliders
-                    onChange={value => setSlider('weights', value)}
-                    onScorePrioritiesChange={value => setSlider('scorePriorities', value)}
-                    onGreenWaterChange={value => setSlider('greenWaterWeight', value)}
-                    onGreyWaterChange={value => setSlider('greyWaterWeight', value)}
-                    onPhilosophicalKillChange={value => setSlider('killMultiplier', value)}
-                    onCaptivityChange={value => setSlider('captivityMultiplier', value)}
-                    onNeuronExponentChange={value => setSlider('neuronExponent', value)}
-                    onWeightExponentChange={value => setSlider('weightExponent', value)}
-                    onFinalIntelligenceExponentChange={value => setSlider('finalIntelligenceExponent', value)}
-                    onZeroBetterMultiplierChange={value => setSlider('zeroBetterMultiplier', value)}
-                    onLandTypeWeightsChange={value => setSlider('landTypeWeights', value)}
-                    onNutritionWeightsChange={value => setSlider('nutritionWeights', value)}
-                    onWinDampeningChange={value => setSlider('winDampening', value)}
-                    onOverHuntingChange={value => setSlider('overHuntingFactor', value)}
-                    onOverGatheringChange={value => setSlider('overGatheringFactor', value)}
+                    onChange={setSlider}
+                    values={sliderValues}
+                    presetLevels={{ foodWeights: foodWeightLevels, scorePriorities: scorePriorityLevels }}
                     resetKey={sliderResetKey}
-                    foodWeightLevels={foodWeightLevels}
-                    nutritionWeights={sliderValues.nutritionWeights}
-                    scorePriorityLevels={scorePriorityLevels}
-                    killMultiplier={sliderValues.killMultiplier}
-                    captivityMultiplier={sliderValues.captivityMultiplier}
-                    overHuntingFactor={sliderValues.overHuntingFactor}
-                    neuronExponent={sliderValues.neuronExponent}
-                    weightExponent={sliderValues.weightExponent}
-                    finalIntelligenceExponent={sliderValues.finalIntelligenceExponent}
                 />
                 <CustomFoodSections
                     foods={foods}
-                    nutrientStandard={nutrientStandard}
-                    onShowDiet={onShowDiet}
-                    onDietSettingsChange={onDietSettingsChange}
-                    onCustomFoodChange={onCustomFoodChange}
+                    diet={{ standard: dataSettings.nutrientStandard, onShow: diet.onShow, onSettingsChange: diet.onSettingsChange }}
+                    onCustomFoodChange={diet.onCustomFoodChange}
                 />
             </div>
-            {scoringError && <ScoringErrorBanner message={scoringError} onDismiss={onDismissScoringError} />}
+            {scoringError && <ScoringErrorBanner message={scoringError.message} onDismiss={scoringError.onDismiss} />}
             <FoodTableToolbar
-                dataRegion={dataRegion}
-                onDataRegionChange={onDataRegionChange}
-                nutrientStandard={nutrientStandard}
-                onNutrientStandardChange={onNutrientStandardChange}
-                referenceSlug={sliderValues.referenceSlug}
-                onReferenceSlugChange={slug => setSlider('referenceSlug', slug)}
+                dataSettings={dataSettings}
+                reference={{ slug: sliderValues.referenceSlug, onChange: slug => setSlider('referenceSlug', slug) }}
                 foods={foods}
-                visibleColumns={visibleColumns}
-                onToggleColumn={toggleColumn}
+                columns={{ visible: visibleColumns, onToggle: toggleColumn }}
             />
         </>
     );
