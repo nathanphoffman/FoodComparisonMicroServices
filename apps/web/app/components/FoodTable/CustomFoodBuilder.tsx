@@ -53,31 +53,36 @@ const formatPercent = (percent: number) => `${Number(percent.toFixed(percent < 1
 
 // ── Saved state (localStorage) ────────────────────────────────────────────────
 
+const EMPTY_SAVED: Saved = { supplements: [], pillAbsorption: DEFAULT_PILL_ABSORPTION, basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
+
+/** Cleans up untrusted data (from localStorage or an imported file); null if it isn't a diet at all. */
+function sanitize(parsed: Saved | null, foods: { slug: string }[]): Saved | null {
+    if (!parsed || !Array.isArray(parsed.ingredients)) return null;
+    return {
+        basis: parsed.basis === 'mass' ? 'mass' : 'calories',
+        calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
+        sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
+        age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
+        activity: Number.isInteger(parsed.activity) && parsed.activity >= 0 && parsed.activity < ACTIVITY_LEVELS.length ? parsed.activity : DEFAULT_ACTIVITY,
+        daysBetween: Number.isFinite(parsed.daysBetween) && (parsed.daysBetween ?? 0) > 0 ? parsed.daysBetween : DEFAULT_DAYS_BETWEEN,
+        weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
+        pillAbsorption: Number.isFinite(parsed.pillAbsorption) && parsed.pillAbsorption >= 0 && parsed.pillAbsorption <= 100 ? parsed.pillAbsorption : DEFAULT_PILL_ABSORPTION,
+        supplements: Array.isArray(parsed.supplements)
+            ? parsed.supplements.filter(s => MICRONUTRIENT_KEYS.includes(s?.key) && s.dose > 0 && s.perWeek > 0)
+                .map(s => ({ ...s, percent: !!s.percent }))
+            : [],
+        // Drop foods that no longer exist.
+        ingredients: parsed.ingredients
+            .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
+            .map(i => ({ ...i, fine: !!i.fine })),
+    };
+}
+
 function loadSaved(storageKey: string, foods: { slug: string }[]): Saved {
-    const empty: Saved = { supplements: [], pillAbsorption: DEFAULT_PILL_ABSORPTION, basis: 'calories', ingredients: [], calorieTarget: null, sex: null, age: null, weightLb: null, daysBetween: DEFAULT_DAYS_BETWEEN, activity: DEFAULT_ACTIVITY };
     try {
-        const parsed = JSON.parse(localStorage.getItem(storageKey) ?? 'null') as Saved | null;
-        if (!parsed || !Array.isArray(parsed.ingredients)) return empty;
-        return {
-            basis: parsed.basis === 'mass' ? 'mass' : 'calories',
-            calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
-            sex: parsed.sex === 'male' || parsed.sex === 'female' ? parsed.sex : null,
-            age: Number.isFinite(parsed.age) && (parsed.age ?? 0) > 0 ? parsed.age : null,
-            activity: Number.isInteger(parsed.activity) && parsed.activity >= 0 && parsed.activity < ACTIVITY_LEVELS.length ? parsed.activity : DEFAULT_ACTIVITY,
-            daysBetween: Number.isFinite(parsed.daysBetween) && (parsed.daysBetween ?? 0) > 0 ? parsed.daysBetween : DEFAULT_DAYS_BETWEEN,
-            weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
-            pillAbsorption: Number.isFinite(parsed.pillAbsorption) && parsed.pillAbsorption >= 0 && parsed.pillAbsorption <= 100 ? parsed.pillAbsorption : DEFAULT_PILL_ABSORPTION,
-            supplements: Array.isArray(parsed.supplements)
-                ? parsed.supplements.filter(s => MICRONUTRIENT_KEYS.includes(s?.key) && s.dose > 0 && s.perWeek > 0)
-                    .map(s => ({ ...s, percent: !!s.percent }))
-                : [],
-            // Drop foods that no longer exist.
-            ingredients: parsed.ingredients
-                .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
-                .map(i => ({ ...i, fine: !!i.fine })),
-        };
+        return sanitize(JSON.parse(localStorage.getItem(storageKey) ?? 'null'), foods) ?? EMPTY_SAVED;
     } catch {
-        return empty;
+        return EMPTY_SAVED;
     }
 }
 
@@ -251,6 +256,35 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
         debouncedSettings(next);
     }
 
+    function exportDiet() {
+        const blob = new Blob([JSON.stringify({ type: 'diet', version: 1, ...saved }, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${slug}-${new Date().toISOString().slice(0, 10)}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+    }
+
+    async function importDiet(file: File | undefined) {
+        if (!file) return;
+        let next: Saved | null = null;
+        try {
+            next = sanitize(JSON.parse(await file.text()), foods);
+        } catch {
+            // Falls through to the error below.
+        }
+        if (!next) {
+            alert("That file isn't a diet export.");
+            return;
+        }
+        setSaved(next);
+        setSettled(next);
+        save(storageKey, next);
+        onChange(toInput(next));
+        onSettingsChange?.(settingsOf(next));
+    }
+
     function add() {
         const food = foods.find(f => f.slug === selectedSlug);
         if (!food || ingredients.some(i => i.slug === selectedSlug)) return;
@@ -301,6 +335,25 @@ export function CustomFoodBuilder({ slug, name, storageKey, foods, standard = DE
 
     return (
         <div className="flex flex-col gap-2">
+            {showCalories && (
+                <div className="flex gap-2">
+                    <button
+                        onClick={exportDiet}
+                        className="px-3 py-1 text-sm rounded border border-neutral-200 text-neutral-600 hover:bg-neutral-50"
+                    >
+                        Export Diet
+                    </button>
+                    <label className="px-3 py-1 text-sm rounded border border-neutral-200 text-neutral-600 hover:bg-neutral-50 cursor-pointer">
+                        Import Diet
+                        <input
+                            type="file"
+                            accept="application/json,.json"
+                            className="hidden"
+                            onChange={e => { importDiet(e.target.files?.[0]); e.target.value = ''; }}
+                        />
+                    </label>
+                </div>
+            )}
             {showCalories && onShow && (
                 <button
                     onClick={onShow}
