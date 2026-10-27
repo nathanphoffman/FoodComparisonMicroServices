@@ -1,0 +1,3 @@
+# Test files named *.test.ts sit beside the code, so codequality doesn't recognise them as tests.
+# Their describe/it callbacks are nested closures by design, so Rule 3 skips them.
+*.test.ts RULE-03
