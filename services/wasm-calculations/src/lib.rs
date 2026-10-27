@@ -24,13 +24,6 @@ pub fn score(input_js: JsValue) -> Result<JsValue, JsValue> {
     let perf = web_sys::window().and_then(|window| window.performance());
     let started_at = perf.as_ref().map(|performance| performance.now());
 
-    // temporary: busy-wait 50ms to verify the timer reads correctly — remove after confirming
-    if let Some(ref performance) = perf {
-        let deadline = performance.now() + 50.0;
-
-        while performance.now() < deadline {}
-    }
-
     let scored = calculations::apply(input.foods, &input.query);
 
     if let (Some(performance), Some(start)) = (perf, started_at) {

@@ -6,11 +6,13 @@ shared.py (building blocks), foods.py, sources.py and impacts.py. Import from he
 """
 
 from .shared import SourcedNumber, NutritionValue, MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, SourcedNutrition
-from .foods import Food, Animal, Plant, AnimalFeed, Composite, CompositeIngredient
+from .foods import FOOD_TYPE_PLANT, FOOD_TYPE_ANIMAL, Food, Animal, Plant, AnimalFeed, Composite, CompositeIngredient
 from .sources import Source
 from .impacts import PlantAnimalKill, Pesticide, PlantPesticide
 
 __all__ = [
+    "FOOD_TYPE_PLANT",
+    "FOOD_TYPE_ANIMAL",
     "SourcedNumber",
     "NutritionValue",
     "MICRONUTRIENT_KEYS",

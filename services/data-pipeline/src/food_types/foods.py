@@ -7,6 +7,9 @@ TypedDicts, so they map cleanly to/from JSON without extra parsing.
 from typing import TypedDict, Literal, NotRequired
 from .shared import SourcedNumber, SourcedNutrition
 
+FOOD_TYPE_PLANT = "plant"
+FOOD_TYPE_ANIMAL = "animal"
+
 class Food(TypedDict):
     id: int
     slug: str

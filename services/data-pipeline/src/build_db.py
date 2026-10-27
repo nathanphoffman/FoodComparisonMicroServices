@@ -93,15 +93,9 @@ def _populate_normalized_database(
         region_pesticides: list[Pesticide] = resolve_regions(pesticides, region)
         insert_foods_normalized(
             connection,
-            foods=region_food_data.foods,
-            plants=region_food_data.plants,
-            animals=region_food_data.animals,
-            plant_pesticides=region_food_data.plant_pesticides,
+            food_data=region_food_data,
             pesticides=region_pesticides,
-            animal_feed=region_food_data.animal_feed,
             region=region,
-            composites=region_food_data.composites,
-            composite_ingredients=region_food_data.composite_ingredients,
         )
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use super::blend::Blend;
 use super::scoring::{compute_improvement, DimensionCaps};
-use crate::models::{FoodRow, ImprovementDetail, ScoredRow, SliderQuery};
+use crate::models::{FoodRow, ImprovementDetail, ScoredRow, SliderQuery, FOOD_TYPE_ANIMAL};
 
 /// Everything needed to turn a row into its final Improvement score: the reference
 /// food it's compared against, the batch caps, and each food's wild penalty.
@@ -81,7 +81,7 @@ fn wild_penalty(food: &FoodRow, query: &SliderQuery) -> f64 {
         return 1.0;
     }
 
-    let factor = if food.food_type == "animal" { query.over_hunting_factor } else { query.over_gathering_factor };
+    let factor = if food.food_type == FOOD_TYPE_ANIMAL { query.over_hunting_factor } else { query.over_gathering_factor };
 
     factor.max(1.0)
 }

@@ -14,6 +14,7 @@ from .raw_plant import RawPlant
 from ..sourced_array import SourcedArray
 
 SQUARE_METERS_PER_HA = 10000
+LAND_FRACTION_DECIMALS = 4
 
 class IngredientEntry(CropShare):
     """One ingredient: `fraction` kg per kg of product, made from `base_kg_per_kg` kg of
@@ -90,7 +91,7 @@ class RawComposite:
         if total_area <= 0:
             return None
 
-        return {land_type: round(value / total_area, 4) for land_type, value in totals.items() if value > 0}
+        return {land_type: round(value / total_area, LAND_FRACTION_DECIMALS) for land_type, value in totals.items() if value > 0}
 
     def availability_gg(self, own_availability_gg: float | None) -> float | None:
         """Geometric mean of the product's own supply and its ingredients' supply.

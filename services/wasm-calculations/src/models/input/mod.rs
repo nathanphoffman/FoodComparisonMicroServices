@@ -13,7 +13,7 @@ mod slider_query;
 use serde::Deserialize;
 
 pub use amino_acids::AminoAcids;
-pub use food_row::FoodRow;
+pub use food_row::{FoodRow, FOOD_TYPE_ANIMAL, FOOD_TYPE_PLANT};
 pub use land_types::LandTypes;
 pub use nutrition_weights::NutritionWeights;
 pub use slider_query::{Basis, Diet, SliderQuery};

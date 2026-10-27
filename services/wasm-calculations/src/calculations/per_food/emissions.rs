@@ -1,4 +1,4 @@
-use crate::models::{EmissionsBreakdown, FoodRow};
+use crate::models::{EmissionsBreakdown, FoodRow, FOOD_TYPE_ANIMAL};
 
 // Global warming potentials: how many times more a kg of methane or nitrous oxide warms than a kg of CO2, over 100 years.
 // The web app shows copies of these in its working (FoodDetail/figures/math/MathShared.ts);
@@ -8,7 +8,7 @@ const GWP_N2O: f64 = 265.0;
 
 /// Greenhouse gas per kg in CO2-equivalent, with a per-gas breakdown for animals that have all three gases recorded.
 pub(super) fn compute_emissions(food: &FoodRow) -> (f64, Option<EmissionsBreakdown>) {
-    if food.food_type == "animal" {
+    if food.food_type == FOOD_TYPE_ANIMAL {
         if let (Some(ch4), Some(n2o), Some(co2)) = (
             food.ch4_kg_per_kg_output,
             food.n2o_kg_per_kg_output,

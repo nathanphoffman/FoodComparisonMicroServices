@@ -7,7 +7,7 @@ mod bycatch;
 mod land_harm;
 
 use super::constants::{PASTURE_AGE_YEARS, SQUARE_METERS_PER_HA};
-use crate::models::{FoodRow, SentientHarmDetail, SliderQuery};
+use crate::models::{FoodRow, SentientHarmDetail, SliderQuery, FOOD_TYPE_PLANT};
 use bycatch::bycatch_score;
 use land_harm::{LandHarm, PesticideRates, VictimIntelligence};
 
@@ -19,7 +19,7 @@ pub(in crate::calculations) fn compute_sentient_harm(
 ) -> (f64, SentientHarmDetail) {
     let intel = VictimIntelligence::from_query(query);
 
-    if food.food_type == "plant" {
+    if food.food_type == FOOD_TYPE_PLANT {
         plant_sentient_harm(food, &intel)
     } else {
         animal_sentient_harm(food, &intel, query)

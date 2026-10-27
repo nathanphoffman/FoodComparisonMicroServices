@@ -4,6 +4,9 @@ use super::amino_acids::AminoAcids;
 use super::land_types::LandTypes;
 use super::micronutrients::Micronutrients;
 
+pub const FOOD_TYPE_PLANT: &str = "plant";
+pub const FOOD_TYPE_ANIMAL: &str = "animal";
+
 /// Raw food row returned by the C# data API (GET /api/foods).
 /// Field names are snake_case to match the JSON output from the C# API
 /// (configured with JsonNamingPolicy.SnakeCaseLower).

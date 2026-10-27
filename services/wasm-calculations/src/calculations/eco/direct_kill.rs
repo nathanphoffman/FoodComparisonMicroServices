@@ -1,10 +1,10 @@
 use super::intelligence::{captivity_years_for_slug, compute_intelligence, lifespan_years_for_slug};
-use crate::models::{FoodRow, KillDetail, SliderQuery};
+use crate::models::{FoodRow, KillDetail, SliderQuery, FOOD_TYPE_ANIMAL};
 
 /// Intelligence score of one death of this animal, and the kg of food produced
 /// per producing animal. None for plants and animals missing kill data.
 fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, f64)> {
-    if food.food_type != "animal" {
+    if food.food_type != FOOD_TYPE_ANIMAL {
         return None;
     }
 

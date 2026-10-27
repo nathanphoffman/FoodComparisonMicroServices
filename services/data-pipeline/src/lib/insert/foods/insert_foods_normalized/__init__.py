@@ -11,10 +11,9 @@ the foods_normalized table (the main row + an optional feed-impact row for anima
 
 import sqlite3
 
-from .....food_types import (
-    Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed, Composite, CompositeIngredient,
-)
+from .....food_types import Pesticide
 
+from ....load_foods import CategoryData
 from ....types.food_normalized import FoodNormalized
 from ....types.raw.raw_food import RawFood
 from .lookup_tables import LookupTables
@@ -40,23 +39,14 @@ INSERT_SQL = """INSERT INTO foods_normalized (
 
 def insert(
     connection: sqlite3.Connection,
-    foods: list[Food],
-    plants: list[Plant],
-    animals: list[Animal],
-    plant_pesticides: list[PlantPesticide],
+    food_data: CategoryData,
     pesticides: list[Pesticide],
-    animal_feed: list[AnimalFeed],
     region: str,
-    composites: list[Composite] | None = None,
-    composite_ingredients: list[CompositeIngredient] | None = None,
 ) -> None:
     """Builds and inserts all normalized rows for one region into the foods_normalized table."""
-    tables = LookupTables.build(
-        foods, plants, animals, plant_pesticides, pesticides, animal_feed,
-        composites or [], composite_ingredients or [],
-    )
+    tables = LookupTables.build(food_data, pesticides)
 
-    for food in foods:
+    for food in food_data.foods:
         raw_food = RawFood(
             food,
             build_raw_plant(tables.plant_by_food_id.get(food["id"]), tables),

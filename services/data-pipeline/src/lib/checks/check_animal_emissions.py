@@ -12,6 +12,7 @@ import json
 import sqlite3
 from pathlib import Path
 
+from ...food_types import FOOD_TYPE_ANIMAL
 from ...paths import TEXT_ENCODING
 from ..load_foods import CATEGORY_FILES
 from ..database.regions import Region, resolve_regions
@@ -72,7 +73,7 @@ def _load_animal_items(data_dir: Path) -> list[dict]:
         if category_path.exists():
             items.extend(
                 item for item in json.loads(category_path.read_text(encoding=TEXT_ENCODING))
-                if item.get("type") == "animal"
+                if item.get("type") == FOOD_TYPE_ANIMAL
             )
 
     return items

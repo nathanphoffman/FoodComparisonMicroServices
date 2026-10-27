@@ -1,8 +1,8 @@
-use crate::models::{FoodRow, SliderQuery, WaterDetail};
+use crate::models::{FoodRow, SliderQuery, WaterDetail, FOOD_TYPE_ANIMAL};
 
 /// Water used per kg: blue water in full plus the green and grey shares the sliders allow; animals use their feed's water.
 pub(super) fn effective_water(food: &FoodRow, query: &SliderQuery) -> (f64, WaterDetail) {
-    let (green_water, blue_water, grey_water) = if food.food_type == "animal" {
+    let (green_water, blue_water, grey_water) = if food.food_type == FOOD_TYPE_ANIMAL {
         (food.feed_green_water_per_kg, food.feed_blue_water_per_kg, food.feed_grey_water_per_kg)
     } else {
         (food.green_water_per_kg, food.blue_water_per_kg, food.grey_water_per_kg)
@@ -18,7 +18,7 @@ pub(super) fn effective_water(food: &FoodRow, query: &SliderQuery) -> (f64, Wate
         return (total, detail);
     }
 
-    let total = if food.food_type == "animal" {
+    let total = if food.food_type == FOOD_TYPE_ANIMAL {
         food.feed_water_per_kg.unwrap_or(0.0)
     } else {
         food.water_per_kg.unwrap_or(0.0)

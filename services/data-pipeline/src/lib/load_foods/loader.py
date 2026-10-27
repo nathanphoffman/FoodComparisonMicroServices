@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from ...food_types import (
-    Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide, Composite, CompositeIngredient,
+    FOOD_TYPE_PLANT, FOOD_TYPE_ANIMAL, Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide, Composite, CompositeIngredient,
 )
 
 from ...paths import TEXT_ENCODING
@@ -46,9 +46,9 @@ def load_category_foods(data_dir: Path) -> CategoryData:
 
         if "ingredients" in item:
             composite_items.append(item)
-        elif item.get("type") == "animal":
+        elif item.get("type") == FOOD_TYPE_ANIMAL:
             _add_animal(category_data, item)
-        elif item.get("type") == "plant":
+        elif item.get("type") == FOOD_TYPE_PLANT:
             _add_plant(category_data, item)
 
     category_data.composites, category_data.composite_ingredients = extract_composites(
