@@ -6,6 +6,18 @@ across a crop mix, per kg of output.
 from .crop_share import CropShare
 
 
+def _water_per_kg(plant) -> tuple[float, float, float]:
+    """A crop's (green, blue, grey) water per kg, with missing values as 0."""
+    green_water = plant.green_water_per_kg.weighted_average()
+    blue_water = plant.blue_water_per_kg.weighted_average()
+    grey_water = plant.grey_water_per_kg.weighted_average()
+    total_water = plant.water_per_kg.weighted_average()
+    # No green / blue split sourced: count the whole water footprint as green.
+    if green_water is None and blue_water is None and total_water:
+        green_water = total_water
+    return green_water or 0.0, blue_water or 0.0, grey_water or 0.0
+
+
 def compute_water_and_emissions(
     entries: list[CropShare],
     pasture_baseline: float = 0.0,
@@ -30,17 +42,8 @@ def compute_water_and_emissions(
         plant_emissions = entry.plant.feed_emissions_per_kg
         if plant_emissions:
             total_emissions += ratio * plant_emissions
-        green_water = entry.plant.green_water_per_kg.weighted_average()
-        blue_water = entry.plant.blue_water_per_kg.weighted_average()
-        grey_water = entry.plant.grey_water_per_kg.weighted_average()
-        total_water = entry.plant.water_per_kg.weighted_average()
-        if green_water:
-            total_green_water += ratio * green_water
-        if blue_water:
-            total_blue_water += ratio * blue_water
-        if grey_water:
-            total_grey_water += ratio * grey_water
-        # No green / blue split sourced: count the whole water footprint as green.
-        if green_water is None and blue_water is None and total_water:
-            total_green_water += ratio * total_water
+        green_water, blue_water, grey_water = _water_per_kg(entry.plant)
+        total_green_water += ratio * green_water
+        total_blue_water += ratio * blue_water
+        total_grey_water += ratio * grey_water
     return total_emissions, total_green_water, total_blue_water, total_grey_water

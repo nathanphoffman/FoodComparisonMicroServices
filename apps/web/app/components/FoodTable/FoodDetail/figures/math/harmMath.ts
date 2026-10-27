@@ -3,6 +3,36 @@ import type { ScoredRow } from '../../../types/FoodTableTypes';
 import { formatNumber, perUnitStep, type MathStep, type MathContext } from './MathShared';
 import { sumOf } from '@/lib/sumOf';
 
+/** The two steps for the animal's own death: intelligence per death, then per kg of food. */
+function animalKillSteps(food: RawFood, kill: NonNullable<ScoredRow['killDetail']>, sliders: MathContext['sliders']): MathStep[] {
+  const deaths = 1 + kill.offspringDeaths;
+  const own = kill.intelligencePerDeath * deaths / kill.outputKgPerDeath;
+  return [
+    {
+      label: 'Intelligence per death',
+      expression: `(neurons^${sliders.neuronExponent} × lifespan ÷ weight^${sliders.weightExponent})^${sliders.finalIntelligenceExponent} = (${formatNumber(food.neuron_count)}^${sliders.neuronExponent} × ${formatNumber(kill.lifespanYears)} yr ÷ ${formatNumber(food.weight_kg ?? 0)} kg^${sliders.weightExponent})^${sliders.finalIntelligenceExponent}`,
+      result: formatNumber(kill.intelligencePerDeath),
+    },
+    {
+      label: 'Per kg',
+      expression: `intelligence × (1 + ${formatNumber(kill.offspringDeaths)} offspring) ÷ ${formatNumber(kill.outputKgPerDeath)} kg of food per animal`,
+      result: formatNumber(own),
+    },
+  ];
+}
+
+/** The step for wild fish caught to make the animal's feed. */
+function wildFishStep(row: ScoredRow): MathStep {
+  const fishPerKg = row.wildFishDeathsPerKg;
+  return {
+    label: 'Wild fish for feed (per kg)',
+    expression: fishPerKg != null
+      ? `${formatNumber(fishPerKg)} fish per kg × ${formatNumber(row.wildFishKill / fishPerKg)} intelligence per fish`
+      : 'wild fish killed for fishmeal / fish oil in its feed',
+    result: formatNumber(row.wildFishKill),
+  };
+}
+
 /** Working for the intentional kill: animal deaths plus wild fish used for feed. */
 export function directKillMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders, unit } = context;
@@ -11,30 +41,8 @@ export function directKillMath(food: RawFood, row: ScoredRow, context: MathConte
   const kill = row.killDetail;
   const perKg = row.directKill * divisor;
   const steps: MathStep[] = [];
-  if (kill) {
-    steps.push({
-      label: 'Intelligence per death',
-      expression: `(neurons^${sliders.neuronExponent} × lifespan ÷ weight^${sliders.weightExponent})^${sliders.finalIntelligenceExponent} = (${formatNumber(food.neuron_count)}^${sliders.neuronExponent} × ${formatNumber(kill.lifespanYears)} yr ÷ ${formatNumber(food.weight_kg ?? 0)} kg^${sliders.weightExponent})^${sliders.finalIntelligenceExponent}`,
-      result: formatNumber(kill.intelligencePerDeath),
-    });
-    const deaths = 1 + kill.offspringDeaths;
-    const own = kill.intelligencePerDeath * deaths / kill.outputKgPerDeath;
-    steps.push({
-      label: 'Per kg',
-      expression: `intelligence × (1 + ${formatNumber(kill.offspringDeaths)} offspring) ÷ ${formatNumber(kill.outputKgPerDeath)} kg of food per animal`,
-      result: formatNumber(own),
-    });
-  }
-  if (row.wildFishKill > 0) {
-    const fishPerKg = row.wildFishDeathsPerKg;
-    steps.push({
-      label: 'Wild fish for feed (per kg)',
-      expression: fishPerKg != null
-        ? `${formatNumber(fishPerKg)} fish per kg × ${formatNumber(row.wildFishKill / fishPerKg)} intelligence per fish`
-        : 'wild fish killed for fishmeal / fish oil in its feed',
-      result: formatNumber(row.wildFishKill),
-    });
-  }
+  if (kill) steps.push(...animalKillSteps(food, kill, sliders));
+  if (row.wildFishKill > 0) steps.push(wildFishStep(row));
   if (steps.length === 0) return [{ label: 'Per kg', expression: 'no animals are killed on purpose for this food', result: '0' }];
   if (kill && row.wildFishKill > 0) {
     steps.push({ label: 'Total per kg', expression: `animal + wild fish = ${formatNumber(perKg - row.wildFishKill)} + ${formatNumber(row.wildFishKill)}`, result: formatNumber(perKg) });
@@ -64,13 +72,9 @@ export function captiveSentienceMath(food: RawFood, row: ScoredRow, context: Mat
   ];
 }
 
-/** Working for sentient harm: accidental deaths plus the intentional kill, weighted by the Kill : Accident slider. */
-export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
-  const { sliders, unit } = context;
-  const divisor = row.divisor;
-  if (row.sentientHarm == null) return [];
-  const detail = row.sentientHarmDetail;
-  const parts: [string, number][] = [
+/** Each source of accidental death with its score per kg, in the order they are listed. */
+function accidentalParts(detail: ScoredRow['sentientHarmDetail']): [string, number][] {
+  return [
     ['insects', detail.insectScore],
     ['bees', detail.beeScore],
     ['soil life', detail.wormScore],
@@ -82,6 +86,15 @@ export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathCon
     ['pasture clearing', detail.pastureDeforestationScore],
     ['bycatch', detail.bycatchScore],
   ];
+}
+
+/** Working for sentient harm: accidental deaths plus the intentional kill, weighted by the Kill : Accident slider. */
+export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
+  const { sliders, unit } = context;
+  const divisor = row.divisor;
+  if (row.sentientHarm == null) return [];
+  const detail = row.sentientHarmDetail;
+  const parts = accidentalParts(detail);
   const shown = parts.filter(([, score]) => score > 0);
   const accidental = sumOf(shown.map(([, score]) => score));
   const intentional = detail.directKillScore + detail.captiveSentienceScore;

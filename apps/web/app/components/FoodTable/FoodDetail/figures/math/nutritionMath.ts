@@ -4,6 +4,25 @@ import { MICRONUTRIENT_INFO, aminoAcidProfile } from '../../../nutrition/FoodTab
 import { formatNumber, formatShare, type MathStep, type MathContext } from './MathShared';
 import { sumOf } from '@/lib/sumOf';
 
+/** The numbers behind the "points per 100 g" line. */
+type PointsInputs = {
+  weights: MathContext['sliders']['nutritionWeights'];
+  protein: number; fiber: number; satFat: number; freeSugar: number; sodiumMg: number;
+  dailyValues: number; proteinQuality: number; aminoScore: number; points: number;
+};
+
+/** The step showing the weighted sum, first as a formula and then with this food's numbers. */
+function pointsStep(inputs: PointsInputs): MathStep {
+  const { weights, protein, fiber, satFat, freeSugar, sodiumMg, dailyValues, proteinQuality, aminoScore, points } = inputs;
+  const withQuality = aminoScore < 1;
+  return {
+    label: 'Points per 100 g (Nutrition sliders)',
+    expression: `${weights.protein} × protein${withQuality ? ' × protein quality' : ''} + ${weights.fiber} × fibre − ${weights.satFat} × sat. fat − ${weights.freeSugar} × free sugar − ${weights.sodium} × sodium mg ÷ 100 + ${weights.micronutrients} × vitamins, minerals & omega-3`
+      + ` = ${weights.protein} × ${formatNumber(protein)}${withQuality ? ` × ${formatNumber(proteinQuality)}` : ''} + ${weights.fiber} × ${formatNumber(fiber)} − ${weights.satFat} × ${formatNumber(satFat)} − ${weights.freeSugar} × ${formatNumber(freeSugar)} − ${weights.sodium} × ${formatNumber(sodiumMg)} ÷ 100 + ${weights.micronutrients} × ${formatNumber(dailyValues)}`,
+    result: formatNumber(points),
+  };
+}
+
 /** Working for the Nutrition Score: the points per 100 g, then per 100 kcal. */
 export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders } = context;
@@ -28,6 +47,7 @@ export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathC
   const points = weights.protein * protein * proteinQuality + weights.fiber * fiber - weights.satFat * satFat
     - weights.freeSugar * freeSugar - weights.sodium * sodiumMg / 100 + weights.micronutrients * dailyValues;
   const caloriesPer100g = per100(food.calories);
+  const inputs = { weights, protein, fiber, satFat, freeSugar, sodiumMg, dailyValues, proteinQuality, aminoScore, points };
   return [
     { label: 'Free sugar (g / 100 g)', expression: `max(0, sugar − ${weights.sugarAllowance} × fibre) = max(0, ${formatNumber(sugar)} − ${weights.sugarAllowance} × ${formatNumber(fiber)})`, result: formatNumber(freeSugar) },
     ...(dailyValueShares.length > 0 ? [{
@@ -40,12 +60,7 @@ export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathC
       expression: `1 − ${weights.proteinQuality} × (1 − amino acid score) = 1 − ${weights.proteinQuality} × (1 − ${formatNumber(aminoScore)})`,
       result: formatNumber(proteinQuality),
     }] : []),
-    {
-      label: 'Points per 100 g (Nutrition sliders)',
-      expression: `${weights.protein} × protein${aminoScore < 1 ? ' × protein quality' : ''} + ${weights.fiber} × fibre − ${weights.satFat} × sat. fat − ${weights.freeSugar} × free sugar − ${weights.sodium} × sodium mg ÷ 100 + ${weights.micronutrients} × vitamins, minerals & omega-3`
-        + ` = ${weights.protein} × ${formatNumber(protein)}${aminoScore < 1 ? ` × ${formatNumber(proteinQuality)}` : ''} + ${weights.fiber} × ${formatNumber(fiber)} − ${weights.satFat} × ${formatNumber(satFat)} − ${weights.freeSugar} × ${formatNumber(freeSugar)} − ${weights.sodium} × ${formatNumber(sodiumMg)} ÷ 100 + ${weights.micronutrients} × ${formatNumber(dailyValues)}`,
-      result: formatNumber(points),
-    },
+    pointsStep(inputs),
     { label: 'Per 100 kcal', expression: `points × 100 ÷ kcal per 100 g = ${formatNumber(points)} × 100 ÷ ${formatNumber(caloriesPer100g)}`, result: formatNumber(row.nutritionScore) },
   ];
 }

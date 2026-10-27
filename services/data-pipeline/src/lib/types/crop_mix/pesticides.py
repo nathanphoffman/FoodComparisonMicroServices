@@ -24,6 +24,15 @@ class AreaWeightedFraction:
         return self._weighted_sum / self._total_area_ha if self._total_area_ha else None
 
 
+def _cropland_ha_per_kg_output(entry: CropShare) -> float | None:
+    """Hectares of cropland per kg of animal output, used as the aggregation weight so that
+    the resulting average PAF matches what you'd get by summing per-crop impacts."""
+    average_yield = entry.plant.yield_kg_ha.weighted_average()
+    if not average_yield or average_yield <= 0:
+        return None
+    return entry.ratio / average_yield
+
+
 def compute_pesticide_paf_impacts(
     entries: list[CropShare],
 ) -> tuple[float, float | None, float | None, float | None, float | None]:
@@ -46,20 +55,14 @@ def compute_pesticide_paf_impacts(
     bee_hazard = AreaWeightedFraction()
     for entry in entries:
         ratio = entry.ratio
-        if ratio is None:
-            continue
         pesticide_kg_per_kg_food = entry.plant.avg_pesticide_kg_per_kg_food
-        if not pesticide_kg_per_kg_food:
+        if ratio is None or not pesticide_kg_per_kg_food:
             continue
         total_pesticide_kg_per_kg += ratio * pesticide_kg_per_kg_food
 
-        # Use hectares of cropland per kg of animal output as the aggregation weight so
-        # that the resulting average PAF matches what you'd get by summing per-crop impacts.
-        average_yield = entry.plant.yield_kg_ha.weighted_average()
-        if not average_yield or average_yield <= 0:
+        area_ha = _cropland_ha_per_kg_output(entry)
+        if area_ha is None:
             continue
-        area_ha = ratio / average_yield
-
         freshwater.add(area_ha, entry.plant.pesticide_affected_freshwater_fraction)
         terrestrial.add(area_ha, entry.plant.pesticide_affected_terrestrial_fraction)
         insect.add(area_ha, entry.plant.pesticide_affected_insect_fraction)

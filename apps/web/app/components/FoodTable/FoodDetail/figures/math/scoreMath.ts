@@ -22,9 +22,23 @@ export function availabilityMath(food: RawFood, row: ScoredRow, context: MathCon
   ];
 }
 
+const higherIsBetter = (measure: string) => measure === 'nutrition' || measure === 'availability';
+
+/** How one measure's ratio against the reference food was worked out. */
+function ratioExpression(
+  term: { measure: string; zeroCapped: boolean },
+  foodValue: number,
+  referenceValue: number,
+  context: MathContext,
+): string {
+  if (term.zeroCapped) return `scored 0 (perfect), so it gets the batch's best ratio × ${formatNumber(context.sliders.zeroBetterMultiplier)}`;
+  if (term.measure === 'nutrition') return `food vs ${context.referenceName} (${formatNumber(foodValue)} vs ${formatNumber(referenceValue)}), both shifted so every score is positive`;
+  if (higherIsBetter(term.measure)) return `food ÷ ${context.referenceName} = ${formatNumber(foodValue)} ÷ ${formatNumber(referenceValue)}`;
+  return `${context.referenceName} ÷ food = ${formatNumber(referenceValue)} ÷ ${formatNumber(foodValue)}`;
+}
+
 /** Working for the final score: each measure's ratio against the reference food, then their weighted mean. */
 export function finalScoreMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
-  const { sliders } = context;
   const detail = row.improvementDetail;
   if (row.finalScore == null) return [];
   if (!detail) return [{ label: 'Improvement', expression: `this food has none of the Compare By unit, so it scores 0`, result: '0x' }];
@@ -40,19 +54,9 @@ export function finalScoreMath(food: RawFood, row: ScoredRow, context: MathConte
     sentientHarm: [row.sentientHarm, ref?.sentientHarm ?? null],
     availability: [row.availability, ref?.availability ?? null],
   };
-  const higherIsBetter = (measure: string) => measure === 'nutrition' || measure === 'availability';
   const steps: MathStep[] = detail.terms.map(term => {
     const [foodValue, referenceValue] = values[term.measure];
-    let expression: string;
-    if (term.zeroCapped) {
-      expression = `scored 0 (perfect), so it gets the batch's best ratio × ${formatNumber(sliders.zeroBetterMultiplier)}`;
-    } else if (term.measure === 'nutrition') {
-      expression = `food vs ${context.referenceName} (${formatNumber(foodValue ?? 0)} vs ${formatNumber(referenceValue ?? 0)}), both shifted so every score is positive`;
-    } else if (higherIsBetter(term.measure)) {
-      expression = `food ÷ ${context.referenceName} = ${formatNumber(foodValue ?? 0)} ÷ ${formatNumber(referenceValue ?? 0)}`;
-    } else {
-      expression = `${context.referenceName} ÷ food = ${formatNumber(referenceValue ?? 0)} ÷ ${formatNumber(foodValue ?? 0)}`;
-    }
+    const expression = ratioExpression(term, foodValue ?? 0, referenceValue ?? 0, context);
     return { label: `${measureLabel[term.measure]} ratio (weight ${formatShare(term.priority)})`, expression, result: `${formatNumber(term.ratio)}x` };
   });
   const meanName = Math.abs(detail.exponent) < 1e-9 ? 'weighted geometric mean'
