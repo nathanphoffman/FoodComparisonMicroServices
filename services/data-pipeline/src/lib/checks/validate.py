@@ -34,6 +34,18 @@ def assert_land_types(value: dict | None, label: str) -> None:
         raise ValueError(f"{label} fractions must sum to 1, got {total:.3f}")
 
 
+def _assert_ingredient_reference(slug: str, ingredient: dict, food_by_slug: dict, plant_ids: set[int]) -> None:
+    """Raises ValueError unless the ingredient is a known plant food, or a labelled non-food like water."""
+    ingredient_slug = ingredient.get("food_slug")
+    if ingredient_slug is None:
+        if not ingredient.get("label"):
+            raise ValueError(f"{slug}: an ingredient with no food_slug needs a label (e.g. 'water')")
+    elif ingredient_slug not in food_by_slug:
+        raise ValueError(f"{slug}: unknown ingredient food_slug {ingredient_slug!r}")
+    elif food_by_slug[ingredient_slug]["id"] not in plant_ids:
+        raise ValueError(f"{slug}: ingredient {ingredient_slug!r} must be a plant food")
+
+
 def assert_composite_ingredients(item: dict, food_by_slug: dict, plant_ids: set[int]) -> None:
     """Raises ValueError if a composite's ingredients reference unknown or non-plant foods,
     or their weight fractions don't sum to 1."""
@@ -44,13 +56,7 @@ def assert_composite_ingredients(item: dict, food_by_slug: dict, plant_ids: set[
     total = 0.0
     for ingredient in ingredients:
         ingredient_slug = ingredient.get("food_slug")
-        if ingredient_slug is None:
-            if not ingredient.get("label"):
-                raise ValueError(f"{slug}: an ingredient with no food_slug needs a label (e.g. 'water')")
-        elif ingredient_slug not in food_by_slug:
-            raise ValueError(f"{slug}: unknown ingredient food_slug {ingredient_slug!r}")
-        elif food_by_slug[ingredient_slug]["id"] not in plant_ids:
-            raise ValueError(f"{slug}: ingredient {ingredient_slug!r} must be a plant food")
+        _assert_ingredient_reference(slug, ingredient, food_by_slug, plant_ids)
         assert_sourced_array(ingredient.get("fraction"), f"{slug}.ingredients[{ingredient_slug or ingredient.get('label')}].fraction")
         total += _mean_value(ingredient["fraction"])
     if abs(total - 1.0) > INGREDIENT_SUM_TOLERANCE:
