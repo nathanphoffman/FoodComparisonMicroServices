@@ -64,6 +64,7 @@ export function aminoAcidProfile(detail: Pick<NutritionDetail, 'protein' | 'amin
     const others = AMINO_ACID_KEYS.filter(key => !AMINO_ACID_INFO[key].essential && aminoAcids[key] != null)
         .map(key => ({ label: AMINO_ACID_INFO[key].label, mgPerGramProtein: perProtein(key)! }));
     const complete = requirements.length === AMINO_ACID_REQUIREMENTS.length;
+    // The requirement with the lowest share is the limiting amino acid.
     const weakest = complete ? requirements.reduce((low, row) => (row.share < low.share ? row : low)) : null;
     if (requirements.length === 0 && others.length === 0) return null;
     return { requirements, others, score: weakest ? Math.min(1, weakest.share) : null, limiting: weakest ? weakest.label : null };

@@ -34,7 +34,7 @@ export const FOOD_FILTERS: FoodFilter[] = [
 
 export const DEFAULT_FOOD_FILTER = 'all';
 
-export function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
+function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
     const filter = FOOD_FILTERS.find(f => f.key === filterKey);
     if (!filter || (!filter.categories && !filter.tags)) return true;
     return (filter.categories?.includes(food.category ?? '') ?? false)

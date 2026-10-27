@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDebouncedCallback, DEBOUNCE_MS } from '../../../../../hooks/useDebouncedCallback';
+import { sumOf } from '@/lib/sumOf';
 
 export const MAX_LEVEL = 10;
 export const DEFAULT_LEVEL = MAX_LEVEL / 2;
@@ -18,7 +19,7 @@ export function equalLevels<K extends string>(keys: K[]): Levels<K> {
  */
 export function toShares<K extends string>(levels: Levels<K>): Levels<K> {
     const keys = Object.keys(levels) as K[];
-    const total = keys.reduce((runningTotal, key) => runningTotal + levels[key], 0);
+    const total = sumOf(keys.map(key => levels[key]));
     return Object.fromEntries(
         keys.map(key => [key, total > 0 ? (levels[key] / total) * 100 : 0])
     ) as Levels<K>;

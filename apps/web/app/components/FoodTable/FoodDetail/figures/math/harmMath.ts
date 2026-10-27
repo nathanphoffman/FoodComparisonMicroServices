@@ -1,6 +1,7 @@
 import type { RawFood } from '../../../types/FoodTableTypes';
 import type { ScoredRow } from '../../../types/FoodTableTypes';
 import { formatNumber, perUnitStep, type MathStep, type MathContext } from './MathShared';
+import { sumOf } from '@/lib/sumOf';
 
 /** Working for the intentional kill: animal deaths plus wild fish used for feed. */
 export function directKillMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
@@ -82,7 +83,7 @@ export function sentientHarmMath(food: RawFood, row: ScoredRow, context: MathCon
     ['bycatch', detail.bycatchScore],
   ];
   const shown = parts.filter(([, score]) => score > 0);
-  const accidental = shown.reduce((sum, [, score]) => sum + score, 0);
+  const accidental = sumOf(shown.map(([, score]) => score));
   const intentional = detail.directKillScore + detail.captiveSentienceScore;
   const killMultiplier = sliders.killMultiplier;
   const perKg = row.sentientHarm * divisor;

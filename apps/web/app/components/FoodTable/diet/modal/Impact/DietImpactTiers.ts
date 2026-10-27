@@ -1,3 +1,5 @@
+import { sumOf } from '@/lib/sumOf';
+
 // How the diet compares with the other foods: the share of them it beats. Average is the middle 10%, then each
 // 10% further out is above/below average, then good/bad, and past that very good/very bad.
 export const TIERS = [
@@ -28,7 +30,7 @@ export const DISTANCE_TIERS = [
 const OVERALL_TIERS = [...TIERS];
 export function overallTier(scores: number[]) {
     if (scores.length === 0) return null;
-    const average = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+    const average = sumOf(scores) / scores.length;
     // Halves round away from zero, so +1.5 and -1.5 land the same distance from average.
     const rounded = Math.sign(average) * Math.round(Math.abs(average));
     return OVERALL_TIERS.find(tier => tier.score === rounded)!;

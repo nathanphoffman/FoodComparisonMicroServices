@@ -2,6 +2,7 @@ import { MICRONUTRIENT_KEYS, type RawFood } from '../../../types/FoodTableTypes'
 import type { ScoredRow } from '../../../types/FoodTableTypes';
 import { MICRONUTRIENT_INFO, aminoAcidProfile } from '../../../nutrition/FoodTableCalculations';
 import { formatNumber, formatShare, type MathStep, type MathContext } from './MathShared';
+import { sumOf } from '@/lib/sumOf';
 
 /** Working for the Nutrition Score: the points per 100 g, then per 100 kcal. */
 export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
@@ -20,7 +21,7 @@ export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathC
   const dailyValueShares = MICRONUTRIENT_KEYS
     .filter(key => food.micronutrients?.[key] != null)
     .map(key => [key, per100(food.micronutrients![key]!) / MICRONUTRIENT_INFO[key].dailyValue] as const);
-  const dailyValues = dailyValueShares.reduce((sum, [key, share]) => sum + MICRONUTRIENT_INFO[key].credit * share, 0);
+  const dailyValues = sumOf(dailyValueShares.map(([key, share]) => MICRONUTRIENT_INFO[key].credit * share));
   // Protein earns points in proportion to how well its amino acids match the body's needs (nutrition.rs).
   const aminoScore = aminoAcidProfile({ protein: food.protein, aminoAcids: food.amino_acids })?.score ?? 1;
   const proteinQuality = 1 - Math.min(1, Math.max(0, weights.proteinQuality)) * (1 - aminoScore);

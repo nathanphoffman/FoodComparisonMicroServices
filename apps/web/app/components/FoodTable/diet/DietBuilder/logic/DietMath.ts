@@ -2,6 +2,7 @@ import type { DietInput, Micronutrients, MicronutrientKey } from '../../../types
 import { absorptionMultiplier, absorbedFromDose, mealsPerDayFor, ABSORPTION_NUTRIENTS } from '../../../nutrition/FoodTableAbsorption';
 import type { DietSettings } from '../../../nutrition/FoodTableRda';
 import { DAYS_PER_WEEK, FINE_MAX_PERCENT, toPercents, type Ingredient, type Saved } from './DietSaved';
+import { sumOf } from '@/lib/sumOf';
 
 export type BuilderFood = { slug: string; name: string; calories?: number; micronutrients?: Micronutrients | null };
 
@@ -27,13 +28,13 @@ export function caloriesPerDayIn(state: Saved, foods: BuilderFood[], ingredientS
     const index = state.ingredients.findIndex(i => i.slug === ingredientSlug);
     if (!state.calorieTarget || index < 0) return null;
     const weights = calorieWeights(state, foods);
-    const total = weights.reduce((sum, weight) => sum + weight, 0);
+    const total = sumOf(weights);
     return total > 0 ? (weights[index] / total) * state.calorieTarget : null;
 }
 
 /** The ingredient's level that makes its share exactly `percent`, given the other ingredients' levels. */
 export function levelForPercent(ingredients: Ingredient[], index: number, percent: number): number {
-    const others = ingredients.reduce((sum, ing, j) => j === index ? sum : sum + ing.level, 0);
+    const others = sumOf(ingredients.filter((_, position) => position !== index).map(ingredient => ingredient.level));
     return others > 0 ? (percent / (100 - percent)) * others : ingredients[index].level;
 }
 
@@ -53,7 +54,7 @@ export function settingsOf(state: Saved, foods: BuilderFood[]): DietSettings {
     const base = { calories: state.calorieTarget, sex: state.sex, age: state.age, weightLb: state.weightLb, activity: state.activity, supplements };
     if (!state.calorieTarget) return base;
     const weights = calorieWeights(state, foods);
-    const total = weights.reduce((sum, weight) => sum + weight, 0);
+    const total = sumOf(weights);
     if (total <= 0) return base;
     // The share of each absorption-limited nutrient that still counts, from each food's daily amount and meals per day.
     const all: Partial<Record<MicronutrientKey, number>> = {};

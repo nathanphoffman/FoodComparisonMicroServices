@@ -18,7 +18,8 @@ export function useBubbleShift() {
     bubble.style.display = previousDisplay;
     const overLeft = WINDOW_MARGIN_PX - rect.left;
     const overRight = rect.right - (window.innerWidth - WINDOW_MARGIN_PX);
-    setShift(overLeft > 0 ? shift + overLeft : overRight > 0 ? shift - overRight : shift);
+    if (overLeft > 0) setShift(shift + overLeft);
+    else if (overRight > 0) setShift(shift - overRight);
   }
 
   return { bubbleRef, shift, fitToWindow };

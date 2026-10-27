@@ -43,6 +43,7 @@ def pesticide_kg_per_kg_food(
     total_pesticide_kg_per_kg = sum(
         kg_per_ha / average_yield_kg_per_ha
         for association in associations
+        # `:=` stores each association's weighted average so the same value is used in the filter and in the sum.
         if (kg_per_ha := association.plant_pesticide.kg_ha.weighted_average()) is not None
     )
     return total_pesticide_kg_per_kg or None

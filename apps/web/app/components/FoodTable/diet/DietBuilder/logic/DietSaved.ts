@@ -2,6 +2,7 @@ import { MICRONUTRIENT_KEYS, type DietBasis, type MicronutrientKey } from '../..
 import { DEFAULT_DAYS_BETWEEN } from '../../../nutrition/FoodTableAbsorption';
 import { ACTIVITY_LEVELS, DEFAULT_ACTIVITY } from '../../../nutrition/FoodTableTargets';
 import type { Sex } from '../../../nutrition/FoodTableRda';
+import { sumOf } from '@/lib/sumOf';
 
 // Each ingredient has its own independent slider level; its percentage is its
 // share of the total level (same idea as the Compare By / Score Priorities sliders).
@@ -38,7 +39,7 @@ export function positiveOrNull(value: string): number | null {
 
 /** Each ingredient's percentage of the total level; all 0 if every slider is at 0. */
 export function toPercents(ingredients: Ingredient[]): number[] {
-    const total = ingredients.reduce((sum, ingredient) => sum + ingredient.level, 0);
+    const total = sumOf(ingredients.map(ingredient => ingredient.level));
     return ingredients.map(ingredient => total > 0 ? (ingredient.level / total) * 100 : 0);
 }
 

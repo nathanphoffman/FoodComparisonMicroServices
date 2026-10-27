@@ -1,5 +1,6 @@
 import type { MicronutrientKey } from '../types/FoodTableTypes';
 import { MICRONUTRIENT_INFO } from './FoodTableCalculations';
+import { averageOf } from '@/lib/sumOf';
 
 export type Sex = 'male' | 'female';
 
@@ -98,7 +99,8 @@ function standardNeed(standard: Exclude<NutrientStandard, 'average'>, key: Micro
     }
     if (value === undefined) return null;
     if (typeof value === 'number') return value;
-    return sex === null ? (value[0] + value[1]) / 2 : value[sex === 'male' ? 0 : 1];
+    if (sex === null) return (value[0] + value[1]) / 2;
+    return value[sex === 'male' ? 0 : 1];
 }
 
 // Reference body weights (kg) the adult values are set for (US DRI reference adults); 70 when sex isn't set.
@@ -120,7 +122,7 @@ export function dailyNeeds(standard: NutrientStandard, sex: Sex | null, age: num
         const values = (standard === 'average' ? STANDARDS : [standard])
             .map(s => standardNeed(s, key, sex, age))
             .filter((v): v is number => v !== null);
-        const base = values.length > 0 ? values.reduce((sum, v) => sum + v, 0) / values.length : MICRONUTRIENT_INFO[key].dailyValue;
+        const base = averageOf(values) ?? MICRONUTRIENT_INFO[key].dailyValue;
         needs[key] = base * weightScale;
     }
     return needs;

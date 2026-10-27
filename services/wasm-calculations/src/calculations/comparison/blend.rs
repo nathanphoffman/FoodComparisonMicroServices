@@ -13,12 +13,13 @@ pub struct Blend {
 /// A calorie share is turned into mass by dividing by the food's calories per gram;
 /// foods with no calories can't hold a calorie share, so they drop out.
 fn mass_shares(foods: &[FoodRow], diet: &Diet) -> Vec<(String, f64)> {
-    let raw: Vec<(String, f64)> = diet.ingredients.iter().filter(|i| i.fraction > 0.0).filter_map(|i| {
+    // Keep ingredients with a positive share; a calorie share becomes mass, and unknown or zero-calorie foods drop out.
+    let raw: Vec<(String, f64)> = diet.ingredients.iter().filter(|ingredient| ingredient.fraction > 0.0).filter_map(|ingredient| {
         match diet.basis {
-            Basis::Mass => Some((i.slug.clone(), i.fraction)),
+            Basis::Mass => Some((ingredient.slug.clone(), ingredient.fraction)),
             Basis::Calories => {
-                let calories_per_gram = foods.iter().find(|f| f.slug == i.slug)?.calories;
-                (calories_per_gram > 0.0).then(|| (i.slug.clone(), i.fraction / calories_per_gram))
+                let calories_per_gram = foods.iter().find(|f| f.slug == ingredient.slug)?.calories;
+                (calories_per_gram > 0.0).then(|| (ingredient.slug.clone(), ingredient.fraction / calories_per_gram))
             }
         }
     }).collect();
@@ -35,6 +36,7 @@ fn mass_shares(foods: &[FoodRow], diet: &Diet) -> Vec<(String, f64)> {
 /// mass × divisor.
 fn unit_weights(rows: &[ScoredRow], masses: &[(String, f64)]) -> (Vec<f64>, f64, bool) {
     let divisor_of = |slug: &str| rows.iter().find(|r| r.slug == slug).map_or(0.0, |r| r.divisor);
+    // Units of the Compare By measure each ingredient contributes: its mass times its divisor.
     let units: Vec<f64> = masses.iter().map(|(slug, m)| m * divisor_of(slug)).collect();
     let divisor: f64 = units.iter().sum();
     let has_unitless = masses.iter().any(|(slug, _)| divisor_of(slug) <= 0.0);

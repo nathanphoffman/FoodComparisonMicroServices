@@ -64,6 +64,7 @@ impl AminoAcids {
             per_protein(self.tryptophan?)                                / TRYPTOPHAN,
             per_protein(self.valine?)                                    / VALINE,
         ];
+        // The most limiting amino acid (lowest ratio) sets the score, which is capped at 1.
         Some(ratios.iter().cloned().fold(f64::INFINITY, f64::min).min(1.0))
     }
 }

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.AspNetCore.HttpOverrides;
 using Dapper;
 using FoodApi.Services;
 
@@ -31,6 +32,24 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod()));
 
 var app = builder.Build();
+
+// Railway terminates TLS in front of the container, so trust its X-Forwarded-Proto header.
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+});
+
+// Off by default: the Railway healthcheck calls over plain HTTP and would get redirected.
+// Set EnforceHttps=true (env var) once the host is known to send X-Forwarded-Proto.
+if (app.Configuration.GetValue<bool>("EnforceHttps"))
+{
+    if (!app.Environment.IsDevelopment())
+    {
+        app.UseHsts();
+    }
+    app.UseHttpsRedirection();
+}
+
 app.UseRouting();
 app.UseCors();
 app.MapControllers();

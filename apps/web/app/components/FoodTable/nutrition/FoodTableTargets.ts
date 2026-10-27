@@ -1,4 +1,5 @@
 import type { NutrientStandard, Sex } from './FoodTableRda';
+import { averageOf } from '@/lib/sumOf';
 
 // Daily reference amounts for protein, fat, carbs, fiber, sugar, sodium and cholesterol, from the US, EFSA, Japan,
 // China and WHO. APPROXIMATE: typed from memory, so check them against the official tables.
@@ -40,13 +41,16 @@ const TRANS_FAT_PCT: PerStandard<number> = { who: 1 };
 const CARBS_PCT: PerStandard<number> = { us: 55, eu: 52.5, japan: 57.5, china: 57.5, who: 65 };
 const FREE_SUGAR_PCT: PerStandard<number> = { us: 10, china: 10, who: 10 };
 
-const pick = (value: number | Pair, sex: Sex | null) =>
-    typeof value === 'number' ? value : sex === null ? (value[0] + value[1]) / 2 : value[sex === 'male' ? 0 : 1];
+function pick(value: number | Pair, sex: Sex | null): number {
+    if (typeof value === 'number') return value;
+    if (sex === null) return (value[0] + value[1]) / 2;
+    return value[sex === 'male' ? 0 : 1];
+}
 
 function average(standard: NutrientStandard, table: PerStandard<number | Pair>, sex: Sex | null): number | null {
     const values = (standard === 'average' ? AVERAGED : [standard])
         .flatMap(s => table[s] === undefined ? [] : [pick(table[s]!, sex)]);
-    return values.length > 0 ? values.reduce((sum, v) => sum + v, 0) / values.length : null;
+    return averageOf(values);
 }
 
 /** Whole-day reference amounts under a standard. Energy shares need the day's calories. */

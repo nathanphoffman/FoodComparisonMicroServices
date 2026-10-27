@@ -34,6 +34,7 @@ fn nutrition_offset(rows: &[ScoredRow]) -> f64 {
     let lowest = rows.iter()
         .filter_map(|r| r.nutrition_score)
         .filter(|score| score.is_finite())
+        // Keep the smallest finite score: start at infinity and let f64::min pull it down.
         .fold(f64::INFINITY, f64::min);
     if lowest.is_finite() { (NUTRITION_FLOOR - lowest).max(0.0) } else { 0.0 }
 }
@@ -54,6 +55,7 @@ fn highest_ratio_in_batch(
         .filter_map(|r| extract(r))
         .filter(|&food_score| food_score > 0.0)
         .map(|food_score| reference_value / food_score)
+        // Keep the largest ratio: start at 1.0 and let f64::max pull it up.
         .fold(1.0_f64, f64::max)
 }
 
@@ -71,6 +73,7 @@ pub fn compute_improvement(
     if total_priority <= 0.0 { return None; }
 
     let exponent = 1.0 - query.win_dampening;
+    // Pair each term's ratio with its priority, the shape weighted_power_mean takes.
     let weighted_ratios: Vec<(f64, f64)> = terms.iter().map(|term| (term.ratio, term.priority)).collect();
     let mean = weighted_power_mean(&weighted_ratios, total_priority, exponent);
     Some(ImprovementDetail { terms, exponent, mean, wild_penalty: 1.0 })

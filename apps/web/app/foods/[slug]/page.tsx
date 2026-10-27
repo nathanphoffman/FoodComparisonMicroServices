@@ -25,6 +25,7 @@ export default async function FoodPage({ params }: Props) {
       {food.notes && (
         <>
           <h2>How we got these numbers</h2>
+          {/* A blank line (newline, optional spaces, newline) in the notes starts a new paragraph. */}
           {food.notes.split(/\n\s*\n/).map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}

@@ -41,6 +41,7 @@ def load_sources() -> list[Source]:
 
 
 def sanitize_title(title: str) -> str:
+    # Drop characters that are not allowed in file names, then squeeze runs of whitespace into one space.
     cleaned = re.sub(FORBIDDEN_CHARS, "", title)
     return re.sub(r"\s+", " ", cleaned).strip()
 

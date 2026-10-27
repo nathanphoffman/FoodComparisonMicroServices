@@ -10,6 +10,7 @@ const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
 fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
     let (sum, count) = iter
         .filter(|&v| v > 0.0 && v.is_finite())
+        // Running (sum, count) of the values that passed the filter, so the mean needs one pass.
         .fold((0.0_f64, 0_usize), |(s, n), v| (s + v, n + 1));
     if count == 0 {
         None

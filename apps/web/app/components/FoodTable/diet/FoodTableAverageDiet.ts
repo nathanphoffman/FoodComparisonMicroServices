@@ -1,4 +1,5 @@
 import type { DietInput } from '../types/FoodTableTypes';
+import { sumOf } from '@/lib/sumOf';
 
 // A benchmark "average American diet" built from this dataset's own foods, so every measure (sentient harm included)
 // is in the same units as the user's diet. It is scored as an extra hidden diet and never shown as a table row.
@@ -43,7 +44,7 @@ const SHARES: [string, number][] = [
 export function averageDietInput(foodSlugs: Set<string>): DietInput {
     // Only foods that exist in the loaded data, renormalised so a missing food doesn't shrink the diet.
     const available = SHARES.filter(([slug]) => foodSlugs.has(slug));
-    const total = available.reduce((sum, [, percent]) => sum + percent, 0);
+    const total = sumOf(available.map(([, percent]) => percent));
     return {
         slug: AVERAGE_DIET_SLUG,
         name: AVERAGE_DIET_NAME,

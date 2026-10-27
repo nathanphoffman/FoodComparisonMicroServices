@@ -54,10 +54,12 @@ describe('constants copied from Rust', () => {
     });
 
     it('the default Nutrition slider weights match nutrition_weights.rs', () => {
+        // Regex on purpose: grabs the body of `fn default() -> Self { Self { ... } }`.
         const defaults = rustSource('models/input/nutrition_weights.rs').match(/fn default\(\) -> Self \{\s*Self \{([^}]*)\}/)?.[1];
         if (!defaults) throw new Error('Could not find the NutritionWeights default in the Rust source');
         // Regex on purpose: reads each `field_name: 1.5,` line of the Rust struct literal into a number.
         const rustWeights = Object.fromEntries([...defaults.matchAll(/(\w+):\s*([\d.]+)/g)].map(([, name, value]) => [name, Number(value)]));
+        // Regex on purpose: puts an underscore before each capital letter and lowercases it (maxProtein → max_protein).
         const toSnakeCase = (name: string) => name.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
         for (const [name, value] of Object.entries(DEFAULT_NUTRITION_WEIGHTS)) {
             expect(value, name).toBe(rustWeights[toSnakeCase(name)]);

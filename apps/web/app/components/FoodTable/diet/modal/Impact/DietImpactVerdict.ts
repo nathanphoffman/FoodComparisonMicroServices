@@ -1,5 +1,6 @@
 import type { Metric } from './DietImpactMetrics';
 import { TIERS, DISTANCE_TIERS, overallTier } from './DietImpactTiers';
+import { averageOf } from '@/lib/sumOf';
 
 // A share worse than this many percent is shown as this many; the exact figure stops being useful.
 const MAX_SHOWN_PERCENT = 999;
@@ -40,7 +41,7 @@ export function judgeMetric(metric: Metric, value: number, others: number[], ben
     const percent = others.length > 0 ? (beaten / others.length) * 100 : null;
     const percentileTier = percent === null ? null : TIERS.find(tier => percent >= tier.min)!;
 
-    const mean = others.length > 0 ? others.reduce((sum, other) => sum + other, 0) / others.length : null;
+    const mean = averageOf(others);
     const betterThanMean = betterBy(value, mean, metric.lowerIsBetter);
     const meanTier = betterThanMean === null ? null : DISTANCE_TIERS.find(tier => betterThanMean >= tier.min)!;
 

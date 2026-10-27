@@ -25,7 +25,9 @@ export async function loadFood(slug: string): Promise<FoodWithDetail> {
   const food = rowsToObjects(foodResult)[0] as unknown as Food;
   const nutrition = (JSON.parse(food.nutrition as unknown as string) as Food['nutrition'])[0].value;
 
-  const detailTable = food.type === 'plant' ? 'plants' : food.type === 'animal' ? 'animals' : null;
+  let detailTable: 'plants' | 'animals' | null = null;
+  if (food.type === 'plant') detailTable = 'plants';
+  if (food.type === 'animal') detailTable = 'animals';
   const detailResult = detailTable ? db.exec(`SELECT * FROM ${detailTable} WHERE food_id = :id`, { ':id': food.id }) : [];
   const detail = (rowsToObjects(detailResult)[0] as unknown as Plant | Animal | undefined) ?? null;
   return { food, nutrition, detail };

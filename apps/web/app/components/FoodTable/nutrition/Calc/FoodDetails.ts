@@ -1,4 +1,5 @@
 import { MICRONUTRIENT_KEYS, AMINO_ACID_KEYS, type RawFood, type DietInput, type Micronutrients, type AminoAcids, type IntelligenceDetail, type NutritionDetail } from '../../types/FoodTableTypes';
+import { sumOf } from '@/lib/sumOf';
 
 // Tooltip detail types: pure passthroughs from the raw data, plus the blends for a diet.
 
@@ -24,7 +25,8 @@ function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; m
     return diet.ingredients.flatMap(({ slug, fraction }) => {
         const food = foods.find(f => f.slug === slug);
         if (!food || fraction <= 0) return [];
-        const mass = diet.basis === 'mass' ? fraction : food.calories > 0 ? fraction / food.calories : 0;
+        let mass = fraction;
+        if (diet.basis !== 'mass') mass = food.calories > 0 ? fraction / food.calories : 0;
         return mass > 0 ? [{ food, mass }] : [];
     });
 }
@@ -37,12 +39,12 @@ function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; m
  */
 export function blendDietNutrition(diet: DietInput, foods: RawFood[]): NutritionDetail | null {
     const parts = ingredientMasses(diet, foods);
-    const totalMass = parts.reduce((sum, part) => sum + part.mass, 0);
+    const totalMass = sumOf(parts.map(part => part.mass));
     if (totalMass <= 0) return null;
 
     const blend = (value: (food: RawFood) => number | null | undefined): number | null => {
         if (parts.every(part => value(part.food) == null)) return null;
-        return parts.reduce((sum, part) => sum + (part.mass / totalMass) * (value(part.food) ?? 0), 0);
+        return sumOf(parts.map(part => (part.mass / totalMass) * (value(part.food) ?? 0)));
     };
     const micronutrients: Micronutrients = {};
     for (const key of MICRONUTRIENT_KEYS) {
@@ -92,6 +94,6 @@ export function blendLandM2PerKg(
         const land = rawM2PerKg(food.slug);
         return land != null ? [{ mass, land }] : [];
     });
-    const totalMass = parts.reduce((sum, part) => sum + part.mass, 0);
-    return totalMass > 0 ? parts.reduce((sum, part) => sum + (part.mass / totalMass) * part.land, 0) : null;
+    const totalMass = sumOf(parts.map(part => part.mass));
+    return totalMass > 0 ? sumOf(parts.map(part => (part.mass / totalMass) * part.land)) : null;
 }
