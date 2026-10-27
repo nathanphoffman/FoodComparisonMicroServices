@@ -3,6 +3,9 @@ import type { ScoredRow } from '../../../types/FoodTableTypes';
 // Values are per Compare By unit, the same as the table columns, so they compare fairly with other foods.
 
 // What a measure is worth in a real unit: for the whole day when your calories / day is known, otherwise per 1,000 kcal.
+export const GRAMS_PER_KG = 1000;
+const DAYS_PER_YEAR = 365;
+
 export type Basis = { kg: number; perDay: boolean; rawLandM2PerKg: number | null };
 export type Amount = { value: number; unit: string };
 
@@ -24,7 +27,7 @@ export const METRICS: Metric[] = [
         // Land is the area farmed to feed you; per kg it is m² for a year, so a day of food holds 365× a day's share.
         label: 'Land use', value: row => row.landUse, lowerIsBetter: true,
         amount: (_row, { kg, perDay, rawLandM2PerKg }) => rawLandM2PerKg === null ? null
-            : { value: rawLandM2PerKg * kg * (perDay ? 365 : 1), unit: perDay ? 'm² of land / year' : 'm² / 1,000 kcal' },
+            : { value: rawLandM2PerKg * kg * (perDay ? DAYS_PER_YEAR : 1), unit: perDay ? 'm² of land / year' : 'm² / 1,000 kcal' },
     },
     {
         label: 'Water', value: row => row.water, lowerIsBetter: true,

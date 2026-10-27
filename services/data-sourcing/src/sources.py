@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
 
-from .paths import OUTPUT_DIR, SOURCES_JSON
+from .paths import OUTPUT_DIR, SOURCES_JSON, TEXT_ENCODING
 
 # Matches any character that isn't allowed in a filename on Windows or macOS/Linux:
 # / \ : * ? " < > |. They are stripped from titles before using them as filenames.
@@ -27,7 +27,7 @@ class Source:
 
 def load_sources() -> list[Source]:
     """Reads every source listed in sources.json."""
-    raw: list[dict] = json.loads(SOURCES_JSON.read_text(encoding="utf-8"))
+    raw: list[dict] = json.loads(SOURCES_JSON.read_text(encoding=TEXT_ENCODING))
     return [
         Source(
             id=s["id"],

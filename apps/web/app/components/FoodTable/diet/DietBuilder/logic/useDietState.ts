@@ -83,6 +83,7 @@ export function useDietState({ diet, foods, onChange, onSettingsChange }: Option
         if ('calorieTarget' in patch) settleLater(next);
     }
 
+    // Loads a diet from a backup file the user picked; problems are shown to the user, not thrown.
     async function importDiet(file: File | undefined) {
         if (!file) return;
         try {

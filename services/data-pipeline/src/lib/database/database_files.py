@@ -6,13 +6,13 @@ data/db/ as versioned files, replacing the previous build.
 import sqlite3
 from pathlib import Path
 
-from ...paths import DATA_DIR
+from ...paths import DATA_DIR, TEXT_ENCODING
 
 
 def make_empty_database(schema_path: Path) -> sqlite3.Connection:
     """Creates an in-memory SQLite database and applies the given schema."""
     connection = sqlite3.connect(":memory:", isolation_level=None)
-    connection.executescript(schema_path.read_text(encoding="utf-8"))
+    connection.executescript(schema_path.read_text(encoding=TEXT_ENCODING))
     return connection
 
 

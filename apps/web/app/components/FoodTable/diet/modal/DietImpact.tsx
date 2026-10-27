@@ -1,6 +1,6 @@
 import type { ScoredRow } from '../../types/FoodTableTypes';
 import type { Basis } from './Impact/DietImpactMetrics';
-import { METRICS } from './Impact/DietImpactMetrics';
+import { METRICS, GRAMS_PER_KG } from './Impact/DietImpactMetrics';
 import { DietImpactRow } from './Impact/DietImpactRow';
 
 // The diet's overall impact: each scored measure for the whole diet, judged against every other food in the table.
@@ -21,7 +21,7 @@ export function DietImpact({ row, others, unit, amounts, benchmark }: Props) {
     // kg of this diet eaten in a day, from your calorie total and the diet's calories per gram; without a
     // calorie total the amounts are per 1,000 kcal instead.
     const basis: Basis | null = !caloriesPerGram ? null : dailyCalories
-        ? { kg: dailyCalories / (caloriesPerGram * 1000), perDay: true, rawLandM2PerKg }
+        ? { kg: dailyCalories / (caloriesPerGram * GRAMS_PER_KG), perDay: true, rawLandM2PerKg }
         : { kg: 1 / caloriesPerGram, perDay: false, rawLandM2PerKg };
 
     return (

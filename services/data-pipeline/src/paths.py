@@ -7,6 +7,7 @@ paths.py → src/ → data-pipeline/ → services/ → project root
 
 from pathlib import Path
 
+TEXT_ENCODING = "utf-8"
 ROOT       = Path(__file__).resolve().parents[3]
 DATA_DIR   = ROOT / "data" / "db"
 JSON_DIR   = ROOT / "data" / "json"

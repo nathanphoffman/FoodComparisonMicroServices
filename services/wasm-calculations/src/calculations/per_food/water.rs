@@ -1,5 +1,6 @@
 use crate::models::{FoodRow, SliderQuery, WaterDetail};
 
+/// Water used per kg: blue water in full plus the green and grey shares the sliders allow; animals use their feed's water.
 pub(super) fn effective_water(food: &FoodRow, query: &SliderQuery) -> (f64, WaterDetail) {
     let (green_water, blue_water, grey_water) = if food.food_type == "animal" {
         (food.feed_green_water_per_kg, food.feed_blue_water_per_kg, food.feed_grey_water_per_kg)

@@ -6,6 +6,7 @@ use crate::models::{EmissionsBreakdown, FoodRow};
 const GWP_CH4: f64 = 28.0;
 const GWP_N2O: f64 = 265.0;
 
+/// Greenhouse gas per kg in CO2-equivalent, with a per-gas breakdown for animals that have all three gases recorded.
 pub(super) fn compute_emissions(food: &FoodRow) -> (f64, Option<EmissionsBreakdown>) {
     if food.food_type == "animal" {
         if let (Some(ch4), Some(n2o), Some(co2)) = (

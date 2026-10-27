@@ -11,6 +11,7 @@ from pathlib import Path
 from ...food_types import (
     Food, Animal, Plant, AnimalFeed, PlantAnimalKill, PlantPesticide, Composite, CompositeIngredient,
 )
+from ...paths import TEXT_ENCODING
 from ..checks.validate import assert_land_types
 from .category_keys import CATEGORY_FILES
 from .composites import extract_composites
@@ -62,7 +63,7 @@ def _read_category_items(data_dir: Path) -> Iterator[dict]:
         category_path = data_dir / "foods" / f"{category_name}.json"
         if not category_path.exists():
             continue
-        yield from json.loads(category_path.read_text(encoding="utf-8"))
+        yield from json.loads(category_path.read_text(encoding=TEXT_ENCODING))
 
 
 def _add_animal(category_data: CategoryData, item: dict) -> None:

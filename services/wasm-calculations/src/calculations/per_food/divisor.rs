@@ -1,6 +1,7 @@
 use crate::models::{FoodRow, SliderQuery};
 
 const GRAMS_PER_KG: f64 = 1_000.0;
+const PERCENT: f64 = 100.0;
 const CALORIE_NORM_FALLBACK: f64 = 1_000.0;
 const PROTEIN_NORM_FALLBACK: f64 = 100.0;
 const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
@@ -62,11 +63,11 @@ pub(super) fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormF
 
     // norms are also per gram, so we are effectively amount over norm times weight percentage.
     // No mass term: comparing per kg mostly measures water content (and dry vs cooked).
-    let weighted = (query.calorie_weight / 100.0) * (calories_per_kg / norms.calorie_norm)
-        + (query.protein_weight / 100.0) * (protein_per_kg / norms.protein_norm)
-        + (query.dry_mass_weight / 100.0) * (dry_mass_per_gram(food) * GRAMS_PER_KG / norms.dry_mass_norm)
+    let weighted = (query.calorie_weight / PERCENT) * (calories_per_kg / norms.calorie_norm)
+        + (query.protein_weight / PERCENT) * (protein_per_kg / norms.protein_norm)
+        + (query.dry_mass_weight / PERCENT) * (dry_mass_per_gram(food) * GRAMS_PER_KG / norms.dry_mass_norm)
         // Wet mass: every food is stored per kg as eaten (beans, rice, quinoa etc. on a
         // cooked basis), so one kg of food is one kg of wet mass — no norm needed.
-        + (query.wet_mass_weight / 100.0);
+        + (query.wet_mass_weight / PERCENT);
     if weighted > 0.0 { Some(weighted) } else { None }
 }

@@ -14,7 +14,11 @@ export function useFoodDetails(slug: string) {
         return response.json() as Promise<FoodDetails>;
       })
       .then(setDetails)
-      .catch(error => { if (!controller.signal.aborted) setLoadError(String(error)); });
+      .catch(error => {
+        if (controller.signal.aborted) return;
+        console.error('Could not load the food details:', error);
+        setLoadError(String(error));
+      });
     return () => controller.abort();
   }, [slug]);
 

@@ -14,7 +14,7 @@ from dataclasses import dataclass
 
 from playwright.async_api import async_playwright, Browser, Page
 
-from .paths import OUTPUT_DIR
+from .paths import OUTPUT_DIR, TEXT_ENCODING
 from .rate_limit import extract_hostname, mark_fetched, wait_for_domain_cooldown
 from .sources import Source, load_sources, output_path
 
@@ -40,7 +40,7 @@ async def download_source(
     page: Page = await browser.new_page()
     await page.goto(source.url, wait_until="networkidle", timeout=PAGE_TIMEOUT_MS)
     body_text = await page.inner_text("body")
-    output_path(source).write_text(body_text, encoding="utf-8")
+    output_path(source).write_text(body_text, encoding=TEXT_ENCODING)
     await page.close()
 
     mark_fetched(hostname, last_fetched)
@@ -48,6 +48,7 @@ async def download_source(
 
 
 async def process_sources(sources: list[Source], browser: Browser) -> Counts:
+    """Downloads each source, skipping files already saved and sources with a bad status, and counts the outcomes."""
     counts = Counts()
     last_fetched: dict[str, float] = {}
 

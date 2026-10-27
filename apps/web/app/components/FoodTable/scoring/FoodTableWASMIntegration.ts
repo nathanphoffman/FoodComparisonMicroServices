@@ -64,6 +64,7 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
             setScoringError(null);
         } catch (e) {
             // Keep the last good scores visible; just surface the error.
+            console.error('Scoring failed:', e);
             setScoringError(e instanceof Error ? e.message : String(e));
         }
     }, [rawFoods, sliderValues, diets]);

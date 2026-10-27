@@ -4,6 +4,7 @@ website more than once every DOMAIN_DELAY_SECONDS.
 """
 
 import asyncio
+import sys
 import time
 from urllib.parse import urlparse
 
@@ -13,7 +14,9 @@ DOMAIN_DELAY_SECONDS = 2.0
 def extract_hostname(url: str) -> str:
     try:
         return urlparse(url).hostname or url
-    except Exception:
+    except ValueError as exc:
+        # urlparse raises ValueError on malformed URLs; fall back to the raw URL so the cooldown still keys on something.
+        print(f"Could not read the hostname from {url}: {exc}", file=sys.stderr)
         return url
 
 

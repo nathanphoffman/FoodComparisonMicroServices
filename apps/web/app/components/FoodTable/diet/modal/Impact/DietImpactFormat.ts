@@ -10,10 +10,12 @@ export function squareFeet(areaM2: number): string {
     return `${text} × ${text} ft`;
 }
 
+const TEEN_RANGE = { first: 11, last: 13 };  // 11th, 12th, 13th break the st/nd/rd pattern
+
 // 1st, 2nd, 3rd, 4th ... 11th, 12th, 13th ... 21st.
 export function ordinal(n: number): string {
     const lastTwo = n % 100;
-    if (lastTwo >= 11 && lastTwo <= 13) return `${n}th`;
+    if (lastTwo >= TEEN_RANGE.first && lastTwo <= TEEN_RANGE.last) return `${n}th`;
     return `${n}${({ 1: 'st', 2: 'nd', 3: 'rd' } as Record<number, string>)[n % 10] ?? 'th'}`;
 }
 

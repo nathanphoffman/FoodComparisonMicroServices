@@ -25,6 +25,7 @@ export function formatIntelligenceValue(value: number): string {
 const DAYS_PER_YEAR   = 365;
 const MONTHS_PER_YEAR = 12;
 
+/** A lifespan as days, months or years, whichever reads best (0.02 → "7 days", 0.5 → "6 months"). */
 export function formatYears(years: number): string {
     if (years <= 0) return 'none';
     if (years < 1 / MONTHS_PER_YEAR) {

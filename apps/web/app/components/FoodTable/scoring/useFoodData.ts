@@ -21,6 +21,7 @@ export function useFoodData(dataRegion: DataRegion) {
                 if (cancelled) return;
                 setRawFoods(foods);
             } catch (fetchError) {
+                console.error('Could not load the foods:', fetchError);
                 if (!cancelled) setError(String(fetchError));
             } finally {
                 if (!cancelled) setLoadingApi(false);

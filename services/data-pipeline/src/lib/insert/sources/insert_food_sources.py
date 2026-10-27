@@ -10,6 +10,7 @@ import json
 import sqlite3
 from pathlib import Path
 
+from ....paths import TEXT_ENCODING
 from ...load_foods import CATEGORY_FILES
 
 
@@ -19,7 +20,7 @@ def insert(connection: sqlite3.Connection, data_dir: Path) -> None:
         category_path = data_dir / "foods" / f"{category_name}.json"
         if not category_path.exists():
             continue
-        for item in json.loads(category_path.read_text(encoding="utf-8")):
+        for item in json.loads(category_path.read_text(encoding=TEXT_ENCODING)):
             for field, sources in _sourced_fields(item):
                 connection.execute(
                     "INSERT INTO food_sources (food_id, field, sources) VALUES (?, ?, ?)",

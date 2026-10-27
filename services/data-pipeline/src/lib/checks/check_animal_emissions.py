@@ -12,6 +12,7 @@ import json
 import sqlite3
 from pathlib import Path
 
+from ...paths import TEXT_ENCODING
 from ..load_foods import CATEGORY_FILES
 from ..database.regions import Region, resolve_regions
 from ..types.sourced_array import SourcedArray
@@ -58,12 +59,13 @@ def check_animal_emissions(
 
 
 def _load_animal_items(data_dir: Path) -> list[dict]:
+    """Every animal record from the category JSON files."""
     items: list[dict] = []
     for category_name in CATEGORY_FILES:
         category_path = data_dir / "foods" / f"{category_name}.json"
         if category_path.exists():
             items.extend(
-                item for item in json.loads(category_path.read_text(encoding="utf-8"))
+                item for item in json.loads(category_path.read_text(encoding=TEXT_ENCODING))
                 if item.get("type") == "animal"
             )
     return items

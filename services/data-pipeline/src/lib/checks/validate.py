@@ -5,6 +5,10 @@ Raises descriptive errors when required sourced arrays are absent,
 so that data integrity problems are caught before they reach SQLite.
 """
 
+# How far a set of fractions may drift from 1 before it is rejected (rounded source values rarely add up exactly).
+LAND_TYPE_SUM_TOLERANCE = 0.01
+INGREDIENT_SUM_TOLERANCE = 0.02
+
 
 def assert_sourced_array(value: list | None, label: str) -> None:
     """Raises ValueError if a required sourced array is None or empty."""
@@ -26,7 +30,7 @@ def assert_land_types(value: dict | None, label: str) -> None:
     if unknown:
         raise ValueError(f"{label} has unknown land types: {sorted(unknown)}")
     total = sum(value.values())
-    if abs(total - 1.0) > 0.01:
+    if abs(total - 1.0) > LAND_TYPE_SUM_TOLERANCE:
         raise ValueError(f"{label} fractions must sum to 1, got {total:.3f}")
 
 
@@ -49,7 +53,7 @@ def assert_composite_ingredients(item: dict, food_by_slug: dict, plant_ids: set[
             raise ValueError(f"{slug}: ingredient {ingredient_slug!r} must be a plant food")
         assert_sourced_array(ingredient.get("fraction"), f"{slug}.ingredients[{ingredient_slug or ingredient.get('label')}].fraction")
         total += _mean_value(ingredient["fraction"])
-    if abs(total - 1.0) > 0.02:
+    if abs(total - 1.0) > INGREDIENT_SUM_TOLERANCE:
         raise ValueError(f"{slug}.ingredients fractions must sum to 1, got {total:.3f}")
 
 

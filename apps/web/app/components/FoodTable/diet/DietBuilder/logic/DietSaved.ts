@@ -76,6 +76,7 @@ export function sanitize(parsed: Saved | null, foods: { slug: string }[]): Saved
 /** What loading found: the diet to use, and a message when stored data was unreadable (so it wasn't silently thrown away). */
 export type LoadResult = { saved: Saved; problem: string | null };
 
+/** Reads the saved diet from this browser; on any failure returns an empty diet plus a message to show the user. */
 export function loadSaved(storageKey: string, foods: { slug: string }[]): LoadResult {
     let stored: string | null;
     try {
