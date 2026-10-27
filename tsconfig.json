@@ -1,0 +1,5 @@
+{
+    "//": "The real config is apps/web/tsconfig.json. This root copy keeps strict on for any TypeScript run from the repo root (scripts/).",
+    "compilerOptions": { "strict": true, "noEmit": true, "module": "esnext", "moduleResolution": "bundler", "target": "ES2017" },
+    "include": ["scripts/**/*"]
+}
