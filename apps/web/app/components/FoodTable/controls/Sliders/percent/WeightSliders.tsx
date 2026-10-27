@@ -28,7 +28,7 @@ const HELP_TOPICS: Record<keyof FoodWeights, HelpTopicKey> = {
     wetMass:  'wetMassWeight',
 };
 
-export function WeightSliders({ onChange, defaultLevels = DEFAULT_FOOD_WEIGHT_LEVELS }: { onChange?: (w: FoodWeights) => void; defaultLevels?: FoodWeights }) {
+export function WeightSliders({ onChange, defaultLevels = DEFAULT_FOOD_WEIGHT_LEVELS }: { onChange?: (weights: FoodWeights) => void; defaultLevels?: FoodWeights }) {
     return (
         <PercentSliders
             keys={KEYS}

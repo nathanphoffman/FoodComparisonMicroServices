@@ -1,5 +1,5 @@
-export interface ISourced<T> {
-  value: T;
+export interface ISourced<Value> {
+  value: Value;
   source_id: number;
   confidence: number;
 }

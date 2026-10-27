@@ -52,8 +52,8 @@ pub(super) fn compute_pesticide_victim_intelligence(
     final_exp: f64,
 ) -> f64 {
     PROFILES.iter()
-        .find(|p| p.victim == victim)
-        .map_or(0.0, |p| compute_intelligence(p.neurons, p.weight_kg, p.lifespan_years, neuron_exp, weight_exp, final_exp))
+        .find(|profile| profile.victim == victim)
+        .map_or(0.0, |profile| compute_intelligence(profile.neurons, profile.weight_kg, profile.lifespan_years, neuron_exp, weight_exp, final_exp))
 }
 
 /// Returns typical years an animal spends in captivity before slaughter

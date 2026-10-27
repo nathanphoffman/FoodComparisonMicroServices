@@ -29,7 +29,7 @@ impl LandTypes {
         if total <= 0.0 {
             return 1.0;
         }
-        let weighted: f64 = self.values().iter().zip(weights.values()).map(|(f, w)| f * w).sum();
+        let weighted: f64 = self.values().iter().zip(weights.values()).map(|(fraction, weight)| fraction * weight).sum();
         weighted / total
     }
 }

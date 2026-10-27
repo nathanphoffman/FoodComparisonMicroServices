@@ -28,7 +28,7 @@ export const ACTIVITY_LEVELS = [
 export const DEFAULT_ACTIVITY = 0;
 
 type Pair = [number, number]; // [male, female]
-type PerStandard<T> = Partial<Record<Exclude<NutrientStandard, 'average'>, T>>;
+type PerStandard<Amount> = Partial<Record<Exclude<NutrientStandard, 'average'>, Amount>>;
 
 const PROTEIN_G_PER_KG: PerStandard<number> = { us: 0.8, eu: 0.83, japan: 0.9, china: 1.0, who: 0.83 };
 const FIBER_G: PerStandard<Pair> = { us: [38, 25], eu: [25, 25], japan: [21, 18], china: [25, 25], who: [25, 25] };
@@ -49,7 +49,7 @@ function pick(value: number | Pair, sex: Sex | null): number {
 
 function average(standard: NutrientStandard, table: PerStandard<number | Pair>, sex: Sex | null): number | null {
     const values = (standard === 'average' ? AVERAGED : [standard])
-        .flatMap(s => table[s] === undefined ? [] : [pick(table[s]!, sex)]);
+        .flatMap(standardName => table[standardName] === undefined ? [] : [pick(table[standardName]!, sex)]);
     return averageOf(values);
 }
 
@@ -106,7 +106,7 @@ export const COLOR_SCALES = {
 export function scaleColor(percent: number, scale: ColorScale): string {
     const value = scale.aroundTarget ? Math.abs(percent - 100) : percent;
     const lastIndex = scale.bands.length - 1;
-    const band = scale.bands.find((b, i) => scale.exclusive && i < lastIndex ? value < b.upTo : value <= b.upTo);
+    const band = scale.bands.find((candidate, position) => scale.exclusive && position < lastIndex ? value < candidate.upTo : value <= candidate.upTo);
     return COLOR_CLASS[band?.color ?? scale.beyond];
 }
 
@@ -117,9 +117,9 @@ export function targetColor(percent: number, kind: TargetKind): string {
 /** The scale in words for the explainer, e.g. "under 50% is red, 50–75% orange and over 75% blue". */
 export function describeScale(scale: ColorScale): string {
     const { bands, beyond, aroundTarget, exclusive } = scale;
-    const parts = bands.map((band, i) => {
-        if (aroundTarget) return `${100 - band.upTo}–${100 + band.upTo}% ${i === 0 ? 'is ' : ''}${band.color}`;
-        return i === 0 ? `${exclusive ? 'under' : 'up to'} ${band.upTo}% is ${band.color}` : `${bands[i - 1].upTo}–${band.upTo}% ${band.color}`;
+    const parts = bands.map((band, position) => {
+        if (aroundTarget) return `${100 - band.upTo}–${100 + band.upTo}% ${position === 0 ? 'is ' : ''}${band.color}`;
+        return position === 0 ? `${exclusive ? 'under' : 'up to'} ${band.upTo}% is ${band.color}` : `${bands[position - 1].upTo}–${band.upTo}% ${band.color}`;
     });
     parts.push(aroundTarget ? `further out ${beyond}` : `over ${bands[bands.length - 1].upTo}% ${beyond}`);
     return `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;

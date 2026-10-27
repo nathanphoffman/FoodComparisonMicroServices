@@ -15,7 +15,7 @@ export type PresetLevels = { foodWeights: FoodWeights; scorePriorities: ScorePri
 
 type Props = {
     /** Called with the name of the setting that moved and its new value. */
-    onChange: <K extends keyof SliderValues>(key: K, value: SliderValues[K]) => void;
+    onChange: <SliderKey extends keyof SliderValues>(key: SliderKey, value: SliderValues[SliderKey]) => void;
     /** The values the sliders start at. Changing `resetKey` remounts every slider so it picks them up again (used by presets). */
     values: SliderValues;
     presetLevels: PresetLevels;
@@ -23,7 +23,7 @@ type Props = {
 };
 
 export function FoodTableSliders({ onChange, values, presetLevels, resetKey }: Props) {
-    const set = <K extends keyof SliderValues>(key: K) => (value: SliderValues[K]) => onChange(key, value);
+    const set = <SliderKey extends keyof SliderValues>(key: SliderKey) => (value: SliderValues[SliderKey]) => onChange(key, value);
     const groupProps = { values, onChange, resetKey };
     return (
         <div className="flex flex-col gap-3 mb-4">

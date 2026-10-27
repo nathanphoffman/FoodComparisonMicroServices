@@ -30,7 +30,7 @@ const DESCRIPTIONS: Record<keyof LandTypes, string> = {
     temperate_grassland: 'prairie and steppe cropland and pasture',
 };
 
-export function LandTypeSliders({ onChange }: { onChange?: (w: LandTypes) => void }) {
+export function LandTypeSliders({ onChange }: { onChange?: (weights: LandTypes) => void }) {
     const [weights, setWeights]     = useState<LandTypes>(DEFAULT_LAND_TYPE_WEIGHTS);
     const [showModal, setShowModal] = useState(false);
 

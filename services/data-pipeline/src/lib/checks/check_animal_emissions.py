@@ -26,12 +26,12 @@ MAX_RATIO = 1.5
 MIN_RATIO = 1 / MAX_RATIO
 
 COMPUTED_QUERY = """
-SELECT f.slug, f.co2_kg_per_kg_output, f.ch4_kg_per_kg_output, f.n2o_kg_per_kg_output,
+SELECT food.slug, food.co2_kg_per_kg_output, food.ch4_kg_per_kg_output, food.n2o_kg_per_kg_output,
        feed.emissions_per_kg
-FROM   foods_normalized f
+FROM   foods_normalized food
 LEFT JOIN foods_normalized feed
-       ON feed.food_id = f.food_id AND feed.is_feed = 1 AND feed.region = f.region
-WHERE  f.is_feed = 0 AND f.type = 'animal' AND f.region = ?
+       ON feed.food_id = food.food_id AND feed.is_feed = 1 AND feed.region = food.region
+WHERE  food.is_feed = 0 AND food.type = 'animal' AND food.region = ?
 """
 
 

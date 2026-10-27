@@ -18,14 +18,14 @@ fn mass_shares(foods: &[FoodRow], diet: &Diet) -> Vec<(String, f64)> {
         match diet.basis {
             Basis::Mass => Some((ingredient.slug.clone(), ingredient.fraction)),
             Basis::Calories => {
-                let calories_per_gram = foods.iter().find(|f| f.slug == ingredient.slug)?.calories;
+                let calories_per_gram = foods.iter().find(|food| food.slug == ingredient.slug)?.calories;
                 (calories_per_gram > 0.0).then(|| (ingredient.slug.clone(), ingredient.fraction / calories_per_gram))
             }
         }
     }).collect();
-    let total: f64 = raw.iter().map(|(_, m)| m).sum();
+    let total: f64 = raw.iter().map(|(_, mass)| mass).sum();
     if total <= 0.0 { return Vec::new(); }
-    raw.into_iter().map(|(slug, m)| (slug, m / total)).collect()
+    raw.into_iter().map(|(slug, mass)| (slug, mass / total)).collect()
 }
 
 /// How much each ingredient counts toward the blend (sums to 1), the blend's divisor (Compare By units per kg of the
@@ -35,16 +35,16 @@ fn mass_shares(foods: &[FoodRow], diet: &Diet) -> Vec<(String, f64)> {
 /// number of units (its divisor). So an ingredient counts in proportion to
 /// mass × divisor.
 fn unit_weights(rows: &[ScoredRow], masses: &[(String, f64)]) -> (Vec<f64>, f64, bool) {
-    let divisor_of = |slug: &str| rows.iter().find(|r| r.slug == slug).map_or(0.0, |r| r.divisor);
+    let divisor_of = |slug: &str| rows.iter().find(|row| row.slug == slug).map_or(0.0, |row| row.divisor);
     // Units of the Compare By measure each ingredient contributes: its mass times its divisor.
-    let units: Vec<f64> = masses.iter().map(|(slug, m)| m * divisor_of(slug)).collect();
+    let units: Vec<f64> = masses.iter().map(|(slug, mass)| mass * divisor_of(slug)).collect();
     let divisor: f64 = units.iter().sum();
     let has_unitless = masses.iter().any(|(slug, _)| divisor_of(slug) <= 0.0);
     // With no units at all there is nothing to weight by; fall back to mass.
     let weights = if divisor > 0.0 {
-        units.iter().map(|u| u / divisor).collect()
+        units.iter().map(|unit_count| unit_count / divisor).collect()
     } else {
-        masses.iter().map(|(_, m)| *m).collect()
+        masses.iter().map(|(_, mass)| *mass).collect()
     };
     (weights, divisor, has_unitless)
 }
@@ -61,7 +61,7 @@ fn blend_scores(rows: &[ScoredRow], masses: &[(String, f64)], weights: &[f64]) -
     let mut scores = BlendedScores::default();
     let mut matched = 0;
     for ((slug, _), weight) in masses.iter().zip(weights) {
-        if let Some(row) = rows.iter().find(|r| &r.slug == slug) {
+        if let Some(row) = rows.iter().find(|row| &row.slug == slug) {
             matched += 1;
             scores.nutrition     += weight * row.nutrition_score.unwrap_or(0.0);
             scores.emissions     += weight * row.emissions.unwrap_or(0.0);

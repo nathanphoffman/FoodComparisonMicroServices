@@ -23,7 +23,7 @@ export function toNutritionDetail(food: RawFood): NutritionDetail {
 /** Each ingredient that's in the food list with a positive share, with its mass; a calorie share becomes mass by dividing by calories per gram (same as the WASM blend). */
 function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; mass: number }[] {
     return diet.ingredients.flatMap(({ slug, fraction }) => {
-        const food = foods.find(f => f.slug === slug);
+        const food = foods.find(candidate => candidate.slug === slug);
         if (!food || fraction <= 0) return [];
         let mass = fraction;
         if (diet.basis !== 'mass') mass = food.calories > 0 ? fraction / food.calories : 0;

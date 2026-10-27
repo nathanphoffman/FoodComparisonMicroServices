@@ -63,13 +63,13 @@ export function sanitize(parsed: Saved | null, foods: { slug: string }[]): Saved
         weightLb: Number.isFinite(parsed.weightLb) && (parsed.weightLb ?? 0) > 0 ? parsed.weightLb : null,
         pillAbsorption: Number.isFinite(parsed.pillAbsorption) && parsed.pillAbsorption >= 0 && parsed.pillAbsorption <= 100 ? parsed.pillAbsorption : DEFAULT_PILL_ABSORPTION,
         supplements: Array.isArray(parsed.supplements)
-            ? parsed.supplements.filter(s => MICRONUTRIENT_KEYS.includes(s?.key) && s.dose > 0 && s.perWeek > 0)
-                .map(s => ({ ...s, percent: !!s.percent }))
+            ? parsed.supplements.filter(supplement => MICRONUTRIENT_KEYS.includes(supplement?.key) && supplement.dose > 0 && supplement.perWeek > 0)
+                .map(supplement => ({ ...supplement, percent: !!supplement.percent }))
             : [],
         // Drop foods that no longer exist.
         ingredients: parsed.ingredients
-            .filter(i => foods.some(f => f.slug === i.slug) && Number.isFinite(i.level))
-            .map(i => ({ ...i, fine: !!i.fine })),
+            .filter(ingredient => foods.some(food => food.slug === ingredient.slug) && Number.isFinite(ingredient.level))
+            .map(ingredient => ({ ...ingredient, fine: !!ingredient.fine })),
     };
 }
 

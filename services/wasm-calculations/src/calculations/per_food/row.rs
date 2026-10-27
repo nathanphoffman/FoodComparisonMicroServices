@@ -53,7 +53,7 @@ pub(in crate::calculations) fn compute_row(food: &FoodRow, query: &SliderQuery, 
     // None when the food has none of the Compare By unit (e.g. oil when comparing
     // by protein only): every per-unit value is then undefined, not per-kg.
     let divisor = compute_divisor(food, query, norms);
-    let per_unit = |raw: f64| divisor.map(|d| raw / d);
+    let per_unit = |raw: f64| divisor.map(|divisor_value| raw / divisor_value);
 
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
     // land_use_raw is physical area (used for availability); land_use_weighted is
@@ -76,7 +76,7 @@ pub(in crate::calculations) fn compute_row(food: &FoodRow, query: &SliderQuery, 
         captive_sentience: per_unit(harm.captive),
         sentient_harm: per_unit(combined_sentient_harm(&harm, query.kill_multiplier)),
         final_score: None, // filled in by apply()
-        availability: divisor.map(|d| compute_availability(food, d, land_use_raw)),
+        availability: divisor.map(|divisor_value| compute_availability(food, divisor_value, land_use_raw)),
 
         emissions_breakdown,
         water_detail,

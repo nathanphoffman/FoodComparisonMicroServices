@@ -75,11 +75,11 @@ mod tests {
 
     /// A protein that exactly meets every requirement (per gram of protein).
     fn complete(protein_per_gram: f64) -> AminoAcids {
-        let g = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * protein_per_gram);
+        let protein_share = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * protein_per_gram);
         AminoAcids {
-            histidine: g(16.0), isoleucine: g(30.0), leucine: g(61.0), lysine: g(48.0),
-            methionine: g(15.0), cystine: g(8.0), phenylalanine: g(25.0), tyrosine: g(16.0),
-            threonine: g(25.0), tryptophan: g(6.6), valine: g(40.0),
+            histidine: protein_share(16.0), isoleucine: protein_share(30.0), leucine: protein_share(61.0), lysine: protein_share(48.0),
+            methionine: protein_share(15.0), cystine: protein_share(8.0), phenylalanine: protein_share(25.0), tyrosine: protein_share(16.0),
+            threonine: protein_share(25.0), tryptophan: protein_share(6.6), valine: protein_share(40.0),
             ..Default::default()
         }
     }
@@ -92,14 +92,14 @@ mod tests {
     #[test]
     fn surplus_amino_acids_do_not_score_above_one() {
         let mut rich = complete(0.1);
-        rich.lysine = rich.lysine.map(|v| v * 3.0);
+        rich.lysine = rich.lysine.map(|ratio| ratio * 3.0);
         assert!((rich.score(0.1).unwrap() - 1.0).abs() < 1e-9);
     }
 
     #[test]
     fn the_weakest_amino_acid_sets_the_score() {
         let mut wheat_like = complete(0.1);
-        wheat_like.lysine = wheat_like.lysine.map(|v| v * 0.5); // half the lysine needed
+        wheat_like.lysine = wheat_like.lysine.map(|ratio| ratio * 0.5); // half the lysine needed
         assert!((wheat_like.score(0.1).unwrap() - 0.5).abs() < 1e-9);
     }
 

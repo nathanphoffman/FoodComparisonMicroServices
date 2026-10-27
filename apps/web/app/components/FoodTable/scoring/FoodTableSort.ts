@@ -42,7 +42,7 @@ export function useFoodTableSort() {
     const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
     function handleSort(key: SortKey) {
-        if (sortKey === key) setSortDir(d => (d === 'asc' ? 'desc' : 'asc'));
+        if (sortKey === key) setSortDir(direction => (direction === 'asc' ? 'desc' : 'asc'));
         else { setSortKey(key); setSortDir(HIGHER_IS_BETTER.includes(key) ? 'desc' : 'asc'); }
     }
 
@@ -54,12 +54,12 @@ export function useFoodTableSort() {
     const sortRows = useCallback((foods: RawFood[], scored: Map<string, ScoredRow>): RawFood[] => {
         if (!sortKey) return foods;
 
-        return [...foods].sort((a, b) => {
-            const scoredA = scored.get(a.slug);
-            const scoredB = scored.get(b.slug);
+        return [...foods].sort((first, second) => {
+            const scoredA = scored.get(first.slug);
+            const scoredB = scored.get(second.slug);
             const field = SORT_FIELDS[sortKey];
-            const valueA = sortKey === 'name' ? a.name : field ? scoredA?.[field] ?? null : null;
-            const valueB = sortKey === 'name' ? b.name : field ? scoredB?.[field] ?? null : null;
+            const valueA = sortKey === 'name' ? first.name : field ? scoredA?.[field] ?? null : null;
+            const valueB = sortKey === 'name' ? second.name : field ? scoredB?.[field] ?? null : null;
 
             // A food with no value goes last whichever way the column is sorted, so gaps never lead the table.
             if (valueA === null && valueB === null) return 0;

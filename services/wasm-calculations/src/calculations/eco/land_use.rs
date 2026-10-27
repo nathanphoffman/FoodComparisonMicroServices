@@ -22,8 +22,8 @@ pub(in crate::calculations) fn compute_land_use(food: &FoodRow, query: &SliderQu
 fn plant_land_use(food: &FoodRow, multiplier: f64) -> LandUseDetail {
     let area = food
         .yield_kg_ha
-        .filter(|&y| y > 0.0)
-        .map(|y| SQUARE_METERS_PER_HA / y)
+        .filter(|&yield_kg_ha| yield_kg_ha > 0.0)
+        .map(|yield_kg_ha| SQUARE_METERS_PER_HA / yield_kg_ha)
         .unwrap_or(0.0);
     LandUseDetail {
         land_type: "plant".to_string(),

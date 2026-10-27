@@ -49,7 +49,7 @@ function formatCount(count: number): string {
 // Picks the largest unit that keeps the number at 1 or more.
 function formatDuration(years: number): string {
     const seconds = years * SECONDS_PER_YEAR;
-    const unit = TIME_UNITS.find(u => seconds >= u.seconds);
+    const unit = TIME_UNITS.find(timeUnit => seconds >= timeUnit.seconds);
     if (!unit) return "<1 millisecond";
     const amount = seconds / unit.seconds;
     const rounded = Number(amount.toFixed(amount < 10 ? 1 : 0));
@@ -65,14 +65,14 @@ export function IntelligenceExamples({
     weightExponent: number;
     finalIntelligenceExponent: number;
 }) {
-    const score = (p: Profile) => computeIntelligence(
-        p.neurons, p.weightKg, p.lifespanYears, neuronExponent, weightExponent, finalIntelligenceExponent,
+    const score = (profile: Profile) => computeIntelligence(
+        profile.neurons, profile.weightKg, profile.lifespanYears, neuronExponent, weightExponent, finalIntelligenceExponent,
     );
     const human = score(HUMAN);
     // Sorted lowest to highest prison time (i.e. highest count first).
     const examples = EXAMPLES
-        .map(p => ({ name: p.name, count: human / score(p) }))
-        .sort((a, b) => b.count - a.count);
+        .map(profile => ({ name: profile.name, count: human / score(profile) }))
+        .sort((first, second) => second.count - first.count);
 
     return (
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-neutral-500">

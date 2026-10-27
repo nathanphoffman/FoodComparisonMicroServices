@@ -10,7 +10,7 @@ export function Modal({ title, onClose, wide, children }: {
     children: React.ReactNode;
 }) {
     useEffect(() => {
-        const handleKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+        const handleKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
         document.addEventListener('keydown', handleKey);
         return () => document.removeEventListener('keydown', handleKey);
     }, [onClose]);

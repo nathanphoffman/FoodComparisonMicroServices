@@ -2,8 +2,8 @@ export function Slider({ min = 0, max = 100, step, value, onChange }: { min?: nu
 
     const pct = ((value - min) / (max - min)) * 100;
 
-    const setSlider = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(Number(e.target.value));
+    const setSlider = (event: React.ChangeEvent<HTMLInputElement>) => {
+        onChange(Number(event.target.value));
     };
 
     return <input className="w-full appearance-none cursor-pointer focus:outline-none"

@@ -13,7 +13,7 @@ pub(super) fn compute_nutrition_score(food: &FoodRow, weights: &NutritionWeights
         - weights.free_sugar * free_sugar
         // sodium is mg per gram and its weight is per 100 mg
         - weights.sodium * food.sodium.unwrap_or(0.0) / 100.0
-        + weights.micronutrients * food.micronutrients.as_ref().map_or(0.0, |m| m.daily_value_fraction());
+        + weights.micronutrients * food.micronutrients.as_ref().map_or(0.0, |micronutrients| micronutrients.daily_value_fraction());
 
     Some(raw * 100.0 / food.calories)
 }
@@ -22,7 +22,7 @@ pub(super) fn compute_nutrition_score(food: &FoodRow, weights: &NutritionWeights
 /// essential amino acid falls short of what the body needs. `slider` (0–1) is how much of the
 /// shortfall is taken off. Foods with no amino acid data keep all their protein points.
 fn protein_quality_factor(amino_acids: Option<&AminoAcids>, protein_per_gram: f64, slider: f64) -> f64 {
-    let amino_score = amino_acids.and_then(|a| a.score(protein_per_gram)).unwrap_or(1.0);
+    let amino_score = amino_acids.and_then(|amino_acids_present| amino_acids_present.score(protein_per_gram)).unwrap_or(1.0);
     1.0 - slider.clamp(0.0, 1.0) * (1.0 - amino_score)
 }
 
@@ -32,11 +32,11 @@ mod tests {
 
     /// Protein of 0.1 g per g whose lysine is half of what the body needs.
     fn lysine_short() -> AminoAcids {
-        let g = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * 0.10);
+        let protein_share = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * 0.10);
         AminoAcids {
-            histidine: g(16.0), isoleucine: g(30.0), leucine: g(61.0), lysine: g(24.0),
-            methionine: g(15.0), cystine: g(8.0), phenylalanine: g(25.0), tyrosine: g(16.0),
-            threonine: g(25.0), tryptophan: g(6.6), valine: g(40.0),
+            histidine: protein_share(16.0), isoleucine: protein_share(30.0), leucine: protein_share(61.0), lysine: protein_share(24.0),
+            methionine: protein_share(15.0), cystine: protein_share(8.0), phenylalanine: protein_share(25.0), tyrosine: protein_share(16.0),
+            threonine: protein_share(25.0), tryptophan: protein_share(6.6), valine: protein_share(40.0),
             ..Default::default()
         }
     }

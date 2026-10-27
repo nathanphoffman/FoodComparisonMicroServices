@@ -55,7 +55,7 @@ const SETTINGS: Record<keyof NutritionWeights, NutritionSliderSettings> = {
 
 const KEYS = Object.keys(SETTINGS) as (keyof NutritionWeights)[];
 
-export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_WEIGHTS }: { onChange?: (w: NutritionWeights) => void; initialWeights?: NutritionWeights }) {
+export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_WEIGHTS }: { onChange?: (weights: NutritionWeights) => void; initialWeights?: NutritionWeights }) {
     const [weights, setWeights]     = useState<NutritionWeights>(initialWeights);
     const [showModal, setShowModal] = useState(false);
 

@@ -96,7 +96,7 @@ class RawComposite:
         can be ~3 Gg while its soy is ~370,000 Gg; a plain mean would just be the soy.
         Falls back to whichever side exists.
         """
-        weighted = [(i.fraction, i.availability_gg) for i in self._ingredients if i.availability_gg]
+        weighted = [(ingredient.fraction, ingredient.availability_gg) for ingredient in self._ingredients if ingredient.availability_gg]
         total_fraction = sum(fraction for fraction, _ in weighted)
         ingredient_gg = (
             sum(fraction * gg for fraction, gg in weighted) / total_fraction if total_fraction else None

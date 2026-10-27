@@ -15,7 +15,7 @@ import { FoodTableToolbar, type DataSettings } from './toolbar/FoodTableToolbar'
 
 type Props = {
     foods: { slug: string; name: string; calories?: number }[];
-    onSliderValuesChange: (v: SliderValues) => void;
+    onSliderValuesChange: (values: SliderValues) => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
     dataSettings: DataSettings;
     /** Everything the diet builder reports back: its food, its daily settings, and a request to show the breakdown. */
@@ -62,7 +62,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({ foods, onSliderVa
     }
 
     // Sets one slider value by hand, which also clears the preset highlight.
-    function setSlider<K extends keyof SliderValues>(key: K, value: SliderValues[K]) {
+    function setSlider<SliderKey extends keyof SliderValues>(key: SliderKey, value: SliderValues[SliderKey]) {
         commitByHand({ ...sliderValues, [key]: value });
     }
 
@@ -70,7 +70,7 @@ export const FoodTableInputs = memo(function FoodTableInputs({ foods, onSliderVa
         <>
             <FoodTablePresets selected={activePreset} onSelect={applyPreset} />
             <button
-                onClick={() => setShowControls(v => !v)}
+                onClick={() => setShowControls(shown => !shown)}
                 className="md:hidden mb-3 w-full text-sm text-neutral-600 border border-neutral-200 rounded px-3 py-2 flex items-center justify-between bg-white"
             >
                 Adjust scoring <span className="text-xs">{showControls ? '▴' : '▾'}</span>

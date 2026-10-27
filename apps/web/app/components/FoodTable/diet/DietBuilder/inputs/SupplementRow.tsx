@@ -24,13 +24,13 @@ export function SupplementRow({ supplement, dailyNeed, onChange, onRemove }: Pro
             <input
                 type="number" min={0} step="any" inputMode="decimal"
                 value={shown ? Number(shown.toPrecision(4)) : ''}
-                onChange={e => onChange({ dose: supplement.percent ? positiveOrZero(e.target.value) / 100 * dailyNeed : positiveOrZero(e.target.value) })}
+                onChange={event => onChange({ dose: supplement.percent ? positiveOrZero(event.target.value) / 100 * dailyNeed : positiveOrZero(event.target.value) })}
                 aria-label={`${label} dose`}
                 className={`${INPUT} w-20`}
             />
             <select
                 value={supplement.percent ? 'percent' : 'unit'}
-                onChange={e => onChange({ percent: e.target.value === 'percent' })}
+                onChange={event => onChange({ percent: event.target.value === 'percent' })}
                 aria-label={`${label} dose unit`}
                 className={`${INPUT} px-1`}
             >
@@ -41,7 +41,7 @@ export function SupplementRow({ supplement, dailyNeed, onChange, onRemove }: Pro
             <input
                 type="number" min={0} step="any" inputMode="decimal"
                 value={supplement.perWeek || ''}
-                onChange={e => onChange({ perWeek: positiveOrZero(e.target.value) })}
+                onChange={event => onChange({ perWeek: positiveOrZero(event.target.value) })}
                 aria-label={`${label} pills per week`}
                 className={`${INPUT} w-16`}
             />

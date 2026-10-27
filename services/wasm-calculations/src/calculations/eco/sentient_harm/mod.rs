@@ -26,7 +26,7 @@ pub(in crate::calculations) fn compute_sentient_harm(
 
 /// A plant's own cropland: pesticide deaths plus habitat loss.
 fn plant_sentient_harm(food: &FoodRow, intel: &VictimIntelligence) -> (f64, SentientHarmDetail) {
-    let Some(yield_kg_ha) = food.yield_kg_ha.filter(|&y| y > 0.0) else {
+    let Some(yield_kg_ha) = food.yield_kg_ha.filter(|&yield_kg_ha| yield_kg_ha > 0.0) else {
         return (0.0, SentientHarmDetail::zero());
     };
 
@@ -83,7 +83,7 @@ fn animal_sentient_harm(
 /// rather than a pesticide-kg proxy, so insect/bee/deforestation deaths scale correctly with
 /// the true land required for each feed crop.
 fn feed_cropland_harm(food: &FoodRow, intel: &VictimIntelligence) -> Option<LandHarm> {
-    let feed_land_m2 = food.feed_land_m2_per_kg.filter(|&v| v > 0.0)?;
+    let feed_land_m2 = food.feed_land_m2_per_kg.filter(|&land| land > 0.0)?;
     let pesticides = PesticideRates {
         insect_paf:      food.feed_pesticide_insect_paf,
         bee_hazard:      food.feed_pesticide_bee_hazard,
@@ -93,5 +93,5 @@ fn feed_cropland_harm(food: &FoodRow, intel: &VictimIntelligence) -> Option<Land
 }
 
 fn sum_positive(values: &[f64]) -> f64 {
-    values.iter().filter(|&&c| c > 0.0).sum()
+    values.iter().filter(|&&count| count > 0.0).sum()
 }

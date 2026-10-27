@@ -21,10 +21,10 @@ export function MultivitaminForm({ dailyNeeds, onAdd }: { dailyNeeds: Record<Mic
         <div className="flex flex-wrap items-center gap-2 text-xs" title={HELP}>
             <span className="text-sm">Multivitamin: all vitamins at</span>
             <input type="number" min={0} step="any" inputMode="decimal" value={percent || ''} className={BOX}
-                onChange={e => setPercent(positiveOrZero(e.target.value))} aria-label="Multivitamin percent of RDA" />
+                onChange={event => setPercent(positiveOrZero(event.target.value))} aria-label="Multivitamin percent of RDA" />
             <span>% RDA ×</span>
             <input type="number" min={0} step="any" inputMode="decimal" value={perWeek || ''} className={BOX}
-                onChange={e => setPerWeek(positiveOrZero(e.target.value))} aria-label="Multivitamin pills per week" />
+                onChange={event => setPerWeek(positiveOrZero(event.target.value))} aria-label="Multivitamin pills per week" />
             <span>per week</span>
             <button
                 onClick={() => onAdd(VITAMIN_KEYS.map(key => ({ key, dose: dailyNeeds[key] * percent / 100, perWeek, percent: true })))}

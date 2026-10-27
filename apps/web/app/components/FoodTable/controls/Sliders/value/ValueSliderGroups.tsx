@@ -5,7 +5,7 @@ import * as SLIDERS from "./ValueSliderSettings";
 
 type GroupProps = {
     values: SliderValues;
-    onChange: <K extends keyof SliderValues>(key: K, value: SliderValues[K]) => void;
+    onChange: <SliderKey extends keyof SliderValues>(key: SliderKey, value: SliderValues[SliderKey]) => void;
     /** Changing it remounts the sliders so they pick up `values` again (used by presets). */
     resetKey: number;
 };

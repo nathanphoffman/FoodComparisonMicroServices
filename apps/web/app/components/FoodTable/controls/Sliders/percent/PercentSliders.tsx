@@ -6,14 +6,14 @@ import type { HelpTopicKey } from "../../../../Modals/helpTopics";
 import { PercentSliderColumn } from "./PercentSliderColumn";
 import { usePercentLevels, type Levels } from "./percentLevels";
 
-type Props<K extends string> = {
-    keys: K[];
-    labels: Record<K, string>;
-    descriptions: Record<K, string>;
-    helpTopics?: Partial<Record<K, HelpTopicKey>>;
+type Props<LevelKey extends string> = {
+    keys: LevelKey[];
+    labels: Record<LevelKey, string>;
+    descriptions: Record<LevelKey, string>;
+    helpTopics?: Partial<Record<LevelKey, HelpTopicKey>>;
     /** Starting slider levels (0–MAX_LEVEL); equal when omitted. */
-    defaultLevels?: Levels<K>;
-    onChange?: (shares: Levels<K>) => void;
+    defaultLevels?: Levels<LevelKey>;
+    onChange?: (shares: Levels<LevelKey>) => void;
 };
 
 /**
@@ -21,9 +21,9 @@ type Props<K extends string> = {
  * Each slider moves on its own; the resulting percentage share is shown per
  * slider and passed to onChange (always summing to 100, or all 0).
  */
-export function PercentSliders<K extends string>({ keys, labels, descriptions, helpTopics, defaultLevels, onChange }: Props<K>) {
+export function PercentSliders<LevelKey extends string>({ keys, labels, descriptions, helpTopics, defaultLevels, onChange }: Props<LevelKey>) {
     const { levels, shares, setLevel, balance } = usePercentLevels(keys, defaultLevels, onChange);
-    const [helpKey, setHelpKey] = useState<K | null>(null);
+    const [helpKey, setHelpKey] = useState<LevelKey | null>(null);
     const openTopic = helpKey ? helpTopics?.[helpKey] : undefined;
 
     return (

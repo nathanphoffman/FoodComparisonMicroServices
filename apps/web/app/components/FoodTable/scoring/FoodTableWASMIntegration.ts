@@ -60,12 +60,12 @@ export function useWasmScoring(rawFoods: RawFood[], sliderValues: SliderValues, 
 
         try {
             const rows = wasmScore!(input);
-            setScored(new Map(rows.map(r => [r.slug, r])));
+            setScored(new Map(rows.map(row => [row.slug, row])));
             setScoringError(null);
-        } catch (e) {
+        } catch (error) {
             // Keep the last good scores visible; just surface the error.
-            console.error('Scoring failed:', e);
-            setScoringError(e instanceof Error ? e.message : String(e));
+            console.error('Scoring failed:', error);
+            setScoringError(error instanceof Error ? error.message : String(error));
         }
     }, [rawFoods, sliderValues, diets]);
 

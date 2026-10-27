@@ -20,10 +20,10 @@ pub struct DimensionCaps {
 impl DimensionCaps {
     pub fn from_rows(rows: &[ScoredRow], reference: &ScoredRow) -> Self {
         Self {
-            emissions:     highest_ratio_in_batch(rows, reference.emissions,     |r| r.emissions),
-            land_use:      highest_ratio_in_batch(rows, reference.land_use,      |r| r.land_use),
-            water:         highest_ratio_in_batch(rows, reference.water,         |r| r.water),
-            sentient_harm: highest_ratio_in_batch(rows, reference.sentient_harm, |r| r.sentient_harm),
+            emissions:     highest_ratio_in_batch(rows, reference.emissions,     |row| row.emissions),
+            land_use:      highest_ratio_in_batch(rows, reference.land_use,      |row| row.land_use),
+            water:         highest_ratio_in_batch(rows, reference.water,         |row| row.water),
+            sentient_harm: highest_ratio_in_batch(rows, reference.sentient_harm, |row| row.sentient_harm),
             nutrition_offset: nutrition_offset(rows),
         }
     }
@@ -32,7 +32,7 @@ impl DimensionCaps {
 // Shift that lifts the lowest nutrition score in the batch to NUTRITION_FLOOR.
 fn nutrition_offset(rows: &[ScoredRow]) -> f64 {
     let lowest = rows.iter()
-        .filter_map(|r| r.nutrition_score)
+        .filter_map(|row| row.nutrition_score)
         .filter(|score| score.is_finite())
         // Keep the smallest finite score: start at infinity and let f64::min pull it down.
         .fold(f64::INFINITY, f64::min);
@@ -48,11 +48,11 @@ fn highest_ratio_in_batch(
     extract: impl Fn(&ScoredRow) -> Option<f64>,
 ) -> f64 {
     let reference_value = match reference_score {
-        Some(v) if v > 0.0 => v,
+        Some(ratio) if ratio > 0.0 => ratio,
         _ => return 1.0,
     };
     rows.iter()
-        .filter_map(|r| extract(r))
+        .filter_map(|row| extract(row))
         .filter(|&food_score| food_score > 0.0)
         .map(|food_score| reference_value / food_score)
         // Keep the largest ratio: start at 1.0 and let f64::max pull it up.

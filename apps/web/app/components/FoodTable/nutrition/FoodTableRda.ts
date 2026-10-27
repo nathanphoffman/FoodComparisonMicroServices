@@ -93,7 +93,7 @@ function standardNeed(standard: Exclude<NutrientStandard, 'average'>, key: Micro
     let value: number | Pair | undefined;
     if (standard === 'us' || (age !== null && age < ADULT_AGE)) {
         const bands = US_RDA[key];
-        value = bands ? bands.find(b => (age ?? DEFAULT_AGE) <= b.upTo)?.value : MICRONUTRIENT_INFO[key].dailyValue;
+        value = bands ? bands.find(band => (age ?? DEFAULT_AGE) <= band.upTo)?.value : MICRONUTRIENT_INFO[key].dailyValue;
     } else {
         value = ADULT[standard][key];
     }
@@ -110,7 +110,7 @@ const WEIGHT_EXPONENT = 0.75;
 
 /** Short description of which needs are in use, for the tooltip title. */
 export function needsLabel(standard: NutrientStandard, sex: Sex | null, age: number | null, weightLb: number | null): string {
-    const name = NUTRIENT_STANDARD_OPTIONS.find(o => o.value === standard)?.label ?? '';
+    const name = NUTRIENT_STANDARD_OPTIONS.find(option => option.value === standard)?.label ?? '';
     return sex !== null || age !== null || weightLb !== null ? `${name}, adjusted for you` : name;
 }
 
@@ -120,8 +120,8 @@ export function dailyNeeds(standard: NutrientStandard, sex: Sex | null, age: num
     const needs = {} as Record<MicronutrientKey, number>;
     for (const key of Object.keys(MICRONUTRIENT_INFO) as MicronutrientKey[]) {
         const values = (standard === 'average' ? STANDARDS : [standard])
-            .map(s => standardNeed(s, key, sex, age))
-            .filter((v): v is number => v !== null);
+            .map(standardName => standardNeed(standardName, key, sex, age))
+            .filter((need): need is number => need !== null);
         const base = averageOf(values) ?? MICRONUTRIENT_INFO[key].dailyValue;
         needs[key] = base * weightScale;
     }

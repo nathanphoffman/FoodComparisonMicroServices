@@ -41,7 +41,7 @@ export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide,
                                 </div>
                             </div>
                             <label className="flex items-center gap-1 text-[10px] text-neutral-500 shrink-0 cursor-pointer" title="Fine control: the slider sets this food's share directly from 0 to 1% in 0.005% steps">
-                                <input type="checkbox" checked={!!ing.fine} onChange={e => onFineChange(idx, e.target.checked)} />
+                                <input type="checkbox" checked={!!ing.fine} onChange={event => onFineChange(idx, event.target.checked)} />
                                 ÷100
                             </label>
                             <button

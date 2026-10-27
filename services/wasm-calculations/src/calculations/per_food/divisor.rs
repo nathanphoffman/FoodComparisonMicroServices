@@ -10,9 +10,9 @@ const DRY_MASS_NORM_FALLBACK: f64 = 300.0;
 /// there are no such values.
 fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
     let (sum, count) = iter
-        .filter(|&v| v > 0.0 && v.is_finite())
+        .filter(|&value| value > 0.0 && value.is_finite())
         // Running (sum, count) of the values that passed the filter, so the mean needs one pass.
-        .fold((0.0_f64, 0_usize), |(s, n), v| (s + v, n + 1));
+        .fold((0.0_f64, 0_usize), |(sum, count), value| (sum + value, count + 1));
     if count == 0 {
         None
     } else {
@@ -40,11 +40,11 @@ fn dry_mass_per_gram(food: &FoodRow) -> f64 {
 impl NormFactors {
     pub(in crate::calculations) fn from_foods(foods: &[FoodRow]) -> Self {
         Self {
-            calorie_norm: mean_nonzero(foods.iter().map(|f| f.calories * GRAMS_PER_KG))
+            calorie_norm: mean_nonzero(foods.iter().map(|food| food.calories * GRAMS_PER_KG))
                 .unwrap_or(CALORIE_NORM_FALLBACK),
-            protein_norm: mean_nonzero(foods.iter().map(|f| f.protein * GRAMS_PER_KG))
+            protein_norm: mean_nonzero(foods.iter().map(|food| food.protein * GRAMS_PER_KG))
                 .unwrap_or(PROTEIN_NORM_FALLBACK),
-            dry_mass_norm: mean_nonzero(foods.iter().map(|f| dry_mass_per_gram(f) * GRAMS_PER_KG))
+            dry_mass_norm: mean_nonzero(foods.iter().map(|food| dry_mass_per_gram(food) * GRAMS_PER_KG))
                 .unwrap_or(DRY_MASS_NORM_FALLBACK),
         }
     }

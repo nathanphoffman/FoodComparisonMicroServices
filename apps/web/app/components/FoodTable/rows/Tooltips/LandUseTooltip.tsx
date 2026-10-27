@@ -33,7 +33,7 @@ export function LandUseTooltip({ detail, divisor, unit, children }: { detail: La
         <TooltipSection title="Land type weighting">
           {(Object.entries(detail.landTypes) as [keyof LandTypes, number][])
             .filter(([, fraction]) => fraction > 0)
-            .sort(([, a], [, b]) => b - a)
+            .sort(([, first], [, second]) => second - first)
             .map(([key, fraction]) => (
               <TooltipRow key={key} label={LAND_TYPE_LABELS[key]} value={`${Math.round(fraction * 100)}%`} />
             ))}

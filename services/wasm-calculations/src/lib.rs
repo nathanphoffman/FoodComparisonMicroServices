@@ -18,24 +18,24 @@ use models::ScoreInput;
 #[wasm_bindgen]
 pub fn score(input_js: JsValue) -> Result<JsValue, JsValue> {
     let input: ScoreInput = serde_wasm_bindgen::from_value(input_js)
-        .map_err(|e| JsValue::from_str(&format!("input parse error: {e}")))?;
+        .map_err(|error| JsValue::from_str(&format!("input parse error: {error}")))?;
 
-    let perf = web_sys::window().and_then(|w| w.performance());
-    let t0 = perf.as_ref().map(|p| p.now());
+    let perf = web_sys::window().and_then(|window| window.performance());
+    let started_at = perf.as_ref().map(|performance| performance.now());
 
     // temporary: busy-wait 50ms to verify the timer reads correctly — remove after confirming
-    if let Some(ref p) = perf {
-        let deadline = p.now() + 50.0;
-        while p.now() < deadline {}
+    if let Some(ref performance) = perf {
+        let deadline = performance.now() + 50.0;
+        while performance.now() < deadline {}
     }
 
     let scored = calculations::apply(input.foods, &input.query);
 
-    if let (Some(p), Some(start)) = (perf, t0) {
-        let ms = p.now() - start;
-        web_sys::console::log_1(&format!("[wasm] score() took {ms:.3} ms").into());
+    if let (Some(performance), Some(start)) = (perf, started_at) {
+        let elapsed_ms = performance.now() - start;
+        web_sys::console::log_1(&format!("[wasm] score() took {elapsed_ms:.3} ms").into());
     }
 
     serde_wasm_bindgen::to_value(&scored)
-        .map_err(|e| JsValue::from_str(&format!("serialise error: {e}")))
+        .map_err(|error| JsValue::from_str(&format!("serialise error: {error}")))
 }

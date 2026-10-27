@@ -2,13 +2,13 @@
 /// (linear) average, where a 100× win in one measure dominates; p = 0 is the
 /// geometric mean, where a 100× win exactly cancels a 100× loss; p = -1 is the
 /// harmonic mean, where the weakest measure dominates.
-pub(super) fn weighted_power_mean(weighted_ratios: &[(f64, f64)], total_priority: f64, p: f64) -> f64 {
-    if p.abs() < 1e-9 {
+pub(super) fn weighted_power_mean(weighted_ratios: &[(f64, f64)], total_priority: f64, exponent: f64) -> f64 {
+    if exponent.abs() < 1e-9 {
         let weighted_log_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.ln() * priority).sum();
         return (weighted_log_sum / total_priority).exp();
     }
-    let weighted_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.powf(p) * priority).sum();
-    (weighted_sum / total_priority).powf(1.0 / p)
+    let weighted_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.powf(exponent) * priority).sum();
+    (weighted_sum / total_priority).powf(1.0 / exponent)
 }
 
 #[cfg(test)]

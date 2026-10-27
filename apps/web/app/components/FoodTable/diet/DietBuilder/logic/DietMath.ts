@@ -10,7 +10,7 @@ export type BuilderFood = { slug: string; name: string; calories?: number; micro
 export function toInput(slug: string, name: string, { basis, ingredients }: Saved): DietInput {
     return {
         slug, name, basis,
-        ingredients: toPercents(ingredients).map((percent, i) => ({ slug: ingredients[i].slug, fraction: percent / 100 })),
+        ingredients: toPercents(ingredients).map((percent, position) => ({ slug: ingredients[position].slug, fraction: percent / 100 })),
     };
 }
 
@@ -20,12 +20,12 @@ export function toInput(slug: string, name: string, { basis, ingredients }: Save
  */
 function calorieWeights(state: Saved, foods: BuilderFood[]): number[] {
     const shares = toPercents(state.ingredients);
-    return state.ingredients.map((ing, i) => state.basis === 'calories' ? shares[i] : shares[i] * (foods.find(f => f.slug === ing.slug)?.calories ?? 0));
+    return state.ingredients.map((ing, position) => state.basis === 'calories' ? shares[position] : shares[position] * (foods.find(food => food.slug === ing.slug)?.calories ?? 0));
 }
 
 /** One ingredient's calories per day; null until a daily total is set or if the ingredient isn't in the diet. */
 export function caloriesPerDayIn(state: Saved, foods: BuilderFood[], ingredientSlug: string): number | null {
-    const index = state.ingredients.findIndex(i => i.slug === ingredientSlug);
+    const index = state.ingredients.findIndex(ingredient => ingredient.slug === ingredientSlug);
     if (!state.calorieTarget || index < 0) return null;
     const weights = calorieWeights(state, foods);
     const total = sumOf(weights);
@@ -59,10 +59,10 @@ export function settingsOf(state: Saved, foods: BuilderFood[]): DietSettings {
     // The share of each absorption-limited nutrient that still counts, from each food's daily amount and meals per day.
     const all: Partial<Record<MicronutrientKey, number>> = {};
     const counted: Partial<Record<MicronutrientKey, number>> = {};
-    state.ingredients.forEach((ing, i) => {
-        const food = foods.find(f => f.slug === ing.slug);
+    state.ingredients.forEach((ing, position) => {
+        const food = foods.find(candidate => candidate.slug === ing.slug);
         if (!food?.calories || !food.micronutrients) return;
-        const grams = (weights[i] / total) * state.calorieTarget! / food.calories;
+        const grams = (weights[position] / total) * state.calorieTarget! / food.calories;
         for (const key of ABSORPTION_NUTRIENTS) {
             const daily = (food.micronutrients[key] ?? 0) * grams;
             all[key] = (all[key] ?? 0) + daily;

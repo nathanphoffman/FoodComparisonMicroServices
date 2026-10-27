@@ -10,7 +10,7 @@ fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, 
 
     let (neuron_count, body_weight_kg, yield_fraction) =
         match (food.neuron_count, food.weight_kg, food.yield_fraction) {
-            (Some(n), Some(w), Some(y)) if n > 0.0 && w > 0.0 && y > 0.0 => (n, w, y),
+            (Some(neurons), Some(weight), Some(years)) if neurons > 0.0 && weight > 0.0 && years > 0.0 => (neurons, weight, years),
             _ => return None,
         };
 

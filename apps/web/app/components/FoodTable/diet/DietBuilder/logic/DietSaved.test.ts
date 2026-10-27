@@ -16,7 +16,7 @@ describe('sanitize', () => {
     });
 
     it('drops foods that no longer exist and keeps the rest', () => {
-        expect(sanitize(A_DIET, KNOWN_FOODS)!.ingredients.map(i => i.slug)).toEqual(['rice']);
+        expect(sanitize(A_DIET, KNOWN_FOODS)!.ingredients.map(ingredient => ingredient.slug)).toEqual(['rice']);
     });
 
     it('replaces nonsense values with safe defaults', () => {

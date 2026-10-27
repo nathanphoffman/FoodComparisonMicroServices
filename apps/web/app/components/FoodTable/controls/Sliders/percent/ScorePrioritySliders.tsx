@@ -23,7 +23,7 @@ const DESCRIPTIONS: Record<keyof ScorePriorities, string> = {
     availability: 'how much global supply counts',
 };
 
-export function ScorePrioritySliders({ onChange, defaultLevels }: { onChange?: (p: ScorePriorities) => void; defaultLevels?: ScorePriorities }) {
+export function ScorePrioritySliders({ onChange, defaultLevels }: { onChange?: (priorities: ScorePriorities) => void; defaultLevels?: ScorePriorities }) {
     return (
         <PercentSliders
             keys={SCORE_PRIORITY_KEYS}

@@ -32,7 +32,7 @@ export function SupplementEditor({ saved, standard, onChange }: Props) {
                 <span>Vitamins & supplements</span>
                 <select
                     value=""
-                    onChange={e => { if (e.target.value) addOne(e.target.value as MicronutrientKey); }}
+                    onChange={event => { if (event.target.value) addOne(event.target.value as MicronutrientKey); }}
                     aria-label="Add a vitamin or mineral"
                     className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white"
                 >
@@ -46,13 +46,13 @@ export function SupplementEditor({ saved, standard, onChange }: Props) {
             <SliderRow label={`Pill absorption: ${saved.pillAbsorption}%`} title={PILL_ABSORPTION_HELP}>
                 <Slider min={0} max={100} step={PILL_ABSORPTION_STEP} value={saved.pillAbsorption} onChange={pillAbsorption => onChange({ pillAbsorption })} />
             </SliderRow>
-            {saved.supplements.map((supplement, i) => (
+            {saved.supplements.map((supplement, index) => (
                 <SupplementRow
-                    key={i}
+                    key={index}
                     supplement={supplement}
                     dailyNeed={needs[supplement.key]}
-                    onChange={patch => setSupplements(saved.supplements.map((s, j) => j === i ? { ...s, ...patch } : s))}
-                    onRemove={() => setSupplements(saved.supplements.filter((_, j) => j !== i))}
+                    onChange={patch => setSupplements(saved.supplements.map((existing, position) => position === index ? { ...existing, ...patch } : existing))}
+                    onRemove={() => setSupplements(saved.supplements.filter((_, position) => position !== index))}
                 />
             ))}
         </div>

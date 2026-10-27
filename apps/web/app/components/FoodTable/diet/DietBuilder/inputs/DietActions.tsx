@@ -19,7 +19,7 @@ export function DietActions({ onExport, onImport, onShow, hasFoods }: Props) {
                     type="file"
                     accept="application/json,.json"
                     className="hidden"
-                    onChange={e => { onImport(e.target.files?.[0]); e.target.value = ''; }}
+                    onChange={event => { onImport(event.target.files?.[0]); event.target.value = ''; }}
                 />
             </label>
             {onShow && (

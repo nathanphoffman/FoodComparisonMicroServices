@@ -17,7 +17,7 @@ pub(in crate::calculations) struct Comparison<'a> {
 impl<'a> Comparison<'a> {
     pub(in crate::calculations) fn new(rows: &[ScoredRow], foods: &'a [FoodRow], query: &'a SliderQuery) -> Option<Self> {
         let reference_slug = query.reference_slug.as_deref()?;
-        let reference = rows.iter().find(|r| r.slug == reference_slug)?.clone();
+        let reference = rows.iter().find(|row| row.slug == reference_slug)?.clone();
         let caps = DimensionCaps::from_rows(rows, &reference);
 
         let mut wild_penalties = HashMap::new();

@@ -38,6 +38,6 @@ export function rowsToObjects(
   if (!result.length) return [];
   const { columns, values } = result[0];
   return values.map((row) =>
-    Object.fromEntries(columns.map((col, i) => [col, row[i]]))
+    Object.fromEntries(columns.map((col, position) => [col, row[position]]))
   );
 }

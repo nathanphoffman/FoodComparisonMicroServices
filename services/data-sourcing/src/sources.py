@@ -30,13 +30,13 @@ def load_sources() -> list[Source]:
     raw: list[dict] = json.loads(SOURCES_JSON.read_text(encoding=TEXT_ENCODING))
     return [
         Source(
-            id=s["id"],
-            url=s["url"],
-            title=s["title"],
-            notes=s.get("notes") or [],
-            _status=s.get("_status"),
+            id=entry["id"],
+            url=entry["url"],
+            title=entry["title"],
+            notes=entry.get("notes") or [],
+            _status=entry.get("_status"),
         )
-        for s in raw
+        for entry in raw
     ]
 
 

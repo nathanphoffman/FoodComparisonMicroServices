@@ -21,12 +21,12 @@ export function IngredientPicker({ available, selectedSlug, basis, onSelect, onA
         <div className="flex gap-2 items-center">
             <select
                 value={selectedSlug}
-                onChange={e => onSelect(e.target.value)}
+                onChange={event => onSelect(event.target.value)}
                 className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white flex-1 min-w-0"
             >
                 <option value="">Select a food…</option>
-                {available.map(f => (
-                    <option key={f.slug} value={f.slug}>{f.name}</option>
+                {available.map(food => (
+                    <option key={food.slug} value={food.slug}>{food.name}</option>
                 ))}
             </select>
             <button
@@ -38,7 +38,7 @@ export function IngredientPicker({ available, selectedSlug, basis, onSelect, onA
             </button>
             <select
                 value={basis}
-                onChange={e => onBasisChange(e.target.value as DietBasis)}
+                onChange={event => onBasisChange(event.target.value as DietBasis)}
                 aria-label="What the percentages are of"
                 className="border border-neutral-200 rounded px-2 py-1 text-sm text-neutral-700 bg-white shrink-0"
             >
