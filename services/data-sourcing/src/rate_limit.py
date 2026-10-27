@@ -10,27 +10,28 @@ from urllib.parse import urlparse
 
 DOMAIN_DELAY_SECONDS = 2.0
 
-
 def extract_hostname(url: str) -> str:
     try:
         return urlparse(url).hostname or url
     except ValueError as exc:
         # urlparse raises ValueError on malformed URLs; fall back to the raw URL so the cooldown still keys on something.
         print(f"Could not read the hostname from {url}: {exc}", file=sys.stderr)
-        return url
 
+        return url
 
 async def wait_for_domain_cooldown(
     hostname: str,
     last_fetched: dict[str, float],
 ) -> None:
     last = last_fetched.get(hostname)
+
     if last is None:
         return
+
     elapsed = time.monotonic() - last
+
     if elapsed < DOMAIN_DELAY_SECONDS:
         await asyncio.sleep(DOMAIN_DELAY_SECONDS - elapsed)
-
 
 def mark_fetched(hostname: str, last_fetched: dict[str, float]) -> None:
     last_fetched[hostname] = time.monotonic()

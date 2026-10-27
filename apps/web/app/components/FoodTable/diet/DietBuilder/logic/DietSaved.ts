@@ -34,12 +34,14 @@ export const FINE_STEP_PERCENT = 0.005;
 /** A typed-in number that must be above 0; null when the box is empty or isn't one. */
 export function positiveOrNull(value: string): number | null {
     const number = Number(value);
+
     return value !== '' && Number.isFinite(number) && number > 0 ? number : null;
 }
 
 /** Each ingredient's percentage of the total level; all 0 if every slider is at 0. */
 export function toPercents(ingredients: Ingredient[]): number[] {
     const total = sumOf(ingredients.map(ingredient => ingredient.level));
+
     return ingredients.map(ingredient => total > 0 ? (ingredient.level / total) * 100 : 0);
 }
 
@@ -53,6 +55,7 @@ const EMPTY_SAVED: Saved = { supplements: [], pillAbsorption: DEFAULT_PILL_ABSOR
 /** Cleans up untrusted data (from localStorage or an imported file); null if it isn't a diet at all. */
 export function sanitize(parsed: Saved | null, foods: { slug: string }[]): Saved | null {
     if (!parsed || !Array.isArray(parsed.ingredients)) return null;
+
     return {
         basis: parsed.basis === 'mass' ? 'mass' : 'calories',
         calorieTarget: Number.isFinite(parsed.calorieTarget) && (parsed.calorieTarget ?? 0) > 0 ? parsed.calorieTarget : null,
@@ -79,20 +82,27 @@ export type LoadResult = { saved: Saved; problem: string | null };
 /** Reads the saved diet from this browser; on any failure returns an empty diet plus a message to show the user. */
 export function loadSaved(storageKey: string, foods: { slug: string }[]): LoadResult {
     let stored: string | null;
+
     try {
         stored = localStorage.getItem(storageKey);
     } catch (error) {
         console.error('Could not read the saved diet from this browser:', error);
+
         return { saved: EMPTY_SAVED, problem: "This browser won't let the site read your saved diet. Import a backup if you have one." };
     }
+
     if (stored === null) return { saved: EMPTY_SAVED, problem: null };
+
     try {
         const saved = sanitize(JSON.parse(stored), foods);
+
         if (saved) return { saved, problem: null };
     } catch (error) {
         console.error('The saved diet is not valid JSON:', error);
     }
+
     console.error('The saved diet has an unexpected shape:', stored);
+
     return { saved: EMPTY_SAVED, problem: "Your saved diet couldn't be read, so it was reset. Import a backup if you have one." };
 }
 
@@ -118,12 +128,16 @@ export type ImportedDiet = { saved: Saved; droppedFoodCount: number };
 /** Reads a file picked for import; throws an Error saying what is wrong if it isn't a diet export. */
 export async function readDietFile(file: File, foods: { slug: string }[]): Promise<ImportedDiet> {
     let parsed: Saved;
+
     try {
         parsed = JSON.parse(await file.text());
     } catch {
         throw new Error("That file isn't valid JSON, so it can't be a diet export.");
     }
+
     const saved = sanitize(parsed, foods);
+
     if (!saved) throw new Error("That file has no list of foods, so it isn't a diet export.");
+
     return { saved, droppedFoodCount: parsed.ingredients.length - saved.ingredients.length };
 }

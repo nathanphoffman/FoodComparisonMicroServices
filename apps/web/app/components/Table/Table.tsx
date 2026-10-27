@@ -22,6 +22,7 @@ export function Table({ headers = [], children }: { headers?: Header[], children
                   header.sorted ? 'text-neutral-800' : 'text-neutral-500',
                   header.onSort ? 'cursor-pointer select-none hover:bg-neutral-100' : '',
                 ].join(' ')}
+
               >
                 {header.onSort ? (
                   <span className="inline-flex items-center gap-1.5">
@@ -29,8 +30,10 @@ export function Table({ headers = [], children }: { headers?: Header[], children
                     <SortIcon dir={header.sorted} />
                   </span>
                 ) : header.label}
+
               </th>
             ))}
+
           </tr>
         </thead>
         <tbody>{children}</tbody>

@@ -13,6 +13,7 @@ type Tier = typeof TIERS[number];
  */
 export function betterBy(value: number, reference: number | null, lowerIsBetter: boolean): number | null {
     if (reference == null || reference === 0) return null;
+
     return (lowerIsBetter ? reference - value : value - reference) / Math.abs(reference);
 }
 
@@ -25,12 +26,15 @@ export type Verdict = {
     /** Share (0–100) of the other foods the diet beats; null with nothing to compare. */
     percent: number | null;
     percentileTier: Tier | null;
+
     /** How much better the diet is than the average food, and the tier for it. */
     betterThanMean: number | null;
     meanTier: Tier | null;
+
     /** How much better the diet is than the benchmark diet, and the tier for it. */
     betterThanBenchmark: number | null;
     benchmarkTier: Tier | null;
+
     /** The three tiers averaged into one verdict. */
     overall: Tier | null;
 };
@@ -49,5 +53,6 @@ export function judgeMetric(metric: Metric, value: number, others: number[], ben
     const benchmarkTier = betterThanBenchmark === null ? null : DISTANCE_TIERS.find(tier => betterThanBenchmark >= tier.min)!;
 
     const overall = overallTier([percentileTier, meanTier, benchmarkTier].flatMap(tier => tier ? [tier.score] : []));
+
     return { percent, percentileTier, betterThanMean, meanTier, betterThanBenchmark, benchmarkTier, overall };
 }

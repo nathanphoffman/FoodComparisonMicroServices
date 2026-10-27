@@ -11,6 +11,7 @@ export function useBubbleShift() {
   // The bubble is hidden until hover, so show it for a moment to measure it.
   function fitToWindow() {
     const bubble = bubbleRef.current;
+
     if (!bubble) return;
     const previousDisplay = bubble.style.display;
     bubble.style.display = 'block';
@@ -18,6 +19,7 @@ export function useBubbleShift() {
     bubble.style.display = previousDisplay;
     const overLeft = WINDOW_MARGIN_PX - rect.left;
     const overRight = rect.right - (window.innerWidth - WINDOW_MARGIN_PX);
+
     if (overLeft > 0) setShift(shift + overLeft);
     else if (overRight > 0) setShift(shift - overRight);
   }

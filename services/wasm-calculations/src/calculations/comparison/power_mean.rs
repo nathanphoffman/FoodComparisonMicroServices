@@ -5,9 +5,12 @@
 pub(super) fn weighted_power_mean(weighted_ratios: &[(f64, f64)], total_priority: f64, exponent: f64) -> f64 {
     if exponent.abs() < 1e-9 {
         let weighted_log_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.ln() * priority).sum();
+
         return (weighted_log_sum / total_priority).exp();
     }
+
     let weighted_sum: f64 = weighted_ratios.iter().map(|(ratio, priority)| ratio.powf(exponent) * priority).sum();
+
     (weighted_sum / total_priority).powf(1.0 / exponent)
 }
 
@@ -26,6 +29,7 @@ mod tests {
         assert!((linear - 17.5).abs() < 1e-9);
         assert!((geometric - 100f64.powf(1.0 / 6.0)).abs() < 1e-9);
         assert!(harmonic < geometric && harmonic > 1.0);
+
         // near-zero p converges to the geometric mean
         assert!((weighted_power_mean(&RATIOS, 6.0, 1e-6) - geometric).abs() < 1e-4);
     }

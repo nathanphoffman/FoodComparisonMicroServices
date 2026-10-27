@@ -22,6 +22,7 @@ fn compute_harm(food: &FoodRow, query: &SliderQuery) -> Harm {
     let captive = eco::compute_captive_sentience(food, query);
     detail.direct_kill_score = direct_kill;
     detail.captive_sentience_score = captive;
+
     Harm { direct_kill, captive, accidental, detail }
 }
 
@@ -42,6 +43,7 @@ fn combined_sentient_harm(harm: &Harm, kill_multiplier: f64) -> f64 {
 fn compute_availability(food: &FoodRow, divisor: f64, land_use_raw: f64) -> f64 {
     let Some(production_gg) = food.availability_gg else { return 1.0 };
     let production_units = production_gg * divisor;
+
     if land_use_raw == 0.0 {
         production_units
     } else {
@@ -56,6 +58,7 @@ pub(in crate::calculations) fn compute_row(food: &FoodRow, query: &SliderQuery, 
     let per_unit = |raw: f64| divisor.map(|divisor_value| raw / divisor_value);
 
     let (emissions_raw, emissions_breakdown) = emissions::compute_emissions(food);
+
     // land_use_raw is physical area (used for availability); land_use_weighted is
     // scaled by the Land Use sliders and only drives the Land Use column/score.
     let (land_use_raw, land_use_weighted, land_use_detail) = eco::compute_land_use(food, query);

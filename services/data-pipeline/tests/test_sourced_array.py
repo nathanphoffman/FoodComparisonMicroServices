@@ -2,10 +2,8 @@ import unittest
 
 from src.lib.types.sourced_array import SourcedArray
 
-
 def sourced(value: float, confidence: float) -> dict:
     return {"value": value, "confidence": confidence}
-
 
 class SourcedArrayTests(unittest.TestCase):
     def test_empty_or_missing_has_no_average(self):
@@ -20,7 +18,6 @@ class SourcedArrayTests(unittest.TestCase):
 
     def test_higher_confidence_pulls_the_average(self):
         self.assertAlmostEqual(SourcedArray([sourced(0, 1), sourced(10, 3)]).weighted_average(), 7.5)
-
 
 if __name__ == "__main__":
     unittest.main()

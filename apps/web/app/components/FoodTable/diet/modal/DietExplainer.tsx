@@ -12,6 +12,7 @@ export function DietExplainer() {
                     </div>
                 </div>
             ))}
+
         </section>
     );
 }

@@ -84,6 +84,7 @@ export function NutritionSliders({ onChange, initialWeights = DEFAULT_NUTRITION_
                         <div className="text-xs text-neutral-400 mt-0.5">{SETTINGS[key].description}</div>
                     </div>
                 ))}
+
             </div>
             {showModal && <HelpModal topic="nutritionWeights" onClose={() => setShowModal(false)} />}
         </div>

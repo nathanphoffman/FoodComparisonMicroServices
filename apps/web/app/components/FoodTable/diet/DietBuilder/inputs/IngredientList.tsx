@@ -5,8 +5,10 @@ const formatCalories = (calories: number) => Math.round(calories).toLocaleString
 
 type Props = {
     ingredients: Ingredient[];
+
     /** Each ingredient's percentage of the whole, in the same order. */
     percents: number[];
+
     /** Shows each ingredient's calories per day and week, when this returns a number for it. */
     caloriesPerDay: (slug: string) => number | null;
     onSlide: (index: number, value: number) => void;
@@ -20,6 +22,7 @@ export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide,
         <div className="flex flex-col gap-1.5 pt-1">
             {ingredients.map((ing, idx) => {
                 const dailyCalories = caloriesPerDay(ing.slug);
+
                 return (
                     <div key={ing.slug}>
                         <div className="flex items-center gap-2">
@@ -55,9 +58,11 @@ export function IngredientList({ ingredients, percents, caloriesPerDay, onSlide,
                                 {formatCalories(dailyCalories)} kcal / day · {formatCalories(dailyCalories * DAYS_PER_WEEK)} kcal / week
                             </p>
                         )}
+
                     </div>
                 );
             })}
+
         </div>
     );
 }

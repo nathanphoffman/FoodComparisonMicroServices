@@ -12,7 +12,6 @@ WILD_FISH_TRAIT_FIELDS = (
     "wild_fish_lifespan_years",
 )
 
-
 def compute_wild_fish(entries: list[CropShare]) -> dict[str, float | None]:
     """Wild fish killed to make the fishmeal / fish oil in the mix, per kg of output.
 
@@ -20,19 +19,26 @@ def compute_wild_fish(entries: list[CropShare]) -> dict[str, float | None]:
     the animal's main row, not the feed row. The species values are the kg-weighted average across
     feeds; today fishmeal and fish oil share one species (anchoveta), so they're equal.
     """
+
     total_fish_kg = 0.0
     weighted = dict.fromkeys(WILD_FISH_TRAIT_FIELDS, 0.0)
+
     for entry in entries:
         ratio = entry.ratio
         fish_kg_per_kg_crop = entry.plant.wild_fish_kg_per_kg.weighted_average()
+
         if not ratio or not fish_kg_per_kg_crop:
             continue
+
         fish_kg = ratio * fish_kg_per_kg_crop
         total_fish_kg += fish_kg
+
         for field_name in weighted:
             weighted[field_name] += fish_kg * (getattr(entry.plant, field_name).weighted_average() or 0.0)
+
     if total_fish_kg <= 0:
         return {"wild_fish_kg_per_kg": None, **{field_name: None for field_name in weighted}}
+
     return {
         "wild_fish_kg_per_kg": total_fish_kg,
         **{field_name: weighted_total / total_fish_kg for field_name, weighted_total in weighted.items()},

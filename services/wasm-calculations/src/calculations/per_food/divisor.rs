@@ -13,6 +13,7 @@ fn mean_nonzero(iter: impl Iterator<Item = f64>) -> Option<f64> {
         .filter(|&value| value > 0.0 && value.is_finite())
         // Running (sum, count) of the values that passed the filter, so the mean needs one pass.
         .fold((0.0_f64, 0_usize), |(sum, count), value| (sum + value, count + 1));
+
     if count == 0 {
         None
     } else {
@@ -57,6 +58,7 @@ pub(super) fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormF
     if query.calorie_weight + query.protein_weight + query.dry_mass_weight + query.wet_mass_weight <= 0.0 {
         return Some(1.0);
     }
+
     // calories and protein are given to us in per gram
     let calories_per_kg = food.calories * GRAMS_PER_KG;
     let protein_per_kg = food.protein * GRAMS_PER_KG;
@@ -69,5 +71,6 @@ pub(super) fn compute_divisor(food: &FoodRow, query: &SliderQuery, norms: &NormF
         // Wet mass: every food is stored per kg as eaten (beans, rice, quinoa etc. on a
         // cooked basis), so one kg of food is one kg of wet mass — no norm needed.
         + (query.wet_mass_weight / PERCENT);
+
     if weighted > 0.0 { Some(weighted) } else { None }
 }

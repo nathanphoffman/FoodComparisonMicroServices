@@ -2,8 +2,11 @@
 //! the power mean that combines its measures, and the blended diet rows.
 
 mod final_score;
+
 mod blend;
+
 mod power_mean;
+
 mod scoring;
 
 pub(super) use final_score::Comparison;

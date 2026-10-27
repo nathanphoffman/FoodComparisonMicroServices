@@ -28,6 +28,7 @@ export function IngredientPicker({ available, selectedSlug, basis, onSelect, onA
                 {available.map(food => (
                     <option key={food.slug} value={food.slug}>{food.name}</option>
                 ))}
+
             </select>
             <button
                 onClick={onAdd}
@@ -45,6 +46,7 @@ export function IngredientPicker({ available, selectedSlug, basis, onSelect, onA
                 {BASIS_OPTIONS.map(option => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
+
             </select>
         </div>
     );

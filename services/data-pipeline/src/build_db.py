@@ -29,7 +29,6 @@ from .lib.database.regions import REGIONS, resolve_regions
 from .lib.checks.check_animal_emissions import check_animal_emissions
 from .lib.checks.check_plant_pesticides import check_plant_pesticides
 
-
 def main() -> None:
     version = bump_version()
     print(f"Building version {version}…")
@@ -46,14 +45,13 @@ def main() -> None:
     check_plant_pesticides(normalized_connection, REGIONS)
     write_databases(source_connection, normalized_connection, version)
 
-
 def _load_json_data() -> tuple[list[Source], list[Pesticide], CategoryData]:
     """Loads sources, pesticides, and all category food data from JSON files."""
     sources: list[Source] = json.loads((JSON_DIR / "sources.json").read_text())
     pesticides: list[Pesticide] = json.loads((JSON_DIR / "pesticides.json").read_text())
     category_food_data = load_category_foods(JSON_DIR)
-    return sources, pesticides, category_food_data
 
+    return sources, pesticides, category_food_data
 
 def _populate_source_database(
     connection: sqlite3.Connection,
@@ -62,22 +60,26 @@ def _populate_source_database(
     category_food_data: CategoryData,
 ) -> None:
     """Inserts all records into the source database in dependency tier order."""
+
     # Tier 1 — no foreign keys
     insert_sources(connection, sources)
     insert_pesticides(connection, pesticides)
+
     # Tier 2
     insert_foods(connection, category_food_data.foods)
+
     # Tier 3
     insert_animals(connection, category_food_data.animals)
     insert_plants(connection, category_food_data.plants)
+
     # Tier 4
     insert_plant_kills(connection, category_food_data.plant_kills)
     insert_plant_pesticides(connection, category_food_data.plant_pesticides)
     insert_animal_feed(connection, category_food_data.animal_feed)
     insert_composites(connection, category_food_data.composites, category_food_data.composite_ingredients)
+
     # Display-only: every sourced figure, for the web app's food detail modal
     insert_food_sources(connection, JSON_DIR)
-
 
 def _populate_normalized_database(
     connection: sqlite3.Connection,
@@ -85,6 +87,7 @@ def _populate_normalized_database(
     category_food_data: CategoryData,
 ) -> None:
     """Inserts all pre-computed normalized rows into the normalized database, once per region."""
+
     for region in REGIONS:
         region_food_data: CategoryData = resolve_regions(category_food_data, region)
         region_pesticides: list[Pesticide] = resolve_regions(pesticides, region)
@@ -100,7 +103,6 @@ def _populate_normalized_database(
             composites=region_food_data.composites,
             composite_ingredients=region_food_data.composite_ingredients,
         )
-
 
 if __name__ == "__main__":
     try:

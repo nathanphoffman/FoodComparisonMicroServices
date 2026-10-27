@@ -15,7 +15,6 @@ from .paths import OUTPUT_DIR, SOURCES_JSON, TEXT_ENCODING
 # / \ : * ? " < > |. They are stripped from titles before using them as filenames.
 FORBIDDEN_CHARS = r'[/\\:*?"<>|]'
 
-
 @dataclass
 class Source:
     id: int
@@ -24,10 +23,10 @@ class Source:
     notes: list[str] = field(default_factory=list)
     _status: Optional[str] = None
 
-
 def load_sources() -> list[Source]:
     """Reads every source listed in sources.json."""
     raw: list[dict] = json.loads(SOURCES_JSON.read_text(encoding=TEXT_ENCODING))
+
     return [
         Source(
             id=entry["id"],
@@ -39,12 +38,11 @@ def load_sources() -> list[Source]:
         for entry in raw
     ]
 
-
 def sanitize_title(title: str) -> str:
     # Drop characters that are not allowed in file names, then squeeze runs of whitespace into one space.
     cleaned = re.sub(FORBIDDEN_CHARS, "", title)
-    return re.sub(r"\s+", " ", cleaned).strip()
 
+    return re.sub(r"\s+", " ", cleaned).strip()
 
 def output_path(source: Source) -> Path:
     return OUTPUT_DIR / f"{source.id} - {sanitize_title(source.title)}.txt"

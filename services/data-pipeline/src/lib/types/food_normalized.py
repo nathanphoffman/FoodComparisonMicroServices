@@ -9,7 +9,6 @@ import json
 from typing import Literal
 from dataclasses import dataclass
 
-
 @dataclass
 class FoodNormalized:
     food_id: int
@@ -20,6 +19,7 @@ class FoodNormalized:
     tags: list[str]
     human_food: Literal[0, 1]
     region: str = "world"
+
     # nutrition
     calories: float | None = None
     fat: float | None = None
@@ -31,10 +31,13 @@ class FoodNormalized:
     sugar: float | None = None
     cholesterol: float | None = None
     trans_fat: float | None = None
+
     # vitamins and minerals present in the source data, per gram; stored as a JSON object
     micronutrients: dict[str, float] | None = None
+
     # amino acids (g per g of food) present in the source data; stored as a JSON object
     amino_acids: dict[str, float] | None = None
+
     # plant metrics
     yield_kg_ha: float | None = None
     water_per_kg: float | None = None
@@ -53,6 +56,7 @@ class FoodNormalized:
     pesticide_bee_hazard: float | None = None
     pesticide_kg_per_kg_food: float | None = None
     land_m2_per_kg: float | None = None
+
     # animal metrics
     neuron_count: float | None = None
     weight_kg: float | None = None
@@ -68,6 +72,7 @@ class FoodNormalized:
     ch4_kg_per_kg_output: float | None = None
     n2o_kg_per_kg_output: float | None = None
     co2_kg_per_kg_output: float | None = None
+
     # wild fish killed per kg (fishmeal / fish oil, and animals fed them)
     wild_fish_kg_per_kg: float | None = None
     wild_fish_neuron_count: float | None = None
@@ -80,6 +85,7 @@ class FoodNormalized:
 
     def to_db_params(self) -> tuple[int | float | str | None, ...]:
         """Returns all fields as a flat tuple matching the INSERT SQL column order."""
+
         return (
             self.food_id, self.is_feed, self.region,
             self.slug, self.name, self.type,

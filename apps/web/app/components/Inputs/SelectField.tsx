@@ -5,8 +5,10 @@ type Props<Value extends string> = {
     value: Value;
     options: Option<Value>[];
     onChange: (value: Value) => void;
+
     /** Text colour of the label; the toolbar uses a quieter one than the forms. */
     labelClassName?: string;
+
     /** Extra classes for the dropdown itself, such as a maximum width. */
     selectClassName?: string;
     title?: string;
@@ -25,6 +27,7 @@ export function SelectField<Value extends string>({ label, value, options, onCha
                 {options.map(option => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
+
             </select>
         </label>
     );

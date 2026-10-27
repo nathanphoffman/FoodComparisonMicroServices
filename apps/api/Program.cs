@@ -47,6 +47,7 @@ if (app.Configuration.GetValue<bool>("EnforceHttps"))
     {
         app.UseHsts();
     }
+
     app.UseHttpsRedirection();
 }
 

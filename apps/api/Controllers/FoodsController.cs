@@ -21,8 +21,11 @@ public class FoodsController : ControllerBase
     public ActionResult<IEnumerable<FoodRow>> Get([FromQuery] string region = "world")
     {
         region = region.ToLowerInvariant();
+
         if (!DbService.Regions.Contains(region))
+
             return BadRequest($"Unknown region '{region}'. Use one of: {string.Join(", ", DbService.Regions)}");
+
         return Ok(_db.LoadFoods(region));
     }
 }

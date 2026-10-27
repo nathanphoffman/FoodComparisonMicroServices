@@ -10,6 +10,7 @@ import { FigureSources } from './FigureSources';
 
 type Props = {
   figure: typeof FIGURES[number];
+
   /** Column label as shown in the table header. */
   label: string;
   food: RawFood;
@@ -24,6 +25,7 @@ type Props = {
 export function FigureTile({ figure, label, food, scoredRow, mathContext, details, isOpen, onToggle }: Props) {
   const value = scoredRow ? figure.value(scoredRow) : null;
   const tone = value == null || figure.tone == null ? 'neutral' : figure.tone(value);
+
   return (
     <div className={`overflow-hidden rounded-lg border ${TILE_COLORS[tone]}`}>
       <button

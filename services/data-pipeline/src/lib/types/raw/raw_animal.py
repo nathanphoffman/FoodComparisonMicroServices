@@ -19,7 +19,6 @@ if TYPE_CHECKING:
     from .raw_plant import RawPlant
     from .raw_animal_feed import RawAnimalFeed
 
-
 # Metrics that go into the normalized row as a plain weighted average. Each name is both the
 # attribute on RawAnimal and the column in the normalized database.
 AVERAGED_FIELDS = (
@@ -29,14 +28,12 @@ AVERAGED_FIELDS = (
     "ch4_kg_per_kg_output", "n2o_kg_per_kg_output", "co2_kg_per_kg_output",
 )
 
-
 class FeedEntry(CropShare):
     """Pairs a feed ratio record with its corresponding plant metrics."""
 
     def __init__(self, feed: "RawAnimalFeed", plant: "RawPlant") -> None:
         super().__init__(feed.kg_feed_per_kg_output.weighted_average(), plant)
         self.feed = feed
-
 
 class RawAnimal:
     """Wraps an Animal record and exposes weighted averages for all animal metrics."""
@@ -60,6 +57,7 @@ class RawAnimal:
 
     def normalized_fields(self) -> dict[str, float | str | None]:
         """Returns all animal metrics as a flat dict for FoodNormalized."""
+
         return {
             **{name: getattr(self, name).weighted_average() for name in AVERAGED_FIELDS},
             "bycatch_food_slug": self.bycatch_food_slug,
@@ -68,6 +66,7 @@ class RawAnimal:
 
     def feed_normalized_fields(self) -> dict[str, float | None] | None:
         """Computes feed-crop environmental impact metrics aggregated across all feed sources."""
+
         if not self._feed_entries:
             return None
 

@@ -13,8 +13,10 @@ export type Preset = {
     label:               string;
     changes:             Partial<SliderValues>;
     scorePriorityLevels: ScorePriorities;
+
     // Levels for the Compare By sliders, same idea as scorePriorityLevels.
     foodWeightLevels:    FoodWeights;
+
     // Plain-English list of what the preset changes from the defaults.
     changeNotes:         string[];
 };
@@ -36,10 +38,12 @@ const NUTRITION_MAX_WEIGHTS: NutritionWeights = {
     ...DEFAULT_NUTRITION_WEIGHTS,
     protein: 2, fiber: 3, micronutrients: 3, satFat: 3, freeSugar: 0.5, sodium: 3, proteinQuality: 1,
 };
+
 const CARNIVORE_NUTRITION_WEIGHTS: NutritionWeights = { ...DEFAULT_NUTRITION_WEIGHTS, protein: 3 };
 
 function describePriorities(levels: ScorePriorities): string {
     const shares = toShares(levels);
+
     return 'Score Priorities: ' + SCORE_PRIORITY_KEYS
         .map(key => `${SCORE_PRIORITY_LABELS[key]} ${Math.round(shares[key])}%`)
         .join(', ');

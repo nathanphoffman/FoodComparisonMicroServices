@@ -33,8 +33,10 @@ export function ColumnPicker({ visible, onToggle }: { visible: Set<SortKey>; onT
                             {column.label}
                         </label>
                     ))}
+
                 </div>
             )}
+
         </div>
     );
 }

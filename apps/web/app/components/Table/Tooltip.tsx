@@ -14,6 +14,7 @@ const WIDE_SCREEN_QUERY = '(min-width: 768px)';
 // Opens on hover (desktop) or tap (touch). On phones it opens as a scrolling bottom sheet instead.
 export function Tooltip({ children, content }: { children: React.ReactNode, content: React.ReactNode }) {
   const [open, setOpen] = useState(false);
+
   // Phones get the sheet and everything else the hover bubble, so the content is only drawn once.
   const [asSheet, setAsSheet] = useState(false);
   const wrapperRef = useRef<HTMLSpanElement>(null);

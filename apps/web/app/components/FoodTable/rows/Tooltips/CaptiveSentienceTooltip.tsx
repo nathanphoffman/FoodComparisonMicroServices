@@ -5,6 +5,7 @@ import { ExplanationNote, TooltipFootnote } from './TooltipParts';
 
 export function CaptiveSentienceTooltip({ killDetail, captivityMultiplier, explanation, children }: { killDetail: KillDetail; captivityMultiplier: number; explanation?: string | null; children: React.ReactNode }) {
   const hasOffspring = killDetail.offspringDeaths > 0;
+
   return (
     <Tooltip content={
       <TooltipSection title="Captivity">
@@ -15,11 +16,13 @@ export function CaptiveSentienceTooltip({ killDetail, captivityMultiplier, expla
             value={`${formatCount(killDetail.offspringDeaths)} × ${formatYears(killDetail.offspringCaptivityYears)}`}
           />
         )}
+
         <TooltipRow label="Food per animal" value={`${formatCount(killDetail.outputKgPerDeath)} kg`} />
         <TooltipFootnote>each year in captivity counts as {captivityMultiplier}× a death</TooltipFootnote>
         <ExplanationNote text={explanation} />
       </TooltipSection>
     }>
+
       {children}
     </Tooltip>
   );

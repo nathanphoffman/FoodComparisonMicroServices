@@ -12,22 +12,28 @@ export function useFoodData(dataRegion: DataRegion) {
 
     useEffect(() => {
         let cancelled = false;
+
         async function fetchFoods() {
             try {
                 await loadWasm();
                 const response = await fetch(`${API_URL}/api/foods?region=${dataRegion}`);
+
                 if (!response.ok) throw new Error(`API error ${response.status}`);
                 const foods: RawFood[] = await response.json();
+
                 if (cancelled) return;
                 setRawFoods(foods);
             } catch (fetchError) {
                 console.error('Could not load the foods:', fetchError);
+
                 if (!cancelled) setError(String(fetchError));
             } finally {
                 if (!cancelled) setLoadingApi(false);
             }
         }
+
         fetchFoods();
+
         return () => { cancelled = true; };
     }, [dataRegion]);
 

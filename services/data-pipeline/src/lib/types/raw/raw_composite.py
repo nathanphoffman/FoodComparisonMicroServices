@@ -15,7 +15,6 @@ from ..sourced_array import SourcedArray
 
 SQUARE_METERS_PER_HA = 10000
 
-
 class IngredientEntry(CropShare):
     """One ingredient: `fraction` kg per kg of product, made from `base_kg_per_kg` kg of
     its base food each. `ratio` (kg of base food per kg of product) drives the crop sums."""
@@ -33,7 +32,6 @@ class IngredientEntry(CropShare):
         self.land_types = land_types
         self.availability_gg = availability_gg
 
-
 class RawComposite:
     """Wraps a Composite record and its ingredients."""
 
@@ -45,6 +43,7 @@ class RawComposite:
     def normalized_fields(self) -> dict[str, float | None]:
         """Returns plant-style metrics for FoodNormalized, per kg of product. Per-hectare
         fields (erosion, fertilizer …) are land-weighted averages over the ingredients."""
+
         totals = summarize_crop_mix(self._ingredients)
         yield_kg_per_ha = SQUARE_METERS_PER_HA / totals.land_square_meters if totals.land_square_meters else None
         emissions = totals.emissions + (self.processing_emissions_per_kg.weighted_average() or 0.0)
@@ -75,16 +74,22 @@ class RawComposite:
         """Land-area-weighted mix of the ingredients' land type splits."""
         totals: dict[str, float] = {}
         total_area = 0.0
+
         for ingredient in self._ingredients:
             yield_kg_per_ha = ingredient.plant.yield_kg_ha.weighted_average()
+
             if not ingredient.land_types or not ingredient.ratio or not yield_kg_per_ha:
                 continue
+
             area = ingredient.ratio / yield_kg_per_ha
             total_area += area
+
             for land_type, share in ingredient.land_types.items():
                 totals[land_type] = totals.get(land_type, 0.0) + area * share
+
         if total_area <= 0:
             return None
+
         return {land_type: round(value / total_area, 4) for land_type, value in totals.items() if value > 0}
 
     def availability_gg(self, own_availability_gg: float | None) -> float | None:
@@ -96,11 +101,14 @@ class RawComposite:
         can be ~3 Gg while its soy is ~370,000 Gg; a plain mean would just be the soy.
         Falls back to whichever side exists.
         """
+
         weighted = [(ingredient.fraction, ingredient.availability_gg) for ingredient in self._ingredients if ingredient.availability_gg]
         total_fraction = sum(fraction for fraction, _ in weighted)
         ingredient_gg = (
             sum(fraction * gg for fraction, gg in weighted) / total_fraction if total_fraction else None
         )
+
         if own_availability_gg and ingredient_gg:
             return (own_availability_gg * ingredient_gg) ** 0.5
+
         return own_availability_gg or ingredient_gg

@@ -25,6 +25,7 @@ export const ACTIVITY_LEVELS = [
     { label: 'Athlete',          gPerKg: 1.6 },
     { label: 'Extreme athlete',  gPerKg: 2.0 },
 ] as const;
+
 export const DEFAULT_ACTIVITY = 0;
 
 type Pair = [number, number]; // [male, female]
@@ -34,6 +35,7 @@ const PROTEIN_G_PER_KG: PerStandard<number> = { us: 0.8, eu: 0.83, japan: 0.9, c
 const FIBER_G: PerStandard<Pair> = { us: [38, 25], eu: [25, 25], japan: [21, 18], china: [25, 25], who: [25, 25] };
 const SODIUM_MG: PerStandard<Pair> = { us: [2300, 2300], eu: [2000, 2000], japan: [2950, 2550], china: [2000, 2000], who: [2000, 2000] };
 const CHOLESTEROL_MG: PerStandard<number> = { us: 300, china: 300 };
+
 // Shares of calories (percent).
 const FAT_PCT: PerStandard<number> = { us: 27.5, eu: 27.5, japan: 25, china: 25, who: 27.5 };
 const SAT_FAT_PCT: PerStandard<number> = { us: 10, japan: 7, china: 10, who: 10 };
@@ -43,13 +45,16 @@ const FREE_SUGAR_PCT: PerStandard<number> = { us: 10, china: 10, who: 10 };
 
 function pick(value: number | Pair, sex: Sex | null): number {
     if (typeof value === 'number') return value;
+
     if (sex === null) return (value[0] + value[1]) / 2;
+
     return value[sex === 'male' ? 0 : 1];
 }
 
 function average(standard: NutrientStandard, table: PerStandard<number | Pair>, sex: Sex | null): number | null {
     const values = (standard === 'average' ? AVERAGED : [standard])
         .flatMap(standardName => table[standardName] === undefined ? [] : [pick(table[standardName]!, sex)]);
+
     return averageOf(values);
 }
 
@@ -58,9 +63,11 @@ export function dailyTargets(
     standard: NutrientStandard, sex: Sex | null, calories: number, weightLb: number | null, activity: number,
 ): Partial<Record<TargetKey, Target>> {
     const targets: Partial<Record<TargetKey, Target>> = {};
+
     const add = (key: TargetKey, amount: number | null, kind: TargetKind, unit: 'g' | 'mg') => {
         if (amount !== null) targets[key] = { amount, kind, unit };
     };
+
     const fromPercent = (percentOfCalories: number | null, caloriesPerGram: number) => percentOfCalories === null ? null : (percentOfCalories / 100) * calories / caloriesPerGram;
 
     const gPerKg = average(standard, PROTEIN_G_PER_KG, sex);
@@ -74,6 +81,7 @@ export function dailyTargets(
     add('transFat', fromPercent(average(standard, TRANS_FAT_PCT, sex), KCAL_PER_G_FAT), 'max', 'g');
     add('carbs', fromPercent(average(standard, CARBS_PCT, sex), KCAL_PER_G_CARB), 'range', 'g');
     add('sugar', fromPercent(average(standard, FREE_SUGAR_PCT, sex), KCAL_PER_G_CARB), 'max', 'g');
+
     return targets;
 }
 
@@ -107,6 +115,7 @@ export function scaleColor(percent: number, scale: ColorScale): string {
     const value = scale.aroundTarget ? Math.abs(percent - 100) : percent;
     const lastIndex = scale.bands.length - 1;
     const band = scale.bands.find((candidate, position) => scale.exclusive && position < lastIndex ? value < candidate.upTo : value <= candidate.upTo);
+
     return COLOR_CLASS[band?.color ?? scale.beyond];
 }
 
@@ -119,8 +128,11 @@ export function describeScale(scale: ColorScale): string {
     const { bands, beyond, aroundTarget, exclusive } = scale;
     const parts = bands.map((band, position) => {
         if (aroundTarget) return `${100 - band.upTo}–${100 + band.upTo}% ${position === 0 ? 'is ' : ''}${band.color}`;
+
         return position === 0 ? `${exclusive ? 'under' : 'up to'} ${band.upTo}% is ${band.color}` : `${bands[position - 1].upTo}–${band.upTo}% ${band.color}`;
     });
+
     parts.push(aroundTarget ? `further out ${beyond}` : `over ${bands[bands.length - 1].upTo}% ${beyond}`);
+
     return `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
 }

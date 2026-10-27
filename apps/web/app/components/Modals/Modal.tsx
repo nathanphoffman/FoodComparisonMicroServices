@@ -5,6 +5,7 @@ import { useEffect } from "react";
 export function Modal({ title, onClose, wide, children }: {
     title: string;
     onClose: () => void;
+
     /** Wider box, for content laid out in columns. */
     wide?: boolean;
     children: React.ReactNode;
@@ -12,6 +13,7 @@ export function Modal({ title, onClose, wide, children }: {
     useEffect(() => {
         const handleKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
         document.addEventListener('keydown', handleKey);
+
         return () => document.removeEventListener('keydown', handleKey);
     }, [onClose]);
 

@@ -28,6 +28,7 @@ const NARROW_SELECT = 'max-w-[10rem]';
 export function FoodTableToolbar({ dataSettings, reference, foods, columns }: Props) {
     const { dataRegion, onDataRegionChange, nutrientStandard, onNutrientStandardChange } = dataSettings;
     const foodOptions = [...foods].sort((first, second) => first.name.localeCompare(second.name)).map(food => ({ value: food.slug, label: food.name }));
+
     return (
         <div className="flex flex-wrap justify-end items-center gap-3 mb-2">
             <SelectField label="Data region" value={dataRegion} options={DATA_REGION_OPTIONS} onChange={onDataRegionChange}

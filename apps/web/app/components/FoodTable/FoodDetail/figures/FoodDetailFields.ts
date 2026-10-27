@@ -3,12 +3,15 @@
 /** The food's source fields for a figure, expanding groups like 'feed:' in data order. */
 export function matchFields(patterns: string[], available: string[]): string[] {
   const matched: string[] = [];
+
   for (const pattern of patterns) {
     const hits = pattern.endsWith(':')
       ? available.filter(field => field.startsWith(pattern))
       : available.filter(field => field === pattern);
+
     for (const hit of hits) if (!matched.includes(hit)) matched.push(hit);
   }
+
   return matched;
 }
 
@@ -47,10 +50,14 @@ const FIELD_LABELS: Record<string, string> = {
 
 export function fieldLabel(field: string): string {
   const [group, name] = field.split(':');
+
   if (name != null) {
     if (group === 'feed')       return `Feed: ${name} (kg per kg)`;
+
     if (group === 'pesticide')  return `Pesticide: ${name} (kg per ha)`;
+
     if (group === 'ingredient') return `Ingredient: ${name} (kg per kg)`;
   }
+
   return FIELD_LABELS[field] ?? field.replaceAll('_', ' ');
 }

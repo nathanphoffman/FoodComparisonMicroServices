@@ -100,10 +100,14 @@ pub struct Diet {
 }
 
 fn default_zero_better_multiplier() -> f64 { 2.0 }
+
 fn default_priority()               -> f64 { 1.0 }
+
 fn default_win_dampening()          -> f64 { 1.0 }
+
 // Keep in sync with DEFAULT_OVER_HUNTING / DEFAULT_OVER_GATHERING in OverHuntingSlider.tsx / OverGatheringSlider.tsx.
 fn default_over_hunting_factor()    -> f64 { 2.5 }
+
 fn default_over_gathering_factor()  -> f64 { 1.5 }
 
 // Keep in sync with DEFAULT_LAND_TYPE_WEIGHTS in LandTypeSliders.tsx.
@@ -120,11 +124,19 @@ pub(super) fn default_land_type_weights() -> LandTypes {
 }
 
 fn default_calorie_weight()               -> f64 { 50.0 }
+
 fn default_protein_weight()               -> f64 { 20.0 }
+
 fn default_green_water()                  -> f64 { 25.0 }
+
 fn default_grey_water()                   -> f64 { 25.0 }
+
 fn default_kill_multiplier()              -> f64 { 1.0 }
+
 fn default_captivity_multiplier()         -> f64 { 1.0 }
+
 fn default_neuron_exponent()              -> f64 { 1.5 }
+
 fn default_weight_exponent()              -> f64 { 0.75 }
+
 fn default_final_intelligence_exponent()  -> f64 { 1.0 }

@@ -22,6 +22,7 @@ function FactsTable({ title, facts }: { title: string; facts: Fact[] }) {
           {facts.filter(([, value]) => value !== null).map(([label, value]) => (
             <tr key={label}><td>{label}</td><td>{value}</td></tr>
           ))}
+
         </tbody>
       </table>
     </>
@@ -61,6 +62,7 @@ export function PlantFacts({ plant }: { plant: Plant }) {
 
 export function AnimalFacts({ animal }: { animal: Animal }) {
   const neurons = firstValue(animal.neuron_count);
+
   return (
     <FactsTable title="Animal data" facts={[
       ['Neuron count', neurons === null ? null : neurons.toLocaleString()],

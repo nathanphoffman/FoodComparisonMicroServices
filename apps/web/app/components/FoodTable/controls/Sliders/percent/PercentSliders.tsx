@@ -11,6 +11,7 @@ type Props<LevelKey extends string> = {
     labels: Record<LevelKey, string>;
     descriptions: Record<LevelKey, string>;
     helpTopics?: Partial<Record<LevelKey, HelpTopicKey>>;
+
     /** Starting slider levels (0–MAX_LEVEL); equal when omitted. */
     defaultLevels?: Levels<LevelKey>;
     onChange?: (shares: Levels<LevelKey>) => void;
@@ -43,6 +44,7 @@ export function PercentSliders<LevelKey extends string>({ keys, labels, descript
                         onHelp={helpTopics?.[key] ? () => setHelpKey(key) : undefined}
                     />
                 ))}
+
             </div>
             {openTopic && <HelpModal topic={openTopic} onClose={() => setHelpKey(null)} />}
         </div>

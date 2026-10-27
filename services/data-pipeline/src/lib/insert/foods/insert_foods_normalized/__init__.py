@@ -14,6 +14,7 @@ import sqlite3
 from .....food_types import (
     Food, Plant, Animal, Pesticide, PlantPesticide, AnimalFeed, Composite, CompositeIngredient,
 )
+
 from ....types.food_normalized import FoodNormalized
 from ....types.raw.raw_food import RawFood
 from .lookup_tables import LookupTables
@@ -37,7 +38,6 @@ INSERT_SQL = """INSERT INTO foods_normalized (
   availability_gg, sentient_harm_explanation, land_types, category
 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"""
 
-
 def insert(
     connection: sqlite3.Connection,
     foods: list[Food],
@@ -55,6 +55,7 @@ def insert(
         foods, plants, animals, plant_pesticides, pesticides, animal_feed,
         composites or [], composite_ingredients or [],
     )
+
     for food in foods:
         raw_food = RawFood(
             food,
@@ -62,11 +63,12 @@ def insert(
             build_raw_animal(food["id"], tables),
             build_raw_composite(food["id"], tables),
         )
+
         _insert_row(connection, raw_food.to_normalized(), region)
         feed_row = raw_food.to_feed_normalized()
+
         if feed_row:
             _insert_row(connection, feed_row, region)
-
 
 def _insert_row(connection: sqlite3.Connection, row: FoodNormalized, region: str) -> None:
     row.region = region

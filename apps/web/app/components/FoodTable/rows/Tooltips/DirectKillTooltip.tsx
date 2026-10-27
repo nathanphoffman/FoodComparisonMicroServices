@@ -29,10 +29,12 @@ export function DirectKillTooltip({ detail, killDetail, wildFishDeathsPerKg, exp
         {wildFishDeathsPerKg != null && (
           <TooltipRow label="Wild fish killed for fishmeal / oil" value={`${formatCount(wildFishDeathsPerKg)} per kg`} />
         )}
+
         <TooltipFootnote>neuron and weight exponents adjustable via Intelligence Math sliders</TooltipFootnote>
         <ExplanationNote text={explanation} />
       </TooltipSection>
     }>
+
       {children}
     </Tooltip>
   );

@@ -3,6 +3,7 @@ import type { MathStep } from './math/FoodDetailMath';
 /** The figure's working, one step per line: label, equation with this food's numbers, result. */
 export function FigureMath({ steps }: { steps: MathStep[] }) {
   if (steps.length === 0) return null;
+
   return (
     <div className="rounded-lg border border-neutral-200 bg-neutral-50 px-3 py-2.5">
       <h4 className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-500">How it's calculated</h4>
@@ -16,6 +17,7 @@ export function FigureMath({ steps }: { steps: MathStep[] }) {
             </div>
           </li>
         ))}
+
       </ol>
     </div>
   );

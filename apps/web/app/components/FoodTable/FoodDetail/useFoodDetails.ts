@@ -11,6 +11,7 @@ export function useFoodDetails(slug: string) {
     fetch(`/api/foods/${encodeURIComponent(slug)}/details`, { signal: controller.signal })
       .then(response => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
         return response.json() as Promise<FoodDetails>;
       })
       .then(setDetails)
@@ -19,6 +20,7 @@ export function useFoodDetails(slug: string) {
         console.error('Could not load the food details:', error);
         setLoadError(String(error));
       });
+
     return () => controller.abort();
   }, [slug]);
 

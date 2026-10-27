@@ -19,8 +19,10 @@ pub(super) fn compute_emissions(food: &FoodRow) -> (f64, Option<EmissionsBreakdo
             let feed      = food.feed_emissions_per_kg;
             let total     = co2 + ch4_co2e + n2o_co2e + feed.unwrap_or(0.0);
             let breakdown = EmissionsBreakdown { co2, ch4: ch4_co2e, n2o: n2o_co2e, feed_emissions: feed };
+
             return (total, Some(breakdown));
         }
     }
+
     (food.emissions_per_kg.unwrap_or(0.0), None)
 }

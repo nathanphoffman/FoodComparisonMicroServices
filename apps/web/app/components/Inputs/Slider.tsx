@@ -10,5 +10,6 @@ export function Slider({ min = 0, max = 100, step, value, onChange }: { min?: nu
           style={{
             background: `linear-gradient(to right, #3b82f6 ${pct}%, #e5e7eb ${pct}%)`
           }}
+
  type="range" min={min} max={max} step={step} value={value} onChange={setSlider}></input>
 }

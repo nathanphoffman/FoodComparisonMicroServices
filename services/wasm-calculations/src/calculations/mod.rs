@@ -2,7 +2,9 @@
 //! reference comparison and the final scores. All functions are free of I/O and WASM-bindgen concerns.
 
 mod comparison;
+
 mod eco;
+
 mod per_food;
 
 use crate::models::{FoodRow, ScoredRow, SliderQuery};
@@ -32,11 +34,13 @@ pub fn apply(foods: Vec<FoodRow>, query: &SliderQuery) -> Vec<ScoredRow> {
                 row.improvement_detail = detail;
             }
         }
+
         for blend in &mut blends {
             blend.row.final_score = comparison.blend_score(blend);
         }
     }
 
     rows.extend(blends.into_iter().map(|blend| blend.row));
+
     rows
 }

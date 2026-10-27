@@ -6,13 +6,11 @@ TypedDicts, so they map cleanly to/from JSON without extra parsing.
 
 from typing import TypedDict, Literal, NotRequired
 
-
 class SourcedNumber(TypedDict):
     value: float
     source_id: int
     confidence: int
     region: NotRequired[Literal["US", "world"]]  # optional; untagged values count as world
-
 
 class NutritionValue(TypedDict):
     calories: float
@@ -25,6 +23,7 @@ class NutritionValue(TypedDict):
     sugar: float | None
     cholesterol: float | None
     trans_fat: float | None
+
     # vitamins and minerals, per gram of food; absent when the source doesn't report them.
     # Units are in data/json/SCHEMA.md; the keys are listed in MICRONUTRIENT_KEYS.
     vitamin_a: NotRequired[float]
@@ -44,6 +43,7 @@ class NutritionValue(TypedDict):
     selenium: NotRequired[float]
     ala: NotRequired[float]      # omega-3 ALA, g / g food
     epa_dha: NotRequired[float]  # omega-3 EPA + DHA combined, mg / g food
+
     # amino acids, g per g of food; absent when the source doesn't report them (keys in AMINO_ACID_KEYS)
     tryptophan: NotRequired[float]
     threonine: NotRequired[float]
@@ -64,7 +64,6 @@ class NutritionValue(TypedDict):
     proline: NotRequired[float]
     serine: NotRequired[float]
 
-
 MICRONUTRIENT_KEYS = (
     "vitamin_a", "vitamin_c", "vitamin_d", "vitamin_e", "vitamin_k",
     "folate", "vitamin_b12", "vitamin_b6",
@@ -80,7 +79,6 @@ AMINO_ACID_KEYS = (
     "phenylalanine", "tyrosine", "valine", "histidine",
     "arginine", "alanine", "aspartic_acid", "glutamic_acid", "glycine", "proline", "serine",
 )
-
 
 class SourcedNutrition(TypedDict):
     value: NutritionValue

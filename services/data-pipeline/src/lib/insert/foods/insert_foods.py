@@ -9,9 +9,9 @@ import sqlite3
 
 from ....food_types import Food
 
-
 def insert(connection: sqlite3.Connection, foods: list[Food]) -> None:
     """Inserts all food records into the foods table."""
+
     for food in foods:
         connection.execute(
             "INSERT INTO foods (id, slug, name, type, nutrition, human_food, tags, notes) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",

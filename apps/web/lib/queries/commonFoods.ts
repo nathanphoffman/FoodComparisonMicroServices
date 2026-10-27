@@ -17,9 +17,11 @@ const COMMON_FOODS_QUERY = `SELECT food_id, is_feed, slug, name, type, tags, hum
   AND    EXISTS (
     SELECT 1 FROM json_each(tags) WHERE value = 'common'
   )
+
 `;
 
 export async function loadCommonFoods(): Promise<Food[]> {
   const db = await getNormalizedDb();
+
   return rowsToObjects(db.exec(COMMON_FOODS_QUERY)) as unknown as Food[];
 }

@@ -6,6 +6,7 @@ pub(super) fn compute_nutrition_score(food: &FoodRow, weights: &NutritionWeights
     if food.calories <= 0.0 {
         return Some(0.0);
     }
+
     let free_sugar = (food.sugar.unwrap_or(0.0) - weights.sugar_allowance * food.fiber).max(0.0);
     let protein_quality = protein_quality_factor(food.amino_acids.as_ref(), food.protein, weights.protein_quality);
     let raw = weights.protein * food.protein * protein_quality + weights.fiber * food.fiber
@@ -23,6 +24,7 @@ pub(super) fn compute_nutrition_score(food: &FoodRow, weights: &NutritionWeights
 /// shortfall is taken off. Foods with no amino acid data keep all their protein points.
 fn protein_quality_factor(amino_acids: Option<&AminoAcids>, protein_per_gram: f64, slider: f64) -> f64 {
     let amino_score = amino_acids.and_then(|amino_acids_present| amino_acids_present.score(protein_per_gram)).unwrap_or(1.0);
+
     1.0 - slider.clamp(0.0, 1.0) * (1.0 - amino_score)
 }
 
@@ -33,6 +35,7 @@ mod tests {
     /// Protein of 0.1 g per g whose lysine is half of what the body needs.
     fn lysine_short() -> AminoAcids {
         let protein_share = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * 0.10);
+
         AminoAcids {
             histidine: protein_share(16.0), isoleucine: protein_share(30.0), leucine: protein_share(61.0), lysine: protein_share(24.0),
             methionine: protein_share(15.0), cystine: protein_share(8.0), phenylalanine: protein_share(25.0), tyrosine: protein_share(16.0),

@@ -15,6 +15,7 @@ type PointsInputs = {
 function pointsStep(inputs: PointsInputs): MathStep {
   const { weights, protein, fiber, satFat, freeSugar, sodiumMg, dailyValues, proteinQuality, aminoScore, points } = inputs;
   const withQuality = aminoScore < 1;
+
   return {
     label: 'Points per 100 g (Nutrition sliders)',
     expression: `${weights.protein} × protein${withQuality ? ' × protein quality' : ''} + ${weights.fiber} × fibre − ${weights.satFat} × sat. fat − ${weights.freeSugar} × free sugar − ${weights.sodium} × sodium mg ÷ 100 + ${weights.micronutrients} × vitamins, minerals & omega-3`
@@ -26,7 +27,9 @@ function pointsStep(inputs: PointsInputs): MathStep {
 /** Working for the Nutrition Score: the points per 100 g, then per 100 kcal. */
 export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathContext): MathStep[] {
   const { sliders } = context;
+
   if (row.nutritionScore == null || food.calories <= 0) return [];
+
   // Per 100 g so the numbers read like a label; same score as nutrition.rs's per-gram maths.
   const per100 = (perGram: number | null) => (perGram ?? 0) * 100;
   const protein = per100(food.protein);
@@ -36,11 +39,13 @@ export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathC
   const sodiumMg = per100(food.sodium);
   const weights = sliders.nutritionWeights;
   const freeSugar = Math.max(0, sugar - weights.sugarAllowance * fiber);
+
   // Share of each vitamin/mineral's daily value in 100 g; missing ones add nothing.
   const dailyValueShares = MICRONUTRIENT_KEYS
     .filter(key => food.micronutrients?.[key] != null)
     .map(key => [key, per100(food.micronutrients![key]!) / MICRONUTRIENT_INFO[key].dailyValue] as const);
   const dailyValues = sumOf(dailyValueShares.map(([key, share]) => MICRONUTRIENT_INFO[key].credit * share));
+
   // Protein earns points in proportion to how well its amino acids match the body's needs (nutrition.rs).
   const aminoScore = aminoAcidProfile({ protein: food.protein, aminoAcids: food.amino_acids })?.score ?? 1;
   const proteinQuality = 1 - Math.min(1, Math.max(0, weights.proteinQuality)) * (1 - aminoScore);
@@ -48,6 +53,7 @@ export function nutritionScoreMath(food: RawFood, row: ScoredRow, context: MathC
     - weights.freeSugar * freeSugar - weights.sodium * sodiumMg / 100 + weights.micronutrients * dailyValues;
   const caloriesPer100g = per100(food.calories);
   const inputs = { weights, protein, fiber, satFat, freeSugar, sodiumMg, dailyValues, proteinQuality, aminoScore, points };
+
   return [
     { label: 'Free sugar (g / 100 g)', expression: `max(0, sugar − ${weights.sugarAllowance} × fibre) = max(0, ${formatNumber(sugar)} − ${weights.sugarAllowance} × ${formatNumber(fiber)})`, result: formatNumber(freeSugar) },
     ...(dailyValueShares.length > 0 ? [{

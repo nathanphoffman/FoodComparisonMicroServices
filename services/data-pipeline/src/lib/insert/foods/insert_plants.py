@@ -9,14 +9,14 @@ import sqlite3
 
 from ....food_types import Plant
 
-
 def encode_optional_json(sourced_array: list | None) -> str | None:
     """Returns a JSON-encoded sourced array, or None if the array is absent."""
-    return json.dumps(sourced_array) if sourced_array else None
 
+    return json.dumps(sourced_array) if sourced_array else None
 
 def insert(connection: sqlite3.Connection, plants: list[Plant]) -> None:
     """Inserts all plant records into the plants table."""
+
     for plant in plants:
         connection.execute(
             """INSERT INTO plants (

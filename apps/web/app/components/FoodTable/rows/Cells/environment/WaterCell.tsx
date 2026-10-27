@@ -17,6 +17,7 @@ export function WaterCell({ value, detail, referenceTotal, divisor, unit, greenW
   greyWaterWeight: number;
 }) {
   const hasBreakdown = detail?.green != null || detail?.blue != null;
+
   return (
     <ValueCell value={value}>
       {water => hasBreakdown
@@ -32,8 +33,10 @@ export function WaterCell({ value, detail, referenceTotal, divisor, unit, greenW
             <WaterValue value={water} />
           </WaterTooltip>
         )
+
         : <WaterValue value={water} />
       }
+
     </ValueCell>
   );
 }

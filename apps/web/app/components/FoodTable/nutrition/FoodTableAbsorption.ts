@@ -22,10 +22,12 @@ export const BASELINE_MEALS = 3;
 export const MIN_DAYS_BETWEEN = 0.1;
 export const MAX_DAYS_BETWEEN = 10;
 export const DEFAULT_DAYS_BETWEEN = 0.3;
+
 export const mealsPerDayFor = (daysBetween: number) => 1 / daysBetween;
 
 function absorbed(perMeal: number, key: MicronutrientKey): number {
     const { capPerMeal, beyondCap } = LIMITS[key]!;
+
     return Math.min(perMeal, capPerMeal) + beyondCap * Math.max(perMeal - capPerMeal, 0);
 }
 
@@ -46,5 +48,6 @@ function efficiency(daily: number, meals: number, key: MicronutrientKey): number
  */
 export function absorptionMultiplier(key: MicronutrientKey, dailyAmount: number, mealsPerDay: number): number {
     if (!(key in LIMITS) || dailyAmount <= 0) return 1;
+
     return Math.min(1, efficiency(dailyAmount, mealsPerDay, key) / efficiency(dailyAmount, BASELINE_MEALS, key));
 }

@@ -30,6 +30,7 @@ _NULL_PLANT_FIELDS = dict(
     pesticide_insect_paf=None, pesticide_bee_hazard=None,
     pesticide_kg_per_kg_food=None, land_m2_per_kg=None,
 )
+
 _NULL_ANIMAL_FIELDS = dict(
     neuron_count=None, weight_kg=None, lifetime_output_kg=None,
     offspring_deaths_per_animal=None, offspring_captivity_years=None,
@@ -37,7 +38,6 @@ _NULL_ANIMAL_FIELDS = dict(
     native_fraction=None, bycatch_amount=None, bycatch_food_slug=None,
     ch4_kg_per_kg_output=None, n2o_kg_per_kg_output=None, co2_kg_per_kg_output=None,
 )
-
 
 class RawFood:
     """Combines a food record with its optional plant and animal data for normalization."""
@@ -58,6 +58,7 @@ class RawFood:
     def to_normalized(self) -> FoodNormalized:
         """Builds the primary normalized row for this food."""
         nutrition_average = self.nutrition.weighted_average()
+
         return FoodNormalized(
             food_id=self._data["id"],
             is_feed=0,
@@ -88,43 +89,58 @@ class RawFood:
 
     def _plant_fields(self) -> dict:
         """Crop metrics: built from ingredients for a composite, else the plant's own."""
+
         if self._composite:
             return self._composite.normalized_fields()
+
         return self._plant.normalized_fields() if self._plant else _NULL_PLANT_FIELDS
 
     def _land_types(self) -> dict[str, float] | None:
         """The food's own land split; a composite without one gets its ingredients' mix."""
         land_types = self._data.get("land_types")
+
         if land_types is None and self._composite:
             return self._composite.land_types()
+
         return land_types
 
     def _availability_gg(self) -> float | None:
         """World supply in Gg, on the same basis as the food's nutrition. Production is
         sourced as dry harvest; foods eaten cooked (rice, beans) are converted to cooked
         weight with cooked_weight_ratio, the same way their yield is."""
+
         availability = SourcedArray(self._data.get("availability_gg")).weighted_average()
+
         if self._composite:
             return self._composite.availability_gg(availability)
+
         cooked_ratio = self._plant.cooked_weight_ratio.weighted_average() if self._plant else None
+
         if availability and cooked_ratio:
             return availability * cooked_ratio
+
         return availability
 
     def _display_name(self) -> str:
         """Food name, suffixed with "(Cooked)" when metrics are converted to a cooked-weight basis."""
         name = self._data["name"]
+
         if self._plant and self._plant.cooked_weight_ratio.weighted_average():
             return f"{name} (Cooked)"
+
         return name
 
     def to_feed_normalized(self) -> FoodNormalized | None:
         """Builds the feed-impact normalized row for this food, or None if not an animal."""
+
         if not self._animal:
             return None
+
         feed_fields = self._animal.feed_normalized_fields()
+
         if not feed_fields:
             return None
+
         return FoodNormalized(
             food_id=self._data["id"],
             is_feed=1,

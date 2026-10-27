@@ -16,8 +16,10 @@ const TITLE_ID = 'food-detail-title';
 type Props = {
   food: RawFood;
   scoredRow: ScoredRow | undefined;
+
   /** Column labels as shown in the table header (they change with the Compare By unit). */
   labels: Record<FigureKey, string>;
+
   /** Sliders and reference food, for the step-by-step working shown in each row. */
   mathContext: MathContext;
   onClose: () => void;
@@ -56,6 +58,7 @@ export function FoodDetailModal({ food, scoredRow, labels, mathContext, onClose 
                 onToggle={() => setSelected(figure.key === selected ? null : figure.key)}
               />
             ))}
+
           </div>
 
           <NotesSection details={details} loadError={loadError} />

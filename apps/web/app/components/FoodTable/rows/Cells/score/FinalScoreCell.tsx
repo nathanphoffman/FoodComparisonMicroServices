@@ -9,6 +9,7 @@ export function FinalScoreCell({ ratio }: { ratio: number | null }) {
           {score.toFixed(1)}x
         </span>
       )}
+
     </ValueCell>
   );
 }

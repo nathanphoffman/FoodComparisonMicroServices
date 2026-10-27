@@ -8,6 +8,7 @@ export const positiveOrZero = (value: string) => value !== '' && Number.isFinite
 
 type Props = {
     supplement: Supplement;
+
     /** The person's daily need for this nutrient, which a dose entered as a % of need is measured against. */
     dailyNeed: number;
     onChange: (patch: Partial<Supplement>) => void;
@@ -18,6 +19,7 @@ type Props = {
 export function SupplementRow({ supplement, dailyNeed, onChange, onRemove }: Props) {
     const { label, unit } = MICRONUTRIENT_INFO[supplement.key];
     const shown = supplement.percent ? supplement.dose / dailyNeed * 100 : supplement.dose;
+
     return (
         <div className="flex flex-wrap items-center gap-2 text-xs">
             <span className="w-28 shrink-0 text-neutral-600">{label}</span>

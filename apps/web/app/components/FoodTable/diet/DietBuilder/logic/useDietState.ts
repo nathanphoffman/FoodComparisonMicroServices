@@ -16,6 +16,7 @@ function useSavedDiet(storageKey: string, foods: BuilderFood[]) {
     // If the browser refuses the write, the diet still works but the user is told it won't survive a reload.
     function keep(next: Saved) {
         setSaved(next);
+
         try {
             save(storageKey, next);
         } catch (error) {
@@ -64,6 +65,7 @@ export function useDietState({ diet, foods, onChange, onSettingsChange }: Option
     useEffect(() => {
         onChange(toInput(slug, name, saved));
         onSettingsChange?.(settingsOf(saved, foods));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -80,12 +82,14 @@ export function useDietState({ diet, foods, onChange, onSettingsChange }: Option
         const next = { ...saved, ...patch };
         keep(next);
         debouncedSettings(next);
+
         if ('calorieTarget' in patch) settleLater(next);
     }
 
     // Loads a diet from a backup file the user picked; problems are shown to the user, not thrown.
     async function importDiet(file: File | undefined) {
         if (!file) return;
+
         try {
             const { saved: next, droppedFoodCount } = await readDietFile(file, foods);
             keep(next);

@@ -28,10 +28,13 @@ export const DISTANCE_TIERS = [
 // The net verdict: each column's tier is worth -3 (very bad) to +3 (very good); the overall is their average, rounded
 // to the nearest tier. If only one column has a verdict, that one stands alone.
 const OVERALL_TIERS = [...TIERS];
+
 export function overallTier(scores: number[]) {
     if (scores.length === 0) return null;
     const average = sumOf(scores) / scores.length;
+
     // Halves round away from zero, so +1.5 and -1.5 land the same distance from average.
     const rounded = Math.sign(average) * Math.round(Math.abs(average));
+
     return OVERALL_TIERS.find(tier => tier.score === rounded)!;
 }

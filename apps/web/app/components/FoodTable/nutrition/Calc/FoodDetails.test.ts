@@ -4,6 +4,7 @@ import { dietStub, type DietInput, type RawFood } from '../../types/FoodTableTyp
 
 const food = (slug: string, fields: Partial<RawFood>): RawFood => ({ ...dietStub(slug, slug), ...fields });
 const FOODS = [food('rice', { calories: 1, protein: 0.2 }), food('beans', { calories: 4, protein: 0 })];
+
 const half = (basis: DietInput['basis']): DietInput => ({
     slug: 'diet', name: 'Diet', basis, ingredients: [{ slug: 'rice', fraction: 0.5 }, { slug: 'beans', fraction: 0.5 }],
 });

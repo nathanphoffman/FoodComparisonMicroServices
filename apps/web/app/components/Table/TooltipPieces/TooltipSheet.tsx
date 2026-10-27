@@ -3,6 +3,7 @@ import { useSheetDrag } from './useSheetDrag';
 /** On phones, the tooltip opens as a bottom sheet that scrolls; its handle drags it taller or shorter. */
 export function TooltipSheet({ onClose, children }: { onClose: () => void; children: React.ReactNode }) {
   const { sheetRef, height, handleProps } = useSheetDrag(onClose);
+
   return (
     <div className="md:hidden fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />

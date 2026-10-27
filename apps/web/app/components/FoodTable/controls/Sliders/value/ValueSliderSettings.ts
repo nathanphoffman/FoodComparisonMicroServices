@@ -3,8 +3,11 @@ import type { SliderScale, ValueSliderSettings } from "./ValueSlider";
 // Settings for every single-value slider. Starting values live in FoodTableDefaults.
 
 const percent    = (value: number) => `${value}%`;
+
 const times      = (value: number) => `${value}×`;
+
 const times1dp   = (value: number) => `${value.toFixed(1)}×`;
+
 const twoDecimal = (value: number) => value.toFixed(2);
 
 // ── Water ─────────────────────────────────────────────────────────────────────
@@ -88,7 +91,9 @@ export const CAPTIVITY: ValueSliderSettings = {
 
 function describeWinDampening(value: number): string {
     if (value === 0) return 'linear';
+
     if (value === 1) return 'geometric mean';
+
     return value < 1 ? 'weaker' : 'stronger';
 }
 

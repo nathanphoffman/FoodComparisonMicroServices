@@ -8,13 +8,12 @@ from pathlib import Path
 
 from ...paths import DATA_DIR, TEXT_ENCODING
 
-
 def make_empty_database(schema_path: Path) -> sqlite3.Connection:
     """Creates an in-memory SQLite database and applies the given schema."""
     connection = sqlite3.connect(":memory:", isolation_level=None)
     connection.executescript(schema_path.read_text(encoding=TEXT_ENCODING))
-    return connection
 
+    return connection
 
 def write_databases(
     source_connection: sqlite3.Connection,
@@ -34,8 +33,8 @@ def write_databases(
     print(f"Built {source_path} ({source_path.stat().st_size:,} bytes)")
     print(f"Built {normalized_path} ({normalized_path.stat().st_size:,} bytes)")
 
-
 def _delete_old_databases(filename_prefix: str) -> None:
     """Deletes all database files in DATA_DIR matching the given filename prefix."""
+
     for database_file in DATA_DIR.glob(f"{filename_prefix}*.db"):
         database_file.unlink()

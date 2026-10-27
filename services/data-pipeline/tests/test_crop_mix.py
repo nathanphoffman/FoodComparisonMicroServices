@@ -6,10 +6,8 @@ from src.lib.types.crop_mix.pesticides import AreaWeightedFraction, compute_pest
 from src.lib.types.crop_mix.water_and_emissions import compute_water_and_emissions
 from src.lib.types.sourced_array import SourcedArray
 
-
 def sourced_array(value: float | None) -> SourcedArray:
     return SourcedArray(None if value is None else [{"value": value, "confidence": 1.0}])
-
 
 def plant(**overrides) -> SimpleNamespace:
     fields = dict(
@@ -25,9 +23,10 @@ def plant(**overrides) -> SimpleNamespace:
         pesticide_affected_insect_fraction=None,
         pesticide_bee_mortality_fraction=None,
     )
-    fields.update(overrides)
-    return SimpleNamespace(**fields)
 
+    fields.update(overrides)
+
+    return SimpleNamespace(**fields)
 
 class WaterAndEmissionsTests(unittest.TestCase):
     def test_sums_each_crop_by_its_ratio(self):
@@ -37,6 +36,7 @@ class WaterAndEmissionsTests(unittest.TestCase):
             blue_water_per_kg=sourced_array(10),
             grey_water_per_kg=sourced_array(1),
         )
+
         result = compute_water_and_emissions([CropShare(0.5, crop), CropShare(2.0, crop)])
         self.assertEqual(result, (5.0, 250.0, 25.0, 2.5))
 
@@ -55,7 +55,6 @@ class WaterAndEmissionsTests(unittest.TestCase):
         crop = plant(water_per_kg=sourced_array(50), blue_water_per_kg=sourced_array(5))
         self.assertEqual(compute_water_and_emissions([CropShare(1.0, crop)]), (0.0, 0.0, 5.0, 0.0))
 
-
 class AreaWeightedFractionTests(unittest.TestCase):
     def test_no_values_has_no_average(self):
         self.assertIsNone(AreaWeightedFraction().average())
@@ -72,7 +71,6 @@ class AreaWeightedFractionTests(unittest.TestCase):
         fraction.add(3.0, 0.4)
         self.assertAlmostEqual(fraction.average(), 0.3)
 
-
 class PesticideImpactTests(unittest.TestCase):
     def test_totals_pesticide_and_weights_fractions_by_area(self):
         crop = plant(
@@ -80,6 +78,7 @@ class PesticideImpactTests(unittest.TestCase):
             yield_kg_ha=sourced_array(1000),
             pesticide_affected_freshwater_fraction=0.5,
         )
+
         total, freshwater, terrestrial, insect, bee = compute_pesticide_paf_impacts([CropShare(2.0, crop)])
         self.assertAlmostEqual(total, 0.02)
         self.assertAlmostEqual(freshwater, 0.5)
@@ -90,7 +89,6 @@ class PesticideImpactTests(unittest.TestCase):
         total, freshwater, *_ = compute_pesticide_paf_impacts([CropShare(1.0, crop)])
         self.assertAlmostEqual(total, 0.01)
         self.assertIsNone(freshwater)
-
 
 if __name__ == "__main__":
     unittest.main()

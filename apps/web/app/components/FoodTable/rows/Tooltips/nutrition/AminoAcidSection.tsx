@@ -4,11 +4,13 @@ import { TooltipSection, TooltipRow } from '../../../../Table/Tooltip';
 import { needColor } from './nutritionColors';
 
 const formatMilligrams = (mg: number) => `${mg.toLocaleString(undefined, { maximumFractionDigits: 1 })} mg`;
+
 const formatPercent = (share: number) => `${(share * 100).toFixed(0)}%`;
 
 /** Each essential amino acid per gram of protein against what the body needs, and the weakest one that sets the score. */
 export function AminoAcidSection({ detail }: { detail: NutritionDetail }) {
   const profile = aminoAcidProfile(detail);
+
   if (!profile) return null;
   const { score, limiting, requirements, others } = profile;
 
@@ -22,6 +24,7 @@ export function AminoAcidSection({ detail }: { detail: NutritionDetail }) {
           </>
         } />
       )}
+
       {requirements.map(({ label, mgPerGramProtein, share }) => (
         <TooltipRow key={label} label={label} value={
           <>
@@ -30,6 +33,7 @@ export function AminoAcidSection({ detail }: { detail: NutritionDetail }) {
           </>
         } />
       ))}
+
       {others.length > 0 && <div className="mt-1 text-xs text-neutral-400">Other amino acids</div>}
       {others.map(({ label, mgPerGramProtein }) => <TooltipRow key={label} label={label} value={formatMilligrams(mgPerGramProtein)} />)}
     </TooltipSection>

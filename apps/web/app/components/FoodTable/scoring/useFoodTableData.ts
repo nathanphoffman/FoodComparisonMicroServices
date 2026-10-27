@@ -8,6 +8,7 @@ import { useFoodData } from './useFoodData';
 export function useFoodTableData(dataRegion: DataRegion, sliderValues: SliderValues) {
     const { rawFoods, loadingApi, error } = useFoodData(dataRegion);
     const diet = useDiet(rawFoods);
+
     // Scored rows contain all scores, breakdowns, and divisors.
     const { scored, scoringError, setScoringError } = useWasmScoring(rawFoods, sliderValues, diet.scoredDiets);
     const dismissScoringError = useCallback(() => setScoringError(null), [setScoringError]);

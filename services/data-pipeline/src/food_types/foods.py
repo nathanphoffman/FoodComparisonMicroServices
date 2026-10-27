@@ -7,7 +7,6 @@ TypedDicts, so they map cleanly to/from JSON without extra parsing.
 from typing import TypedDict, Literal, NotRequired
 from .shared import SourcedNumber, SourcedNutrition
 
-
 class Food(TypedDict):
     id: int
     slug: str
@@ -18,13 +17,15 @@ class Food(TypedDict):
     tags: list[str]
     availability_gg: list[SourcedNumber] | None
     sentient_harm_explanation: NotRequired[str | None]
+
     # plain-English summary of how this food's numbers were derived and any quirks; see data/json/SCHEMA.md
     notes: NotRequired[str | None]
+
     # fraction of this food's land in each broad land type (sums to 1); see data/json/SCHEMA.md
     land_types: NotRequired[dict[str, float] | None]
+
     # which foods/<category>.json file the food lives in (e.g. "nuts", "leafy")
     category: NotRequired[str]
-
 
 class Animal(TypedDict):
     id: int
@@ -45,7 +46,6 @@ class Animal(TypedDict):
     n2o_kg_per_kg_output: list[SourcedNumber] | None
     co2_kg_per_kg_output: list[SourcedNumber] | None
 
-
 class Plant(TypedDict):
     id: int
     food_id: int
@@ -63,12 +63,12 @@ class Plant(TypedDict):
     tillage_events_per_year: list[SourcedNumber] | None
     co2_capture_kg_ha_yr: list[SourcedNumber] | None
     cooked_weight_ratio: list[SourcedNumber] | None
+
     # Wild fish killed to make this product (fishmeal, fish oil); absent otherwise.
     wild_fish_kg_per_kg: NotRequired[list[SourcedNumber] | None]
     wild_fish_neuron_count: NotRequired[list[SourcedNumber] | None]
     wild_fish_weight_kg: NotRequired[list[SourcedNumber] | None]
     wild_fish_lifespan_years: NotRequired[list[SourcedNumber] | None]
-
 
 class AnimalFeed(TypedDict):
     id: int
@@ -76,14 +76,12 @@ class AnimalFeed(TypedDict):
     plant_id: int
     kg_feed_per_kg_output: list[SourcedNumber]
 
-
 class Composite(TypedDict):
     """A food made from other foods (e.g. a plant-based burger); see data/json/SCHEMA.md."""
     id: int
     food_id: int
     processing_emissions_per_kg: list[SourcedNumber] | None
     processing_water_per_kg: list[SourcedNumber] | None
-
 
 class CompositeIngredient(TypedDict):
     id: int

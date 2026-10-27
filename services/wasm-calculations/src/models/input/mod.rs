@@ -1,8 +1,13 @@
 mod amino_acids;
+
 mod food_row;
+
 mod land_types;
+
 mod micronutrients;
+
 mod nutrition_weights;
+
 mod slider_query;
 
 use serde::Deserialize;

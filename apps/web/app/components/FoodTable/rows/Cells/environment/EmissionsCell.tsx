@@ -18,6 +18,7 @@ export function EmissionsCell({ value, breakdown, divisor }: { value: number | n
         ? <EmissionsTooltip breakdown={breakdown} divisor={divisor}><EmissionsBadge value={emissions} /></EmissionsTooltip>
         : <EmissionsBadge value={emissions} />
       }
+
     </ValueCell>
   );
 }

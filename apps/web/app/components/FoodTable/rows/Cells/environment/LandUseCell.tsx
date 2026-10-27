@@ -11,6 +11,7 @@ export function LandUseCell({ value, detail, divisor, unit }: { value: number | 
           <span className={getColor('landUse', landUse)}>{landUse.toFixed(1)}</span>
         </LandUseTooltip>
       )}
+
     </ValueCell>
   );
 }

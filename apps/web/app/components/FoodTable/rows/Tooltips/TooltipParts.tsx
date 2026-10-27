@@ -11,5 +11,6 @@ export function TooltipFootnote({ children }: { children: React.ReactNode }) {
 /** Food-specific plain-English explanation from the data (sentient_harm_explanation). */
 export function ExplanationNote({ text }: { text?: string | null }) {
   if (!text) return null;
+
   return <div className="mt-2 pt-2 border-t border-neutral-700 text-neutral-300 text-xs whitespace-normal w-80">{text}</div>;
 }

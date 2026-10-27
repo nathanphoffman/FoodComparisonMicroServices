@@ -42,10 +42,13 @@ export const AMINO_ACID_REQUIREMENTS: { label: string; keys: AminoAcidKey[]; mgP
 export type AminoAcidProfile = {
     /** The nine scored requirements: mg per g of this food's protein vs what the body needs. */
     requirements: { label: string; mgPerGramProtein: number; needed: number; share: number }[];
+
     /** The other amino acids (not scored): mg per g of protein. */
     others: { label: string; mgPerGramProtein: number }[];
+
     /** Amino acid score: the weakest requirement's share, capped at 1; null if any essential amino acid is unreported. */
     score: number | null;
+
     /** Label of the weakest requirement (the "limiting" amino acid); null when there is no score. */
     limiting: string | null;
 };
@@ -53,19 +56,27 @@ export type AminoAcidProfile = {
 /** Per-protein amino acid profile for a food or diet's nutrition detail; null when it has no amino acid data. */
 export function aminoAcidProfile(detail: Pick<NutritionDetail, 'protein' | 'aminoAcids'>): AminoAcidProfile | null {
     const { protein, aminoAcids } = detail;
+
     if (!aminoAcids || protein <= 0) return null;
+
     const perProtein = (key: AminoAcidKey): number | null => aminoAcids[key] == null ? null : aminoAcids[key]! * 1000 / protein;
     const requirements = AMINO_ACID_REQUIREMENTS.flatMap(({ label, keys, mgPerGramProtein: needed }) => {
         const parts = keys.map(perProtein);
+
         if (parts.some(part => part == null)) return [];
         const mgPerGramProtein = parts.reduce<number>((sum, part) => sum + part!, 0);
+
         return [{ label, mgPerGramProtein, needed, share: mgPerGramProtein / needed }];
     });
+
     const others = AMINO_ACID_KEYS.filter(key => !AMINO_ACID_INFO[key].essential && aminoAcids[key] != null)
         .map(key => ({ label: AMINO_ACID_INFO[key].label, mgPerGramProtein: perProtein(key)! }));
     const complete = requirements.length === AMINO_ACID_REQUIREMENTS.length;
+
     // The requirement with the lowest share is the limiting amino acid.
     const weakest = complete ? requirements.reduce((low, row) => (row.share < low.share ? row : low)) : null;
+
     if (requirements.length === 0 && others.length === 0) return null;
+
     return { requirements, others, score: weakest ? Math.min(1, weakest.share) : null, limiting: weakest ? weakest.label : null };
 }

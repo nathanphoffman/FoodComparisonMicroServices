@@ -7,17 +7,21 @@ import { DietImpactRow } from './Impact/DietImpactRow';
 
 type Props = {
     row: ScoredRow;
+
     /** The other foods' scored rows, which the diet is ranked against. */
     others: ScoredRow[];
     unit: string;
+
     /** What turns the diet's per-unit scores into real amounts: the person's day and the diet's calories and land per kg. */
     amounts: { dailyCalories: number | null; caloriesPerGram: number | null; rawLandM2PerKg: number | null };
+
     /** The average American diet, scored the same way as the user's, and its land per kg. */
     benchmark: { row: ScoredRow | null; rawLandM2PerKg: number | null };
 };
 
 export function DietImpact({ row, others, unit, amounts, benchmark }: Props) {
     const { dailyCalories, caloriesPerGram, rawLandM2PerKg } = amounts;
+
     // kg of this diet eaten in a day, from your calorie total and the diet's calories per gram; without a
     // calorie total the amounts are per 1,000 kcal instead.
     const basis: Basis | null = !caloriesPerGram ? null : dailyCalories
@@ -42,6 +46,7 @@ export function DietImpact({ row, others, unit, amounts, benchmark }: Props) {
                 {METRICS.map(metric => (
                     <DietImpactRow key={metric.label} metric={metric} row={row} others={others} basis={basis} benchmark={benchmark.row} benchmarkRawLandM2PerKg={benchmark.rawLandM2PerKg} />
                 ))}
+
             </div>
             <p className="mt-2 text-neutral-500">
                 Percentile is the share of foods in the table the diet beats (90th percentile: better than 90% of foods); average is the 45th to 55th, above and below average the next 10% either side, good and bad the next 10%, and very good (blue) and very bad (red) beyond that.

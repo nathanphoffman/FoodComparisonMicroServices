@@ -10,6 +10,7 @@ export function NameCell({ name, slug, onSelect }: { name: string; slug: string;
       </Cell>
     );
   }
+
   return (
     <Cell key="name">
       {/* Opens the detail modal; modifier-clicks still open the food's own page. */}
@@ -20,6 +21,7 @@ export function NameCell({ name, slug, onSelect }: { name: string; slug: string;
           event.preventDefault();
           onSelect(slug);
         }}
+
         className="font-medium text-neutral-900 underline decoration-neutral-300 underline-offset-2 transition-colors hover:text-blue-600 hover:decoration-blue-400"
       >
         {name}

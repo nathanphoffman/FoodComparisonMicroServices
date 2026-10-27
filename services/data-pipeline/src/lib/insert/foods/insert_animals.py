@@ -11,19 +11,20 @@ import sqlite3
 from ....food_types import Animal
 from ...checks.validate import assert_sourced_array
 
-
 def _encode_if_present(sourced_array: list | None) -> str | None:
     """Returns a JSON-encoded sourced array, or None if the array is absent."""
-    return json.dumps(sourced_array) if sourced_array else None
 
+    return json.dumps(sourced_array) if sourced_array else None
 
 def insert(connection: sqlite3.Connection, animals: list[Animal]) -> None:
     """Inserts all animal records into the animals table."""
+
     for animal in animals:
         animal_label = f"animal {animal['id']}"
         assert_sourced_array(animal.get("neuron_count"),   f"{animal_label}.neuron_count")
         assert_sourced_array(animal.get("weight_kg"),      f"{animal_label}.weight_kg")
         assert_sourced_array(animal.get("yield_fraction"), f"{animal_label}.yield_fraction")
+
         # pasture_ha_per_kg_output and native_fraction are optional (grazing animals only)
         connection.execute(
             """INSERT INTO animals (

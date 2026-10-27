@@ -18,12 +18,14 @@ type Props = {
     onSliderValuesChange: (values: SliderValues) => void;
     onActiveColsChange: (cols: ColConfig[]) => void;
     dataSettings: DataSettings;
+
     /** Everything the diet builder reports back: its food, its daily settings, and a request to show the breakdown. */
     diet: {
         onDietChange: (food: DietInput) => void;
         onSettingsChange: (settings: DietSettings) => void;
         onShow: () => void;
     };
+
     scoringError: { message: string; onDismiss: () => void } | null;
 };
 
@@ -49,10 +51,12 @@ export const FoodTableInputs = memo(function FoodTableInputs({ foods, onSliderVa
         setSliderValues(next);
         onSliderValuesChange(next);
     }
+
     function commitByHand(next: SliderValues) {
         setActivePreset(null);
         commit(next);
     }
+
     function applyPreset(preset: Preset) {
         commit({ ...DEFAULT_SLIDER_VALUES, ...preset.changes });
         setScorePriorityLevels(preset.scorePriorityLevels);

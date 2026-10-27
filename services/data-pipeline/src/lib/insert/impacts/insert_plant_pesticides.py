@@ -9,9 +9,9 @@ import sqlite3
 
 from ....food_types import PlantPesticide
 
-
 def insert(connection: sqlite3.Connection, plant_pesticides: list[PlantPesticide]) -> None:
     """Inserts all plant-pesticide association records into the plant_pesticides table."""
+
     for plant_pesticide in plant_pesticides:
         connection.execute(
             "INSERT INTO plant_pesticides (id, plant_id, pesticide_id, kg_ha) VALUES (?, ?, ?, ?)",

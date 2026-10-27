@@ -4,6 +4,7 @@
 // after each build, but that is purely a browser-reload trigger with no
 // runtime dependency in either direction. Do not cross that boundary.
 mod calculations;
+
 mod models;
 
 use wasm_bindgen::prelude::*;
@@ -26,6 +27,7 @@ pub fn score(input_js: JsValue) -> Result<JsValue, JsValue> {
     // temporary: busy-wait 50ms to verify the timer reads correctly — remove after confirming
     if let Some(ref performance) = perf {
         let deadline = performance.now() + 50.0;
+
         while performance.now() < deadline {}
     }
 

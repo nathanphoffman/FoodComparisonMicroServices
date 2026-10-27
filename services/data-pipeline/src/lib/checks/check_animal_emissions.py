@@ -34,47 +34,56 @@ LEFT JOIN foods_normalized feed
 WHERE  food.is_feed = 0 AND food.type = 'animal' AND food.region = ?
 """
 
-
 def check_animal_emissions(
     connection: sqlite3.Connection, data_dir: Path, regions: list[Region]
 ) -> list[str]:
     """Returns (and prints) one warning per animal/region whose computed total is off."""
     animals = _load_animal_items(data_dir)
     warnings: list[str] = []
+
     for region in regions:
         published = _published_totals(animals, region)
+
         for slug, co2, ch4, n2o, feed in connection.execute(COMPUTED_QUERY, (region,)):
             if co2 is None or ch4 is None or n2o is None or slug not in published:
                 continue  # the app falls back to emissions_per_kg itself
+
             computed = co2 + ch4 * GWP_CH4 + n2o * GWP_N2O + (feed or 0.0)
             ratio = computed / published[slug]
+
             if not MIN_RATIO <= ratio <= MAX_RATIO:
                 warnings.append(
                     f"[{region}] {slug}: gases + feed = {computed:.2f} kg CO2e/kg but "
                     f"published emissions_per_kg = {published[slug]:.2f} ({ratio:.1f}×)"
                 )
+
     for warning in warnings:
         print(f"Warning: {warning}")
-    return warnings
 
+    return warnings
 
 def _load_animal_items(data_dir: Path) -> list[dict]:
     """Every animal record from the category JSON files."""
     items: list[dict] = []
+
     for category_name in CATEGORY_FILES:
         category_path = data_dir / "foods" / f"{category_name}.json"
+
         if category_path.exists():
             items.extend(
                 item for item in json.loads(category_path.read_text(encoding=TEXT_ENCODING))
                 if item.get("type") == "animal"
             )
-    return items
 
+    return items
 
 def _published_totals(animals: list[dict], region: Region) -> dict[str, float]:
     totals: dict[str, float] = {}
+
     for item in resolve_regions(animals, region):
         total = SourcedArray(item.get("emissions_per_kg")).weighted_average()
+
         if total:
             totals[item["slug"]] = total
+
     return totals

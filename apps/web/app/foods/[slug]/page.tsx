@@ -29,6 +29,7 @@ export default async function FoodPage({ params }: Props) {
           {food.notes.split(/\n\s*\n/).map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
+
         </>
       )}
 

@@ -59,6 +59,7 @@ export function LandTypeSliders({ onChange }: { onChange?: (weights: LandTypes) 
                         <div className="text-xs text-neutral-400 mt-0.5">{DESCRIPTIONS[key]}</div>
                     </div>
                 ))}
+
             </div>
             {showModal && <HelpModal topic="landType" onClose={() => setShowModal(false)} />}
         </div>

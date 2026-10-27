@@ -22,6 +22,7 @@ export const SQUARE_METERS_PER_HA = 10_000;       // eco/constants.rs
 /** Plain numbers to 4 significant figures; huge harm scores as 1.2T etc. */
 export function formatNumber(value: number): string {
   if (Math.abs(value) >= 1e6) return formatIntelligenceValue(value);
+
   return value.toLocaleString(undefined, { maximumSignificantDigits: 4 });
 }
 

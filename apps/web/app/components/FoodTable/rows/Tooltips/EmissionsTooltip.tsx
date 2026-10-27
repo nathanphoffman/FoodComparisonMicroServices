@@ -11,8 +11,10 @@ export function EmissionsTooltip({ breakdown, divisor, children }: { breakdown: 
         {breakdown.feedEmissions != null && (
           <TooltipRow label="Feed crops" value={`${(breakdown.feedEmissions / divisor).toFixed(1)} kg CO₂e`} />
         )}
+
       </TooltipSection>
     }>
+
       {children}
     </Tooltip>
   );

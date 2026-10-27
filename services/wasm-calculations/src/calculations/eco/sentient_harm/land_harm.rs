@@ -3,6 +3,7 @@ use super::super::constants::{
     INSECT_DENSITY_PER_HA, MAMMAL_DENSITY_PER_HA, REPTILE_DENSITY_PER_HA, WORM_DEATH_FRACTION,
     WORM_DENSITY_PER_HA,
 };
+
 use super::super::intelligence::{get_pesticide_victim_function, PesticideVictim};
 use crate::models::SliderQuery;
 
@@ -23,6 +24,7 @@ impl VictimIntelligence {
             query.weight_exponent,
             query.final_intelligence_exponent,
         );
+
         Self {
             insect:  intel(PesticideVictim::Insect),
             bee:     intel(PesticideVictim::Bee),

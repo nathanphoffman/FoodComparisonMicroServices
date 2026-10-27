@@ -16,18 +16,21 @@ export function LandUseTooltip({ detail, divisor, unit, children }: { detail: La
         {detail.type === 'plant' && detail.yieldKilogramsPerHectare != null && (
           <TooltipRow label="Crop yield" value={`${detail.yieldKilogramsPerHectare.toLocaleString()} kg/ha`} />
         )}
+
         {hasBreakdown && detail.pastureHectaresPerKilogram != null && (
           <TooltipRow
             label="Pasture"
             value={`${formatPerUnit(detail.pastureHectaresPerKilogram * SQUARE_METERS_PER_HECTARE, divisor)} m²/${unit}`}
           />
         )}
+
         {hasBreakdown && detail.feedLandM2PerKg != null && (
           <TooltipRow
             label="Feed crops"
             value={`${formatPerUnit(detail.feedLandM2PerKg, divisor)} m²/${unit}`}
           />
         )}
+
       </TooltipSection>
       {detail.landTypes && (
         <TooltipSection title="Land type weighting">
@@ -37,10 +40,12 @@ export function LandUseTooltip({ detail, divisor, unit, children }: { detail: La
             .map(([key, fraction]) => (
               <TooltipRow key={key} label={LAND_TYPE_LABELS[key]} value={`${Math.round(fraction * 100)}%`} />
             ))}
+
           <TooltipRow label="Actual area" value={`${formatPerUnit(detail.rawM2PerKg, divisor)} m²/${unit}`} />
           <TooltipRow label="Land type weight" value={`× ${detail.multiplier.toFixed(2)}`} />
         </TooltipSection>
       )}
+
     </>}>
       {children}
     </Tooltip>

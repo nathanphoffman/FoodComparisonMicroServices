@@ -9,9 +9,9 @@ import sqlite3
 
 from ....food_types import Source
 
-
 def insert(connection: sqlite3.Connection, sources: list[Source]) -> None:
     """Inserts all source records into the sources table."""
+
     for source in sources:
         connection.execute(
             "INSERT INTO sources (id, url, title, notes) VALUES (?, ?, ?, ?)",

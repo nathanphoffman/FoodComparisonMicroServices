@@ -5,6 +5,7 @@ import { ExplanationNote, TooltipFootnote } from './TooltipParts';
 
 type HarmSection = {
   title: string;
+
   /** Intentional harm (killing, captivity) is added as is; accidental harm is divided by the Kill : Accident slider. */
   accidental: boolean;
   rows: [label: string, score: number][];
@@ -26,6 +27,7 @@ function harmSections(detail: SentientHarmDetail): HarmSection[] {
     { title: 'Pasture impact', accidental: true, rows: [['Pasture deforestation*', detail.pastureDeforestationScore]] },
     { title: 'Bycatch', accidental: true, rows: [['Discarded bycatch kill*', detail.bycatchScore]] },
   ];
+
   return sections
     .map(section => ({ ...section, rows: section.rows.filter(([, score]) => score > 0) }))
     .filter(section => section.rows.length > 0);
@@ -35,13 +37,17 @@ type Props = { detail: SentientHarmDetail; divisor?: number; killMultiplier: num
 
 export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total, explanation, children }: Props) {
   const perUnit = (value: number) => formatIntelligenceValue(value / divisor);
+
   // Mirrors the sentientHarm formula in wasm-calculations/src/calculations/per_food/row.rs:
   // intentional + accidental ÷ killMultiplier (at 0×, intentional harm is dropped).
   const showScore = (score: number, accidental: boolean) => {
     if (!accidental) return killMultiplier > 0 ? perUnit(score) : 'not counted at 0×';
+
     if (killMultiplier <= 0) return perUnit(score);
+
     return <>{perUnit(score)} ÷ {killMultiplier} = <span className="text-neutral-100">{formatIntelligenceValue(score / divisor / killMultiplier)}</span></>;
   };
+
   const sections = harmSections(detail);
 
   return (
@@ -52,6 +58,7 @@ export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total
             {section.rows.map(([label, score]) => <TooltipRow key={label} label={label} value={showScore(score, section.accidental)} />)}
           </TooltipSection>
         ))}
+
         <div className="mt-2 pt-2 border-t border-neutral-700">
           <TooltipRow label="Total" value={formatIntelligenceValue(total)} />
         </div>
@@ -60,10 +67,12 @@ export function SentientHarmTooltip({ detail, divisor = 1, killMultiplier, total
             * Accidental deaths (crops, pesticides, habitat loss, bycatch) are divided by the Kill : Accident slider ({killMultiplier}×), because intentionally killing an animal is weighted as worse than killing one by accident.
           </div>
         )}
+
         <TooltipFootnote>deaths × neuron_count^1.5 × lifespan, amortized over land lifetime</TooltipFootnote>
         <ExplanationNote text={explanation} />
       </>
     }>
+
       {children}
     </Tooltip>
   );

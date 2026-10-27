@@ -20,14 +20,12 @@ from .sources import Source, load_sources, output_path
 
 PAGE_TIMEOUT_MS = 30_000
 
-
 @dataclass
 class Counts:
     downloaded: int = 0
     skipped_existing: int = 0
     skipped_bad_status: int = 0
     failed: int = 0
-
 
 async def download_source(
     source: Source,
@@ -46,7 +44,6 @@ async def download_source(
     mark_fetched(hostname, last_fetched)
     print(f"DOWNLOADED: {source.id} - {source.title}")
 
-
 async def process_sources(sources: list[Source], browser: Browser) -> Counts:
     """Downloads each source, skipping files already saved and sources with a bad status, and counts the outcomes."""
     counts = Counts()
@@ -55,11 +52,13 @@ async def process_sources(sources: list[Source], browser: Browser) -> Counts:
     for source in sources:
         if output_path(source).exists():
             counts.skipped_existing += 1
+
             continue
 
         if source._status:
             print(f"SKIPPED ({source._status}): {source.id} - {source.title}")
             counts.skipped_bad_status += 1
+
             continue
 
         try:
@@ -70,7 +69,6 @@ async def process_sources(sources: list[Source], browser: Browser) -> Counts:
             counts.failed += 1
 
     return counts
-
 
 async def _run() -> None:
     sources = load_sources()
@@ -88,10 +86,8 @@ async def _run() -> None:
         f"Failed: {counts.failed}"
     )
 
-
 def main() -> None:
     asyncio.run(_run())
-
 
 if __name__ == "__main__":
     main()

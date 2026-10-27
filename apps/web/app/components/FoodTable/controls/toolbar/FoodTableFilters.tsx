@@ -36,7 +36,9 @@ export const DEFAULT_FOOD_FILTER = 'all';
 
 function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
     const filter = FOOD_FILTERS.find(candidate => candidate.key === filterKey);
+
     if (!filter || (!filter.categories && !filter.tags)) return true;
+
     return (filter.categories?.includes(food.category ?? '') ?? false)
         || (filter.tags?.some(tag => (food.tags ?? []).includes(tag)) ?? false);
 }
@@ -47,6 +49,7 @@ function matchesFoodFilter(food: RawFood, filterKey: string): boolean {
  */
 export function foodsToShow(rawFoods: RawFood[], filterKey: string, scored: Map<string, ScoredRow>): RawFood[] {
     const visibleFoods = rawFoods.filter(food => matchesFoodFilter(food, filterKey));
+
     return scored.has(DIET.slug) ? [...visibleFoods, dietStub(DIET.slug, DIET.name)] : visibleFoods;
 }
 
@@ -55,6 +58,7 @@ export function FoodTableFilters({ selected, onChange }: { selected: string; onC
         <div className="flex flex-wrap gap-2 mb-3">
             {FOOD_FILTERS.map(filter => {
                 const active = filter.key === selected;
+
                 return (
                     <button
                         key={filter.key}
@@ -66,11 +70,13 @@ export function FoodTableFilters({ selected, onChange }: { selected: string; onC
                                 ? 'bg-neutral-800 border-neutral-800 text-white'
                                 : 'bg-white border-neutral-200 text-neutral-600 hover:border-neutral-400 hover:text-neutral-800'
                         }`}
+
                     >
                         {filter.label}
                     </button>
                 );
             })}
+
         </div>
     );
 }

@@ -63,10 +63,14 @@ export function useFoodTableSort() {
 
             // A food with no value goes last whichever way the column is sorted, so gaps never lead the table.
             if (valueA === null && valueB === null) return 0;
+
             if (valueA === null) return 1;
+
             if (valueB === null) return -1;
+
             if (valueA === valueB) return 0;
             const cmp = valueA < valueB ? -1 : 1;
+
             return sortDir === 'asc' ? cmp : -cmp;
         });
     }, [sortKey, sortDir]);

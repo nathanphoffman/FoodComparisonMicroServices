@@ -9,6 +9,7 @@ export function useColumnVisibility(onActiveColsChange: (cols: ColConfig[]) => v
     const [visibleColumns, setVisibleColumns] = useState<Set<SortKey>>(
         () => new Set(COLUMN_CONFIG.filter(column => column.defaultVisible).map(column => column.key))
     );
+
     const isMobile = useIsMobile();
 
     // On mobile, start with a short column list; users can add more via Columns.
@@ -17,11 +18,13 @@ export function useColumnVisibility(onActiveColsChange: (cols: ColConfig[]) => v
         const mobileCols = COLUMN_CONFIG.filter(column => column.mobileVisible);
         setVisibleColumns(new Set(mobileCols.map(column => column.key)));
         onActiveColsChange(mobileCols);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isMobile]);
 
     function toggleColumn(key: SortKey) {
         const next = new Set(visibleColumns);
+
         if (next.has(key)) next.delete(key);
         else next.add(key);
         setVisibleColumns(next);

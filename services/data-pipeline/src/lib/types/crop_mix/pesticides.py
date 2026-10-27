@@ -5,7 +5,6 @@ per kg of output.
 
 from .crop_share import CropShare
 
-
 class AreaWeightedFraction:
     """Running average of a per-crop fraction, weighted by each crop's hectares.
     Crops with no value for the fraction are left out of both sides."""
@@ -17,21 +16,23 @@ class AreaWeightedFraction:
     def add(self, area_ha: float, fraction: float | None) -> None:
         if fraction is None:
             return
+
         self._weighted_sum += area_ha * fraction
         self._total_area_ha += area_ha
 
     def average(self) -> float | None:
         return self._weighted_sum / self._total_area_ha if self._total_area_ha else None
 
-
 def _cropland_ha_per_kg_output(entry: CropShare) -> float | None:
     """Hectares of cropland per kg of animal output, used as the aggregation weight so that
     the resulting average PAF matches what you'd get by summing per-crop impacts."""
+
     average_yield = entry.plant.yield_kg_ha.weighted_average()
+
     if not average_yield or average_yield <= 0:
         return None
-    return entry.ratio / average_yield
 
+    return entry.ratio / average_yield
 
 def compute_pesticide_paf_impacts(
     entries: list[CropShare],
@@ -48,25 +49,32 @@ def compute_pesticide_paf_impacts(
     pesticide per kg chicken, while wheat's high-paf compounds are diluted by corn's
     large pesticide mass).
     """
+
     total_pesticide_kg_per_kg = 0.0
     freshwater = AreaWeightedFraction()
     terrestrial = AreaWeightedFraction()
     insect = AreaWeightedFraction()
     bee_hazard = AreaWeightedFraction()
+
     for entry in entries:
         ratio = entry.ratio
         pesticide_kg_per_kg_food = entry.plant.avg_pesticide_kg_per_kg_food
+
         if ratio is None or not pesticide_kg_per_kg_food:
             continue
+
         total_pesticide_kg_per_kg += ratio * pesticide_kg_per_kg_food
 
         area_ha = _cropland_ha_per_kg_output(entry)
+
         if area_ha is None:
             continue
+
         freshwater.add(area_ha, entry.plant.pesticide_affected_freshwater_fraction)
         terrestrial.add(area_ha, entry.plant.pesticide_affected_terrestrial_fraction)
         insect.add(area_ha, entry.plant.pesticide_affected_insect_fraction)
         bee_hazard.add(area_ha, entry.plant.pesticide_bee_mortality_fraction)
+
     return (
         total_pesticide_kg_per_kg,
         freshwater.average(),

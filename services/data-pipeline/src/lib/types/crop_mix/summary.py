@@ -10,7 +10,6 @@ from .land import compute_land_use_square_meters_per_kg, compute_per_yield_impac
 from .pesticides import compute_pesticide_paf_impacts
 from .water_and_emissions import compute_water_and_emissions
 
-
 @dataclass(frozen=True)
 class CropMixTotals:
     """All the sums over a crop mix, per kg of output. Zero means nothing contributed."""
@@ -32,6 +31,7 @@ class CropMixTotals:
 
     def pesticide_paf_fields(self) -> dict[str, float | None]:
         """The pesticide-toxicity columns, named as in the normalized database."""
+
         return {
             "pesticide_freshwater_paf":  self.freshwater_paf,
             "pesticide_terrestrial_paf": self.terrestrial_paf,
@@ -40,13 +40,14 @@ class CropMixTotals:
             "pesticide_kg_per_kg_food":  self.pesticide_kg_per_kg or None,
         }
 
-
 def summarize_crop_mix(entries: list[CropShare], pasture_baseline: float = 0.0) -> CropMixTotals:
     """Sums land, water, emissions, per-hectare impacts and pesticides over the mix.
     pasture_baseline seeds green water (see compute_water_and_emissions)."""
+
     emissions, green_water, blue_water, grey_water = compute_water_and_emissions(entries, pasture_baseline=pasture_baseline)
     soil_erosion, fertilizer, tillage, carbon_capture = compute_per_yield_impacts(entries)
     pesticide_kg_per_kg, freshwater_paf, terrestrial_paf, insect_paf, bee_hazard = compute_pesticide_paf_impacts(entries)
+
     return CropMixTotals(
         land_square_meters=compute_land_use_square_meters_per_kg(entries),
         emissions=emissions, green_water=green_water, blue_water=blue_water, grey_water=grey_water,

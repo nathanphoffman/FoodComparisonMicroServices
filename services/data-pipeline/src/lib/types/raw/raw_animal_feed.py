@@ -8,7 +8,6 @@ as a SourcedArray for weighted averaging during the normalized database build.
 from ....food_types import AnimalFeed
 from ..sourced_array import SourcedArray
 
-
 class RawAnimalFeed:
     """Wraps an AnimalFeed record and exposes its sourced array for weighted averaging."""
 

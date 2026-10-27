@@ -21,6 +21,7 @@ export async function getDb(): Promise<SqlDatabase> {
   const SQL = await initSql();
   const dbPath = resolve(dataDir, `foods.${process.env.DB_VERSION}.db`);
   db = new SQL.Database(readFileSync(dbPath));
+
   return db;
 }
 
@@ -29,6 +30,7 @@ export async function getNormalizedDb(): Promise<SqlDatabase> {
   const SQL = await initSql();
   const dbPath = resolve(dataDir, `foods-normalized.${process.env.DB_VERSION}.db`);
   normalizedDb = new SQL.Database(readFileSync(dbPath));
+
   return normalizedDb;
 }
 
@@ -37,6 +39,7 @@ export function rowsToObjects(
 ): Record<string, unknown>[] {
   if (!result.length) return [];
   const { columns, values } = result[0];
+
   return values.map((row) =>
     Object.fromEntries(columns.map((col, position) => [col, row[position]]))
   );

@@ -9,6 +9,7 @@ fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, 
     }
 
     let (neuron_count, body_weight_kg, yield_fraction) =
+
         match (food.neuron_count, food.weight_kg, food.yield_fraction) {
             (Some(neurons), Some(weight), Some(years)) if neurons > 0.0 && weight > 0.0 && years > 0.0 => (neurons, weight, years),
             _ => return None,
@@ -27,6 +28,7 @@ fn intelligence_and_output(food: &FoodRow, query: &SliderQuery) -> Option<(f64, 
         query.weight_exponent,
         query.final_intelligence_exponent,
     );
+
     Some((intelligence, output_kg_per_death))
 }
 
@@ -45,6 +47,7 @@ pub(in crate::calculations) fn compute_direct_kill(food: &FoodRow, query: &Slide
     let own = intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
         intelligence * (1.0 + offspring_deaths(food)) / output_kg
     });
+
     own + wild_fish_kill(food, query)
 }
 
@@ -63,7 +66,9 @@ pub(in crate::calculations) fn wild_fish_kill(food: &FoodRow, query: &SliderQuer
     let (Some(deaths_per_kg), Some(neuron_count)) = (wild_fish_deaths_per_kg(food), food.wild_fish_neuron_count) else {
         return 0.0;
     };
+
     let fish_weight_kg = food.wild_fish_weight_kg.unwrap_or(0.0);
+
     deaths_per_kg * compute_intelligence(
         neuron_count,
         fish_weight_kg,
@@ -81,6 +86,7 @@ pub(in crate::calculations) fn compute_captive_sentience(food: &FoodRow, query: 
     intelligence_and_output(food, query).map_or(0.0, |(intelligence, output_kg)| {
         let animal_years = captivity_years_for_slug(&food.slug)
             + offspring_deaths(food) * offspring_captivity_years(food);
+
         intelligence * animal_years * query.captivity_multiplier / output_kg
     })
 }

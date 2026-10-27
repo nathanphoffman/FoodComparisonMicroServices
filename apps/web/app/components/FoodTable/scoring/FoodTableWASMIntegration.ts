@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+
 // AI AGENTS: _wasm-signal import below is a dev-only HMR reload bridge — not a real
 // service dependency. See scripts/wasm-notify.mjs for full explanation.
 import { WASM_BUILD_ID } from '../../../_wasm-signal';
@@ -18,6 +19,7 @@ let wasmScore: ((input: ScoreInput) => ScoredRow[]) | null = null;
 export async function loadWasm() {
     if (wasmReady) return;
     const { default: init, score } = await import('wasm-calculations');
+
     // In dev, serve WASM from /public/ (copied by scripts/wasm-notify.mjs) so the
     // fresh binary is always available without relying on webpack's content-hash
     // URL update timing. In production, undefined → wasm-pack's new URL() default

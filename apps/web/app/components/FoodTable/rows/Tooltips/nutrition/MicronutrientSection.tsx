@@ -14,6 +14,7 @@ export function MicronutrientSection({ detail, diet, standard }: Props) {
   const needs = dailyNeeds(standard, sex, age, weightLb);
   const needsName = needsLabel(standard, sex, age, weightLb);
   const keys = MICRONUTRIENT_KEYS.filter(key => detail.micronutrients?.[key] != null || (diet?.supplements?.[key] ?? 0) > 0);
+
   if (keys.length === 0) return null;
 
   return (
@@ -24,6 +25,7 @@ export function MicronutrientSection({ detail, diet, standard }: Props) {
         const amount = (detail.micronutrients?.[key] ?? 0) * scale;
         const supplement = diet?.supplements?.[key] ?? 0;
         const wholeDayPercent = dayScale == null ? null : (amount * dayScale * (diet?.absorption?.[key] ?? 1) + supplement) / needs[key] * 100;
+
         return (
           <TooltipRow key={key} label={credit === 2 ? <>{label} <span className="text-amber-300">×2</span></> : label} value={
             <>
@@ -34,10 +36,12 @@ export function MicronutrientSection({ detail, diet, standard }: Props) {
                   ({wholeDayPercent.toFixed(0)}%{supplement > 0 && '+'})
                 </span>
               )}
+
             </>
           } />
         );
       })}
+
     </TooltipSection>
   );
 }

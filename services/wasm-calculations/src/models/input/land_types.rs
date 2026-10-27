@@ -26,10 +26,13 @@ impl LandTypes {
     /// for an empty split.
     pub fn multiplier(&self, weights: &LandTypes) -> f64 {
         let total: f64 = self.values().iter().sum();
+
         if total <= 0.0 {
             return 1.0;
         }
+
         let weighted: f64 = self.values().iter().zip(weights.values()).map(|(fraction, weight)| fraction * weight).sum();
+
         weighted / total
     }
 }
@@ -57,6 +60,7 @@ mod tests {
             tropical_forest: 1.0, tropical_savanna: 1.0, temperate_grassland: 1.0,
             temperate_forest: 1.0, dry: 1.0, wetland: 1.0,
         };
+
         assert!((palm.multiplier(&ones) - 1.0).abs() < 1e-9);
     }
 }

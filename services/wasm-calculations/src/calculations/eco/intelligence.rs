@@ -34,6 +34,7 @@ pub(super) fn compute_intelligence(
 ) -> f64 {
     let neuron_score = neuron_count.powf(neuron_exp);
     let raw = neuron_score * lifespan / body_weight_kg.powf(weight_exp);
+
     raw.powf(final_exp)
 }
 

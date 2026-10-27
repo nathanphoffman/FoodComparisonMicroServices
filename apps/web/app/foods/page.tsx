@@ -14,6 +14,7 @@ function FoodLinks({ title, foods }: { title: string; foods: Food[] }) {
             <Link href={`/foods/${food.slug}`}>{food.name}</Link>
           </li>
         ))}
+
       </ul>
     </section>
   );

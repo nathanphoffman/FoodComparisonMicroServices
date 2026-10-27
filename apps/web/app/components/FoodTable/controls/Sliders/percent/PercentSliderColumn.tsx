@@ -5,9 +5,11 @@ type Props = {
     label: string;
     description: string;
     level: number;
+
     /** This slider's share of all the sliders, as a percentage. */
     share: number;
     onLevelChange: (level: number) => void;
+
     /** Shows a "more info" link when given. */
     onHelp?: () => void;
 };
@@ -30,6 +32,7 @@ export function PercentSliderColumn({ label, description, level, share, onLevelC
                 {onHelp && (
                     <button onClick={onHelp} className="ml-1.5 text-neutral-400 hover:text-blue-500 underline underline-offset-2 transition-colors">more info</button>
                 )}
+
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ pub(super) const INSECT_DENSITY_PER_HA: f64 = 1e9;
 pub(super) const INSECT_DEATH_FRACTION: f64 = 0.1;
 
 pub(super) const BEE_DENSITY_PER_HA: f64 = 5_000.0;
+
 // pesticide_bee_hazard is already the fraction of bees killed (0-1), computed in the
 // data pipeline from EPA exposure and dose-response defaults, so it is not scaled again.
 

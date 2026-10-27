@@ -3,6 +3,7 @@
 //! direct_kill.rs.
 
 mod bycatch;
+
 mod land_harm;
 
 use super::constants::{PASTURE_AGE_YEARS, SQUARE_METERS_PER_HA};
@@ -17,6 +18,7 @@ pub(in crate::calculations) fn compute_sentient_harm(
     query: &SliderQuery,
 ) -> (f64, SentientHarmDetail) {
     let intel = VictimIntelligence::from_query(query);
+
     if food.food_type == "plant" {
         plant_sentient_harm(food, &intel)
     } else {
@@ -35,6 +37,7 @@ fn plant_sentient_harm(food: &FoodRow, intel: &VictimIntelligence) -> (f64, Sent
         bee_hazard:      food.pesticide_bee_hazard,
         terrestrial_paf: food.pesticide_terrestrial_paf,
     };
+
     let crop = LandHarm::cropland(1.0 / yield_kg_ha, &pesticides, intel);
 
     let detail = SentientHarmDetail {
@@ -44,6 +47,7 @@ fn plant_sentient_harm(food: &FoodRow, intel: &VictimIntelligence) -> (f64, Sent
         deforestation_score: crop.deforestation(),
         ..SentientHarmDetail::zero()
     };
+
     (sum_positive(&crop.parts()), detail)
 }
 
@@ -60,15 +64,18 @@ fn animal_sentient_harm(
     let bycatch = bycatch_score(food, query);
 
     let mut detail = SentientHarmDetail::zero();
+
     if let Some(feed) = &feed {
         detail.feed_insect_score        = feed.insect;
         detail.feed_bee_score           = feed.bee;
         detail.feed_worm_score          = feed.worm;
         detail.feed_deforestation_score = feed.deforestation();
     }
+
     if let Some(pasture) = &pasture {
         detail.pasture_deforestation_score = pasture.deforestation();
     }
+
     detail.bycatch_score = bycatch.unwrap_or(0.0);
 
     // Same order as before (feed, pasture, bycatch) so the floating-point sum is unchanged.
@@ -76,6 +83,7 @@ fn animal_sentient_harm(
         .chain(pasture.iter().flat_map(LandHarm::parts))
         .chain(bycatch)
         .collect();
+
     (sum_positive(&contributions), detail)
 }
 
@@ -89,6 +97,7 @@ fn feed_cropland_harm(food: &FoodRow, intel: &VictimIntelligence) -> Option<Land
         bee_hazard:      food.feed_pesticide_bee_hazard,
         terrestrial_paf: food.feed_pesticide_terrestrial_paf,
     };
+
     Some(LandHarm::cropland(feed_land_m2 / SQUARE_METERS_PER_HA, &pesticides, intel))
 }
 

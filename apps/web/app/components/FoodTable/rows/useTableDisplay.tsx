@@ -15,6 +15,7 @@ type Inputs = {
     foodFilter: string;
     activeCols: ColConfig[];
     sliderValues: SliderValues;
+
     /** What the cells need besides the food: tooltips' daily-needs settings and the diet's nutrition. */
     cellInputs: Pick<CellContext, 'nutrientStandard' | 'dietSettings' | 'dietNutrition' | 'onSelect'>;
 };

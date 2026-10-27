@@ -8,21 +8,27 @@ import { DEFAULT_NUTRITION_WEIGHTS } from '../scoring/FoodTableDefaults';
 // The web app shows copies of numbers that the Rust scorer actually uses. These tests read the Rust
 // source so a change on one side without the other fails here instead of showing wrong working to users.
 const RUST_SRC = new URL('../../../../../../services/wasm-calculations/src/', import.meta.url);
+
 const rustSource = (path: string) => readFileSync(new URL(path, RUST_SRC), 'utf8');
+
 const toNumber = (text: string) => Number(text.replaceAll('_', ''));
 
 // Regex on purpose: it pulls the number out of a line like `const NAME: f64 = 28.0;`.
 function rustConstant(source: string, name: string): number {
     const match = source.match(new RegExp(`const ${name}:\\s*f64 = ([\\d_.]+);`));
+
     if (!match) throw new Error(`Could not find ${name} in the Rust source`);
+
     return toNumber(match[1]);
 }
 
 // Regex on purpose: reads the `name: Some(9.0),` lines inside one `const NAME: Micronutrients = Micronutrients { ... };` block.
 function rustNutrientTable(source: string, tableName: string): Record<string, number> {
     const block = source.match(new RegExp(`const ${tableName}: Micronutrients = Micronutrients \\{([^}]*)\\};`))?.[1];
+
     if (!block) throw new Error(`Could not find ${tableName} in the Rust source`);
     const entries = [...block.matchAll(/(\w+):\s*Some\(([\d.]+)\)/g)].map(([, key, value]) => [key, Number(value)] as const);
+
     return Object.fromEntries(entries);
 }
 
@@ -41,6 +47,7 @@ describe('constants copied from Rust', () => {
         const source = rustSource('models/input/micronutrients.rs');
         const dailyValues = rustNutrientTable(source, 'DAILY_VALUES');
         const doubleCredit = rustNutrientTable(source, 'DOUBLE_CREDIT');
+
         for (const key of MICRONUTRIENT_KEYS) {
             expect(MICRONUTRIENT_INFO[key].dailyValue, `${key} daily value`).toBe(dailyValues[key]);
             expect(MICRONUTRIENT_INFO[key].credit, `${key} credit`).toBe(doubleCredit[key] ?? 1);
@@ -56,11 +63,15 @@ describe('constants copied from Rust', () => {
     it('the default Nutrition slider weights match nutrition_weights.rs', () => {
         // Regex on purpose: grabs the body of `fn default() -> Self { Self { ... } }`.
         const defaults = rustSource('models/input/nutrition_weights.rs').match(/fn default\(\) -> Self \{\s*Self \{([^}]*)\}/)?.[1];
+
         if (!defaults) throw new Error('Could not find the NutritionWeights default in the Rust source');
+
         // Regex on purpose: reads each `field_name: 1.5,` line of the Rust struct literal into a number.
         const rustWeights = Object.fromEntries([...defaults.matchAll(/(\w+):\s*([\d.]+)/g)].map(([, name, value]) => [name, Number(value)]));
+
         // Regex on purpose: puts an underscore before each capital letter and lowercases it (maxProtein → max_protein).
         const toSnakeCase = (name: string) => name.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
+
         for (const [name, value] of Object.entries(DEFAULT_NUTRITION_WEIGHTS)) {
             expect(value, name).toBe(rustWeights[toSnakeCase(name)]);
         }

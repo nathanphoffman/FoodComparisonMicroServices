@@ -10,6 +10,7 @@ const ONE_HUNDRED_TRILLION = 1e14;
 export type Tone = 'good' | 'fair' | 'poor' | 'bad' | 'worst';
 
 type Test = 'below' | 'atMost' | 'above' | 'atLeast';
+
 /** The first rule a value passes sets its tone; a value that passes none gets `otherwise`. */
 type ToneScale = { rules: { tone: Tone; test: Test; value: number }[]; otherwise: Tone };
 
@@ -48,6 +49,7 @@ export type Measure = keyof typeof MEASURE_SCALES;
 
 export function getTone(measure: Measure, value: number): Tone {
   const { rules, otherwise } = MEASURE_SCALES[measure];
+
   return rules.find(rule => PASSES[rule.test](value, rule.value))?.tone ?? otherwise;
 }
 

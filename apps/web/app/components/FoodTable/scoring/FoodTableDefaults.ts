@@ -44,6 +44,7 @@ export const DEFAULT_SCORE_PRIORITY_LEVELS: ScorePriorities = {
     landUse:      DEFAULT_LEVEL,
     availability: DEFAULT_LEVEL,
 };
+
 export const DEFAULT_SCORE_PRIORITIES: ScorePriorities = toShares(DEFAULT_SCORE_PRIORITY_LEVELS);
 
 export const DEFAULT_GREEN_WATER                 = 25;
@@ -57,8 +58,10 @@ export const DEFAULT_ZERO_BETTER_MULTIPLIER      = 1.5;
 
 // 1 = geometric mean (the original behavior). Keep in sync with default_win_dampening() in Rust.
 export const DEFAULT_WIN_DAMPENING = 1;
+
 // Keep in sync with default_over_hunting_factor() in Rust.
 export const DEFAULT_OVER_HUNTING = 2.5;
+
 // Keep in sync with default_over_gathering_factor() in Rust.
 export const DEFAULT_OVER_GATHERING = 1.5;
 

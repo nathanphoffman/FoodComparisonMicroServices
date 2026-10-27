@@ -21,7 +21,6 @@ WHERE  is_feed = 0 AND type = 'plant' AND region = ?
   AND  (pesticide_kg_ha IS NULL OR pesticide_kg_ha > 0)
 """
 
-
 def check_plant_pesticides(connection: sqlite3.Connection, regions: list[Region]) -> list[str]:
     """Returns (and prints) one warning per plant/region with cropland but no pesticide data."""
     warnings = [
@@ -30,6 +29,8 @@ def check_plant_pesticides(connection: sqlite3.Connection, regions: list[Region]
         for region in regions
         for (slug,) in connection.execute(MISSING_QUERY, (region,))
     ]
+
     for warning in warnings:
         print(f"Warning: {warning}")
+
     return warnings

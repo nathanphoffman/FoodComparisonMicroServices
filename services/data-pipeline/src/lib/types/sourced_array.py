@@ -7,7 +7,6 @@ Confidence scores are used as weights; higher confidence pulls the average more 
 
 from ...food_types import AMINO_ACID_KEYS, MICRONUTRIENT_KEYS, SourcedNumber, NutritionValue, SourcedNutrition
 
-
 class SourcedArray:
     """Wraps list[SourcedNumber] and computes a confidence-weighted average."""
 
@@ -16,15 +15,18 @@ class SourcedArray:
 
     def weighted_average(self) -> float | None:
         """Returns the confidence-weighted average, or None if the list is empty."""
+
         if not self._items:
             return None
+
         total_confidence = sum(sourced["confidence"] for sourced in self._items)
+
         if total_confidence == 0:
             return None
+
         return sum(
             sourced["value"] * sourced["confidence"] for sourced in self._items
         ) / total_confidence
-
 
 class SourcedNutritionArray:
     """Wraps list[SourcedNutrition] and computes a confidence-weighted average per field."""
@@ -34,11 +36,15 @@ class SourcedNutritionArray:
 
     def weighted_average(self) -> NutritionValue | None:
         """Returns confidence-weighted averages for all nutrition fields, or None if empty."""
+
         if not self._items:
             return None
+
         total_confidence = sum(sourced["confidence"] for sourced in self._items)
+
         if total_confidence == 0:
             return None
+
         return NutritionValue(
             calories=self._weighted_average_for_field("calories") or 0,
             fat=self._weighted_average_for_field("fat") or 0,
@@ -56,27 +62,33 @@ class SourcedNutritionArray:
         """Confidence-weighted average of each vitamin/mineral any source reports, or None if none do."""
         averages = {key: self._weighted_average_for_field(key) for key in MICRONUTRIENT_KEYS}
         reported = {key: value for key, value in averages.items() if value is not None}
+
         return reported or None
 
     def amino_acids(self) -> dict[str, float] | None:
         """Confidence-weighted average of each amino acid (g per g of food) any source reports, or None if none do."""
         averages = {key: self._weighted_average_for_field(key) for key in AMINO_ACID_KEYS}
         reported = {key: float(f"{value:.6g}") for key, value in averages.items() if value is not None}
+
         return reported or None
 
     def _weighted_average_for_field(self, field_name: str) -> float | None:
         """Returns the confidence-weighted average for a single nutrition field."""
         field_values = [sourced["value"].get(field_name) for sourced in self._items]  # type: ignore[arg-type]
+
         if all(field_value is None for field_value in field_values):
             return None
+
         weighted_sum = sum(
             (field_value or 0) * sourced["confidence"]
             for field_value, sourced in zip(field_values, self._items)
             if field_value is not None
         )
+
         total_confidence_for_field = sum(
             sourced["confidence"]
             for field_value, sourced in zip(field_values, self._items)
             if field_value is not None
         )
+
         return weighted_sum / total_confidence_for_field if total_confidence_for_field > 0 else None

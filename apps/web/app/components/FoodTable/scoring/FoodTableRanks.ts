@@ -8,8 +8,11 @@ import type { ScoredRow } from '../types/FoodTableTypes';
 export function rankByImprovement(rows: RawFood[], scored: Map<string, ScoredRow>) {
     const scores = rows.flatMap(food => {
         const score = scored.get(food.slug)?.finalScore;
+
         return score == null ? [] : [{ slug: food.slug, score }];
     });
+
     const ranks = new Map(scores.map(({ slug, score }) => [slug, 1 + scores.filter(other => other.score > score).length]));
+
     return { ranks, rankedCount: scores.length };
 }

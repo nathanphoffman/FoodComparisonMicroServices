@@ -9,13 +9,13 @@ import sqlite3
 
 from ....food_types import Composite, CompositeIngredient
 
-
 def insert(
     connection: sqlite3.Connection,
     composites: list[Composite],
     ingredients: list[CompositeIngredient],
 ) -> None:
     """Inserts all composites into the composites table and their ingredients into composite_ingredients."""
+
     for composite in composites:
         connection.execute(
             "INSERT INTO composites (id, food_id, processing_emissions_per_kg, processing_water_per_kg) VALUES (?, ?, ?, ?)",
@@ -26,6 +26,7 @@ def insert(
                 _json_or_none(composite.get("processing_water_per_kg")),
             ),
         )
+
     for ingredient in ingredients:
         connection.execute(
             "INSERT INTO composite_ingredients (id, composite_id, plant_id, label, fraction, base_kg_per_kg) VALUES (?, ?, ?, ?, ?, ?)",
@@ -38,7 +39,6 @@ def insert(
                 _json_or_none(ingredient.get("base_kg_per_kg")),
             ),
         )
-
 
 def _json_or_none(value: list | None) -> str | None:
     return json.dumps(value) if value else None

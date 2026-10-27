@@ -7,6 +7,7 @@ import { EmptyValue, ValueCell } from '../ValueCell';
 /** Also used by CaptiveSentienceCell, which shares the same colour scale. A harm of 0 reads as no value. */
 export function SentientHarmValue({ value }: { value: number | null }) {
   if (value === null || value === 0) return <EmptyValue />;
+
   return <span className={getColor('sentientHarm', value)}>{formatIntelligenceValue(value)}</span>;
 }
 

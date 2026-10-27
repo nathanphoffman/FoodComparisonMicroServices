@@ -5,8 +5,10 @@ import { levelForFine, levelForPercent, type BuilderFood } from './DietMath';
 type Options = {
     foods: BuilderFood[];
     saved: Saved;
+
     /** Saves a change to the diet's foods and rescores. */
     updateFoods: (patch: Pick<Saved, 'basis' | 'ingredients'>) => void;
+
     /** Tells the calorie lines which ingredient's slider is being dragged. */
     markActive: (slug: string) => void;
 };
@@ -18,6 +20,7 @@ export function useIngredientEditing({ foods, saved, updateFoods, markActive }: 
 
     function addIngredient() {
         const food = foods.find(candidate => candidate.slug === selectedSlug);
+
         if (!food || ingredients.some(ingredient => ingredient.slug === selectedSlug)) return;
         updateFoods({ basis, ingredients: [...ingredients, { slug: food.slug, name: food.name, level: DEFAULT_LEVEL }] });
         setSelectedSlug('');

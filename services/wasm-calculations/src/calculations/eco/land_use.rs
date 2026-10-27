@@ -15,6 +15,7 @@ pub(in crate::calculations) fn compute_land_use(food: &FoodRow, query: &SliderQu
     } else {
         animal_land_use(food, multiplier)
     };
+
     (detail.raw_m2_per_kg, detail.raw_m2_per_kg * multiplier, detail)
 }
 
@@ -25,6 +26,7 @@ fn plant_land_use(food: &FoodRow, multiplier: f64) -> LandUseDetail {
         .filter(|&yield_kg_ha| yield_kg_ha > 0.0)
         .map(|yield_kg_ha| SQUARE_METERS_PER_HA / yield_kg_ha)
         .unwrap_or(0.0);
+
     LandUseDetail {
         land_type: "plant".to_string(),
         yield_kilograms_per_hectare: food.yield_kg_ha,
@@ -42,6 +44,7 @@ fn animal_land_use(food: &FoodRow, multiplier: f64) -> LandUseDetail {
         .pasture_ha_per_kg_output
         .map(|ha| ha * SQUARE_METERS_PER_HA)
         .unwrap_or(0.0);
+
     LandUseDetail {
         land_type: "animal".to_string(),
         yield_kilograms_per_hectare: None,

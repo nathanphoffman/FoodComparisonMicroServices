@@ -45,6 +45,7 @@ export function averageDietInput(foodSlugs: Set<string>): DietInput {
     // Only foods that exist in the loaded data, renormalised so a missing food doesn't shrink the diet.
     const available = SHARES.filter(([slug]) => foodSlugs.has(slug));
     const total = sumOf(available.map(([, percent]) => percent));
+
     return {
         slug: AVERAGE_DIET_SLUG,
         name: AVERAGE_DIET_NAME,

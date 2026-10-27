@@ -7,7 +7,6 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from ..raw.raw_plant import RawPlant
 
-
 class CropShare:
     """One crop in a mix: `ratio` kg of `plant` per kg of output (None = unknown)."""
 

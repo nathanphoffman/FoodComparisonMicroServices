@@ -6,10 +6,8 @@ from src.lib.checks.validate import (
     assert_sourced_array,
 )
 
-
 def sourced_fraction(value: float) -> list[dict]:
     return [{"value": value, "confidence": 1.0}]
-
 
 class AssertSourcedArrayTests(unittest.TestCase):
     def test_rejects_none_and_empty(self):
@@ -19,7 +17,6 @@ class AssertSourcedArrayTests(unittest.TestCase):
 
     def test_accepts_a_filled_array(self):
         assert_sourced_array(sourced_fraction(1.0), "emissions")
-
 
 class AssertLandTypesTests(unittest.TestCase):
     def test_none_is_allowed(self):
@@ -35,7 +32,6 @@ class AssertLandTypesTests(unittest.TestCase):
 
     def test_small_rounding_error_is_tolerated(self):
         assert_land_types({"dry": 0.5, "wetland": 0.505}, "rice")
-
 
 class AssertCompositeIngredientsTests(unittest.TestCase):
     FOODS = {"flour": {"id": 1}, "beef": {"id": 2}}
@@ -72,7 +68,6 @@ class AssertCompositeIngredientsTests(unittest.TestCase):
     def test_fractions_must_sum_to_one(self):
         with self.assertRaisesRegex(ValueError, "sum to 1"):
             self.check({"food_slug": "flour", "fraction": sourced_fraction(0.5)})
-
 
 if __name__ == "__main__":
     unittest.main()

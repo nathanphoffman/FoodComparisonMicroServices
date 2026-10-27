@@ -9,6 +9,7 @@ export function useDiet(rawFoods: RawFood[]) {
     const [diet, setDiet] = useState<DietInput | null>(null);
 
     const foodSlugs = useMemo(() => new Set(rawFoods.map(food => food.slug)), [rawFoods]);
+
     // The benchmark diet is scored alongside the user's, but never shown as a table row
     const averageDiet = useMemo(() => foodSlugs.size > 0 ? averageDietInput(foodSlugs) : null, [foodSlugs]);
     const scoredDiets = useMemo(

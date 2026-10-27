@@ -1,8 +1,10 @@
 type Props = {
     label: string;
     value: number | null;
+
     /** The typed text, so the caller decides what an empty or invalid box means. */
     onChange: (text: string) => void;
+
     /** Tailwind width class for the box, such as `w-24`. */
     widthClassName: string;
     min?: number;

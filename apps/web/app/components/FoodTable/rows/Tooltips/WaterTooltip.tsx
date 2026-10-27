@@ -23,8 +23,10 @@ export function WaterTooltip({ detail, referenceTotal, divisor, unit, greenWater
         {referenceTotal != null && (
           <TooltipFootnote>Reference total (independent source): {referenceTotal.toLocaleString()} L/kg</TooltipFootnote>
         )}
+
       </TooltipSection>
     }>
+
       {children}
     </Tooltip>
   );

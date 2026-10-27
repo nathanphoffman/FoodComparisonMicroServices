@@ -11,6 +11,7 @@ function computeIntelligence(
     finalExp: number,
 ): number {
     const raw = Math.pow(neurons, neuronExp) * lifespanYears / Math.pow(weightKg, weightExp);
+
     return Math.pow(raw, finalExp);
 }
 
@@ -50,9 +51,11 @@ function formatCount(count: number): string {
 function formatDuration(years: number): string {
     const seconds = years * SECONDS_PER_YEAR;
     const unit = TIME_UNITS.find(timeUnit => seconds >= timeUnit.seconds);
+
     if (!unit) return "<1 millisecond";
     const amount = seconds / unit.seconds;
     const rounded = Number(amount.toFixed(amount < 10 ? 1 : 0));
+
     return `${formatCount(amount)} ${unit.name}${rounded === 1 ? "" : "s"}`;
 }
 
@@ -68,7 +71,9 @@ export function IntelligenceExamples({
     const score = (profile: Profile) => computeIntelligence(
         profile.neurons, profile.weightKg, profile.lifespanYears, neuronExponent, weightExponent, finalIntelligenceExponent,
     );
+
     const human = score(HUMAN);
+
     // Sorted lowest to highest prison time (i.e. highest count first).
     const examples = EXAMPLES
         .map(profile => ({ name: profile.name, count: human / score(profile) }))
@@ -85,6 +90,7 @@ export function IntelligenceExamples({
                     </span>
                 </span>
             ))}
+
         </div>
     );
 }

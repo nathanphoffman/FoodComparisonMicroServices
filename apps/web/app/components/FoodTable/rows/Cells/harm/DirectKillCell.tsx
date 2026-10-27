@@ -7,6 +7,7 @@ import { EmptyValue, ValueCell } from '../ValueCell';
 /** A kill score of 0 reads as no value. */
 function DirectKillValue({ value }: { value: number }) {
   if (value === 0) return <EmptyValue />;
+
   return <span className={getColor('directKill', value)}>{formatIntelligenceValue(value)}</span>;
 }
 

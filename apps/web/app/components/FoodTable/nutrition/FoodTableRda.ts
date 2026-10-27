@@ -9,9 +9,11 @@ export type Sex = 'male' | 'female';
 // many meals a day each food is eaten in (1 = no loss); missing nutrients count fully.
 export type DietSettings = {
     calories: number | null; sex: Sex | null; age: number | null; weightLb: number | null;
+
     /** Index into ACTIVITY_LEVELS; scales the protein need. */
     activity?: number;
     absorption?: Partial<Record<MicronutrientKey, number>>;
+
     /** Absorbed amount per day of each vitamin / mineral taken as a supplement, in the nutrient's own unit. */
     supplements?: Partial<Record<MicronutrientKey, number>>;
 };
@@ -31,6 +33,7 @@ export const NUTRIENT_STANDARD_OPTIONS: { value: NutrientStandard; label: string
     { value: 'china',   label: 'China (DRI 2023)' },
     { value: 'who',     label: 'WHO / FAO' },
 ];
+
 const STANDARDS: Exclude<NutrientStandard, 'average'>[] = ['us', 'eu', 'japan', 'china', 'who'];
 
 // US NIH / National Academies Recommended Dietary Allowances (adequate intakes for vitamin K,
@@ -91,15 +94,20 @@ const DEFAULT_AGE = 30;
 /** One standard's need for a nutrient, or null if it sets none. Without a sex it's the mean of male and female. */
 function standardNeed(standard: Exclude<NutrientStandard, 'average'>, key: MicronutrientKey, sex: Sex | null, age: number | null): number | null {
     let value: number | Pair | undefined;
+
     if (standard === 'us' || (age !== null && age < ADULT_AGE)) {
         const bands = US_RDA[key];
         value = bands ? bands.find(band => (age ?? DEFAULT_AGE) <= band.upTo)?.value : MICRONUTRIENT_INFO[key].dailyValue;
     } else {
         value = ADULT[standard][key];
     }
+
     if (value === undefined) return null;
+
     if (typeof value === 'number') return value;
+
     if (sex === null) return (value[0] + value[1]) / 2;
+
     return value[sex === 'male' ? 0 : 1];
 }
 
@@ -111,6 +119,7 @@ const WEIGHT_EXPONENT = 0.75;
 /** Short description of which needs are in use, for the tooltip title. */
 export function needsLabel(standard: NutrientStandard, sex: Sex | null, age: number | null, weightLb: number | null): string {
     const name = NUTRIENT_STANDARD_OPTIONS.find(option => option.value === standard)?.label ?? '';
+
     return sex !== null || age !== null || weightLb !== null ? `${name}, adjusted for you` : name;
 }
 
@@ -118,6 +127,7 @@ export function needsLabel(standard: NutrientStandard, sex: Sex | null, age: num
 export function dailyNeeds(standard: NutrientStandard, sex: Sex | null, age: number | null, weightLb: number | null): Record<MicronutrientKey, number> {
     const weightScale = weightLb ? ((weightLb / LB_PER_KG) / REFERENCE_KG[sex ?? 'unset']) ** WEIGHT_EXPONENT : 1;
     const needs = {} as Record<MicronutrientKey, number>;
+
     for (const key of Object.keys(MICRONUTRIENT_INFO) as MicronutrientKey[]) {
         const values = (standard === 'average' ? STANDARDS : [standard])
             .map(standardName => standardNeed(standardName, key, sex, age))
@@ -125,5 +135,6 @@ export function dailyNeeds(standard: NutrientStandard, sex: Sex | null, age: num
         const base = averageOf(values) ?? MICRONUTRIENT_INFO[key].dailyValue;
         needs[key] = base * weightScale;
     }
+
     return needs;
 }

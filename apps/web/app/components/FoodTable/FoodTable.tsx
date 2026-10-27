@@ -17,6 +17,7 @@ export function FoodTable() {
         () => ({ nutrientStandard, dietSettings, dietNutrition: data.dietNutrition, onSelect: state.setSelectedSlug }),
         [nutrientStandard, dietSettings, data.dietNutrition, state.setSelectedSlug],
     );
+
     const display = useTableDisplay({
         rawFoods: data.rawFoods, scored: data.scored, foodFilter: state.foodFilter,
         activeCols: state.activeCols, sliderValues, cellInputs,
@@ -27,12 +28,14 @@ export function FoodTable() {
         () => ({ onDietChange: data.onDietChange, onSettingsChange: state.setDietSettings, onShow: state.openDiet }),
         [data.onDietChange, state.setDietSettings, state.openDiet],
     );
+
     const scoringErrorBanner = useMemo(
         () => data.scoringError === null ? null : { message: data.scoringError, onDismiss: data.dismissScoringError },
         [data.scoringError, data.dismissScoringError],
     );
 
     if (data.error) return <p className="mt-6 text-red-600">Failed to load data: {data.error}</p>;
+
     if (data.loading) return <p className="mt-6 text-neutral-500">Loading food data…</p>;
 
     return (

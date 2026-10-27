@@ -9,6 +9,7 @@ export function RankCell({ rank, total }: { rank: number | null; total: number }
           <span className="text-[10px] text-neutral-400">/{total}</span>
         </>
       )}
+
     </ValueCell>
   );
 }

@@ -21,6 +21,7 @@ impl<'a> Comparison<'a> {
         let caps = DimensionCaps::from_rows(rows, &reference);
 
         let mut wild_penalties = HashMap::new();
+
         for food in foods {
             // First food with a slug wins, matching a front-to-back search.
             wild_penalties.entry(food.slug.as_str()).or_insert_with(|| wild_penalty(food, query));
@@ -35,11 +36,14 @@ impl<'a> Comparison<'a> {
         if self.reference.divisor <= 0.0 {
             return None; // the reference itself has none of the Compare By unit
         }
+
         if row.divisor <= 0.0 {
             return Some((0.0, None)); // provides none of what we're comparing by — worst possible
         }
+
         // Relative to the reference's own penalty, so a wild reference still scores 1.
         let penalty = self.penalty_for(&row.slug) / self.penalty_for(&self.reference.slug);
+
         self.penalized_improvement(row, penalty).map(|detail| (detail.mean / detail.wild_penalty, Some(detail)))
     }
 
@@ -56,6 +60,7 @@ impl<'a> Comparison<'a> {
             .map(|(slug, share)| share * self.penalty_for(slug))
             .sum();
         let penalty = blend_penalty / self.penalty_for(&self.reference.slug);
+
         self.penalized_improvement(&blend.row, penalty).map(|detail| detail.mean / detail.wild_penalty)
     }
 
@@ -75,6 +80,8 @@ fn wild_penalty(food: &FoodRow, query: &SliderQuery) -> f64 {
     if !food.tags.iter().any(|tag| tag == "wild") {
         return 1.0;
     }
+
     let factor = if food.food_type == "animal" { query.over_hunting_factor } else { query.over_gathering_factor };
+
     factor.max(1.0)
 }

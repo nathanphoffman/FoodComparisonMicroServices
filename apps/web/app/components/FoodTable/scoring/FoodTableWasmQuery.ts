@@ -36,10 +36,10 @@ export type ScoreInput = {
     query: SliderQuery;
 };
 
-
 /** The slider values and diets in the shape the WASM scorer takes. */
 export function buildScoreInput(foods: RawFood[], sliderValues: SliderValues, diets: DietInput[]): ScoreInput {
     const { weights, scorePriorities, greenWaterWeight, greyWaterWeight } = sliderValues;
+
     return {
         foods,
         query: {

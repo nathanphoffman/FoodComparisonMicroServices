@@ -2,9 +2,13 @@
 //! emissions, water, and the assembled row.
 
 mod divisor;
+
 mod emissions;
+
 mod nutrition;
+
 mod row;
+
 mod water;
 
 pub(super) use divisor::NormFactors;

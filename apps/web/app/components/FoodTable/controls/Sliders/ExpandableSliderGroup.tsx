@@ -45,6 +45,7 @@ export function ExpandableSliderGroup({
                     {children}
                 </div>
             )}
+
         </div>
     );
 }

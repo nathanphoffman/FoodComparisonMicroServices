@@ -64,6 +64,7 @@ impl AminoAcids {
             per_protein(self.tryptophan?)                                / TRYPTOPHAN,
             per_protein(self.valine?)                                    / VALINE,
         ];
+
         // The most limiting amino acid (lowest ratio) sets the score, which is capped at 1.
         Some(ratios.iter().cloned().fold(f64::INFINITY, f64::min).min(1.0))
     }
@@ -76,6 +77,7 @@ mod tests {
     /// A protein that exactly meets every requirement (per gram of protein).
     fn complete(protein_per_gram: f64) -> AminoAcids {
         let protein_share = |mg_per_g_protein: f64| Some(mg_per_g_protein / 1000.0 * protein_per_gram);
+
         AminoAcids {
             histidine: protein_share(16.0), isoleucine: protein_share(30.0), leucine: protein_share(61.0), lysine: protein_share(48.0),
             methionine: protein_share(15.0), cystine: protein_share(8.0), phenylalanine: protein_share(25.0), tyrosine: protein_share(16.0),
@@ -107,6 +109,7 @@ mod tests {
     fn methionine_and_cystine_count_together() {
         let mut low_methionine = complete(0.1);
         low_methionine.methionine = Some(0.0);
+
         // cystine alone is 8 of the 23 mg/g needed
         assert!((low_methionine.score(0.1).unwrap() - 8.0 / 23.0).abs() < 1e-9);
     }

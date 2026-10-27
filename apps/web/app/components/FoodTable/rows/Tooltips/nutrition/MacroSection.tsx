@@ -8,8 +8,10 @@ import { dayScaleOf, needColor } from './nutritionColors';
 
 // Sugar beyond this many grams per gram of fiber is "free" sugar, the way the Nutrition Score counts it (at its default setting).
 const FREE_SUGAR_FIBER_ALLOWANCE = DEFAULT_NUTRITION_WEIGHTS.sugarAllowance;
+
 // Keeps the sugar-to-free-sugar ratio finite when a food has no free sugar at all.
 const SMALLEST_FREE_SUGAR = 1e-9;
+
 // Amounts under this many grams get a decimal in the whole-day figure.
 const SMALL_AMOUNT_GRAMS = 10;
 
@@ -24,6 +26,7 @@ export function MacroSection({ detail, diet, standard }: Props) {
   const dayScale = dayScaleOf(diet);
   const targets = dayScale != null ? dailyTargets(standard, diet?.sex ?? null, diet!.calories!, diet?.weightLb ?? null, diet?.activity ?? 0) : {};
   const freeSugar = detail.sugar != null ? Math.max(detail.sugar - FREE_SUGAR_FIBER_ALLOWANCE * detail.fiber, 0) : null;
+
   // The sugar % is for free sugar against the added-sugar limit; the amount shown is total sugar.
   const sugarTarget = targets.sugar && detail.sugar != null && freeSugar !== null
     ? { ...targets.sugar, amount: targets.sugar.amount * (detail.sugar / Math.max(freeSugar, SMALLEST_FREE_SUGAR)) }
@@ -49,11 +52,13 @@ export function MacroSection({ detail, diet, standard }: Props) {
 
 function MacroAmount({ row, dayScale }: { row: Row; dayScale: number | null }) {
   const perHundred = `${row.perHundred.toFixed(row.digits)} ${row.unit}`;
+
   if (dayScale == null) return <>{perHundred}</>;
   const wholeDay = row.perHundred * dayScale;
   const percent = row.target ? wholeDay / row.target.amount * 100 : null;
   const color = row.target && percent !== null ? targetColor(percent, row.target.kind) || needColor(percent) : 'text-green-300';
   const decimals = row.digits > 0 && wholeDay < SMALL_AMOUNT_GRAMS ? 1 : 0;
+
   return (
     <>
       {perHundred}

@@ -9,7 +9,6 @@ LD50 = the dose required to kill 50% of a test population, used for bee hazard s
 from ....food_types import Pesticide
 from ..sourced_array import SourcedArray
 
-
 class RawPesticide:
     """Wraps a Pesticide record and exposes weighted averages for each ecotoxicity field."""
 
@@ -23,19 +22,23 @@ class RawPesticide:
     @property
     def avg_freshwater_paf(self) -> float | None:
         """Confidence-weighted average freshwater PAF across all sourced values."""
+
         return self.freshwater_paf.weighted_average()
 
     @property
     def avg_terrestrial_paf(self) -> float | None:
         """Confidence-weighted average terrestrial PAF across all sourced values."""
+
         return self.terrestrial_paf.weighted_average()
 
     @property
     def avg_insect_paf(self) -> float | None:
         """Confidence-weighted average insect PAF across all sourced values."""
+
         return self.insect_paf.weighted_average()
 
     @property
     def avg_bee_ld50(self) -> float | None:
         """Confidence-weighted average bee LD50 across all sourced values."""
+
         return self.bee_ld50.weighted_average()

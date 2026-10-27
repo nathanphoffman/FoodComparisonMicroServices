@@ -3,6 +3,7 @@ const BUTTON = 'px-3 py-1 text-sm rounded border border-neutral-200 text-neutral
 type Props = {
     onExport: () => void;
     onImport: (file: File | undefined) => void;
+
     /** Opens the diet's nutrition breakdown; the "Show Diet" button is greyed out until a food is added. */
     onShow?: () => void;
     hasFoods: boolean;
@@ -27,6 +28,7 @@ export function DietActions({ onExport, onImport, onShow, hasFoods }: Props) {
                     Show Diet
                 </button>
             )}
+
         </div>
     );
 }

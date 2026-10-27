@@ -8,9 +8,11 @@ import { DEFAULT_FOOD_FILTER } from './toolbar/FoodTableFilters';
 export function useFoodTableState() {
   const [sliderValues, setSliderValues] = useState<SliderValues>(DEFAULT_SLIDER_VALUES);
   const [dataRegion, setDataRegion] = useState<DataRegion>(DEFAULT_DATA_REGION);
+
   // Whose recommended intakes the tooltips measure vitamins and minerals against
   const [nutrientStandard, setNutrientStandard] = useState<NutrientStandard>(DEFAULT_NUTRIENT_STANDARD);
   const [foodFilter, setFoodFilter] = useState<string>(DEFAULT_FOOD_FILTER);
+
   // Updated synchronously by FoodTableInputs
   const [activeCols, setActiveCols] = useState<ColConfig[]>(() => COLUMN_CONFIG.filter(column => column.defaultVisible));
 
@@ -26,6 +28,7 @@ export function useFoodTableState() {
   const [showDiet, setShowDiet] = useState(false);
   const closeDiet = useCallback(() => setShowDiet(false), []);
   const openDiet = useCallback(() => setShowDiet(true), []);
+
   // The diet's total calories per day, size and activity, for the whole-diet numbers in its tooltip
   const [dietSettings, setDietSettings] = useState<DietSettings | null>(null);
 

@@ -65,6 +65,7 @@ public class DbService
     private string CurrentDbPath()
     {
         var version = _pinnedVersion ?? InferVersion(_dataDir);
+
         return Path.Combine(_dataDir, $"foods-normalized.{version}.db");
     }
 
@@ -72,7 +73,9 @@ public class DbService
     private static string InferVersion(string dataDir)
     {
         var files = Directory.GetFiles(dataDir, "foods-normalized.*.db");
+
         if (files.Length == 0)
+
             throw new InvalidOperationException(
                 $"No foods-normalized.*.db found in {dataDir}. Run 'pnpm build-db' first.");
 
@@ -85,6 +88,7 @@ public class DbService
     public IEnumerable<FoodRow> LoadFoods(string region)
     {
         using var connection = new SqliteConnection($"Data Source={CurrentDbPath()};Mode=ReadOnly");
+
         return connection.Query<FoodRow>(Query, new { Region = region });
     }
 }

@@ -1,7 +1,9 @@
 type Props = {
   bubbleRef: React.RefObject<HTMLDivElement | null>;
+
   /** How far the bubble is slid sideways to stay inside the window. */
   shift: number;
+
   /** Stays showing after a tap instead of only while hovered. */
   pinned: boolean;
   children: React.ReactNode;

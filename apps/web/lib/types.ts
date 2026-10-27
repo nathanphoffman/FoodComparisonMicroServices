@@ -15,6 +15,7 @@ export interface NutritionValue {
   sugar: number | null;
   cholesterol: number | null;
   trans_fat: number | null;
+
   // vitamins and minerals per gram, only when the source reports them (units in data/json/SCHEMA.md)
   vitamin_a?: number;
   vitamin_c?: number;
@@ -91,6 +92,7 @@ export interface SourcedFigure {
 export interface FoodDetails {
   name: string;
   notes: string | null;
+
   /** Keyed by field name, e.g. 'yield_kg_ha', 'feed:corn', 'pesticide:Glyphosate'. */
   sources: Record<string, SourcedFigure[]>;
 }

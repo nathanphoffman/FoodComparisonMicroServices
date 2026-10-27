@@ -6,6 +6,7 @@ import { fieldLabel } from './FoodDetailFields';
 /** A figure's plain-English explanation, then each sourced input behind it. */
 export function FigureSources({ explanation, fields, sources }: {
   explanation: string;
+
   /** null while the sources are still loading */
   fields: string[] | null;
   sources: FoodDetails['sources'];
@@ -26,6 +27,7 @@ export function FigureSources({ explanation, fields, sources }: {
               </div>
             ))
       }
+
     </div>
   );
 }
@@ -38,12 +40,14 @@ function SourceEntry({ entry }: { entry: SourcedFigure }) {
         {entry.region && (
           <span className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] font-medium text-blue-700">{entry.region}</span>
         )}
+
         <span className="text-neutral-500">confidence {entry.confidence}/5</span>
       </div>
       {entry.source.url
         ? <a href={entry.source.url} target="_blank" rel="noopener noreferrer" className="mt-1 block break-words font-medium text-blue-600 hover:underline">{entry.source.title}</a>
         : <p className="mt-1 font-medium text-neutral-700">{entry.source.title}</p>
       }
+
       {entry.source.note && <p className="mt-1 break-words text-neutral-600">{entry.source.note}</p>}
     </li>
   );
@@ -69,7 +73,9 @@ function formatSourcedValue(value: SourcedFigure['value']): string {
     .filter(([key]) => value[key] != null)
     .map(([key, label, unit, scale]) => {
       const amount = (value[key] as number) * scale;
+
       return key === 'calories' ? `${amount.toFixed(0)} ${label}` : `${amount.toLocaleString(undefined, { maximumFractionDigits: 1 })}${unit} ${label}`;
     });
+
   return `Per 100 g: ${parts.join(', ')}`;
 }

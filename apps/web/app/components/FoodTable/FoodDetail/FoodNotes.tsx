@@ -11,6 +11,7 @@ function LoadingNotes() {
 
 function Notes({ notes }: { notes: string | null }) {
   if (!notes) return <p className="text-neutral-400">No notes for this food yet.</p>;
+
   return (
     <div className="space-y-3">
       <h3 className="text-xs font-semibold uppercase tracking-wide text-neutral-500">How we got these numbers</h3>

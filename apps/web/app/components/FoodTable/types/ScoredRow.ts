@@ -7,8 +7,10 @@ import type { SentientHarmDetail, EmissionsBreakdown, LandUseDetail, WaterDetail
 export type ScoredRow = {
     slug:     string;
     name:     string;
+
     /** The source food's type, or "diet" for the diet row the scorer builds itself. */
     foodType: string;
+
     /** Compare By units in one kg of this food; 0 when the food has none of the unit. */
     divisor:  number;
 
@@ -29,10 +31,13 @@ export type ScoredRow = {
     landUseDetail:        LandUseDetail;
     sentientHarmDetail:   SentientHarmDetail;
     killDetail:           KillDetail | null;
+
     /** Wild fish killed per kg for fishmeal / fish oil; null if none. */
     wildFishDeathsPerKg:  number | null;
+
     /** Intelligence-weighted kill of those fish, per kg (part of direct kill). */
     wildFishKill:         number;
+
     /** How finalScore was built; null when finalScore is null or 0 by default. */
     improvementDetail:    ImprovementDetail | null;
 };

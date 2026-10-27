@@ -36,6 +36,7 @@ fn nutrition_offset(rows: &[ScoredRow]) -> f64 {
         .filter(|score| score.is_finite())
         // Keep the smallest finite score: start at infinity and let f64::min pull it down.
         .fold(f64::INFINITY, f64::min);
+
     if lowest.is_finite() { (NUTRITION_FLOOR - lowest).max(0.0) } else { 0.0 }
 }
 
@@ -51,6 +52,7 @@ fn highest_ratio_in_batch(
         Some(ratio) if ratio > 0.0 => ratio,
         _ => return 1.0,
     };
+
     rows.iter()
         .filter_map(|row| extract(row))
         .filter(|&food_score| food_score > 0.0)
@@ -70,12 +72,15 @@ pub fn compute_improvement(
 
     // A 0% priority drops that measure out entirely.
     let total_priority: f64 = terms.iter().map(|term| term.priority).sum();
+
     if total_priority <= 0.0 { return None; }
 
     let exponent = 1.0 - query.win_dampening;
+
     // Pair each term's ratio with its priority, the shape weighted_power_mean takes.
     let weighted_ratios: Vec<(f64, f64)> = terms.iter().map(|term| (term.ratio, term.priority)).collect();
     let mean = weighted_power_mean(&weighted_ratios, total_priority, exponent);
+
     Some(ImprovementDetail { terms, exponent, mean, wild_penalty: 1.0 })
 }
 
@@ -85,6 +90,7 @@ pub fn compute_improvement(
 // Intelligence uses sentient_harm only; it already includes direct_kill.
 fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &DimensionCaps, query: &SliderQuery) -> Vec<ImprovementTerm> {
     let mut terms = Vec::new();
+
     for (measure, food_score, reference_score, zero_cap, priority) in [
         ("emissions",    food.emissions,     reference.emissions,     caps.emissions,     query.emissions_priority),
         ("landUse",      food.land_use,      reference.land_use,      caps.land_use,      query.land_use_priority),
@@ -94,11 +100,13 @@ fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimensi
         if let (Some(food_score), Some(reference_score)) = (food_score, reference_score) {
             if reference_score > 0.0 {
                 let zero_capped = food_score <= 0.0;
+
                 let ratio = if zero_capped { zero_cap * query.zero_better_multiplier } else { reference_score / food_score };
                 terms.push(ImprovementTerm { measure, ratio, priority, zero_capped });
             }
         }
     }
+
     terms
 }
 
@@ -107,6 +115,7 @@ fn lower_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimensi
 // rather than being dropped. The floor guards the diet row and rounding.
 fn higher_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &DimensionCaps, query: &SliderQuery) -> Vec<ImprovementTerm> {
     let mut terms = Vec::new();
+
     if let (Some(food_score), Some(reference_score)) = (food.nutrition_score, reference.nutrition_score) {
         let shifted_food      = (food_score      + caps.nutrition_offset).max(NUTRITION_FLOOR);
         let shifted_reference = (reference_score + caps.nutrition_offset).max(NUTRITION_FLOOR);
@@ -115,6 +124,7 @@ fn higher_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimens
             priority: query.nutrition_priority, zero_capped: false,
         });
     }
+
     if let (Some(food_score), Some(reference_score)) = (food.availability, reference.availability) {
         if food_score > 0.0 && reference_score > 0.0 {
             terms.push(ImprovementTerm {
@@ -123,5 +133,6 @@ fn higher_is_better_terms(food: &ScoredRow, reference: &ScoredRow, caps: &Dimens
             });
         }
     }
+
     terms
 }

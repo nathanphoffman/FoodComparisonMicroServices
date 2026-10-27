@@ -20,6 +20,7 @@ export function equalLevels<LevelKey extends string>(keys: LevelKey[]): Levels<L
 export function toShares<LevelKey extends string>(levels: Levels<LevelKey>): Levels<LevelKey> {
     const keys = Object.keys(levels) as LevelKey[];
     const total = sumOf(keys.map(key => levels[key]));
+
     return Object.fromEntries(
         keys.map(key => [key, total > 0 ? (levels[key] / total) * 100 : 0])
     ) as Levels<LevelKey>;

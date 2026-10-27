@@ -14,6 +14,7 @@ pub(super) fn effective_water(food: &FoodRow, query: &SliderQuery) -> (f64, Wate
         let total = blue
             + (query.green_water / 100.0) * green
             + (query.grey_water  / 100.0) * grey_water.unwrap_or(0.0);
+
         return (total, detail);
     }
 
@@ -22,5 +23,6 @@ pub(super) fn effective_water(food: &FoodRow, query: &SliderQuery) -> (f64, Wate
     } else {
         food.water_per_kg.unwrap_or(0.0)
     };
+
     (total, detail)
 }

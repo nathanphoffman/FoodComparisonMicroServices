@@ -8,7 +8,6 @@ for weighted averaging during pesticide impact calculations.
 from ....food_types import PlantPesticide
 from ..sourced_array import SourcedArray
 
-
 class RawPlantPesticide:
     """Wraps a PlantPesticide record and exposes its sourced array for weighted averaging."""
 

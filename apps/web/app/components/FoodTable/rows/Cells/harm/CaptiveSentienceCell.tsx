@@ -10,6 +10,7 @@ export function CaptiveSentienceCell({ value, killDetail, captivityMultiplier, e
         ? <CaptiveSentienceTooltip killDetail={killDetail} captivityMultiplier={captivityMultiplier} explanation={explanation}><SentientHarmValue value={captive} /></CaptiveSentienceTooltip>
         : <SentientHarmValue value={captive} />
       }
+
     </ValueCell>
   );
 }

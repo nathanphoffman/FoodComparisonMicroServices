@@ -24,9 +24,12 @@ export function toNutritionDetail(food: RawFood): NutritionDetail {
 function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; mass: number }[] {
     return diet.ingredients.flatMap(({ slug, fraction }) => {
         const food = foods.find(candidate => candidate.slug === slug);
+
         if (!food || fraction <= 0) return [];
         let mass = fraction;
+
         if (diet.basis !== 'mass') mass = food.calories > 0 ? fraction / food.calories : 0;
+
         return mass > 0 ? [{ food, mass }] : [];
     });
 }
@@ -40,21 +43,28 @@ function ingredientMasses(diet: DietInput, foods: RawFood[]): { food: RawFood; m
 export function blendDietNutrition(diet: DietInput, foods: RawFood[]): NutritionDetail | null {
     const parts = ingredientMasses(diet, foods);
     const totalMass = sumOf(parts.map(part => part.mass));
+
     if (totalMass <= 0) return null;
 
     const blend = (value: (food: RawFood) => number | null | undefined): number | null => {
         if (parts.every(part => value(part.food) == null)) return null;
+
         return sumOf(parts.map(part => (part.mass / totalMass) * (value(part.food) ?? 0)));
     };
+
     const micronutrients: Micronutrients = {};
+
     for (const key of MICRONUTRIENT_KEYS) {
         const amount = blend(food => food.micronutrients?.[key]);
+
         if (amount != null) micronutrients[key] = amount;
     }
 
     const aminoAcids: AminoAcids = {};
+
     for (const key of AMINO_ACID_KEYS) {
         const amount = blend(food => food.amino_acids?.[key]);
+
         if (amount != null) aminoAcids[key] = amount;
     }
 
@@ -92,8 +102,11 @@ export function blendLandM2PerKg(
 ): number | null {
     const parts = ingredientMasses(diet, foods).flatMap(({ food, mass }) => {
         const land = rawM2PerKg(food.slug);
+
         return land != null ? [{ mass, land }] : [];
     });
+
     const totalMass = sumOf(parts.map(part => part.mass));
+
     return totalMass > 0 ? sumOf(parts.map(part => (part.mass / totalMass) * part.land)) : null;
 }

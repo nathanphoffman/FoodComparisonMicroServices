@@ -8,6 +8,7 @@ const FOODS: BuilderFood[] = [
     { slug: 'rice', name: 'Rice', calories: RICE_CALORIES_PER_GRAM },
     { slug: 'beans', name: 'Beans', calories: BEANS_CALORIES_PER_GRAM },
 ];
+
 const HALF_AND_HALF = [{ slug: 'rice', name: 'Rice', level: 50 }, { slug: 'beans', name: 'Beans', level: 50 }];
 const DIET = { basis: 'calories', calorieTarget: 2000, pillAbsorption: 100, supplements: [], ingredients: HALF_AND_HALF, daysBetween: 0.3 } as unknown as Saved;
 

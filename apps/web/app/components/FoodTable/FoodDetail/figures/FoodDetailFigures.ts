@@ -10,19 +10,24 @@ export type FigureKey = Exclude<ColConfig['key'], 'name' | 'rank'>;
 
 type Figure = {
   key: FigureKey;
+
   /** The figure's value for this food, from the WASM-scored row. */
   value: (row: ScoredRow) => number | null;
   format: (value: number) => string;
+
   /** null = no good/bad scale (shown neutral). */
   tone: ((value: number) => Tone) | null;
+
   /** Source fields behind the figure, in display order. A trailing ':' matches a group
    *  (e.g. 'feed:' matches every feed row). Fields the food doesn't have are skipped. */
   fields: (food: RawFood) => string[];
+
   /** One or two sentences on how the figure is built, shown above its sources. */
   explanation: (food: RawFood) => string;
 };
 
 const isComposite = (food: RawFood) => food.tags.includes('composite');
+
 const oneDecimal = (value: number) => value.toFixed(1);
 
 // Every column in the table except the food name, in table order.

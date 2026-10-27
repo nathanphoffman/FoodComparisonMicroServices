@@ -16,8 +16,10 @@ import { IngredientList } from './inputs/IngredientList';
 export type DietOptions = {
     /** Whose recommended intakes a supplement's % RDA is measured against. */
     standard: NutrientStandard;
+
     /** Opens the diet's nutrition breakdown; the "Show Diet" button is greyed out until a food is added. */
     onShow: () => void;
+
     /** Reports the daily calories, sex and age once typing settles (and once on load). */
     onSettingsChange: (settings: DietSettings) => void;
 };
@@ -36,6 +38,7 @@ export function DietBuilder({ foods, options, onChange }: Props) {
     const { saved, problem, updateFoods, updateSettings, importDiet, caloriesPerDay, markActive } = useDietState({
         diet: DIET, foods, onChange, onSettingsChange: options.onSettingsChange,
     });
+
     const editing = useIngredientEditing({ foods, saved, updateFoods, markActive });
     const { basis, ingredients } = saved;
 
@@ -63,6 +66,7 @@ export function DietBuilder({ foods, options, onChange }: Props) {
                     onRemove={editing.removeIngredient}
                 />
             )}
+
         </div>
     );
 }
